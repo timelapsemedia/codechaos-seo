@@ -16,6 +16,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000'/>  <text x='4' y='26' font-size='24' fill='%2300ff88'>⚡</text></svg>" type="image/svg+xml">
 <link rel="canonical" href="https://codechaos-official.de/">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 <link rel="alternate" hreflang="de" href="https://codechaos-official.de/">
 <link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/">
 
@@ -1016,6 +1017,24 @@ footer {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: none; }
 }
+/* BOOKING FORM */
+#booking-form-wrap { margin-top: 28px; }
+.bform-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.bform-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.bform-label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 2px; color: rgba(255,255,255,0.3); }
+.bform-input { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-family: var(--font-mono); font-size: 0.82rem; padding: 11px 14px; outline: none; transition: border-color 0.2s; width: 100%; appearance: none; -webkit-appearance: none; }
+.bform-input::placeholder { color: rgba(255,255,255,0.2); }
+.bform-input:focus { border-color: var(--acid); }
+.bform-input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.4); cursor: pointer; }
+.bform-select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='rgba(255,255,255,0.3)' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; background-color: rgba(255,255,255,0.04); }
+.bform-select option { background: #0a0a12; color: #fff; }
+.bform-textarea { resize: vertical; min-height: 100px; }
+.bform-submit { width: 100%; background: var(--hot); color: #000; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; letter-spacing: 3px; padding: 16px; border: none; cursor: pointer; transition: all 0.2s; clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); margin-top: 4px; }
+.bform-submit:hover { background: #fff; }
+.bform-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+.bform-success-inner { border: 1px solid rgba(0,255,136,0.3); background: rgba(0,255,136,0.05); padding: 40px 28px; text-align: center; }
+@media (max-width: 600px) { .bform-row { grid-template-columns: 1fr; } }
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://codechaos-official.de/#website","name":"Code Chaos","url":"https://codechaos-official.de","description":"Code Chaos - Hitech und Psycore DJ und Producer aus Deutschland","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://codechaos-official.de/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
@@ -1787,9 +1806,69 @@ footer {
         <p class="booking-desc">
           Code Chaos is available worldwide as a <strong>Psycore DJ</strong>, <strong>Hitech DJ</strong> and <strong>Darkpsy DJ</strong> — for festivals, club nights and label events without geographic restrictions. Two formats, transparent pricing, no hidden costs.
         </p>
-        <div class="booking-email-block">
-          <div class="booking-email-label">Booking Inquiries</div>
-          <a href="mailto:code.chaos@gmx.de" class="booking-email-link"></a>
+
+        <div id="booking-form-wrap">
+          <form action="https://formspree.io/f/mojkqopj" method="POST" id="booking-form" novalidate>
+            <div class="bform-row">
+              <div class="bform-group">
+                <label class="bform-label" for="bf-name">NAME / ARTIST *</label>
+                <input class="bform-input" type="text" id="bf-name" name="name" placeholder="Your name or act" required autocomplete="name">
+              </div>
+              <div class="bform-group">
+                <label class="bform-label" for="bf-email">EMAIL *</label>
+                <input class="bform-input" type="email" id="bf-email" name="email" placeholder="your@email.com" required autocomplete="email">
+              </div>
+            </div>
+            <div class="bform-row">
+              <div class="bform-group">
+                <label class="bform-label" for="bf-event">EVENT / VENUE *</label>
+                <input class="bform-input" type="text" id="bf-event" name="event" placeholder="Festival, club, outdoor…" required>
+              </div>
+              <div class="bform-group">
+                <label class="bform-label" for="bf-date">DATE *</label>
+                <input class="bform-input" type="date" id="bf-date" name="date" required>
+              </div>
+            </div>
+            <div class="bform-row">
+              <div class="bform-group">
+                <label class="bform-label" for="bf-location">LOCATION</label>
+                <input class="bform-input" type="text" id="bf-location" name="location" placeholder="City, Country">
+              </div>
+              <div class="bform-group">
+                <label class="bform-label" for="bf-format">FORMAT *</label>
+                <select class="bform-input bform-select" id="bf-format" name="format" required>
+                  <option value="" disabled selected>Select…</option>
+                  <option value="DJ Set — Psycore">DJ Set — Psycore</option>
+                  <option value="DJ Set — Hitech">DJ Set — Hitech</option>
+                  <option value="DJ Set — Darkpsy">DJ Set — Darkpsy</option>
+                  <option value="DJ Set — Mixed">DJ Set — Mixed</option>
+                  <option value="Live Set">Live Set (own productions)</option>
+                </select>
+              </div>
+            </div>
+            <div class="bform-group">
+              <label class="bform-label" for="bf-message">MESSAGE</label>
+              <textarea class="bform-input bform-textarea" id="bf-message" name="message" placeholder="Set duration, lineup context, special requirements…" rows="4"></textarea>
+            </div>
+            <input type="text" name="_gotcha" style="display:none">
+            <input type="hidden" name="_subject" value="⚡ New Booking Inquiry — Code Chaos">
+            <button type="submit" class="bform-submit">
+              <span class="bform-submit-text">⚡ SEND BOOKING REQUEST</span>
+              <span class="bform-submit-sending" style="display:none;">SENDING…</span>
+            </button>
+          </form>
+          <div id="bform-success" style="display:none;">
+            <div class="bform-success-inner">
+              <div style="font-family:var(--font-mono);font-size:2rem;color:var(--acid);margin-bottom:12px;">⚡</div>
+              <div style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:3px;color:var(--acid);margin-bottom:8px;">REQUEST RECEIVED</div>
+              <div style="color:rgba(255,255,255,0.5);font-size:0.85rem;line-height:1.7;">Your booking request has been sent.<br>Response within 24–48h.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-email-block" style="margin-top:20px;">
+          <div class="booking-email-label">Direct Contact</div>
+          <a href="mailto:code.chaos@gmx.de" class="booking-email-link">code.chaos@gmx.de</a>
         </div>
       </div>
 
@@ -2265,7 +2344,7 @@ footer {
         </p>
         <div style="display:flex;gap:16px;flex-wrap:wrap;">
           <a href="mailto:code.chaos@gmx.de" style="display:inline-block;background:var(--acid);color:#000;font-family:var(--mono);font-size:0.85rem;font-weight:700;letter-spacing:2px;padding:14px 28px;text-decoration:none;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));transition:all 0.2s;">⚡ BOOKING ANFRAGE</a>
-          <a href="mailto:code.chaos@gmx.de" style="display:inline-block;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-family:var(--mono);font-size:0.85rem;letter-spacing:2px;padding:14px 28px;text-decoration:none;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));transition:all 0.2s;">🎛 MASTERING ANFRAGE</a>
+          <a href="mailto:polished.media@gmx.de" style="display:inline-block;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-family:var(--mono);font-size:0.85rem;letter-spacing:2px;padding:14px 28px;text-decoration:none;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));transition:all 0.2s;">🎛 MASTERING ANFRAGE</a>
         </div>
       </div>
       <div style="border-left:1px solid rgba(255,255,255,0.08);padding-left:40px;">
@@ -2379,7 +2458,7 @@ footer {
           Welcher Mastering Service ist der beste für Psycore und Hitech Psytrance? <span style="color:var(--acid);font-size:1.3rem;font-weight:300;flex-shrink:0;margin-left:20px;">+</span>
         </summary>
         <div style="padding:0 0 24px;font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.9;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text"><a href="http://polished.media" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Polished Media</a> (betrieben von Code Chaos) bietet professionelles Mastering speziell für Psycore, Hitech Psytrance und Darkpsy. Das Mastering kommt von einem aktiven Psycore und Hitech Produzenten — kein generisches Mastering, sondern genre-spezifisches Verständnis für Kick-Charakteristik, Bassline-Architektur und Soundscape-Behandlung in diesen Genres. Stereo Mastering ab €79, Stem Mastering ab €129. Anfragen: <a href="mailto:polished.media@gmx.de"></a></p>
+          <p itemprop="text"><a href="http://polished.media" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Polished Media</a> (betrieben von Code Chaos) bietet professionelles Mastering speziell für Psycore, Hitech Psytrance und Darkpsy. Das Mastering kommt von einem aktiven Psycore und Hitech Produzenten — kein generisches Mastering, sondern genre-spezifisches Verständnis für Kick-Charakteristik, Bassline-Architektur und Soundscape-Behandlung in diesen Genres. Stereo Mastering ab €79, Stem Mastering ab €129. Anfragen: <a href="mailto:code.chaos@gmx.de"></a></p>
         </div>
       </details>
 
@@ -2622,7 +2701,7 @@ footer {
           </div>
         </div>
 
-        <a href="mailto:code.chaos@gmx.de" style="display:block;text-align:center;background:var(--acid);color:#000;font-family:var(--mono);font-size:0.75rem;font-weight:700;letter-spacing:2px;padding:14px;text-decoration:none;" title="Code Chaos Hitech Psycore Darkpsy DJ buchen">⚡ CODE CHAOS BUCHEN →</a>
+        <a href="mailto:polished.media@gmx.de" style="display:block;text-align:center;background:var(--acid);color:#000;font-family:var(--mono);font-size:0.75rem;font-weight:700;letter-spacing:2px;padding:14px;text-decoration:none;" title="Code Chaos Hitech Psycore Darkpsy DJ buchen">⚡ CODE CHAOS BUCHEN →</a>
       </div>
     </div>
   </div>
@@ -2708,7 +2787,7 @@ footer {
           <div style="font-family:var(--display);font-size:3rem;color:#fff;font-weight:300;">€79</div>
           <div style="font-family:var(--mono);font-size:0.7rem;color:rgba(255,255,255,0.3);">per track</div>
         </div>
-        <a href="mailto:polished.media@gmx.de" style="display:block;text-align:center;background:rgba(0,255,136,0.1);border:1px solid rgba(0,255,136,0.3);color:var(--acid);font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:2px;padding:13px;text-decoration:none;" title="Stereo Mastering anfragen — Psycore Hitech Darkpsy">STEREO MASTERING REQUEST →</a>
+        <a href="mailto:code.chaos@gmx.de" style="display:block;text-align:center;background:rgba(0,255,136,0.1);border:1px solid rgba(0,255,136,0.3);color:var(--acid);font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:2px;padding:13px;text-decoration:none;" title="Stereo Mastering anfragen — Psycore Hitech Darkpsy">STEREO MASTERING REQUEST →</a>
       </div>
 
       <!-- STEM MASTER -->
@@ -2735,7 +2814,7 @@ footer {
     </div>
 
     <p style="text-align:center;color:rgba(255,255,255,0.2);font-family:var(--mono);font-size:0.65rem;letter-spacing:1px;">
-      <a href="http://polished.media" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Polished Media</a> · <a href="mailto:polished.media@gmx.de"></a> · Psycore · Hitech Psytrance · Darkpsy Mastering
+      <a href="http://polished.media" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Polished Media</a> · <a href="mailto:code.chaos@gmx.de"></a> · Psycore · Hitech Psytrance · Darkpsy Mastering
     </p>
   </div>
 </section>
@@ -3639,3 +3718,24 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') closeAllModals(
   .legal-eyebrow { font-family:'Share Tech Mono',monospace; font-size:9px; letter-spacing:0.24em; text-transform:uppercase; color:var(--acid); margin-bottom:12px; }
   .legal-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,6vw,72px); letter-spacing:0.04em; color:#fff; line-height:0.9; margin-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.06); padding-bottom:32px; }
   .legal-scope { font-size:13px; line-height:1.7
+<script>
+(function(){
+  var form=document.getElementById('booking-form');
+  if(!form)return;
+  var btn=form.querySelector('.bform-submit');
+  var btnText=form.querySelector('.bform-submit-text');
+  var btnSend=form.querySelector('.bform-submit-sending');
+  var success=document.getElementById('bform-success');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    btn.disabled=true;
+    btnText.style.display='none';
+    btnSend.style.display='inline';
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+    .then(function(r){
+      if(r.ok){form.style.display='none';success.style.display='block';}
+      else{btn.disabled=false;btnText.style.display='inline';btnSend.style.display='none';alert('Error. Please email code.chaos@gmx.de directly.');}
+    }).catch(function(){btn.disabled=false;btnText.style.display='inline';btnSend.style.display='none';alert('Error. Please email code.chaos@gmx.de directly.');});
+  });
+})();
+</script>
