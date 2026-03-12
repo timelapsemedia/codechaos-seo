@@ -1035,51 +1035,240 @@ footer {
 .bform-success-inner { border: 1px solid rgba(0,255,136,0.3); background: rgba(0,255,136,0.05); padding: 40px 28px; text-align: center; }
 @media (max-width: 600px) { .bform-row { grid-template-columns: 1fr; } }
 
+/* LIVE DATES */
+/* ═══════════════════════════════════════════════
+   LIVE DATES SECTION
+   ═══════════════════════════════════════════════ */
+#live-dates {
+  background: #080808;
+  border-top: 1px solid rgba(255,0,85,0.18);
+  padding: 90px 40px;
+}
+.ld-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Event list ─────────────────────────── */
+.ld-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ── Card ───────────────────────────────── */
+.ld-card {
+  display: flex;
+  flex-direction: row;
+  background: #0d0d0d;
+  border: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+  transition: border-color 0.25s, background 0.25s;
+  position: relative;
+}
+.ld-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: #ff0055;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+.ld-card:hover { background: #111; border-color: rgba(255,0,85,0.2); }
+.ld-card:hover::before { transform: scaleY(1); }
+
+/* ── Flyer ───────────────────────────────── */
+.ld-flyer {
+  flex: 0 0 200px;
+  overflow: hidden;
+  background: #050505;
+}
+.ld-flyer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.ld-card:hover .ld-flyer img { transform: scale(1.05); }
+
+/* ── Info ────────────────────────────────── */
+.ld-info {
+  flex: 1 1 auto;
+  padding: 28px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* ── Date ────────────────────────────────── */
+.ld-date-block {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.ld-day {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  color: #ff0055;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+.ld-month-year {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+}
+
+/* ── Event name ─────────────────────────── */
+.ld-event-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+}
+
+/* ── Meta ────────────────────────────────── */
+.ld-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.ld-venue,
+.ld-weekday {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ld-venue svg { color: rgba(255,0,85,0.5); flex-shrink: 0; }
+
+/* ── Tags ────────────────────────────────── */
+.ld-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.ld-tag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+.ld-tag--set {
+  color: #ff0055;
+  background: rgba(255,0,85,0.08);
+  border: 1px solid rgba(255,0,85,0.3);
+}
+.ld-tag--genre {
+  color: #00ff88;
+  background: rgba(0,255,136,0.05);
+  border: 1px solid rgba(0,255,136,0.2);
+}
+
+/* ── Lineup ──────────────────────────────── */
+.ld-lineup {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.25);
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  line-height: 1.7;
+}
+.ld-lineup strong { color: #00ff88; font-weight: 400; }
+.ld-lineup-label {
+  font-size: 0.48rem;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.12);
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+/* ── CTA button ──────────────────────────── */
+.ld-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  text-decoration: none;
+  padding: 12px 22px;
+  border: 1px solid rgba(255,0,85,0.4);
+  color: rgba(255,255,255,0.6);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: all 0.25s;
+  margin-top: 4px;
+}
+.ld-btn:hover {
+  background: rgba(255,0,85,0.1);
+  border-color: #ff0055;
+  color: #fff;
+}
+.ld-btn svg { color: #ff0055; transition: transform 0.25s; }
+.ld-btn:hover svg { transform: translateX(3px); }
+
+/* ── Booking bar ─────────────────────────── */
+.ld-booking-bar {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px 28px;
+  border: 1px solid rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.015);
+}
+.ld-booking-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  color: rgba(255,255,255,0.18);
+  text-transform: uppercase;
+}
+.ld-booking-link {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: #00ff88;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+.ld-booking-link:hover { opacity: 0.6; }
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 860px) {
+  #live-dates { padding: 70px 28px; }
+  .ld-flyer { flex: 0 0 150px; }
+  .ld-info  { padding: 22px 24px; }
+}
+@media (max-width: 600px) {
+  #live-dates { padding: 50px 18px; }
+  .ld-card { flex-direction: column; }
+  .ld-flyer { flex: unset; height: 200px; }
+  .ld-info  { padding: 20px; }
+  .ld-day   { font-size: 2.5rem; }
+}
 </style>
 
-<!-- NEWSLETTER SECTION — Code Chaos -->
-<section class="cc-newsletter">
-  <div class="cc-newsletter__inner">
-    <div class="cc-newsletter__label">NEWSLETTER</div>
-    <h2 class="cc-newsletter__heading">STAY IN THE LOOP</h2>
-    <p class="cc-newsletter__sub">New releases · Free tracks · Live dates. No spam.</p>
-
-    <div id="cc-sib-container">
-      <div id="cc-error-message" class="cc-msg cc-msg--error" style="display:none;">
-        Something went wrong. Please try again.
-      </div>
-      <div id="cc-success-message" class="cc-msg cc-msg--success" style="display:none;">
-        ✓ You're in — check your inbox to confirm.
-      </div>
-
-      <form id="cc-sib-form" method="POST"
-        action="https://e0d25de9.sibforms.com/serve/MUIFADtGE4xaY8ivvcpgooKggDN2iyN274HxZ-ycvSL2Yps_bw2DMkDuzvz0edYkGvgQup7eksMecVbh0uZtaAJkYWl3HzhnwxJQMAs8W8G0XRVDH-6pB-evj89mBCrsDNE-znSZiGZLVuw6Lij35VTL27lI7-0wEbnCUrIfn7m3Bu_G69xgMg2YENz3J6ablyEjVz3ZjTToklZJ_Q=="
-        data-type="subscription">
-
-        <div class="cc-newsletter__form-row">
-          <input
-            class="cc-newsletter__input"
-            type="email"
-            id="CC_EMAIL"
-            name="EMAIL"
-            placeholder="your@email.com"
-            autocomplete="off"
-            required
-          />
-          <button class="cc-newsletter__btn" type="submit">
-            <span>GET UPDATES</span>
-            <svg class="cc-newsletter__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </button>
-        </div>
-
-        <input type="text" name="email_address_check" value="" style="display:none;">
-        <input type="hidden" name="locale" value="de">
-      </form>
-    </div>
-  </div>
-</section>
 
 <style>
 .cc-newsletter {
@@ -1229,6 +1418,7 @@ footer {
 <script>
 (function () {
   var form = document.getElementById('cc-sib-form');
+  if (!form) return;
   var errorBox = document.getElementById('cc-error-message');
   var successBox = document.getElementById('cc-success-message');
 
@@ -1256,7 +1446,7 @@ footer {
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://codechaos-official.de/#website","name":"Code Chaos","url":"https://codechaos-official.de","description":"Code Chaos - Hitech und Psycore DJ und Producer aus Deutschland","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://codechaos-official.de/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Code Chaos - Psycore Hitech Darkpsy","item":"https://codechaos-official.de/"},{"@type":"ListItem","position":2,"name":"Psycore Genre Guide","item":"https://codechaos-official.de/#was-ist-psycore"},{"@type":"ListItem","position":3,"name":"Hitech Psytrance Guide","item":"https://codechaos-official.de/#was-ist-hitech"},{"@type":"ListItem","position":4,"name":"Darkpsy Guide","item":"https://codechaos-official.de/#was-ist-darkpsy"},{"@type":"ListItem","position":5,"name":"BPM Guide Psycore Hitech","item":"https://codechaos-official.de/#bpm-guide"},{"@type":"ListItem","position":6,"name":"DJ Booking Psycore Hitech","item":"https://codechaos-official.de/#booking"},{"@type":"ListItem","position":7,"name":"Psycore Mastering","item":"https://codechaos-official.de/#psycore-mastering"},{"@type":"ListItem","position":8,"name":"FAQ Psycore Hitech Darkpsy","item":"https://codechaos-official.de/#faq"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://codechaos-official.de/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Code Chaos - Psycore Hitech Darkpsy","item":"https://codechaos-official.de/"},{"@type":"ListItem","position":2,"name":"Psycore Genre Guide","item":"https://codechaos-official.de/#was-ist-psycore"},{"@type":"ListItem","position":3,"name":"Hitech Psytrance Guide","item":"https://codechaos-official.de/#was-ist-hitech"},{"@type":"ListItem","position":4,"name":"Darkpsy Guide","item":"https://codechaos-official.de/#was-ist-darkpsy"},{"@type":"ListItem","position":5,"name":"BPM Guide Psycore Hitech","item":"https://codechaos-official.de/#bpm-guide"},{"@type":"ListItem","position":6,"name":"DJ Booking Psycore Hitech","item":"https://codechaos-official.de/#booking"},{"@type":"ListItem","position":7,"name":"Psycore Mastering","item":"https://codechaos-official.de/#psycore-mastering"},{"@type":"ListItem","position":8,"name":"FAQ Psycore Hitech Darkpsy","item":"https://codechaos-official.de/#faq"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Was ist Psycore Musik?","acceptedAnswer":{"@type":"Answer","text":"Psycore ist ein Subgenre des Psytrance bei 180-300+ BPM. Es kombiniert hypnotische Soundscapes des Dark Psytrance mit Hardcore-Energie. Charakteristisch: Sinuswellen-Kicks, Neurotrance-Basslines, dichte atmosphaerische Pads. Code Chaos ist aktiver Psycore Producer aus Deutschland."}},{"@type":"Question","name":"Was ist Hitech Psytrance?","acceptedAnswer":{"@type":"Answer","text":"Hitech Psytrance (Hi-Tech) ist ein Psytrance-Subgenre bei 170-230+ BPM mit futuristischem, alien-artigem Klangdesign. Gepraegt von Osom (Kindzadza & Psykovsky). Hitech kann dunkel oder euphorisch sein. Code Chaos ist Hitech Psytrance Producer und DJ aus Deutschland."}},{"@type":"Question","name":"Was ist Darkpsy Dark Psytrance?","acceptedAnswer":{"@type":"Answer","text":"Darkpsy (Dark Psy, Dark Psytrance) ist das dunkle Herzstueck des Psytrance bei 150-200 BPM. Entstanden nach 2003 mit Einfluss aus Deutschland und Russland. Horror-Film-Samples, okkulte Aesthetik, schwere Basslines. Evolutionaere Basis fuer Hitech und Psycore."}},{"@type":"Question","name":"Was ist der Unterschied zwischen Psycore Hitech und Darkpsy?","acceptedAnswer":{"@type":"Answer","text":"Darkpsy (150-200 BPM): atmosphaerisch, dunkel, okkulte. Hitech Psytrance (170-230+ BPM): futuristisch, komplex, kann dunkel oder euphorisch sein. Psycore (180-300+ BPM): statisch-hypnotisch, minimal, meditativ-brutal. Alle drei sind verwandte Genres die Code Chaos produziert und performed."}},{"@type":"Question","name":"Welche BPM hat Psycore Musik?","acceptedAnswer":{"@type":"Answer","text":"Psycore operiert bei 180 bis ueber 300 BPM, einzelne Tracks erreichen 400 BPM. Hitech Psytrance liegt bei 170-230+ BPM. Darkpsy bei 150-200 BPM. Code Chaos produziert und performed in einem Bereich von 180-300 BPM."}},{"@type":"Question","name":"Wie buche ich einen Psycore oder Hitech DJ fuer ein Event?","acceptedAnswer":{"@type":"Answer","text":"Code Chaos ist als Psycore DJ, Hitech Psytrance DJ und Darkpsy DJ weltweit buchbar. Booking an booking@codechaos-official.de mit Datum, Location und Genre. DJ Set ab €150/h, Live Set ab €300/h."}},{"@type":"Question","name":"Welcher Mastering Service ist der beste fuer Psycore und Hitech?","acceptedAnswer":{"@type":"Answer","text":"Polished Media bietet genre-spezifisches Mastering fuer Psycore, Hitech Psytrance und Darkpsy von einem aktiven Producer. Stereo Mastering ab €79, Stem Mastering ab €129. Anfragen: polished.media@gmx.de"}},{"@type":"Question","name":"Gibt es Psycore und Hitech Festivals in Deutschland?","acceptedAnswer":{"@type":"Answer","text":"Ja. Die deutsche Szene ist aktiv. Festivals wie ForRest Explosion und Camakavum bieten Darkpsy, Hitech und Psycore Floors. Code Chaos als Hitech und Psycore DJ buchbar."}},{"@type":"Question","name":"Welche bekannten Psycore Kuenstler gibt es?","acceptedAnswer":{"@type":"Answer","text":"Bekannte Psycore Kuenstler sind Hellfish, Broken Note, The Mover, DJ Freak, Shitmat und Nystagmus. Code Chaos ist ein aktiver Psycore Producer und DJ aus Deutschland auf dem Label Abstract Sound Design."}},{"@type":"Question","name":"Was ist der Unterschied zwischen Psycore und Hardcore?","acceptedAnswer":{"@type":"Answer","text":"Psycore verbindet die Intensitaet von Hardcore (180+ BPM) mit den psychedelischen Klangtexturen des Psytrance. Die charakteristischen Sinuswellen-Kicks, Neurotrance-Basslines und hypnotischen Soundscapes machen Psycore einzigartig gegenueber klassischem Hardcore."}},{"@type":"Question","name":"Wo kann ich Psycore und Hitech Psytrance kaufen oder downloaden?","acceptedAnswer":{"@type":"Answer","text":"Psycore und Hitech Psytrance kaufen und downloaden auf Bandcamp. Code Chaos Releases sind auf codechaos.bandcamp.com verfuegbar. Darkpsy kaufen ebenfalls auf Bandcamp. Streaming auf SoundCloud."}},{"@type":"Question","name":"Was kostet ein Psycore oder Hitech DJ Set buchen?","acceptedAnswer":{"@type":"Answer","text":"Ein Psycore oder Hitech Psytrance DJ Set bei Code Chaos kostet ab EUR 150 pro Stunde. Das Live Set (nur eigene Tracks, Hitech und Psycore) kostet ab EUR 300 pro Stunde. Buchungsanfragen an booking@codechaos-official.de."}},{"@type":"Question","name":"Was ist Darkpsy und wie unterscheidet er sich von Psytrance?","acceptedAnswer":{"@type":"Answer","text":"Darkpsy (Dark Psytrance) ist ein Subgenre des Psytrance mit 150-200 BPM, dunklen atmosphaerischen Klangtexturen, schweren Basslines und okkulten Elementen. Bekannte Darkpsy Artists sind Parasect, Kindzadza und Psykovsky. Code Chaos produziert und legt auch Darkpsy auf."}},{"@type":"Question","name":"Bietet Polished Media auch Darkpsy Mastering an?","acceptedAnswer":{"@type":"Answer","text":"Ja, Polished Media (polished.media) bietet Darkpsy Mastering, Hitech Mastering und Psycore Mastering an. Stereo Mastering ab EUR 79, Stem Mastering ab EUR 129. Genre-spezifisches Mastering fuer alle Subgenres des Dark Psytrance."}},{"@type":"Question","name":"Welche Psycore und Hitech Labels gibt es in Deutschland?","acceptedAnswer":{"@type":"Answer","text":"Das wichtigste Psycore und Hitech Psytrance Label in Deutschland ist Abstract Sound Design, co-gegruendet von Code Chaos. Weitere internationale Labels: TATEWARI Records (Mexiko, Psycore), Soma Ritual Records (Indien, Hitech). Abstract Sound Design veroeffentlicht Psycore, Hitech und Darkpsy."}}]}
@@ -1342,6 +1532,7 @@ footer {
     <li><a href="#releases" title="Code Chaos Releases — Psycore Hitech">Releases</a></li>
     <li><a href="#psycore-mastering" title="Psycore Hitech Mastering Service">Mastering</a></li>
     <li><a href="#faq" title="FAQ Psycore Hitech Darkpsy">FAQ</a></li>
+    <li><a href="#live-dates" title="Code Chaos Live Dates — Upcoming Shows">Shows</a></li>
     <li><a href="#booking" title="Code Chaos DJ buchen — Psycore Hitech">Booking</a></li>
   </ul>
       <ul class="nav-links">
@@ -1415,6 +1606,144 @@ footer {
   </div>
 </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════
+     LIVE DATES — Code Chaos
+     ═══════════════════════════════════════════════════════ -->
+<section id="live-dates" aria-label="Upcoming Code Chaos Live Dates">
+<div class="ld-wrap">
+
+  <div class="section-header">
+    <div class="section-eyebrow">UPCOMING SHOWS</div>
+    <h2 class="section-title">UPCOMING CODE CHAOS<br><em>LIVE DATES</em></h2>
+    <p class="section-desc">Code Chaos auf der Bühne — Termine, Locations, Set-Typen</p>
+  </div>
+
+  <!-- EVENT LIST — add new .ld-card blocks here for future gigs -->
+  <div class="ld-list">
+
+    <!-- GIG: Error404 18th Birthday — Rote Flora Hamburg, 03.04.2026 -->
+    <article class="ld-card" itemscope itemtype="https://schema.org/MusicEvent">
+      <meta itemprop="name" content="Error404 feiert Geburtstag — Code Chaos @ Rote Flora Hamburg">
+      <meta itemprop="startDate" content="2026-04-03">
+      <div itemprop="location" itemscope itemtype="https://schema.org/Place">
+        <meta itemprop="name" content="Rote Flora Hamburg">
+        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <meta itemprop="addressLocality" content="Hamburg">
+          <meta itemprop="addressCountry" content="DE">
+        </div>
+      </div>
+      <div itemprop="performer" itemscope itemtype="https://schema.org/MusicGroup">
+        <meta itemprop="name" content="Code Chaos">
+      </div>
+
+      <div class="ld-flyer">
+        <img src="/images/Flyer1.jpeg"
+             alt="Error404 18th Birthday — Code Chaos DJ Set @ Rote Flora Hamburg 03.04.2026"
+             itemprop="image"
+             loading="lazy"
+             width="280" height="280">
+      </div>
+
+      <div class="ld-info">
+        <div class="ld-date-block">
+          <span class="ld-day">03</span>
+          <span class="ld-month-year">APR 2026</span>
+        </div>
+
+        <h3 class="ld-event-name">Error404 feiert Geburtstag</h3>
+
+        <div class="ld-meta">
+          <span class="ld-venue">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Rote Flora · Hamburg, DE
+          </span>
+          <span class="ld-weekday">Freitag, 03.04.2026</span>
+        </div>
+
+        <div class="ld-tags">
+          <span class="ld-tag ld-tag--set">DJ SET</span>
+          <span class="ld-tag ld-tag--genre">HITECH PSYTRANCE</span>
+        </div>
+
+        <div class="ld-lineup">
+          <span class="ld-lineup-label">LINE-UP</span>
+          Chak Mo'ol · <strong>Code Chaos</strong> · Entaktogen · HE · Metahuman
+        </div>
+
+        <a href="https://www.facebook.com/events/1603314590708573"
+           target="_blank" rel="noopener noreferrer"
+           class="ld-btn"
+           aria-label="View event: Error404 feiert Geburtstag">
+          VIEW EVENT
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- TEMPLATE FOR FUTURE EVENTS — copy and fill in:
+    <article class="ld-card" itemscope itemtype="https://schema.org/MusicEvent">
+      <div class="ld-flyer">
+        <img src="/images/FlyerX.jpeg" alt="EVENT NAME" loading="lazy" width="280" height="280">
+      </div>
+      <div class="ld-info">
+        <div class="ld-date-block">
+          <span class="ld-day">DD</span>
+          <span class="ld-month-year">MON YYYY</span>
+        </div>
+        <h3 class="ld-event-name">EVENT NAME</h3>
+        <div class="ld-meta">
+          <span class="ld-venue">VENUE · CITY, DE</span>
+          <span class="ld-weekday">WEEKDAY, DD.MM.YYYY</span>
+        </div>
+        <div class="ld-tags">
+          <span class="ld-tag ld-tag--set">DJ SET</span>
+          <span class="ld-tag ld-tag--genre">PSYCORE</span>
+        </div>
+        <a href="EVENT_URL" target="_blank" rel="noopener noreferrer" class="ld-btn">VIEW EVENT</a>
+      </div>
+    </article>
+    -->
+
+  </div><!-- /.ld-list -->
+
+  <div class="ld-booking-bar">
+    <span class="ld-booking-label">CODE CHAOS FÜR EUER EVENT BUCHEN</span>
+    <a href="mailto:booking@codechaos-official.de" class="ld-booking-link">
+      booking@codechaos-official.de
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+
+</div><!-- /.ld-wrap -->
+</section>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicEvent",
+  "name": "Error404 feiert Geburtstag — Code Chaos DJ Set @ Rote Flora Hamburg",
+  "startDate": "2026-04-03",
+  "url": "https://www.facebook.com/events/1603314590708573",
+  "image": "https://codechaos-official.de/images/Flyer1.jpeg",
+  "location": {
+    "@type": "Place",
+    "name": "Rote Flora",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hamburg",
+      "addressCountry": "DE"
+    }
+  },
+  "performer": {
+    "@type": "MusicGroup",
+    "name": "Code Chaos",
+    "url": "https://codechaos-official.de"
+  }
+}
+</script>
+
 
 <!-- RELEASES -->
 <section id="releases" role="region" aria-label="Hitech und Psycore Releases von Code Chaos">
@@ -2173,6 +2502,7 @@ footer {
 </section>
 
 
+
 <aside class="visually-hidden" aria-label="Code Chaos Genre Info">
 <p>Code Chaos produziert und performed Hitech, Psycore, Darkpsy und experimentelle elektronische Musik mit Tempos von 180 bis 300 BPM. Als einer der aktivsten Hitech und Psycore Produzenten Deutschlands verbindet Code Chaos psychedelische Strukturen mit industrieller Energie.</p>
 </aside>
@@ -2595,7 +2925,7 @@ footer {
       <p style="color:rgba(255,255,255,0.35);font-family:var(--mono);font-size:0.7rem;letter-spacing:2px;margin-top:12px;">PSYCORE · HITECH PSYTRANCE · DARKPSY · BOOKING · MASTERING</p>
     </div>
 
-    <div style="max-width:880px;margin:0 auto;" itemscope itemtype="https://schema.org/FAQPage">
+    <div style="max-width:880px;margin:0 auto;">
 
       <details style="border-bottom:1px solid rgba(255,255,255,0.07);" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
         <summary style="padding:22px 0;cursor:pointer;font-family:var(--display);font-size:1.1rem;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;" itemprop="name">
@@ -3722,6 +4052,17 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') closeAllModals(
         <meta itemprop="name" content="Velocity Festival 2026 — Hitech Psycore Darkpsy">
         <meta itemprop="eventStatus" content="https://schema.org/EventScheduled">
         <meta itemprop="startDate" content="2026-08-21">
+        <meta itemprop="endDate" content="2026-08-23">
+        <div itemprop="location" itemscope itemtype="https://schema.org/Place">
+          <meta itemprop="name" content="Freakland Galenbeck">
+          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <meta itemprop="addressLocality" content="Galenbeck">
+            <meta itemprop="addressCountry" content="DE">
+          </div>
+        </div>
+        <div itemprop="performer" itemscope itemtype="https://schema.org/MusicGroup">
+          <meta itemprop="name" content="Code Chaos">
+        </div>
         <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:2px;color:var(--acid);margin-bottom:10px;">HITECH · PSYCORE · DARKPSY FESTIVAL</div>
         <h3 style="font-family:var(--display);font-size:1.3rem;color:#fff;margin-bottom:8px;font-weight:400;" itemprop="name">Velocity Festival 2026</h3>
         <div style="font-family:var(--mono);font-size:0.7rem;color:rgba(255,255,255,0.4);margin-bottom:12px;">21.–23. August 2026 · Galenbeck, DE</div>
@@ -3732,6 +4073,17 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') closeAllModals(
       <article style="background:var(--void);padding:28px 24px;" itemscope itemtype="https://schema.org/MusicEvent">
         <meta itemprop="name" content="ForRest Explosion Festival 2026 — Darkpsy Hitech">
         <meta itemprop="startDate" content="2026-06-19">
+        <meta itemprop="endDate" content="2026-06-21">
+        <div itemprop="location" itemscope itemtype="https://schema.org/Place">
+          <meta itemprop="name" content="Zapel, Mecklenburg-Vorpommern">
+          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <meta itemprop="addressLocality" content="Zapel">
+            <meta itemprop="addressCountry" content="DE">
+          </div>
+        </div>
+        <div itemprop="performer" itemscope itemtype="https://schema.org/MusicGroup">
+          <meta itemprop="name" content="Code Chaos">
+        </div>
         <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:2px;color:var(--ice);margin-bottom:10px;">DARKPSY · HITECH · PSYTRANCE FESTIVAL</div>
         <h3 style="font-family:var(--display);font-size:1.3rem;color:#fff;margin-bottom:8px;font-weight:400;" itemprop="name">ForRest Explosion 2026</h3>
         <div style="font-family:var(--mono);font-size:0.7rem;color:rgba(255,255,255,0.4);margin-bottom:12px;">19.–21. Juni 2026 · Zapel, MV</div>
@@ -3741,6 +4093,18 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') closeAllModals(
 
       <article style="background:var(--void);padding:28px 24px;" itemscope itemtype="https://schema.org/MusicEvent">
         <meta itemprop="name" content="Camakavum Festival — Hitech Goa Psytrance">
+        <meta itemprop="startDate" content="2026-07-01">
+        <meta itemprop="endDate" content="2026-07-03">
+        <div itemprop="location" itemscope itemtype="https://schema.org/Place">
+          <meta itemprop="name" content="Ziegelei Benzin">
+          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <meta itemprop="addressLocality" content="Benzin">
+            <meta itemprop="addressCountry" content="DE">
+          </div>
+        </div>
+        <div itemprop="performer" itemscope itemtype="https://schema.org/MusicGroup">
+          <meta itemprop="name" content="Code Chaos">
+        </div>
         <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:2px;color:var(--hot);margin-bottom:10px;">HITECH · GOA · PSYTRANCE FESTIVAL</div>
         <h3 style="font-family:var(--display);font-size:1.3rem;color:#fff;margin-bottom:8px;font-weight:400;" itemprop="name">Camakavum Festival</h3>
         <div style="font-family:var(--mono);font-size:0.7rem;color:rgba(255,255,255,0.4);margin-bottom:12px;">jährlich · Ziegelei Benzin, DE</div>
@@ -3820,7 +4184,49 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') closeAllModals(
     </div>
   </div>
 </section>
+<!-- NEWSLETTER SECTION — Code Chaos -->
+<section class="cc-newsletter">
+  <div class="cc-newsletter__inner">
+    <div class="cc-newsletter__label">NEWSLETTER</div>
+    <h2 class="cc-newsletter__heading">STAY IN THE LOOP</h2>
+    <p class="cc-newsletter__sub">New releases · Free tracks · Live dates. No spam.</p>
 
+    <div id="cc-sib-container">
+      <div id="cc-error-message" class="cc-msg cc-msg--error" style="display:none;">
+        Something went wrong. Please try again.
+      </div>
+      <div id="cc-success-message" class="cc-msg cc-msg--success" style="display:none;">
+        ✓ You're in — check your inbox to confirm.
+      </div>
+
+      <form id="cc-sib-form" method="POST"
+        action="https://e0d25de9.sibforms.com/serve/MUIFADtGE4xaY8ivvcpgooKggDN2iyN274HxZ-ycvSL2Yps_bw2DMkDuzvz0edYkGvgQup7eksMecVbh0uZtaAJkYWl3HzhnwxJQMAs8W8G0XRVDH-6pB-evj89mBCrsDNE-znSZiGZLVuw6Lij35VTL27lI7-0wEbnCUrIfn7m3Bu_G69xgMg2YENz3J6ablyEjVz3ZjTToklZJ_Q=="
+        data-type="subscription">
+
+        <div class="cc-newsletter__form-row">
+          <input
+            class="cc-newsletter__input"
+            type="email"
+            id="CC_EMAIL"
+            name="EMAIL"
+            placeholder="your@email.com"
+            autocomplete="off"
+            required
+          />
+          <button class="cc-newsletter__btn" type="submit">
+            <span>GET UPDATES</span>
+            <svg class="cc-newsletter__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <input type="text" name="email_address_check" value="" style="display:none;">
+        <input type="hidden" name="locale" value="de">
+      </form>
+    </div>
+  </div>
+</section>
 <!-- ████ FOOTER ████ -->
 <footer id="footer" style="background:#000;border-top:1px solid rgba(255,255,255,0.08);padding:60px 0 0;">
   <div class="section-inner">
