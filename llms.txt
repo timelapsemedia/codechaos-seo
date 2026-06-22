@@ -1,0 +1,40 @@
+# Code Chaos
+
+> Code Chaos is a Hitech Psytrance, Psycore and Darkpsy DJ and music producer from Germany, active since 2016 with 24+ releases. Code Chaos also runs **Code Chaos Audio**, an audio plugin series whose first release is **Crucible**, a 3-band harmonic saturation plugin. The project offers worldwide DJ booking and a professional audio mastering service.
+
+Primary site language: German (de). Domain: https://codechaos-official.de/
+
+## Key facts
+
+- **Artist:** Code Chaos — Hitech Psytrance, Psycore, Darkpsy producer & DJ from Germany.
+- **Active since:** 2016. **Releases:** 24+ on labels incl. Abstract Sound Design (DE, co-founded by Code Chaos), TATEWARI Records (Mexico), Soma Ritual Records (India).
+- **Tempo range:** 180–300 BPM. Genres: Hitech Psytrance (170–230 BPM), Psycore (180–300 BPM), Darkpsy / Dark Psytrance (150–200 BPM).
+- **Booking:** Worldwide. DJ Set from €150/hour, Live Set from €300/hour. Contact: booking@codechaos-official.de
+- **Mastering (Polished Media):** Stereo Mastering from €79, Stem Mastering from €129, Full Release package from €999. Contact: polished.media@gmx.de
+
+## Code Chaos Audio — Plugins
+
+- **Crucible** — a 3-band harmonic saturation plugin for Windows and macOS (VST3 / AU).
+  - Splits the signal into Low, Mid and High bands, each saturated independently.
+  - Saturation types include Hard Clip, Tube and Tape (and more), selectable per band.
+  - Per-band Drive, Mix and Gain; adjustable crossovers; per-band Mute/Solo; oversampling up to 4x.
+  - Built for Psytrance, Hitech, Psycore and Darkpsy producers, but works on any source (mixing & mastering).
+  - Tagline: "Shape. Saturate. Dominate." / "From subtle warmth to full-on destruction."
+  - Buy / download: https://timberwolf688.gumroad.com/l/crucible
+  - Product page: https://codechaos-official.de/crucible.html
+
+## Definitions (genre guide)
+
+- **Psycore:** A Psytrance subgenre at 180–300+ BPM combining dark psychedelic soundscapes with hardcore energy; dense atmospheric pads, experimental sound design, minimal sine-wave percussion.
+- **Hitech / Hi-Tech Psytrance:** Fast (≈170–230 BPM), complex, glitchy, hyper-detailed psychedelic trance.
+- **Darkpsy / Dark Psytrance:** Slower (≈150–200 BPM) but atmospherically intense, occult and dark soundscapes.
+
+## Important links
+
+- Home: https://codechaos-official.de/
+- Crucible plugin: https://codechaos-official.de/crucible.html
+- Buy Crucible (Gumroad): https://timberwolf688.gumroad.com/l/crucible
+- Music (Bandcamp): https://codechaos.bandcamp.com
+- SoundCloud: https://soundcloud.com/codechaos
+- Instagram: https://www.instagram.com/codechaos_official
+- Label (Abstract Sound Design): https://www.abstract-sound-design.de/
