@@ -96,6 +96,19 @@
         {"@type": "Offer", "name": "DJ Set", "price": "150", "priceCurrency": "EUR", "unitText": "per hour"},
         {"@type": "Offer", "name": "Live Set", "price": "300", "priceCurrency": "EUR", "unitText": "per hour"}
       ]
+    },
+    {
+      "@type": ["Product", "SoftwareApplication"],
+      "@id": "https://codechaos-official.de/crucible.html#product",
+      "name": "Crucible",
+      "alternateName": "Crucible 3-Band Harmonic Saturation Plugin",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Windows, macOS",
+      "description": "Crucible ist ein 3-Band Harmonic Saturation Plugin von Code Chaos Audio. Low, Mid und High lassen sich unabhaengig saettigen (Hard Clip, Tube, Tape und mehr), mit Drive, Mix und Gain pro Band und Oversampling bis 4x. Gebaut fuer Psytrance, Hitech, Psycore und Darkpsy Producer.",
+      "brand": {"@type": "Brand", "name": "Code Chaos Audio"},
+      "category": "Audio Plugin",
+      "url": "https://codechaos-official.de/crucible.html",
+      "offers": {"@type": "Offer", "url": "https://timberwolf688.gumroad.com/l/crucible", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
     }
   ]
 }
@@ -1151,7 +1164,9 @@ footer {
 
 /* ── Flyer ───────────────────────────────── */
 .ld-flyer {
-  flex: 0 0 200px;
+  flex: 0 0 260px;
+  aspect-ratio: 1 / 1;
+  align-self: flex-start;
   overflow: hidden;
   background: #050505;
 }
@@ -1604,6 +1619,7 @@ footer {
     <li><a href="#faq" title="FAQ Psycore Hitech Darkpsy">FAQ</a></li>
     <li><a href="#live-dates" title="Code Chaos Live Dates — Upcoming Shows">Shows</a></li>
     <li><a href="#booking" title="Code Chaos DJ buchen — Psycore Hitech">Booking</a></li>
+    <li><a href="/crucible.html" title="Crucible — 3-Band Harmonic Saturation Plugin von Code Chaos Audio" style="color:#ff6a00;">Plugins</a></li>
   </ul>
       <ul class="nav-links">
     <li><a href="https://www.instagram.com/codechaos_official/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
@@ -1771,68 +1787,11 @@ footer {
     <p class="section-desc">Code Chaos auf der Bühne — Termine, Locations, Set-Typen</p>
   </div>
 
-  <!-- EVENT LIST — add new .ld-card blocks here for future gigs -->
+<!-- EVENT LIST — add new .ld-card blocks here for future gigs -->
   <div class="ld-list">
 
-    <!-- GIG: Error404 18th Birthday — Rote Flora Hamburg, 03.04.2026 -->
-    <article class="ld-card" itemscope itemtype="https://schema.org/MusicEvent">
-      <meta itemprop="name" content="Error404 feiert Geburtstag — Code Chaos @ Rote Flora Hamburg">
-      <meta itemprop="startDate" content="2026-04-03">
-      <div itemprop="location" itemscope itemtype="https://schema.org/Place">
-        <meta itemprop="name" content="Rote Flora Hamburg">
-        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-          <meta itemprop="addressLocality" content="Hamburg">
-          <meta itemprop="addressCountry" content="DE">
-        </div>
-      </div>
-      <div itemprop="performer" itemscope itemtype="https://schema.org/MusicGroup">
-        <meta itemprop="name" content="Code Chaos">
-      </div>
 
-      <div class="ld-flyer">
-        <img src="/images/Flyer1.jpeg"
-             alt="Error404 18th Birthday — Code Chaos DJ Set @ Rote Flora Hamburg 03.04.2026"
-             itemprop="image"
-             loading="lazy"
-             width="280" height="280">
-      </div>
-
-      <div class="ld-info">
-        <div class="ld-date-block">
-          <span class="ld-day">03</span>
-          <span class="ld-month-year">APR 2026</span>
-        </div>
-
-        <h3 class="ld-event-name">Error404 feiert Geburtstag</h3>
-
-        <div class="ld-meta">
-          <span class="ld-venue">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Rote Flora · Hamburg, DE
-          </span>
-          <span class="ld-weekday">Freitag, 03.04.2026</span>
-        </div>
-
-        <div class="ld-tags">
-          <span class="ld-tag ld-tag--set">DJ SET</span>
-          <span class="ld-tag ld-tag--genre">HITECH PSYTRANCE</span>
-        </div>
-
-        <div class="ld-lineup">
-          <span class="ld-lineup-label">LINE-UP</span>
-          Chak Mo'ol · <strong>Code Chaos</strong> · Entaktogen · HE · Metahuman
-        </div>
-
-        <a href="https://www.facebook.com/events/1603314590708573"
-           target="_blank" rel="noopener noreferrer"
-           class="ld-btn"
-           aria-label="View event: Error404 feiert Geburtstag">
-          VIEW EVENT
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </article>
-
+  
     <!-- TEMPLATE FOR FUTURE EVENTS — copy and fill in:
     <article class="ld-card" itemscope itemtype="https://schema.org/MusicEvent">
       <div class="ld-flyer">
@@ -2275,7 +2234,7 @@ footer {
 <h3 class="visually-hidden">Code Chaos Hitech Psycore Sound — Darkpsy und Experimental Musik</h3>
       <p class="section-desc">Operating at the extreme edge of tempo while maintaining surgical precision. Where psychedelic architecture meets industrial force.</p>
     </div>
-<img loading="lazy" src="images/sonic.webp"
+<img loading="lazy" src="images/neue.webp"
      style="height:1000px; margin-top:20px;"
      alt="Code Chaos Psycore Hitech Sound Design — Frequenzanalyse Darkpsy Producer Deutschland">
     <div class="sound-layout">
@@ -2488,6 +2447,33 @@ footer {
         </div>
 
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CODE CHAOS AUDIO — PLUGINS (Crucible)
+     ═══════════════════════════════════════════════════════ -->
+<section id="plugins" role="region" aria-label="Code Chaos Audio Plugins — Crucible 3-Band Harmonic Saturation" style="padding:80px 0;border-top:2px solid rgba(255,106,0,0.25);background:radial-gradient(900px 400px at 50% 0%,rgba(255,106,0,0.10),transparent 60%);">
+  <div class="section-inner">
+    <div style="text-align:center;max-width:640px;margin:0 auto 40px;">
+      <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:4px;color:#ff6a00;margin-bottom:14px;">CODE CHAOS AUDIO · PLUGIN SERIES</div>
+      <h2 class="section-title" style="font-size:clamp(2.2rem,5vw,3.8rem);color:#fff;">CRUCIBLE</h2>
+      <p style="font-family:var(--font-display);font-size:clamp(1.1rem,2.5vw,1.6rem);letter-spacing:3px;color:#ff8c1a;margin:6px 0 16px;">3-BAND HARMONIC SATURATION</p>
+      <p style="color:rgba(255,255,255,0.55);font-size:0.95rem;line-height:1.8;">
+        Das erste Plugin der Code Chaos Audio Reihe — eine <strong style="color:#fff;">3-Band Harmonic Saturation</strong> für Windows &amp; macOS (VST3 / AU).
+        Sättige Low, Mid und High unabhängig: Hard Clip, Tube &amp; Tape pro Band, bis zu 4x Oversampling.
+        <strong style="color:#fff;">Shape. Saturate. Dominate.</strong> — gebaut von einem aktiven Hitech &amp; Psycore Producer.
+      </p>
+    </div>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:760px;margin:0 auto 36px;">
+      <div style="flex:1;min-width:160px;text-align:center;border:1px solid rgba(255,106,0,0.2);border-radius:8px;padding:18px;background:rgba(255,106,0,0.04);"><div style="font-family:var(--font-display);font-size:1.5rem;color:#ff6a00;">3 BANDS</div><div style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:2px;color:rgba(255,255,255,0.4);">LOW · MID · HIGH</div></div>
+      <div style="flex:1;min-width:160px;text-align:center;border:1px solid rgba(255,106,0,0.2);border-radius:8px;padding:18px;background:rgba(255,106,0,0.04);"><div style="font-family:var(--font-display);font-size:1.5rem;color:#ff6a00;">HARD CLIP · TUBE · TAPE</div><div style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:2px;color:rgba(255,255,255,0.4);">SATURATION TYPES</div></div>
+      <div style="flex:1;min-width:160px;text-align:center;border:1px solid rgba(255,106,0,0.2);border-radius:8px;padding:18px;background:rgba(255,106,0,0.04);"><div style="font-family:var(--font-display);font-size:1.5rem;color:#ff6a00;">UP TO 4x</div><div style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:2px;color:rgba(255,255,255,0.4);">OVERSAMPLING</div></div>
+    </div>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://timberwolf688.gumroad.com/l/crucible" target="_blank" rel="noopener" class="gumroad-button" data-gumroad-overlay-checkout="true" style="background:linear-gradient(180deg,#ff8c1a,#ff3d00);color:#000;font-family:var(--font-mono);font-size:0.8rem;font-weight:700;letter-spacing:2px;padding:18px 40px;border-radius:3px;box-shadow:0 10px 40px rgba(255,61,0,0.35);" title="Crucible Plugin auf Gumroad kaufen">⚡ GET CRUCIBLE</a>
+      <a href="/crucible.html" style="font-family:var(--font-mono);font-size:0.78rem;letter-spacing:2px;color:#fff;padding:18px 28px;border:1px solid rgba(255,106,0,0.3);border-radius:3px;" title="Crucible — 3-Band Harmonic Saturation Plugin Details">→ ALLE FEATURES</a>
     </div>
   </div>
 </section>
@@ -4400,6 +4386,7 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') closeAllModals(
           <li><a href="#releases" style="font-family:var(--font-mono);font-size:0.72rem;color:rgba(255,255,255,0.4);letter-spacing:1px;transition:color 0.2s;" onmouseover="this.style.color='var(--acid)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Releases</a></li>
           <li><a href="#booking" style="font-family:var(--font-mono);font-size:0.72rem;color:rgba(255,255,255,0.4);letter-spacing:1px;transition:color 0.2s;" onmouseover="this.style.color='var(--acid)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Booking</a></li>
           <li><a href="#mastering" style="font-family:var(--font-mono);font-size:0.72rem;color:rgba(255,255,255,0.4);letter-spacing:1px;transition:color 0.2s;" onmouseover="this.style.color='var(--acid)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Mastering</a></li>
+          <li><a href="/crucible.html" style="font-family:var(--font-mono);font-size:0.72rem;color:#ff6a00;letter-spacing:1px;transition:color 0.2s;" onmouseover="this.style.color='#ff8c1a'" onmouseout="this.style.color='#ff6a00'">Crucible Plugin</a></li>
           <li><a href="#was-ist-psycore" style="font-family:var(--font-mono);font-size:0.72rem;color:rgba(255,255,255,0.4);letter-spacing:1px;transition:color 0.2s;" onmouseover="this.style.color='var(--acid)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Genre Guide</a></li>
           <li><a href="#faq" style="font-family:var(--font-mono);font-size:0.72rem;color:rgba(255,255,255,0.4);letter-spacing:1px;transition:color 0.2s;" onmouseover="this.style.color='var(--acid)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">FAQ</a></li>
         </ul>
@@ -4513,3 +4500,4 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') closeAllModals(
   });
 })();
 </script>
+<script src="https://gumroad.com/js/gumroad.js" defer></script>
