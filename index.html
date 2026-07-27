@@ -9,7 +9,7 @@
 <meta name="geo.placename" content="Deutschland">
 <meta name="theme-color" content="#ff0055">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Code Chaos — Psycore, Hitech Psytrance &amp; Darkpsy DJ aus Deutschland. 24+ Releases, 180–300 BPM. DJ Set buchen · Mastering ab €79 · Abstract Sound Design">
+<meta name="description" content="Code Chaos — Psycore, Hitech Psytrance &amp; Darkpsy DJ aus Deutschland. Neues Album „Runtime Terror“ ab 21.08.2026 — Abstract Sound Design. 24+ Releases, 180–300 BPM. DJ Set buchen · Mastering ab €79">
 <meta name="keywords" content="Psycore, Hitech Psytrance, Hi-Tech Psytrance, Darkpsy, Dark Psy, Dark Psytrance, Psycore DJ, Hitech DJ, Darkpsy DJ, Psycore Producer, Hitech Producer, Psycore DJ Deutschland, Hitech DJ Deutschland, Psycore DJ Germany, Hitech Psytrance DJ Germany, Psycore buchen, Hitech buchen, Darkpsy buchen, Psycore BPM, Hitech BPM, Darkpsy BPM, Was ist Psycore, Was ist Hitech Psytrance, Was ist Darkpsy, Psycore Mastering, Hitech Mastering, Psycore Musik, Hitech Psytrance Musik, Code Chaos, Abstract Sound Design, Psycore Label, Hitech Label Deutschland, Psycore Festival Deutschland, Hitech Festival Deutschland, Psycore kaufen, Hitech Psytrance kaufen, Psycore Download, TATEWARI Records, Soma Ritual Records">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Code Chaos">
@@ -21,11 +21,11 @@
 <link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Code Chaos | Hitech &amp; Psycore DJ buchen">
-<meta property="og:description" content="Worldwide Booking · Hitech &amp; Psycore DJ aus Deutschland. DJ Set ab €150/h · Live Set ab €300/h · 24+ Releases · Mastering Service.">
-<meta property="og:image" content="https://codechaos-official.de/images/herofull.webp">
+<meta property="og:title" content="Code Chaos | Runtime Terror — Neues Album 21.08.2026">
+<meta property="og:description" content="Runtime Terror — das neue Album von Code Chaos auf Abstract Sound Design, ab 21.08.2026. Hitech Psytrance · Psycore · Darkpsy DJ aus Deutschland, weltweit buchbar.">
+<meta property="og:image" content="https://codechaos-official.de/images/runtime-terror-cover.webp">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:height" content="1200">
 <meta property="og:image:type" content="image/webp">
 <meta property="og:url" content="https://codechaos-official.de/">
 <meta property="og:site_name" content="Code Chaos">
@@ -33,9 +33,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@codechaos_official">
 <meta name="twitter:creator" content="@codechaos_official">
-<meta name="twitter:title" content="Code Chaos | Hitech &amp; Psycore DJ buchen">
-<meta name="twitter:description" content="Worldwide Booking · Hitech &amp; Psycore DJ aus Deutschland. DJ Set ab €150/h · Live Set ab €300/h.">
-<meta name="twitter:image" content="https://codechaos-official.de/images/herofull.webp">
+<meta name="twitter:title" content="Code Chaos | Runtime Terror — Neues Album 21.08.2026">
+<meta name="twitter:description" content="Runtime Terror — das neue Album von Code Chaos auf Abstract Sound Design, ab 21.08.2026. Hitech Psytrance · Psycore · Darkpsy DJ aus Deutschland.">
+<meta name="twitter:image" content="https://codechaos-official.de/images/runtime-terror-cover.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -544,6 +544,76 @@ section { position: relative; z-index: 2; background: var(--void); }
 .release-card-hot .release-label {
   border-color: rgba(0,255,136,0.25);
   color: var(--acid);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ALBUM ANNOUNCEMENT — Runtime Terror
+═══════════════════════════════════════════════════════════ */
+#album-runtime-terror { background: var(--void); border-top: 1px solid rgba(0,255,136,0.15); }
+.album-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.album-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+}
+.album-genre-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.album-tracklist-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+.album-tracklist {
+  list-style: none;
+  counter-reset: track;
+  border-top: 1px solid var(--line);
+  margin-bottom: 32px;
+}
+.album-tracklist li {
+  counter-increment: track;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-body);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+}
+.album-tracklist li::before {
+  content: counter(track, decimal-leading-zero);
+  font-family: var(--font-mono);
+  color: var(--hot);
+  font-size: 0.75rem;
+  margin-right: 16px;
+}
+.album-tracklist li span {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.3);
+  white-space: nowrap;
+  margin-left: auto;
+}
+.album-note, .album-premiere {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 12px;
+}
+.album-premiere { color: var(--acid); }
+@media (max-width: 900px) {
+  .album-layout { grid-template-columns: 1fr; gap: 32px; }
 }
 
 /* Timeline */
@@ -1606,6 +1676,88 @@ footer {
   </div>
 </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════
+     ALBUM ANNOUNCEMENT — Runtime Terror
+     ═══════════════════════════════════════════════════════ -->
+<section id="album-runtime-terror" role="region" aria-label="Runtime Terror — neues Album von Code Chaos" itemscope itemtype="https://schema.org/MusicAlbum">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow">NEW ALBUM · 21.08.2026</div>
+      <h2 class="section-title" itemprop="name">RUNTIME<br><em>TERROR</em></h2>
+      <p class="section-desc">11th studio album — Code Chaos — Abstract Sound Design</p>
+    </div>
+
+    <div class="album-layout">
+      <div class="album-cover">
+        <img src="images/runtime-terror-cover.webp"
+             alt="Code Chaos Runtime Terror album cover art"
+             itemprop="image"
+             loading="lazy" width="1200" height="1200">
+        <div class="album-genre-tags">
+          <span class="release-label" style="border-color:rgba(255,0,85,0.25);color:var(--hot);">HITECH PSYTRANCE</span>
+          <span class="release-label">PSYCORE</span>
+          <span class="release-label" style="border-color:rgba(0,204,255,0.25);color:var(--ice);">DARKPSY</span>
+        </div>
+      </div>
+
+      <div class="album-details">
+        <img class="album-tracklist-img"
+             src="images/runtime-terror-tracklist.webp"
+             alt="Runtime Terror tracklist — Cold Boot, Bitrot, Runtime Terror, Overdrive, Fork Bomb, Hyperthread, Ego Death, Core Dump, Night"
+             loading="lazy" width="1600" height="1600">
+
+        <h3 class="visually-hidden">Runtime Terror Tracklist</h3>
+        <ol class="album-tracklist">
+          <li itemprop="track" itemscope itemtype="https://schema.org/MusicRecording"><span itemprop="name">Cold Boot</span><span>145 BPM</span></li>
+          <li itemprop="track" itemscope itemtype="https://schema.org/MusicRecording"><span itemprop="name">Bitrot</span><span>146 BPM</span></li>
+          <li itemprop="track" itemscope itemtype="https://schema.org/MusicRecording"><span itemprop="name">Runtime Terror</span><span>233 BPM · E Phrygian</span></li>
+          <li itemprop="track" itemscope itemtype="https://schema.org/MusicRecording"><span itemprop="name">Overdrive</span><span>220 BPM</span></li>
+          <li itemprop="track" itemscope itemtype="https://schema.org/MusicRecording"><span itemprop="name">Fork Bomb</span><span>228 BPM</span></li>
+          <li itemprop="track" itemscope itemtype="https://schema.org/MusicRecording"><span itemprop="name">Hyperthread</span><span>245 BPM</span></li>
+          <li itemprop="track" itemscope itemtype="https://schema.org/MusicRecording"><span itemprop="name">Ego Death</span><span>210 BPM</span></li>
+          <li itemprop="track" itemscope itemtype="https://schema.org/MusicRecording"><span itemprop="name">Core Dump</span><span>199 BPM</span></li>
+          <li itemprop="track" itemscope itemtype="https://schema.org/MusicRecording"><span itemprop="name">Night</span><span>180 BPM</span></li>
+        </ol>
+
+        <p class="album-note">Available on all major platforms via DistroKid from 21.08.2026 — pre-order live now.</p>
+        <p class="album-premiere">⚡ First live performance at error404 Festival, 13.–16.08.2026, Hamburg</p>
+
+        <div class="hero-buttons" style="margin-bottom:0;">
+          <a href="https://codechaos.bandcamp.com" target="_blank" rel="noopener noreferrer" class="btn-primary">Pre-Order · Bandcamp</a>
+          <a href="https://soundcloud.com/codechaos" target="_blank" rel="noopener noreferrer" class="btn-secondary">SoundCloud</a>
+          <a href="https://instagram.com/codechaos_official" target="_blank" rel="noopener noreferrer" class="btn-secondary">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicAlbum",
+  "name": "Runtime Terror",
+  "byArtist": { "@type": "MusicGroup", "name": "Code Chaos", "url": "https://codechaos-official.de" },
+  "recordLabel": { "@type": "Organization", "name": "Abstract Sound Design" },
+  "genre": ["Hitech Psytrance", "Psycore", "Darkpsy"],
+  "datePublished": "2026-08-21",
+  "numTracks": 9,
+  "url": "https://codechaos-official.de/#album-runtime-terror",
+  "image": "https://codechaos-official.de/images/runtime-terror-cover.webp",
+  "track": [
+    { "@type": "MusicRecording", "position": 1, "name": "Cold Boot" },
+    { "@type": "MusicRecording", "position": 2, "name": "Bitrot" },
+    { "@type": "MusicRecording", "position": 3, "name": "Runtime Terror" },
+    { "@type": "MusicRecording", "position": 4, "name": "Overdrive" },
+    { "@type": "MusicRecording", "position": 5, "name": "Fork Bomb" },
+    { "@type": "MusicRecording", "position": 6, "name": "Hyperthread" },
+    { "@type": "MusicRecording", "position": 7, "name": "Ego Death" },
+    { "@type": "MusicRecording", "position": 8, "name": "Core Dump" },
+    { "@type": "MusicRecording", "position": 9, "name": "Night" }
+  ]
+}
+</script>
 
 <!-- ═══════════════════════════════════════════════════════
      LIVE DATES — Code Chaos
