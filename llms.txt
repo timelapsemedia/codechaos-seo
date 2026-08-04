@@ -1,15 +1,14 @@
 # Code Chaos
 
-> Code Chaos is a Hitech Psytrance, Psycore and Darkpsy DJ and music producer from Germany, active since 2016 with 24+ releases. Code Chaos also runs **Code Chaos Audio**, an audio plugin series whose first release is **Crucible**, a 3-band harmonic saturation plugin. The project offers worldwide DJ booking and a professional audio mastering service.
+> Code Chaos is a Hitech Psytrance, Psycore and Darkpsy music producer from Germany, active since 2016 with 24+ releases. Code Chaos is a studio project — no live shows or DJ bookings. Code Chaos also runs **Code Chaos Audio**, an audio plugin series whose first release is **Crucible**, a 3-band harmonic saturation plugin. The project offers a professional audio mastering service.
 
 Primary site language: German (de). Domain: https://codechaos-official.de/
 
 ## Key facts
 
-- **Artist:** Code Chaos — Hitech Psytrance, Psycore, Darkpsy producer & DJ from Germany.
+- **Artist:** Code Chaos — Hitech Psytrance, Psycore, Darkpsy producer from Germany. Studio project only — no live shows, events or DJ bookings.
 - **Active since:** 2016. **Releases:** 24+ on labels incl. Abstract Sound Design (DE, co-founded by Code Chaos), TATEWARI Records (Mexico), Soma Ritual Records (India).
 - **Tempo range:** 180–300 BPM. Genres: Hitech Psytrance (170–230 BPM), Psycore (180–300 BPM), Darkpsy / Dark Psytrance (150–200 BPM).
-- **Booking:** Worldwide. DJ Set from €150/hour, Live Set from €300/hour. Contact: booking@codechaos-official.de
 - **Mastering (Polished Media):** Stereo Mastering from €79, Stem Mastering from €129, Full Release package from €999. Contact: polished.media@gmx.de
 
 ## Code Chaos Audio — Plugins
