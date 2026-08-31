@@ -1,17 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://codechaos-official.de/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/herofull.webp</image:loc>
+      <image:title>Code Chaos Hitech Psycore Producer aus Deutschland</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/runtime-terror-cover.webp</image:loc>
+      <image:title>Code Chaos Runtime Terror album cover art</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/runtime-terror-tracklist.webp</image:loc>
+      <image:title>Runtime Terror tracklist</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a0734387494_10%20(1).jpg</image:loc>
+      <image:title>Code Pandorum Rotten Soil (Code Chaos Remix) — Deathstep / Psycore, 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a3624352167_10%20(2).jpg</image:loc>
+      <image:title>Code Chaos — Insomnia EP — Hitech / Psycore, 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a2754558671_10%20(1).jpg</image:loc>
+      <image:title>Code Chaos — Heart and Mind EP — Hitech, 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a4108633257_10%20(1).jpg</image:loc>
+      <image:title>Code Chaos — Abstrakte Musik — Single, Psycore, 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a2916471699_10.jpg</image:loc>
+      <image:title>Code Chaos — Parallax Prison / Schism of Self EP — Hitech, 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a3692193869_10.jpg</image:loc>
+      <image:title>Code Chaos — Chaos Kidz — Single, Hitech / Psycore, 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a0331959621_10.jpg</image:loc>
+      <image:title>Code Chaos — TANZALARM (The BPM Mutation) — Single, Hitech, 2024</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a3116388866_10.jpg</image:loc>
+      <image:title>Code Chaos — Amanita Muscaria — Single, Darkpsy, 2024</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a3669787620_10.jpg</image:loc>
+      <image:title>Code Chaos — A Tiny Piece Of Paper EP — Hitech, 2024</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a2292553009_10.jpg</image:loc>
+      <image:title>Code Chaos — Filaments and Voids EP — Psycore, 2024</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a4292490459_10.jpg</image:loc>
+      <image:title>Code Chaos — Ruins Of Humanity EP — Hitech, 2023</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a2282317379_10.jpg</image:loc>
+      <image:title>Code Chaos — Paradigma — Album, Hitech / Psycore, 2023</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a1613373388_10.jpg</image:loc>
+      <image:title>Code Chaos — Fun With Noises — Album, Experimental / Hitech, 2023</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a1630030939_10.jpg</image:loc>
+      <image:title>Code Chaos — Oblivion — Album, Darkpsy, 2022</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a1940946153_10.jpg</image:loc>
+      <image:title>Code Chaos — The Grudge — Album, Hitech, 2022</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a2132965447_10.jpg</image:loc>
+      <image:title>Code Chaos — The Slaughterhouse — Album, Psycore, 2022</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a0269440669_10.jpg</image:loc>
+      <image:title>Code Chaos — Interstellar EP — Hitech, 2022</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a1106026251_10.jpg</image:loc>
+      <image:title>Code Chaos — The Twilight Zone — Album, Darkpsy, 2022</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a0946678286_10.jpg</image:loc>
+      <image:title>Code Chaos — Alternate Future EP feat. PsySon — Hitech, 2022</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a3028954970_10.jpg</image:loc>
+      <image:title>Code Chaos — Det Stora Oväsendet (The Great Noise) — Album, Experimental, 2022</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a0214561636_10.jpg</image:loc>
+      <image:title>Code Chaos — Roadside Butchery — Album, Psycore, 2021</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a2345118362_10.jpg</image:loc>
+      <image:title>Code Chaos — A New Life (TOD Trilogy Chapter 3) — Demo Album, 2019</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a3706120805_10.jpg</image:loc>
+      <image:title>Code Chaos — Child Of Light (TOD Trilogy Chapter 2) — Bootleg EP, 2018</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/a1732428730_10.jpg</image:loc>
+      <image:title>Code Chaos — Secrets (TOD Trilogy Chapter 1) — Demo Album, 2017</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://codechaos-official.de/crucible.html</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/crucible.html"/>
