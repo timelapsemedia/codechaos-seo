@@ -893,6 +893,21 @@ section { position: relative; z-index: 2; background: var(--void); }
   color: var(--acid);
   letter-spacing: 0.05em;
 }
+.mform-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.mform-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.mform-label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 2px; color: rgba(255,255,255,0.3); }
+.mform-input { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-family: var(--font-mono); font-size: 0.82rem; padding: 11px 14px; outline: none; transition: border-color 0.2s; width: 100%; appearance: none; -webkit-appearance: none; }
+.mform-input::placeholder { color: rgba(255,255,255,0.2); }
+.mform-input:focus { border-color: var(--acid); }
+.mform-input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.4); cursor: pointer; }
+.mform-select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='rgba(255,255,255,0.3)' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; background-color: rgba(255,255,255,0.04); }
+.mform-select option { background: #0a0a12; color: #fff; }
+.mform-textarea { resize: vertical; min-height: 100px; }
+.mform-submit { width: 100%; background: var(--acid); color: #000; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; letter-spacing: 3px; padding: 16px; border: none; cursor: pointer; transition: all 0.2s; clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); margin-top: 4px; }
+.mform-submit:hover { background: #fff; }
+.mform-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+.mform-success-inner { border: 1px solid rgba(0,255,136,0.3); background: rgba(0,255,136,0.05); padding: 40px 28px; text-align: center; }
+@media (max-width: 600px) { .mform-row { grid-template-columns: 1fr; } }
 .pricing-table { display: flex; flex-direction: column; gap: 0; }
 .pricing-header {
   display: grid;
@@ -1190,6 +1205,27 @@ footer {
   });
 })();
 </script>
+<script>
+(function(){
+  var form=document.getElementById('mastering-request-form');
+  if(!form)return;
+  var btn=form.querySelector('.mform-submit');
+  var btnText=form.querySelector('.mform-submit-text');
+  var btnSend=form.querySelector('.mform-submit-sending');
+  var success=document.getElementById('mform-success');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    btn.disabled=true;
+    btnText.style.display='none';
+    btnSend.style.display='inline';
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+    .then(function(r){
+      if(r.ok){form.style.display='none';success.style.display='block';}
+      else{btn.disabled=false;btnText.style.display='inline';btnSend.style.display='none';alert('Fehler beim Senden. Bitte direkt an polished.media@gmx.de schreiben.');}
+    }).catch(function(){btn.disabled=false;btnText.style.display='inline';btnSend.style.display='none';alert('Fehler beim Senden. Bitte direkt an polished.media@gmx.de schreiben.');});
+  });
+})();
+</script>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://codechaos-official.de/#website","name":"Code Chaos","url":"https://codechaos-official.de","description":"Code Chaos - Hitech und Psycore Producer aus Deutschland","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://codechaos-official.de/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
@@ -1289,7 +1325,7 @@ footer {
     <li><a href="https://soundcloud.com/codechaos" target="_blank" rel="noopener noreferrer"><i class="fab fa-soundcloud"></i></a></li>
     <li><a href="https://codechaos.bandcamp.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-bandcamp"></i></a></li>
   </ul>
- <a href="mailto:polished.media@gmx.de" class="nav-cta" title="Mastering anfragen — Code Chaos">
+ <a href="#mastering-form" class="nav-cta" title="Mastering anfragen — Code Chaos">
   Mastering
 </a>
   </div>
@@ -1344,9 +1380,9 @@ footer {
   </p>
 
   <div class="hero-buttons">
-    <a href="mailto:polished.media@gmx.de" class="btn-primary">Mastering anfragen</a>
+    <a href="#mastering-form" class="btn-primary">Track mastern lassen</a>
+    <a href="/crucible.html" class="btn-secondary">Crucible Plugin — $56.76</a>
     <a href="https://codechaos.bandcamp.com" target="_blank" class="btn-secondary" rel="noopener noreferrer">Stream / Buy</a>
-    <a href="https://soundcloud.com/codechaos" target="_blank" class="btn-secondary" rel="noopener noreferrer">SoundCloud</a>
   </div>
 
   <div class="hero-stats">
@@ -1367,8 +1403,8 @@ footer {
       <div class="stat-label">Tracks</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num" style="color:#fff">1035</div>
-      <div class="stat-label">Total Playtime in min</div>
+      <div class="stat-num" style="color:#fff">3</div>
+      <div class="stat-label">International Labels</div>
     </div>
   </div>
 </div>
@@ -1988,7 +2024,7 @@ footer {
         </p>
         <div class="mastering-contact-block">
           <div class="mastering-contact-label">Mastering Inquiries</div>
-          <a href="mailto:polished.media@gmx.de" class="mastering-email">polished.media@gmx.de</a>
+          <a href="#mastering-form" class="mastering-email">Anfrage senden ↓</a>
         </div>
       </div>
 
@@ -2060,6 +2096,71 @@ footer {
 
       </div>
     </div>
+
+    <!-- ═══ MASTERING ANFRAGE-FORMULAR ═══ -->
+    <div id="mastering-form" style="margin-top:56px;padding-top:48px;border-top:1px solid rgba(255,255,255,0.06);">
+      <div style="max-width:640px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:8px;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:3px;color:var(--acid);">10+ JAHRE ERFAHRUNG · 24+ RELEASES · CO-FOUNDER ABSTRACT SOUND DESIGN</div>
+        <h3 style="text-align:center;font-family:var(--font-display);font-size:1.8rem;color:#fff;margin-bottom:20px;font-weight:400;">Mastering-Anfrage senden</h3>
+        <form action="https://formspree.io/f/mojkqopj" method="POST" id="mastering-request-form" novalidate>
+          <div class="mform-row">
+            <div class="mform-group">
+              <label class="mform-label" for="mf-name">NAME *</label>
+              <input class="mform-input" type="text" id="mf-name" name="name" placeholder="Dein Name / Artist" required autocomplete="name">
+            </div>
+            <div class="mform-group">
+              <label class="mform-label" for="mf-email">E-MAIL *</label>
+              <input class="mform-input" type="email" id="mf-email" name="email" placeholder="deine@email.de" required autocomplete="email">
+            </div>
+          </div>
+          <div class="mform-row">
+            <div class="mform-group">
+              <label class="mform-label" for="mf-service">GEWÜNSCHTER SERVICE *</label>
+              <select class="mform-input mform-select" id="mf-service" name="service" required>
+                <option value="" disabled selected>Auswählen…</option>
+                <option value="Stereo Mastering (€79)">Stereo Mastering (€79)</option>
+                <option value="Stem Mastering (€129)">Stem Mastering (€129)</option>
+                <option value="Cover Art (€99)">Cover Art (€99)</option>
+                <option value="Lyric Video (€179)">Lyric Video (€179)</option>
+                <option value="Promo Video (€299)">Promo Video (€299)</option>
+                <option value="Starter Paket (€149)">Starter Paket (€149)</option>
+                <option value="Stem Starter Paket (€199)">Stem Starter Paket (€199)</option>
+                <option value="Pro Release EP (€399)">Pro Release EP (€399)</option>
+                <option value="Full Release Album (€999)">Full Release Album (€999)</option>
+                <option value="Individuell / Sonstiges">Individuell / Sonstiges</option>
+              </select>
+            </div>
+            <div class="mform-group">
+              <label class="mform-label" for="mf-tracks">ANZAHL TRACKS</label>
+              <input class="mform-input" type="text" id="mf-tracks" name="tracks" placeholder="z.B. 1">
+            </div>
+          </div>
+          <div class="mform-group">
+            <label class="mform-label" for="mf-deadline">DEADLINE (OPTIONAL)</label>
+            <input class="mform-input" type="date" id="mf-deadline" name="deadline">
+          </div>
+          <div class="mform-group">
+            <label class="mform-label" for="mf-message">NACHRICHT</label>
+            <textarea class="mform-input mform-textarea" id="mf-message" name="message" placeholder="Genre, Referenz-Track, besondere Wünsche…" rows="4"></textarea>
+          </div>
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_subject" value="🎛 Neue Mastering-Anfrage — Code Chaos">
+          <button type="submit" class="mform-submit">
+            <span class="mform-submit-text">Anfrage senden →</span>
+            <span class="mform-submit-sending" style="display:none;">WIRD GESENDET…</span>
+          </button>
+        </form>
+        <div id="mform-success" style="display:none;">
+          <div class="mform-success-inner">
+            <div style="font-family:var(--font-mono);font-size:2rem;color:var(--acid);margin-bottom:12px;">✓</div>
+            <div style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:3px;color:var(--acid);margin-bottom:8px;">ANFRAGE ERHALTEN</div>
+            <div style="color:rgba(255,255,255,0.5);font-size:0.85rem;line-height:1.7;">Deine Anfrage wurde gesendet.<br>Antwort in der Regel innerhalb von 24–48h.</div>
+          </div>
+        </div>
+        <p style="text-align:center;margin-top:20px;font-family:var(--font-mono);font-size:0.68rem;color:rgba(255,255,255,0.25);">Lieber direkt per Mail? <a href="mailto:polished.media@gmx.de" style="color:var(--acid);text-decoration:none;">polished.media@gmx.de</a></p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -2084,12 +2185,55 @@ footer {
       <div style="flex:1;min-width:160px;text-align:center;border:1px solid rgba(255,106,0,0.2);border-radius:8px;padding:18px;background:rgba(255,106,0,0.04);"><div style="font-family:var(--font-display);font-size:1.5rem;color:#ff6a00;">UP TO 4x</div><div style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:2px;color:rgba(255,255,255,0.4);">OVERSAMPLING</div></div>
     </div>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="https://timberwolf688.gumroad.com/l/crucible" target="_blank" rel="noopener" class="gumroad-button" data-gumroad-overlay-checkout="true" style="background:linear-gradient(180deg,#ff8c1a,#ff3d00);color:#000;font-family:var(--font-mono);font-size:0.8rem;font-weight:700;letter-spacing:2px;padding:18px 40px;border-radius:3px;box-shadow:0 10px 40px rgba(255,61,0,0.35);" title="Crucible Plugin auf Gumroad kaufen">⚡ GET CRUCIBLE</a>
+      <a href="https://timberwolf688.gumroad.com/l/crucible" target="_blank" rel="noopener" class="gumroad-button" data-gumroad-overlay-checkout="true" style="background:linear-gradient(180deg,#ff8c1a,#ff3d00);color:#000;font-family:var(--font-mono);font-size:0.8rem;font-weight:700;letter-spacing:2px;padding:18px 40px;border-radius:3px;box-shadow:0 10px 40px rgba(255,61,0,0.35);" title="Crucible Plugin auf Gumroad kaufen">⚡ GET CRUCIBLE — $56.76</a>
       <a href="/crucible.html" style="font-family:var(--font-mono);font-size:0.78rem;letter-spacing:2px;color:#fff;padding:18px 28px;border:1px solid rgba(255,106,0,0.3);border-radius:3px;" title="Crucible — 3-Band Harmonic Saturation Plugin Details">→ ALLE FEATURES</a>
     </div>
   </div>
 </section>
 
+<!-- NEWSLETTER SECTION — Code Chaos -->
+<section class="cc-newsletter">
+  <div class="cc-newsletter__inner">
+    <div class="cc-newsletter__label">NEWSLETTER</div>
+    <h2 class="cc-newsletter__heading">STAY IN THE LOOP</h2>
+    <p class="cc-newsletter__sub">Neue Releases zuerst hören. Kein Spam, versprochen.</p>
+
+    <div id="cc-sib-container">
+      <div id="cc-error-message" class="cc-msg cc-msg--error" style="display:none;">
+        Something went wrong. Please try again.
+      </div>
+      <div id="cc-success-message" class="cc-msg cc-msg--success" style="display:none;">
+        ✓ You're in — check your inbox to confirm.
+      </div>
+
+      <form id="cc-sib-form" method="POST"
+        action="https://e0d25de9.sibforms.com/serve/MUIFADtGE4xaY8ivvcpgooKggDN2iyN274HxZ-ycvSL2Yps_bw2DMkDuzvz0edYkGvgQup7eksMecVbh0uZtaAJkYWl3HzhnwxJQMAs8W8G0XRVDH-6pB-evj89mBCrsDNE-znSZiGZLVuw6Lij35VTL27lI7-0wEbnCUrIfn7m3Bu_G69xgMg2YENz3J6ablyEjVz3ZjTToklZJ_Q=="
+        data-type="subscription">
+
+        <div class="cc-newsletter__form-row">
+          <input
+            class="cc-newsletter__input"
+            type="email"
+            id="CC_EMAIL"
+            name="EMAIL"
+            placeholder="your@email.com"
+            autocomplete="off"
+            required
+          />
+          <button class="cc-newsletter__btn" type="submit">
+            <span>GET UPDATES</span>
+            <svg class="cc-newsletter__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <input type="text" name="email_address_check" value="" style="display:none;">
+        <input type="hidden" name="locale" value="de">
+      </form>
+    </div>
+  </div>
+</section>
 
 <!-- ████████████████████████████████████████████████
      GENRE AUTHORITY SECTION — PSYCORE / HITECH / DARKPSY
@@ -2494,7 +2638,7 @@ footer {
           Welcher Mastering Service ist der beste für Psycore und Hitech Psytrance? <span style="color:var(--acid);font-size:1.3rem;font-weight:300;flex-shrink:0;margin-left:20px;">+</span>
         </summary>
         <div style="padding:0 0 24px;font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.9;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text"><a href="http://polished.media" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Polished Media</a> (betrieben von Code Chaos) bietet professionelles Mastering speziell für Psycore, Hitech Psytrance und Darkpsy. Das Mastering kommt von einem aktiven Psycore und Hitech Produzenten — kein generisches Mastering, sondern genre-spezifisches Verständnis für Kick-Charakteristik, Bassline-Architektur und Soundscape-Behandlung in diesen Genres. Stereo Mastering ab €79, Stem Mastering ab €129. Anfragen: <a href="mailto:booking@codechaos-official.de">booking@codechaos-official.de</a></p>
+          <p itemprop="text"><a href="http://polished.media" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Polished Media</a> (betrieben von Code Chaos) bietet professionelles Mastering speziell für Psycore, Hitech Psytrance und Darkpsy. Das Mastering kommt von einem aktiven Psycore und Hitech Produzenten — kein generisches Mastering, sondern genre-spezifisches Verständnis für Kick-Charakteristik, Bassline-Architektur und Soundscape-Behandlung in diesen Genres. Stereo Mastering ab €79, Stem Mastering ab €129. Anfragen: <a href="mailto:polished.media@gmx.de">polished.media@gmx.de</a></p>
         </div>
       </details>
 
@@ -2725,7 +2869,7 @@ footer {
           </div>
         </div>
 
-        <a href="mailto:polished.media@gmx.de" style="display:block;text-align:center;background:var(--acid);color:#000;font-family:var(--mono);font-size:0.75rem;font-weight:700;letter-spacing:2px;padding:14px;text-decoration:none;" title="Mastering anfragen — Code Chaos">⚡ MASTERING ANFRAGEN →</a>
+        <a href="#mastering-form" style="display:block;text-align:center;background:var(--acid);color:#000;font-family:var(--mono);font-size:0.75rem;font-weight:700;letter-spacing:2px;padding:14px;text-decoration:none;" title="Mastering anfragen — Code Chaos">⚡ MASTERING ANFRAGEN →</a>
       </div>
     </div>
   </div>
@@ -2811,7 +2955,7 @@ footer {
           <div style="font-family:var(--display);font-size:3rem;color:#fff;font-weight:300;">€79</div>
           <div style="font-family:var(--mono);font-size:0.7rem;color:rgba(255,255,255,0.3);">per track</div>
         </div>
-        <a href="mailto:booking@codechaos-official.de" style="display:block;text-align:center;background:rgba(0,255,136,0.1);border:1px solid rgba(0,255,136,0.3);color:var(--acid);font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:2px;padding:13px;text-decoration:none;" title="Stereo Mastering anfragen — Psycore Hitech Darkpsy">STEREO MASTERING REQUEST →</a>
+        <a href="#mastering-form" style="display:block;text-align:center;background:rgba(0,255,136,0.1);border:1px solid rgba(0,255,136,0.3);color:var(--acid);font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:2px;padding:13px;text-decoration:none;" title="Stereo Mastering anfragen — Psycore Hitech Darkpsy">STEREO MASTERING REQUEST →</a>
       </div>
 
       <!-- STEM MASTER -->
@@ -2833,12 +2977,12 @@ footer {
           <div style="font-family:var(--display);font-size:3rem;color:#fff;font-weight:300;">€129</div>
           <div style="font-family:var(--mono);font-size:0.7rem;color:rgba(255,255,255,0.3);">per track</div>
         </div>
-        <a href="mailto:polished.media@gmx.de" style="display:block;text-align:center;background:var(--hot);color:#000;font-family:var(--mono);font-size:0.72rem;font-weight:700;letter-spacing:2px;padding:13px;text-decoration:none;" title="Stem Mastering anfragen — Psycore Hitech Darkpsy">STEM MASTERING REQUEST →</a>
+        <a href="#mastering-form" style="display:block;text-align:center;background:var(--hot);color:#000;font-family:var(--mono);font-size:0.72rem;font-weight:700;letter-spacing:2px;padding:13px;text-decoration:none;" title="Stem Mastering anfragen — Psycore Hitech Darkpsy">STEM MASTERING REQUEST →</a>
       </div>
     </div>
 
     <p style="text-align:center;color:rgba(255,255,255,0.2);font-family:var(--mono);font-size:0.65rem;letter-spacing:1px;">
-      <a href="http://polished.media" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Polished Media</a> · <a href="mailto:booking@codechaos-official.de">booking@codechaos-official.de</a> · Psycore · Hitech Psytrance · Darkpsy Mastering
+      <a href="http://polished.media" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Polished Media</a> · <a href="mailto:polished.media@gmx.de">polished.media@gmx.de</a> · Psycore · Hitech Psytrance · Darkpsy Mastering
     </p>
   </div>
 </section>
@@ -3509,51 +3653,8 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') closeAllModals(
       24+ Releases · 10+ Jahre · Abstract Sound Design
     </p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="mailto:polished.media@gmx.de" style="background:var(--acid);color:#000;font-family:var(--mono);font-size:0.8rem;font-weight:700;letter-spacing:2px;padding:18px 40px;text-decoration:none;" title="Mastering anfragen — Code Chaos">⚡ MASTERING ANFRAGEN</a>
+      <a href="#mastering-form" style="background:var(--acid);color:#000;font-family:var(--mono);font-size:0.8rem;font-weight:700;letter-spacing:2px;padding:18px 40px;text-decoration:none;" title="Mastering anfragen — Code Chaos">⚡ MASTERING ANFRAGEN</a>
       <a href="https://codechaos.bandcamp.com" target="_blank" rel="noopener noreferrer" style="display:inline-block;font-family:var(--mono);font-size:0.75rem;letter-spacing:2px;color:rgba(255,255,255,0.4);text-decoration:none;padding:18px 24px;border:1px solid rgba(255,255,255,0.15);">→ MUSIK HÖREN</a>
-    </div>
-  </div>
-</section>
-<!-- NEWSLETTER SECTION — Code Chaos -->
-<section class="cc-newsletter">
-  <div class="cc-newsletter__inner">
-    <div class="cc-newsletter__label">NEWSLETTER</div>
-    <h2 class="cc-newsletter__heading">STAY IN THE LOOP</h2>
-    <p class="cc-newsletter__sub">New releases · Free tracks. No spam.</p>
-
-    <div id="cc-sib-container">
-      <div id="cc-error-message" class="cc-msg cc-msg--error" style="display:none;">
-        Something went wrong. Please try again.
-      </div>
-      <div id="cc-success-message" class="cc-msg cc-msg--success" style="display:none;">
-        ✓ You're in — check your inbox to confirm.
-      </div>
-
-      <form id="cc-sib-form" method="POST"
-        action="https://e0d25de9.sibforms.com/serve/MUIFADtGE4xaY8ivvcpgooKggDN2iyN274HxZ-ycvSL2Yps_bw2DMkDuzvz0edYkGvgQup7eksMecVbh0uZtaAJkYWl3HzhnwxJQMAs8W8G0XRVDH-6pB-evj89mBCrsDNE-znSZiGZLVuw6Lij35VTL27lI7-0wEbnCUrIfn7m3Bu_G69xgMg2YENz3J6ablyEjVz3ZjTToklZJ_Q=="
-        data-type="subscription">
-
-        <div class="cc-newsletter__form-row">
-          <input
-            class="cc-newsletter__input"
-            type="email"
-            id="CC_EMAIL"
-            name="EMAIL"
-            placeholder="your@email.com"
-            autocomplete="off"
-            required
-          />
-          <button class="cc-newsletter__btn" type="submit">
-            <span>GET UPDATES</span>
-            <svg class="cc-newsletter__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </button>
-        </div>
-
-        <input type="text" name="email_address_check" value="" style="display:none;">
-        <input type="hidden" name="locale" value="de">
-      </form>
     </div>
   </div>
 </section>
