@@ -4,11 +4,19 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://codechaos-official.de/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/uhrwerk-aus-blut/cover-1600.jpg</image:loc>
+      <image:title>Code Chaos · Uhrwerk aus Blut · Single-Cover, 30.10.2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/brand/portrait-press-1200.jpg</image:loc>
+      <image:title>Code Chaos · Pressefoto</image:title>
+    </image:image>
     <image:image>
       <image:loc>https://codechaos-official.de/images/herofull.webp</image:loc>
       <image:title>Code Chaos Hitech Psycore Producer aus Deutschland</image:title>
