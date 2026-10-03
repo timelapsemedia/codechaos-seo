@@ -10,7 +10,7 @@ Primary site language: German (de). Domain: https://codechaos-official.de/
 - **Release date:** 30 October 2026 (2026-10-30). **Label:** Abstract Sound Design.
 - **Tagline:** "Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet." (A heart that beats too fast. A clockwork that bleeds.)
 - **Story in five scenes:** Prolog, I Die Uhr, II Der Spiegel, III Das Blut, Rückkehr.
-- **Pre-Save:** https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut
+- **Pre-Save:** https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut-2
 - Voices and artwork were created with AI. It marks a new era for the project: darker, narrative, gothic.
 
 ## Key facts
