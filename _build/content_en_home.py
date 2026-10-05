@@ -35,7 +35,7 @@ EN_HOME = {
       <span class="eyebrow">Polished Media · mastering</span>
       <h2 id="mast-t">Mastering for psycore, hitech &amp; darkpsy</h2>
       <p>Genre-specific mastering by an active producer who knows these genres from the inside: kick behaviour at 150–300 BPM, neurotrance basslines, dense soundscapes. No generic presets, no flat compression.</p>
-      <ul><li>Audio audit before every master</li><li>Unlimited revisions</li><li>24-bit WAV, 16-bit AIFF and 320 kbps MP3, streaming-ready</li><li>Reply usually within 24–48 hours</li></ul>
+      <ul><li>Audio audit before every master</li><li>Unlimited revisions</li><li>24-bit WAV, 16-bit AIFF and 320 kbps MP3, streaming-ready</li><li>Reply usually within 24–48 hours</li><li>Pay in advance or by invoice after completion</li></ul>
     </div>
     <div>
       <table class="price"><tbody>
