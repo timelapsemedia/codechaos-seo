@@ -58,7 +58,7 @@ GENRES = [
   "releases": ["runtime", "rotten", "abstrakte", "filaments", "insomnia", "kidz", "paradigma", "slaughter", "roadside"],
   "de": {
    "nav": "Psycore", "bpm": "180–300+ BPM",
-   "title": "Was ist Psycore? Genre Guide, BPM & Produktion | Code Chaos",
+   "title": "Psycore: Was ist Psycore? Genre, BPM & Produktion | Code Chaos",
    "desc": "Psycore erklärt: Psytrance-Subgenre mit 180–300+ BPM, Sinus-Kicks, Neurotrance-Bässen und hypnotischen Soundscapes. Geschichte, Unterschiede, Produktionstipps.",
    "og_alt": "Psycore Genre Guide von Code Chaos",
    "eyebrow": "Genre Guide · Psycore",
@@ -113,7 +113,7 @@ GENRES = [
   },
   "en": {
    "nav": "Psycore", "bpm": "180–300+ BPM",
-   "title": "What is Psycore? Genre Guide, BPM & Production | Code Chaos",
+   "title": "Psycore: What is Psycore? Genre, BPM & Production | Code Chaos",
    "desc": "Psycore explained: the fastest psytrance subgenre at 180–300+ BPM with sine kicks, neurotrance basslines and hypnotic soundscapes. History, comparison, production tips.",
    "og_alt": "Psycore genre guide by Code Chaos",
    "eyebrow": "Genre guide · Psycore",
@@ -172,11 +172,11 @@ GENRES = [
   "releases": ["runtime", "insomnia", "heart", "parallax", "kidz", "tanzalarm", "tiny", "ruins", "paradigma", "grudge", "interstellar", "alternate"],
   "de": {
    "nav": "Hitech Psytrance", "bpm": "170–230+ BPM",
-   "title": "Was ist Hitech Psytrance (Hi-Tech)? Guide, BPM & Produktion | Code Chaos",
+   "title": "Hitech Psytrance (Hitech Psy, Hi-Tech): Guide & BPM | Code Chaos",
    "desc": "Hitech Psytrance (Hi-Tech) erklärt: 170–230+ BPM, glitchige Synths, komplexe Percussion, futuristischer Sound. Geschichte, Unterschiede zu Psycore, Produktionstipps.",
    "og_alt": "Hitech Psytrance Genre Guide von Code Chaos",
    "eyebrow": "Genre Guide · Hitech Psytrance",
-   "h1": "Was ist Hitech Psytrance?",
+   "h1": "Was ist Hitech Psytrance (Hitech Psy)?",
    "answer": "<strong>Hitech Psytrance</strong> (auch Hi-Tech, HiTech oder Hitech Psy) ist ein schnelles, technisch hochkomplexes Subgenre des Psytrance mit <strong>170 bis über 230 BPM</strong>, meist um 180–200 BPM. Typisch sind glitchige, unvorhersehbare Synth-Sounds, detailreiche Percussion, ständige Wechsel im Arrangement und ein futuristisch-außerirdischer Charakter. Anders als Psycore muss Hitech nicht düster sein: Es kann auch verspielt und euphorisch klingen.",
    "teaser": "Futuristisch, glitchy, unvorhersehbar: der technisch komplexeste Psytrance bei 170–230+ BPM, mal dunkel, mal euphorisch.",
    "specs_title": "Hitech Psytrance auf einen Blick",
@@ -184,7 +184,7 @@ GENRES = [
              ("Sounds", "Glitch, Laser, FM-Leads, Resampling, Mikro-Edits"), ("Percussion", "komplex, punchige Kick, unregelmäßige Hi-Hats"),
              ("Stimmung", "von dunkel bis euphorisch"), ("Verwandt", "Psycore, Darkpsy, Full-On, Forest"), ("Szene", "Brasilien, Mexiko, Kolumbien, Osteuropa, Westeuropa")],
    "body": """<h2>Herkunft und Entwicklung</h2>
-<p>Die Wurzeln von Hitech liegen Mitte der 2000er in der Darkpsy- und Forest-Szene. Vor allem in Osteuropa und Russland trieben Producer wie Kindzadza und Psykovsky Tempo und Komplexität ihrer Tracks deutlich nach oben und nahmen Sounddesign-Ideen aus dem Full-On in schnelle, dichte Arrangements mit. Daraus entstand ein eigener Stil, der sich bald über ganz Europa verbreitete.</p>
+<p>Die Wurzeln von Hitech liegen Mitte der 2000er. Deutschland spielt dabei eine wichtige Rolle: Die deutschen Artists Cosmo und Highko werden oft als Mitbegründer des Stils genannt. Parallel trieben in der Darkpsy- und Forest-Szene Osteuropas und Russlands Producer wie Kindzadza und Psykovsky Tempo und Komplexität ihrer Tracks deutlich nach oben und nahmen Sounddesign-Ideen aus dem Full-On in schnelle, dichte Arrangements mit. Daraus entstand ein eigener Stil, der sich bald über ganz Europa verbreitete.</p>
 <p>Heute ist Hitech eines der aktivsten Psytrance-Subgenres. Besonders große Szenen gibt es in Lateinamerika (Brasilien, Mexiko, Kolumbien), in Osteuropa und in Westeuropa. In Deutschland ist Hitech eng mit Psycore verbunden: Viele Producer bewegen sich zwischen beiden Genres, so auch Code Chaos.</p>
 <h2>Wie klingt Hitech?</h2>
 <ul>
@@ -214,7 +214,7 @@ GENRES = [
    "rel_intro": "Hitech-Releases von Code Chaos seit 2022, vom Album The Grudge bis Runtime Terror (2026). Alle Releases gibt es auf Bandcamp.",
    "faq": [
      ("Wie viele BPM hat Hitech Psytrance?", "Hitech liegt meist zwischen 170 und 230 BPM, typische Tracks bewegen sich um 180–200 BPM. Einige Producer gehen deutlich darüber hinaus und bewegen sich dann im Grenzbereich zu Psycore."),
-     ("Schreibt man Hitech oder Hi-Tech?", "Beides ist gebräuchlich. Hitech, Hi-Tech, HiTech und Hi Tech Psy meinen dasselbe Psytrance-Subgenre."),
+     ("Schreibt man Hitech oder Hi-Tech? Was ist Hitech Psy?", "Alles dasselbe: Hitech, Hi-Tech, HiTech, Hitech Psy und Hi-Tech Psytrance meinen das gleiche Psytrance-Subgenre mit 170–230+ BPM. „Hitech Psy“ ist einfach die Kurzform von Hitech Psytrance."),
      ("Was ist der Unterschied zwischen Hitech und Psycore?", "Hitech ist dynamisch, komplex und kann euphorisch sein. Psycore ist schneller (180–300+ BPM), minimaler, statisch und durchgehend dunkel."),
      ("Wo kann ich Hitech Psytrance kaufen?", "Viele Hitech-Releases erscheinen auf Bandcamp. Hitech von Code Chaos gibt es auf <a href=\"https://codechaos.bandcamp.com\">codechaos.bandcamp.com</a> in WAV, FLAC und MP3."),
    ],
@@ -224,11 +224,11 @@ GENRES = [
   },
   "en": {
    "nav": "Hitech Psytrance", "bpm": "170–230+ BPM",
-   "title": "What is Hitech Psytrance (Hi-Tech)? Guide, BPM & Production | Code Chaos",
+   "title": "Hitech Psytrance (Hitech Psy, Hi-Tech): Guide & BPM | Code Chaos",
    "desc": "Hitech psytrance (hi-tech) explained: 170–230+ BPM, glitchy synths, complex percussion and a futuristic sound. History, hitech vs psycore, production tips.",
    "og_alt": "Hitech psytrance genre guide by Code Chaos",
    "eyebrow": "Genre guide · Hitech psytrance",
-   "h1": "What is Hitech Psytrance?",
+   "h1": "What is Hitech Psytrance (Hitech Psy)?",
    "answer": "<strong>Hitech psytrance</strong> (also hi-tech, hitech or hi tech psy) is a fast, technically complex subgenre of psytrance at <strong>170 to over 230 BPM</strong>, usually around 180–200 BPM. It is defined by glitchy, unpredictable synth sounds, detailed percussion, constant changes in the arrangement and a futuristic, alien character. Unlike psycore, hitech doesn't have to be dark: it can also sound playful and euphoric.",
    "teaser": "Futuristic, glitchy and unpredictable: the most technically complex psytrance at 170–230+ BPM, from dark to euphoric.",
    "specs_title": "Hitech psytrance at a glance",
@@ -236,7 +236,7 @@ GENRES = [
              ("Sounds", "glitch, lasers, FM leads, resampling, micro edits"), ("Percussion", "complex, punchy kick, irregular hi-hats"),
              ("Mood", "dark to euphoric"), ("Related", "psycore, darkpsy, full-on, forest"), ("Scene", "Brazil, Mexico, Colombia, Eastern and Western Europe")],
    "body": """<h2>Origins</h2>
-<p>Hitech has its roots in the darkpsy and forest scene of the mid-2000s. Especially in Eastern Europe and Russia, producers such as Kindzadza and Psykovsky pushed the tempo and complexity of their tracks much further and carried sound design ideas from full-on into fast, dense arrangements. A distinct style emerged and soon spread across Europe.</p>
+<p>Hitech has its roots in the mid-2000s. Germany played an important part: the German artists Cosmo and Highko are often named as co-founders of the style. At the same time, producers in the darkpsy and forest scene of Eastern Europe and Russia, such as Kindzadza and Psykovsky, pushed the tempo and complexity of their tracks much further and carried sound design ideas from full-on into fast, dense arrangements. A distinct style emerged and soon spread across Europe.</p>
 <p>Today hitech is one of the most active psytrance subgenres, with especially big scenes in Latin America (Brazil, Mexico, Colombia), Eastern Europe and Western Europe. In Germany hitech is closely linked to psycore: many producers move between both genres, including Code Chaos.</p>
 <h2>What does hitech sound like?</h2>
 <ul>
@@ -266,7 +266,7 @@ GENRES = [
    "rel_intro": "Hitech releases by Code Chaos since 2022, from the album The Grudge to Runtime Terror (2026). Everything is available on Bandcamp.",
    "faq": [
      ("What BPM is hitech psytrance?", "Hitech usually runs between 170 and 230 BPM, with typical tracks around 180–200 BPM. Some producers go well beyond that and end up on the border to psycore."),
-     ("Is it hitech or hi-tech?", "Both are common. Hitech, hi-tech, hitech psy and hi tech psytrance all refer to the same psytrance subgenre."),
+     ("Is it hitech or hi-tech? What is hitech psy?", "All the same: hitech, hi-tech, hitech psy and hi-tech psytrance refer to the same psytrance subgenre at 170–230+ BPM. \"Hitech psy\" is simply short for hitech psytrance."),
      ("What is the difference between hitech and psycore?", "Hitech is dynamic, complex and can be euphoric. Psycore is faster (180–300+ BPM), more minimal, static and dark throughout."),
      ("Where can I buy hitech psytrance?", "Many hitech releases come out on Bandcamp. Hitech by Code Chaos is available at <a href=\"https://codechaos.bandcamp.com\">codechaos.bandcamp.com</a> in WAV, FLAC and MP3."),
    ],
@@ -280,7 +280,7 @@ GENRES = [
   "releases": ["uhrwerk", "runtime", "amanita", "oblivion", "twilight"],
   "de": {
    "nav": "Darkpsy", "bpm": "150–200 BPM",
-   "title": "Was ist Darkpsy (Dark Psytrance)? Guide, BPM & Produktion | Code Chaos",
+   "title": "Darkpsy (Dark Psy): Was ist Darkpsy? BPM & Produktion | Code Chaos",
    "desc": "Darkpsy (Dark Psy, Dark Psytrance) erklärt: 150–200 BPM, okkulte Atmosphäre, schwere Basslines, Horror-Samples. Geschichte, Unterschiede, Produktionstipps.",
    "og_alt": "Darkpsy Genre Guide von Code Chaos",
    "eyebrow": "Genre Guide · Darkpsy",
@@ -327,7 +327,7 @@ GENRES = [
   },
   "en": {
    "nav": "Darkpsy", "bpm": "150–200 BPM",
-   "title": "What is Darkpsy (Dark Psytrance)? Guide, BPM & Production | Code Chaos",
+   "title": "Darkpsy (Dark Psy): What is Darkpsy? BPM & Production | Code Chaos",
    "desc": "Darkpsy (dark psy, dark psytrance) explained: 150–200 BPM, occult atmosphere, heavy basslines and horror samples. History, comparison and production tips.",
    "og_alt": "Darkpsy genre guide by Code Chaos",
    "eyebrow": "Genre guide · Darkpsy",
