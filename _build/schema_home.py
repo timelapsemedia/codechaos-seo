@@ -51,10 +51,10 @@ graph=[
   "provider":{"@id":"https://polished.media/#org"},"areaServed":"Worldwide","availableLanguage":["de","en"],"url":B+"/mastering/",
   "offers":[{"@type":"Offer","name":n,"price":pr,"priceCurrency":"EUR","priceSpecification":{"@type":"PriceSpecification","price":pr,"priceCurrency":"EUR","valueAddedTaxIncluded":True}} for n,pr in [("Single: Stereo Mastering (1 Track)","79"),("Stem Pro: Stem Mastering (1 Track, bis 6 Stems)","129"),("EP Mastering (bis 5 Tracks)","349"),("Album Mastering (bis 10 Tracks)","629"),("Cover Art","99"),("Lyric Video","179"),("Promo Video (60 Sekunden)","299")]]},
  {"@type":["Product","SoftwareApplication"],"@id":B+"/crucible.html#product","name":"Crucible","url":B+"/crucible.html","brand":{"@type":"Brand","name":"Code Chaos Audio"},
-  "applicationCategory":"MultimediaApplication","applicationSubCategory":"Audio Plugin","operatingSystem":"Windows, macOS",
-  "description":"3-Band Harmonic Saturation Plugin (VST3 / AU) von Code Chaos Audio: Low, Mid und High getrennt sättigen (Hard Clip, Tube, Tape), Drive, Mix und Gain pro Band, bis zu 4x Oversampling.",
+  "applicationCategory":"MultimediaApplication","applicationSubCategory":"Audio Plugin","operatingSystem":"Windows 10+","softwareVersion":"1.0.0",
+  "description":"3-Band Harmonic Saturation Plugin (VST3 + Standalone, Windows) von Code Chaos Audio: Low, Mid und High getrennt sättigen (Hard Clip, Wavefolder, Tube, Diode, Tape), Drive, Mix und Gain pro Band, bis zu 4x Oversampling.",
   "image":B+"/images/crucible-og.jpg",
-  "offers":{"@type":"Offer","url":"https://timberwolf688.gumroad.com/l/crucible","price":"56.76","priceCurrency":"USD","availability":"https://schema.org/InStock"}},
+  "offers":{"@type":"Offer","url":"https://timberwolf688.gumroad.com/l/crucible","price":"49.00","priceCurrency":"EUR","availability":"https://schema.org/InStock"}},
  {"@type":"FAQPage","@id":B+"/#faq","isPartOf":{"@id":B+"/#webpage"},"mainEntity":faq},
 ]
 block='<script type="application/ld+json">\n'+json.dumps({"@context":"https://schema.org","@graph":graph},ensure_ascii=False,indent=1)+'\n</script>'
