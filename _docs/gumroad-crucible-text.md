@@ -11,7 +11,7 @@ Stand: 05.10.2026. Geprüft wurde `Crucible.vst3` (6,3 MB) und die Gumroad-Seite
 | Sättigungstypen | **5:** Hard Clip, Wavefolder, Tube, Diode, Tape |
 | Pro Band (Low/Mid/High) | Type, Drive, Mix, Gain, Mute, Solo |
 | Global | Crossover Low/Mid, Crossover Mid/High, Output Gain, Oversampling, Bypass |
-| Oversampling | JUCE-2x-FIR-Stufen vorhanden; „bis 4x“ ist plausibel, die genauen Stufen ließen sich aus der Datei nicht auslesen |
+| Oversampling | JUCE-2x-FIR-Stufen vorhanden; „bis 8x“ ist plausibel, die genauen Stufen ließen sich aus der Datei nicht auslesen |
 | macOS / AU | Diese Datei ist **nur Windows**. Ein AU-Build wird nirgends angeboten |
 
 ## Abweichungen, die ich auf der Website korrigiert habe
@@ -43,7 +43,7 @@ Pick a different character for Low, Mid and High and stack them: hard-clip the s
 Two adjustable crossovers (Low/Mid, Mid/High). Per band: Drive, Mix, Gain, Mute, Solo. Global Output Gain and Bypass.
 
 CLEAN WHEN PUSHED
-Oversampling up to 4x keeps aliasing in check even at extreme drive.
+Oversampling up to 8x keeps aliasing in check even at extreme drive.
 
 INCLUDES
 - VST3 plugin (Windows 10+, 64-bit)

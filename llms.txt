@@ -46,7 +46,7 @@ Last updated: 2026-10-05
 - **Crucible** 1.0.0, a 3-band harmonic saturation plugin: VST3 + standalone for Windows 10+. Price: €49 on Gumroad (single-user, perpetual license).
   - Splits the signal into Low, Mid and High bands, each saturated independently.
   - Five saturation types, selectable per band: Hard Clip, Wavefolder, Tube, Diode, Tape.
-  - Per-band Drive, Mix and Gain; adjustable crossovers; per-band Mute/Solo; oversampling up to 4x.
+  - Per-band Drive, Mix and Gain; adjustable crossovers; per-band Mute/Solo; oversampling up to 8x.
   - Built for Psytrance, Hitech, Psycore and Darkpsy producers, but works on any source (mixing & mastering).
   - Tagline: "Shape. Saturate. Dominate." / "From subtle warmth to full-on destruction."
   - Buy / download: https://timberwolf688.gumroad.com/l/crucible

@@ -12,7 +12,7 @@ EN_HOME = {
    ("What is \"New Psychedelic Death Art\"?", "New Psychedelic Death Art is Code Chaos' own name for the project's sound: hitech, psycore and darkpsy at 180–300 BPM, combined with gothic atmosphere, liquid FM lines, a bassline that never stops rolling and voices that tell stories. Music not made for the daylight, somewhere between a psytrance floor at 4 a.m. and a crypt that smells of candle wax. The first release of this era is the single <a href=\"/en/#single\">Uhrwerk aus Blut</a>."),
    ("What genres does Code Chaos produce?", "Hitech psytrance, psycore and darkpsy, mostly between 180 and 300 BPM, plus experimental releases. Read the guides to <a href=\"/en/psycore/\">psycore</a>, <a href=\"/en/hitech-psytrance/\">hitech psytrance</a> and <a href=\"/en/darkpsy/\">darkpsy</a>."),
    ("How much does mastering cost?", "Single (stereo) €79, Stem Pro €129 per track (up to 6 stems), EP up to 5 tracks €349 (€69.80 per track), album up to 10 tracks €629 (€62.90 per track). All prices incl. 19% VAT, with audio audit and unlimited revisions."),
-   ("What is Crucible?", "Crucible is a 3-band harmonic saturation plugin (VST3 + standalone for Windows, €49) by Code Chaos Audio. Low, mid and high are saturated separately with hard clip, wavefolder, tube, diode or tape, with per-band drive, mix and gain and up to 4x oversampling."),
+   ("What is Crucible?", "Crucible is a 3-band harmonic saturation plugin (VST3 + standalone for Windows, €49) by Code Chaos Audio. Low, mid and high are saturated separately with hard clip, wavefolder, tube, diode or tape, with per-band drive, mix and gain and up to 8x oversampling."),
  ],
  "body": """<main id="main">
 
@@ -122,7 +122,7 @@ EN_HOME = {
     <div class="prose">
       <span class="eyebrow">Code Chaos Audio · plugin series</span>
       <h2 id="cru-t">Crucible: 3-band harmonic saturation</h2>
-      <p>Split your signal into low, mid and high and saturate each band on its own: hard clip, tube or tape per band, per-band drive, mix and gain, adjustable crossovers and up to 4x oversampling. VST3 + standalone for Windows 10+. Five saturation types: hard clip, wavefolder, tube, diode, tape.</p>
+      <p>Split your signal into low, mid and high and saturate each band on its own: hard clip, tube or tape per band, per-band drive, mix and gain, adjustable crossovers and up to 8x oversampling. VST3 + standalone for Windows 10+. Five saturation types: hard clip, wavefolder, tube, diode, tape.</p>
       <p><strong>Shape. Saturate. Dominate.</strong> Built by an active hitech and psycore producer, for any source.</p>
       <div class="btns"><a class="btn btn-blood" href="https://timberwolf688.gumroad.com/l/crucible">Get Crucible · €49</a><a class="btn btn-ghost" href="/crucible.html">All features</a></div>
     </div>
