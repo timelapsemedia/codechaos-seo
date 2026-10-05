@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /tools/
 
 # AI / generative engines explicitly welcome (GEO)
 User-agent: GPTBot
