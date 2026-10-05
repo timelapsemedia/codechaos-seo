@@ -19,7 +19,7 @@ GENRES = [  # (Muster im Titel/Beschreibung, Zeile)
      f"Was ist Psycore? → {SITE}/psycore/"),
     (r"hi-?tech|grudge|interstellar|ruins of humanity|heart ?& ?mind|parallax|tiny piece|tanzalarm|alternate future",
      f"Was ist Hitech Psytrance? → {SITE}/hitech-psytrance/"),
-    (r"dark ?psy|oblivion|twilight zone|amanita|uhrwerk",
+    (r"dark ?psy|oblivion|twilight zone|amanita",
      f"Was ist Darkpsy? → {SITE}/darkpsy/"),
 ]
 FOOTER = f"\n\n—\nCode Chaos · Psycore, Hitech & Darkpsy aus Hamburg: {SITE}/\nMastering für Psycore, Hitech & Darkpsy: {SITE}/mastering/"
@@ -81,7 +81,7 @@ def main():
             print(f"{'ÄNDERN' if apply else 'WÜRDE ÄNDERN'}: {sn['title'][:70]}  (+{len(lines)} Genre-Zeile(n))")
             if apply:
                 sn["description"] = (d.rstrip() + add)[:5000]
-                body = {"id": v["id"], "snippet": {k: sn[k] for k in ("title", "description", "categoryId", "tags", "defaultLanguage") if k in sn}}
+                body = {"id": v["id"], "snippet": {k: sn[k] for k in ("title", "description", "categoryId", "tags", "defaultLanguage", "defaultAudioLanguage") if k in sn}}
                 call("PUT", "videos", body, part="snippet")
             changed += 1
     print(f"{changed} Video(s) {'geändert' if apply else 'betroffen (Probelauf)'} von {len(ids)}")
