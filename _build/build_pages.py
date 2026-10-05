@@ -300,7 +300,9 @@ def build_mastering(lang):
         {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": lang, "mainEntity": [
             {"@type": "Question", "name": strip(q), "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in m["faq"]]},
     ]}
-    body = m["body"].replace("{faq}", faq_html(m["faq"])).replace("{form}", form)
+    cta = "Mastering anfragen · ab 79 €" if lang == "de" else "Request mastering · from €79"
+    body = m["body"].replace("{faq}", faq_html(m["faq"])).replace("{form}", form) \
+        + f'<a class="sticky-cta" href="#request">{cta}</a>\n'
     html = head(lang, url, alt, m["title"], m["desc"], BASE + "/images/og/mastering.jpg",
                 "Psytrance Mastering für Psycore, Hitech und Darkpsy von Code Chaos" if lang == "de" else "Psytrance mastering for psycore, hitech and darkpsy by Code Chaos", ld, og_type="website") \
         + nav(lang, alt, "mast") + body + footer(lang)

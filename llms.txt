@@ -56,6 +56,7 @@ Last updated: 2026-10-05
 
 - **Psycore:** A Psytrance subgenre at 180–300+ BPM combining dark psychedelic soundscapes with hardcore energy; dense atmospheric pads, experimental sound design, minimal sine-wave percussion. Typical range 190–240 BPM.
 - **Hitech / Hi-Tech Psytrance:** Fast (≈170–230 BPM, typically 180–200), complex, glitchy, hyper-detailed psychedelic trance; can be dark or euphoric.
+- **New Psychedelic Death Art:** Code Chaos' self-coined name for the project's sound: hitech, psycore and darkpsy (180–300 BPM) with gothic atmosphere, liquid FM lines, a constantly rolling bass and narrative voices. First release of this era: "Uhrwerk aus Blut" (2026).
 - **Darkpsy / Dark Psytrance:** Slower (≈150–200 BPM, typically 155–175) but atmospherically intense, occult and dark soundscapes; the evolutionary basis of Hitech and Psycore.
 - Full genre guides (German): https://codechaos-official.de/psycore/ · https://codechaos-official.de/hitech-psytrance/ · https://codechaos-official.de/darkpsy/
 - Full genre guides (English): https://codechaos-official.de/en/psycore/ · https://codechaos-official.de/en/hitech-psytrance/ · https://codechaos-official.de/en/darkpsy/
