@@ -81,7 +81,7 @@ def main():
             print(f"{'ÄNDERN' if apply else 'WÜRDE ÄNDERN'}: {sn['title'][:70]}  (+{len(lines)} Genre-Zeile(n))")
             if apply:
                 sn["description"] = (d.rstrip() + add)[:5000]
-                body = {"id": v["id"], "snippet": {k: sn[k] for k in ("title", "description", "categoryId", "tags", "defaultLanguage") if k in sn}}
+                body = {"id": v["id"], "snippet": {k: sn[k] for k in ("title", "description", "categoryId", "tags", "defaultLanguage", "defaultAudioLanguage") if k in sn}}
                 call("PUT", "videos", body, part="snippet")
             changed += 1
     print(f"{changed} Video(s) {'geändert' if apply else 'betroffen (Probelauf)'} von {len(ids)}")
