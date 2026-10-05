@@ -107,6 +107,7 @@ FORM_DE = """<form class="form" action="https://formspree.io/f/mojkqopj" method=
         <option value="" disabled selected>Auswählen…</option><option>Single · Stereo Mastering (79 €)</option><option>Stem Pro · Stem Mastering (129 €)</option><option>EP Mastering, bis 5 Tracks (349 €)</option><option>Album Mastering, bis 10 Tracks (629 €)</option><option>Cover Art (99 €)</option>
         <option>Lyric Video (179 €)</option><option>Promo Video (299 €)</option><option>Individuell / Sonstiges</option></select></div>
       <div><label for="de-tracks">ANZAHL TRACKS</label><input id="de-tracks" name="tracks" placeholder="z. B. 1"></div></div>
+      <div><label for="de-link">LINK ZUM TRACK (OPTIONAL)</label><input id="de-link" type="url" name="track_link" inputmode="url" placeholder="SoundCloud (privat), Dropbox, Google Drive …"></div>
       <div><label for="de-msg">NACHRICHT</label><textarea id="de-msg" name="message" rows="4" placeholder="Genre, Referenztrack, Deadline…"></textarea></div>
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <input type="hidden" name="_subject" value="Neue Mastering-Anfrage (DE /mastering/) · Code Chaos">
