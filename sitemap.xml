@@ -134,6 +134,10 @@
       <image:loc>https://codechaos-official.de/images/crucible-og.jpg</image:loc>
       <image:title>Crucible · 3-Band Harmonic Saturation Plugin · Code Chaos Audio</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/crucible-ui.jpg</image:loc>
+      <image:title>Crucible plugin interface (VST3, Windows)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://codechaos-official.de/en/</loc>
