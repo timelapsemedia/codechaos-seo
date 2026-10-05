@@ -19,7 +19,7 @@ GENRES = [  # (Muster im Titel/Beschreibung, Zeile)
      f"Was ist Psycore? → {SITE}/psycore/"),
     (r"hi-?tech|grudge|interstellar|ruins of humanity|heart ?& ?mind|parallax|tiny piece|tanzalarm|alternate future",
      f"Was ist Hitech Psytrance? → {SITE}/hitech-psytrance/"),
-    (r"dark ?psy|oblivion|twilight zone|amanita|uhrwerk",
+    (r"dark ?psy|oblivion|twilight zone|amanita",
      f"Was ist Darkpsy? → {SITE}/darkpsy/"),
 ]
 FOOTER = f"\n\n—\nCode Chaos · Psycore, Hitech & Darkpsy aus Hamburg: {SITE}/\nMastering für Psycore, Hitech & Darkpsy: {SITE}/mastering/"
