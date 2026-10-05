@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+# Service-Account-Schlüssel niemals committen
+*service-account*.json
+codechaos-*.json
