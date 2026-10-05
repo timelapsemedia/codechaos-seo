@@ -3,8 +3,8 @@
 _PRESAVE = "https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut-2"
 
 EN_HOME = {
- "title": "Code Chaos · Psycore & Hitech Producer from Hamburg · New Single",
- "desc": "New single \"Uhrwerk aus Blut\" out 30 Oct 2026, pre-save now. Code Chaos: psycore, hitech & darkpsy producer from Hamburg, Germany. 24+ releases, mastering from €79.",
+ "title": "Psytrance Mastering from €79 · Code Chaos · Psycore, Hitech, Darkpsy",
+ "desc": "Psycore, hitech & darkpsy mastering by Code Chaos from Hamburg: single €79, EP €349, album €629, unlimited revisions. New single out 30 Oct 2026.",
  "faq": [
    ("When is \"Uhrwerk aus Blut\" released?", "The single \"Uhrwerk aus Blut\" (Clockwork of Blood) is out on 30 October 2026 on Abstract Sound Design and all major streaming platforms. You can <a href=\"" + _PRESAVE + "\">pre-save it now</a>."),
    ("Who is behind Code Chaos?", "Code Chaos is the studio project of Tim Borchert, a producer from Hamburg, Germany, active since 2016. He co-founded the label Abstract Sound Design in 2021, runs the mastering service Polished Media and develops audio plugins as Code Chaos Audio, starting with <a href=\"/crucible.html\">Crucible</a>."),
@@ -14,11 +14,35 @@ EN_HOME = {
    ("What is Crucible?", "Crucible is a 3-band harmonic saturation plugin (VST3/AU, Windows and macOS) by Code Chaos Audio. Low, mid and high are saturated separately with hard clip, tube or tape, with per-band drive, mix and gain and up to 4x oversampling."),
  ],
  "body": """<main id="main">
-<section class="s-hero" id="single" aria-labelledby="single-t">
+<section class="s-hero" id="mastering" aria-labelledby="mast-t">
+  <div class="wrap hero-grid">
+    <div class="prose">
+      <span class="eyebrow">Polished Media · mastering</span>
+      <h1 id="mast-t">Mastering for psycore, hitech &amp; darkpsy</h1>
+      <p>Genre-specific mastering by an active producer who knows these genres from the inside: kick behaviour at 150–300 BPM, neurotrance basslines, dense soundscapes. No generic presets, no flat compression.</p>
+      <ul><li>Audio audit before every master</li><li>Unlimited revisions</li><li>24-bit WAV, 16-bit AIFF and 320 kbps MP3, streaming-ready</li><li>Reply usually within 24–48 hours</li></ul>
+    </div>
+    <div>
+      <table class="price"><tbody>
+        <tr><td>Single · stereo mastering · 1 track · 48–72 h</td><td>€79</td></tr>
+        <tr><td>Stem Pro · stem mastering · 1 track · up to 6 stems · 48–72 h</td><td>€129</td></tr>
+        <tr><td>EP · up to 5 tracks · €69.80/track · instead of €395, save €46 (~12%)</td><td>€349</td></tr>
+        <tr><td>Album · up to 10 tracks · €62.90/track · instead of €790, save €161 (~20%)</td><td>€629</td></tr>
+        <tr><td>Extra: cover art</td><td>€99</td></tr>
+        <tr><td>Extra: lyric video (animated)</td><td>€179</td></tr>
+        <tr><td>Extra: promo video (60 s)</td><td>€299</td></tr>
+      </tbody></table>
+      <p class="note">All prices incl. 19% German VAT. Audio audit and unlimited revisions included in every package.</p>
+    </div>
+  </div>
+  <div class="wrap"><div class="btns"><a class="btn btn-blood" href="/en/mastering/#request">Request mastering</a><a class="btn btn-ghost" href="/en/mastering/">How it works &amp; FAQ</a></div></div>
+</section>
+
+<section class="alt" id="single" aria-labelledby="single-t">
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">New single · Code Chaos</span>
-      <h1 id="single-t">Uhrwerk aus Blut</h1>
+      <h2 id="single-t" style="font-size:clamp(2rem,6vw,3.6rem)">Uhrwerk aus Blut</h2>
       <p class="lead">A heart that beats too fast. A clockwork that bleeds.<br><span lang="de">„Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet.“</span></p>
       <p>The new single opens a darker, narrative era for Code Chaos: darkpsy and hitech energy meet gothic atmosphere and five spoken German scenes. Out <strong>30 October 2026</strong> on Abstract Sound Design.</p>
       <div class="btns"><a class="btn btn-blood" href=\"""" + _PRESAVE + """\" target="_blank" rel="noopener noreferrer">Pre-save now</a><a class="btn btn-ghost" href="#facts">Single facts</a></div>
@@ -90,29 +114,6 @@ EN_HOME = {
   </div>
 </section>
 
-<section id="mastering" aria-labelledby="mast-t">
-  <div class="wrap hero-grid">
-    <div class="prose">
-      <span class="eyebrow">Polished Media · mastering</span>
-      <h2 id="mast-t">Mastering for psycore, hitech &amp; darkpsy</h2>
-      <p>Genre-specific mastering by an active producer who knows these genres from the inside: kick behaviour at 150–300 BPM, neurotrance basslines, dense soundscapes. No generic presets, no flat compression.</p>
-      <ul><li>Audio audit before every master</li><li>Unlimited revisions</li><li>24-bit WAV, 16-bit AIFF and 320 kbps MP3, streaming-ready</li><li>Reply usually within 24–48 hours</li></ul>
-    </div>
-    <div>
-      <table class="price"><tbody>
-        <tr><td>Single · stereo mastering · 1 track · 48–72 h</td><td>€79</td></tr>
-        <tr><td>Stem Pro · stem mastering · 1 track · up to 6 stems · 48–72 h</td><td>€129</td></tr>
-        <tr><td>EP · up to 5 tracks · €69.80/track · instead of €395, save €46 (~12%)</td><td>€349</td></tr>
-        <tr><td>Album · up to 10 tracks · €62.90/track · instead of €790, save €161 (~20%)</td><td>€629</td></tr>
-        <tr><td>Extra: cover art</td><td>€99</td></tr>
-        <tr><td>Extra: lyric video (animated)</td><td>€179</td></tr>
-        <tr><td>Extra: promo video (60 s)</td><td>€299</td></tr>
-      </tbody></table>
-      <p class="note">All prices incl. 19% German VAT. Audio audit and unlimited revisions included in every package.</p>
-    </div>
-  </div>
-  <div class="wrap"><div class="btns"><a class="btn btn-blood" href="/en/mastering/#request">Request mastering</a><a class="btn btn-ghost" href="/en/mastering/">How it works &amp; FAQ</a></div></div>
-</section>
 
 <section class="alt" id="crucible" aria-labelledby="cru-t">
   <div class="wrap hero-grid">
