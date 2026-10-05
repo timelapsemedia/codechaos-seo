@@ -1,6 +1,6 @@
 # Link-Texte zum Kopieren (ca. 20–30 Minuten Handarbeit)
 
-Bandcamp, SoundCloud, Gumroad, Discogs und MusicBrainz bieten keine Schnittstelle, über die sich diese Texte automatisch eintragen lassen. YouTube geht automatisch, siehe unten.
+Bandcamp, SoundCloud, Gumroad, Discogs und MusicBrainz bieten keine Schnittstelle, über die sich diese Texte automatisch eintragen lassen. YouTube ist schon erledigt.
 
 ## Bandcamp (codechaos.bandcamp.com → Release öffnen → „edit“ → About this album/track, ans Ende)
 
@@ -43,8 +43,8 @@ Built by Code Chaos: https://codechaos-official.de/
 ```
 Komplett überarbeiteter Produkttext: `_docs/gumroad-crucible-text.md`.
 
-## YouTube (automatisch möglich)
-Das Skript `_marketing/youtube_descriptions.py` ergänzt Kanal-Info und alle Videobeschreibungen passend zum Genre. Es braucht OAuth-Zugangsdaten mit dem Scope `youtube` (`YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN`). Erst Probelauf, dann `--apply`.
+## YouTube (erledigt am 05.10.2026)
+Kanal-Info und alle 11 Videobeschreibungen enthalten jetzt die Links, eingetragen von `_marketing/youtube_descriptions.py`. Für neue Videos das Skript einfach erneut starten: Es ändert nur Videos, die noch keinen Link haben. Erst Probelauf, dann `--apply`.
 
 ## Discogs, MusicBrainz, Wikidata
 Fertige Eingaben in `_docs/entitaeten-wikidata-discogs-musicbrainz.md`. Bei Wikidata reicht ein Einfügen in QuickStatements und ein Klick auf „Run“.
