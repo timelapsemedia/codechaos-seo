@@ -90,6 +90,18 @@ GENRES = [
 <tr><th scope="row">Stimmung</th><td>hypnotisch, statisch</td><td>futuristisch, wechselhaft</td><td>okkult, horror</td></tr>
 <tr><th scope="row">Melodik</th><td>kaum vorhanden</td><td>atonal, sprunghaft</td><td>atmosphärisch</td></tr>
 </tbody></table></div>
+<h2>Bekannte Psycore-Artists</h2>
+<p>Eine Auswahl an Namen, die man im Psycore-Underground kennen sollte (ohne Anspruch auf Vollständigkeit):</p>
+<ul>
+<li><strong>Phreneticus</strong> aus Salzburg (Österreich)</li>
+<li><strong>Apollyon</strong></li>
+<li><strong>Tzu-Jan</strong></li>
+<li><strong>Fele</strong></li>
+<li><strong>Xenrox</strong>, bewegt sich zwischen Psycore und Hitech</li>
+<li><strong>Code Chaos</strong> aus Hamburg, Psycore zwischen 180 und 300 BPM auf Abstract Sound Design</li>
+</ul>
+<h2>Psycore-Festivals: Wo läuft Psycore live?</h2>
+<p>Eigene große Psycore-Festivals gibt es kaum. Psycore läuft vor allem auf kleineren Forest- und Dark-Open-Airs, auf Underground-Partys und auf den härteren Floors großer Psytrance-Festivals. In Deutschland ist zum Beispiel die Mushroom Stage des Indian Spirit Festivals in Mecklenburg-Vorpommern für ihre härteren, experimentellen Sounds bekannt. Code Chaos selbst ist ein reines Studioprojekt und spielt nicht live.</p>
 <h2>Psycore produzieren: Erfahrungen aus dem Studio</h2>
 <p>Seit 2016 produziert Code Chaos Psycore, Hitech und Darkpsy. Diese Punkte entscheiden aus unserer Erfahrung über einen funktionierenden Psycore-Track:</p>
 <ol>
@@ -106,6 +118,8 @@ GENRES = [
      ("Ist Psycore dasselbe wie Speedcore?", "Nein. Speedcore kommt aus dem Hardcore-Techno und ist rhythmus- und verzerrungsgetrieben. Psycore stammt aus dem Psytrance und lebt von hypnotischen Soundscapes, Neurotrance-Bässen und minimaler Percussion, auch wenn das Tempo ähnlich hoch sein kann."),
      ("Wo finde ich Psycore-Musik?", "Die meisten Psycore-Releases erscheinen auf Bandcamp und SoundCloud, oft über kleine Labels. Psycore von Code Chaos gibt es auf <a href=\"https://codechaos.bandcamp.com\">codechaos.bandcamp.com</a>, unter anderem auf dem Label Abstract Sound Design."),
      ("Welches Psycore-Label gibt es in Deutschland?", "Abstract Sound Design wurde 2021 unter anderem von Code Chaos mitgegründet und veröffentlicht Psycore, Hitech und Darkpsy."),
+     ("Welche bekannten Psycore-Artists gibt es?", "Zum Beispiel Phreneticus (Salzburg), Apollyon, Tzu-Jan, Fele und Xenrox, dazu Code Chaos aus Hamburg. Eine Auswahl, die Szene ist klein, international und wächst."),
+     ("Gibt es Psycore-Festivals?", "Eigene große Psycore-Festivals sind selten. Psycore läuft vor allem auf Forest- und Dark-Open-Airs, Underground-Partys und den härteren Floors großer Psytrance-Festivals, in Deutschland zum Beispiel auf der Mushroom Stage des Indian Spirit Festivals."),
    ],
    "cta_title": "Mastering für deinen Psycore-Track",
    "cta": "Du produzierst selbst Psycore? Code Chaos mastert Psycore, Hitech und Darkpsy genre-spezifisch, ab 79 € pro Track. " + _STUDIO_DE,
@@ -145,6 +159,18 @@ GENRES = [
 <tr><th scope="row">Mood</th><td>hypnotic, static</td><td>futuristic, shifting</td><td>occult, horror</td></tr>
 <tr><th scope="row">Melody</th><td>barely any</td><td>atonal, erratic</td><td>atmospheric</td></tr>
 </tbody></table></div>
+<h2>Psycore artists to know</h2>
+<p>A selection of names worth knowing in the psycore underground (not a complete list):</p>
+<ul>
+<li><strong>Phreneticus</strong> from Salzburg, Austria</li>
+<li><strong>Apollyon</strong></li>
+<li><strong>Tzu-Jan</strong></li>
+<li><strong>Fele</strong></li>
+<li><strong>Xenrox</strong>, moving between psycore and hitech</li>
+<li><strong>Code Chaos</strong> from Hamburg, psycore between 180 and 300 BPM on Abstract Sound Design</li>
+</ul>
+<h2>Psycore festivals: where can you hear psycore live?</h2>
+<p>Dedicated large psycore festivals are rare. Psycore is mostly played at smaller forest and dark open airs, underground parties and on the harder floors of big psytrance festivals. In Germany, for example, the Mushroom Stage of Indian Spirit Festival is known for its harder, experimental sounds. Code Chaos itself is a studio-only project and does not play live.</p>
 <h2>Producing psycore: notes from the studio</h2>
 <p>Code Chaos has been producing psycore, hitech and darkpsy since 2016. In our experience, these points make or break a psycore track:</p>
 <ol>
@@ -161,6 +187,8 @@ GENRES = [
      ("Is psycore the same as speedcore?", "No. Speedcore comes from hardcore techno and is driven by rhythm and distortion. Psycore comes from psytrance and lives on hypnotic soundscapes, neurotrance basslines and minimal percussion, even if the tempo can be similar."),
      ("Where can I find psycore music?", "Most psycore releases come out on Bandcamp and SoundCloud, often via small labels. Psycore by Code Chaos is available at <a href=\"https://codechaos.bandcamp.com\">codechaos.bandcamp.com</a>, including releases on the label Abstract Sound Design."),
      ("Is there a psycore label in Germany?", "Abstract Sound Design was co-founded in 2021 by Code Chaos, among others, and releases psycore, hitech and darkpsy."),
+     ("Which psycore artists should I know?", "For example Phreneticus (Salzburg), Apollyon, Tzu-Jan, Fele and Xenrox, plus Code Chaos from Hamburg. A selection: the scene is small, international and growing."),
+     ("Are there psycore festivals?", "Dedicated large psycore festivals are rare. Psycore is mostly played at forest and dark open airs, underground parties and on the harder floors of big psytrance festivals, in Germany for example on the Mushroom Stage of Indian Spirit Festival."),
    ],
    "cta_title": "Mastering for your psycore track",
    "cta": "Producing psycore yourself? Code Chaos offers genre-specific mastering for psycore, hitech and darkpsy from €79 per track. " + _STUDIO_EN,
@@ -202,6 +230,23 @@ GENRES = [
 <tr><th scope="row">Sound</th><td>klar, poliert, Sci-Fi</td><td>roh, dicht, dunkel</td></tr>
 <tr><th scope="row">Stimmung</th><td>dunkel bis euphorisch</td><td>durchgehend dunkel</td></tr>
 </tbody></table></div>
+<h2>Bekannte Hitech-DJs und Produzenten</h2>
+<p>Eine Auswahl an Hitech-Artists, die man kennen sollte (ohne Anspruch auf Vollständigkeit):</p>
+<ul>
+<li><strong>Highko</strong>, deutscher Hitech-Pionier, wird zusammen mit Cosmo oft als Mitbegründer des Stils genannt</li>
+<li><strong>Psykovsky</strong>, einer der Wegbereiter des schnellen, komplexen Sounds</li>
+<li><strong>Alien Chaos</strong>, bekannt für kraftvolle, kompromisslose Sets</li>
+<li><strong>Will O Wisp</strong>, geschätzt für komplexe, glitchige und detailreiche Hitech-Strukturen</li>
+<li><strong>Inner Coma</strong>, einer der beliebtesten Acts im schnellen Psy-Underground</li>
+<li><strong>Killa TK</strong>, stark in der modernen, schnelleren Hitech-Szene</li>
+<li><strong>Gotalien</strong>, Hitech-Projekt aus Italien</li>
+<li><strong>Audiopathik</strong>, Teil von Kamino Records und Gründer von Pleiadian Records (Mexiko)</li>
+<li><strong>BionicForm</strong>, auf dem indischen Hitech-Label Modulate Music</li>
+<li><strong>Xenrox</strong> und <strong>Mad Scientist</strong></li>
+<li><strong>Code Chaos</strong> aus Hamburg, Hitech an der Grenze zu Psycore</li>
+</ul>
+<h2>Hitech-Festivals und Partys</h2>
+<p>Hitech läuft weltweit auf Forest- und Dark-Open-Airs und auf den schnellen Floors großer Psytrance-Festivals, besonders stark in Lateinamerika, Ost- und Westeuropa. In Deutschland ist zum Beispiel die Mushroom Stage des Indian Spirit Festivals für härtere, experimentelle Sounds bekannt. Code Chaos ist ein reines Studioprojekt und spielt nicht live.</p>
 <h2>Hitech produzieren: Erfahrungen aus dem Studio</h2>
 <ol>
 <li><strong>Sounddesign vor Arrangement.</strong> Baue dir eine Bibliothek aus kurzen, charaktervollen Glitch-Sounds und Resamples, bevor du arrangierst.</li>
@@ -217,6 +262,7 @@ GENRES = [
      ("Schreibt man Hitech oder Hi-Tech? Was ist Hitech Psy?", "Alles dasselbe: Hitech, Hi-Tech, HiTech, Hitech Psy und Hi-Tech Psytrance meinen das gleiche Psytrance-Subgenre mit 170–230+ BPM. „Hitech Psy“ ist einfach die Kurzform von Hitech Psytrance."),
      ("Was ist der Unterschied zwischen Hitech und Psycore?", "Hitech ist dynamisch, komplex und kann euphorisch sein. Psycore ist schneller (180–300+ BPM), minimaler, statisch und durchgehend dunkel."),
      ("Wo kann ich Hitech Psytrance kaufen?", "Viele Hitech-Releases erscheinen auf Bandcamp. Hitech von Code Chaos gibt es auf <a href=\"https://codechaos.bandcamp.com\">codechaos.bandcamp.com</a> in WAV, FLAC und MP3."),
+     ("Welche bekannten Hitech-DJs und Produzenten gibt es?", "Zum Beispiel Highko, Psykovsky, Alien Chaos, Will O Wisp, Inner Coma, Killa TK, Gotalien, Audiopathik, BionicForm, Xenrox und Mad Scientist, dazu Code Chaos aus Hamburg."),
    ],
    "cta_title": "Mastering für deinen Hitech-Track",
    "cta": "Code Chaos mastert Hitech, Psycore und Darkpsy genre-spezifisch, damit dichte Arrangements laut und trotzdem transparent bleiben, ab 79 € pro Track. " + _STUDIO_DE,
@@ -254,6 +300,23 @@ GENRES = [
 <tr><th scope="row">Sound</th><td>clear, polished, sci-fi</td><td>raw, dense, dark</td></tr>
 <tr><th scope="row">Mood</th><td>dark to euphoric</td><td>dark throughout</td></tr>
 </tbody></table></div>
+<h2>Hitech DJs and producers to know</h2>
+<p>A selection of hitech artists worth knowing (not a complete list):</p>
+<ul>
+<li><strong>Highko</strong>, German hitech pioneer, often named together with Cosmo as a co-founder of the style</li>
+<li><strong>Psykovsky</strong>, one of the pioneers of the fast, complex sound</li>
+<li><strong>Alien Chaos</strong>, known for powerful, uncompromising sets</li>
+<li><strong>Will O Wisp</strong>, valued for complex, glitchy, detailed hitech structures</li>
+<li><strong>Inner Coma</strong>, one of the most popular acts in the fast psy underground</li>
+<li><strong>Killa TK</strong>, strong in the modern, faster hitech scene</li>
+<li><strong>Gotalien</strong>, hitech project from Italy</li>
+<li><strong>Audiopathik</strong>, part of Kamino Records and founder of Pleiadian Records (Mexico)</li>
+<li><strong>BionicForm</strong>, on the Indian hitech label Modulate Music</li>
+<li><strong>Xenrox</strong> and <strong>Mad Scientist</strong></li>
+<li><strong>Code Chaos</strong> from Hamburg, hitech on the edge of psycore</li>
+</ul>
+<h2>Hitech festivals and parties</h2>
+<p>Hitech is played worldwide at forest and dark open airs and on the fast floors of big psytrance festivals, especially in Latin America and Eastern and Western Europe. In Germany, for example, the Mushroom Stage of Indian Spirit Festival is known for harder, experimental sounds. Code Chaos is a studio-only project and does not play live.</p>
 <h2>Producing hitech: notes from the studio</h2>
 <ol>
 <li><strong>Sound design before arrangement.</strong> Build a library of short, characterful glitch sounds and resamples before you start arranging.</li>
@@ -269,6 +332,7 @@ GENRES = [
      ("Is it hitech or hi-tech? What is hitech psy?", "All the same: hitech, hi-tech, hitech psy and hi-tech psytrance refer to the same psytrance subgenre at 170–230+ BPM. \"Hitech psy\" is simply short for hitech psytrance."),
      ("What is the difference between hitech and psycore?", "Hitech is dynamic, complex and can be euphoric. Psycore is faster (180–300+ BPM), more minimal, static and dark throughout."),
      ("Where can I buy hitech psytrance?", "Many hitech releases come out on Bandcamp. Hitech by Code Chaos is available at <a href=\"https://codechaos.bandcamp.com\">codechaos.bandcamp.com</a> in WAV, FLAC and MP3."),
+     ("Which hitech DJs and producers should I know?", "For example Highko, Psykovsky, Alien Chaos, Will O Wisp, Inner Coma, Killa TK, Gotalien, Audiopathik, BionicForm, Xenrox and Mad Scientist, plus Code Chaos from Hamburg."),
    ],
    "cta_title": "Mastering for your hitech track",
    "cta": "Code Chaos offers genre-specific mastering for hitech, psycore and darkpsy that keeps dense arrangements loud and transparent, from €79 per track. " + _STUDIO_EN,
@@ -305,6 +369,15 @@ GENRES = [
 <blockquote class="quote">„Darkpsy hat mir als Erstes gezeigt, dass Musik nicht angenehm sein muss, um unvergesslich zu sein.“<cite>Code Chaos</cite></blockquote>
 <h2>Darkpsy, Forest und Gothic</h2>
 <p>Darkpsy überschneidet sich stark mit Forest Psytrance, der organischer und naturverbundener klingt. Mit der Single <a href="/#single">„Uhrwerk aus Blut“</a> (30.10.2026) verbindet Code Chaos Darkpsy- und Hitech-Energie mit Gothic-Atmosphäre und gesprochenen deutschen Szenen: ein Herz, das zu schnell schlägt, ein Uhrwerk, das blutet.</p>
+<h2>Bekannte Darkpsy-Artists</h2>
+<p>Einige Namen, die den Darkpsy-Sound geprägt haben (Auswahl):</p>
+<ul>
+<li><strong>Xenomorph</strong>, deutscher Wegbereiter der düster-okkulten Ästhetik</li>
+<li><strong>Kindzadza</strong> und <strong>Psykovsky</strong>, prägende Namen der russischen Dark- und Forest-Szene</li>
+<li><strong>Code Chaos</strong> aus Hamburg, Darkpsy mit Gothic-Atmosphäre („New Psychedelic Death Art“)</li>
+</ul>
+<h2>Darkpsy-Festivals: Wo läuft Darkpsy live?</h2>
+<p>Darkpsy läuft vor allem auf Forest- und Dark-Open-Airs, auf Underground-Partys und auf den Night-Floors großer Psytrance-Festivals, oft in den Stunden nach Mitternacht. In Deutschland ist zum Beispiel die Mushroom Stage des Indian Spirit Festivals für härtere, experimentelle Sounds bekannt. Code Chaos ist ein reines Studioprojekt und spielt nicht live.</p>
 <h2>Darkpsy produzieren: Erfahrungen aus dem Studio</h2>
 <ol>
 <li><strong>Die Bassline trägt den Track.</strong> Arbeite an Hüllkurven und Filterbewegung, bis der Bass allein schon bedrohlich klingt.</li>
@@ -320,6 +393,8 @@ GENRES = [
      ("Was ist der Unterschied zwischen Darkpsy und Psytrance?", "Psytrance ist der Oberbegriff (meist 138–150 BPM). Darkpsy ist ein schnelleres, dunkleres Subgenre mit schweren Bässen, Horror-Samples und okkulter Atmosphäre."),
      ("Ist Darkpsy dasselbe wie Forest?", "Nein, aber sie sind eng verwandt. Forest klingt organischer und naturverbundener, Darkpsy ist bedrohlicher, technischer und stärker vom Horror geprägt."),
      ("Welche Darkpsy-Releases hat Code Chaos?", "Unter anderem die Alben Oblivion und The Twilight Zone (2022), die Single Amanita Muscaria (2024), das Album Runtime Terror (2026) und die Single „Uhrwerk aus Blut“ (30.10.2026)."),
+     ("Welche bekannten Darkpsy-Artists und DJs gibt es?", "Prägende Namen sind zum Beispiel Xenomorph aus Deutschland sowie Kindzadza und Psykovsky aus der russischen Dark- und Forest-Szene. Code Chaos aus Hamburg verbindet Darkpsy mit Gothic-Atmosphäre."),
+     ("Wo gibt es Darkpsy-Festivals?", "Darkpsy läuft vor allem auf Forest- und Dark-Open-Airs, Underground-Partys und den Night-Floors großer Psytrance-Festivals, in Deutschland zum Beispiel auf der Mushroom Stage des Indian Spirit Festivals."),
    ],
    "cta_title": "Mastering für deinen Darkpsy-Track",
    "cta": "Code Chaos mastert Darkpsy, Hitech und Psycore genre-spezifisch, mit Gefühl für Atmosphäre und Low-End, ab 79 € pro Track. " + _STUDIO_DE,
@@ -352,6 +427,15 @@ GENRES = [
 <blockquote class="quote">"Darkpsy was the first thing that showed me music doesn't have to be pleasant to be unforgettable."<cite>Code Chaos</cite></blockquote>
 <h2>Darkpsy, forest and gothic</h2>
 <p>Darkpsy overlaps strongly with forest psytrance, which sounds more organic and nature-bound. With the single <a href="/en/#single">"Uhrwerk aus Blut"</a> (Clockwork of Blood, 30 Oct 2026), Code Chaos combines darkpsy and hitech energy with gothic atmosphere and spoken German scenes: a heart that beats too fast, a clockwork that bleeds.</p>
+<h2>Darkpsy artists to know</h2>
+<p>A few names that shaped the darkpsy sound (selection):</p>
+<ul>
+<li><strong>Xenomorph</strong>, German pioneer of the dark, occult aesthetic</li>
+<li><strong>Kindzadza</strong> and <strong>Psykovsky</strong>, defining names of the Russian dark and forest scene</li>
+<li><strong>Code Chaos</strong> from Hamburg, darkpsy with gothic atmosphere ("New Psychedelic Death Art")</li>
+</ul>
+<h2>Darkpsy festivals: where can you hear darkpsy live?</h2>
+<p>Darkpsy is mostly played at forest and dark open airs, underground parties and on the night floors of big psytrance festivals, often in the hours after midnight. In Germany, for example, the Mushroom Stage of Indian Spirit Festival is known for harder, experimental sounds. Code Chaos is a studio-only project and does not play live.</p>
 <h2>Producing darkpsy: notes from the studio</h2>
 <ol>
 <li><strong>The bassline carries the track.</strong> Work on envelopes and filter movement until the bass sounds menacing on its own.</li>
@@ -367,6 +451,8 @@ GENRES = [
      ("What is the difference between darkpsy and psytrance?", "Psytrance is the umbrella term (mostly 138–150 BPM). Darkpsy is a faster, darker subgenre with heavy basslines, horror samples and an occult atmosphere."),
      ("Is darkpsy the same as forest?", "No, but they are closely related. Forest sounds more organic and nature-bound; darkpsy is more menacing, more technical and more horror-driven."),
      ("Which darkpsy releases has Code Chaos made?", "Among others the albums Oblivion and The Twilight Zone (2022), the single Amanita Muscaria (2024), the album Runtime Terror (2026) and the single \"Uhrwerk aus Blut\" (30 Oct 2026)."),
+     ("Which darkpsy artists and DJs should I know?", "Defining names include Xenomorph from Germany and Kindzadza and Psykovsky from the Russian dark and forest scene. Code Chaos from Hamburg combines darkpsy with gothic atmosphere."),
+     ("Where are darkpsy festivals?", "Darkpsy is mostly played at forest and dark open airs, underground parties and on the night floors of big psytrance festivals, in Germany for example on the Mushroom Stage of Indian Spirit Festival."),
    ],
    "cta_title": "Mastering for your darkpsy track",
    "cta": "Code Chaos offers genre-specific mastering for darkpsy, hitech and psycore with a feel for atmosphere and low end, from €79 per track. " + _STUDIO_EN,
