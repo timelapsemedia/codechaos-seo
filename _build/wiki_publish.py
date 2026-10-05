@@ -39,12 +39,18 @@ def api(url, params, post=False):
         req = urllib.request.Request(url + ("" if post else "?" + urllib.parse.urlencode(params)), data=data, headers={"User-Agent": UA})
         try:
             with opener.open(req, timeout=60) as r:
-                return json.load(r)
+                res = json.load(r)
+            if res.get("error", {}).get("code") == "maxlag":
+                time.sleep(30 * (attempt + 1)); continue
+            return res
         except urllib.error.HTTPError as e:
-            if e.code == 429:
-                time.sleep(10 * (attempt + 1)); continue
+            if e.code in (429, 503):
+                wait = e.headers.get("Retry-After", "")
+                time.sleep(int(wait) if wait.isdigit() else 30 * (attempt + 1)); continue
             raise
-    sys.exit("API dauerhaft überlastet (429), später erneut versuchen.")
+        except (urllib.error.URLError, ConnectionError, TimeoutError):
+            time.sleep(15 * (attempt + 1)); continue
+    sys.exit("API dauerhaft überlastet oder nicht erreichbar, später erneut versuchen.")
 
 
 def login(url):
@@ -191,8 +197,10 @@ def draft(apply):
     up = f"Benutzer:{user}"
     note = ("Ich bin Tim Borchert (Code Chaos). Ich schreibe hier über mein eigenes Musikprojekt "
             "und lege damit einen [[Wikipedia:Interessenkonflikt|Interessenkonflikt]] offen.")
-    api(DEWP, {"action": "edit", "title": up, "appendtext": "\n\n" + note, "token": tok,
-               "summary": "Offenlegung Interessenkonflikt"}, post=True)
+    r = api(DEWP, {"action": "edit", "title": up, "appendtext": "\n\n" + note, "token": tok,
+                   "summary": "Offenlegung Interessenkonflikt"}, post=True)
+    if r.get("edit", {}).get("result") != "Success":
+        sys.exit(f"Entwurf angelegt, aber Offenlegung auf {up} fehlgeschlagen, bitte nachtragen: {r}")
     print("Entwurf angelegt, Interessenkonflikt auf der Benutzerseite offengelegt.")
 
 
