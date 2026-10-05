@@ -1,28 +1,48 @@
 # Code Chaos
 
-> Code Chaos is a Hitech Psytrance, Psycore and Darkpsy music producer from Germany, active since 2016 with 24+ releases. Code Chaos is a studio project, no live shows or DJ bookings. Code Chaos also runs **Code Chaos Audio**, an audio plugin series whose first release is **Crucible**, a 3-band harmonic saturation plugin. The project offers a professional audio mastering service.
+> Code Chaos is a Hitech Psytrance, Psycore and Darkpsy music producer from Hamburg, Germany, and the studio project of Tim Borchert, active since 2016 with 24+ releases. Code Chaos is a studio project only: no live shows, events or DJ bookings. Tim Borchert also runs **Polished Media** (genre-specific audio mastering, https://polished.media) and **Code Chaos Audio**, an audio plugin series whose first release is **Crucible**, a 3-band harmonic saturation plugin.
 
-Primary site language: German (de). Domain: https://codechaos-official.de/
+Primary site language: German (de). Full English version: https://codechaos-official.de/en/ . The Crucible product page is in English. Domain: https://codechaos-official.de/
+Last updated: 2026-10-05
 
-## New single: Uhrwerk aus Blut
+## New single: Uhrwerk aus Blut (30 October 2026)
 
 - **Title:** Uhrwerk aus Blut (German: "Clockwork of Blood"). Single by Code Chaos.
-- **Release date:** 30 October 2026 (2026-10-30). **Label:** Abstract Sound Design.
+- **Release date:** 30 October 2026 (2026-10-30). **Label:** Abstract Sound Design. Available on all major streaming platforms.
+- **Genre:** Darkpsy, Hitech Psytrance, Gothic.
 - **Tagline:** "Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet." (A heart that beats too fast. A clockwork that bleeds.)
 - **Story in five scenes:** Prolog, I Die Uhr, II Der Spiegel, III Das Blut, Rückkehr.
 - **Pre-Save:** https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut-2
-- Voices and artwork were created with AI. It marks a new era for the project: darker, narrative, gothic.
+- Voices and artwork were created with AI. It opens a new era for the project: darker, narrative, gothic.
+
+## Latest album: Runtime Terror (21 August 2026)
+
+- 11th studio album, Abstract Sound Design. Genres: Hitech Psytrance, Psycore, Darkpsy.
+- Tracklist: Cold Boot (145 BPM), Bitrot (146), Runtime Terror (233, E Phrygian), Overdrive (220), Fork Bomb (228), Hyperthread (245), Ego Death (210), Core Dump (199), Night (180).
+- Bandcamp: https://codechaos.bandcamp.com/album/runtime-terror-lp
 
 ## Key facts
 
-- **Artist:** Code Chaos, Hitech Psytrance, Psycore, Darkpsy producer from Germany. Studio project only, no live shows, events or DJ bookings.
-- **Active since:** 2016. **Releases:** 24+ on labels incl. Abstract Sound Design (DE, co-founded by Code Chaos), TATEWARI Records (Mexico), Soma Ritual Records (India).
-- **Tempo range:** 180–300 BPM. Genres: Hitech Psytrance (170–230 BPM), Psycore (180–300 BPM), Darkpsy / Dark Psytrance (150–200 BPM).
-- **Mastering (Polished Media):** Stereo Mastering from €79, Stem Mastering from €129, Full Release package from €999. Contact: polished.media@gmx.de
+- **Artist:** Code Chaos (real name Tim Borchert), Hitech Psytrance, Psycore, Darkpsy producer from Hamburg, Germany. Studio project only.
+- **Self-described style:** "New Psychedelic Death Art". Bio line: "Code Chaos does not make music for the daylight."
+- **Active since:** 2016. **Releases:** 24+ on labels incl. Abstract Sound Design (Germany, co-founded by Code Chaos in 2021), TATEWARI Records (Mexico), Soma Ritual Records (India).
+- **Tempo range:** 180–300 BPM. Genres: Hitech Psytrance (170–230 BPM), Psycore (180–300+ BPM), Darkpsy / Dark Psytrance (150–200 BPM).
+- **Booking:** not available (no live shows or DJ sets).
+
+## Mastering (Polished Media)
+
+- Genre-specific mastering for Psycore, Hitech Psytrance and Darkpsy by an active producer.
+- Single (stereo mastering, 1 track): €79 · Stem Pro (stem mastering, up to 6 stems): €129 · delivery 48–72 h.
+- EP (up to 5 tracks): €349 instead of €395 (save €46, ~12%), €69.80 per track, 5–7 days.
+- Album (up to 10 tracks): €629 instead of €790 (save €161, ~20%), €62.90 per track, 7–14 days, vinyl-ready master on request.
+- All prices incl. 19% German VAT; audio audit and unlimited revisions in every package; delivery as 24-bit WAV, 16-bit AIFF and 320 kbps MP3. Same prices as https://polished.media
+- Extras: Cover Art €99, Lyric Video €179, Promo Video (60 s) €299.
+- English mastering page (prices, process, file prep, FAQ): https://codechaos-official.de/en/mastering/
+- Request form: https://codechaos-official.de/#mastering-form · Email: polished.media@gmx.de · Website: https://polished.media
 
 ## Code Chaos Audio, Plugins
 
-- **Crucible**, a 3-band harmonic saturation plugin for Windows and macOS (VST3 / AU).
+- **Crucible**, a 3-band harmonic saturation plugin for Windows and macOS (VST3 / AU). Price: US$56.76 on Gumroad.
   - Splits the signal into Low, Mid and High bands, each saturated independently.
   - Saturation types include Hard Clip, Tube and Tape (and more), selectable per band.
   - Per-band Drive, Mix and Gain; adjustable crossovers; per-band Mute/Solo; oversampling up to 4x.
@@ -33,13 +53,17 @@ Primary site language: German (de). Domain: https://codechaos-official.de/
 
 ## Definitions (genre guide)
 
-- **Psycore:** A Psytrance subgenre at 180–300+ BPM combining dark psychedelic soundscapes with hardcore energy; dense atmospheric pads, experimental sound design, minimal sine-wave percussion.
-- **Hitech / Hi-Tech Psytrance:** Fast (≈170–230 BPM), complex, glitchy, hyper-detailed psychedelic trance.
-- **Darkpsy / Dark Psytrance:** Slower (≈150–200 BPM) but atmospherically intense, occult and dark soundscapes.
+- **Psycore:** A Psytrance subgenre at 180–300+ BPM combining dark psychedelic soundscapes with hardcore energy; dense atmospheric pads, experimental sound design, minimal sine-wave percussion. Typical range 190–240 BPM.
+- **Hitech / Hi-Tech Psytrance:** Fast (≈170–230 BPM, typically 180–200), complex, glitchy, hyper-detailed psychedelic trance; can be dark or euphoric.
+- **Darkpsy / Dark Psytrance:** Slower (≈150–200 BPM, typically 155–175) but atmospherically intense, occult and dark soundscapes; the evolutionary basis of Hitech and Psycore.
+- Full genre guides (German): https://codechaos-official.de/psycore/ · https://codechaos-official.de/hitech-psytrance/ · https://codechaos-official.de/darkpsy/
+- Full genre guides (English): https://codechaos-official.de/en/psycore/ · https://codechaos-official.de/en/hitech-psytrance/ · https://codechaos-official.de/en/darkpsy/
+- BPM guide: https://codechaos-official.de/#bpm-guide · FAQ: https://codechaos-official.de/#faq
 
 ## Important links
 
-- Home: https://codechaos-official.de/
+- Home (German): https://codechaos-official.de/
+- Home (English): https://codechaos-official.de/en/
 - Crucible plugin: https://codechaos-official.de/crucible.html
 - Buy Crucible (Gumroad): https://timberwolf688.gumroad.com/l/crucible
 - Music (Bandcamp): https://codechaos.bandcamp.com
@@ -49,4 +73,7 @@ Primary site language: German (de). Domain: https://codechaos-official.de/
 - X: https://x.com/codechaos_music
 - Threads: https://www.threads.net/@codechaos_official
 - YouTube: https://www.youtube.com/@codechaos_abstractsounddesign
+- Discogs: https://www.discogs.com/artist/18204093-Code-Chaos
+- MusicBrainz: https://musicbrainz.org/artist/14d40d24-a91e-4600-a1b3-d14682d32e42
 - Label (Abstract Sound Design): https://www.abstract-sound-design.de/
+- Mastering (Polished Media): https://polished.media

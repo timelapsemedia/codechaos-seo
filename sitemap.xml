@@ -4,10 +4,11 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://codechaos-official.de/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/"/>
     <image:image>
       <image:loc>https://codechaos-official.de/images/uhrwerk-aus-blut/cover-1600.jpg</image:loc>
@@ -16,10 +17,6 @@
     <image:image>
       <image:loc>https://codechaos-official.de/images/brand/portrait-press-1200.jpg</image:loc>
       <image:title>Code Chaos · Pressefoto</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://codechaos-official.de/images/herofull.webp</image:loc>
-      <image:title>Code Chaos Hitech Psycore Producer aus Deutschland</image:title>
     </image:image>
     <image:image>
       <image:loc>https://codechaos-official.de/images/runtime-terror-cover.webp</image:loc>
@@ -128,10 +125,116 @@
   </url>
   <url>
     <loc>https://codechaos-official.de/crucible.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/crucible.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/crucible.html"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/crucible-og.jpg</image:loc>
+      <image:title>Crucible · 3-Band Harmonic Saturation Plugin · Code Chaos Audio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/en/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/uhrwerk-aus-blut/cover-1600.jpg</image:loc>
+      <image:title>Code Chaos · Uhrwerk aus Blut · single cover</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/psycore/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/psycore/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/psycore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/psycore/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/og/psycore.jpg</image:loc>
+      <image:title>Was ist Psycore? Genre Guide von Code Chaos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/en/psycore/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/psycore/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/psycore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/psycore/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/og/psycore.jpg</image:loc>
+      <image:title>What is Psycore? Genre guide by Code Chaos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/hitech-psytrance/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/hitech-psytrance/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/hitech-psytrance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/hitech-psytrance/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/og/hitech-psytrance.jpg</image:loc>
+      <image:title>Was ist Hitech Psytrance? Genre Guide von Code Chaos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/en/hitech-psytrance/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/hitech-psytrance/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/hitech-psytrance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/hitech-psytrance/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/og/hitech-psytrance.jpg</image:loc>
+      <image:title>What is Hitech Psytrance? Genre guide by Code Chaos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/darkpsy/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/darkpsy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/darkpsy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/darkpsy/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/og/darkpsy.jpg</image:loc>
+      <image:title>Was ist Darkpsy? Genre Guide von Code Chaos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/en/darkpsy/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/darkpsy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/darkpsy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/darkpsy/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/og/darkpsy.jpg</image:loc>
+      <image:title>What is Darkpsy? Genre guide by Code Chaos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/en/mastering/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/mastering/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/og/mastering.jpg</image:loc>
+      <image:title>Psytrance mastering for psycore, hitech and darkpsy · Code Chaos</image:title>
+    </image:image>
   </url>
 </urlset>

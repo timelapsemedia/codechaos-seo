@@ -1,0 +1,51 @@
+name: "Social: Crucible-Posts"
+
+# Läuft täglich um 15:05 UTC (17:05 Uhr Berlin im Sommer) und postet fällige Instagram-Posts.
+# YouTube und Buffer werden beim ersten Lauf komplett vorgeplant, danach passiert dort nichts doppelt.
+# Manuell: GitHub > Actions > "Social: Crucible-Posts" > Run workflow (mit oder ohne Probelauf).
+#
+# Repository-Secrets (Settings > Secrets and variables > Actions), fehlende werden übersprungen:
+#   INSTAGRAM_ACCESS_TOKEN, INSTAGRAM_USER_ID (optional)
+#   YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN
+#   BUFFER_API_KEY
+on:
+  schedule:
+    - cron: "5 15 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Nur anzeigen, nichts posten"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-posts
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Posten und einplanen
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: python3 _marketing/run_social.py ${{ inputs.dry_run && '--dry-run' || '' }}
+      - name: Status speichern
+        if: ${{ always() && !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _marketing/posted.json _marketing/youtube_uploaded.json _marketing/buffer_scheduled.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Social: Status der Crucible-Posts" && git pull --rebase && git push)
