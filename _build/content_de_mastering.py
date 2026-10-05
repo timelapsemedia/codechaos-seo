@@ -8,7 +8,7 @@ DE_MASTERING = {
    ("Was ist der Unterschied zwischen Stereo- und Stem-Mastering?", "Beim Stereo-Mastering schickst du einen fertigen Mixdown. Beim Stem-Mastering schickst du bis zu 6 Gruppen (z. B. Kick, Sub, Bass, Leads, Pads, FX), sodass Probleme in einzelnen Frequenzbereichen direkt gelöst werden können. Bei dichten Psycore- und Hitech-Mixen bringt Stem-Mastering meist das sauberere, lautere Ergebnis."),
    ("Wie bereite ich meine Dateien vor?", "Exportiere WAV oder AIFF in der Samplerate des Projekts, 24 oder 32 Bit, ohne Limiter oder Clipper auf dem Master-Bus und mit Peaks um -6 bis -3 dBFS. Stems sollten an derselben Position beginnen und mit allen Effekten exportiert sein. Leg gern einen Referenztrack bei."),
    ("Masterst du auch andere Genres als Psytrance?", "Ja. Schwerpunkt sind Psycore, Hitech und Darkpsy, aber elektronische Musik allgemein (Techno, Drum and Bass, Industrial, Experimental) ist willkommen. Nenn einfach Genre und Referenz in deiner Anfrage."),
-   ("Wie läuft Bezahlung und Lieferung?", "Nach deiner Anfrage bekommst du in der Regel innerhalb von 24–48 Stunden eine Antwort mit allen Details. Singles werden in 48–72 Stunden geliefert, EPs in 5–7 Tagen, Alben in 7–14 Tagen, als 24-bit WAV, 16-bit AIFF und 320 kbps MP3. Korrekturen sind unbegrenzt."),
+   ("Wie läuft Bezahlung und Lieferung?", "Du entscheidest: per Vorkasse oder auf Rechnung nach Fertigstellung. Nach deiner Anfrage bekommst du in der Regel innerhalb von 24–48 Stunden eine Antwort mit allen Details. Singles werden in 48–72 Stunden geliefert, EPs in 5–7 Tagen, Alben in 7–14 Tagen, als 24-bit WAV, 16-bit AIFF und 320 kbps MP3. Korrekturen sind unbegrenzt."),
    ("Wer mastert die Tracks?", "Das Mastering macht Code Chaos (Tim Borchert), Hitech-, Psycore- und Darkpsy-Producer aus Hamburg mit über 24 Releases seit 2016 und Mitgründer des Labels Abstract Sound Design. Der Service läuft unter dem Namen Polished Media."),
  ],
  "body": """<main id="main">
@@ -48,7 +48,7 @@ DE_MASTERING = {
           <tr><th scope="row">EP · bis 5 Tracks</th><td>349 €</td><td><s>395 €</s></td><td>46 € (~12 %)</td><td>69,80 €</td></tr>
           <tr><th scope="row">Album · bis 10 Tracks</th><td>629 €</td><td><s>790 €</s></td><td>161 € (~20 %)</td><td>62,90 €</td></tr>
         </tbody></table></div>
-        <p class="note">Alle Preise inkl. 19 % MwSt. Audio-Audit und unbegrenzte Korrekturen in jedem Paket. Lieferung: Single/Stem 48–72 h, EP 5–7 Tage, Album 7–14 Tage (Vinyl-Master auf Wunsch).</p>
+        <p class="note">Alle Preise inkl. 19 % MwSt. Audio-Audit und unbegrenzte Korrekturen in jedem Paket. Zahlung per Vorkasse oder auf Rechnung nach Fertigstellung. Lieferung: Single/Stem 48–72 h, EP 5–7 Tage, Album 7–14 Tage (Vinyl-Master auf Wunsch).</p>
       </div>
       <div>
         <h3>Zusatzleistungen</h3>
@@ -67,7 +67,7 @@ DE_MASTERING = {
     <h2 id="how-t">So läuft es ab</h2>
     <ol>
       <li><strong>Anfrage senden</strong> mit Genre, Anzahl der Tracks, Deadline und Referenztrack.</li>
-      <li><strong>Antwort bekommen</strong> mit allen Details und Upload-Link, meist innerhalb von 24–48 Stunden.</li>
+      <li><strong>Antwort bekommen</strong> mit allen Details und Upload-Link, meist innerhalb von 24–48 Stunden. Bezahlung nach deiner Wahl: Vorkasse oder Rechnung nach Fertigstellung.</li>
       <li><strong>Dateien hochladen:</strong> WAV oder AIFF, 24 oder 32 Bit, kein Limiter auf dem Master-Bus, Peaks um -6 bis -3 dBFS. Stems am selben Startpunkt.</li>
       <li><strong>Master erhalten</strong> als 24-bit WAV, 16-bit AIFF und 320 kbps MP3, bereit für Bandcamp, SoundCloud, Spotify und Labels: Singles in 48–72 h, EPs in 5–7 Tagen, Alben in 7–14 Tagen.</li>
       <li><strong>Korrekturen</strong> sind unbegrenzt, in jedem Paket.</li>

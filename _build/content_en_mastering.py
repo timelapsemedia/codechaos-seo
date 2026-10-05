@@ -8,7 +8,7 @@ EN_MASTERING = {
    ("What is the difference between stereo and stem mastering?", "With stereo mastering you send one finished mixdown. With stem mastering you send up to 6 groups (for example kick, sub, bass, leads, pads, FX), so problems in single frequency ranges can be fixed directly. For dense psycore and hitech mixes, stem mastering usually gives the cleaner, louder result."),
    ("How should I prepare my files?", "Export WAV or AIFF at the project's sample rate, 24 or 32-bit, without a limiter or clipper on the master bus and with peaks around -6 to -3 dBFS. Stems should start at the same position and be exported with all their effects. Add a reference track if you have a sound in mind."),
    ("Do you master genres other than psytrance?", "Yes. The focus is psycore, hitech and darkpsy, but electronic music in general (techno, drum and bass, industrial, experimental) is welcome. Just mention the genre and a reference in your request."),
-   ("How do I pay and receive my master?", "After your request you get a reply with the details, usually within 24–48 hours. Singles are delivered in 48–72 hours, EPs in 5–7 days, albums in 7–14 days, as 24-bit WAV, 16-bit AIFF and 320 kbps MP3. Revisions are unlimited."),
+   ("How do I pay and receive my master?", "Your choice: pay in advance or by invoice after completion. After your request you get a reply with the details, usually within 24–48 hours. Singles are delivered in 48–72 hours, EPs in 5–7 days, albums in 7–14 days, as 24-bit WAV, 16-bit AIFF and 320 kbps MP3. Revisions are unlimited."),
    ("Who does the mastering?", "Mastering is done by Code Chaos (Tim Borchert), a hitech, psycore and darkpsy producer from Hamburg with 24+ releases since 2016 and co-founder of the label Abstract Sound Design, running the service as Polished Media."),
  ],
  "body": """<main id="main">
@@ -48,7 +48,7 @@ EN_MASTERING = {
           <tr><th scope="row">EP · up to 5 tracks</th><td>€349</td><td><s>€395</s></td><td>€46 (~12%)</td><td>€69.80</td></tr>
           <tr><th scope="row">Album · up to 10 tracks</th><td>€629</td><td><s>€790</s></td><td>€161 (~20%)</td><td>€62.90</td></tr>
         </tbody></table></div>
-        <p class="note">All prices incl. 19% German VAT. Audio audit and unlimited revisions included in every package. Delivery: single/stem 48–72 h, EP 5–7 days, album 7–14 days (vinyl-ready master on request).</p>
+        <p class="note">All prices incl. 19% German VAT. Audio audit and unlimited revisions included in every package. Pay in advance or by invoice after completion. Delivery: single/stem 48–72 h, EP 5–7 days, album 7–14 days (vinyl-ready master on request).</p>
       </div>
       <div>
         <h3>Extras</h3>
@@ -67,7 +67,7 @@ EN_MASTERING = {
     <h2 id="how-t">How it works</h2>
     <ol>
       <li><strong>Send a request</strong> with genre, number of tracks, deadline and a reference track.</li>
-      <li><strong>Get a reply</strong> with details and the upload link, usually within 24–48 hours.</li>
+      <li><strong>Get a reply</strong> with details and the upload link, usually within 24–48 hours. Pay in advance or by invoice after completion, whichever you prefer.</li>
       <li><strong>Upload your files</strong>: WAV or AIFF, 24 or 32-bit, no limiter on the master bus, peaks around -6 to -3 dBFS. Stems aligned to the same start point.</li>
       <li><strong>Receive your master</strong> as 24-bit WAV, 16-bit AIFF and 320 kbps MP3, ready for Bandcamp, SoundCloud, Spotify and labels: singles in 48–72 h, EPs in 5–7 days, albums in 7–14 days.</li>
       <li><strong>Revisions</strong> are unlimited, for every package.</li>

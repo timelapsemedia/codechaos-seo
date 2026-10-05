@@ -12,6 +12,7 @@ from content_genres import GENRES, RELEASES          # noqa: E402
 from content_en_home import EN_HOME                   # noqa: E402
 from content_en_mastering import EN_MASTERING, FORM   # noqa: E402
 from content_de_mastering import DE_MASTERING, FORM_DE  # noqa: E402
+from flags import UK as FLAG_UK, DE as FLAG_DE       # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://codechaos-official.de"
@@ -64,7 +65,9 @@ def head(lang, url, alt_url, title, desc, og_image, og_alt, ld, og_type="article
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="{url}">
 {alternates}
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0806'/><circle cx='16' cy='16' r='11' fill='none' stroke='%23c9a86a' stroke-width='2'/><path d='M16 8v8l5 3' stroke='%23ece2ce' stroke-width='2' fill='none'/><circle cx='16' cy='16' r='2.2' fill='%238e1016'/></svg>" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
@@ -100,7 +103,9 @@ def nav(lang, alt_url, current):
     lis = "".join(
         f'<li><a href="{h}"{cur if k == current else ""}>{esc(t)}</a></li>' for t, h, k in items)
     alt_href = (alt_url or BASE + ("/en/" if lang == "de" else "/")).replace(BASE, "")
-    lis += f'<li><a class="lang" href="{alt_href}" hreflang="{"en" if lang == "de" else "de"}" lang="{"en" if lang == "de" else "de"}">{u["lang_label"]}</a></li>'
+    other = "en" if lang == "de" else "de"
+    switch = (f'<a class="lang-switch" href="{alt_href}" hreflang="{other}" lang="{other}" aria-label="{"English version" if lang == "de" else "Deutsche Version"}">'
+              f'{FLAG_UK if lang == "de" else FLAG_DE}<span>{other.upper()}</span></a>')
     return f"""<body>
 <a class="skip" href="#main">{u['skip']}</a>
 <header>
@@ -108,6 +113,7 @@ def nav(lang, alt_url, current):
   <a class="logo" href="{u['home_url']}"><img src="/images/brand/codechaos-logo-bone-240.webp" srcset="/images/brand/codechaos-logo-bone-240.webp 1x, /images/brand/codechaos-logo-bone-480.webp 2x" width="68" height="40" alt="Code Chaos Logo"></a>
   <button class="s-toggle" aria-label="{u['menu']}" aria-expanded="false" aria-controls="s-menu"><span></span><span></span><span></span></button>
   <ul id="s-menu">{lis}</ul>
+  {switch}
 </nav>
 </header>
 """
@@ -303,6 +309,39 @@ def build_mastering(lang):
     open(path, "w", encoding="utf-8").write(html)
     return path
 
+def build_404():
+    body = """<main id="main">
+<section class="s-hero">
+  <div class="wrap narrow">
+    <span class="eyebrow">Fehler 404 · Error 404</span>
+    <h1>Diese Seite ist im Uhrwerk verschwunden.</h1>
+    <div class="rule" aria-hidden="true"><i></i></div>
+    <p class="lead">Die Adresse gibt es nicht (mehr). This page does not exist.</p>
+    <div class="btns"><a class="btn btn-blood" href="/">Zur Startseite</a><a class="btn btn-ghost" href="/mastering/">Mastering ab 79 €</a><a class="btn btn-ghost" href="/en/" hreflang="en" lang="en">English</a></div>
+  </div>
+</section>
+<section class="alt">
+  <div class="wrap">
+    <h2>Beliebte Seiten</h2>
+    <div class="cards">
+      <div class="card"><h3>Uhrwerk aus Blut</h3><p>Die neue Single, erscheint am 30.10.2026.</p><a class="more" href="/#single">Zur Single →</a></div>
+      <div class="card"><h3>Mastering</h3><p>Psycore, Hitech &amp; Darkpsy: Single 79 €, EP 349 €, Album 629 €.</p><a class="more" href="/mastering/">Preise &amp; Ablauf →</a></div>
+      <div class="card"><h3>Genre Guides</h3><p><a href="/psycore/">Psycore</a> · <a href="/hitech-psytrance/">Hitech</a> · <a href="/darkpsy/">Darkpsy</a></p></div>
+      <div class="card"><h3>Crucible</h3><p>3-Band Harmonic Saturation Plugin von Code Chaos Audio.</p><a class="more" href="/crucible.html">Zum Plugin →</a></div>
+    </div>
+  </div>
+</section>
+</main>
+"""
+    html = head("de", BASE + "/404.html", None, "Seite nicht gefunden | Code Chaos", "Diese Seite existiert nicht. Zur Startseite von Code Chaos.",
+                BASE + "/images/uhrwerk-aus-blut/og-uhrwerk-aus-blut.jpg", "Code Chaos", {"@context": "https://schema.org", "@type": "WebPage", "name": "404"}, og_type="website")
+    html = html.replace('<meta name="robots" content="index, follow, max-image-preview:large">', '<meta name="robots" content="noindex, follow">')
+    html = "\n".join(l for l in html.split("\n") if not l.startswith('<link rel="canonical"') and not l.startswith('<link rel="alternate"'))
+    html += nav("de", BASE + "/en/", "") + body + footer("de")
+    open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8").write(html)
+    return os.path.join(ROOT, "404.html")
+
+
 if __name__ == "__main__":
     for g in GENRES:
         for lang in ("de", "en"):
@@ -310,3 +349,4 @@ if __name__ == "__main__":
     print(build_en_home())
     print(build_mastering("de"))
     print(build_mastering("en"))
+    print(build_404())
