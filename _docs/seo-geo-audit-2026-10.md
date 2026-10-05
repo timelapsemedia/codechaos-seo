@@ -172,19 +172,22 @@ Einschätzung der Nachfrage: ●●● hoch für die Nische · ●● mittel · 
 
 ---
 
-## 7. Offene Punkte (brauchen deine Entscheidung oder Info)
+## 7. Offene Punkte und Entscheidungen
 
-1. **Standort:** Bandcamp sagt „from Hamburg“, die Website nur „Deutschland“. Wenn Hamburg stimmt, sollte es überall stehen (Bio, Schema, llms.txt). Das hilft Entität und lokale Suche („Psytrance Producer Hamburg“).
-2. **Booking-Widerspruch:** Bandcamp nennt `code.chaos@gmx.de` für Booking, die Website sagt „keine Bookings“. Bitte auf Bandcamp anpassen.
-3. **Label-Gründungsjahr:** Die Timeline sagt „2021 Abstract Sound Design Founded“, aber die Releases 2017–2019 sind mit dem Label „Abstract Sound Design“ gekennzeichnet und liegen auf `moonchildproject.bandcamp.com`. Bitte korrekt angeben.
-4. **Englische Version** (`/en/`) mit `hreflang`: größter Reichweiten-Hebel, da Avatar 1, 3 und 4 überwiegend englisch suchen.
-5. **Eigene Unterseiten** für Genre-Guides und Mastering statt alles auf einer 240-KB-Seite (bessere Rankings je Keyword, bessere KI-Zitierbarkeit).
-6. **Font Awesome** (ca. 100 KB CSS + Webfont von cdnjs) für 8 Icons: durch Inline-SVG ersetzen. Dadurch entfällt auch die Cloudflare-Verbindung im Datenschutz.
-7. **Repo aufräumen:** ca. 33 MB ungenutzte Bilder (u. a. `runtime-terror-cover.png` 12,6 MB, `runtime-terror-tracklist.png` 10,6 MB, `ASD.png` 5,8 MB, `hero*.png`). Bewusst nicht gelöscht, weil eventuell für Discogs genutzt.
-8. **Impressum:** Prüfen lassen, ob ein Verantwortlicher nach § 18 Abs. 2 MStV angegeben werden muss (redaktionelle Inhalte wie der Genre Guide). Das Impressum nennt außerdem Facebook, es gibt aber keinen verlinkten Facebook-Auftritt.
-9. **Datenschutz:** Der neue Abschnitt beschreibt die tatsächlich eingebundenen Dienste, ersetzt aber keine Rechtsberatung.
+**Erledigt (05.10.2026, zweite Runde):**
+- Standort **Hamburg** übernommen (Bio, Meta, Schema inkl. `foundingLocation`/`homeLocation`, llms.txt, alle neuen Seiten).
+- Booking: Die aktuelle Bandcamp-Bio enthält kein Booking. Der Treffer stammte aus einem veralteten Suchindex. Die Website sagt weiterhin „keine Bookings“.
+- **Abstract Sound Design: gegründet 2021.** Die Releases von 2017–2019 (TOD-Trilogie) laufen jetzt als „Eigenveröffentlichung“, nicht mehr als ASD-Release.
+- Bandcamp-Claim **„New Psychedelic Death Art“** ist in die Über-Texte (DE/EN) und ins Schema (`slogan`) übernommen.
+- **Englische Version** `/en/` und **Genre-Unterseiten** `/psycore/`, `/hitech-psytrance/`, `/darkpsy/` (jeweils DE + EN) gebaut, inklusive hreflang, Breadcrumbs, Article- und FAQ-Schema, eigenen OG-Bildern und Sitemap-Einträgen. Die Startseite verlinkt jetzt kompakt auf die Guides; der lange Hitech-Abschnitt ist auf `/hitech-psytrance/` umgezogen.
+- Generator: `python3 _build/build_pages.py`. Die Inhalte stehen in `_build/content_genres.py` und `_build/content_en_home.py`.
 
----
+**Noch offen:**
+1. **Font Awesome** (ca. 100 KB CSS + Webfont von cdnjs) für 8 Icons auf der deutschen Startseite: durch Inline-SVG ersetzen. Die neuen Seiten kommen bereits ohne aus.
+2. **Repo aufräumen:** ca. 33 MB ungenutzte Bilder (u. a. `runtime-terror-cover.png` 12,6 MB, `runtime-terror-tracklist.png` 10,6 MB, `ASD.png` 5,8 MB, `hero*.png`, alte `ASD.webp`/`neue.webp`).
+3. **Impressum:** Prüfen lassen, ob ein Verantwortlicher nach § 18 Abs. 2 MStV nötig ist (redaktionelle Genre-Guides). Facebook wird im Impressum genannt, ist aber nirgends verlinkt.
+4. **Wikidata, Discogs, MusicBrainz** für „Code Chaos“ und „Abstract Sound Design“ anlegen bzw. vervollständigen (Hamburg, 2016/2021, Website-Link).
+5. Weitere englische Seiten: Mastering-Landingpage `/en/mastering/` und Tutorial-Artikel (z. B. „psytrance bass saturation“) als Brücke zu Crucible.
 
 ## 8. Monitoring nach dem Deploy
 - Google Search Console: Sitemap neu einreichen, URL-Prüfung für `/` und `/crucible.html` (Live-Test für strukturierte Daten).
