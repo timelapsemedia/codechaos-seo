@@ -97,7 +97,7 @@ GENRES = [
 <li><strong>Bass im Seitenkettenraum.</strong> Die Neurotrance-Bassline sitzt zwischen den Kicks. Statt klassischem Sidechain hilft oft präzises Volume-Shaping pro Note.</li>
 <li><strong>Tiefen sauber, Mitten dreckig.</strong> Sub und Kick bleiben mono und clean, Charakter entsteht in den Mitten. Multiband-Sättigung wie <a href="/crucible.html">Crucible</a> ist dafür ideal: Low mit Hard Clip, Mid mit Tube.</li>
 <li><strong>Atmosphäre in Schichten.</strong> Drei bis fünf Pad- und Drone-Ebenen mit unterschiedlicher Bewegung, statt einer großen Fläche.</li>
-<li><strong>Mastering mit Gefühl für Transienten.</strong> Bei hohem Tempo zerstört zu viel Limiting die Kick. Ein genre-erfahrenes <a href="/#psycore-mastering">Psycore-Mastering</a> hält Lautheit und Punch in Balance.</li>
+<li><strong>Mastering mit Gefühl für Transienten.</strong> Bei hohem Tempo zerstört zu viel Limiting die Kick. Ein genre-erfahrenes <a href="/mastering/">Psycore-Mastering</a> hält Lautheit und Punch in Balance.</li>
 </ol>""",
    "rel_title": "Psycore von Code Chaos",
    "rel_intro": "Eine Auswahl an Psycore-Releases von Code Chaos, von Roadside Butchery (2021) bis zum 260-BPM-Remix von Code Pandorum (2026). Alle Releases gibt es auf Bandcamp.",
@@ -311,7 +311,7 @@ GENRES = [
 <li><strong>Samples sparsam, aber gezielt.</strong> Ein starkes Sample an der richtigen Stelle wirkt mehr als zehn im Hintergrund.</li>
 <li><strong>Tiefe statt Lautstärke.</strong> Arbeite mit Raum, Delay und Vordergrund/Hintergrund, damit die Atmosphäre atmen kann.</li>
 <li><strong>Wärme im Low-End.</strong> Leichte Röhren- oder Tape-Sättigung macht den Bass dicker, ohne ihn zu verzerren, getrennt pro Band zum Beispiel mit <a href="/crucible.html">Crucible</a>.</li>
-<li><strong>Mastering für Dynamik.</strong> Darkpsy lebt von Kontrasten. Ein <a href="/#psycore-mastering">Darkpsy-Mastering</a> sollte Lautheit erreichen, ohne die Atmosphäre plattzudrücken.</li>
+<li><strong>Mastering für Dynamik.</strong> Darkpsy lebt von Kontrasten. Ein <a href="/mastering/">Darkpsy-Mastering</a> sollte Lautheit erreichen, ohne die Atmosphäre plattzudrücken.</li>
 </ol>""",
    "rel_title": "Darkpsy von Code Chaos",
    "rel_intro": "Darkpsy-Releases von Code Chaos, von den Alben Oblivion und The Twilight Zone (2022) bis zur neuen Single „Uhrwerk aus Blut“.",
