@@ -10,6 +10,7 @@ import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content_genres import GENRES, RELEASES          # noqa: E402
 from content_en_home import EN_HOME                   # noqa: E402
+from content_en_mastering import EN_MASTERING, FORM   # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://codechaos-official.de"
@@ -28,7 +29,7 @@ UI = {
                skip="Skip to content", menu="Open menu", faq="FAQ", rel_title="Releases by Code Chaos",
                more="Read more", legal="Legal", imprint="Imprint (German)", privacy="Privacy policy (German)", nav="Navigation",
                follow="Follow Code Chaos", other="More genre guides", foot="Hitech, Psycore & Darkpsy producer from Hamburg, Germany. Studio project only.",
-               home_url="/en/", mastering_url="/en/#mastering", releases_url="/en/#releases",
+               home_url="/en/", mastering_url="/en/mastering/", releases_url="/en/#releases",
                author="By Code Chaos (Tim Borchert), producer from Hamburg · updated 5 Oct 2026"),
 }
 
@@ -44,6 +45,11 @@ def esc(t):
 
 def head(lang, url, alt_url, title, desc, og_image, og_alt, ld, og_type="article"):
     de_url, en_url = (url, alt_url) if lang == "de" else (alt_url, url)
+    if alt_url is None:  # Seite ohne Gegenstück in der anderen Sprache
+        alternates = f'<link rel="alternate" hreflang="{lang}" href="{url}">'
+    else:
+        alternates = (f'<link rel="alternate" hreflang="de" href="{de_url}">\n<link rel="alternate" hreflang="en" href="{en_url}">\n'
+                      f'<link rel="alternate" hreflang="x-default" href="{de_url}">')
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -56,9 +62,7 @@ def head(lang, url, alt_url, title, desc, og_image, og_alt, ld, og_type="article
 <meta name="theme-color" content="#0b0806">
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="{url}">
-<link rel="alternate" hreflang="de" href="{de_url}">
-<link rel="alternate" hreflang="en" href="{en_url}">
-<link rel="alternate" hreflang="x-default" href="{de_url}">
+{alternates}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0806'/><circle cx='16' cy='16' r='11' fill='none' stroke='%23c9a86a' stroke-width='2'/><path d='M16 8v8l5 3' stroke='%23ece2ce' stroke-width='2' fill='none'/><circle cx='16' cy='16' r='2.2' fill='%238e1016'/></svg>" type="image/svg+xml">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{esc(title)}">
@@ -94,7 +98,8 @@ def nav(lang, alt_url, current):
     cur = ' aria-current="page"'
     lis = "".join(
         f'<li><a href="{h}"{cur if k == current else ""}>{esc(t)}</a></li>' for t, h, k in items)
-    lis += f'<li><a class="lang" href="{alt_url.replace(BASE, "")}" hreflang="{"en" if lang == "de" else "de"}" lang="{"en" if lang == "de" else "de"}">{u["lang_label"]}</a></li>'
+    alt_href = (alt_url or BASE + ("/en/" if lang == "de" else "/")).replace(BASE, "")
+    lis += f'<li><a class="lang" href="{alt_href}" hreflang="{"en" if lang == "de" else "de"}" lang="{"en" if lang == "de" else "de"}">{u["lang_label"]}</a></li>'
     return f"""<body>
 <a class="skip" href="#main">{u['skip']}</a>
 <header>
@@ -262,8 +267,36 @@ def build_en_home():
     return path
 
 
+def build_en_mastering():
+    m = EN_MASTERING
+    url = BASE + "/en/mastering/"
+    offers = [("Stereo mastering (1 track)", "79"), ("Stem mastering (1 track, up to 8 stems)", "129"), ("Cover art", "99"), ("Lyric video", "179"),
+              ("Promo video (60 s)", "299"), ("Starter package", "149"), ("Stem starter package", "199"), ("Pro release EP (5 tracks)", "399"), ("Full release album (10 tracks)", "999")]
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": m["title"], "description": m["desc"], "inLanguage": "en",
+         "isPartOf": {"@id": BASE + "/#website"}, "mainEntity": {"@id": url + "#service"}, "datePublished": TODAY, "dateModified": TODAY},
+        {"@type": "Service", "@id": url + "#service", "name": "Psytrance mastering for psycore, hitech and darkpsy", "serviceType": "Audio mastering",
+         "description": m["desc"], "provider": {"@id": "https://polished.media/#org"}, "areaServed": "Worldwide", "availableLanguage": ["en", "de"], "url": url,
+         "offers": [{"@type": "Offer", "name": n, "price": p, "priceCurrency": "EUR", "url": url + "#request"} for n, p in offers]},
+        {"@type": "Organization", "@id": "https://polished.media/#org", "name": "Polished Media", "url": "https://polished.media", "email": "polished.media@gmx.de", "founder": {"@id": PERSON}},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/en/"},
+            {"@type": "ListItem", "position": 2, "name": "Mastering", "item": url}]},
+        {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": "en", "mainEntity": [
+            {"@type": "Question", "name": strip(q), "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in m["faq"]]},
+    ]}
+    body = m["body"].replace("{faq}", faq_html(m["faq"])).replace("{form}", FORM)
+    html = head("en", url, None, m["title"], m["desc"], BASE + "/images/og/mastering.jpg", "Psytrance mastering for psycore, hitech and darkpsy by Code Chaos", ld, og_type="website") \
+        + nav("en", None, "mast") + body + footer("en")
+    path = os.path.join(ROOT, "en", "mastering", "index.html")
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    open(path, "w", encoding="utf-8").write(html)
+    return path
+
+
 if __name__ == "__main__":
     for g in GENRES:
         for lang in ("de", "en"):
             print(build_genre(g, lang))
     print(build_en_home())
+    print(build_en_mastering())

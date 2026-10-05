@@ -152,7 +152,7 @@ GENRES = [
 <li><strong>Give the bass its own slot.</strong> The neurotrance bassline lives between the kicks. Precise per-note volume shaping often works better than classic sidechain compression.</li>
 <li><strong>Clean lows, dirty mids.</strong> Keep sub and kick mono and clean and build character in the mids. Multiband saturation such as <a href="/crucible.html">Crucible</a> is made for this: hard clip on the low band, tube on the mids.</li>
 <li><strong>Layer the atmosphere.</strong> Three to five pad and drone layers with different movement work better than one big pad.</li>
-<li><strong>Master with respect for transients.</strong> At high tempo, too much limiting destroys the kick. Genre-aware <a href="/en/#mastering">psycore mastering</a> keeps loudness and punch in balance.</li>
+<li><strong>Master with respect for transients.</strong> At high tempo, too much limiting destroys the kick. Genre-aware <a href="/en/mastering/">psycore mastering</a> keeps loudness and punch in balance.</li>
 </ol>""",
    "rel_title": "Psycore by Code Chaos",
    "rel_intro": "A selection of psycore releases by Code Chaos, from Roadside Butchery (2021) to the 260 BPM remix for Code Pandorum (2026). Everything is available on Bandcamp.",
@@ -358,7 +358,7 @@ GENRES = [
 <li><strong>Use samples sparingly but deliberately.</strong> One strong sample in the right spot does more than ten in the background.</li>
 <li><strong>Depth over loudness.</strong> Use space, delay and foreground/background so the atmosphere can breathe.</li>
 <li><strong>Warmth in the low end.</strong> Gentle tube or tape saturation thickens the bass without distorting it, separately per band, for example with <a href="/crucible.html">Crucible</a>.</li>
-<li><strong>Master for dynamics.</strong> Darkpsy lives on contrast. <a href="/en/#mastering">Darkpsy mastering</a> should reach loudness without flattening the atmosphere.</li>
+<li><strong>Master for dynamics.</strong> Darkpsy lives on contrast. <a href="/en/mastering/">Darkpsy mastering</a> should reach loudness without flattening the atmosphere.</li>
 </ol>""",
    "rel_title": "Darkpsy by Code Chaos",
    "rel_intro": "Darkpsy releases by Code Chaos, from the albums Oblivion and The Twilight Zone (2022) to the new single \"Uhrwerk aus Blut\".",

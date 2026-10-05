@@ -112,23 +112,7 @@ EN_HOME = {
       </tbody></table>
     </div>
   </div>
-  <div class="wrap" style="margin-top:40px">
-    <h3 id="mastering-form">Send a mastering request</h3>
-    <form class="form" action="https://formspree.io/f/mojkqopj" method="POST">
-      <div class="row"><div><label for="en-name">NAME *</label><input id="en-name" name="name" required autocomplete="name"></div>
-      <div><label for="en-email">EMAIL *</label><input id="en-email" type="email" name="email" required autocomplete="email"></div></div>
-      <div class="row"><div><label for="en-service">SERVICE *</label><select id="en-service" name="service" required>
-        <option value="" disabled selected>Choose…</option><option>Stereo Mastering (€79)</option><option>Stem Mastering (€129)</option><option>Cover Art (€99)</option>
-        <option>Lyric Video (€179)</option><option>Promo Video (€299)</option><option>Starter Package (€149)</option><option>Stem Starter Package (€199)</option>
-        <option>Pro Release EP (€399)</option><option>Full Release Album (€999)</option><option>Custom / other</option></select></div>
-      <div><label for="en-tracks">NUMBER OF TRACKS</label><input id="en-tracks" name="tracks" placeholder="e.g. 1"></div></div>
-      <div><label for="en-msg">MESSAGE</label><textarea id="en-msg" name="message" rows="4" placeholder="Genre, reference track, deadline…"></textarea></div>
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-      <input type="hidden" name="_subject" value="New mastering request (EN) · Code Chaos">
-      <div><button class="btn btn-blood" type="submit">Send request</button></div>
-      <p class="note">Your data is sent via Formspree and only used to answer your request. Privacy policy (German): <a href="/#datenschutz">Datenschutz</a>. Prefer email? <a href="mailto:polished.media@gmx.de">polished.media@gmx.de</a></p>
-    </form>
-  </div>
+  <div class="wrap"><div class="btns"><a class="btn btn-blood" href="/en/mastering/#request">Request mastering</a><a class="btn btn-ghost" href="/en/mastering/">How it works &amp; FAQ</a></div></div>
 </section>
 
 <section class="alt" id="crucible" aria-labelledby="cru-t">

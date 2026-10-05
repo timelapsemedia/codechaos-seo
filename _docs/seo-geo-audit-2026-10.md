@@ -182,12 +182,17 @@ Einschätzung der Nachfrage: ●●● hoch für die Nische · ●● mittel · 
 - **Englische Version** `/en/` und **Genre-Unterseiten** `/psycore/`, `/hitech-psytrance/`, `/darkpsy/` (jeweils DE + EN) gebaut, inklusive hreflang, Breadcrumbs, Article- und FAQ-Schema, eigenen OG-Bildern und Sitemap-Einträgen. Die Startseite verlinkt jetzt kompakt auf die Guides; der lange Hitech-Abschnitt ist auf `/hitech-psytrance/` umgezogen.
 - Generator: `python3 _build/build_pages.py`. Die Inhalte stehen in `_build/content_genres.py` und `_build/content_en_home.py`.
 
+**Erledigt (05.10.2026, dritte Runde):**
+- **Font Awesome entfernt:** Die Startseite nutzt jetzt eingebettete SVG-Icons. Kein Aufruf von cdnjs/Cloudflare mehr; der Datenschutztext ist angepasst. Einziger externer Dienst beim Laden ist Gumroad.
+- **Ungenutzte Bilder gelöscht** (16 Dateien, ca. 37 MB, u. a. die großen PNGs). Behalten wurden Brand-Assets (Logo-Dateien, Gothic-Porträts, Uhrwerk-Hero) und das Porträtfoto `herofull.webp`. Die gelöschten Dateien bleiben in der Git-Historie wiederherstellbar.
+- **Englische Mastering-Seite** `/en/mastering/` mit Preisen, Ablauf, Datei-Vorbereitung, FAQ, Anfrageformular, Service- und FAQ-Schema sowie eigenem OG-Bild.
+- **Wikidata, Discogs, MusicBrainz:** Ist-Stand geprüft und alle Eingaben vorbereitet, siehe `_docs/entitaeten-wikidata-discogs-musicbrainz.md`. Discogs- und MusicBrainz-Links stehen bereits im Schema.
+- **Social-Automatisierung:** GitHub Action `.github/workflows/social-schedule.yml` und `_marketing/run_social.py`. Instagram postet direkt per Token (täglich), YouTube plant die Shorts per API, Buffer übernimmt die übrigen Kanäle.
+
 **Noch offen:**
-1. **Font Awesome** (ca. 100 KB CSS + Webfont von cdnjs) für 8 Icons auf der deutschen Startseite: durch Inline-SVG ersetzen. Die neuen Seiten kommen bereits ohne aus.
-2. **Repo aufräumen:** ca. 33 MB ungenutzte Bilder (u. a. `runtime-terror-cover.png` 12,6 MB, `runtime-terror-tracklist.png` 10,6 MB, `ASD.png` 5,8 MB, `hero*.png`, alte `ASD.webp`/`neue.webp`).
-3. **Impressum:** Prüfen lassen, ob ein Verantwortlicher nach § 18 Abs. 2 MStV nötig ist (redaktionelle Genre-Guides). Facebook wird im Impressum genannt, ist aber nirgends verlinkt.
-4. **Wikidata, Discogs, MusicBrainz** für „Code Chaos“ und „Abstract Sound Design“ anlegen bzw. vervollständigen (Hamburg, 2016/2021, Website-Link).
-5. Weitere englische Seiten: Mastering-Landingpage `/en/mastering/` und Tutorial-Artikel (z. B. „psytrance bass saturation“) als Brücke zu Crucible.
+1. Einträge bei Discogs, MusicBrainz und Wikidata mit deinem Account absenden (Vorlage siehe oben), danach die Wikidata-Q-Nummer ins Schema eintragen.
+2. Secrets in GitHub hinterlegen, damit die Social-Action posten kann.
+3. Impressum prüfen lassen (§ 18 Abs. 2 MStV; Facebook wird genannt, ist aber nicht verlinkt).
 
 ## 8. Monitoring nach dem Deploy
 - Google Search Console: Sitemap neu einreichen, URL-Prüfung für `/` und `/crucible.html` (Live-Test für strukturierte Daten).

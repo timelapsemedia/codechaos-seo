@@ -226,4 +226,15 @@
       <image:title>What is Darkpsy? Genre guide by Code Chaos</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://codechaos-official.de/en/mastering/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/mastering/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/og/mastering.jpg</image:loc>
+      <image:title>Psytrance mastering for psycore, hitech and darkpsy · Code Chaos</image:title>
+    </image:image>
+  </url>
 </urlset>
