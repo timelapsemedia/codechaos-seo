@@ -29,6 +29,6 @@ Ziel: Platz 1 bei Google und Bing für die Zielbegriffe, vor allem im DACH-Raum:
 
 - **Keine erfundenen Fakten.** Artists, Festivals, Daten, Zitate oder Kundenstimmen nur, wenn belegt oder vom Nutzer geliefert. Unsichere Aussagen weglassen.
 - **Kein Keyword-Stuffing**, keine versteckten Texte, keine Doorway-Seiten. Inhalte für Menschen schreiben.
-- **Fakten konsistent halten:** Hamburg, aktiv seit 2016, Abstract Sound Design gegründet 2021, reines Studioprojekt (keine Liveshows/DJ-Bookings), Mastering: Single 79 €, Stem 129 €, EP 349 €, Album 629 € inkl. MwSt., Zahlung per Vorkasse oder Rechnung; Crucible 1.0.0: VST3 + Standalone für Windows, 49 €, 5 Sättigungstypen.
+- **Fakten konsistent halten:** Hamburg, aktiv seit 2016, Abstract Sound Design gegründet 2021, heute reines Studioprojekt ohne Bookings (früher Live-Sets: Abstract Ritual Hamburg 07/2023, Lost Signal Festival 08/2026, Live-Mitschnitt Arnsteinhöhle 04/2026), Mastering: Single 79 €, Stem 129 €, EP 349 €, Album 629 € inkl. MwSt., Zahlung per Vorkasse oder Rechnung; Crucible 1.0.0: VST3 + Standalone für Windows, 49 €, 5 Sättigungstypen.
 - **Schlüssel nie committen** (`.gitignore` schützt `*service-account*.json` und `codechaos-*.json`).
 - Startseite: Single „Uhrwerk aus Blut“ vorn, Mastering direkt dahinter (Entscheidung 10/2026; nach dem Release prüfen, ob Mastering nach vorn soll).

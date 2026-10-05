@@ -21,7 +21,7 @@ graph=[
   "speakable":{"@type":"SpeakableSpecification","cssSelector":["#single-info","#mastering","#was-ist-psycore","#was-ist-hitech","#was-ist-darkpsy","#bio-section"]},"significantLink":[B+"/mastering/",B+"/psycore/",B+"/hitech-psytrance/",B+"/darkpsy/",B+"/en/"],
   "inLanguage":"de","datePublished":"2024-01-01","dateModified":"2026-10-05"},
  {"@type":"MusicGroup","@id":B+"/#artist","name":"Code Chaos","alternateName":["Code-Chaos","CodeChaos"],
-  "description":"Code Chaos ist ein Hitech Psytrance, Psycore und Darkpsy Producer aus Hamburg und das Studioprojekt von Tim Borchert. Eigene Bezeichnung des Sounds: New Psychedelic Death Art. Seit 2016 aktiv, über 24 Releases auf Labels wie Abstract Sound Design (2021 mitgegründet), TATEWARI Records (Mexiko) und Soma Ritual Records (Indien). Reines Studioprojekt ohne Liveshows oder DJ-Bookings.",
+  "description":"Code Chaos ist ein Hitech Psytrance, Psycore und Darkpsy Producer aus Hamburg und das Studioprojekt von Tim Borchert. Eigene Bezeichnung des Sounds: New Psychedelic Death Art. Seit 2016 aktiv, über 24 Releases auf Labels wie Abstract Sound Design (2021 mitgegründet), TATEWARI Records (Mexiko) und Soma Ritual Records (Indien). Heute ein reines Studioprojekt ohne Bookings, früher Live-Sets u. a. bei Abstract Ritual Hamburg (2023) und Lost Signal Festival (2026).",
   "genre":["Hitech Psytrance","Psycore","Darkpsy","Dark Psytrance","Psytrance"],
   "foundingDate":"2016","foundingLocation":{"@type":"Place","name":"Hamburg","address":{"@type":"PostalAddress","addressLocality":"Hamburg","addressCountry":"DE"}},"slogan":"New Psychedelic Death Art",
   "url":B+"/","logo":B+"/images/brand/codechaos-logo-bone-480.webp","image":B+"/images/brand/portrait-press-1200.jpg",
