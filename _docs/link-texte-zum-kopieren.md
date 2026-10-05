@@ -66,3 +66,17 @@ Beide schnell, aber anderes Feeling: Hitech (170–230+ BPM) ist komplex, glitch
 ```
 Darkpsy liegt meist bei 155–175 BPM, insgesamt 150–200. Darüber geht's Richtung Hitech (170–230+) und Psycore (180–300+). Übersicht mit allen drei: https://codechaos-official.de/darkpsy/
 ```
+
+## Bandcamp: veraltete Kontaktangaben korrigieren
+**Rotten Soil (Code Chaos Remix)**: Im About-Text stehen noch „For bookings: code.chaos@gmx.de“ und „For mastering: timelapsemedia@gmx.de“. Ersetzen durch:
+```
+Mastering for psycore, hitech & darkpsy: https://codechaos-official.de/mastering/ · polished.media@gmx.de
+Was ist Psycore? → https://codechaos-official.de/psycore/
+```
+**Abstrakte Musik**: Unter „Links“ stehen noch youtube.com/@TimelapseMedia, instagram.com/timelapse_media und tiktok.com/@timelapse_media. Ersetzen durch:
+```
+https://codechaos-official.de/
+https://www.youtube.com/@codechaos_abstractsounddesign
+https://www.instagram.com/codechaos_official
+https://www.tiktok.com/@codechaos_abstractsound
+```
