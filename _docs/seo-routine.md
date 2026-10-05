@@ -1,9 +1,9 @@
-# Wöchentliche SEO-Routine codechaos-official.de
+# Tägliche SEO-/GEO-/Conversion-Routine codechaos-official.de
 
 Ziel: Platz 1 bei Google und Bing für die Zielbegriffe, vor allem im DACH-Raum:
 **psycore, darkpsy / dark psy, hitech psy / hitech psytrance, psytrance mastering / psycore mastering, code chaos, uhrwerk aus blut, crucible plugin.**
 
-## Ablauf (jede Woche)
+## Ablauf (täglich 08:52; montags mit Wochenüberblick)
 
 1. **Messen:** `python3 _build/seo_snapshot.py`
    - schreibt `_docs/seo-history.jsonl` und vergleicht mit der Vorwoche
@@ -13,7 +13,7 @@ Ziel: Platz 1 bei Google und Bing für die Zielbegriffe, vor allem im DACH-Raum:
    - Welche Seiten sind noch nicht indexiert? Mögliche Gründe: dünner Inhalt, fehlende interne Links, Duplikate.
    - Bei welchen Zielbegriffen hat sich die Position verschlechtert, wo gibt es neue Suchanfragen mit Einblendungen, aber Position > 3?
    - Welche URL rankt für welchen Begriff? Sollte bei Genre-Begriffen die Genre-Seite sein, nicht die Startseite.
-3. **Verbessern (1–3 gezielte Änderungen pro Woche, nicht mehr):**
+3. **Verbessern (höchstens 1–2 gezielte Änderungen pro Tag; Seiten, die in den letzten 7 Tagen geändert wurden, nicht erneut umbauen):**
    - Titel und Description der rankenden Seite auf den Suchbegriff schärfen
    - Inhalte ergänzen, die zur Suchabsicht passen (z. B. neue FAQ aus echten Suchanfragen)
    - interne Links mit passendem Ankertext setzen

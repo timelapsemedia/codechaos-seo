@@ -43,4 +43,4 @@ Reddit (r/psytrance, r/edmproduction), Psytrance-Facebook-Gruppen, Discord-Serve
 - Festival-/Party-Lineups und Pressetexte: Website-Link statt nur Instagram.
 
 ## Messen
-Die wöchentliche Routine (Montag 08:52) zeigt in `_docs/seo-history.jsonl`, wie sich die Positionen entwickeln. In der Google Search Console unter „Links“ siehst du, welche externen Links Google gefunden hat.
+Die tägliche Routine (08:52) zeigt in `_docs/seo-history.jsonl`, wie sich die Positionen entwickeln. In der Google Search Console unter „Links“ siehst du, welche externen Links Google gefunden hat.
