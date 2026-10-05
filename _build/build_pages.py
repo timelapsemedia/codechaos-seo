@@ -270,14 +270,14 @@ def build_en_home():
 def build_en_mastering():
     m = EN_MASTERING
     url = BASE + "/en/mastering/"
-    offers = [("Stereo mastering (1 track)", "79"), ("Stem mastering (1 track, up to 8 stems)", "129"), ("Cover art", "99"), ("Lyric video", "179"),
-              ("Promo video (60 s)", "299"), ("Starter package", "149"), ("Stem starter package", "199"), ("Pro release EP (5 tracks)", "399"), ("Full release album (10 tracks)", "999")]
+    offers = [("Single: stereo mastering (1 track)", "79"), ("Stem Pro: stem mastering (1 track, up to 6 stems)", "129"), ("EP mastering (up to 5 tracks)", "349"),
+              ("Album mastering (up to 10 tracks)", "629"), ("Cover art", "99"), ("Lyric video", "179"), ("Promo video (60 s)", "299")]
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": m["title"], "description": m["desc"], "inLanguage": "en",
          "isPartOf": {"@id": BASE + "/#website"}, "mainEntity": {"@id": url + "#service"}, "datePublished": TODAY, "dateModified": TODAY},
         {"@type": "Service", "@id": url + "#service", "name": "Psytrance mastering for psycore, hitech and darkpsy", "serviceType": "Audio mastering",
          "description": m["desc"], "provider": {"@id": "https://polished.media/#org"}, "areaServed": "Worldwide", "availableLanguage": ["en", "de"], "url": url,
-         "offers": [{"@type": "Offer", "name": n, "price": p, "priceCurrency": "EUR", "url": url + "#request"} for n, p in offers]},
+         "offers": [{"@type": "Offer", "name": n, "price": p, "priceCurrency": "EUR", "url": url + "#request", "priceSpecification": {"@type": "PriceSpecification", "price": p, "priceCurrency": "EUR", "valueAddedTaxIncluded": True}} for n, p in offers]},
         {"@type": "Organization", "@id": "https://polished.media/#org", "name": "Polished Media", "url": "https://polished.media", "email": "polished.media@gmx.de", "founder": {"@id": PERSON}},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/en/"},

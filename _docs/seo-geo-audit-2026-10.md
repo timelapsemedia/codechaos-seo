@@ -121,7 +121,7 @@ Einschätzung der Nachfrage: ●●● hoch für die Nische · ●● mittel · 
 ### Avatar 4: „Kai, der kleine Label-Betreiber“ (B2B, hoher Warenkorb)
 - 28–45, betreibt ein Netlabel oder ein kleines Psytrance-Label, 1–4 Releases pro Monat.
 - Problem: konsistenter Sound über Releases, Cover und Promo-Videos aus einer Hand.
-- Spricht an: Pakete (Pro Release EP €399, Full Release €999), Turnaround, Referenzen.
+- Spricht an: Pakete (EP bis 5 Tracks €349, Album bis 10 Tracks €629), Turnaround, Referenzen.
 - Kanal: E-Mail, LinkedIn/Facebook-Gruppen, persönliche Empfehlung. **Sprache: Englisch/Deutsch.**
 - Ziel: Paket-Anfrage über das Formular.
 

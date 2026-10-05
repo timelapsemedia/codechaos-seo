@@ -423,7 +423,7 @@
    "@id": "https://codechaos-official.de/#mastering",
    "name": "Mastering für Psycore, Hitech Psytrance und Darkpsy",
    "serviceType": "Audio Mastering",
-   "description": "Genre-spezifisches Audio Mastering für Psycore, Hitech Psytrance und Darkpsy von einem aktiven Producer. Stereo Mastering ab 79 €, Stem Mastering ab 129 €, Pakete inkl. Cover Art und Video.",
+   "description": "Genre-spezifisches Audio Mastering für Psycore, Hitech Psytrance und Darkpsy von einem aktiven Producer. Single (Stereo) 79 €, Stem Pro 129 €, EP bis 5 Tracks 349 €, Album bis 10 Tracks 629 €, inkl. 19 % MwSt., Audio-Audit und unbegrenzte Korrekturen.",
    "provider": {
     "@id": "https://polished.media/#org"
    },
@@ -436,57 +436,87 @@
    "offers": [
     {
      "@type": "Offer",
-     "name": "Stereo Mastering (1 Track)",
+     "name": "Single: Stereo Mastering (1 Track)",
      "price": "79",
-     "priceCurrency": "EUR"
+     "priceCurrency": "EUR",
+     "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "79",
+      "priceCurrency": "EUR",
+      "valueAddedTaxIncluded": true
+     }
     },
     {
      "@type": "Offer",
-     "name": "Stem Mastering (1 Track)",
+     "name": "Stem Pro: Stem Mastering (1 Track, bis 6 Stems)",
      "price": "129",
-     "priceCurrency": "EUR"
+     "priceCurrency": "EUR",
+     "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "129",
+      "priceCurrency": "EUR",
+      "valueAddedTaxIncluded": true
+     }
+    },
+    {
+     "@type": "Offer",
+     "name": "EP Mastering (bis 5 Tracks)",
+     "price": "349",
+     "priceCurrency": "EUR",
+     "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "349",
+      "priceCurrency": "EUR",
+      "valueAddedTaxIncluded": true
+     }
+    },
+    {
+     "@type": "Offer",
+     "name": "Album Mastering (bis 10 Tracks)",
+     "price": "629",
+     "priceCurrency": "EUR",
+     "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "629",
+      "priceCurrency": "EUR",
+      "valueAddedTaxIncluded": true
+     }
     },
     {
      "@type": "Offer",
      "name": "Cover Art",
      "price": "99",
-     "priceCurrency": "EUR"
+     "priceCurrency": "EUR",
+     "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "99",
+      "priceCurrency": "EUR",
+      "valueAddedTaxIncluded": true
+     }
     },
     {
      "@type": "Offer",
      "name": "Lyric Video",
      "price": "179",
-     "priceCurrency": "EUR"
+     "priceCurrency": "EUR",
+     "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "179",
+      "priceCurrency": "EUR",
+      "valueAddedTaxIncluded": true
+     }
     },
     {
      "@type": "Offer",
      "name": "Promo Video (60 Sekunden)",
      "price": "299",
-     "priceCurrency": "EUR"
-    },
-    {
-     "@type": "Offer",
-     "name": "Starter Paket",
-     "price": "149",
-     "priceCurrency": "EUR"
-    },
-    {
-     "@type": "Offer",
-     "name": "Stem Starter Paket",
-     "price": "199",
-     "priceCurrency": "EUR"
-    },
-    {
-     "@type": "Offer",
-     "name": "Pro Release EP",
-     "price": "399",
-     "priceCurrency": "EUR"
-    },
-    {
-     "@type": "Offer",
-     "name": "Full Release Album",
-     "price": "999",
-     "priceCurrency": "EUR"
+     "priceCurrency": "EUR",
+     "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "299",
+      "priceCurrency": "EUR",
+      "valueAddedTaxIncluded": true
+     }
     }
    ]
   },
@@ -583,7 +613,7 @@
      "name": "Wo bekomme ich Mastering für Psycore und Hitech Psytrance?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Polished Media (betrieben von Code Chaos) bietet professionelles Mastering speziell für Psycore, Hitech Psytrance und Darkpsy. Das Mastering kommt von einem aktiven Psycore und Hitech Produzenten, kein generisches Mastering, sondern genre-spezifisches Verständnis für Kick-Charakteristik, Bassline-Architektur und Soundscape-Behandlung in diesen Genres. Stereo Mastering ab €79, Stem Mastering ab €129. Anfragen: polished.media@gmx.de"
+      "text": "Polished Media (betrieben von Code Chaos) bietet professionelles Mastering speziell für Psycore, Hitech Psytrance und Darkpsy. Das Mastering kommt von einem aktiven Psycore und Hitech Produzenten, kein generisches Mastering, sondern genre-spezifisches Verständnis für Kick-Charakteristik, Bassline-Architektur und Soundscape-Behandlung in diesen Genres. Single (Stereo) €79, Stem Pro €129, EP bis 5 Tracks €349, Album bis 10 Tracks €629, alle Preise inkl. MwSt., Audio-Audit und unbegrenzte Korrekturen inklusive. Anfragen: polished.media@gmx.de"
      }
     },
     {
@@ -1725,7 +1755,7 @@ footer {
 }
 </style>
 <link rel="stylesheet" href="css/gothic.css">
-<style>.ico{width:1em;height:1em;fill:currentColor;vertical-align:-.125em;display:inline-block}.nav-links .ico{width:1.05rem;height:1.05rem}.social-list .ico{width:1.15rem;height:1.15rem;fill:var(--gold)}</style>
+<style>.mastering-headline{overflow-wrap:break-word;hyphens:auto}.pricing-service small s{text-decoration:line-through;opacity:.8}.ico{width:1em;height:1em;fill:currentColor;vertical-align:-.125em;display:inline-block}.nav-links .ico{width:1.05rem;height:1.05rem}.social-list .ico{width:1.15rem;height:1.15rem;fill:var(--gold)}</style>
 <script>
 (function () {
   var form = document.getElementById('cc-sib-form');
@@ -2461,7 +2491,7 @@ footer {
     <div class="mastering-layout">
       <div class="mastering-intro">
         <div class="mastering-tag"><a href="https://polished.media" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Polished Media</a></div>
-        <div class="mastering-headline">Klang auf Engineer-Niveau. Underground-Preise.</div>
+        <div class="mastering-headline">Klang auf Engineer-Niveau. Under&shy;ground-Preise.</div>
         <p class="mastering-text">
           Professionelles Mastering von einem aktiven Hitech- und Psycore-Producer, der die Genres von innen kennt. Kein Rätselraten, keine platte Kompression: Handarbeit, Genre-Wissen und transparente Preise.
         </p>
@@ -2476,20 +2506,38 @@ footer {
 
       <div class="">
 
-        <!-- Einzelpreise -->
-        <div style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.35em;color:rgba(236,226,206,0.76);text-transform:uppercase;margin-bottom:10px;padding-left:20px;">Einzelpreise</div>
-        <div class="pricing-table" style="margin-bottom:28px;">
+        <!-- Mastering-Preise (identisch mit polished.media) -->
+        <div style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.35em;color:rgba(236,226,206,0.76);text-transform:uppercase;margin-bottom:10px;padding-left:20px;">Mastering</div>
+        <div class="pricing-table" style="margin-bottom:12px;">
           <div class="pricing-header" style="grid-template-columns:1fr auto;">
-            <div class="pricing-header-cell">Leistung</div>
+            <div class="pricing-header-cell">Paket</div>
             <div class="pricing-header-cell">Preis</div>
           </div>
           <div class="pricing-row" style="grid-template-columns:1fr auto;">
-            <div class="pricing-service">Stereo Mastering<small>1 Track</small></div>
+            <div class="pricing-service">Single<small>Stereo Mastering · 1 Track · €79,00 pro Track · 48–72 h</small></div>
             <div class="pricing-price">€79</div>
           </div>
           <div class="pricing-row" style="grid-template-columns:1fr auto;">
-            <div class="pricing-service">Stem Mastering<small>1 Track · Multi-Stem</small></div>
+            <div class="pricing-service">Stem Pro<small>Stem Mastering · 1 Track · bis 6 Stems · 48–72 h</small></div>
             <div class="pricing-price">€129</div>
+          </div>
+          <div class="pricing-row" style="grid-template-columns:1fr auto;">
+            <div class="pricing-service">EP<small>bis 5 Tracks · <s>statt €395</s> · du sparst €46 (~12 %) · €69,80 pro Track · 5–7 Tage</small></div>
+            <div class="pricing-price">€349</div>
+          </div>
+          <div class="pricing-row" style="grid-template-columns:1fr auto;border-bottom:none;background:rgba(201,168,106,0.03);">
+            <div class="pricing-service">Album<small>bis 10 Tracks · <s>statt €790</s> · du sparst €161 (~20 %) · €62,90 pro Track · 7–14 Tage · Vinyl-Master auf Wunsch</small></div>
+            <div class="pricing-price">€629</div>
+          </div>
+        </div>
+        <p style="font-size:0.8rem;color:rgba(236,226,206,0.76);margin:0 0 28px;padding-left:20px;line-height:1.6;">Alle Preise inkl. 19 % MwSt. · Audio-Audit und unbegrenzte Korrekturen in jedem Paket · Lieferung als 24-bit WAV, 16-bit AIFF und 320 kbps MP3</p>
+
+        <!-- Zusatzleistungen -->
+        <div style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.35em;color:rgba(236,226,206,0.76);text-transform:uppercase;margin-bottom:10px;padding-left:20px;">Zusatzleistungen</div>
+        <div class="pricing-table">
+          <div class="pricing-header" style="grid-template-columns:1fr auto;">
+            <div class="pricing-header-cell">Leistung</div>
+            <div class="pricing-header-cell">Preis</div>
           </div>
           <div class="pricing-row" style="grid-template-columns:1fr auto;">
             <div class="pricing-service">Cover Art<small>1 Design</small></div>
@@ -2502,41 +2550,6 @@ footer {
           <div class="pricing-row" style="grid-template-columns:1fr auto;border-bottom:none;">
             <div class="pricing-service">Promo Video<small>60 Sekunden</small></div>
             <div class="pricing-price">€299</div>
-          </div>
-        </div>
-
-        <!-- Pakete -->
-        <div style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.35em;color:rgba(236,226,206,0.76);text-transform:uppercase;margin-bottom:10px;padding-left:20px;">Pakete</div>
-        <div class="pricing-table">
-          <div class="pricing-header" style="grid-template-columns:1fr 1.6fr auto auto;">
-            <div class="pricing-header-cell">Paket</div>
-            <div class="pricing-header-cell">Inhalt</div>
-            <div class="pricing-header-cell">Preis</div>
-            <div class="pricing-header-cell">Ersparnis</div>
-          </div>
-          <div class="pricing-row" style="grid-template-columns:1fr 1.6fr auto auto;">
-            <div class="pricing-service">Starter</div>
-            <div class="pricing-service" style="font-weight:300;font-size:0.78rem;color:rgba(236,226,206,0.76);">Stereo Mastering + Cover Art</div>
-            <div class="pricing-price">€149</div>
-            <div class="pricing-time" style="color:var(--acid);">~15%</div>
-          </div>
-          <div class="pricing-row" style="grid-template-columns:1fr 1.6fr auto auto;">
-            <div class="pricing-service">Stem Starter</div>
-            <div class="pricing-service" style="font-weight:300;font-size:0.78rem;color:rgba(236,226,206,0.76);">Stem Mastering + Cover Art</div>
-            <div class="pricing-price">€199</div>
-            <div class="pricing-time" style="color:var(--acid);">~15%</div>
-          </div>
-          <div class="pricing-row" style="grid-template-columns:1fr 1.6fr auto auto;">
-            <div class="pricing-service">Pro Release<small>EP</small></div>
-            <div class="pricing-service" style="font-weight:300;font-size:0.78rem;color:rgba(236,226,206,0.76);">5 Tracks Mastering + Cover Art + Lyric Video</div>
-            <div class="pricing-price">€399</div>
-            <div class="pricing-time" style="color:var(--acid);">~20%</div>
-          </div>
-          <div class="pricing-row" style="grid-template-columns:1fr 1.6fr auto auto;border-bottom:none;background:rgba(201,168,106,0.03);">
-            <div class="pricing-service">Full Release<small>Album</small></div>
-            <div class="pricing-service" style="font-weight:300;font-size:0.78rem;color:rgba(236,226,206,0.76);">10 Tracks Mastering + Cover Art + Promo Video</div>
-            <div class="pricing-price" style="color:var(--acid);">€999</div>
-            <div class="pricing-time" style="color:var(--acid);">~25%</div>
           </div>
         </div>
 
@@ -2564,15 +2577,13 @@ footer {
               <label class="mform-label" for="mf-service">GEWÜNSCHTER SERVICE *</label>
               <select class="mform-input mform-select" id="mf-service" name="service" required>
                 <option value="" disabled selected>Auswählen…</option>
-                <option value="Stereo Mastering (€79)">Stereo Mastering (€79)</option>
-                <option value="Stem Mastering (€129)">Stem Mastering (€129)</option>
+                <option value="Single · Stereo Mastering (€79)">Single · Stereo Mastering (€79)</option>
+                <option value="Stem Pro · Stem Mastering (€129)">Stem Pro · Stem Mastering (€129)</option>
+                <option value="EP Mastering, bis 5 Tracks (€349)">EP Mastering, bis 5 Tracks (€349)</option>
+                <option value="Album Mastering, bis 10 Tracks (€629)">Album Mastering, bis 10 Tracks (€629)</option>
                 <option value="Cover Art (€99)">Cover Art (€99)</option>
                 <option value="Lyric Video (€179)">Lyric Video (€179)</option>
                 <option value="Promo Video (€299)">Promo Video (€299)</option>
-                <option value="Starter Paket (€149)">Starter Paket (€149)</option>
-                <option value="Stem Starter Paket (€199)">Stem Starter Paket (€199)</option>
-                <option value="Pro Release EP (€399)">Pro Release EP (€399)</option>
-                <option value="Full Release Album (€999)">Full Release Album (€999)</option>
                 <option value="Individuell / Sonstiges">Individuell / Sonstiges</option>
               </select>
             </div>
@@ -2936,7 +2947,7 @@ footer {
           Wo bekomme ich Mastering für Psycore und Hitech Psytrance? <span style="color:var(--acid);font-size:1.3rem;font-weight:300;flex-shrink:0;margin-left:20px;">+</span>
         </summary>
         <div style="padding:0 0 24px;font-size:0.9rem;color:rgba(236,226,206,0.76);line-height:1.9;">
-          <p><a href="https://polished.media" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Polished Media</a> (betrieben von Code Chaos) bietet professionelles Mastering speziell für Psycore, Hitech Psytrance und Darkpsy. Das Mastering kommt von einem aktiven Psycore und Hitech Produzenten, kein generisches Mastering, sondern genre-spezifisches Verständnis für Kick-Charakteristik, Bassline-Architektur und Soundscape-Behandlung in diesen Genres. Stereo Mastering ab €79, Stem Mastering ab €129. Anfragen: <a href="mailto:polished.media@gmx.de">polished.media@gmx.de</a></p>
+          <p><a href="https://polished.media" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Polished Media</a> (betrieben von Code Chaos) bietet professionelles Mastering speziell für Psycore, Hitech Psytrance und Darkpsy. Das Mastering kommt von einem aktiven Psycore und Hitech Produzenten, kein generisches Mastering, sondern genre-spezifisches Verständnis für Kick-Charakteristik, Bassline-Architektur und Soundscape-Behandlung in diesen Genres. Single (Stereo) €79, Stem Pro €129, EP bis 5 Tracks €349, Album bis 10 Tracks €629, alle Preise inkl. MwSt., Audio-Audit und unbegrenzte Korrekturen inklusive. Anfragen: <a href="mailto:polished.media@gmx.de">polished.media@gmx.de</a></p>
         </div>
       </details>
 
@@ -3264,7 +3275,7 @@ footer {
     <div style="background:rgba(201,168,106,0.026);border:1px solid rgba(201,168,106,0.078);border-top:none;padding:20px 24px;margin-bottom:32px;display:flex;gap:32px;flex-wrap:wrap;">
       <span style="color:rgba(236,226,206,0.76);font-family:var(--mono);font-size:0.65rem;">✓ Optimiert für Bandcamp · SoundCloud · Spotify</span>
       <span style="color:rgba(236,226,206,0.76);font-family:var(--mono);font-size:0.65rem;">✓ Referenztrack auf Wunsch</span>
-      <span style="color:rgba(236,226,206,0.76);font-family:var(--mono);font-size:0.65rem;">✓ Korrektur inklusive</span>
+      <span style="color:rgba(236,226,206,0.76);font-family:var(--mono);font-size:0.65rem;">✓ Unbegrenzte Korrekturen</span>
       <span style="color:rgba(236,226,206,0.76);font-family:var(--mono);font-size:0.65rem;">✓ Schnelle Bearbeitung</span>
     </div>
 
@@ -3282,8 +3293,8 @@ footer {
           <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--acid);flex-shrink:0;">→</span>Stereo WAV/FLAC als Input</li>
           <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--acid);flex-shrink:0;">→</span>Genre-spezifisches EQ, Kompression &amp; Limiting</li>
           <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--acid);flex-shrink:0;">→</span>Lautheit optimiert für Psycore · Hitech · Darkpsy</li>
-          <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--acid);flex-shrink:0;">→</span>WAV-Master + MP3-Vorschau</li>
-          <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--acid);flex-shrink:0;">→</span>1 Korrekturschleife inklusive</li>
+          <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--acid);flex-shrink:0;">→</span>24-bit WAV, 16-bit AIFF + 320 kbps MP3</li>
+          <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--acid);flex-shrink:0;">→</span>Audio-Audit + unbegrenzte Korrekturen</li>
         </ul>
         <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:20px;">
           <div style="font-family:var(--display);font-size:3rem;color:#ece2ce;font-weight:300;">€79</div>
@@ -3301,11 +3312,11 @@ footer {
           Du lieferst einzelne Stems (Kick, Bass, Synths, Pads, FX usw.), wir haben maximale Kontrolle über jeden Frequenzbereich. Beste Ergebnisse für Psycore-, Hitech- und Darkpsy-Produktionen, die alles aus ihrem Sound holen wollen.
         </p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:28px;">
-          <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--hot);flex-shrink:0;">→</span>Bis zu 8 Stems (Kick, Sub, Synth, Pad, FX …)</li>
+          <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--hot);flex-shrink:0;">→</span>Bis zu 6 Stems (z. B. Kick, Sub, Bass, Leads, Pads, FX)</li>
           <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--hot);flex-shrink:0;">→</span>Individuelle Bearbeitung pro Stem</li>
           <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--hot);flex-shrink:0;">→</span>Optimale Dynamik für Psycore / Hitech / Darkpsy</li>
-          <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--hot);flex-shrink:0;">→</span>WAV-Master + MP3-Vorschau</li>
-          <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--hot);flex-shrink:0;">→</span>2 Korrekturschleifen inklusive</li>
+          <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--hot);flex-shrink:0;">→</span>24-bit WAV, 16-bit AIFF + 320 kbps MP3</li>
+          <li style="color:rgba(236,226,206,0.76);font-size:0.82rem;display:flex;gap:10px;"><span style="color:var(--hot);flex-shrink:0;">→</span>Audio-Audit + unbegrenzte Korrekturen</li>
         </ul>
         <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:20px;">
           <div style="font-family:var(--display);font-size:3rem;color:#ece2ce;font-weight:300;">€129</div>

@@ -136,3 +136,4 @@ h3{font-size:1.15rem;margin:28px 0 10px}
 .note{font-size:.85rem;color:var(--parch)}
 .prose h2{margin-top:48px}.prose h2:first-child{margin-top:0}
 .prose .table-scroll{margin:8px 0 20px}
+.hero-grid>*{min-width:0}
