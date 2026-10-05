@@ -1,6 +1,6 @@
 # Discogs: fehlende Releases von Code Chaos
 
-Stand 05.10.2026. Discogs führt bisher nur **Runtime Terror** und **Rotten Soil (Code Chaos Remix)**, beide unter dem Label Abstract Sound Design. Auf Bandcamp gibt es 24 Releases, also fehlen 22.
+Stand 05.10.2026. Discogs führt bisher nur **Runtime Terror** und **Rotten Soil (Code Chaos Remix)**, beide unter dem Label Abstract Sound Design. Auf Bandcamp gibt es 24 Releases, dazu kommt „Dreadlocked“ von der Label-Seite. Es fehlen also 23.
 
 **Warum das nicht automatisch geht:** Über die Discogs-API kann man die Datenbank nur lesen. Neue Releases lassen sich ausschließlich über das Formular auf der Website einreichen: eingeloggt → https://www.discogs.com/release/add.
 
@@ -72,6 +72,7 @@ Titel, Typ und Jahr sind bekannt. Das genaue Datum, das Label und die Tracklist 
 | 19 | Roadside Butchery | Album | 2021 | https://codechaos.bandcamp.com/album/roadside-butchery-lp |
 | 20 | Live at Arnsteinhöhle (Austria), 17.04.2026 | Album, **Live** (Format „Album“ + Beschreibung „Live“) | 2026 | https://codechaos.bandcamp.com/album/code-chaos-live-at-arnsteinh-hle-austria-17042026 |
 | 21 | Ghosts | EP, **Bootleg** (auf Discogs als „Unofficial Release“ markieren) | ? | https://codechaos.bandcamp.com/album/ghosts-bootleg-ep |
+| 23 | Dreadlocked | Album | ? | nur auf der Label-Seite gelistet: https://www.abstract-sound-design.de/code-chaos |
 | 22 | Schattenraum – Early "Moonchild" Works | **Compilation** | ? | https://codechaos.bandcamp.com/album/schattenraum-early-moonchild-works-compilation |
 
 **Moonchild:** Wegen „Schattenraum“ und „Alternate Future (feat. PsySon)“ auf moonchildproject.bandcamp.com lohnt es sich, auf Discogs „Moonchild“ als Alias von Code Chaos anzulegen und die frühen Releases dort einzutragen.
