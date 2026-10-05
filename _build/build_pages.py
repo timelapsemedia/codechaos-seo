@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content_genres import GENRES, RELEASES          # noqa: E402
 from content_en_home import EN_HOME                   # noqa: E402
 from content_en_mastering import EN_MASTERING, FORM   # noqa: E402
+from content_de_mastering import DE_MASTERING, FORM_DE  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://codechaos-official.de"
@@ -23,7 +24,7 @@ UI = {
                skip="Zum Inhalt springen", menu="Menü öffnen", faq="Häufige Fragen", rel_title="Releases von Code Chaos",
                more="Weiterlesen", legal="Rechtliches", imprint="Impressum", privacy="Datenschutz", nav="Navigation",
                follow="Code Chaos folgen", other="Weitere Genre-Guides", foot="Hitech, Psycore & Darkpsy Producer aus Hamburg. Reines Studioprojekt.",
-               home_url="/", mastering_url="/#psycore-mastering", releases_url="/#releases",
+               home_url="/", mastering_url="/mastering/", releases_url="/#releases",
                author="Von Code Chaos (Tim Borchert), Producer aus Hamburg · aktualisiert am 05.10.2026"),
     "en": dict(home="Home", genres="Genres", releases="Releases", mastering="Mastering", lang_label="DE",
                skip="Skip to content", menu="Open menu", faq="FAQ", rel_title="Releases by Code Chaos",
@@ -267,36 +268,45 @@ def build_en_home():
     return path
 
 
-def build_en_mastering():
-    m = EN_MASTERING
-    url = BASE + "/en/mastering/"
-    offers = [("Single: stereo mastering (1 track)", "79"), ("Stem Pro: stem mastering (1 track, up to 6 stems)", "129"), ("EP mastering (up to 5 tracks)", "349"),
-              ("Album mastering (up to 10 tracks)", "629"), ("Cover art", "99"), ("Lyric video", "179"), ("Promo video (60 s)", "299")]
+def build_mastering(lang):
+    m, form = (DE_MASTERING, FORM_DE) if lang == "de" else (EN_MASTERING, FORM)
+    pre = "" if lang == "de" else "/en"
+    url = f"{BASE}{pre}/mastering/"
+    alt = f"{BASE}{'/en' if lang == 'de' else ''}/mastering/"
+    if lang == "de":
+        offers = [("Single: Stereo Mastering (1 Track)", "79"), ("Stem Pro: Stem Mastering (1 Track, bis 6 Stems)", "129"), ("EP Mastering (bis 5 Tracks)", "349"),
+                  ("Album Mastering (bis 10 Tracks)", "629"), ("Cover Art", "99"), ("Lyric Video", "179"), ("Promo Video (60 Sekunden)", "299")]
+        sname, home = "Psytrance Mastering für Psycore, Hitech und Darkpsy", "Startseite"
+    else:
+        offers = [("Single: stereo mastering (1 track)", "79"), ("Stem Pro: stem mastering (1 track, up to 6 stems)", "129"), ("EP mastering (up to 5 tracks)", "349"),
+                  ("Album mastering (up to 10 tracks)", "629"), ("Cover art", "99"), ("Lyric video", "179"), ("Promo video (60 s)", "299")]
+        sname, home = "Psytrance mastering for psycore, hitech and darkpsy", "Home"
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": m["title"], "description": m["desc"], "inLanguage": "en",
+        {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": m["title"], "description": m["desc"], "inLanguage": lang,
          "isPartOf": {"@id": BASE + "/#website"}, "mainEntity": {"@id": url + "#service"}, "datePublished": TODAY, "dateModified": TODAY},
-        {"@type": "Service", "@id": url + "#service", "name": "Psytrance mastering for psycore, hitech and darkpsy", "serviceType": "Audio mastering",
-         "description": m["desc"], "provider": {"@id": "https://polished.media/#org"}, "areaServed": "Worldwide", "availableLanguage": ["en", "de"], "url": url,
+        {"@type": "Service", "@id": url + "#service", "name": sname, "serviceType": "Audio Mastering",
+         "description": m["desc"], "provider": {"@id": "https://polished.media/#org"}, "areaServed": "Worldwide", "availableLanguage": ["de", "en"], "url": url,
          "offers": [{"@type": "Offer", "name": n, "price": p, "priceCurrency": "EUR", "url": url + "#request", "priceSpecification": {"@type": "PriceSpecification", "price": p, "priceCurrency": "EUR", "valueAddedTaxIncluded": True}} for n, p in offers]},
         {"@type": "Organization", "@id": "https://polished.media/#org", "name": "Polished Media", "url": "https://polished.media", "email": "polished.media@gmx.de", "founder": {"@id": PERSON}},
         {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/en/"},
+            {"@type": "ListItem", "position": 1, "name": home, "item": BASE + UI[lang]["home_url"]},
             {"@type": "ListItem", "position": 2, "name": "Mastering", "item": url}]},
-        {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": "en", "mainEntity": [
+        {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": lang, "mainEntity": [
             {"@type": "Question", "name": strip(q), "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in m["faq"]]},
     ]}
-    body = m["body"].replace("{faq}", faq_html(m["faq"])).replace("{form}", FORM)
-    html = head("en", url, None, m["title"], m["desc"], BASE + "/images/og/mastering.jpg", "Psytrance mastering for psycore, hitech and darkpsy by Code Chaos", ld, og_type="website") \
-        + nav("en", None, "mast") + body + footer("en")
-    path = os.path.join(ROOT, "en", "mastering", "index.html")
+    body = m["body"].replace("{faq}", faq_html(m["faq"])).replace("{form}", form)
+    html = head(lang, url, alt, m["title"], m["desc"], BASE + "/images/og/mastering.jpg",
+                "Psytrance Mastering für Psycore, Hitech und Darkpsy von Code Chaos" if lang == "de" else "Psytrance mastering for psycore, hitech and darkpsy by Code Chaos", ld, og_type="website") \
+        + nav(lang, alt, "mast") + body + footer(lang)
+    path = os.path.join(ROOT, pre.strip("/"), "mastering", "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     open(path, "w", encoding="utf-8").write(html)
     return path
-
 
 if __name__ == "__main__":
     for g in GENRES:
         for lang in ("de", "en"):
             print(build_genre(g, lang))
     print(build_en_home())
-    print(build_en_mastering())
+    print(build_mastering("de"))
+    print(build_mastering("en"))

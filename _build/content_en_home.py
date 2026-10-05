@@ -3,8 +3,8 @@
 _PRESAVE = "https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut-2"
 
 EN_HOME = {
- "title": "Psytrance Mastering from €79 · Code Chaos · Psycore, Hitech, Darkpsy",
- "desc": "Psycore, hitech & darkpsy mastering by Code Chaos from Hamburg: single €79, EP €349, album €629, unlimited revisions. New single out 30 Oct 2026.",
+ "title": "Code Chaos · Psycore & Hitech Producer · Mastering from €79",
+ "desc": "New single \"Uhrwerk aus Blut\" out 30 Oct 2026, pre-save now. Psycore, hitech & darkpsy mastering from Hamburg: single €79, EP €349, album €629.",
  "faq": [
    ("When is \"Uhrwerk aus Blut\" released?", "The single \"Uhrwerk aus Blut\" (Clockwork of Blood) is out on 30 October 2026 on Abstract Sound Design and all major streaming platforms. You can <a href=\"" + _PRESAVE + "\">pre-save it now</a>."),
    ("Who is behind Code Chaos?", "Code Chaos is the studio project of Tim Borchert, a producer from Hamburg, Germany, active since 2016. He co-founded the label Abstract Sound Design in 2021, runs the mastering service Polished Media and develops audio plugins as Code Chaos Audio, starting with <a href=\"/crucible.html\">Crucible</a>."),
@@ -14,11 +14,26 @@ EN_HOME = {
    ("What is Crucible?", "Crucible is a 3-band harmonic saturation plugin (VST3/AU, Windows and macOS) by Code Chaos Audio. Low, mid and high are saturated separately with hard clip, tube or tape, with per-band drive, mix and gain and up to 4x oversampling."),
  ],
  "body": """<main id="main">
-<section class="s-hero" id="mastering" aria-labelledby="mast-t">
+
+<section class="s-hero" id="single" aria-labelledby="single-t">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">New single · Code Chaos</span>
+      <h1 id="single-t">Uhrwerk aus Blut</h1>
+      <p class="lead">A heart that beats too fast. A clockwork that bleeds.<br><span lang="de">„Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet.“</span></p>
+      <p>The new single opens a darker, narrative era for Code Chaos: darkpsy and hitech energy meet gothic atmosphere and five spoken German scenes. Out <strong>30 October 2026</strong> on Abstract Sound Design.</p>
+      <div class="btns"><a class="btn btn-blood" href=\"""" + _PRESAVE + """\" target="_blank" rel="noopener noreferrer">Pre-save now</a><a class="btn btn-ghost" href="#mastering">Mastering from €79</a></div>
+      <p class="note" style="margin-top:14px">Artwork and voices created with AI.</p>
+    </div>
+    <img class="framed" src="/images/uhrwerk-aus-blut/cover-800.webp" width="800" height="800" fetchpriority="high" alt="Cover of the single Uhrwerk aus Blut by Code Chaos: a golden mechanical heart inside a clock face, dripping blood">
+  </div>
+</section>
+
+<section class="alt" id="mastering" aria-labelledby="mast-t">
   <div class="wrap hero-grid">
     <div class="prose">
       <span class="eyebrow">Polished Media · mastering</span>
-      <h1 id="mast-t">Mastering for psycore, hitech &amp; darkpsy</h1>
+      <h2 id="mast-t">Mastering for psycore, hitech &amp; darkpsy</h2>
       <p>Genre-specific mastering by an active producer who knows these genres from the inside: kick behaviour at 150–300 BPM, neurotrance basslines, dense soundscapes. No generic presets, no flat compression.</p>
       <ul><li>Audio audit before every master</li><li>Unlimited revisions</li><li>24-bit WAV, 16-bit AIFF and 320 kbps MP3, streaming-ready</li><li>Reply usually within 24–48 hours</li></ul>
     </div>
@@ -38,21 +53,7 @@ EN_HOME = {
   <div class="wrap"><div class="btns"><a class="btn btn-blood" href="/en/mastering/#request">Request mastering</a><a class="btn btn-ghost" href="/en/mastering/">How it works &amp; FAQ</a></div></div>
 </section>
 
-<section class="alt" id="single" aria-labelledby="single-t">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">New single · Code Chaos</span>
-      <h2 id="single-t" style="font-size:clamp(2rem,6vw,3.6rem)">Uhrwerk aus Blut</h2>
-      <p class="lead">A heart that beats too fast. A clockwork that bleeds.<br><span lang="de">„Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet.“</span></p>
-      <p>The new single opens a darker, narrative era for Code Chaos: darkpsy and hitech energy meet gothic atmosphere and five spoken German scenes. Out <strong>30 October 2026</strong> on Abstract Sound Design.</p>
-      <div class="btns"><a class="btn btn-blood" href=\"""" + _PRESAVE + """\" target="_blank" rel="noopener noreferrer">Pre-save now</a><a class="btn btn-ghost" href="#facts">Single facts</a></div>
-      <p class="note" style="margin-top:14px">Artwork and voices created with AI.</p>
-    </div>
-    <img class="framed" src="/images/uhrwerk-aus-blut/cover-800.webp" width="800" height="800" fetchpriority="high" alt="Cover of the single Uhrwerk aus Blut by Code Chaos: a golden mechanical heart inside a clock face, dripping blood">
-  </div>
-</section>
-
-<section class="alt" id="facts" aria-labelledby="facts-t">
+<section id="facts" aria-labelledby="facts-t">
   <div class="wrap narrow">
     <span class="eyebrow">Single facts</span>
     <h2 id="facts-t">Uhrwerk aus Blut (Clockwork of Blood)</h2>

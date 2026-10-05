@@ -37,7 +37,7 @@ Last updated: 2026-10-05
 - Album (up to 10 tracks): €629 instead of €790 (save €161, ~20%), €62.90 per track, 7–14 days, vinyl-ready master on request.
 - All prices incl. 19% German VAT; audio audit and unlimited revisions in every package; delivery as 24-bit WAV, 16-bit AIFF and 320 kbps MP3. Same prices as https://polished.media
 - Extras: Cover Art €99, Lyric Video €179, Promo Video (60 s) €299.
-- English mastering page (prices, process, file prep, FAQ): https://codechaos-official.de/en/mastering/
+- Mastering page (German): https://codechaos-official.de/mastering/ · English: https://codechaos-official.de/en/mastering/ (prices, process, file prep, FAQ)
 - Request form: https://codechaos-official.de/#mastering-form · Email: polished.media@gmx.de · Website: https://polished.media
 
 ## Code Chaos Audio, Plugins
