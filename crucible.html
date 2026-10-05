@@ -19,15 +19,20 @@
 <meta property="og:type" content="product">
 <meta property="og:title" content="Crucible · 3-Band Harmonic Saturation Plugin">
 <meta property="og:description" content="Shape. Saturate. Dominate. A 3-band harmonic saturation plugin for Windows & macOS. Hard Clip · Tube · Tape per band · up to 4x oversampling. Built for producers. Out now.">
-<meta property="og:image" content="https://codechaos-official.de/images/herofull.webp">
+<meta property="og:image" content="https://codechaos-official.de/images/crucible-og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Crucible 3-band harmonic saturation plugin by Code Chaos Audio: Low, Mid and High bands with Hard Clip, Tube and Tape">
+<meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://codechaos-official.de/crucible.html">
 <meta property="og:site_name" content="Code Chaos Audio">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Crucible · 3-Band Harmonic Saturation Plugin | Code Chaos Audio">
 <meta name="twitter:description" content="From subtle warmth to full-on destruction. 3-band harmonic saturation built for Psytrance, Hitech & Psycore producers. Out now on Gumroad.">
-<meta name="twitter:image" content="https://codechaos-official.de/images/herofull.webp">
+<meta name="twitter:image" content="https://codechaos-official.de/images/crucible-og.jpg">
+<meta name="twitter:image:alt" content="Crucible 3-band harmonic saturation plugin by Code Chaos Audio">
+<meta name="twitter:site" content="@codechaos_music">
 
 <!-- Structured data: Product + SoftwareApplication + Breadcrumb + FAQ -->
 <script type="application/ld+json">
@@ -44,9 +49,10 @@
       "operatingSystem": "Windows, macOS",
       "description": "Crucible is a 3-band harmonic saturation audio plugin by Code Chaos Audio. Process low, mid and high bands independently with selectable saturation types (Hard Clip, Tube, Tape and more), per-band drive, mix and gain, and oversampling up to 4x. Built for Psytrance, Hitech, Psycore, Darkpsy and electronic music producers.",
       "brand": {"@type": "Brand", "name": "Code Chaos Audio"},
+      "manufacturer": {"@id": "https://codechaos-official.de/#org"},
       "category": "Audio Plugin",
       "keywords": "harmonic saturation, multiband saturation, 3-band saturation, VST3, AU, psytrance plugin, hitech, mixing, mastering",
-      "image": "https://codechaos-official.de/images/herofull.webp",
+      "image": "https://codechaos-official.de/images/crucible-og.jpg",
       "url": "https://codechaos-official.de/crucible.html",
       "featureList": [
         "3-band processing (Low, Mid, High) with independent control",
@@ -63,14 +69,16 @@
         "price": "56.76",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "seller": {"@type": "Organization", "name": "Code Chaos Audio"}
+        "seller": {"@id": "https://codechaos-official.de/#org"}
       }
     },
     {
       "@type": "Organization",
       "@id": "https://codechaos-official.de/#org",
       "name": "Code Chaos Audio",
-      "url": "https://codechaos-official.de/",
+      "url": "https://codechaos-official.de/crucible.html",
+      "parentOrganization": {"@id": "https://codechaos-official.de/#artist"},
+      "founder": {"@id": "https://codechaos-official.de/#tim-borchert"},
       "sameAs": [
         "https://codechaos.bandcamp.com",
         "https://soundcloud.com/codechaos",
@@ -104,6 +112,11 @@
         },
         {
           "@type": "Question",
+          "name": "What's the difference between the saturation types?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Hard Clip is aggressive, loud and surgical, great for pushing low-end punch. Tube is warm, rounded and musical for mids. Tape adds glue, vintage smear and air. You can assign a different type to each band and stack them."}
+        },
+        {
+          "@type": "Question",
           "name": "Where can I buy Crucible?",
           "acceptedAnswer": {"@type": "Answer", "text": "Crucible is available now on Gumroad at https://timberwolf688.gumroad.com/l/crucible. After purchase you get an instant download for Windows and macOS."}
         },
@@ -118,9 +131,9 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cinzel.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/eb-garamond.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css">
 
 <style>
 :root{
@@ -458,7 +471,8 @@ html,body{overflow-x:clip}
       <details class="qa rv"><summary>Is it good for Psytrance, Hitech and Psycore?</summary><div class="a">Yes, it was built by an active Hitech, Psycore and Darkpsy producer. Multiband saturation is perfect for fast psychedelic genres: add warmth and weight to kicks and basslines in the low band while adding bite and presence to leads and percussion up top, without muddying the mix.</div></details>
       <details class="qa rv"><summary>Which OS and plugin formats are supported?</summary><div class="a">Crucible runs on Windows and macOS as a VST3 and AU plugin in all major DAWs. See the Gumroad product page for the latest supported formats and system requirements.</div></details>
       <details class="qa rv"><summary>What's the difference between the saturation types?</summary><div class="a">Hard Clip is aggressive, loud and surgical, great for pushing low-end punch. Tube is warm, rounded and musical for mids. Tape adds glue, vintage smear and air. You can assign a different type to each band and stack them.</div></details>
-      <details class="qa rv"><summary>Where do I buy and download Crucible?</summary><div class="a">Crucible is available now on Gumroad. Purchase gives you an instant download for Windows and macOS. <a href="https://timberwolf688.gumroad.com/l/crucible" style="color:var(--molten);">Get Crucible on Gumroad →</a></div></details>
+      <details class="qa rv"><summary>What is harmonic saturation and why use a 3-band saturator?</summary><div class="a">Harmonic saturation adds musical overtones (harmonics) to a signal, making it sound warmer, louder and more present. A 3-band saturator applies this separately to low, mid and high frequencies so you can drive your bass hard without harshening the highs, from subtle analog warmth to full-on destruction.</div></details>
+      <details class="qa rv"><summary>Where can I buy Crucible?</summary><div class="a">Crucible is available now on Gumroad. Purchase gives you an instant download for Windows and macOS. <a href="https://timberwolf688.gumroad.com/l/crucible" style="color:var(--molten);">Get Crucible on Gumroad →</a></div></details>
     </div>
   </div>
 </section>
