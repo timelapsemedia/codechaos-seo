@@ -57,7 +57,7 @@
    "about": {
     "@type": "DefinedTerm",
     "name": "Psycore",
-    "description": "Psycore is the fastest and most extreme subgenre of psytrance: 180 to over 300 BPM, mostly between 190 and 240 BPM. It fuses the dark, hypnotic sound worlds of darkpsy with the force of hardcore. Typical elements are minimal sine-wave kicks, rolling neurotrance basslines built from very fast note divisions, and dense, static soundscapes that pull you into a trance rather than inviting classic dancing.",
+    "description": "Psycore (also psy-core or psy core) is the fastest and most extreme subgenre of psytrance: 180 to over 300 BPM, mostly between 190 and 240 BPM. It fuses the dark, hypnotic sound worlds of darkpsy with the force of hardcore. Typical elements are minimal sine-wave kicks, rolling neurotrance basslines built from very fast note divisions, and dense, static soundscapes that pull you into a trance rather than inviting classic dancing.",
     "inDefinedTermSet": {
      "@type": "DefinedTermSet",
      "name": "Psytrance subgenres"
@@ -160,14 +160,14 @@
     <span class="eyebrow">Genre guide · Psycore</span>
     <h1>What is Psycore?</h1>
     <div class="rule" aria-hidden="true"><i></i></div>
-    <p class="answer"><strong>Psycore</strong> is the fastest and most extreme subgenre of psytrance: <strong>180 to over 300 BPM</strong>, mostly between 190 and 240 BPM. It fuses the dark, hypnotic sound worlds of darkpsy with the force of hardcore. Typical elements are minimal sine-wave kicks, rolling neurotrance basslines built from very fast note divisions, and dense, static soundscapes that pull you into a trance rather than inviting classic dancing.</p>
+    <p class="answer"><strong>Psycore</strong> (also psy-core or psy core) is the fastest and most extreme subgenre of psytrance: <strong>180 to over 300 BPM</strong>, mostly between 190 and 240 BPM. It fuses the dark, hypnotic sound worlds of darkpsy with the force of hardcore. Typical elements are minimal sine-wave kicks, rolling neurotrance basslines built from very fast note divisions, and dense, static soundscapes that pull you into a trance rather than inviting classic dancing.</p>
     <p class="note">By Code Chaos (Tim Borchert), producer from Hamburg · updated 5 Oct 2026</p>
   </div>
 </section>
 <section class="alt" aria-labelledby="specs-t">
   <div class="wrap narrow">
     <h2 id="specs-t">Psycore at a glance</h2>
-    <div class="table-scroll"><table class="specs"><tbody><tr><th scope="row">Tempo</th><td>180–300+ BPM (typically 190–240)</td></tr><tr><th scope="row">Emerged</th><td>around 2010, out of darkpsy and hitech</td></tr><tr><th scope="row">Kick</th><td>short, dry sine-wave kick, often no snare or clap</td></tr><tr><th scope="row">Bass</th><td>neurotrance bassline with 1/32 and 1/64 divisions</td></tr><tr><th scope="row">Mood</th><td>dark, hypnotic, static, meditative yet brutal</td></tr><tr><th scope="row">Influences</th><td>dark ambient, glitch, speedcore, flashcore</td></tr><tr><th scope="row">Related</th><td>hitech psytrance, darkpsy, forest</td></tr><tr><th scope="row">Scene</th><td>Latin America (esp. Mexico, Brazil), Europe, Asia</td></tr></tbody></table></div>
+    <div class="table-scroll"><table class="specs"><tbody><tr><th scope="row">Tempo</th><td>180–300+ BPM (typically 190–240)</td></tr><tr><th scope="row">Spellings</th><td>psycore, psy-core, psy core</td></tr><tr><th scope="row">Emerged</th><td>around 2010, out of darkpsy and hitech</td></tr><tr><th scope="row">Kick</th><td>short, dry sine-wave kick, often no snare or clap</td></tr><tr><th scope="row">Bass</th><td>neurotrance bassline with 1/32 and 1/64 divisions</td></tr><tr><th scope="row">Mood</th><td>dark, hypnotic, static, meditative yet brutal</td></tr><tr><th scope="row">Influences</th><td>dark ambient, glitch, speedcore, flashcore</td></tr><tr><th scope="row">Related</th><td>hitech psytrance, darkpsy, forest</td></tr><tr><th scope="row">Scene</th><td>Latin America (esp. Mexico, Brazil), Europe, Asia</td></tr></tbody></table></div>
   </div>
 </section>
 <section>
@@ -257,6 +257,8 @@
 <script>
 (function(){var b=document.querySelector('.s-toggle'),m=document.getElementById('s-menu');if(!b||!m)return;
 b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-pick]');if(!a)return;var s=document.querySelector('select[name=service]');if(!s)return;
+for(var i=0;i<s.options.length;i++){if(s.options[i].text===a.getAttribute('data-pick')){s.selectedIndex=i;break;}}});
 </script>
 </body>
 </html>

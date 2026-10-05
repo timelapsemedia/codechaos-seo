@@ -59,14 +59,14 @@ GENRES = [
   "de": {
    "nav": "Psycore", "bpm": "180–300+ BPM",
    "title": "Psycore: Was ist Psycore? Genre, BPM & Produktion | Code Chaos",
-   "desc": "Psycore erklärt: Psytrance-Subgenre mit 180–300+ BPM, Sinus-Kicks, Neurotrance-Bässen und hypnotischen Soundscapes. Geschichte, Unterschiede, Produktionstipps.",
+   "desc": "Psycore (Psy Core) erklärt: Psytrance-Subgenre mit 180–300+ BPM, Sinus-Kicks, Neurotrance-Bässen und hypnotischen Soundscapes. Geschichte, Unterschiede, Produktionstipps.",
    "og_alt": "Psycore Genre Guide von Code Chaos",
    "eyebrow": "Genre Guide · Psycore",
    "h1": "Was ist Psycore?",
-   "answer": "<strong>Psycore</strong> ist das schnellste und extremste Subgenre des Psytrance: <strong>180 bis über 300 BPM</strong>, meist zwischen 190 und 240 BPM. Es verbindet die dunklen, hypnotischen Klangwelten von Darkpsy mit der Wucht von Hardcore. Typisch sind minimalistische Sinus-Kicks, rollende Neurotrance-Bässe mit sehr schnellen Notenwerten und dichte, statische Soundscapes, die eher in Trance ziehen als zum klassischen Tanzen einladen.",
+   "answer": "<strong>Psycore</strong> (auch Psy-Core oder Psy Core) ist das schnellste und extremste Subgenre des Psytrance: <strong>180 bis über 300 BPM</strong>, meist zwischen 190 und 240 BPM. Es verbindet die dunklen, hypnotischen Klangwelten von Darkpsy mit der Wucht von Hardcore. Typisch sind minimalistische Sinus-Kicks, rollende Neurotrance-Bässe mit sehr schnellen Notenwerten und dichte, statische Soundscapes, die eher in Trance ziehen als zum klassischen Tanzen einladen.",
    "teaser": "Das extremste Psytrance-Subgenre: Sinus-Kicks, Neurotrance-Bässe, hypnotisch-statische Soundscapes bei 180–300+ BPM.",
    "specs_title": "Psycore auf einen Blick",
-   "specs": [("Tempo", "180–300+ BPM (typisch 190–240)"), ("Entstehung", "um 2010, aus Darkpsy und Hitech"), ("Kick", "Sinuswellen-Kick, kurz und trocken, oft ohne Snare/Clap"),
+   "specs": [("Tempo", "180–300+ BPM (typisch 190–240)"), ("Schreibweisen", "Psycore, Psy-Core, Psy Core"), ("Entstehung", "um 2010, aus Darkpsy und Hitech"), ("Kick", "Sinuswellen-Kick, kurz und trocken, oft ohne Snare/Clap"),
              ("Bass", "Neurotrance-Bassline mit 1/32- und 1/64-Unterteilungen"), ("Stimmung", "dunkel, hypnotisch, statisch, meditativ-brutal"),
              ("Einflüsse", "Dark Ambient, Glitch, Speedcore, Flashcore"), ("Verwandt", "Hitech Psytrance, Darkpsy, Forest"), ("Szene", "Lateinamerika (v. a. Mexiko, Brasilien), Europa, Asien")],
    "body": """<h2>Herkunft und Entwicklung</h2>
@@ -132,10 +132,10 @@ GENRES = [
    "og_alt": "Psycore genre guide by Code Chaos",
    "eyebrow": "Genre guide · Psycore",
    "h1": "What is Psycore?",
-   "answer": "<strong>Psycore</strong> is the fastest and most extreme subgenre of psytrance: <strong>180 to over 300 BPM</strong>, mostly between 190 and 240 BPM. It fuses the dark, hypnotic sound worlds of darkpsy with the force of hardcore. Typical elements are minimal sine-wave kicks, rolling neurotrance basslines built from very fast note divisions, and dense, static soundscapes that pull you into a trance rather than inviting classic dancing.",
+   "answer": "<strong>Psycore</strong> (also psy-core or psy core) is the fastest and most extreme subgenre of psytrance: <strong>180 to over 300 BPM</strong>, mostly between 190 and 240 BPM. It fuses the dark, hypnotic sound worlds of darkpsy with the force of hardcore. Typical elements are minimal sine-wave kicks, rolling neurotrance basslines built from very fast note divisions, and dense, static soundscapes that pull you into a trance rather than inviting classic dancing.",
    "teaser": "The most extreme psytrance subgenre: sine kicks, neurotrance basslines and hypnotic, static soundscapes at 180–300+ BPM.",
    "specs_title": "Psycore at a glance",
-   "specs": [("Tempo", "180–300+ BPM (typically 190–240)"), ("Emerged", "around 2010, out of darkpsy and hitech"), ("Kick", "short, dry sine-wave kick, often no snare or clap"),
+   "specs": [("Tempo", "180–300+ BPM (typically 190–240)"), ("Spellings", "psycore, psy-core, psy core"), ("Emerged", "around 2010, out of darkpsy and hitech"), ("Kick", "short, dry sine-wave kick, often no snare or clap"),
              ("Bass", "neurotrance bassline with 1/32 and 1/64 divisions"), ("Mood", "dark, hypnotic, static, meditative yet brutal"),
              ("Influences", "dark ambient, glitch, speedcore, flashcore"), ("Related", "hitech psytrance, darkpsy, forest"), ("Scene", "Latin America (esp. Mexico, Brazil), Europe, Asia")],
    "body": """<h2>Origins</h2>
@@ -344,8 +344,8 @@ GENRES = [
   "releases": ["uhrwerk", "runtime", "amanita", "oblivion", "twilight"],
   "de": {
    "nav": "Darkpsy", "bpm": "150–200 BPM",
-   "title": "Darkpsy (Dark Psy): Was ist Darkpsy? BPM & Produktion | Code Chaos",
-   "desc": "Darkpsy (Dark Psy, Dark Psytrance) erklärt: 150–200 BPM, okkulte Atmosphäre, schwere Basslines, Horror-Samples. Geschichte, Unterschiede, Produktionstipps.",
+   "title": "Darkpsy (Dark Psy): Was ist Darkpsy? BPM, DJs & Artists | Code Chaos",
+   "desc": "Darkpsy (Dark Psy, Dark Psytrance) erklärt: 150–200 BPM, okkulte Atmosphäre, schwere Basslines, Horror-Samples. Bekannte Darkpsy-DJs und Artists, Geschichte, Produktionstipps.",
    "og_alt": "Darkpsy Genre Guide von Code Chaos",
    "eyebrow": "Genre Guide · Darkpsy",
    "h1": "Was ist Darkpsy?",
@@ -369,13 +369,19 @@ GENRES = [
 <blockquote class="quote">„Darkpsy hat mir als Erstes gezeigt, dass Musik nicht angenehm sein muss, um unvergesslich zu sein.“<cite>Code Chaos</cite></blockquote>
 <h2>Darkpsy, Forest und Gothic</h2>
 <p>Darkpsy überschneidet sich stark mit Forest Psytrance, der organischer und naturverbundener klingt. Mit der Single <a href="/#single">„Uhrwerk aus Blut“</a> (30.10.2026) verbindet Code Chaos Darkpsy- und Hitech-Energie mit Gothic-Atmosphäre und gesprochenen deutschen Szenen: ein Herz, das zu schnell schlägt, ein Uhrwerk, das blutet.</p>
-<h2>Bekannte Darkpsy-Artists</h2>
-<p>Einige Namen, die den Darkpsy-Sound geprägt haben (Auswahl):</p>
+<h2>Bekannte Darkpsy-DJs und Artists</h2>
+<p>Einige Namen, die den Darkpsy-Sound geprägt haben und bis heute auf Dark-Floors laufen (Auswahl, ohne Anspruch auf Vollständigkeit):</p>
 <ul>
-<li><strong>Xenomorph</strong>, deutscher Wegbereiter der düster-okkulten Ästhetik</li>
-<li><strong>Kindzadza</strong> und <strong>Psykovsky</strong>, prägende Namen der russischen Dark- und Forest-Szene</li>
+<li><strong>Xenomorph</strong> (Mark Petrick, Berlin), deutscher Wegbereiter der düster-okkulten, oft gothic-geprägten Ästhetik</li>
+<li><strong>Kindzadza</strong> (Moskau), einer der prägenden Namen des russischen Dark-Sounds</li>
+<li><strong>Fungus Funk</strong> (Moskau), veröffentlicht seit 2001 Dark- und Forest-Psytrance</li>
+<li><strong>Psykovsky</strong>, Schlüsselfigur der russischen Dark- und Forest-Szene</li>
+<li><strong>Para Halu</strong> (Ungarn), Dark- und Forest-Psytrance mit sehr eigenem, verspieltem Sounddesign</li>
+<li><strong>Baphomet Engine</strong> (Brasilien), Darkpsy aus der starken lateinamerikanischen Szene</li>
+<li><strong>Cosmo</strong>, deutscher Producer zwischen Darkpsy und frühem <a href="/hitech-psytrance/">Hitech</a></li>
 <li><strong>Code Chaos</strong> aus Hamburg, Darkpsy mit Gothic-Atmosphäre („New Psychedelic Death Art“)</li>
 </ul>
+<p>Viele dieser Artists spielen auch DJ-Sets. Schnellere Namen aus dem Umfeld findest du im <a href="/hitech-psytrance/">Hitech-Guide</a> und im <a href="/psycore/">Psycore-Guide</a>.</p>
 <h2>Darkpsy-Festivals: Wo läuft Darkpsy live?</h2>
 <p>Darkpsy läuft vor allem auf Forest- und Dark-Open-Airs, auf Underground-Partys und auf den Night-Floors großer Psytrance-Festivals, oft in den Stunden nach Mitternacht. In Deutschland ist zum Beispiel die Mushroom Stage des Indian Spirit Festivals für härtere, experimentelle Sounds bekannt. Code Chaos ist ein reines Studioprojekt und spielt nicht live.</p>
 <h2>Darkpsy produzieren: Erfahrungen aus dem Studio</h2>
@@ -393,7 +399,7 @@ GENRES = [
      ("Was ist der Unterschied zwischen Darkpsy und Psytrance?", "Psytrance ist der Oberbegriff (meist 138–150 BPM). Darkpsy ist ein schnelleres, dunkleres Subgenre mit schweren Bässen, Horror-Samples und okkulter Atmosphäre."),
      ("Ist Darkpsy dasselbe wie Forest?", "Nein, aber sie sind eng verwandt. Forest klingt organischer und naturverbundener, Darkpsy ist bedrohlicher, technischer und stärker vom Horror geprägt."),
      ("Welche Darkpsy-Releases hat Code Chaos?", "Unter anderem die Alben Oblivion und The Twilight Zone (2022), die Single Amanita Muscaria (2024), das Album Runtime Terror (2026) und die Single „Uhrwerk aus Blut“ (30.10.2026)."),
-     ("Welche bekannten Darkpsy-Artists und DJs gibt es?", "Prägende Namen sind zum Beispiel Xenomorph aus Deutschland sowie Kindzadza und Psykovsky aus der russischen Dark- und Forest-Szene. Code Chaos aus Hamburg verbindet Darkpsy mit Gothic-Atmosphäre."),
+     ("Welche bekannten Darkpsy-Artists und DJs gibt es?", "Prägende Namen sind zum Beispiel Xenomorph aus Berlin, Kindzadza, Fungus Funk und Psykovsky aus der russischen Dark- und Forest-Szene, Para Halu aus Ungarn, Baphomet Engine aus Brasilien und Cosmo. Code Chaos aus Hamburg verbindet Darkpsy mit Gothic-Atmosphäre."),
      ("Wo gibt es Darkpsy-Festivals?", "Darkpsy läuft vor allem auf Forest- und Dark-Open-Airs, Underground-Partys und den Night-Floors großer Psytrance-Festivals, in Deutschland zum Beispiel auf der Mushroom Stage des Indian Spirit Festivals."),
    ],
    "cta_title": "Mastering für deinen Darkpsy-Track",
@@ -402,8 +408,8 @@ GENRES = [
   },
   "en": {
    "nav": "Darkpsy", "bpm": "150–200 BPM",
-   "title": "Darkpsy (Dark Psy): What is Darkpsy? BPM & Production | Code Chaos",
-   "desc": "Darkpsy (dark psy, dark psytrance) explained: 150–200 BPM, occult atmosphere, heavy basslines and horror samples. History, comparison and production tips.",
+   "title": "Darkpsy (Dark Psy): What is Darkpsy? BPM, DJs & Artists | Code Chaos",
+   "desc": "Darkpsy (dark psy, dark psytrance) explained: 150–200 BPM, occult atmosphere, heavy basslines and horror samples. Darkpsy DJs and artists to know, history and production tips.",
    "og_alt": "Darkpsy genre guide by Code Chaos",
    "eyebrow": "Genre guide · Darkpsy",
    "h1": "What is Darkpsy?",
@@ -427,13 +433,19 @@ GENRES = [
 <blockquote class="quote">"Darkpsy was the first thing that showed me music doesn't have to be pleasant to be unforgettable."<cite>Code Chaos</cite></blockquote>
 <h2>Darkpsy, forest and gothic</h2>
 <p>Darkpsy overlaps strongly with forest psytrance, which sounds more organic and nature-bound. With the single <a href="/en/#single">"Uhrwerk aus Blut"</a> (Clockwork of Blood, 30 Oct 2026), Code Chaos combines darkpsy and hitech energy with gothic atmosphere and spoken German scenes: a heart that beats too fast, a clockwork that bleeds.</p>
-<h2>Darkpsy artists to know</h2>
-<p>A few names that shaped the darkpsy sound (selection):</p>
+<h2>Darkpsy DJs and artists to know</h2>
+<p>A few names that shaped the darkpsy sound and are still played on dark floors today (a selection, not a complete list):</p>
 <ul>
-<li><strong>Xenomorph</strong>, German pioneer of the dark, occult aesthetic</li>
-<li><strong>Kindzadza</strong> and <strong>Psykovsky</strong>, defining names of the Russian dark and forest scene</li>
+<li><strong>Xenomorph</strong> (Mark Petrick, Berlin), German pioneer of the dark, occult and often gothic aesthetic</li>
+<li><strong>Kindzadza</strong> (Moscow), one of the defining names of the Russian dark sound</li>
+<li><strong>Fungus Funk</strong> (Moscow), releasing dark and forest psytrance since 2001</li>
+<li><strong>Psykovsky</strong>, a key figure of the Russian dark and forest scene</li>
+<li><strong>Para Halu</strong> (Hungary), dark and forest psytrance with a very distinctive, playful sound design</li>
+<li><strong>Baphomet Engine</strong> (Brazil), darkpsy from the strong Latin American scene</li>
+<li><strong>Cosmo</strong>, German producer between darkpsy and early <a href="/en/hitech-psytrance/">hitech</a></li>
 <li><strong>Code Chaos</strong> from Hamburg, darkpsy with gothic atmosphere ("New Psychedelic Death Art")</li>
 </ul>
+<p>Many of these artists also play DJ sets. For faster names from the same circle, see the <a href="/en/hitech-psytrance/">hitech guide</a> and the <a href="/en/psycore/">psycore guide</a>.</p>
 <h2>Darkpsy festivals: where can you hear darkpsy live?</h2>
 <p>Darkpsy is mostly played at forest and dark open airs, underground parties and on the night floors of big psytrance festivals, often in the hours after midnight. In Germany, for example, the Mushroom Stage of Indian Spirit Festival is known for harder, experimental sounds. Code Chaos is a studio-only project and does not play live.</p>
 <h2>Producing darkpsy: notes from the studio</h2>
@@ -451,7 +463,7 @@ GENRES = [
      ("What is the difference between darkpsy and psytrance?", "Psytrance is the umbrella term (mostly 138–150 BPM). Darkpsy is a faster, darker subgenre with heavy basslines, horror samples and an occult atmosphere."),
      ("Is darkpsy the same as forest?", "No, but they are closely related. Forest sounds more organic and nature-bound; darkpsy is more menacing, more technical and more horror-driven."),
      ("Which darkpsy releases has Code Chaos made?", "Among others the albums Oblivion and The Twilight Zone (2022), the single Amanita Muscaria (2024), the album Runtime Terror (2026) and the single \"Uhrwerk aus Blut\" (30 Oct 2026)."),
-     ("Which darkpsy artists and DJs should I know?", "Defining names include Xenomorph from Germany and Kindzadza and Psykovsky from the Russian dark and forest scene. Code Chaos from Hamburg combines darkpsy with gothic atmosphere."),
+     ("Which darkpsy artists and DJs should I know?", "Defining names include Xenomorph from Berlin, Kindzadza, Fungus Funk and Psykovsky from the Russian dark and forest scene, Para Halu from Hungary, Baphomet Engine from Brazil and Cosmo. Code Chaos from Hamburg combines darkpsy with gothic atmosphere."),
      ("Where are darkpsy festivals?", "Darkpsy is mostly played at forest and dark open airs, underground parties and on the night floors of big psytrance festivals, in Germany for example on the Mushroom Stage of Indian Spirit Festival."),
    ],
    "cta_title": "Mastering for your darkpsy track",
