@@ -7,6 +7,7 @@ Zugang: ein Wikimedia-Bot-Passwort (Spezial:BotPasswords), nie das normale Passw
   python3 _build/wiki_publish.py check              # nur prüfen: Login, vorhandene Einträge, Wikidata-IDs
   python3 _build/wiki_publish.py wikidata --apply   # Wikidata: Label-Item + Artist-Item anlegen
   python3 _build/wiki_publish.py draft --apply      # Wikipedia: Entwurf unter Benutzer:<Name>/Code Chaos
+  python3 _build/wiki_publish.py move --apply       # Entwurf nach „Code Chaos“ verschieben, sobald das Konto das Recht hat
 
 Ohne --apply wird nichts geschrieben. Bestehende Einträge werden nie überschrieben (createonly / Dublettenprüfung).
 """
@@ -204,6 +205,44 @@ def draft(apply):
     print("Entwurf angelegt, Interessenkonflikt auf der Benutzerseite offengelegt.")
 
 
+ARTIST_Q = "Q141646843"
+
+
+def move(apply):
+    """Exit 0 = verschoben (oder schon erledigt), 3 = Recht fehlt noch (später erneut), sonst Fehler."""
+    user = os.environ.get("WIKI_USER", "Name@bot").split("@")[0]
+    src, dst = f"Benutzer:{user}/Code Chaos", "Code Chaos"
+    pages = {p["title"]: p for p in api(DEWP, {"action": "query", "titles": f"{src}|{dst}", "prop": "revisions|info",
+                                                "rvprop": "user|timestamp"})["query"]["pages"]}
+    if pages[dst].get("missing") is None:
+        if pages[src].get("missing") is not None or pages[src].get("redirect"):
+            print(f"Schon verschoben: https://de.wikipedia.org/wiki/{urllib.parse.quote(dst.replace(' ', '_'))}")
+            sys.exit(0)
+        sys.exit(f"Ziel „{dst}“ existiert bereits (fremde Seite), nichts verschoben.")
+    if pages[src].get("missing") is not None:
+        sys.exit("Entwurf fehlt, nichts verschoben.")
+    if pages[src]["revisions"][0]["user"] != user:
+        sys.exit(f"Letzte Bearbeitung des Entwurfs von {pages[src]['revisions'][0]['user']}, bitte erst ansehen.")
+    tok = login(DEWP)
+    rights = api(DEWP, {"action": "query", "meta": "userinfo", "uiprop": "rights|groups|editcount"})["query"]["userinfo"]
+    if "move" not in rights["rights"]:
+        print(f"Verschieberecht fehlt noch (Gruppen {rights['groups']}, {rights['editcount']} Bearbeitungen).")
+        sys.exit(3)
+    if not apply:
+        print("Recht vorhanden. Probelauf: nichts verschoben. Mit --apply verschieben.")
+        return
+    r = api(DEWP, {"action": "move", "from": src, "to": dst, "token": tok, "movetalk": 1,
+                   "reason": "Entwurf in den Artikelnamensraum. Interessenkonflikt: Ich bin der Künstler selbst (offengelegt auf meiner Benutzerseite)."},
+            post=True)
+    if "move" not in r:
+        sys.exit(f"Verschieben fehlgeschlagen: {r.get('error', r)}")
+    print(f"Verschoben: https://de.wikipedia.org/wiki/{urllib.parse.quote(dst.replace(' ', '_'))}")
+    wtok = login(WD)
+    r = api(WD, {"action": "wbsetsitelink", "id": ARTIST_Q, "linksite": "dewiki", "linktitle": dst, "token": wtok,
+                 "summary": "Sitelink zum de.wikipedia-Artikel"}, post=True)
+    print("Wikidata-Sitelink:", "ok" if r.get("success") else r.get("error", r))
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "check"
     apply = "--apply" in sys.argv
@@ -213,5 +252,7 @@ if __name__ == "__main__":
         wikidata(apply)
     elif cmd == "draft":
         draft(apply)
+    elif cmd == "move":
+        move(apply)
     else:
         sys.exit(__doc__)
