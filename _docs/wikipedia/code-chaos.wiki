@@ -1,0 +1,75 @@
+'''Code Chaos''' ist das Musikprojekt des deutschen Musikproduzenten '''Tim Borchert''' aus [[Hamburg]]. Er produziert seit 2016 [[Psytrance]] in den schnellen Spielarten Hi-Tech, Psycore und [[Dark Psytrance|Darkpsy]] und ist Mitgründer des Labels Abstract Sound Design.<ref name="website">{{Internetquelle |url=https://codechaos-official.de/ |titel=Code Chaos – Offizielle Website |abruf=2026-10-05}}</ref>
+
+== Werdegang ==
+Borchert veröffentlicht seit 2016 unter dem Namen Code Chaos. Frühe Arbeiten erschienen unter dem Namen ''Moonchild'' und wurden später auf der Kompilation ''Schattenraum – Early „Moonchild“ Works'' zusammengefasst.<ref name="bc">{{Internetquelle |url=https://codechaos.bandcamp.com/music |titel=Code Chaos – Diskografie |werk=Bandcamp |abruf=2026-10-05}}</ref> 2021 war er Mitgründer des Labels Abstract Sound Design, auf dem unter anderem das Album ''Runtime Terror'' erschien.<ref name="website" /><ref>{{Internetquelle |url=https://www.discogs.com/label/4052777-Abstract-Sound-Design |titel=Abstract Sound Design |werk=Discogs |abruf=2026-10-05}}</ref> Weitere Veröffentlichungen erschienen nach eigenen Angaben bei TATEWARI Records (Mexiko) und Soma Ritual Records (Indien).<ref name="website" /> Nach eigener Darstellung war er außerdem an der Veranstaltungsreihe Psymotion Events in Hamburg beteiligt.<ref>{{Internetquelle |url=https://codechaos.bandcamp.com/track/chaos-kidz-single |titel=Chaos Kidz |werk=Bandcamp |datum=2025-01-05 |abruf=2026-10-05}}</ref>
+
+Bevor er Code Chaos als reines Studioprojekt weiterführte, trat er auch live auf, unter anderem bei der Hamburger Partyreihe ''Abstract Ritual'' des Labels Abstract Sound Design (Vol. 2, Juli 2023) und beim ''Lost Signal Festival'' auf Gut Steimke bei Uslar (13.–16. August 2026) im Programm der ErroR-404-Crew.<ref>{{Internetquelle |url=https://www.goabase.net/de/festival/lost-signal-festival/116831 |titel=Lost Signal Festival |werk=goabase |abruf=2026-10-05}}</ref><ref>{{Internetquelle |url=https://www.facebook.com/events/1295014337748306/ |titel=Abstract Ritual Vol. 2 – Hamburg |werk=Facebook |abruf=2026-10-05}}</ref> Am 3. Oktober 2024 stellte die Radiosendung ''alpha.s crazy sounds'' seine Musik vor.<ref>{{Internetquelle |url=https://www.goabase.net/de/en/party/alphas-crazy-sounds-second-strike-mau-va-brutals-creatures-p2code-chaos/reports/113697 |titel=alpha.s crazy sounds: Second Strike, Mau, VA Brutals Creatures p2, Code Chaos |werk=goabase |datum=2024-10-03 |abruf=2026-10-05}}</ref>
+
+2026 erschienen das Album ''Runtime Terror'' sowie der Live-Mitschnitt ''Live at Arnsteinhöhle (Austria)'' vom 17. April 2026.<ref name="bc" /> Für den 30. Oktober 2026 ist die Single ''Uhrwerk aus Blut'' angekündigt.<ref name="website" />
+
+Neben der eigenen Musik betreibt Borchert den Mastering-Dienst Polished Media und veröffentlicht unter der Marke Code Chaos Audio Audio-Plug-ins, als erstes 2026 den 3-Band-Sättigungseffekt ''Crucible'' (VST3).<ref>{{Internetquelle |url=https://codechaos-official.de/crucible.html |titel=Crucible – 3-Band Harmonic Saturation |werk=Code Chaos Audio |abruf=2026-10-05}}</ref>
+
+== Stil ==
+Die Musik bewegt sich meist zwischen 180 und 300 [[Beats per minute|BPM]] und verbindet Hi-Tech, Psycore und Darkpsy mit Elementen aus Industrial und Gothic. Borchert selbst bezeichnet seinen Stil als „New Psychedelic Death Art“.<ref name="website" /> Einzelne Stücke wie ''Tanzalarm – The BPM Mutation'' (2024) wechseln innerhalb eines Tracks zwischen 125, 180 und 250 BPM.<ref>{{Internetquelle |url=https://codechaos.bandcamp.com/track/tanzalarm-the-bpm-mutation-single |titel=Tanzalarm – The BPM Mutation |werk=Bandcamp |datum=2024-12-14 |abruf=2026-10-05}}</ref>
+
+== Diskografie (Auswahl) ==
+; Alben
+* 2021: ''Roadside Butchery''
+* 2022: ''Det Stora Oväsendet: The Great Noise''
+* 2022: ''The Twilight Zone''
+* 2022: ''The Slaughterhouse''
+* 2022: ''The Grudge''
+* 2022: ''Oblivion''
+* ''Dreadlocked''<ref>{{Internetquelle |url=https://www.abstract-sound-design.de/code-chaos |titel=Code Chaos |werk=Abstract Sound Design |abruf=2026-10-05}}</ref>
+* 2023: ''Fun With Noises''
+* 2023: ''Paradigma''
+* 2026: ''Runtime Terror'' (Abstract Sound Design)
+* 2026: ''Live at Arnsteinhöhle (Austria)'' (Livealbum)
+
+; EPs
+* 2022: ''Interstellar''
+* 2022: ''Alternate Future'' (als Moonchild, mit PsySon)
+* 2023: ''Ruins of Humanity''
+* 2024: ''Filaments & Voids''
+* 2024: ''A Tiny Piece of Paper''
+* 2025: ''Parallax Prison – Schism of Self''
+* 2025: ''Heart & Mind''
+* 2025: ''Insomnia''
+
+; Singles und Remixe
+* 2024: ''Amanita Muscaria''
+* 2024: ''Tanzalarm – The BPM Mutation''
+* 2025: ''Chaos Kidz''
+* 2025: ''Abstrakte Musik''
+* 2026: Code Pandorum – ''Rotten Soil'' (Code Chaos Remix)
+* 2026: ''Uhrwerk aus Blut''
+
+; Kompilationen
+* ''Schattenraum – Early „Moonchild“ Works''
+
+== Weblinks ==
+* [https://codechaos-official.de/ Offizielle Website]
+* {{Discogs|artist/18204093|Code Chaos}}
+* [https://musicbrainz.org/artist/14d40d24-a91e-4600-a1b3-d14682d32e42 Code Chaos] bei MusicBrainz
+* [https://codechaos.bandcamp.com/ Code Chaos] bei Bandcamp
+
+== Einzelnachweise ==
+<references />
+
+<!-- Kategorien erst beim Verschieben in den Artikelnamensraum aktivieren:
+[[Kategorie:Musikproduzent]]
+[[Kategorie:Psytrance-Musiker]]
+[[Kategorie:Musiker (Hamburg)]]
+[[Kategorie:Pseudonym]]
+[[Kategorie:Deutscher]]
+-->
+
+{{Personendaten
+|NAME=Code Chaos
+|ALTERNATIVNAMEN=Borchert, Tim (bürgerlicher Name); Moonchild
+|KURZBESCHREIBUNG=deutscher Psytrance-Produzent
+|GEBURTSDATUM=
+|GEBURTSORT=
+|STERBEDATUM=
+|STERBEORT=
+}}
