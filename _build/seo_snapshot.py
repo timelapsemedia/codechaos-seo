@@ -6,7 +6,7 @@ letzten Stand aus. Läuft lokal, in der Cloud-Session und in der Routine.
 
 Zugangsdaten (nie ins Repo):
   Google:  GSC_KEY_FILE=/pfad/key.json   oder   GSC_KEY_JSON='{...kompletter JSON-Inhalt...}'
-  Bing:    BING_API_KEY=...
+  Bing:    BING_API_KEY=... oder BING_API_KEY_FILE=/pfad/key.txt
 Aufruf:   python3 _build/seo_snapshot.py [--no-ping]
 """
 import base64, datetime, json, os, re, subprocess, sys, tempfile, time, urllib.error, urllib.parse, urllib.request
@@ -78,9 +78,10 @@ def google(snap, urls):
 
 
 def bing(snap, urls):
-    k = os.environ.get("BING_API_KEY")
+    f = os.environ.get("BING_API_KEY_FILE")
+    k = open(f).read().strip() if f else os.environ.get("BING_API_KEY")
     if not k:
-        snap["bing"] = "kein BING_API_KEY"; return
+        snap["bing"] = "kein BING_API_KEY / BING_API_KEY_FILE"; return
     api = "https://ssl.bing.com/webmaster/api.svc/json/"
     http("POST", f"{api}SubmitFeed?apikey={k}", {"siteUrl": SITE_BING, "feedUrl": SITE_BING + "sitemap.xml"})
     http("POST", f"{api}SubmitUrlBatch?apikey={k}", {"siteUrl": SITE_BING, "urlList": urls})

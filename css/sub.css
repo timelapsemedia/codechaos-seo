@@ -74,6 +74,8 @@ h3{font-size:1.15rem;margin:28px 0 10px}
 .cmp th,.cmp td{padding:10px 12px;border:1px solid var(--line);text-align:left}
 .cmp thead th{font-family:var(--cap);font-size:.72rem;letter-spacing:.14em;color:var(--gold);background:var(--panel)}
 .cmp tbody th{color:var(--bone);font-weight:500}
+.cmp a.pick{color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}.cmp a.pick:hover{color:var(--gold)}
+.assure{font-size:.9rem;color:var(--bone);border-left:2px solid var(--gold);padding-left:12px;margin:4px 0 0}
 .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 
 /* cards */
@@ -148,3 +150,4 @@ h3{font-size:1.15rem;margin:28px 0 10px}
 /* Mobile Sticky-CTA (Mastering-Seiten) */
 .sticky-cta{display:none}
 @media (max-width:700px){.sticky-cta{display:flex;align-items:center;justify-content:center;position:fixed;left:12px;right:12px;bottom:12px;z-index:90;min-height:52px;background:var(--blood);color:var(--bone);border:1px solid var(--gold);font-family:var(--cap);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,.6)}body:has(.sticky-cta){padding-bottom:76px}}
+@media (max-width:600px){.cmp.prices th:nth-child(3),.cmp.prices td:nth-child(3),.cmp.prices th:nth-child(5),.cmp.prices td:nth-child(5){display:none}.cmp.prices th,.cmp.prices td{padding:10px 8px}}

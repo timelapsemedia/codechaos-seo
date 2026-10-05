@@ -6,6 +6,7 @@ Google vergibt Platz 1 vor allem an Seiten, auf die andere Seiten verlinken. Die
 - polished.media verlinkt im Footer (EN + DE) auf `/en/mastering/` bzw. `/mastering/`
 - Alte Website-Kopie `timelapsemedia.github.io/code-chaos-site/` leitet auf codechaos-official.de weiter (kein doppelter Inhalt mehr)
 - Bandcamp- und SoundCloud-Bio verlinken auf `/psycore/`
+- YouTube: Kanal-Info und alle 11 Videobeschreibungen verlinken auf die Website, die passenden Genre-Guides und `/mastering/` (05.10.2026)
 
 ## 1. Abstract Sound Design (stärkster Hebel, eigenes Label)
 Auf abstract-sound-design.de bei Code Chaos bzw. auf einer „Genres“-Seite:
@@ -24,9 +25,8 @@ Was ist Darkpsy? → https://codechaos-official.de/darkpsy/
 ```
 Psycore: Roadside Butchery, The Slaughterhouse, Filaments & Voids, Abstrakte Musik, Rotten Soil Remix · Hitech: The Grudge, Interstellar, Ruins Of Humanity, Heart & Mind, Parallax Prison, A Tiny Piece Of Paper, TANZALARM · Darkpsy: Oblivion, The Twilight Zone, Amanita Muscaria · alle drei: Runtime Terror, Insomnia, Paradigma
 
-## 3. YouTube und SoundCloud
-- YouTube-Kanal „Info“: `https://codechaos-official.de/` + `Psytrance-Mastering: https://codechaos-official.de/mastering/`
-- In jede Video- und Track-Beschreibung die passende Genre-Zeile aus Punkt 2.
+## 3. SoundCloud
+In jede Track-Beschreibung die passende Genre-Zeile aus Punkt 2.
 
 ## 4. Gumroad (Crucible)
 In die Produktbeschreibung: `Mehr Infos & Features: https://codechaos-official.de/crucible.html` (Textvorschlag: `_docs/gumroad-crucible-text.md`).

@@ -282,6 +282,8 @@
 <script>
 (function(){var b=document.querySelector('.s-toggle'),m=document.getElementById('s-menu');if(!b||!m)return;
 b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-pick]');if(!a)return;var s=document.querySelector('select[name=service]');if(!s)return;
+for(var i=0;i<s.options.length;i++){if(s.options[i].text===a.getAttribute('data-pick')){s.selectedIndex=i;break;}}});
 </script>
 </body>
 </html>

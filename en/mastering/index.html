@@ -289,13 +289,13 @@
     <div class="hero-grid">
       <div>
         <h3>Mastering</h3>
-        <div class="table-scroll"><table class="cmp"><thead><tr><th>Package</th><th>Price</th><th>Instead of</th><th>You save</th><th>Per track</th></tr></thead><tbody>
-          <tr><th scope="row">Single · stereo · 1 track</th><td>€79</td><td>–</td><td>–</td><td>€79.00</td></tr>
-          <tr><th scope="row">Stem Pro · up to 6 stems</th><td>€129</td><td>–</td><td>–</td><td>€129.00</td></tr>
-          <tr><th scope="row">EP · up to 5 tracks</th><td>€349</td><td><s>€395</s></td><td>€46 (~12%)</td><td>€69.80</td></tr>
-          <tr><th scope="row">Album · up to 10 tracks</th><td>€629</td><td><s>€790</s></td><td>€161 (~20%)</td><td>€62.90</td></tr>
+        <div class="table-scroll"><table class="cmp prices"><thead><tr><th>Package</th><th>Price</th><th>Instead of</th><th>You save</th><th>Per track</th></tr></thead><tbody>
+          <tr><th scope="row"><a class="pick" href="#request" data-pick="Single · Stereo Mastering (€79)">Single · stereo · 1 track<span aria-hidden="true"> →</span></a></th><td>€79</td><td>–</td><td>–</td><td>€79.00</td></tr>
+          <tr><th scope="row"><a class="pick" href="#request" data-pick="Stem Pro · Stem Mastering (€129)">Stem Pro · up to 6 stems<span aria-hidden="true"> →</span></a></th><td>€129</td><td>–</td><td>–</td><td>€129.00</td></tr>
+          <tr><th scope="row"><a class="pick" href="#request" data-pick="EP Mastering, up to 5 tracks (€349)">EP · up to 5 tracks<span aria-hidden="true"> →</span></a></th><td>€349</td><td><s>€395</s></td><td>€46 (~12%)</td><td>€69.80</td></tr>
+          <tr><th scope="row"><a class="pick" href="#request" data-pick="Album Mastering, up to 10 tracks (€629)">Album · up to 10 tracks<span aria-hidden="true"> →</span></a></th><td>€629</td><td><s>€790</s></td><td>€161 (~20%)</td><td>€62.90</td></tr>
         </tbody></table></div>
-        <p class="note">All prices incl. 19% German VAT. Audio audit and unlimited revisions included in every package. Pay in advance or by invoice after completion. Delivery: single/stem 48–72 h, EP 5–7 days, album 7–14 days (vinyl-ready master on request).</p>
+        <p class="note">Click a package to preselect it in the form. All prices incl. 19% German VAT. Audio audit and unlimited revisions included in every package. Pay in advance or by invoice after completion. Delivery: single/stem 48–72 h, EP 5–7 days, album 7–14 days (vinyl-ready master on request).</p>
       </div>
       <div>
         <h3>Extras</h3>
@@ -337,6 +337,7 @@
       <div><label for="en-msg">MESSAGE</label><textarea id="en-msg" name="message" rows="4" placeholder="Genre, reference track, deadline…"></textarea></div>
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <input type="hidden" name="_subject" value="New mastering request (EN) · Code Chaos">
+      <p class="assure">No obligation: you usually get a reply with all details within 24–48 hours. You only pay once you say yes, upfront or by invoice after delivery.</p>
       <div><button class="btn btn-blood" type="submit">Send request</button></div>
       <p class="note">Your data is sent via Formspree and only used to answer your request. Privacy policy (German): <a href="/#datenschutz">Datenschutz</a>. Prefer email? <a href="mailto:polished.media@gmx.de">polished.media@gmx.de</a></p>
     </form>
@@ -372,6 +373,8 @@
 <script>
 (function(){var b=document.querySelector('.s-toggle'),m=document.getElementById('s-menu');if(!b||!m)return;
 b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-pick]');if(!a)return;var s=document.querySelector('select[name=service]');if(!s)return;
+for(var i=0;i<s.options.length;i++){if(s.options[i].text===a.getAttribute('data-pick')){s.selectedIndex=i;break;}}});
 </script>
 </body>
 </html>

@@ -1540,6 +1540,8 @@ section { position: relative; z-index: 2; background: var(--void); }
   color: rgba(236,226,206,0.76);
   margin-top: 3px;
 }
+.pricing-price .pick { display: block; margin-top: 4px; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; color: rgba(236,226,206,0.76); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.pricing-price .pick:hover { color: var(--acid); }
 .pricing-price {
   font-family: var(--font-display);
   font-size: 1.2rem;
@@ -1775,7 +1777,7 @@ footer {
 <link rel="stylesheet" href="css/gothic.css">
 <style>.lang-switch{display:inline-flex;align-items:center;gap:8px;margin-left:24px;padding:7px 14px;border:1px solid var(--gold);background:rgba(201,168,106,.10);color:var(--bone);font-family:var(--serif-cap,"Cinzel"),serif;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-decoration:none;white-space:nowrap;transition:background .2s,border-color .2s}.lang-switch:hover{background:rgba(201,168,106,.22);border-color:var(--gold-hi)}.lang-switch .flag{display:block;box-shadow:0 0 0 1px rgba(236,226,206,.35)}.nav-menu{margin-left:auto}@media (max-width:900px){.lang-switch{order:2;margin-left:auto;margin-right:10px;padding:6px 10px}.nav-toggle{order:3}}#single h2.hero-title{font-family:var(--serif-cap);font-weight:700;color:var(--bone);font-size:clamp(2.1rem,10.5vw,4.6rem);line-height:1.02;letter-spacing:.04em;margin:0 0 14px}.mastering-quick{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:22px}.mastering-quick p{margin:0;color:var(--bone);font-size:1.05rem}.mastering-quick p b{color:var(--gold-hi)}.mastering-headline{overflow-wrap:break-word;hyphens:auto}.pricing-service small s{text-decoration:line-through;opacity:.8}.ico{width:1em;height:1em;fill:currentColor;vertical-align:-.125em;display:inline-block}.nav-links .ico{width:1.05rem;height:1.05rem}.social-list .ico{width:1.15rem;height:1.15rem;fill:var(--gold)}</style>
 <script>
-(function () {
+document.addEventListener('DOMContentLoaded',function(){
   var form = document.getElementById('cc-sib-form');
   if (!form) return;
   var errorBox = document.getElementById('cc-error-message');
@@ -1798,16 +1800,18 @@ footer {
       successBox.style.display = 'none';
     });
   });
-})();
+});
 </script>
 <script>
-(function(){
+document.addEventListener('DOMContentLoaded',function(){
   var form=document.getElementById('mastering-request-form');
   if(!form)return;
   var btn=form.querySelector('.mform-submit');
   var btnText=form.querySelector('.mform-submit-text');
   var btnSend=form.querySelector('.mform-submit-sending');
   var success=document.getElementById('mform-success');
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-pick]');if(!a)return;var s=document.getElementById('mf-service');
+    for(var i=0;i<s.options.length;i++){if(s.options[i].value===a.getAttribute('data-pick')){s.selectedIndex=i;break;}}});
   form.addEventListener('submit',function(e){
     e.preventDefault();
     btn.disabled=true;
@@ -1819,7 +1823,7 @@ footer {
       else{btn.disabled=false;btnText.style.display='inline';btnSend.style.display='none';alert('Fehler beim Senden. Bitte direkt an polished.media@gmx.de schreiben.');}
     }).catch(function(){btn.disabled=false;btnText.style.display='inline';btnSend.style.display='none';alert('Fehler beim Senden. Bitte direkt an polished.media@gmx.de schreiben.');});
   });
-})();
+});
 </script>
 
 
@@ -1955,19 +1959,19 @@ footer {
           </div>
           <div class="pricing-row" style="grid-template-columns:1fr auto;">
             <div class="pricing-service">Single<small>Stereo Mastering · 1 Track · €79,00 pro Track · 48–72 h</small></div>
-            <div class="pricing-price">€79</div>
+            <div class="pricing-price">€79<a class="pick" href="#mastering-form" data-pick="Single · Stereo Mastering (€79)">Anfragen →</a></div>
           </div>
           <div class="pricing-row" style="grid-template-columns:1fr auto;">
             <div class="pricing-service">Stem Pro<small>Stem Mastering · 1 Track · bis 6 Stems · 48–72 h</small></div>
-            <div class="pricing-price">€129</div>
+            <div class="pricing-price">€129<a class="pick" href="#mastering-form" data-pick="Stem Pro · Stem Mastering (€129)">Anfragen →</a></div>
           </div>
           <div class="pricing-row" style="grid-template-columns:1fr auto;">
             <div class="pricing-service">EP<small>bis 5 Tracks · <s>statt €395</s> · du sparst €46 (~12 %) · €69,80 pro Track · 5–7 Tage</small></div>
-            <div class="pricing-price">€349</div>
+            <div class="pricing-price">€349<a class="pick" href="#mastering-form" data-pick="EP Mastering, bis 5 Tracks (€349)">Anfragen →</a></div>
           </div>
           <div class="pricing-row" style="grid-template-columns:1fr auto;border-bottom:none;background:rgba(201,168,106,0.03);">
             <div class="pricing-service">Album<small>bis 10 Tracks · <s>statt €790</s> · du sparst €161 (~20 %) · €62,90 pro Track · 7–14 Tage · Vinyl-Master auf Wunsch</small></div>
-            <div class="pricing-price">€629</div>
+            <div class="pricing-price">€629<a class="pick" href="#mastering-form" data-pick="Album Mastering, bis 10 Tracks (€629)">Anfragen →</a></div>
           </div>
         </div>
         <p style="font-size:0.8rem;color:rgba(236,226,206,0.76);margin:0 0 28px;padding-left:20px;line-height:1.6;">Alle Preise inkl. 19 % MwSt. · Audio-Audit und unbegrenzte Korrekturen in jedem Paket · Zahlung per Vorkasse oder auf Rechnung nach Fertigstellung · Lieferung als 24-bit WAV, 16-bit AIFF und 320 kbps MP3</p>
@@ -1981,15 +1985,15 @@ footer {
           </div>
           <div class="pricing-row" style="grid-template-columns:1fr auto;">
             <div class="pricing-service">Cover Art<small>1 Design</small></div>
-            <div class="pricing-price">€99</div>
+            <div class="pricing-price">€99<a class="pick" href="#mastering-form" data-pick="Cover Art (€99)">Anfragen →</a></div>
           </div>
           <div class="pricing-row" style="grid-template-columns:1fr auto;">
             <div class="pricing-service">Lyric Video<small>Animiert</small></div>
-            <div class="pricing-price">€179</div>
+            <div class="pricing-price">€179<a class="pick" href="#mastering-form" data-pick="Lyric Video (€179)">Anfragen →</a></div>
           </div>
           <div class="pricing-row" style="grid-template-columns:1fr auto;border-bottom:none;">
             <div class="pricing-service">Promo Video<small>60 Sekunden</small></div>
-            <div class="pricing-price">€299</div>
+            <div class="pricing-price">€299<a class="pick" href="#mastering-form" data-pick="Promo Video (€299)">Anfragen →</a></div>
           </div>
         </div>
 
@@ -2046,6 +2050,7 @@ footer {
           </div>
           <input type="text" name="_gotcha" style="display:none">
           <input type="hidden" name="_subject" value="🎛 Neue Mastering-Anfrage · Code Chaos">
+          <p style="font-size:0.85rem;color:rgba(236,226,206,0.86);line-height:1.6;border-left:2px solid var(--acid);padding-left:12px;margin:0 0 16px;">Unverbindlich anfragen: Du bekommst meist innerhalb von 24–48 Stunden eine Antwort mit allen Details. Bezahlt wird erst nach deiner Zusage, per Vorkasse oder auf Rechnung nach Fertigstellung.</p>
           <button type="submit" class="mform-submit">
             <span class="mform-submit-text">Anfrage senden →</span>
             <span class="mform-submit-sending" style="display:none;">WIRD GESENDET…</span>
@@ -2720,7 +2725,7 @@ footer {
             id="CC_EMAIL"
             name="EMAIL"
             placeholder="deine@email.de" aria-label="E-Mail-Adresse"
-            autocomplete="off"
+            autocomplete="email"
             required
           />
           <button class="cc-newsletter__btn" type="submit">
