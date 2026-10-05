@@ -49,8 +49,8 @@ RELEASES = {
                      de="Album · 2021 · Psycore", en="Album · 2021 · Psycore"),
 }
 
-_STUDIO_DE = "Code Chaos ist ein reines Studioprojekt aus Hamburg: keine Liveshows, keine DJ-Sets."
-_STUDIO_EN = "Code Chaos is a studio-only project from Hamburg: no live shows, no DJ sets."
+_STUDIO_DE = "Code Chaos ist heute ein reines Studioprojekt aus Hamburg, Bookings sind nicht möglich."
+_STUDIO_EN = "Code Chaos is a studio-only project from Hamburg today, bookings are not available."
 
 GENRES = [
  {
@@ -101,7 +101,7 @@ GENRES = [
 <li><strong>Code Chaos</strong> aus Hamburg, Psycore zwischen 180 und 300 BPM auf Abstract Sound Design</li>
 </ul>
 <h2>Psycore-Festivals: Wo läuft Psycore live?</h2>
-<p>Eigene große Psycore-Festivals gibt es kaum. Psycore läuft vor allem auf kleineren Forest- und Dark-Open-Airs, auf Underground-Partys und auf den härteren Floors großer Psytrance-Festivals. In Deutschland ist zum Beispiel die Mushroom Stage des Indian Spirit Festivals in Mecklenburg-Vorpommern für ihre härteren, experimentellen Sounds bekannt. Code Chaos selbst ist ein reines Studioprojekt und spielt nicht live.</p>
+<p>Eigene große Psycore-Festivals gibt es kaum. Psycore läuft vor allem auf kleineren Forest- und Dark-Open-Airs, auf Underground-Partys und auf den härteren Floors großer Psytrance-Festivals. In Deutschland ist zum Beispiel die Mushroom Stage des Indian Spirit Festivals in Mecklenburg-Vorpommern für ihre härteren, experimentellen Sounds bekannt. Code Chaos spielte dort früher selbst, etwa beim Lost Signal Festival, ist heute aber ein reines Studioprojekt.</p>
 <h2>Psycore produzieren: Erfahrungen aus dem Studio</h2>
 <p>Seit 2016 produziert Code Chaos Psycore, Hitech und Darkpsy. Diese Punkte entscheiden aus unserer Erfahrung über einen funktionierenden Psycore-Track:</p>
 <ol>
@@ -170,7 +170,7 @@ GENRES = [
 <li><strong>Code Chaos</strong> from Hamburg, psycore between 180 and 300 BPM on Abstract Sound Design</li>
 </ul>
 <h2>Psycore festivals: where can you hear psycore live?</h2>
-<p>Dedicated large psycore festivals are rare. Psycore is mostly played at smaller forest and dark open airs, underground parties and on the harder floors of big psytrance festivals. In Germany, for example, the Mushroom Stage of Indian Spirit Festival is known for its harder, experimental sounds. Code Chaos itself is a studio-only project and does not play live.</p>
+<p>Dedicated large psycore festivals are rare. Psycore is mostly played at smaller forest and dark open airs, underground parties and on the harder floors of big psytrance festivals. In Germany, for example, the Mushroom Stage of Indian Spirit Festival is known for its harder, experimental sounds. Code Chaos used to play such events, for example Lost Signal Festival, but is a studio-only project today.</p>
 <h2>Producing psycore: notes from the studio</h2>
 <p>Code Chaos has been producing psycore, hitech and darkpsy since 2016. In our experience, these points make or break a psycore track:</p>
 <ol>
@@ -246,7 +246,7 @@ GENRES = [
 <li><strong>Code Chaos</strong> aus Hamburg, Hitech an der Grenze zu Psycore</li>
 </ul>
 <h2>Hitech-Festivals und Partys</h2>
-<p>Hitech läuft weltweit auf Forest- und Dark-Open-Airs und auf den schnellen Floors großer Psytrance-Festivals, besonders stark in Lateinamerika, Ost- und Westeuropa. In Deutschland ist zum Beispiel die Mushroom Stage des Indian Spirit Festivals für härtere, experimentelle Sounds bekannt. Code Chaos ist ein reines Studioprojekt und spielt nicht live.</p>
+<p>Hitech läuft weltweit auf Forest- und Dark-Open-Airs und auf den schnellen Floors großer Psytrance-Festivals, besonders stark in Lateinamerika, Ost- und Westeuropa. In Deutschland ist zum Beispiel die Mushroom Stage des Indian Spirit Festivals für härtere, experimentelle Sounds bekannt. Früher gab es Live-Sets, unter anderem bei Abstract Ritual Hamburg (2023) und beim Lost Signal Festival (2026), heute ist Code Chaos ein reines Studioprojekt.</p>
 <h2>Hitech produzieren: Erfahrungen aus dem Studio</h2>
 <ol>
 <li><strong>Sounddesign vor Arrangement.</strong> Baue dir eine Bibliothek aus kurzen, charaktervollen Glitch-Sounds und Resamples, bevor du arrangierst.</li>
@@ -316,7 +316,7 @@ GENRES = [
 <li><strong>Code Chaos</strong> from Hamburg, hitech on the edge of psycore</li>
 </ul>
 <h2>Hitech festivals and parties</h2>
-<p>Hitech is played worldwide at forest and dark open airs and on the fast floors of big psytrance festivals, especially in Latin America and Eastern and Western Europe. In Germany, for example, the Mushroom Stage of Indian Spirit Festival is known for harder, experimental sounds. Code Chaos is a studio-only project and does not play live.</p>
+<p>Hitech is played worldwide at forest and dark open airs and on the fast floors of big psytrance festivals, especially in Latin America and Eastern and Western Europe. In Germany, for example, the Mushroom Stage of Indian Spirit Festival is known for harder, experimental sounds. Earlier there were live sets, for example at Abstract Ritual Hamburg (2023) and Lost Signal Festival (2026); today Code Chaos is a studio-only project.</p>
 <h2>Producing hitech: notes from the studio</h2>
 <ol>
 <li><strong>Sound design before arrangement.</strong> Build a library of short, characterful glitch sounds and resamples before you start arranging.</li>
@@ -383,7 +383,7 @@ GENRES = [
 </ul>
 <p>Viele dieser Artists spielen auch DJ-Sets. Schnellere Namen aus dem Umfeld findest du im <a href="/hitech-psytrance/">Hitech-Guide</a> und im <a href="/psycore/">Psycore-Guide</a>.</p>
 <h2>Darkpsy-Festivals: Wo läuft Darkpsy live?</h2>
-<p>Darkpsy läuft vor allem auf Forest- und Dark-Open-Airs, auf Underground-Partys und auf den Night-Floors großer Psytrance-Festivals, oft in den Stunden nach Mitternacht. In Deutschland ist zum Beispiel die Mushroom Stage des Indian Spirit Festivals für härtere, experimentelle Sounds bekannt. Code Chaos ist ein reines Studioprojekt und spielt nicht live.</p>
+<p>Darkpsy läuft vor allem auf Forest- und Dark-Open-Airs, auf Underground-Partys und auf den Night-Floors großer Psytrance-Festivals, oft in den Stunden nach Mitternacht. In Deutschland ist zum Beispiel die Mushroom Stage des Indian Spirit Festivals für härtere, experimentelle Sounds bekannt. Früher gab es Live-Sets, unter anderem bei Abstract Ritual Hamburg (2023) und beim Lost Signal Festival (2026), heute ist Code Chaos ein reines Studioprojekt.</p>
 <h2>Darkpsy produzieren: Erfahrungen aus dem Studio</h2>
 <ol>
 <li><strong>Die Bassline trägt den Track.</strong> Arbeite an Hüllkurven und Filterbewegung, bis der Bass allein schon bedrohlich klingt.</li>
@@ -447,7 +447,7 @@ GENRES = [
 </ul>
 <p>Many of these artists also play DJ sets. For faster names from the same circle, see the <a href="/en/hitech-psytrance/">hitech guide</a> and the <a href="/en/psycore/">psycore guide</a>.</p>
 <h2>Darkpsy festivals: where can you hear darkpsy live?</h2>
-<p>Darkpsy is mostly played at forest and dark open airs, underground parties and on the night floors of big psytrance festivals, often in the hours after midnight. In Germany, for example, the Mushroom Stage of Indian Spirit Festival is known for harder, experimental sounds. Code Chaos is a studio-only project and does not play live.</p>
+<p>Darkpsy is mostly played at forest and dark open airs, underground parties and on the night floors of big psytrance festivals, often in the hours after midnight. In Germany, for example, the Mushroom Stage of Indian Spirit Festival is known for harder, experimental sounds. Earlier there were live sets, for example at Abstract Ritual Hamburg (2023) and Lost Signal Festival (2026); today Code Chaos is a studio-only project.</p>
 <h2>Producing darkpsy: notes from the studio</h2>
 <ol>
 <li><strong>The bassline carries the track.</strong> Work on envelopes and filter movement until the bass sounds menacing on its own.</li>
