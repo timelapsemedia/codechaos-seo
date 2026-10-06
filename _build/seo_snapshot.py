@@ -23,6 +23,8 @@ def gsc_key_file():
     if os.environ.get("GSC_KEY_FILE"):
         return os.environ["GSC_KEY_FILE"]
     raw = os.environ.get("GSC_KEY_JSON")
+    if not raw and os.environ.get("GSC_SERVICE_ACCOUNT_JSON_B64"):
+        raw = base64.b64decode(os.environ["GSC_SERVICE_ACCOUNT_JSON_B64"]).decode()
     if not raw:
         return None
     f = tempfile.NamedTemporaryFile("w", suffix=".json", delete=False)
@@ -30,16 +32,26 @@ def gsc_key_file():
     return f.name
 
 
+def rs256(pem, msg):
+    """RS256-Signatur; bevorzugt openssl (kein Python-Paket nötig), sonst cryptography."""
+    try:
+        with tempfile.NamedTemporaryFile("w", suffix=".pem") as f:
+            os.chmod(f.name, 0o600); f.write(pem); f.flush()
+            return subprocess.run(["openssl", "dgst", "-sha256", "-sign", f.name], input=msg, capture_output=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        from cryptography.hazmat.primitives import hashes, serialization
+        from cryptography.hazmat.primitives.asymmetric import padding
+        k = serialization.load_pem_private_key(pem.encode(), password=None)
+        return k.sign(msg, padding.PKCS1v15(), hashes.SHA256())
+
+
 def gsc_token(key_file):
-    from cryptography.hazmat.primitives import hashes, serialization
-    from cryptography.hazmat.primitives.asymmetric import padding
     b64 = lambda b: base64.urlsafe_b64encode(b).rstrip(b"=")
     d = json.load(open(key_file)); now = int(time.time())
     h = b64(json.dumps({"alg": "RS256", "typ": "JWT"}).encode())
     c = b64(json.dumps({"iss": d["client_email"], "scope": "https://www.googleapis.com/auth/webmasters",
                         "aud": d["token_uri"], "iat": now, "exp": now + 3600}).encode())
-    k = serialization.load_pem_private_key(d["private_key"].encode(), password=None)
-    sig = b64(k.sign(h + b"." + c, padding.PKCS1v15(), hashes.SHA256()))
+    sig = b64(rs256(d["private_key"], h + b"." + c))
     data = urllib.parse.urlencode({"grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
                                    "assertion": (h + b"." + c + b"." + sig).decode()}).encode()
     return json.load(urllib.request.urlopen(urllib.request.Request(d["token_uri"], data=data), timeout=30))["access_token"]
