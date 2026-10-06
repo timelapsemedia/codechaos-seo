@@ -3,6 +3,8 @@
 Ziel: Platz 1 bei Google und Bing für die Zielbegriffe, vor allem im DACH-Raum:
 **psycore, darkpsy / dark psy, hitech psy / hitech psytrance, psytrance mastering / psycore mastering, code chaos, uhrwerk aus blut, crucible plugin.**
 
+Beobachtet werden zusätzlich alle Begriffe in `TARGET_GROUPS` (`_build/seo_snapshot.py`, Gruppen Genre, Mastering, Crucible, Marke; ca. 39 Begriffe). Der Bericht gruppiert danach. Das Skript listet außerdem nicht verfolgte Anfragen mit ≥2 Einblendungen und Position > 3: relevante davon in `TARGET_GROUPS` aufnehmen, Rauschen (Tippfehler, fremde Begriffe) ignorieren. Mastering- und Crucible-Gruppe haben Vorrang, weil sie Umsatz bringen.
+
 ## Ablauf (täglich 08:52; montags mit Wochenüberblick)
 
 1. **Messen:** `python3 _build/seo_snapshot.py`

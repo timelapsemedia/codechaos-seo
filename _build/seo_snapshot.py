@@ -15,8 +15,17 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HIST = os.path.join(ROOT, "_docs", "seo-history.jsonl")
 SITE_GSC = "sc-domain:codechaos-official.de"
 SITE_BING = "https://codechaos-official.de/"
-TARGETS = ["psycore", "darkpsy", "dark psy", "hitech psy", "hitech psytrance", "hi-tech psytrance", "psytrance mastering",
-           "psycore mastering", "code chaos", "uhrwerk aus blut", "crucible plugin", "psycore bpm", "darkpsy bpm"]
+TARGET_GROUPS = {
+    "Genre": ["psycore", "psy core", "psycore genre", "psycore bpm", "psycore artists", "was ist psycore", "psycore vs darkpsy",
+              "darkpsy", "dark psy", "darkpsy bpm", "darkpsy djs", "hitech psy", "hitech psytrance", "hi-tech psytrance",
+              "hitech psytrance bpm"],
+    "Mastering": ["psytrance mastering", "psycore mastering", "mastering für psytrance", "mastering hamburg", "online mastering",
+                  "audio mastering online", "track mastering", "ep mastering", "album mastering", "mastering preise"],
+    "Crucible": ["crucible plugin", "crucible vst", "code chaos crucible", "saturation plugin vst3", "sättigung plugin",
+                 "psytrance plugin", "kick saturation", "distortion vst"],
+    "Marke": ["code chaos", "codechaos", "code chaos psytrance", "code chaos hamburg", "abstract sound design", "uhrwerk aus blut"],
+}
+TARGETS = [t for g in TARGET_GROUPS.values() for t in g]
 
 
 def gsc_key_file():
@@ -128,10 +137,20 @@ def main():
             print(f"  {u.replace('https://codechaos-official.de', '') or '/':28} {st}")
         pg = (prev or {}).get("google", {}); pg = pg if isinstance(pg, dict) else {}
         print("\nGoogle-Zielbegriffe (28 Tage, Ø Position | Vorwoche):")
-        for t in TARGETS:
-            r = g["queries"].get(t); p = pg.get("queries", {}).get(t)
-            if r or p:
-                print(f"  {t:22} Pos {r['pos'] if r else '–':>5} | {p['pos'] if p else '–':>5}   Impr {r['impr'] if r else 0}  Klicks {r['clicks'] if r else 0}")
+        for grp, terms in TARGET_GROUPS.items():
+            print(f"  [{grp}]")
+            seen = False
+            for t in terms:
+                r = g["queries"].get(t); p = pg.get("queries", {}).get(t)
+                if r or p:
+                    seen = True
+                    print(f"    {t:24} Pos {r['pos'] if r else '–':>5} | {p['pos'] if p else '–':>5}   Impr {r['impr'] if r else 0}  Klicks {r['clicks'] if r else 0}")
+            if not seen:
+                print("    (keine Einblendungen)")
+        neu = [q for q, r in g["queries"].items() if q not in TARGETS and r["impr"] >= 2 and r["pos"] > 3]
+        print("\nNicht verfolgte Anfragen mit >=2 Einblendungen und Pos > 3 (Kandidaten für TARGETS):")
+        for q in sorted(neu, key=lambda q: -g["queries"][q]["impr"])[:15]:
+            print(f"    {q[:35]:35} Pos {g['queries'][q]['pos']:>5}  Impr {g['queries'][q]['impr']}")
         print("\nTop-Suchanfragen nach Impressionen:")
         for q, r in sorted(g["queries"].items(), key=lambda x: -x[1]["impr"])[:15]:
             print(f"  {q[:35]:35} Pos {r['pos']:>5}  Impr {r['impr']}  Klicks {r['clicks']}")
