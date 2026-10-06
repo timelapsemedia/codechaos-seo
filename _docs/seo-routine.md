@@ -5,6 +5,15 @@ Ziel: Platz 1 bei Google und Bing für die Zielbegriffe, vor allem im DACH-Raum:
 
 Beobachtet werden zusätzlich alle Begriffe in `TARGET_GROUPS` (`_build/seo_snapshot.py`, Gruppen Genre, Mastering, Crucible, Marke; ca. 39 Begriffe). Der Bericht gruppiert danach. Das Skript listet außerdem nicht verfolgte Anfragen mit ≥2 Einblendungen und Position > 3: relevante davon in `TARGET_GROUPS` aufnehmen, Rauschen (Tippfehler, fremde Begriffe) ignorieren. Mastering- und Crucible-Gruppe haben Vorrang, weil sie Umsatz bringen.
 
+## Auftrag: Platz 1 bei allen Begriffen in `TARGET_GROUPS`, vollautomatisch
+
+Die Routine arbeitet selbstständig und ohne Rückfrage auf dieses Ziel hin. Jeden Tag:
+1. Begriffe mit dem größten Abstand zu Platz 1 und dem höchsten Geschäftswert wählen (Reihenfolge: Mastering, Crucible, Marke, Genre). Begriffe ohne Einblendungen sind Inhaltslücken: prüfen, ob es eine passende Seite gibt, die den Begriff sachlich abdeckt (Überschrift, Abschnitt, FAQ, interner Link mit Ankertext); wenn nicht, eine Seite oder einen Abschnitt für die echte Suchabsicht anlegen (keine Doorway-Seiten, nur belegbare Fakten).
+2. Nicht indexierte URLs vorrangig behandeln (interne Links von indexierten Seiten, Sitemap, IndexNow, Bing/Google-Einreichung), weil ohne Indexierung kein Ranking möglich ist.
+3. Pro Tag 1–2 Änderungen, 7-Tage-Sperre pro Seite, erst ab ca. 7 Tagen Messdaten Wirkung bewerten. Was belegbar hilft, ausbauen; was nicht, nach Messgrund anpassen.
+4. Ein Begriff gilt als erledigt, wenn er 7 Tage lang Position 1 hat; dann nur noch beobachten.
+5. Offline-Hebel, die nur der Nutzer erledigen kann (Backlinks, Discogs/MusicBrainz-Einträge, Profile), im Bericht nennen.
+
 ## Ablauf (täglich 08:52; montags mit Wochenüberblick)
 
 1. **Messen:** `python3 _build/seo_snapshot.py`
