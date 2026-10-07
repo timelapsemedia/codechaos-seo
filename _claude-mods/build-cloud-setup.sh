@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 names=$(python3 -c "import json;print(' '.join(p['name'] for p in json.load(open('.claude-plugin/marketplace.json'))['plugins']))")
-payload=$(tar --exclude='./cloud-setup.sh' --exclude='./build-cloud-setup.sh' --exclude='*/tests' --exclude='*/__pycache__' -czf - . | base64 -w0)
+payload=$(tar --exclude='./cloud-setup.sh' --exclude='./build-cloud-setup.sh' --exclude='./tim-mods.tar.gz' --exclude='*/tests' --exclude='*/__pycache__' -czf - . | base64 -w0)
 {
   printf '%s\n' '#!/usr/bin/env bash' \
     '# Claude-Code-Mods (tim-mods) für Cloud-Sessions installieren.' \
