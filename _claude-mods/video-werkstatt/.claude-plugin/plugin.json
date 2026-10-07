@@ -1,0 +1,6 @@
+{
+  "name": "video-werkstatt",
+  "version": "0.1.0",
+  "description": "Messwerkzeuge für Videoschnitt, Shorts/Reels und Untertitel: Format, Seitenverhältnis, fps, Ton-Lautheit, Schwarzbilder, Schnitte, Kontaktbogen zum Ansehen, Plattform-Check, SRT/VTT-Prüfung. Läuft auch in Cloud-Sessions.",
+  "author": { "name": "Tim Borchert" }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "pruefer",
+  "version": "0.2.0",
+  "description": "Fertig heißt fertig: hält eine Abgabe ohne Belege (Test/Build/Typcheck nach der letzten Änderung) höchstens zweimal an; Seitenpanel, Learnings pro Projekt, /pruefer.",
+  "author": {
+    "name": "Tim Borchert"
+  },
+  "types": "./types/index.d.ts"
+}

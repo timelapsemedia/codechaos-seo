@@ -1,0 +1,6 @@
+{
+  "name": "audio-labor",
+  "version": "0.1.0",
+  "description": "Messwerkzeuge für Musikproduktion und Mastering: LUFS, LRA, True Peak, Crest, Stereo, Frequenzbalance, Clipping, Spektrogramm, Vorher/Nachher – mit Zielprofilen (Streaming, Hitech/Psy, Metal). Läuft auch in Cloud-Sessions.",
+  "author": { "name": "Tim Borchert" }
+}

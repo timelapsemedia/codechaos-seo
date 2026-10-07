@@ -1,0 +1,6 @@
+{
+  "name": "insta-publisher",
+  "version": "0.1.0",
+  "description": "Instagram ohne Token im Prompt: Zugang sicher hinterlegen (oder aus Umgebungsvariable), Bild/Karussell/Reel UTF-8-sicher veröffentlichen, Live-Prüfung, Wiederholung bei Ratenlimit, Insights, Token verlängern.",
+  "author": { "name": "Tim Borchert" }
+}

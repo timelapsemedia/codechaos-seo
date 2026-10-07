@@ -1,0 +1,6 @@
+{
+  "name": "raritaeten-jaeger",
+  "version": "0.1.0",
+  "description": "Für die Suche nach seltenen CDs/Tapes/Platten: Suchlinks je Plattform (mit Hinweis, welche Seiten Server-Abrufe blocken), ein Suchgedächtnis über Sessions hinweg, damit nichts doppelt gesucht wird, und eine Fundliste.",
+  "author": { "name": "Tim Borchert" }
+}

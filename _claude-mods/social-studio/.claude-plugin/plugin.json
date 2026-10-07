@@ -1,0 +1,6 @@
+{
+  "name": "social-studio",
+  "version": "0.1.0",
+  "description": "Social-Media-Werkzeuge: Bilder/Karussells gegen Instagram/TikTok/Story/Etsy-Formate prüfen (echte Maße per ImageMagick), Texte gegen Zeichen-, Hashtag- und Tag-Grenzen prüfen, Warnung bei Heil-/Wirkversprechen. Läuft auch in Cloud-Sessions.",
+  "author": { "name": "Tim Borchert" }
+}
