@@ -1,0 +1,1 @@
+https://github.com/digitalsamba/claude-code-video-toolkit/tree/main/.claude/skills/ffmpeg

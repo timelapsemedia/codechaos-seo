@@ -1,0 +1,1 @@
+https://github.com/addyosmani/web-quality-skills/tree/main/skills/core-web-vitals

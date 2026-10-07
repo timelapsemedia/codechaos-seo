@@ -66,6 +66,11 @@
       "name": "raritaeten-jaeger",
       "source": "./raritaeten-jaeger",
       "description": "Seltene CDs/Tapes: Suchlinks, Suchgedächtnis über Sessions, Fundliste"
+    },
+    {
+      "name": "tim-skills",
+      "source": "./tim-skills",
+      "description": "Kuratierte Agent-Skills: SEO/GEO, Marketing, Social, Video/Shorts, Motion Graphics, DaVinci, Ableton, Etsy, Webdesign"
     }
   ]
 }
