@@ -25,7 +25,7 @@ Diese Mods laufen auch in Cloud-Sessions, weil sie nichts zeichnen müssen. Sie 
 |---|---|---|
 | `limit-cockpit` | Leiste mit 5h-Limit, Reset-Zeit und Kontext; Warnung ab 75 % Wochenlimit; die größten Token-Treiber, getrennt nach gemessen und geschätzt | `/handoff`, `/cockpit` |
 | `pruefer` | Hält eine Abgabe ohne Beleg höchstens 2× an. Die Messwerkzeuge oben zählen als Beleg. Seitenpanel, Learnings pro Projekt. | `/pruefer` |
-| `schutzschild` | Fragt vor riskanten Schritten nach. Versteht Windows-Pfade. Mustererkennung, also kein vollständiger Schutz. | `/schutzschild` |
+| `schutzschild` | Fragt **nie** nach: Riskante Schritte (Löschen, Force-Push, Reset, DB leeren, .env, Dateien außerhalb des Projekts) lehnt sie ab und nennt Claude einen umkehrbaren Weg. Löschen in Temp-Ordnern ist erlaubt, deshalb bleiben Routinen nicht mehr hängen. Versteht Windows-Pfade. Mustererkennung, also kein vollständiger Schutz. | `/schutzschild` |
 | `spar-modus` | **Experiment, standardmäßig aus.** Schickt leichte Schritte an Haiku und zeigt „Ersparnis unbekannt“. | `/sparmodus` |
 | `studio-kompass` | Regeln je Arbeitsbereich mit deinen Vorgaben: Deutsch; vor der Abgabe selbst prüfen; 5 Hashtags und KI-Hinweis; nur echte Produkte; DaVinci-Regeln. Dazu Warnung, wenn ein Geheimnis im Chat steht. | `/studio`, `/dateien` |
 

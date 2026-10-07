@@ -24,8 +24,31 @@ const TEMP = /^(\/tmp\/|\/private\/tmp\/|\/var\/folders\/|\/private\/var\/folder
 
 const EDIT_TOOLS = new Set(['Edit', 'Write', 'MultiEdit', 'NotebookEdit'])
 
+const LOESCHEN = new Set(['Dateien oder Ordner löschen', 'Dateien per „find … -delete“ massenhaft löschen'])
+const TEMP_UNIX = /^\/(tmp|private\/tmp|var\/folders|private\/var\/folders)\//
+
+/** Löschen nur in Temp-Ordnern (z. B. Scratchpad): jedes Ziel absolut unter /tmp o. Ä. oder nach „cd <Temp-Ordner> &&“; kein .., ~, $ oder `. */
+function nurTemp(command: string): boolean {
+  if (/(\.\.|~|\$|`)/.test(command) || /[\n;|]/.test(command.replace(/&&/g, ''))) return false
+  let cdTemp = false
+  for (const w of command.split('&&').map(t => t.trim().split(/\s+/))) {
+    const args = w.slice(1).filter(a => !a.startsWith('-')).map(a => a.replace(/['"]/g, ''))
+    if (w[0] === 'cd') {
+      if (args.length !== 1 || !TEMP_UNIX.test(args[0]! + '/')) return false
+      cdTemp = true
+    } else if (w[0] === 'rm' || w[0] === 'rmdir' || w[0] === 'find') {
+      const ziele = w[0] === 'find' ? args.slice(0, 1) : args
+      if (ziele.length === 0) return false
+      for (const z of ziele) if (z.startsWith('/') ? !TEMP_UNIX.test(z) : !cdTemp) return false
+    }
+  }
+  return true
+}
+
 export function assessBash(command: string): Risk | undefined {
-  return BASH.find(r => r.re.test(command))?.risk
+  const treffer = BASH.filter(r => r.re.test(command))
+  if (treffer.length && treffer.every(r => LOESCHEN.has(r.risk.was)) && nurTemp(command)) return undefined
+  return treffer[0]?.risk
 }
 
 const isWin = (p: string) => /^[a-zA-Z]:[\\/]/.test(p) || p.includes('\\')
@@ -123,21 +146,8 @@ export const register: Register = on => {
     if (!risk) return next(e)
 
     await bump($, 'halted')
-    const detail = e.tool === 'Bash' ? `\nBefehl: ${e.command.slice(0, 300)}` : ''
-    let answer: string
-    try {
-      answer = await $.ui.ask(
-        `🛡 Claude möchte: ${risk.was}.${detail}\nDabei kann verloren gehen: ${risk.verlust}.\nRückgängig machen: ${risk.rueckgaengig}.\nSoll Claude das ausführen?`,
-        { header: 'Schutzschild', options: ['Nein, abbrechen', 'Ja, ausführen'] },
-      )
-    } catch {
-      return { deny: `schutzschild: „${risk.was}“ wurde nicht bestätigt (keine Rückfrage möglich oder abgelehnt). Frag den Nutzer oder nimm einen sichereren Weg.` }
-    }
-    if (answer !== 'Ja, ausführen') {
-      return { deny: `schutzschild: Der Nutzer hat „${risk.was}“ abgelehnt. Nicht erneut versuchen, ohne nachzufragen.` }
-    }
-    // Bestätigt: weiter durch die normalen Berechtigungsregeln (nichts wird pauschal erlaubt).
-    return next(e)
+    // Nie nachfragen (Tims ausdrückliche Vorgabe; in Routinen kann ohnehin niemand antworten): ablehnen und einen umkehrbaren Weg nennen.
+    return { deny: `schutzschild: „${risk.was}“ nicht ausgeführt. Dabei ginge verloren: ${risk.verlust}; rückgängig: ${risk.rueckgaengig}. Nimm einen umkehrbaren Weg (z. B. in einen Ordner _papierkorb verschieben statt löschen, normaler Push statt Force-Push, committen oder stashen statt verwerfen). Löschen in Temp-Ordnern (/tmp, Scratchpad) ist erlaubt. Frag nicht nach; ist der Schritt unverzichtbar, nenne ihn im Bericht, damit der Nutzer ihn selbst ausführt oder /schutzschild ausschaltet.` }
   }).catch(($, e, next) => (next.called ? next(e) : { deny: `schutzschild: Risikoprüfung fehlgeschlagen (${next.error?.kind ?? 'Fehler'}) – Schritt blockiert.` }))
 
   on('command.run', { command: 'schutzschild' }, async $ => {

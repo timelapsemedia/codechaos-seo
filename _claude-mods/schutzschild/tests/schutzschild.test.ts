@@ -50,30 +50,28 @@ function boot(on: any, answer: string | 'reject' | 'fail-root') {
   return ran
 }
 
-test('Harmloses läuft ohne Rückfrage; riskant + bestätigt läuft', async ($, on) => {
+test('Harmloses läuft; Riskantes wird ohne Rückfrage abgelehnt', async ($, on) => {
   const ran = boot(on, 'Ja, ausführen')
   await $.session.start({ cwd: '/proj/test-ordner' } as never)
   expect((await $.tool.call({ tool: 'Bash', command: 'ls' } as never)).deny).toBeUndefined()
-  expect((await $.tool.call({ tool: 'Bash', command: 'rm dummy.txt' } as never)).deny).toBeUndefined()
-  expect(ran).toEqual(['ls', 'rm dummy.txt'])
-  const r = await $.command.run({ command: 'schutzschild', args: '' } as never)
-  expect(r.text).toContain('2 Schritte geprüft, 1 angehalten')
+  const r = await $.tool.call({ tool: 'Bash', command: 'rm dummy.txt' } as never)
+  expect(r.deny).toContain('nicht ausgeführt')
+  expect(r.deny).toContain('_papierkorb')
+  const w = await $.tool.call({ tool: 'Write', file_path: '/proj/test-ordner/.env', content: 'X=1' } as never)
+  expect(w.deny).toContain('nicht ausgeführt')
+  expect(ran).toEqual(['ls'])  // kein AskUserQuestion, nichts Riskantes ausgeführt
+  const c = await $.command.run({ command: 'schutzschild', args: '' } as never)
+  expect(c.text).toContain('3 Schritte geprüft, 2 angehalten')
 })
 
-test('Riskant + abgelehnt: blockiert', async ($, on) => {
-  const ran = boot(on, 'Nein, abbrechen')
-  await $.session.start({ cwd: '/proj/test-ordner' } as never)
-  const r = await $.tool.call({ tool: 'Bash', command: 'git reset --hard' } as never)
-  expect(r.deny).toContain('abgelehnt')
-  expect(ran).toEqual([])
-})
-
-test('Keine Rückfrage möglich: blockiert', async ($, on) => {
+test('Löschen in Temp-Ordnern läuft, sonst nicht', async ($, on) => {
   const ran = boot(on, 'reject')
   await $.session.start({ cwd: '/proj/test-ordner' } as never)
-  const r = await $.tool.call({ tool: 'Write', file_path: '/proj/test-ordner/.env', content: 'X=1' } as never)
-  expect(r.deny).toContain('nicht bestätigt')
-  expect(ran).toEqual([])
+  for (const c of ['rm -rf /tmp/claude-0/x/scratchpad/alt', 'cd /tmp/claude-0/s/scratchpad/scout && find rules -size -20c -delete'])
+    expect((await $.tool.call({ tool: 'Bash', command: c } as never)).deny, c).toBeUndefined()
+  for (const c of ['rm -rf /tmp/../home/u', 'rm -rf /tmp/x ~/y', 'cd /tmp/x && rm -rf /home/u', 'rm -rf build', 'cd /tmp && git reset --hard', 'rm -rf /tmp/$X', 'cd /tmp/x; rm -rf y'])
+    expect((await $.tool.call({ tool: 'Bash', command: c } as never)).deny, c).toContain('nicht ausgeführt')
+  expect(ran).toHaveLength(2)
 })
 
 test('Risikoprüfung fehlgeschlagen: blockiert mit Fehler', async ($, on) => {
