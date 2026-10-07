@@ -8,6 +8,7 @@ Hinweis: `after-effects`, `davinci-resolve`, `lottie` stammen aus einem großen,
 
 | Skill | Wofür | Quelle | Lizenz |
 |---|---|---|---|
+| `accessibility` | Barrierefreiheit nach WCAG 2.2 prüfen und beheben (Kontraste, Tastatur, Formulare, ARIA, Screenreader; relevant fürs BFSG) | https://github.com/addyosmani/web-quality-skills/tree/main/skills/accessibility | mitgeliefert (LICENSE.upstream, MIT) |
 | `ad-creative` | When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid | https://github.com/coreyhaines31/marketingskills/tree/main/skills/ad-creative | mitgeliefert (LICENSE.upstream) |
 | `after-effects` | >- | https://github.com/TerminalSkills/skills/tree/main/skills/after-effects | mitgeliefert (LICENSE.upstream) |
 | `ai-seo` | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user  | https://github.com/coreyhaines31/marketingskills/tree/main/skills/ai-seo | mitgeliefert (LICENSE.upstream) |
@@ -21,9 +22,11 @@ Hinweis: `after-effects`, `davinci-resolve`, `lottie` stammen aus einem großen,
 | `ffmpeg` | Video and audio processing with FFmpeg. Use for format conversion, resizing, compression, audio extraction, and preparing assets for Remotio | https://github.com/digitalsamba/claude-code-video-toolkit/tree/main/.claude/skills/ffmpeg | mitgeliefert (LICENSE.upstream) |
 | `frontend-design` | Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typog | https://github.com/anthropics/skills/tree/main/skills/frontend-design | siehe Quelle |
 | `gsap-core` | Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, pref | https://github.com/greensock/gsap-skills/tree/main/skills/gsap-core | mitgeliefert (LICENSE.upstream) |
+| `gsap-performance` | GSAP-Animationen ruckelfrei halten (Transforms, quickTo, will-change, Batching) | https://github.com/greensock/gsap-skills/tree/main/skills/gsap-performance | mitgeliefert (LICENSE.upstream, MIT) |
 | `gsap-plugins` | Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, Scramble | https://github.com/greensock/gsap-skills/tree/main/skills/gsap-plugins | mitgeliefert (LICENSE.upstream) |
 | `gsap-scrolltrigger` | Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based a | https://github.com/greensock/gsap-skills/tree/main/skills/gsap-scrolltrigger | mitgeliefert (LICENSE.upstream) |
 | `gsap-timeline` | Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback. Use when sequencing animations, choreographing k | https://github.com/greensock/gsap-skills/tree/main/skills/gsap-timeline | mitgeliefert (LICENSE.upstream) |
+| `gsap-utils` | gsap.utils-Helfer: clamp, mapRange, random, snap, wrap, interpolate, pipe | https://github.com/greensock/gsap-skills/tree/main/skills/gsap-utils | mitgeliefert (LICENSE.upstream, MIT) |
 | `humanizer` | / | https://github.com/blader/humanizer/tree/main/ | siehe Quelle |
 | `lottie` | >- | https://github.com/TerminalSkills/skills/tree/main/skills/lottie | mitgeliefert (LICENSE.upstream) |
 | `manimce-best-practices` | / | https://github.com/adithya-s-k/manim_skill/tree/main/skills/manimce-best-practices | mitgeliefert (LICENSE.upstream) |
