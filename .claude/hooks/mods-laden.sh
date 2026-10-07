@@ -8,7 +8,7 @@ ZIEL="${HOME}/.claude/skills"
 QUELLE="${CLAUDE_PROJECT_DIR:-$PWD}/_claude-mods"
 if [ ! -f "$QUELLE/.claude-plugin/marketplace.json" ]; then
   TMP="$(mktemp -d)"
-  if curl -fsSL --max-time 60 "${TIM_MODS_URL:-https://raw.githubusercontent.com/timelapsemedia/codechaos-seo/main/_claude-mods/tim-mods.tar.gz}" | tar -xz -C "$TMP" 2>/dev/null; then
+  if curl -fsSL --max-time 60 "${TIM_MODS_URL:-https://raw.githubusercontent.com/timelapsemedia/codechaos-seo/refs/heads/main/_claude-mods/tim-mods.tar.gz}" | tar -xz -C "$TMP" 2>/dev/null; then
     QUELLE="$TMP"
   else
     QUELLE=""
