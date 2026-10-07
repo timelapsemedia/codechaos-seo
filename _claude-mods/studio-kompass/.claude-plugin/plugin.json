@@ -1,6 +1,8 @@
 {
   "name": "studio-kompass",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Für Musik, Mastering, Video/Untertitel, Motion, Social Media, SEO/Marketing, Etsy und Recherche: Arbeitsregeln je Bereich, automatische Prüfungen (SRT/VTT, HTML-SEO, Captions), Geheimnis-Warnung, volle Dateipfade, Cloud/Lokal-Hinweis. Läuft auch in Cloud-Sessions.",
-  "author": { "name": "Tim Borchert" }
+  "author": {
+    "name": "Tim Borchert"
+  }
 }

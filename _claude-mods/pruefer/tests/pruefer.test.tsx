@@ -120,3 +120,13 @@ test('Schwierige Antwort (≥5 Dateien): Zweitprüfung läuft sichtbar und kann 
   expect((await $.classic.Stop(stop('Fertig.', { stop_hook_active: true }))).block).toBeUndefined()
   expect(asked).toBe(1)
 })
+
+test('Mess-Werkzeuge anderer Mods zählen als Beleg', async ($, on) => {
+  boot(on)
+  await $.session.start({ cwd: '/proj/demo' } as never)
+  await $.turn.start({ text: 'Master fertig machen', turnId: 't1' })
+  await $.tool.call({ tool: 'Write', file_path: '/proj/demo/master.py', content: 'x' } as never)
+  expect((await $.classic.Stop(stop('Fertig.'))).block).toBeDefined()
+  await $.tool.call({ tool: 'mcp__audio-labor__messen', datei: '/proj/demo/out.wav' } as never)
+  expect((await $.classic.Stop(stop('Fertig.', { stop_hook_active: true }))).block).toBeUndefined()
+})

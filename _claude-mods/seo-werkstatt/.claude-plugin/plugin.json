@@ -1,0 +1,6 @@
+{
+  "name": "seo-werkstatt",
+  "version": "0.1.0",
+  "description": "SEO-Werkzeuge: Seite prüfen (Status, Weiterleitungen, Title, Description, canonical, hreflang, robots, OG, JSON-LD, h1, alt, Links) und Sitemap prüfen (alle URLs auf HTTP-Status). Läuft auch in Cloud-Sessions.",
+  "author": { "name": "Tim Borchert" }
+}

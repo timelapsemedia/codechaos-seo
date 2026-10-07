@@ -33,6 +33,7 @@ export const CHECK = new RegExp(
     String.raw`(^|[;&|]\s*)make(\s|$)`,
     String.raw`\b(node|deno|bun|python3?|ruby|php|bash|sh|lua|luajit)\s+(--check\s+|-n\s+)?[\w./-]+\.(m?js|cjs|ts|py|rb|php|sh|lua)\b`,
     String.raw`\bcurl\s+.*\b(localhost|127\.0\.0\.1)\b`,
+    String.raw`\bpy\s+(-3\s+)?[\w./\\-]+\.py\b`,
   ].join('|'),
 )
 
@@ -47,6 +48,8 @@ export const HONEST = /nicht\s+(getestet|geprüft|ausgeführt|verifiziert)|unget
 export const CLAIM = /funktioniert|läuft\s+(jetzt|wieder)|ist\s+(fertig|behoben|gefixt)|erledigt|getestet|works|fixed|passes|done\b/i
 
 const EDIT_TOOLS = new Set(['Edit', 'Write', 'MultiEdit', 'NotebookEdit'])
+/** Mess-/Prüfwerkzeuge der anderen Mods zählen als Beleg. */
+export const MESS_TOOL = /^mcp__(audio-labor|video-werkstatt|seo-werkstatt|social-studio)__(messen|vergleichen|midi_pruefen|lua_pruefen|analysieren|standbilder|untertitel_pruefen|seite_pruefen|sitemap_pruefen|site_pruefen|text_pruefen|bilder_pruefen)$/
 
 // Zustand des laufenden Turns; ein Reload beginnt ihn neu.
 let seq = 0
@@ -172,6 +175,11 @@ export const register: Register = on => {
       await update($, view, v => ({ ...v, files: v.files.includes(path) ? v.files : [...v.files, path], checks: v.checks.map(c => ({ ...c, afterEdit: false })) }))
     } else if (e.tool === 'Bash' && r.deny === undefined && !e.run_in_background && CHECK.test(e.command)) {
       const check: Check = { cmd: e.command.trim().split('\n')[0] ?? e.command, ok: r.isError !== true, seq, afterEdit: true }
+      await update($, view, v => ({ ...v, checks: [...v.checks, check].slice(-40) }))
+    } else if (MESS_TOOL.test(String(e.tool)) && r.deny === undefined) {
+      const text = typeof r.text === 'string' ? r.text : String(r.result ?? '')
+      const ok = !r.isError && !/"fehler"|^Fehler|FEHLER/.test(text)
+      const check: Check = { cmd: String(e.tool).replace(/^mcp__/, '').replace('__', ': '), ok, seq, afterEdit: true }
       await update($, view, v => ({ ...v, checks: [...v.checks, check].slice(-40) }))
     } else if (e.tool === 'AskUserQuestion') {
       askedUser = true

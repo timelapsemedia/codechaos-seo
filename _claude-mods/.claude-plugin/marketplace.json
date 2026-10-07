@@ -4,7 +4,7 @@
     "name": "Tim Borchert"
   },
   "metadata": {
-    "description": "Tims Claude-Code-Mods: Limits, Prüfer, Schutzschild, Spar-Modus (Experiment), Studio-Kompass"
+    "description": "Tims Claude-Code-Mods: Limits, Prüfer, Schutzschild, Spar-Modus (Experiment), Studio-Kompass und Werkzeug-Mods für Audio, Video, SEO, Social, Instagram, Windows und Raritäten"
   },
   "plugins": [
     {
@@ -31,6 +31,41 @@
       "name": "studio-kompass",
       "source": "./studio-kompass",
       "description": "Arbeitsbereiche, Prüfungen, Geheimnis-Warnung, volle Pfade; auch in Cloud-Sessions"
+    },
+    {
+      "name": "audio-labor",
+      "source": "./audio-labor",
+      "description": "Musik & Mastering: LUFS/True Peak/LRA/Stereo/Frequenzen/Klicks messen, Vorher/Nachher, MIDI- und Lua-Prüfung, Kontrolle vor dem Versand"
+    },
+    {
+      "name": "video-werkstatt",
+      "source": "./video-werkstatt",
+      "description": "Video, Shorts & Untertitel: messen, Plattform-Check, Standbilder mit Safe-Area, Hochkant-Untertitel erzeugen/einbrennen, Transkription, Kontrolle vor dem Versand"
+    },
+    {
+      "name": "seo-werkstatt",
+      "source": "./seo-werkstatt",
+      "description": "SEO: Seite, Sitemap und lokalen Website-Ordner prüfen (kaputte Links, .jpg/.jpeg, hreflang, div-Balance)"
+    },
+    {
+      "name": "social-studio",
+      "source": "./social-studio",
+      "description": "Social Media: Captions/Titel/Etsy-Tags und Bilder/Karussells gegen Plattformgrenzen prüfen, 5 Hashtags, KI-Hinweis, Heilversprechen-Warnung"
+    },
+    {
+      "name": "insta-publisher",
+      "source": "./insta-publisher",
+      "description": "Instagram ohne Token im Prompt: posten (Bild/Karussell/Reel), Live-Prüfung, Insights, Token verlängern"
+    },
+    {
+      "name": "windows-helfer",
+      "source": "./windows-helfer",
+      "description": "Git Bash auf Windows: python3→python, UTF-8, pip-Hinweise bei fehlenden Modulen, curl-Umlaut-Warnung"
+    },
+    {
+      "name": "raritaeten-jaeger",
+      "source": "./raritaeten-jaeger",
+      "description": "Seltene CDs/Tapes: Suchlinks, Suchgedächtnis über Sessions, Fundliste"
     }
   ]
 }

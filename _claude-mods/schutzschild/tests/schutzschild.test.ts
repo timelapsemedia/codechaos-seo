@@ -83,3 +83,13 @@ test('Risikoprüfung fehlgeschlagen: blockiert mit Fehler', async ($, on) => {
   expect(r.deny).toContain('fehlgeschlagen')
   expect(ran).toEqual([])
 })
+
+test('Windows-Pfade (Git Bash auf dem PC)', async () => {
+  expect(assessPath('C:\\hitech-lab\\audit.py', 'C:\\hitech-lab')).toBeUndefined()
+  expect(assessPath('c:/Hitech-Lab/sub/a.py', 'C:\\hitech-lab')).toBeUndefined()
+  expect(assessPath('D:\\andere\\datei.txt', 'C:\\hitech-lab')?.was).toContain('außerhalb')
+  expect(assessPath('C:\\hitech-lab-alt\\x.py', 'C:\\hitech-lab')?.was).toContain('außerhalb')
+  expect(assessPath('C:\\Users\\Tim\\AppData\\Local\\Temp\\x.txt', 'C:\\hitech-lab')).toBeUndefined()
+  expect(assessPath('C:\\hitech-lab\\.env', 'C:\\hitech-lab')?.was).toContain('.env')
+  expect(assessPath('src\\a.py', 'C:\\hitech-lab')).toBeUndefined()
+})

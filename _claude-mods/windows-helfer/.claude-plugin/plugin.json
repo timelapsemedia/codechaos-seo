@@ -1,0 +1,6 @@
+{
+  "name": "windows-helfer",
+  "version": "0.1.0",
+  "description": "Für Git Bash auf Windows (und überall): python3→python, UTF-8 für Python erzwingen, bei fehlenden Modulen den richtigen pip-Befehl nennen, Hinweis bei curl mit Umlauten/Emojis.",
+  "author": { "name": "Tim Borchert" }
+}

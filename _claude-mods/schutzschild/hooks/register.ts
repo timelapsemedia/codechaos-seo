@@ -19,8 +19,8 @@ const BASH: Rule[] = [
   { re: /\b(mkfs(\.\w+)?|dd\s+[^\n]*\bof=\/dev\/|diskutil\s+erase\w*|chmod\s+-R\s+0*0{3}\b|chown\s+-R\s+\S+\s+\/(\s|$))/, risk: { was: 'Datenträger oder Rechte im großen Stil verändern', verlust: 'Daten auf dem Datenträger oder Zugriff auf Dateien', rueckgaengig: 'kaum' } },
 ]
 
-const SECRET_FILE = /(^|\/)(\.env(\.[\w.-]+)?|\.npmrc|\.netrc|\.pypirc|credentials(\.json)?|secrets?\.(json|ya?ml|toml)|id_(rsa|ed25519|ecdsa)|[\w.-]+\.(pem|key|p12|pfx|keystore))$/i
-const TEMP = /^(\/tmp\/|\/private\/tmp\/|\/var\/folders\/|\/private\/var\/folders\/)/
+const SECRET_FILE = /(^|[\/\\])(\.env(\.[\w.-]+)?|\.npmrc|\.netrc|\.pypirc|credentials(\.json)?|secrets?\.(json|ya?ml|toml)|id_(rsa|ed25519|ecdsa)|[\w.-]+\.(pem|key|p12|pfx|keystore))$/i
+const TEMP = /^(\/tmp\/|\/private\/tmp\/|\/var\/folders\/|\/private\/var\/folders\/|[a-z]:\/users\/[^/]+\/appdata\/local\/temp\/|[a-z]:\/windows\/temp\/)/i
 
 const EDIT_TOOLS = new Set(['Edit', 'Write', 'MultiEdit', 'NotebookEdit'])
 
@@ -28,21 +28,31 @@ export function assessBash(command: string): Risk | undefined {
   return BASH.find(r => r.re.test(command))?.risk
 }
 
+const isWin = (p: string) => /^[a-zA-Z]:[\\/]/.test(p) || p.includes('\\')
+
+/** Vereinheitlicht /unix/pfade und C:\\windows\\pfade (Laufwerk klein, Schrägstriche vorwärts). */
 function normalize(p: string): string {
+  const win = isWin(p)
+  let rest = p.replace(/\\/g, '/')
+  let prefix = ''
+  const drive = rest.match(/^([a-zA-Z]):\//)
+  if (drive) { prefix = drive[1]!.toLowerCase() + ':'; rest = rest.slice(2) }
   const out: string[] = []
-  for (const part of p.split('/')) {
+  for (const part of rest.split('/')) {
     if (part === '' || part === '.') continue
     if (part === '..') out.pop()
-    else out.push(part)
+    else out.push(win ? part.toLowerCase() : part)
   }
-  return '/' + out.join('/')
+  return prefix + '/' + out.join('/')
 }
+
+const isAbs = (p: string) => p.startsWith('/') || /^[a-zA-Z]:[\\/]/.test(p) || p.startsWith('\\\\')
 
 export function assessPath(path: string, root: string): Risk | undefined {
   if (SECRET_FILE.test(path)) {
     return { was: `Die Geheimnis-Datei „${path.split('/').pop()}“ ändern oder überschreiben`, verlust: 'Passwörter/Schlüssel darin, falls sie ersetzt werden', rueckgaengig: 'nein, solche Dateien sind meist nicht in Git' }
   }
-  const abs = normalize(path.startsWith('/') ? path : `${root}/${path}`)
+  const abs = normalize(isAbs(path) ? path : `${root}/${path}`)
   const base = normalize(root)
   if (abs !== base && !abs.startsWith(base + '/') && !TEMP.test(abs)) {
     return { was: `Eine Datei außerhalb des Projekts ändern: ${abs}`, verlust: 'der bisherige Inhalt dieser Datei', rueckgaengig: 'nur, wenn die Datei woanders gesichert ist' }
