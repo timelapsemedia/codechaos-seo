@@ -1,5 +1,7 @@
 # tim-skills – kuratierte Agent-Skills
 
+Wird wöchentlich von der Routine „Wöchentlicher Skill-Scout“ erweitert – Ablauf: [SCOUT.md](SCOUT.md), bisher Geprüftes: [SCOUT-LOG.md](SCOUT-LOG.md).
+
 Ausgewählt und geprüft am 2026-10-07 (Lizenz vorhanden, keine Telemetrie, kein `curl | bash`, keine Datenweitergabe ohne Zutun).
 Die Skills stammen unverändert von den jeweiligen Autoren; Lizenzen liegen je Ordner als `LICENSE.upstream` bei.
 Hinweis: `after-effects`, `davinci-resolve`, `lottie` stammen aus einem großen, automatisch erzeugten Katalog – API-Details vor Gebrauch prüfen.
