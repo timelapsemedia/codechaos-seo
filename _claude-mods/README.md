@@ -43,23 +43,28 @@ claude plugin install spar-modus@tim-mods   # optional, Experiment, startet ausg
 Danach in einer laufenden Sitzung `/reload-plugins` eingeben. `/plugin` zeigt, welche Mods aktiv sind.
 Auf dem PC werden zusätzlich gebraucht: ffmpeg und ffprobe im PATH, Python 3 und für `lua_pruefen` node. Für `transkribieren`: `python -m pip install faster-whisper`.
 
-## Installieren – für alle Cloud-Sessions, egal welches Repo
+## Installieren – automatisch in allen Sessions deiner Repos (so ist es eingerichtet)
 
-Cloud-Sessions übernehmen weder lokale Plugins noch `enabledPlugins` aus Repo-Einstellungen. Nur das **Setup-Skript der Cloud-Umgebung** kommt an:
+Jedes dieser Repos hat einen SessionStart-Hook (`.claude/settings.json` und `.claude/hooks/mods-laden.sh`): codechaos-seo, polished, heartwarrior-apps, code-chaos-site, keinduftbaum-social, rarity-hunter und Crucible.
+Beim Start jeder Session kopiert der Hook die Mods nach `~/.claude/skills/<mod>`, wo Claude Code sie als `<mod>@skills-dir` lädt. Die Quelle ist dieser Ordner oder das Paket `tim-mods.tar.gz` (ca. 80 KB) von `main`.
+Das gilt in Cloud-Sessions genauso wie lokal (Windows mit Git Bash, Mac). In echten Cloud-Sessions getestet: Bei codechaos-seo standen 23 Mod-Werkzeuge bereit, bei polished 24.
 
-1. Auf claude.ai/code die Cloud-Umgebung bearbeiten und **Setup script** öffnen.
-2. Den Inhalt von [`cloud-setup.sh`](cloud-setup.sh) einfügen. Er enthält alle Mods eingebettet und braucht kein Netzwerk.
-3. Eine neue Session starten.
+- **Neues Repo dazunehmen:** die zwei Dateien aus `.claude/` dieses Repos hineinkopieren.
+- **Mods aktualisieren:** Mods hier ändern, `./build-cloud-setup.sh` ausführen, nach `main` bringen. Jede neue Session holt dann die neue Version.
+- **Grenze:** Sessions ohne Repo bekommen die Mods nur über das Setup-Skript der Cloud-Umgebung (siehe unten).
+- **Nicht automatisch geladen:** `spar-modus` (Experiment).
 
-Nach Änderungen an den Mods `./build-cloud-setup.sh` ausführen und das neue Skript erneut einfügen.
-Für Instagram in der Cloud: In der Umgebung die Variable `IG_TOKEN` setzen und einmal `ig_zugang_speichern` mit `token_env=IG_TOKEN` aufrufen.
+## Optional – Setup-Skript der Cloud-Umgebung (auch für Sessions ohne Repo)
+
+Auf claude.ai/code die Cloud-Umgebung bearbeiten, **Setup script** öffnen und den Inhalt von [`cloud-setup.sh`](cloud-setup.sh) einfügen.
 
 ## Abschalten
 
 - **Eine Mod:** `/plugin` → Tab **Installed** → deaktivieren, oder `claude plugin disable <mod>@tim-mods`.
 - **Nur die Funktion:** `/pruefer`, `/schutzschild` und `/sparmodus` schalten an und aus.
 - **Alle Mods:** `"disableAllHooks": true` in `~/.claude/settings.json` (stoppt auch Settings-Hooks und Statuszeile), oder einmalig `claude --safe-mode`.
-- **Cloud:** das Setup-Skript entfernen.
+- **Automatisches Laden in einem Repo:** den SessionStart-Hook aus dessen `.claude/settings.json` entfernen.
+- **Cloud-Setup-Skript:** das Setup-Skript entfernen.
 
 ## Ehrliche Grenzen
 
