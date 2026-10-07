@@ -1,0 +1,1 @@
+https://github.com/adamjmurray/producer-pal/tree/main/examples/skills/producer-pal
