@@ -1,0 +1,36 @@
+{
+  "name": "tim-mods",
+  "owner": {
+    "name": "Tim Borchert"
+  },
+  "metadata": {
+    "description": "Tims Claude-Code-Mods: Limits, Prüfer, Schutzschild, Spar-Modus (Experiment), Studio-Kompass"
+  },
+  "plugins": [
+    {
+      "name": "limit-cockpit",
+      "source": "./limit-cockpit",
+      "description": "5h-Limit, Reset, Kontext, Wochenwarnung ab 75 %, Token-Treiber, /handoff"
+    },
+    {
+      "name": "pruefer",
+      "source": "./pruefer",
+      "description": "Fertig heißt fertig: Abgabe nur mit Belegen, Seitenpanel, Learnings, /pruefer"
+    },
+    {
+      "name": "schutzschild",
+      "source": "./schutzschild",
+      "description": "Fragt vor riskanten Schritten nach, /schutzschild"
+    },
+    {
+      "name": "spar-modus",
+      "source": "./spar-modus",
+      "description": "EXPERIMENT, standardmäßig aus: leichte Schritte an Haiku, /sparmodus"
+    },
+    {
+      "name": "studio-kompass",
+      "source": "./studio-kompass",
+      "description": "Arbeitsbereiche, Prüfungen, Geheimnis-Warnung, volle Pfade; auch in Cloud-Sessions"
+    }
+  ]
+}

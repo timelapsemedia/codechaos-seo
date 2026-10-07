@@ -1,0 +1,6 @@
+{
+  "name": "schutzschild",
+  "version": "0.1.0",
+  "description": "Hält riskante Schritte (Löschen, Force-Push, Reset, DB leeren, .env/Secrets, Dateien außerhalb des Projekts) an und fragt in einfachen Worten nach; /schutzschild.",
+  "author": { "name": "Tim Borchert" }
+}

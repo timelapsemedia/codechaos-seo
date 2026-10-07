@@ -1,0 +1,7 @@
+{
+  "name": "spar-modus",
+  "version": "0.1.0",
+  "description": "EXPERIMENT, standardmäßig aus: leichte Zwischenschritte (nur Auswerten von Lese-/Suchergebnissen) an Haiku, alles andere bleibt beim großen Modell; Zähler mit gemessenen Tokens und geschätzten API-Kosten; /sparmodus.",
+  "author": { "name": "Tim Borchert" },
+  "types": "./types/index.d.ts"
+}

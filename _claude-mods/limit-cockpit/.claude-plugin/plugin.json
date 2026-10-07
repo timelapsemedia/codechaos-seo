@@ -1,0 +1,7 @@
+{
+  "name": "limit-cockpit",
+  "version": "0.1.0",
+  "description": "Leiste über dem Prompt: 5-Stunden-Limit, Reset, Kontext, Wochenwarnung ab 75 %; Token-Treiber nach jeder Antwort; Neuer Chat mit Übergabe (/handoff).",
+  "author": { "name": "Tim Borchert" },
+  "types": "./types/index.d.ts"
+}
