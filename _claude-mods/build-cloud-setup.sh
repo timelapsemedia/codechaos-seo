@@ -21,4 +21,6 @@ payload=$(tar --exclude='./cloud-setup.sh' --exclude='./build-cloud-setup.sh' --
     "claude plugin list 2>/dev/null | grep -E '@tim-mods|Status' || true"
 } > cloud-setup.sh
 chmod +x cloud-setup.sh
-echo "cloud-setup.sh: $(wc -c < cloud-setup.sh) Bytes, Mods: ${names}"
+# Kleines Paket für den SessionStart-Hook der Repos (ohne Tests, ohne spar-modus-Sonderbehandlung: das macht der Hook)
+tar --exclude='*/tests' --exclude='*/__pycache__' -czf tim-mods.tar.gz $(for n in ${names}; do printf '%s ' "$n"; done)
+echo "cloud-setup.sh: $(wc -c < cloud-setup.sh) Bytes, tim-mods.tar.gz: $(wc -c < tim-mods.tar.gz) Bytes, Mods: ${names}"
