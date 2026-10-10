@@ -8,6 +8,8 @@ Zugang: ein Wikimedia-Bot-Passwort (Spezial:BotPasswords), nie das normale Passw
   python3 _build/wiki_publish.py wikidata --apply   # Wikidata: Label-Item + Artist-Item anlegen
   python3 _build/wiki_publish.py draft --apply      # Wikipedia: Entwurf unter Benutzer:<Name>/Code Chaos
   python3 _build/wiki_publish.py move --apply       # Entwurf nach „Code Chaos“ verschieben, sobald das Konto das Recht hat
+  python3 _build/wiki_publish.py watch              # Artikel + Diskussion prüfen: Löschantrag, SLA, QS, fremde Bearbeitungen
+  python3 _build/wiki_publish.py reply SEITE ABSCHNITT DATEI --apply   # einmalige signierte Antwort in einem Diskussionsabschnitt
 
 Ohne --apply wird nichts geschrieben. Bestehende Einträge werden nie überschrieben (createonly / Dublettenprüfung).
 """
@@ -243,6 +245,82 @@ def move(apply):
     print("Wikidata-Sitelink:", "ok" if r.get("success") else r.get("error", r))
 
 
+ARTICLE = "Code Chaos"
+MARKERS = {"Löschantrag": ("{{Löschantragstext", "{{Löschantrag"), "Schnelllöschantrag": ("{{Löschen", "{{SLA"),
+           "Qualitätssicherung": ("{{QS-", "{{QS|"), "Relevanzfrage": ("{{Relevanzcheck", "{{Relevanz")}
+
+
+def ld_page(text):
+    """Löschdiskussionsseite aus {{Löschantragstext|tag=..|monat=..|jahr=..}} ableiten."""
+    import re
+    m = re.search(r"\{\{Löschantragstext([^}]*)\}\}", text)
+    if not m:
+        return None
+    kv = dict(re.findall(r"\|\s*(tag|monat|jahr)\s*=\s*([^|}]+)", m.group(1)))
+    if len(kv) < 3:
+        return None
+    return f"Wikipedia:Löschkandidaten/{kv['tag'].strip()}. {kv['monat'].strip()} {kv['jahr'].strip()}"
+
+
+def watch(hours=26):
+    """Exit 0 = nichts Neues, 10 = Handlungsbedarf (LA/SLA/QS/fremde Edits/Diskussion), 20 = Artikel weg."""
+    user = os.environ.get("WIKI_USER", "Name@bot").split("@")[0]
+    since = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(time.time() - hours * 3600))
+    pages = {p["title"]: p for p in api(DEWP, {"action": "query", "titles": f"{ARTICLE}|Diskussion:{ARTICLE}",
+                                                "prop": "revisions|info", "rvprop": "user|timestamp|comment|content",
+                                                "rvslots": "main"})["query"]["pages"]}
+    art = pages[ARTICLE]
+    if art.get("missing") is not None or art.get("redirect"):
+        log = api(DEWP, {"action": "query", "list": "logevents", "letitle": ARTICLE, "lelimit": 3})["query"]["logevents"]
+        print("ARTIKEL FEHLT oder ist Weiterleitung. Letzte Logbuch-Einträge:",
+              [(l["type"], l["action"], l["user"], l["timestamp"], l.get("comment", "")) for l in log])
+        sys.exit(20)
+    text = art["revisions"][0]["slots"]["main"]["content"]
+    found = [name for name, keys in MARKERS.items() if any(k in text for k in keys)]
+    action = bool(found)
+    print("Bausteine im Artikel:", found or "keine")
+    if "Löschantrag" in found:
+        print("Löschdiskussion:", ld_page(text) or "(Seite aus Baustein nicht ermittelbar)")
+    for title in (ARTICLE, f"Diskussion:{ARTICLE}"):
+        if pages[title].get("missing") is not None:
+            print(f"{title}: existiert nicht")
+            continue
+        revs = api(DEWP, {"action": "query", "prop": "revisions", "titles": title, "rvlimit": 20, "rvend": since,
+                          "rvprop": "user|timestamp|comment"})["query"]["pages"][0].get("revisions", [])
+        foreign = [r for r in revs if r["user"] != user]
+        print(f"{title}: {len(revs)} Bearbeitungen in {hours} h, davon fremd:",
+              [(r["user"], r["timestamp"], r.get("comment", "")[:80]) for r in foreign] or "keine")
+        action = action or bool(foreign)
+    sys.exit(10 if action else 0)
+
+
+def reply(page, section_hint, path, apply):
+    """Hängt einmalig eine signierte Antwort an den Abschnitt an, dessen Überschrift section_hint enthält."""
+    user = os.environ.get("WIKI_USER", "Name@bot").split("@")[0]
+    secs = api(DEWP, {"action": "parse", "page": page, "prop": "sections"})["parse"]["sections"]
+    hits = [x for x in secs if section_hint.lower() in x["line"].lower()]
+    if len(hits) != 1:
+        sys.exit(f"Abschnitt „{section_hint}“ auf {page} nicht eindeutig gefunden: {[x['line'] for x in hits]}")
+    idx = hits[0]["index"]
+    cur = api(DEWP, {"action": "parse", "page": page, "section": idx, "prop": "wikitext"})["parse"]["wikitext"]
+    if f"[[Benutzer:{user}" in cur or f"[[User:{user}" in cur:
+        sys.exit(f"Im Abschnitt steht schon ein Beitrag von {user}; keine zweite automatische Antwort.")
+    body = open(path, encoding="utf-8").read().strip()
+    if "~~~~" not in body:
+        body += " ~~~~"
+    print(f"Ziel: {page} § {hits[0]['line']}\n---\n{body}\n---")
+    if not apply:
+        print("Probelauf: nichts gespeichert. Mit --apply speichern.")
+        return
+    tok = login(DEWP)
+    r = api(DEWP, {"action": "edit", "title": page, "section": idx, "appendtext": "\n:" + body.replace("\n", "\n:"),
+                   "token": tok, "summary": "/* " + hits[0]["line"] + " */ Antwort (Interessenkonflikt: ich bin der Künstler)"},
+            post=True)
+    if r.get("edit", {}).get("result") != "Success":
+        sys.exit(f"Speichern fehlgeschlagen: {r}")
+    print("Antwort gespeichert, Revision", r["edit"].get("newrevid"))
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "check"
     apply = "--apply" in sys.argv
@@ -254,5 +332,9 @@ if __name__ == "__main__":
         draft(apply)
     elif cmd == "move":
         move(apply)
+    elif cmd == "watch":
+        watch()
+    elif cmd == "reply" and len(sys.argv) >= 5:
+        reply(sys.argv[2], sys.argv[3], sys.argv[4], apply)
     else:
         sys.exit(__doc__)
