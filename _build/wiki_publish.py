@@ -8,7 +8,7 @@ Zugang: ein Wikimedia-Bot-Passwort (Spezial:BotPasswords), nie das normale Passw
   python3 _build/wiki_publish.py wikidata --apply   # Wikidata: Label-Item + Artist-Item anlegen
   python3 _build/wiki_publish.py draft --apply      # Wikipedia: Entwurf unter Benutzer:<Name>/Code Chaos
   python3 _build/wiki_publish.py move --apply       # Entwurf nach „Code Chaos“ verschieben, sobald das Konto das Recht hat
-  python3 _build/wiki_publish.py watch              # Artikel + Diskussion prüfen: Löschantrag, SLA, QS, fremde Bearbeitungen
+  python3 _build/wiki_publish.py watch [STUNDEN]    # Artikel + Diskussion prüfen: Löschantrag, SLA, QS, fremde Bearbeitungen (Fenster, Standard 26 h)
   python3 _build/wiki_publish.py reply SEITE ABSCHNITT DATEI --apply   # einmalige signierte Antwort in einem Diskussionsabschnitt
 
 Ohne --apply wird nichts geschrieben. Bestehende Einträge werden nie überschrieben (createonly / Dublettenprüfung).
@@ -333,7 +333,7 @@ if __name__ == "__main__":
     elif cmd == "move":
         move(apply)
     elif cmd == "watch":
-        watch()
+        watch(int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else 26)
     elif cmd == "reply" and len(sys.argv) >= 5:
         reply(sys.argv[2], sys.argv[3], sys.argv[4], apply)
     else:
