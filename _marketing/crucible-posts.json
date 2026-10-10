@@ -1,36 +1,54 @@
 [
-  {
-    "id": "crucible-01-out-now",
-    "date": "2026-10-07",
-    "image": "https://codechaos-official.de/images/social/crucible-out-now.jpg",
-    "caption": "CRUCIBLE ist da. 🔥\n\nMein erstes Plugin: 3-Band Harmonic Saturation.\nLow, Mid und High getrennt sättigen: Hard Clip, Wavefolder, Tube, Diode oder Tape pro Band, bis zu 8x Oversampling.\n\nGebaut in meinen eigenen Psycore- und Hitech-Sessions, weil ich Druck wollte ohne Matsch.\n\nVST3 + Standalone · Windows · 19 €\n👉 Link in Bio (Gumroad)\n\n#crucible #saturation #vstplugin #audioplugin #musicproducer #psytrance #hitech #psycore #darkpsy #mixing #mastering #codechaos",
-    "video": "https://codechaos-official.de/images/social/crucible-out-now.mp4",
-    "video_title": "Crucible: 3-Band Harmonic Saturation | Code Chaos Audio",
-    "short": "CRUCIBLE ist da: mein erstes Plugin. 3-Band Harmonic Saturation, 5 Sättigungstypen pro Band, bis 8x Oversampling. VST3 für Windows, 19 €. https://codechaos-official.de/crucible.html"
-  },
-  {
-    "id": "crucible-02-three-bands",
-    "date": "2026-10-10",
-    "image": "https://codechaos-official.de/images/social/crucible-three-bands.jpg",
-    "caption": "Drei Bänder. Drei Charaktere.\n\nLOW → Hard Clip für Kick & Sub\nMID → Tube für warme Leads\nHIGH → Tape für Luft & Glanz\n\nEine Instanz statt drei Plugins. Crucible, Link in Bio.\n\nWelchen Saturation-Typ nutzt du am meisten? 👇\n\n#crucible #multibandsaturation #sounddesign #producertips #psytrance #hitech #psycore #vst3 #codechaosaudio",
-    "video": "https://codechaos-official.de/images/social/crucible-three-bands.mp4",
-    "video_title": "Drei Bänder, drei Charaktere: Crucible Saturation",
-    "short": "Drei Bänder. Drei Charaktere. LOW Hard Clip, MID Tube, HIGH Tape, in einer Instanz. Crucible: https://codechaos-official.de/crucible.html"
-  },
-  {
-    "id": "crucible-03-psycore",
-    "date": "2026-10-14",
-    "image": "https://codechaos-official.de/images/social/crucible-psycore.jpg",
-    "caption": "180 bis 300 BPM. Jeder Kick zählt.\n\nBei Psycore, Hitech und Darkpsy ist das Arrangement so dicht, dass normale Sättigung alles zu Brei macht. Crucible trennt das Signal in drei Bänder, damit du den Low-End hart fahren kannst, ohne dass die Höhen kratzen.\n\nFür Producer, von einem Producer. Link in Bio.\n\n#psycore #hitechpsytrance #darkpsy #psytranceproducer #saturationplugin #crucible #codechaos #abstractsounddesign",
-    "video": "https://codechaos-official.de/images/social/crucible-psycore.mp4",
-    "video_title": "Saturation für 180–300 BPM: Crucible für Psycore & Hitech",
-    "short": "180–300 BPM, jeder Kick zählt. Crucible trennt das Signal in drei Bänder: Low-End hart fahren, ohne dass die Höhen kratzen. https://codechaos-official.de/crucible.html"
-  },
-  {
-    "id": "crucible-04-carousel-tip",
-    "date": "2026-10-21",
-    "image": "https://codechaos-official.de/images/crucible-og.jpg",
-    "caption": "Producer-Tipp: Sättige deinen Psy-Bass nicht breitbandig.\n\n1️⃣ Crossover Low/Mid auf ca. 120 Hz\n2️⃣ Low: Hard Clip, Drive moderat, Mix 100 %\n3️⃣ Mid: Tube mit wenig Drive für Präsenz\n4️⃣ High: Tape, Mix 30–50 % für Luft\n\nSo bleibt die Kick knackig und der Bass trotzdem laut. Getestet mit Crucible, Link in Bio.\n\n#producertips #mixingtips #psytrance #hitech #psycore #crucible #vstplugin",
-    "short": "Producer-Tipp: Psy-Bass nicht breitbandig sättigen. Crossover ~120 Hz, Low Hard Clip, Mid Tube, High Tape 30–50 % Mix. Kick bleibt knackig. https://codechaos-official.de/crucible.html"
-  }
+ {
+  "id": "crucible-01-out-now",
+  "date": "2026-10-12",
+  "image": "https://codechaos-official.de/images/social/crucible-out-now.jpg",
+  "caption": "CRUCIBLE ist da. 🔥\n\nMein erstes Plugin: 3-Band Harmonic Saturation.\nLow, Mid und High getrennt sättigen: Hard Clip, Wavefolder, Tube, Diode oder Tape pro Band, bis zu 8x Oversampling.\n\nGebaut in meinen eigenen Psycore- und Hitech-Sessions, weil ich Druck wollte ohne Matsch.\n\nVST3 + Standalone · Windows · 19 €\n👉 Link in Bio (Gumroad)\n\n#crucible #saturation #vstplugin #audioplugin #musicproducer #psytrance #hitech #psycore #darkpsy #mixing #mastering #codechaos",
+  "video": "https://codechaos-official.de/images/social/crucible-out-now.mp4",
+  "video_title": "Crucible: 3-Band Harmonic Saturation | Code Chaos Audio",
+  "short": "CRUCIBLE ist da: mein erstes Plugin. 3-Band Harmonic Saturation, 5 Sättigungstypen pro Band, bis 8x Oversampling. VST3 für Windows, 19 €. https://codechaos-official.de/crucible.html"
+ },
+ {
+  "id": "store-01-hitech-arsenal",
+  "image": "https://codechaos-official.de/images/social/hitech-arsenal.jpg",
+  "video": "https://codechaos-official.de/images/social/hitech-arsenal.mp4",
+  "video_title": "Hitech Arsenal Vol. 1 | 120 Hitech & Psycore Samples",
+  "caption": "HITECH ARSENAL VOL. 1 ist draußen. 🔥\n\n120 Sounds, komplett selbst synthetisiert:\n12 Kicks (gestimmt auf E, F, F#, G) · 16 Bass-One-Shots · 12 FM-Leads · 25 Glitch-Percs · 15 FX · 20 Kick-Bass- und Synth-Loops in 190 und 200 BPM.\n\n24-bit WAV, Tonart und BPM im Dateinamen, royalty-free.\n\n15 € · Link in Bio\n\n#samplepack #hitech #psycore #darkpsy #psytrance #psytranceproducer #fmsynthesis #sounddesign #royaltyfree #codechaos",
+  "short": "Hitech Arsenal Vol. 1: 120 Hitech/Psycore-Samples, Kicks, Bass, FM-Leads, Glitches, Loops in 190/200 BPM. 15 €: https://timberwolf688.gumroad.com/l/hitech-arsenal-1",
+  "date": "2026-10-14"
+ },
+ {
+  "id": "crucible-02-three-bands",
+  "date": "2026-10-16",
+  "image": "https://codechaos-official.de/images/social/crucible-three-bands.jpg",
+  "caption": "Drei Bänder. Drei Charaktere.\n\nLOW → Hard Clip für Kick & Sub\nMID → Tube für warme Leads\nHIGH → Tape für Luft & Glanz\n\nEine Instanz statt drei Plugins. Crucible, Link in Bio.\n\nWelchen Saturation-Typ nutzt du am meisten? 👇\n\n#crucible #multibandsaturation #sounddesign #producertips #psytrance #hitech #psycore #vst3 #codechaosaudio",
+  "video": "https://codechaos-official.de/images/social/crucible-three-bands.mp4",
+  "video_title": "Drei Bänder, drei Charaktere: Crucible Saturation",
+  "short": "Drei Bänder. Drei Charaktere. LOW Hard Clip, MID Tube, HIGH Tape, in einer Instanz. Crucible: https://codechaos-official.de/crucible.html"
+ },
+ {
+  "id": "crucible-05-free-demo",
+  "image": "https://codechaos-official.de/images/social/crucible-price-demo.jpg",
+  "video": "https://codechaos-official.de/images/social/crucible-price-demo.mp4",
+  "video_title": "Crucible: Dry vs. Saturated | Free Demo",
+  "caption": "Erst trocken, dann durch Crucible. 🎧\n\nGleicher 190-BPM-Loop, gleiche Lautheit (−16 LUFS). Du hörst nur Ton und Dichte, nicht einfach mehr Pegel.\n\nCrucible kostet jetzt 19 € und es gibt eine kostenlose Demo: volles Plugin, nur alle 45 Sekunden ein kurzes Rauschen.\n\nVST3 + Standalone · Windows\n👉 Link in Bio\n\n#crucible #freevst #freeplugin #saturation #vst3 #psytrance #hitech #psycore #darkpsy #mixing #musicproducer #codechaos",
+  "short": "Dry vs. Crucible, loudness-matched. Jetzt 19 € plus kostenlose Demo (volles Plugin, kurzes Rauschen alle 45 s): https://codechaos-official.de/crucible.html",
+  "date": "2026-10-18"
+ },
+ {
+  "id": "crucible-03-psycore",
+  "date": "2026-10-21",
+  "image": "https://codechaos-official.de/images/social/crucible-psycore.jpg",
+  "caption": "180 bis 300 BPM. Jeder Kick zählt.\n\nBei Psycore, Hitech und Darkpsy ist das Arrangement so dicht, dass normale Sättigung alles zu Brei macht. Crucible trennt das Signal in drei Bänder, damit du den Low-End hart fahren kannst, ohne dass die Höhen kratzen.\n\nFür Producer, von einem Producer. Link in Bio.\n\n#psycore #hitechpsytrance #darkpsy #psytranceproducer #saturationplugin #crucible #codechaos #abstractsounddesign",
+  "video": "https://codechaos-official.de/images/social/crucible-psycore.mp4",
+  "video_title": "Saturation für 180–300 BPM: Crucible für Psycore & Hitech",
+  "short": "180–300 BPM, jeder Kick zählt. Crucible trennt das Signal in drei Bänder: Low-End hart fahren, ohne dass die Höhen kratzen. https://codechaos-official.de/crucible.html"
+ },
+ {
+  "id": "crucible-04-carousel-tip",
+  "date": "2026-10-23",
+  "image": "https://codechaos-official.de/images/crucible-og.jpg",
+  "caption": "Producer-Tipp: Sättige deinen Psy-Bass nicht breitbandig.\n\n1️⃣ Crossover Low/Mid auf ca. 120 Hz\n2️⃣ Low: Hard Clip, Drive moderat, Mix 100 %\n3️⃣ Mid: Tube mit wenig Drive für Präsenz\n4️⃣ High: Tape, Mix 30–50 % für Luft\n\nSo bleibt die Kick knackig und der Bass trotzdem laut. Getestet mit Crucible, Link in Bio.\n\n#producertips #mixingtips #psytrance #hitech #psycore #crucible #vstplugin",
+  "short": "Producer-Tipp: Psy-Bass nicht breitbandig sättigen. Crossover ~120 Hz, Low Hard Clip, Mid Tube, High Tape 30–50 % Mix. Kick bleibt knackig. https://codechaos-official.de/crucible.html"
+ }
 ]
