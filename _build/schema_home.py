@@ -54,7 +54,7 @@ graph=[
   "applicationCategory":"MultimediaApplication","applicationSubCategory":"Audio Plugin","operatingSystem":"Windows 10+","softwareVersion":"1.0.0",
   "description":"3-Band Harmonic Saturation Plugin (VST3 + Standalone, Windows) von Code Chaos Audio: Low, Mid und High getrennt sättigen (Hard Clip, Wavefolder, Tube, Diode, Tape), Drive, Mix und Gain pro Band, bis zu 8x Oversampling.",
   "image":B+"/images/crucible-og.jpg",
-  "offers":{"@type":"Offer","url":"https://timberwolf688.gumroad.com/l/crucible","price":"49.00","priceCurrency":"EUR","availability":"https://schema.org/InStock"}},
+  "offers":{"@type":"Offer","url":"https://timberwolf688.gumroad.com/l/crucible","price":"19.00","priceCurrency":"EUR","availability":"https://schema.org/InStock"}},
  {"@type":"FAQPage","@id":B+"/#faq","isPartOf":{"@id":B+"/#webpage"},"mainEntity":faq},
 ]
 block='<script type="application/ld+json">\n'+json.dumps({"@context":"https://schema.org","@graph":graph},ensure_ascii=False,indent=1)+'\n</script>'

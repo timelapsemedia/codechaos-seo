@@ -43,7 +43,7 @@ Last updated: 2026-10-05
 
 ## Code Chaos Audio, Plugins
 
-- **Crucible** 1.0.0, a 3-band harmonic saturation plugin: VST3 + standalone for Windows 10+. Price: €49 on Gumroad (single-user, perpetual license).
+- **Crucible** 1.0.0, a 3-band harmonic saturation plugin: VST3 + standalone for Windows 10+. Price: €19 on Gumroad (single-user, perpetual license).
   - Splits the signal into Low, Mid and High bands, each saturated independently.
   - Five saturation types, selectable per band: Hard Clip, Wavefolder, Tube, Diode, Tape.
   - Per-band Drive, Mix and Gain; adjustable crossovers; per-band Mute/Solo; oversampling up to 8x.
