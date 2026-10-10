@@ -44,7 +44,7 @@ def main():
     done_path = os.path.join(HERE, "posted.json")
     done = set(json.load(open(done_path))) if os.path.exists(done_path) else set()
     today = datetime.datetime.now(ZoneInfo("Europe/Berlin")).date().isoformat()
-    due = [p for p in posts if p["date"] <= today and p["id"] not in done]
+    due = sorted((p for p in posts if p["date"] <= today and p["id"] not in done), key=lambda p: p["date"])
     if not due:
         print("Instagram: nichts fällig.")
         return 0
@@ -58,11 +58,20 @@ def main():
         return 0
     host = "graph.instagram.com" if token.startswith("IG") else "graph.facebook.com"
     user = env("INSTAGRAM_USER_ID", "IG_USER_ID")
-    if not user:
+    if not user and host == "graph.facebook.com":
+        # Facebook-Token: /me ist das Facebook-Profil, gepostet wird über den IG-Account der verknüpften Seite.
+        pages = call(host, "me/accounts", fields="name,instagram_business_account", access_token=token).get("data", [])
+        linked = [pg for pg in pages if pg.get("instagram_business_account")]
+        if not linked:
+            print("Instagram FEHLER: keine Facebook-Seite mit verknüpftem Instagram-Account für diesen Token.")
+            return 1
+        user = linked[0]["instagram_business_account"]["id"]
+    elif not user:
         me = call(host, "me", fields="user_id,id,username", access_token=token)
         user = me.get("user_id") or me["id"]
     errors = 0
-    for p in due:
+    for p in due[:1]:  # höchstens ein Post pro Lauf, ältester zuerst
+
         try:
             cid = call(host, f"{user}/media", "POST", image_url=p["image"], caption=p["caption"], access_token=token)["id"]
             for _ in range(30):  # warten, bis Instagram das Bild verarbeitet hat
