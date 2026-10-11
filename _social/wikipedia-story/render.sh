@@ -32,4 +32,6 @@ ffmpeg -v error -y -ss 0.6 -i bg4k.mp4 -i bed_norm.wav \
 [6]format=rgba,fade=in:st=3.0:d=0.6:alpha=1[k];[7]format=rgba,fade=in:st=4.1:d=0.5:alpha=1[u];\
 [bg][s]overlay=shortest=1[a];[a][l]overlay=shortest=1[b];[b][h]overlay=shortest=1[c2];[c2][c]overlay=shortest=1[d];[d][k]overlay=shortest=1[e];[e][u]overlay=shortest=1,format=yuv420p[v]" \
  -map "[v]" -map 1:a -shortest -c:v libx264 -preset slow -crf 19 -profile:v high -level 5.2 -r 24 -c:a aac -b:a 192k -movflags +faststart ../codechaos_wikipedia_4k.mp4
-echo "fertig: _social/wikipedia-story/codechaos_wikipedia_4k.mp4"
+ffmpeg -v error -y -i ../codechaos_wikipedia_4k.mp4 -vf scale=1080:1920:flags=lanczos -c:v libx264 -preset slow -crf 18 -profile:v high -level 4.2 -c:a copy -movflags +faststart ../codechaos_wikipedia_1080.mp4
+ffmpeg -v error -y -ss 7 -i ../codechaos_wikipedia_4k.mp4 -frames:v 1 -vf scale=1080:-1 -q:v 3 ../cover.jpg
+echo "fertig: codechaos_wikipedia_4k.mp4 (YouTube), codechaos_wikipedia_1080.mp4 (Instagram/Buffer), cover.jpg"

@@ -79,10 +79,10 @@ def main():
                 "status": status}
         label = f'{p["id"]} ({"geplant für " + due.astimezone(TZ).strftime("%d.%m.%Y %H:%M") if "publishAt" in status else "sofort"})'
         if dry:
-            print("YouTube WÜRDE HOCHLADEN:", label, local_file(p["video"]))
+            print("YouTube WÜRDE HOCHLADEN:", label, local_file(p.get("video_youtube", p["video"])))
             continue
         try:
-            vid = upload(token, local_file(p["video"]), meta)
+            vid = upload(token, local_file(p.get("video_youtube", p["video"])), meta)
             state[p["id"]] = vid
             json.dump(state, open(state_path, "w"), indent=1)
             print("YouTube HOCHGELADEN:", label, "-> https://youtu.be/" + vid)
