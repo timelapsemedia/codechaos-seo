@@ -89,6 +89,28 @@ MUTATION = """mutation($input: CreatePostInput!) {
 }"""
 
 
+def existing(org_ids):
+    """(channelId, dueAt to the minute) -> post id for everything already scheduled/sent in Buffer.
+    Makes scheduling idempotent even when buffer_scheduled.json is lost (11.10.2026: the state file was never
+    committed, the next run re-created every TikTok post -> duplicates)."""
+    out = {}
+    q = """query($o: OrganizationId!, $after: String) { posts(input: { organizationId: $o,
+             filter: { status: [scheduled, sent] } }, first: 100, after: $after) {
+             edges { node { id dueAt channelId } } pageInfo { hasNextPage endCursor } } }"""
+    for o in org_ids:
+        after = None
+        while True:
+            d = gql(q, {"o": o, "after": after})["posts"]
+            for e in d["edges"]:
+                n = e["node"]
+                if n.get("dueAt"):
+                    out[(n["channelId"], n["dueAt"][:16])] = n["id"]
+            if not d["pageInfo"]["hasNextPage"]:
+                break
+            after = d["pageInfo"]["endCursor"]
+    return out
+
+
 def main():
     dry = "--dry-run" in sys.argv
     if not key():
@@ -99,6 +121,7 @@ def main():
     state_path = os.path.join(HERE, "buffer_scheduled.json")
     state = json.load(open(state_path)) if os.path.exists(state_path) else {}
     chans = [c for c in channels() if c["service"].lower() not in skip]
+    have = existing([o["id"] for o in gql("query { account { organizations { id } } }")["account"]["organizations"]])
     print("Buffer-Kanäle:", ", ".join(f'{c["service"]} ({c["name"]})' for c in chans) or "keine")
     now = datetime.datetime.now(datetime.timezone.utc)
     errors = 0
@@ -110,6 +133,13 @@ def main():
         for ch in chans:
             k = f'{post["id"]}::{ch["id"]}'
             if k in state:
+                continue
+            found = have.get((ch["id"], due.strftime("%Y-%m-%dT%H:%M")))
+            if found:                     # already in Buffer (state lost / scheduled by hand): adopt, never re-create
+                state[k] = found
+                if not dry:
+                    json.dump(state, open(state_path, "w"), indent=1)
+                print(f'- {post["id"]} → {ch["service"]}: schon in Buffer ({found}), übernommen')
                 continue
             p = plan_for(post, ch)
             if not p:
@@ -129,6 +159,9 @@ def main():
                 state[k] = res["post"]["id"]
                 json.dump(state, open(state_path, "w"), indent=1)
                 print("EINGEPLANT:", label)
+            elif "limit reached" in (res.get("message") or "").lower():
+                # free plan: max. 10 scheduled per channel - not an error, a later daily run schedules it
+                print("VERSCHOBEN (Buffer-Limit, nächster Lauf):", label)
             else:
                 errors += 1
                 print("FEHLER:", label, "-", res.get("message"))
