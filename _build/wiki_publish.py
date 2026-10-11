@@ -10,6 +10,7 @@ Zugang: ein Wikimedia-Bot-Passwort (Spezial:BotPasswords), nie das normale Passw
   python3 _build/wiki_publish.py move --apply       # Entwurf nach „Code Chaos“ verschieben, sobald das Konto das Recht hat
   python3 _build/wiki_publish.py watch [STUNDEN]    # Artikel + Diskussion prüfen: Löschantrag, SLA, QS, fremde Bearbeitungen (Fenster, Standard 26 h)
   python3 _build/wiki_publish.py reply SEITE ABSCHNITT DATEI --apply   # einmalige signierte Antwort in einem Diskussionsabschnitt
+  python3 _build/wiki_publish.py infobox --apply    # {{Infobox Band}} oben in den Artikel einfügen (nur wenn noch keine Infobox da ist)
 
 Ohne --apply wird nichts geschrieben. Bestehende Einträge werden nie überschrieben (createonly / Dublettenprüfung).
 """
@@ -321,6 +322,44 @@ def reply(page, section_hint, path, apply):
     print("Antwort gespeichert, Revision", r["edit"].get("newrevid"))
 
 
+INFOBOX = """{{Infobox Band
+| Name       = Code Chaos
+| Herkunft   = [[Hamburg]], Deutschland
+| Genre      = [[Psytrance]] (Hi-Tech, Psycore, [[Dark Psytrance|Darkpsy]])
+| Gründung   = 2016
+| Website    = [https://codechaos-official.de/ codechaos-official.de]
+| GründerTitel = Mitglied
+| Gründer1a  = Tim Borchert
+| Gründer1b  = Produktion
+}}
+"""
+
+
+def infobox(apply):
+    """Setzt INFOBOX an den Anfang des Artikels; bricht ab, wenn schon eine Infobox existiert."""
+    title = "Code Chaos"
+    page = api(DEWP, {"action": "query", "prop": "revisions", "titles": title, "rvprop": "content|timestamp|ids",
+                      "rvslots": "main", "curtimestamp": 1})
+    pg = page["query"]["pages"][0]
+    if pg.get("missing"):
+        sys.exit(f"{title} existiert nicht.")
+    rev = pg["revisions"][0]
+    text = rev["slots"]["main"]["content"]
+    if "{{Infobox" in text:
+        sys.exit("Im Artikel steht schon eine Infobox, nichts zu tun.")
+    print(f"Basis: Revision {rev['revid']} ({rev['timestamp']})\n--- wird oben eingefügt ---\n{INFOBOX}---")
+    if not apply:
+        print("Probelauf: nichts gespeichert. Mit --apply speichern.")
+        return
+    tok = login(DEWP)
+    r = api(DEWP, {"action": "edit", "title": title, "text": INFOBOX + text, "nocreate": 1, "token": tok,
+                   "basetimestamp": rev["timestamp"], "starttimestamp": page["curtimestamp"],
+                   "summary": "Infobox ergänzt (nur Angaben aus dem Artikel)"}, post=True)
+    if r.get("edit", {}).get("result") != "Success":
+        sys.exit(f"Speichern fehlgeschlagen: {r}")
+    print("Infobox gespeichert, Revision", r["edit"].get("newrevid"))
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "check"
     apply = "--apply" in sys.argv
@@ -336,5 +375,7 @@ if __name__ == "__main__":
         watch(int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else 26)
     elif cmd == "reply" and len(sys.argv) >= 5:
         reply(sys.argv[2], sys.argv[3], sys.argv[4], apply)
+    elif cmd == "infobox":
+        infobox(apply)
     else:
         sys.exit(__doc__)

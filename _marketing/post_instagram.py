@@ -50,7 +50,7 @@ def main():
         return 0
     if dry:
         for p in due:
-            print("Instagram WÜRDE POSTEN:", p["id"], p["image"])
+            print("Instagram WÜRDE POSTEN:", p["id"], ("Reel " + p["video"]) if p.get("reel") else p["image"])
         return 0
     token = env("INSTAGRAM_ACCESS_TOKEN", "IG_ACCESS_TOKEN", "INSTAGRAM_TOKEN")
     if not token:
@@ -73,8 +73,12 @@ def main():
     for p in due[:1]:  # höchstens ein Post pro Lauf, ältester zuerst
 
         try:
-            cid = call(host, f"{user}/media", "POST", image_url=p["image"], caption=p["caption"], access_token=token)["id"]
-            for _ in range(30):  # warten, bis Instagram das Bild verarbeitet hat
+            if p.get("reel") and p.get("video"):  # Reel: Video statt Bild, erscheint auch im Feed
+                cid = call(host, f"{user}/media", "POST", media_type="REELS", video_url=p["video"], caption=p["caption"],
+                           share_to_feed="true", access_token=token)["id"]
+            else:
+                cid = call(host, f"{user}/media", "POST", image_url=p["image"], caption=p["caption"], access_token=token)["id"]
+            for _ in range(60 if p.get("reel") else 30):  # warten, bis Instagram das Medium verarbeitet hat
                 st = call(host, cid, fields="status_code", access_token=token).get("status_code")
                 if st in ("FINISHED", None):
                     break
