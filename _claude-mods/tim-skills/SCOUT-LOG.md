@@ -43,3 +43,33 @@ Abgelehnt:
 | coreyhaines31/marketingskills: image | Ratgeber für bezahlte Bild-KIs, wenig Mehrwert |
 | addyosmani/web-quality-skills: best-practices, web-quality-audit | geringer Mehrwert, Audit ist Dach über installierte Skills |
 | google-labs-code/stitch-skills | an Google Stitch gebunden bzw. doppelt mit frontend-design |
+
+## 2026-10-12 – Wochenlauf 2 (4 aufgenommen: good-css, yt-retention, yt-package, yt-edit; 9 aktualisiert)
+
+Aktualisiert (coreyhaines31/marketingskills @1efedbc, 2026-10-08, MIT): ad-creative, ai-seo, content-strategy, copy-editing, cro, paid-ads,
+schema-markup, seo-audit, social-content – SKILL.md, References, Evals vollständig übernommen; LICENSE.upstream ergänzt. Diffs geprüft:
+keine Netzaufrufe/Telemetrie, HTML-Vorlage ad-creative ohne externe Skripte.
+
+Nicht aktualisiert:
+| Skill/Repo | Grund |
+|---|---|
+| remotion-dev/skills: remotion-best-practices (Update 2026-10-07) | Repo hat keine LICENSE-Datei (Kriterium 1); Bestandskopie ist ebenfalls ohne Lizenz – von Tim zu entscheiden |
+
+Abgelehnt/zurückgestellt:
+| Skill/Repo | Grund |
+|---|---|
+| diffusionstudio/lottie: text-to-lottie | sauber, MIT; setzt aber Player per `npx degit` (ungepinnt, jeweils neuester Stand) + `npm install` voraus – zurückgestellt |
+| dreamrec/LivePilot | Business Source License 1.1 |
+| adrianeyre/soundcheck | an eigene DAW-App gebunden, keine LICENSE-Datei |
+| JefroB/Electronic-Music-Genre-Skills | keine Lizenz („personal and educational use“) |
+| whi-rik/claude-skills | keine LICENSE, HISE-/interne Skills |
+| countrymanprime/narration-utils: reaper-api-facts | repo-intern, nicht eigenständig |
+| ZiadAbdelkarim/beat-synced-edit | passend, aber Ein-Personen-Repo (13 Sterne), Skripte außerhalb des Skill-Ordners, Chart.js ungepinnt vom CDN – beobachten |
+| nolangz/pixel2motion | geringer Mehrwert, Werbe-/Verifizierungsdateien im Ordner |
+| EGSECDA/vocaloid-style-mv-pipeline | Nische, lädt ~260 MB Fonts und Fremd-Repo nach |
+| kaankiziltug/logo-design-skill | 14 MB, fremde Marken-SVGs nicht unter MIT |
+| howseen-ai/claude-motion-design | Firmen-Pipeline mit Client für externen Dienst |
+| Barty-Bart/motion-graphics | SaaS-Explainer-spezifisch, braucht SAM 2 |
+| iart-ai/kinetic-typography-skills | kleiner Anbieter, ungepflegt, Überschneidung mit gsap-plugins |
+| greensock: gsap-react, gsap-frameworks | nur für React/Vue-Projekte – bei Bedarf |
+| VoltAgent-Neuzugänge (cutaway, upload-post, atomicmail, unbrowse …) | themenfremd, Auto-Posting oder gehostete API |
