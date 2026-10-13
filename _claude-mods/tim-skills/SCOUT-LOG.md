@@ -73,3 +73,16 @@ Abgelehnt/zurückgestellt:
 | iart-ai/kinetic-typography-skills | kleiner Anbieter, ungepflegt, Überschneidung mit gsap-plugins |
 | greensock: gsap-react, gsap-frameworks | nur für React/Vue-Projekte – bei Bedarf |
 | VoltAgent-Neuzugänge (cutaway, upload-post, atomicmail, unbrowse …) | themenfremd, Auto-Posting oder gehostete API |
+
+## 2026-10-13 – Tims Hinweise aus Facebook (7 aufgenommen: yt-audit, yt-chapters, yt-comment, yt-plan, yt-script, yt-seo, yt-viral)
+
+Quelle der Hinweise: vier Facebook-Posts/Reels, die Tim geschickt hat. Aufgenommen aus Jakeschincariol/youtube-agent-skill @a2feb21 (MIT),
+gleiche Quelle wie yt-retention/yt-package/yt-edit; alle Dateien gelesen, nur Markdown bzw. Python-Standardbibliothek, nichts wird veröffentlicht.
+
+Abgelehnt:
+| Skill/Repo | Grund |
+|---|---|
+| tejashmakwana/motionmaxxing | voice.py/providers.sh durchsuchen `./.env`, `~/.elevenlabs` und `~/.claude.json` nach Schlüsseln (auch beliebige `api_key=`-Zeilen), schicken sie an ElevenLabs; Bildgenerierung über `codex exec`; Logos per `simple-icons@latest`; 26 MB (ohne Medien ca. 5 MB) |
+| Jakeschincariol/youtube-agent-skill: yt-shorts | doppelt mit installiertem `shorts` (der zusätzlich rendert) |
+| REA „Reverse Engineer Anything“ (MCP) | kein Skill für Tims Arbeitsfelder; beworbener Zweck ist das Nachbauen kostenpflichtiger Software (TradingView-Premium) |
+| aicertified.free / „Google-Zertifikate per Codex“ | kein Skill, sondern Anleitung, Online-Prüfungen von einer KI ablegen zu lassen; fremde Anmeldung über Drittseite |
