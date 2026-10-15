@@ -86,3 +86,18 @@ Abgelehnt:
 | Jakeschincariol/youtube-agent-skill: yt-shorts | doppelt mit installiertem `shorts` (der zusätzlich rendert) |
 | REA „Reverse Engineer Anything“ (MCP) | kein Skill für Tims Arbeitsfelder; beworbener Zweck ist das Nachbauen kostenpflichtiger Software (TradingView-Premium) |
 | aicertified.free / „Google-Zertifikate per Codex“ | kein Skill, sondern Anleitung, Online-Prüfungen von einer KI ablegen zu lassen; fremde Anmeldung über Drittseite |
+
+## 2026-10-15 – Tims Hinweise (12 aufgenommen: ig-audit, ig-caption, ig-carousel, ig-comment, ig-dm, ig-plan, ig-profile, ig-reel, ig-reply, ig-repurpose, ig-story, ig-viral)
+
+Quelle: Google-Doc „Claude Instagram Agent Skill“ (von Tim geschickt) → Jakeschincariol/instagram-agent-skill @d03c56b (MIT), gleicher Autor wie die yt-Skills.
+Alle Dateien gelesen: Markdown bzw. Python-Standardbibliothek, keine Netzaufrufe, postet/sendet nichts, verbietet Scraping und Logins im Namen des Nutzers.
+Skripte (caption.py, swipe.py) mit Beispieldaten ausgeführt. Die Vosu-AI-Werbung im Dokument ist nicht Teil des Skills.
+
+Abgelehnt:
+| Skill/Repo | Grund |
+|---|---|
+| instagram-agent-skill: ig-human | doppelt mit `humanizer`; wandelt typografische Anführungszeichen („…“) in gerade um – falsch für Deutsch |
+| albertshiney/websitegenerator | keine LICENSE; füllt automatisch Kontaktformulare fremder Firmen mit Werbenachricht (submit_by_default), Firecrawl-Key aus .env |
+| „Claude-Autopilot, 50 Accounts“ (jayantcreates) | kein Projekt, nur Kommentar-Köder; Mehrfach-Accounts mit Auto-Posting verstoßen gegen Instagram-Regeln |
+| Higgsfield Katana | kein Skill nötig – Higgsfield ist als Connector bereits verbunden (kostenpflichtige Credits) |
+| browser-use/video-use (erneut gesehen) | bleibt abgelehnt (ElevenLabs-Upload, Schlüssel in .env) |
