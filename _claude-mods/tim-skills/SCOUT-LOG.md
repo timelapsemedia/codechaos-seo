@@ -101,3 +101,13 @@ Abgelehnt:
 | „Claude-Autopilot, 50 Accounts“ (jayantcreates) | kein Projekt, nur Kommentar-Köder; Mehrfach-Accounts mit Auto-Posting verstoßen gegen Instagram-Regeln |
 | Higgsfield Katana | kein Skill nötig – Higgsfield ist als Connector bereits verbunden (kostenpflichtige Credits) |
 | browser-use/video-use (erneut gesehen) | bleibt abgelehnt (ElevenLabs-Upload, Schlüssel in .env) |
+
+## 2026-10-18 – Wochenlauf lokal (nur Selbstverbesserung; letzter Lauf 15.10. < 6 Tage → keine Fremd-Suche)
+
+Eigenbau:
+| Skill | Anlass (Belege) | Test |
+|---|---|---|
+| agenten-schwarm | SKILL-KANDIDAT im Selbstverbesserungs-Log 15.10.; Freigabe der Orchestrierung (Session 15.10., Projekt C--) | Ladetest; Vorlagen gegen vorhandene Werkzeuge (videokontrolle.py, kanten_mms.py, codex-bridge) abgeglichen |
+| sammler-kontakt | Sammler-Verhandlung und Provenienz-Recherche in Sessions 13.10., 14.10., 15.10. (Projekt C--); raritaeten-jaeger deckt nur Suche ab | `preisanker.py` mit 5 Beispielfällen (Leiter, Rundung, Fehler bei max < Start, Warnungen); Ladetest |
+
+Offen (nur Vorschlag, nicht umgesetzt): 18 Skills doppelt in `~/.claude/skills` und tim-skills (gsap-*, ig-*) – Bereinigung bräuchte Löschen lokaler Ordner, das darf die Routine nicht.
