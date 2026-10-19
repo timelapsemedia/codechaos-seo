@@ -1,0 +1,1 @@
+eigen – 2026-10-19 ; Anlass: Tims Hinweis auf Premiere-Plugin AutoEdit (Rohschnitt aus Transkript); Tim schneidet in DaVinci (Session Podcast-1, 10.10.); yt-edit erkennt keine deutschen Füllwörter und erzeugt keine importierbare Timeline

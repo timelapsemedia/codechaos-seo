@@ -74,6 +74,7 @@ Hinweis: `after-effects`, `davinci-resolve`, `lottie` stammen aus einem großen,
 | `producer-pal` | Control Ableton Live for music production via Producer Pal's local REST API — | https://github.com/adamjmurray/producer-pal/tree/main/examples/skills/producer-pal | mitgeliefert (LICENSE.upstream) |
 | `programmatic-seo` | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO," "templ | https://github.com/coreyhaines31/marketingskills/tree/main/skills/programmatic-seo | mitgeliefert (LICENSE.upstream) |
 | `remotion-best-practices` | Router for all Remotion skills | https://github.com/remotion-dev/skills/tree/main/skills/remotion-best-practices | siehe Quelle |
+| `rohschnitt-davinci` | Rohschnitt aus Transkript (Pausen, deutsche/englische Füllwörter, verpatzte erste Takes) als EDL-Timeline für DaVinci Resolve/Premiere | eigen | eigen |
 | `routine-einrichtung` | Checkliste für neue Routinen: Repos, Branch, Freigaben, Zugangsdaten, Kosten, Bericht, Testlauf; Prompt-Prüfung auf Klartext-Tokens | eigen (Skill-Scout) | eigen |
 | `routine-waechter` | Alle Routinen auf Ausfälle, Überfälligkeit, Klartext-Tokens und teure Dauer-Sessions prüfen, Sammelmeldung | eigen (Skill-Scout) | eigen |
 | `sammler-kontakt` | Seltene Tonträger von Sammlern bekommen: Anfrage, Warmhalten, Gebotsleiter (`preisanker.py`), sichere Bezahlung, Rip-/Scan-Bitte, Provenienz über Zeitzeugen (entwirft nur) | eigen (Skill-Scout) | – |
