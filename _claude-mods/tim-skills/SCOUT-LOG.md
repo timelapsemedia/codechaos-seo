@@ -153,3 +153,11 @@ Vorschläge an Tim (nicht umgesetzt, Abschnitt D):
 - Routine „DRUWIDS Instagram Shorts Auto-Poster“ (abgeschaltet) enthält einen Instagram-Zugangstoken im Klartext im Prompt → Token bei Meta erneuern (alter gilt als offen), Prompt bereinigen.
 - Stündliche Wikipedia-Beobachtung in derselben großen Session ist sehr teuer → frische Session pro Lauf oder seltener.
 - Lokal: 18 Skills doppelt in ~/.claude/skills und tim-skills (aus Lauf 18.10.) – Bereinigung braucht Löschen, nur durch Tim.
+
+## 2026-10-19 – Tims Hinweise (Reels/Doc, zweite Runde) – nichts Neues aufgenommen
+| Skill/Repo | Ergebnis |
+|---|---|
+| iamzifei/show-me-the-money (25 money-*-Skills, „AI whose only job is to make money“) | abgelehnt: Lizenz CC BY-NC 4.0 (keine kommerzielle Nutzung; Tim verkauft über Gumroad/Mastering – kommerzielle Lizenz kostenpflichtig) und `money-upgrade` aktualisiert sich selbst per npm |
+| Jakeschincariol/instagram-agent-skill (Google-Doc) | bereits am 15.10. aufgenommen (12 ig-*-Skills) |
+| albertshiney/websitegenerator, „Autopilot 50 Accounts“, video-use | bereits abgelehnt (13./15.10.), unverändert |
+| Higgsfield Katana | kein Skill nötig – Connector ist verbunden |
