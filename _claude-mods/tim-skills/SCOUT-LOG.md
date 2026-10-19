@@ -170,3 +170,9 @@ oder Entfernen der Namensnennung. Bedingungen: Namensnennung behalten (LICENSE.u
 Quelle iamzifei/show-me-the-money @b1e2f9e. Geprüft: kein Upload (Zustand nur lokal unter `~/.smtm/`), Update-Check nur als Hinweis,
 unsichtbare Zeichen nur Emoji-Verbinder (U+200D), Ads/Ops mit Budgetgrenze und Bestätigungspflicht für kritische Aktionen.
 Nicht übernommen: `money-upgrade` (aktualisiert die Suite selbst per npm; Updates laufen über den Skill-Scout).
+
+## 2026-10-19 – Tims Hinweise: AutoEdit (Premiere) und Claude-Code-Prompt-Bibliothek
+| Hinweis | Ergebnis |
+|---|---|
+| AutoEdit „Content Creator Mode“ (Premiere-Plugin, nur per „Kommentiere CLAUDE“) | nicht installiert: kein öffentlicher Code/keine Lizenz, Kommentar-Köder, nur Premiere. Stattdessen Eigenbau `rohschnitt-davinci` (Rohschnitt-EDL für DaVinci aus Transkript; getestet mit deutschem Beispiel: Füllwörter, Neuansatz, 3-s-Pause erkannt, EDL-Zeitcodes lückenlos, CRLF) |
+| code.claude.com/docs/en/prompt-library | keine Installation (Kopiervorlagen, überwiegend Softwareentwicklung); passende Prompts Tim direkt genannt |
