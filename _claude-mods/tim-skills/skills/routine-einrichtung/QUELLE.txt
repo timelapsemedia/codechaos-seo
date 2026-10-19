@@ -1,0 +1,1 @@
+eigen – Skill-Scout 2026-10-19 ; Anlass: neue Routinen scheiterten im ersten Lauf an Repos/Branch/Freigabe (Session Geldverdienung 18.10.: „wo genau?“, Push auf Nebenzweige, blockierter Upload; Myriad-Routine zuerst ohne Repo-Zugriff); Tokens im Chat/Prompt (Mitragyna 18.10.)
