@@ -161,3 +161,12 @@ Vorschläge an Tim (nicht umgesetzt, Abschnitt D):
 | Jakeschincariol/instagram-agent-skill (Google-Doc) | bereits am 15.10. aufgenommen (12 ig-*-Skills) |
 | albertshiney/websitegenerator, „Autopilot 50 Accounts“, video-use | bereits abgelehnt (13./15.10.), unverändert |
 | Higgsfield Katana | kein Skill nötig – Connector ist verbunden |
+
+## 2026-10-19 – Korrektur: show-me-the-money aufgenommen (24 Skills, ohne money-upgrade)
+Tim: „trotzdem nutzen … geht darum, ob die Skills gut sind und mich finanziell nach vorne bringen.“
+Die Ablehnung von heute früh war falsch begründet: Laut `COMMERCIAL-LICENSE.md` des Autors ist die Nutzung für das **eigene** Geschäft und
+eigenes Einkommen unter CC BY-NC 4.0 kostenlos abgedeckt. Kostenpflichtig wird es erst bei Weiterverkauf, Einbau in ein Produkt für Dritte
+oder Entfernen der Namensnennung. Bedingungen: Namensnennung behalten (LICENSE.upstream, QUELLE.txt, README), das Paket nicht weiterverkaufen.
+Quelle iamzifei/show-me-the-money @b1e2f9e. Geprüft: kein Upload (Zustand nur lokal unter `~/.smtm/`), Update-Check nur als Hinweis,
+unsichtbare Zeichen nur Emoji-Verbinder (U+200D), Ads/Ops mit Budgetgrenze und Bestätigungspflicht für kritische Aktionen.
+Nicht übernommen: `money-upgrade` (aktualisiert die Suite selbst per npm; Updates laufen über den Skill-Scout).
