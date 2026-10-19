@@ -111,3 +111,45 @@ Eigenbau:
 | sammler-kontakt | Sammler-Verhandlung und Provenienz-Recherche in Sessions 13.10., 14.10., 15.10. (Projekt C--); raritaeten-jaeger deckt nur Suche ab | `preisanker.py` mit 5 Beispielfällen (Leiter, Rundung, Fehler bei max < Start, Warnungen); Ladetest |
 
 Offen (nur Vorschlag, nicht umgesetzt): 18 Skills doppelt in `~/.claude/skills` und tim-skills (gsap-*, ig-*) – Bereinigung bräuchte Löschen lokaler Ordner, das darf die Routine nicht.
+
+## 2026-10-19 – Wochenlauf 3 (2 fremde aufgenommen: earshot, leonardo-colors; 2 Eigenbau: routine-waechter, routine-einrichtung; 12 aktualisiert)
+
+Aktualisiert: ai-seo, copy-editing, copywriting, paid-ads, programmatic-seo, seo-audit, site-architecture, social-content, video-marketing
+(coreyhaines31/marketingskills @365b412, 15.10.); remotion-best-practices (remotion-dev/skills @1441a11, 16.10.); core-web-vitals und web-seo
+um References ergänzt, die bei der Erstinstallation fehlten (addyosmani/web-quality-skills @afa8da9).
+Nicht aktualisiert: ad-creative – Upstream hat einen Werbeeinschub für das Produkt „Magister“ mit Affiliate-Link (?ref=marketingskills) in die
+SKILL.md aufgenommen; bisherige Fassung bleibt.
+
+Aufgenommen:
+| Skill | Quelle | Lizenz | Prüfung |
+|---|---|---|---|
+| earshot | Leonxlnx/earshot @925ebe5 | MIT | SKILL.md gelesen; braucht pip-Paket earshot (lokal, CPU, Modelle gepinnt von Hugging Face); Gemini-Upload nur mit eigenem Key und ausdrücklicher Zustimmung, Skill verbietet eigenmächtiges --yes-upload |
+| leonardo-colors | adobe/leonardo @eb6481d | Apache-2.0 | offizieller Hersteller; reine Anleitung, keine Skripte |
+
+Eigenbau:
+| Skill | Anlass (Belege) | Test |
+|---|---|---|
+| routine-waechter | ausgefallene Routine-Läufe unbemerkt: Etsy 13.10. (Wochenlimit), polished.media 13./14.10. (3× Limitfehler), Mitragyna 08./18.10. (fehlende Posts); Klartext-Token in einem Routine-Prompt (list_triggers 19.10.); stündliche Session-Routine mit sehr hohen Cache-Kosten (Wikipedia 18./19.10.) | `routinen_check.py` mit 5 Beispiel-Routinen (FAILED, überfällig, stündlich+Session, Token im Prompt, ok) und 2 Prompts; Token-Wert erscheint nie in der Ausgabe |
+| routine-einrichtung | Session Geldverdienung 18.10. („wo genau?“ bei Repos, Push auf Nebenzweige, Upload von Sicherheitsprüfung blockiert); Myriad-Routine zuerst ohne Repo-Zugriff; Token per Chat in Prompt (Mitragyna 18.10.) | Prompt-Prüfung über `routinen_check.py --prompt` (schlechter Prompt: 1 Problem + 4 Hinweise; guter Prompt: ok) |
+
+Zurückgestellt/abgelehnt:
+| Skill/Repo | Grund |
+|---|---|
+| hed0rah/acidcat | inhaltlich passend (Vital/Serum-Presets, ACID-Tags, WAV-Reparatur), sauber, MIT – aber ein Maintainer mit 8 Sternen; beobachten |
+| Leonxlnx/taste-skill | 2,5 MB, Bilder zur Laufzeit aus APIs, Überschneidung frontend-design |
+| Leonxlnx/cinetic | 3,1 MB, Stil-Verbote (Neon/Glow) passen nicht, Überschneidung Remotion/GSAP |
+| pycodebr/heditor | `curl … \| sudo bash` im setup.sh, ungepinntes npx |
+| juliobsz/skills (awwwards) | lädt ungepinntes axe-core vom CDN zur Laufzeit, unbekannter Autor |
+| DeepAleph/jevreel | Upload zu kostenpflichtiger Cloud-API |
+| talsiach/take-one, liyupi/ai-promo-video-maker, calesthio/generative-media-skills | bezahlte APIs (ElevenLabs, Suno, Higgsfield) als Pflicht |
+| alchaincyf/huashu-motion | 1 Tag alt, chinesische Doku, Überschneidung |
+| sandraschi/reaper-mcp, dcc-mcp/dcc-mcp-reaper, FunwayHQ/sound-design-skill, pemeunier/Electronic_Music_Mentor, jmfontaine/discogskit | 0–1 Sterne bzw. MCP-gebunden |
+| Fangx-AI/geo-doctor | auf chinesische KI-Plattformen ausgerichtet |
+| FeedHive/ai-slop-detector, phuryn/work-humanizer | Überschneidung humanizer |
+| publora/skills | automatisches Posten |
+| ZiadAbdelkarim/beat-synced-edit | weiter beobachten, unverändert 13 Sterne |
+
+Vorschläge an Tim (nicht umgesetzt, Abschnitt D):
+- Routine „DRUWIDS Instagram Shorts Auto-Poster“ (abgeschaltet) enthält einen Instagram-Zugangstoken im Klartext im Prompt → Token bei Meta erneuern (alter gilt als offen), Prompt bereinigen.
+- Stündliche Wikipedia-Beobachtung in derselben großen Session ist sehr teuer → frische Session pro Lauf oder seltener.
+- Lokal: 18 Skills doppelt in ~/.claude/skills und tim-skills (aus Lauf 18.10.) – Bereinigung braucht Löschen, nur durch Tim.
