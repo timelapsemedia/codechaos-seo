@@ -6,13 +6,13 @@ export const PROFILES: Profile[] = [
     id: 'musik',
     name: 'Musikproduktion (Hitech/Psytrance/Darkpsy, Ableton/REAPER)',
     detect: /\b(hitech|psytrance|psycore|darkpsy|ableton|reaper|reascript|vst3?|daw|bpm|midi|arrangement|kick|bassline|vital|serum|supercollider|remix|track\s?\d)/i,
-    rules: '- Nenne BPM, Tonart/Skala und Taktzahlen explizit; Arrangement in Takten.\n- Nur Plugins/Instrumente verwenden, die nachweislich installiert sind (scannen statt annehmen).\n- Prüfwerkzeuge (falls geladen): mcp__audio-labor__messen/vergleichen für Bounces, midi_pruefen (Skala, Tempo, Takte), lua_pruefen für ReaScript.\n- Ableton-Bridge/Python-Skripte unter Windows mit PYTHONIOENCODING=utf-8 starten.',
+    rules: '- Nenne BPM, Tonart/Skala und Taktzahlen explizit; Arrangement in Takten.\n- Nur Plugins/Instrumente verwenden, die nachweislich installiert sind (scannen statt annehmen).\n- Prüfwerkzeuge (falls geladen): mcp__audio-labor__messen/vergleichen für Bounces, midi_pruefen (Skala, Tempo, Takte), lua_pruefen für ReaScript.\n- Audio inhaltlich analysieren (Tonhöhe/Melodie, Tonart/Skala bzw. Tonsystem, Timbre, Rauigkeit/Schärfe, Bounces über Merkmale vergleichen): Skill comsar nutzen, wann immer das die Antwort belegt; installiert sich bei Bedarf von Codeberg.\n- Ableton-Bridge/Python-Skripte unter Windows mit PYTHONIOENCODING=utf-8 starten.',
   },
   {
     id: 'mastering',
     name: 'Mastering (Death/Black Metal u. a.)',
     detect: /\b(master(ing)?|lufs|true\s?peak|dbtp|limiter|loudness|death\s?metal|black\s?metal|deathmetal|blackmetal)\b/i,
-    rules: '- Lautheit immer gemessen angeben (Integrated LUFS, True Peak dBTP, LRA) – nie schätzen; dafür mcp__audio-labor__messen/vergleichen nutzen, falls geladen.\n- Streaming normalisiert (Spotify/YouTube ca. −14 LUFS integriert); True Peak ≤ −1 dBTP gegen Clipping nach Encoding.\n- Vor der Abgabe: Fade-out vorhanden, letztes Sample nahe 0 (kein Klick), keine Stille am Anfang.\n- Vorher/Nachher-Messwerte gegenüberstellen; Originaldateien nie überschreiben; nach jeder Korrektur die neue Datei erneut senden (keine alten Stände testen lassen).',
+    rules: '- Lautheit immer gemessen angeben (Integrated LUFS, True Peak dBTP, LRA) – nie schätzen; dafür mcp__audio-labor__messen/vergleichen nutzen, falls geladen.\n- Streaming normalisiert (Spotify/YouTube ca. −14 LUFS integriert); True Peak ≤ −1 dBTP gegen Clipping nach Encoding.\n- Vor der Abgabe: Fade-out vorhanden, letztes Sample nahe 0 (kein Klick), keine Stille am Anfang.\n- Vorher/Nachher-Messwerte gegenüberstellen; Originaldateien nie überschreiben; nach jeder Korrektur die neue Datei erneut senden (keine alten Stände testen lassen).\n- Klangfarbe/Rauigkeit/Schärfe vorher/nachher zusätzlich mit dem Skill comsar (TimbreTrack) messen, wenn es um Härte oder Fizz geht.',
   },
   {
     id: 'video',
