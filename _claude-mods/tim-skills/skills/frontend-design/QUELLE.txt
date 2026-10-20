@@ -1,1 +1,1 @@
-https://github.com/anthropics/skills/tree/main/skills/frontend-design
+https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design/skills/frontend-design
