@@ -1,1 +1,0 @@
-https://github.com/anthropics/claude-plugins-official/tree/main/plugins/plugin-dev/skills/skill-development

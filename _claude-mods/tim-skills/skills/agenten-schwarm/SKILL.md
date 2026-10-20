@@ -36,8 +36,8 @@ Abhängigkeitsketten laufen immer nacheinander, z. B. „erst Master, dann Hörp
      („nimm einen Workflow“, „ultracode“) oder durch eine Skill-Anweisung, die das verlangt.
      Vor dem Schreiben des Skripts den Skill `workflow-authoring` laden.
    - Ohne Opt-in: mehrere `Agent`-Aufrufe in **einer** Nachricht, damit sie parallel laufen.
-   - Gegenprüfung durch ein zweites Modell: `ask_codex` (MCP `codex-bridge`, nur lesend)
-     oder `/codex:adversarial-review`. **Keine Schlüssel und keine Kundendaten an Codex.**
+   - Gegenprüfung durch ein zweites Modell: `/codex:adversarial-review` oder `/codex:review`
+     (Plugin `codex@openai-codex`; das frühere MCP `codex-bridge` ist seit 20.10.2026 entfernt). **Keine Schlüssel und keine Kundendaten an Codex.**
    - Rechenlast (Transkription, Alignment, viele Renders): Modal. Vorher
      `modal billing summary --json` prüfen. Pro Monat höchstens die Free Credits verbrauchen.
 3. **Modell nie selbst wechseln oder vorschlagen.** Das Modell wählt Tim.

@@ -176,3 +176,10 @@ Nicht übernommen: `money-upgrade` (aktualisiert die Suite selbst per npm; Updat
 |---|---|
 | AutoEdit „Content Creator Mode“ (Premiere-Plugin, nur per „Kommentiere CLAUDE“) | nicht installiert: kein öffentlicher Code/keine Lizenz, Kommentar-Köder, nur Premiere. Stattdessen Eigenbau `rohschnitt-davinci` (Rohschnitt-EDL für DaVinci aus Transkript; getestet mit deutschem Beispiel: Füllwörter, Neuansatz, 3-s-Pause erkannt, EDL-Zeitcodes lückenlos, CRLF) |
 | code.claude.com/docs/en/prompt-library | keine Installation (Kopiervorlagen, überwiegend Softwareentwicklung); passende Prompts Tim direkt genannt |
+
+## Bereinigung 2026-10-20 (Setup-Inventur, Freigabe Tim)
+Entfernt, weil inhaltsgleiche Kopien von Plugins, die als Werkzeug-Plugin aktiv bleiben, oder ungenutzt (0 Aufrufe in 30 Tagen) mit besserem Ersatz:
+hyperframes-audio, hyperframes-core, hyperframes-keyframes, hyperframes-studio, figma, remotion-to-hyperframes, slideshow (→ Plugin hyperframes),
+bunshin, cast (→ Plugin genjutsu), codex-cli-runtime, codex-result-handling (→ Plugin codex), brag-slim (→ Plugin brag), claude-real-video (→ Plugin claude-real-video),
+agent-development, skill-development, claude-automation-recommender, claude-md-improver, math-olympiad, playground (ungenutzt; skill-creator/plugin-authoring vorhanden),
+humanizer (ungenutzt; ig-human und humanizer-de decken das ab). Nicht erneut aufnehmen. Beleg: C:/selbstverbesserung/setup-inventur-2026-10.md
