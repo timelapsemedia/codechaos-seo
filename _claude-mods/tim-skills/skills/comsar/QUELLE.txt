@@ -1,0 +1,1 @@
+eigen (Anleitung). Paket: https://codeberg.org/rbader/comsar (BSD-3-Clause, Michael Blaß / Rolf Bader). Das Paket selbst ist nicht eingebettet, sondern wird bei Bedarf von Codeberg installiert.
