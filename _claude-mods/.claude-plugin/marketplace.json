@@ -18,11 +18,6 @@
       "description": "Fertig heißt fertig: Abgabe nur mit Belegen, Seitenpanel, Learnings, /pruefer"
     },
     {
-      "name": "schutzschild",
-      "source": "./schutzschild",
-      "description": "Fragt vor riskanten Schritten nach, /schutzschild"
-    },
-    {
       "name": "spar-modus",
       "source": "./spar-modus",
       "description": "EXPERIMENT, standardmäßig aus: leichte Schritte an Haiku, /sparmodus"

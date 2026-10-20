@@ -25,7 +25,6 @@ Diese Mods laufen auch in Cloud-Sessions, weil sie nichts zeichnen müssen. Sie 
 |---|---|---|
 | `limit-cockpit` | Leiste mit 5h-Limit, Reset-Zeit und Kontext; Warnung ab 75 % Wochenlimit; die größten Token-Treiber, getrennt nach gemessen und geschätzt | `/handoff`, `/cockpit` |
 | `pruefer` | Hält eine Abgabe ohne Beleg höchstens 2× an. Die Messwerkzeuge oben zählen als Beleg. Seitenpanel, Learnings pro Projekt. | `/pruefer` |
-| `schutzschild` | Fragt **nie** nach: Riskante Schritte (Löschen, Force-Push, Reset, DB leeren, .env, Dateien außerhalb des Projekts) lehnt sie ab und nennt Claude einen umkehrbaren Weg. Löschen in Temp-Ordnern ist erlaubt, deshalb bleiben Routinen nicht mehr hängen. Versteht Windows-Pfade. Mustererkennung, also kein vollständiger Schutz. | `/schutzschild` |
 | `spar-modus` | **Experiment, standardmäßig aus.** Schickt leichte Schritte an Haiku und zeigt „Ersparnis unbekannt“. | `/sparmodus` |
 | `studio-kompass` | Regeln je Arbeitsbereich mit deinen Vorgaben: Deutsch; vor der Abgabe selbst prüfen; 5 Hashtags und KI-Hinweis; nur echte Produkte; DaVinci-Regeln. Dazu Warnung, wenn ein Geheimnis im Chat steht. | `/studio`, `/dateien` |
 
@@ -36,7 +35,7 @@ In Git Bash (Windows) oder im Terminal (Mac/Linux) ausführen. Die Desktop-App l
 ```bash
 git clone -b claude/epic-dirac-w38jzi https://github.com/timelapsemedia/codechaos-seo.git ~/codechaos-seo
 claude plugin marketplace add ~/codechaos-seo/_claude-mods
-for m in limit-cockpit pruefer schutzschild studio-kompass audio-labor video-werkstatt seo-werkstatt social-studio insta-publisher windows-helfer raritaeten-jaeger; do claude plugin install "$m@tim-mods"; done
+for m in limit-cockpit pruefer studio-kompass audio-labor video-werkstatt seo-werkstatt social-studio insta-publisher windows-helfer raritaeten-jaeger; do claude plugin install "$m@tim-mods"; done
 claude plugin install spar-modus@tim-mods   # optional, Experiment, startet ausgeschaltet
 ```
 
@@ -61,7 +60,7 @@ Auf claude.ai/code die Cloud-Umgebung bearbeiten, **Setup script** öffnen und d
 ## Abschalten
 
 - **Eine Mod:** `/plugin` → Tab **Installed** → deaktivieren, oder `claude plugin disable <mod>@tim-mods`.
-- **Nur die Funktion:** `/pruefer`, `/schutzschild` und `/sparmodus` schalten an und aus.
+- **Nur die Funktion:** `/pruefer` und `/sparmodus` schalten an und aus.
 - **Alle Mods:** `"disableAllHooks": true` in `~/.claude/settings.json` (stoppt auch Settings-Hooks und Statuszeile), oder einmalig `claude --safe-mode`.
 - **Automatisches Laden in einem Repo:** den SessionStart-Hook aus dessen `.claude/settings.json` entfernen.
 - **Cloud-Setup-Skript:** das Setup-Skript entfernen.
@@ -81,3 +80,5 @@ Auf claude.ai/code die Cloud-Umgebung bearbeiten, **Setup script** öffnen und d
 claude plugin validate _claude-mods            # Marketplace, Manifeste und Hooks
 cd _claude-mods/<mod> && claude plugin test    # Tests je Mod (insgesamt 51)
 ```
+
+> `schutzschild` ist seit 2026-10-20 auf Tims Wunsch komplett abgeschaltet (liegt in `_archiv/schutzschild`, wird nicht mehr verteilt). Nicht wieder aufnehmen ohne Tims ausdrücklichen Auftrag.
