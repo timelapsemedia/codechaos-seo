@@ -1,0 +1,1 @@
+eigen – 2026-10-20 ; baut auf whaleyxbt/claude-motion (MIT, Commit e627941543d9988b155dc610bb9cc0115a5e365e) auf; Anlass: Tims Hinweis auf claude-motion, Test-Reel Black Metal Drum Kit

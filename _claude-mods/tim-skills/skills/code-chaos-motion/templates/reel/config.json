@@ -1,0 +1,12 @@
+{
+  "kicker": "CODE CHAOS AUDIO",
+  "title1": "Black Metal",
+  "title2": "Drum Kit",
+  "subtitle": "synthesised from scratch · blast beats to doom",
+  "rows": ["HATS", "SNARE", "KICK"],
+  "stats": [{"n": "47", "label": "SAMPLES"}, {"n": "30", "label": "MIDI GROOVES"}, {"n": "5", "label": "VELOCITY LAYERS"}],
+  "price": "12 €",
+  "formats": "24-BIT WAV · MIDI · ROYALTY-FREE",
+  "cta": "Link in Bio",
+  "palette": {}
+}

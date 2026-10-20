@@ -1,0 +1,7 @@
+{
+  "fps": 30,
+  "duration": 10,
+  "s1": {"label": 0.0, "titleSettle": 0.0, "sub": 0.5},
+  "s2": {"stats": [2.2, 2.45, 2.7], "exit": 6.0},
+  "s3": {"price": 6.15, "formats": 6.6, "cta": 7.0}
+}
