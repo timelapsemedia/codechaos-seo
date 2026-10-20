@@ -27,7 +27,7 @@ already-Instagram draft (use `ig-humanizer --mode audit`).
 
 ## How it works
 
-**Voice profile first (all drafts).** If `../../references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `ig-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
+**Voice profile first (all drafts).** If `references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `ig-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
 
 1. **Take the source.** Any format: a post, a paragraph, a script, a caption, a
    transcript, a bullet list, a link to read. Ask for the source, the media the
@@ -43,7 +43,7 @@ already-Instagram draft (use `ig-humanizer --mode audit`).
 4. **Re-hook for the fold.** Instagram hides everything after ~125 characters
    behind "more". Line one (or the hook slide) must land the whole punch on its
    own. The source's hook almost never survives; write a new first line using a
-   2026 Instagram formula (see `../../references/hook-formulas.md`), picked by the
+   2026 Instagram formula (see `references/hook-formulas.md`), picked by the
    goal.
 5. **Refit the format.** Caption body skimmable, short lines, white space between
    beats. Carousel: one idea per slide, no wall. Cut the source's connective
@@ -56,7 +56,7 @@ already-Instagram draft (use `ig-humanizer --mode audit`).
    video, or slide set the user will attach. A caption with no media is not
    publishable.
 8. **Hashtags at the end.** Hand the topic to `ig-hashtag-strategist` or apply a
-   3-5 sized set yourself (see `../../references/hashtag-strategy.md`). Place them
+   3-5 sized set yourself (see `references/hashtag-strategy.md`). Place them
    as one block at the END of the caption or in the first comment, never as a
    mid-text wall.
 9. **Humanizer pass.** Run `ig-humanizer` V3 on the result: 2026 AI vocab by
@@ -125,10 +125,10 @@ rules:
 
 ## Resources
 
-- `../../references/hook-formulas.md` - the 10 Instagram formula skeletons to re-hook with
-- `../../references/algorithm-heuristics.md` - 2026 Instagram ranking rules (fold, timing, signals)
-- `../../references/hashtag-strategy.md` - the 3-5 sized hashtag recipe
-- `../../references/media-workflow.md` - the draft, upload, schedule flow
+- `references/hook-formulas.md` - the 10 Instagram formula skeletons to re-hook with
+- `references/algorithm-heuristics.md` - 2026 Instagram ranking rules (fold, timing, signals)
+- `references/hashtag-strategy.md` - the 3-5 sized hashtag recipe
+- `references/media-workflow.md` - the draft, upload, schedule flow
 
 ## Related skills
 

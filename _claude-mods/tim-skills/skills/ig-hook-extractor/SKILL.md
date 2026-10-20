@@ -25,7 +25,7 @@ description of the Reel's first 3 seconds).
 
 ## Output
 
-- **Formula identified** (IG1-IG10 from `../../references/hook-formulas.md`) with a
+- **Formula identified** (IG1-IG10 from `references/hook-formulas.md`) with a
   confidence score
 - **Surface:** single image, carousel, or Reel, and why that surface fit the idea
 - **Structural breakdown:**
@@ -69,7 +69,7 @@ See `references/examples.md` for worked teardowns.
 
 ## Formulas reference
 
-See `../../references/hook-formulas.md` for the 10 canonical Instagram formulas
+See `references/hook-formulas.md` for the 10 canonical Instagram formulas
 with full skeletons and goal tags.
 
 ## Files

@@ -26,7 +26,7 @@ clear call to action.
 | IG3 | Relatable Cold-Open | comments | a specific shared moment, no setup |
 | IG4 | Mini-Story Confession | comments, follows | a real first-person story with a cost |
 
-Full skeletons in `../../references/hook-formulas.md`. For carousels (IG5-IG8) use
+Full skeletons in `references/hook-formulas.md`. For carousels (IG5-IG8) use
 `ig-carousel-planner`; for Reels (IG9-IG10) the hook lives in the video, and this
 skill writes the supporting caption.
 
@@ -41,7 +41,7 @@ skill writes the supporting caption.
 
 ## Steps
 
-**Voice profile first (all drafts).** If `../../references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `ig-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
+**Voice profile first (all drafts).** If `references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `ig-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
 
 1. **Gather inputs.** Topic, angle, the media (single image or Reel), target
    audience, and the goal (saves / shares / comments / follows).
@@ -55,7 +55,7 @@ skill writes the supporting caption.
    launch", "send to the friend who keeps doing #2"), a real question, or a
    single next step. Never "what do you think?".
 6. **Add hashtags.** Hand off the topic to `ig-hashtag-strategist` or apply the
-   3-5 sized set yourself (see `../../references/hashtag-strategy.md`). Put them at
+   3-5 sized set yourself (see `references/hashtag-strategy.md`). Put them at
    the end or note they go in the first comment.
 7. **Humanizer pass.** Scrub 2026 AI vocab by paragraph density, cap em
    dashes (about one per 100 words; a caption's single dash is not a tell,
@@ -104,10 +104,10 @@ rules:
 
 ## Resources
 
-- `../../references/hook-formulas.md` - all 10 Instagram formulas (IG1-IG4 are caption-first)
-- `../../references/algorithm-heuristics.md` - 2026 Instagram ranking rules
-- `../../references/hashtag-strategy.md` - the 3-5 sized hashtag recipe
-- `../../references/media-workflow.md` - the draft, upload, schedule flow
+- `references/hook-formulas.md` - all 10 Instagram formulas (IG1-IG4 are caption-first)
+- `references/algorithm-heuristics.md` - 2026 Instagram ranking rules
+- `references/hashtag-strategy.md` - the 3-5 sized hashtag recipe
+- `references/media-workflow.md` - the draft, upload, schedule flow
 - `references/caption-checklist.md` - the per-caption scrub and fit list
 
 ## Related skills

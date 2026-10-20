@@ -22,7 +22,7 @@ For a thread, the URL of the first post is best.
 
 ## Output
 
-- **Formula identified** (T1-T10 from `../../references/hook-formulas.md`) with a
+- **Formula identified** (T1-T10 from `references/hook-formulas.md`) with a
   confidence score
 - **Container:** single post vs thread, and why that container fit the idea
 - **Structural breakdown:**
@@ -69,7 +69,7 @@ See `references/examples.md` for worked teardowns.
 
 ## Formulas reference
 
-See `../../references/hook-formulas.md` for the 13 canonical Threads formulas
+See `references/hook-formulas.md` for the 13 canonical Threads formulas
 with full skeletons and goal tags.
 
 ## Files

@@ -26,7 +26,7 @@ ranks in the small tags while touching the bigger ones.
 | Mid | 50k - 500k | enough audience, beatable competition | 1-2 |
 | Broad | 500k+ | a brief category-label touch, ranks for minutes | 0-1 |
 
-**Default: 3-5 total.** Full reasoning in `../../references/hashtag-strategy.md`.
+**Default: 3-5 total.** Full reasoning in `references/hashtag-strategy.md`.
 
 ## Steps
 
@@ -86,8 +86,8 @@ rules:
 
 ## Resources
 
-- `../../references/hashtag-strategy.md` - the full 2026 sizing model and recipe
-- `../../references/algorithm-heuristics.md` - why sends and saves, not hashtag feeds, drive reach
+- `references/hashtag-strategy.md` - the full 2026 sizing model and recipe
+- `references/algorithm-heuristics.md` - why sends and saves, not hashtag feeds, drive reach
 
 ## Related skills
 

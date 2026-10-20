@@ -25,7 +25,7 @@ it.
 | IG7 | Myth-Buster | shares | correcting beliefs your niche holds |
 | IG8 | Steal-This Framework | saves | a named, repeatable framework |
 
-Full skeletons in `../../references/hook-formulas.md`.
+Full skeletons in `references/hook-formulas.md`.
 
 ## Slide architecture (the 10-slide spine)
 
@@ -43,7 +43,7 @@ single image. See `references/slide-architecture.md` for per-formula spines.
 
 ## Steps
 
-**Voice profile first (all drafts).** If `../../references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `ig-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
+**Voice profile first (all drafts).** If `references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `ig-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
 
 1. **Gather inputs.** Topic, the list/framework/transformation, target audience,
    and the goal (saves / shares / follows).
@@ -102,10 +102,10 @@ rules:
 
 ## Resources
 
-- `../../references/hook-formulas.md` - the carousel formulas (IG5-IG8) with skeletons
-- `../../references/algorithm-heuristics.md` - 2026 carousel ranking and swipe-through rules
-- `../../references/hashtag-strategy.md` - the 3-5 sized hashtag recipe
-- `../../references/media-workflow.md` - uploading 2-10 images in order
+- `references/hook-formulas.md` - the carousel formulas (IG5-IG8) with skeletons
+- `references/algorithm-heuristics.md` - 2026 carousel ranking and swipe-through rules
+- `references/hashtag-strategy.md` - the 3-5 sized hashtag recipe
+- `references/media-workflow.md` - uploading 2-10 images in order
 - `references/slide-architecture.md` - per-formula slide spines and on-image text rules
 
 ## Optional illustration

@@ -42,7 +42,7 @@ Thread shapes (T7-T10):
 | T9 | Curiosity-Gap Opener | replies | a surprising result, mechanism withheld |
 | T10 | How-I Teardown | reposts | a repeatable process you ran yourself |
 
-Full skeletons in `../../references/hook-formulas.md`. T11-T13 were added from a
+Full skeletons in `references/hook-formulas.md`. T11-T13 were added from a
 318-post corpus pull (July 2026): the status flex, permission reframe, and copy
 swap topped the aspirational-warm Threads feed. They are strong hypotheses to
 test, anchored on small-account examples, not yet follower-normalized.
@@ -86,13 +86,13 @@ how the thread will land before approving.
 
 > If multi-post nesting is temporarily paused (Meta app reconnection), fall back
 > to posting the opener as a single post and adding the rest as replies by hand.
-> See `../../references/algorithm-heuristics.md`.
+> See `references/algorithm-heuristics.md`.
 
 ## Steps
 
-**Voice profile first (all drafts).** If `../../references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `threads-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
+**Voice profile first (all drafts).** If `references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `threads-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
 
-**Story bank next.** If `../../references/story-bank.md` has `filled: yes`, load it and take every concrete detail (numbers, dates, named projects, positions) from there instead of asking mid-draft. **Never invent a figure, a date or a client name that is not in the bank or supplied by the user in this conversation.** If the bank has nothing that fits, ask the user, or say once that `threads-humanizer --mode interview` fills it in 20 to 40 minutes. A draft with a plausible invented number is worse than a draft with none: one is vague, the other is a retraction.
+**Story bank next.** If `references/story-bank.md` has `filled: yes`, load it and take every concrete detail (numbers, dates, named projects, positions) from there instead of asking mid-draft. **Never invent a figure, a date or a client name that is not in the bank or supplied by the user in this conversation.** If the bank has nothing that fits, ask the user, or say once that `threads-humanizer --mode interview` fills it in 20 to 40 minutes. A draft with a plausible invented number is worse than a draft with none: one is vague, the other is a retraction.
 
 1. **Gather inputs.** Topic, angle, any rough draft, target audience (builders /
    founders / a niche), and the goal (replies / reposts / likes / quotes).
@@ -164,8 +164,8 @@ rules:
 
 ## Resources
 
-- `../../references/hook-formulas.md` - all 13 Threads formula skeletons (T1-T6 and T11-T13 single, T7-T10 thread)
-- `../../references/algorithm-heuristics.md` - 2026 Threads ranking rules (signals, timing, limits)
+- `references/hook-formulas.md` - all 13 Threads formula skeletons (T1-T6 and T11-T13 single, T7-T10 thread)
+- `references/algorithm-heuristics.md` - 2026 Threads ranking rules (signals, timing, limits)
 - `references/single-post-checklist.md` - the per-post scrub and fit list
 - `references/thread-structure.md` - per-position pacing and the closer playbook
 

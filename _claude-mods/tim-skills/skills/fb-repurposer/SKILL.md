@@ -27,9 +27,9 @@ comments on your Page (use `fb-engagement-drafter`).
 
 ## How it works
 
-**Voice profile first (all drafts).** If `../../references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `fb-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
+**Voice profile first (all drafts).** If `references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `fb-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
 
-**Story bank next.** If `../../references/story-bank.md` has `filled: yes`, load it and take every concrete detail (numbers, dates, named projects, positions) from there instead of asking mid-draft. **Never invent a figure, a date or a client name that is not in the bank or supplied by the user in this conversation.** If the bank has nothing that fits, ask the user, or say once that `fb-humanizer --mode interview` fills it in 20 to 40 minutes. A draft with a plausible invented number is worse than a draft with none: one is vague, the other is a retraction.
+**Story bank next.** If `references/story-bank.md` has `filled: yes`, load it and take every concrete detail (numbers, dates, named projects, positions) from there instead of asking mid-draft. **Never invent a figure, a date or a client name that is not in the bank or supplied by the user in this conversation.** If the bank has nothing that fits, ask the user, or say once that `fb-humanizer --mode interview` fills it in 20 to 40 minutes. A draft with a plausible invented number is worse than a draft with none: one is vague, the other is a retraction.
 
 1. **Take the source.** Any format: a post, a paragraph, a script, a caption, a
    transcript, a bullet list, a link to read. Ask for the source and the goal
@@ -40,7 +40,7 @@ comments on your Page (use `fb-engagement-drafter`).
 3. **Choose the container.** One claim, number, or moment -> a short Page post
    (aim under 80 chars). A true narrative or a build -> a story post (FB8-FB10
    shapes). Match the source to a 2026 Facebook shape in
-   `../../references/hook-formulas.md`, picked by the goal.
+   `references/hook-formulas.md`, picked by the goal.
 4. **Warm the tone for a Page.** A Page voice is warm and human, not a press
    release and not clickbait. Rewrite the source's hook: lead with a standalone
    claim that lands the whole point above the "See more" fold. Facebook folds
@@ -118,8 +118,8 @@ rules:
 
 ## Resources
 
-- `../../references/hook-formulas.md` - the 10 Facebook shapes to re-hook with (FB1-FB7 short, FB8-FB10 story)
-- `../../references/algorithm-heuristics.md` - 2026 Facebook Page ranking rules (the under-80 boost, link reach suppression, timing, limits)
+- `references/hook-formulas.md` - the 10 Facebook shapes to re-hook with (FB1-FB7 short, FB8-FB10 story)
+- `references/algorithm-heuristics.md` - 2026 Facebook Page ranking rules (the under-80 boost, link reach suppression, timing, limits)
 
 ## Related skills
 

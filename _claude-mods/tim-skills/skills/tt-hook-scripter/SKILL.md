@@ -47,7 +47,7 @@ won or lost.
 | T9 | Tutorial Cold Start | saves | start step one with the result previewed |
 | T10 | Trend-Ride With A Twist | shares | a trending sound bent to your niche |
 
-Full skeletons (three layers each) in `../../references/hook-formulas.md`.
+Full skeletons (three layers each) in `references/hook-formulas.md`.
 
 ### Pick by goal first
 
@@ -60,7 +60,7 @@ Full skeletons (three layers each) in `../../references/hook-formulas.md`.
 
 ## Steps
 
-**Voice profile first (all drafts).** If `../../references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `tt-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
+**Voice profile first (all drafts).** If `references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `tt-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
 
 1. **Gather inputs.** The video idea, the niche/audience, the one promise the
    video delivers, and the goal (completion / saves / comments / shares).
@@ -115,8 +115,8 @@ rules:
 
 ## Resources
 
-- `../../references/hook-formulas.md` - all 10 TikTok hook formulas (three layers each)
-- `../../references/algorithm-heuristics.md` - why completion and the first second rule everything
+- `references/hook-formulas.md` - all 10 TikTok hook formulas (three layers each)
+- `references/algorithm-heuristics.md` - why completion and the first second rule everything
 - `references/hook-anatomy.md` - the three-layer hook teardown and timing budget
 
 ## Related skills

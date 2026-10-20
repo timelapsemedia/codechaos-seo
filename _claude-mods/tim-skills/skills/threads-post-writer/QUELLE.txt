@@ -1,1 +1,3 @@
 https://github.com/sergebulaev/threads-skills/tree/main/skills/threads-post-writer
+
+references/ aus https://github.com/sergebulaev/threads-skills/tree/main/references (Commit 8a7f435, MIT) in den Skill-Ordner gelegt; Verweise ../../references/ auf references/ umgestellt.

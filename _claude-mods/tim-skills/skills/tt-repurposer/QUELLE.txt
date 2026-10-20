@@ -1,1 +1,3 @@
 https://github.com/sergebulaev/tiktok-skills/tree/main/skills/tt-repurposer
+
+references/ aus https://github.com/sergebulaev/tiktok-skills/tree/main/references (Commit e050b34, MIT) in den Skill-Ordner gelegt; Verweise ../../references/ auf references/ umgestellt.

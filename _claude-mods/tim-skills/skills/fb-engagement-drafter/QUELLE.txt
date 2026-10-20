@@ -1,1 +1,3 @@
 https://github.com/sergebulaev/facebook-skills/tree/main/skills/fb-engagement-drafter
+
+references/ aus https://github.com/sergebulaev/facebook-skills/tree/main/references (Commit f3fb266, MIT) in den Skill-Ordner gelegt; Verweise ../../references/ auf references/ umgestellt.

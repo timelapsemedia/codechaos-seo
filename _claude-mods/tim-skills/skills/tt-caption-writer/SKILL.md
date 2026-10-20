@@ -60,7 +60,7 @@ Build these with `lib.tiktok_settings(...)`. Defaults match Publora's.
 
 ## Steps
 
-**Voice profile first (all drafts).** If `../../references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `tt-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
+**Voice profile first (all drafts).** If `references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `tt-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
 
 1. **Gather inputs, goal first.** Ask (or infer) what the caption should earn,
    then shape for it: comments -> end on one specific question tied to the video;
@@ -115,8 +115,8 @@ rules:
 
 ## Resources
 
-- `../../references/voice-rules.md` - caption and hashtag rules
-- `../../references/algorithm-heuristics.md` - caption, hashtag, and settings heuristics
+- `references/voice-rules.md` - caption and hashtag rules
+- `references/algorithm-heuristics.md` - caption, hashtag, and settings heuristics
 - `references/settings-matrix.md` - every platformSettings.tiktok value, defaults, and the known bugs
 - `lib/publora_client.py` - `tiktok_settings(...)`, `publish_video(...)`, `create_draft(...)`
 

@@ -29,9 +29,9 @@ for reviewing an already-Threads draft (use `threads-humanizer`, plus
 
 ## How it works
 
-**Voice profile first (all drafts).** If `../../references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `threads-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
+**Voice profile first (all drafts).** If `references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `threads-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
 
-**Story bank next.** If `../../references/story-bank.md` has `filled: yes`, load it and take every concrete detail (numbers, dates, named projects, positions) from there instead of asking mid-draft. **Never invent a figure, a date or a client name that is not in the bank or supplied by the user in this conversation.** If the bank has nothing that fits, ask the user, or say once that `threads-humanizer --mode interview` fills it in 20 to 40 minutes. A draft with a plausible invented number is worse than a draft with none: one is vague, the other is a retraction.
+**Story bank next.** If `references/story-bank.md` has `filled: yes`, load it and take every concrete detail (numbers, dates, named projects, positions) from there instead of asking mid-draft. **Never invent a figure, a date or a client name that is not in the bank or supplied by the user in this conversation.** If the bank has nothing that fits, ask the user, or say once that `threads-humanizer --mode interview` fills it in 20 to 40 minutes. A draft with a plausible invented number is worse than a draft with none: one is vague, the other is a retraction.
 
 1. **Take the source.** Any format: a post, a paragraph, a script, a caption, a
    transcript, a bullet list, a link to read. Ask for the source and the goal
@@ -52,7 +52,7 @@ for reviewing an already-Threads draft (use `threads-humanizer`, plus
 5. **Rebuild the hook.** Threads has a soft fold (the feed truncates long posts
    with a "more" cut), so line one must land the whole punch and stand alone. The
    source's hook almost never survives; write a new first line using a 2026
-   Threads formula (see `../../references/hook-formulas.md`), picked by the goal.
+   Threads formula (see `references/hook-formulas.md`), picked by the goal.
 6. **Refit the format.** Under 500 chars per post (10,000 only with a text
    attachment). One idea per post, line breaks as beats. Cut the source's
    connective tissue. For a thread, hand-split with `---` so the user sees the
@@ -126,8 +126,8 @@ rules:
 
 ## Resources
 
-- `../../references/hook-formulas.md` - the 13 Threads formula skeletons to re-hook with (T1-T6 and T11-T13 single, T7-T10 thread)
-- `../../references/algorithm-heuristics.md` - 2026 Threads ranking rules (signals, timing, limits)
+- `references/hook-formulas.md` - the 13 Threads formula skeletons to re-hook with (T1-T6 and T11-T13 single, T7-T10 thread)
+- `references/algorithm-heuristics.md` - 2026 Threads ranking rules (signals, timing, limits)
 
 ## Related skills
 

@@ -1,1 +1,3 @@
 https://github.com/sergebulaev/instagram-skills/tree/main/skills/ig-hook-extractor
+
+references/ aus https://github.com/sergebulaev/instagram-skills/tree/main/references (Commit 6a12448, MIT) in den Skill-Ordner gelegt; Verweise ../../references/ auf references/ umgestellt.

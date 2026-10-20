@@ -110,8 +110,8 @@ rules:
 
 ## Resources
 
-- `../../references/algorithm-heuristics.md` - sound selection, the trend window, original audio
-- `../../references/hook-formulas.md` - T10 Trend-Ride With A Twist (three layers)
+- `references/algorithm-heuristics.md` - sound selection, the trend window, original audio
+- `references/hook-formulas.md` - T10 Trend-Ride With A Twist (three layers)
 - `references/trend-fit-rubric.md` - the scored fit check and lifecycle examples
 
 ## Related skills
