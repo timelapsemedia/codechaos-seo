@@ -7,6 +7,11 @@ description: Tims eigene Code-Chaos-Audio-Werkzeuge in jeder Hitech-/Psycore-/Da
 
 Tims Wunsch vom 20.10.2026: Alles, was im Store gebaut wird, soll auch in seinen eigenen Hitech-Remix- und Produktionsassistenz-Sessions zum Einsatz kommen. Black-Metal-Parts sind ausdrücklich erwünscht. Der Clean/Crunch- und der Akustik-Klang von Hoarfell gefallen ihm.
 
+## Wo das gilt
+Gemeint sind vor allem Tims lokale Claude-Code-Sessions auf dem PC (Desktop-App, Ableton). Dort entstanden die Single „Uhrwerk aus Blut“ (VÖ 30.10.2026) und „Wiedergänger“. Die Sessions heißen „Ableton Hitech Psytrance Production“ und „Ableton Hitech Psytrance Remix-Session“, die Remix-Sets liegen z. B. unter `Desktop/Track 1 210 Project/`.
+- Für diese Tracks Black-Metal-Parts anbieten. Tempo und Tonart aus dem Ableton-Set lesen, nicht raten.
+- Ein bereits veröffentlichter Track wird nicht verändert; Parts dafür kommen in eine neue Version oder einen Remix.
+
 ## Welche Werkzeuge es gibt (vor dem Einsatz prüfen)
 Was live ist, steht in `timelapsemedia/codechaos-store` → `research/state.json` (`history`). Produktseiten liegen in `products/<slug>/`, Plugin-Quellen in `plugins/<slug>/`. Stand Oktober 2026:
 
