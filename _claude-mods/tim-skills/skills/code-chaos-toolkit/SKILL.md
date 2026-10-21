@@ -50,6 +50,19 @@ Was live ist, steht in `timelapsemedia/codechaos-store` → `research/state.json
   - Härte und Fizz mit dem Skill comsar (TimbreTrack) vorher/nachher prüfen.
 - **Arrangement:** in Takten angeben, z. B. „Break T. 97–112: Blast + Tremolo, T. 113 Drop“.
 
+## Lernvideos mit eigenen Plugins
+Tim, 21.10.2026: Lernvideos zur Musikproduktion kommen sehr gut an. Deshalb sollen eigene Plugins dort oft vorkommen, gleichzeitig als Werbung.
+- Gilt für jedes Lern- oder Erklärvideo zur Musikproduktion: Reels, Shorts, YouTube, Karussells.
+  - Wo es passt, macht ein eigenes Werkzeug den gezeigten Schritt hörbar. Beispiele: Kick/Bass Scope für die Phase, Crucible für Bass-Sättigung, Shardstep für Fills, Frostfret/Gravesaw/Rimehall für Gitarre und Raum, Hoarfell für Drums, Chaos FM/Hitech FM für Leads.
+  - Das Plugin wird im Schritt genannt, nicht als Werbeblock. Am Ende kommt ein weicher CTA („Gratis-Demo · Link in Bio“).
+- Zusätzlich eigene Lernvideos zu allgemeinen Produktionsthemen, umgesetzt mit den eigenen Plugins. Themen sind z. B.:
+  - Mixing, Mastering und Lautheit
+  - Sounddesign
+  - Arrangement bei 180–300 BPM
+  - Black-Metal-Gitarren und Mono-Kompatibilität
+- Echtes Vorher/Nachher-Audio aus dem Plugin. Zahlen werden nur genannt, wenn sie gemessen sind (audio-labor, comsar). Nichts behaupten, was das Plugin nicht kann.
+- Für die Store-Posts steht das Format in ROUTINE-AUDIO.md (codechaos-store), Abschnitt „Learning videos“.
+
 ## Regeln
 - Nur echte, geprüfte Werkzeuge einsetzen; nichts behaupten, was nicht gerendert oder gemessen ist.
 - Keine Fremd-Samples in Produkten. In Tims eigenen Tracks gelten seine Lizenzen.
