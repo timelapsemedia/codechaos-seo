@@ -385,7 +385,7 @@ PLUGINS = [
         "related": ["hoarfell", "gravesaw", "rimehall"],
     },
     {
-        "slug": "hoarfell", "live": False, "group": "metal", "name": "Hoarfell", "price": 17,
+        "slug": "hoarfell", "live": True, "group": "metal", "name": "Hoarfell", "price": 17,
         "category": "Modellierte Drums, Bass und Atmosphäre", "sub": "Instrument (VST3)", "os": "Windows 10/11, macOS (Apple Silicon)",
         "title": "Hoarfell: Black-Metal-Drums & Atmos VST3 | Code Chaos",
         "desc": "Hoarfell: modellierte Drums für 250-BPM-Blasts, E-Bass und Chor, Orgel, Strings im Hall, ohne Samples. 20 Presets, VST3 Win + Mac, 17 €, Gratis-Demo.",

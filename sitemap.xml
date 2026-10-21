@@ -357,4 +357,19 @@
       <image:title>Oberfläche von Frostfret (VST3-Instrument)</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://codechaos-official.de/plugins/hoarfell/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/hoarfell/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/hoarfell/og.jpg</image:loc>
+      <image:title>Hoarfell · Drums, Bass und Atmosphäre · Code Chaos Audio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/hoarfell/gui-880.jpg</image:loc>
+      <image:title>Oberfläche von Hoarfell (VST3-Instrument)</image:title>
+    </image:image>
+  </url>
 </urlset>
