@@ -329,7 +329,7 @@ PLUGINS = [
     },
     # Vorbereitet, noch NICHT live (Gumroad /l/frostfret und /l/hoarfell: 404 am 21.10.2026)
     {
-        "slug": "frostfret", "live": False, "group": "metal", "name": "Frostfret", "price": 29,
+        "slug": "frostfret", "live": True, "group": "metal", "name": "Frostfret", "price": 29,
         "category": "Physikalisch modellierte Gitarre und Bass", "sub": "Instrument (VST3)", "os": "Windows 10/11, macOS (Apple Silicon)",
         "title": "Frostfret: modellierte Gitarre als VST3 | Code Chaos",
         "desc": "Frostfret: E-Gitarre, Akustik und Bass per MIDI, physikalisch modelliert ohne Samples. Tremolo-Picking, Amp eingebaut, 30 Presets. VST3 Win + Mac, 29 €.",

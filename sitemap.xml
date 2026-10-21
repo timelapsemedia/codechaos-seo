@@ -342,4 +342,19 @@
       <image:title>Oberfläche von Rimehall (VST3)</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://codechaos-official.de/plugins/frostfret/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/frostfret/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/frostfret/og.jpg</image:loc>
+      <image:title>Frostfret · modellierte Gitarre und Bass · Code Chaos Audio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/frostfret/gui-880.jpg</image:loc>
+      <image:title>Oberfläche von Frostfret (VST3-Instrument)</image:title>
+    </image:image>
+  </url>
 </urlset>
