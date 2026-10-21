@@ -209,7 +209,7 @@ PLUGINS = [
         "audio": [
             {"src": "build/gravesaw/demo.wav", "file": "demo.mp3", "label": "Gravesaw · Demo",
              "chapters": [("0:00", "DI-Gitarre (trocken, wie aufgenommen)"), ("0:03", "Gravesaw: Cold Tremolo Lead"), ("0:06", "Gravesaw: Carpathian Buzz"),
-                          ("0:08", "Gravesaw: Frozen Wall Thick"), ("0:11", "Gravesaw: Necro Rehearsal Room"), ("0:14", "Gravesaw: Tamed Fizz"),
+                          ("0:08", "Gravesaw: Frozen Wall Thick"), ("0:11", "Gravesaw: Raw Rehearsal Room"), ("0:14", "Gravesaw: Tamed Fizz"),
                           ("0:17", "Gravesaw: Four-Track Demo"), ("0:20", "Voller Mix: Wall Rhythm L/R doppelt + Cold Tremolo Lead + Bass Grind + Black Metal Drum Kit")]},
         ],
         "audio_intro": "Erst das trockene DI-Riff, dann dasselbe Riff durch sechs Presets, am Ende ein voller Mix (170 BPM, 26 Sekunden).",
