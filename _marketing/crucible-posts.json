@@ -245,5 +245,81 @@
   "image": "https://codechaos-official.de/images/social/black-metal-suite.jpg",
   "caption": "Die Black Metal Suite gibt es jetzt als Bundle. 🖤\n\nEssentials: Gravesaw (Amp mit 19 eingebauten Boxen für Gitarre und Bass), Rimehall (kalter Hall, Oktav-Shimmer, Tape), das Black Metal Tone Kit (19 Cab-IRs + REAPER-Ketten) und das Black Metal Drum Kit (47 Drum-Samples + 30 MIDI-Grooves).\n\nZusammen 39 € statt 59 € einzeln. Von Gravesaw und Rimehall gibt es kostenlose Demos zum Testen vorher.\n\nAlles selbst gebaut und synthetisiert, keine Fremd-Samples. VST3 + Standalone für Windows und macOS (Apple Silicon, unsigniert) · Link in Bio\n\n#blackmetal #metalproduction #homerecording #vstplugin #musicproducer",
   "short": "Black Metal Suite Essentials: Gravesaw, Rimehall, Tone Kit und Drum Kit für 39 € statt 59 €: https://timberwolf688.gumroad.com/l/black-metal-suite"
+ },
+ {
+  "id": "learn-01-mono-doppelspur",
+  "date": "2026-11-14",
+  "image": "https://codechaos-official.de/images/social/learn-01-mono-doppelspur.jpg",
+  "video": "https://codechaos-official.de/images/social/learn-01-mono-doppelspur.mp4",
+  "video_title": "Doppelspur in Mono hohl? Kopie vs. zwei echte Takes (Frostfret + Gravesaw)",
+  "caption": "Deine Doppelspur klingt breit, aber in Mono plötzlich hohl? 🎧\n\nEin häufiger Grund: Die zweite Seite ist nur eine Kopie, ein paar Millisekunden verzögert. In Stereo wirkt das breit. In Mono entsteht ein Kammfilter: Bei 15 ms Versatz fehlen alle 67 Hz ganze Frequenzen.\n\nSo bleibt die Wand mono-tauglich:\n1️⃣ Riff zweimal einspielen statt kopieren. In Frostfret macht das \"Double Track\": zwei eigene Takes, links und rechts.\n2️⃣ Take 1 hart links durch Gravesaw \"Wall Rhythm L\", Take 2 hart rechts durch \"Wall Rhythm R\" (zwei verschiedene 4x12-Boxen).\n3️⃣ Mono-Check auf dem Master: Klingt es hohl oder phasig, ist irgendwo eine Kopie im Spiel.\n\nGemessen am Riff im Video (170 BPM, E phrygisch, 8 Takte): Die Kopie hat in Mono Kerben bis −24 dB (80–2000 Hz), die zwei echten Takes nur bis −7 dB. Leiser werden beide in Mono fast gleich (−2,9 vs. −2,6 LU), der Unterschied ist der Klang, nicht die Lautstärke.\n\nSpeichern für die nächste Gitarrenaufnahme. Gratis-Demo · Link in Bio\n\n#blackmetal #metalproduction #guitarmixing #doubletracking #homerecording",
+  "short": "Doppelspur in Mono hohl? Kopie +15 ms = Kerben bis −24 dB. Zwei echte Takes (Frostfret Double Track → Gravesaw Wall Rhythm L/R): nur −7 dB. Frostfret-Demo gratis: https://timberwolf688.gumroad.com/l/frostfret-demo",
+  "youtube_description": "Warum eine kopierte und verzögerte Gitarrenspur in Mono hohl klingt und wie zwei echte Takes mono-tauglich bleiben.\n\nSchritte:\n1. Riff zweimal spielen statt kopieren: Frostfret \"Double Track\" = zwei Takes (L/R)\n2. Take 1 → Gravesaw \"Wall Rhythm L\", Take 2 → Gravesaw \"Wall Rhythm R\", hart links/rechts\n3. Mono-Check: Die Kopie (+15 ms) hat Kerben alle 67 Hz, gemessen bis −24 dB (80–2000 Hz)\n4. Zwei echte Takes: tiefste Stelle nur −7 dB, das Riff bleibt in Mono voll\n\nAudio: echtes Rendering mit Frostfret (Preset \"Wall of Ice (Double Track)\", Amp = DI Out) und Gravesaw, 170 BPM, E phrygisch, je 4 Takte Stereo + 4 Takte Mono. Messung: ffmpeg ebur128 und Spektrum (Welch).\n\nFrostfret-Demo gratis: https://timberwolf688.gumroad.com/l/frostfret-demo\nFrostfret: https://timberwolf688.gumroad.com/l/frostfret\nCode Chaos Audio · codechaos-official.de",
+  "youtube_tags": [
+   "Frostfret",
+   "Gravesaw",
+   "double tracking",
+   "mono compatibility",
+   "black metal",
+   "guitar mixing",
+   "Code Chaos Audio"
+  ]
+ },
+ {
+  "id": "learn-03-buildup-200bpm",
+  "date": "2026-11-18",
+  "image": "https://codechaos-official.de/images/social/learn-03-buildup-200bpm.jpg",
+  "video": "https://codechaos-official.de/images/social/learn-03-buildup-200bpm.mp4",
+  "video_title": "Build-up lauter als der Drop? Stutter-Build-up bei 200 BPM mit Shardstep",
+  "caption": "Dein Build-up ist lauter als dein Drop? 🔊\n\nStarten die Repeats auf der Kick, wiederholen sie die Kick. Je kürzer die Repeats, desto dichter und lauter wird es. Am Ende knallt der Build-up, und der Drop wirkt kleiner.\n\nBuild-up bei 200 BPM mit Shardstep:\n1️⃣ Repeats alle 2 Takte kürzer: 1/8 auf Zählzeit 4, dann 1/16 und 1/32 ab Zählzeit 3.\n2️⃣ Letzte 2 Takte: Repeat 1/64 (18,75 ms bei 200 BPM) mit Repeat Pitch +12.\n3️⃣ Tape Stop auf Zählzeit 4 im letzten Takt, dann kommt der Drop trocken.\n4️⃣ Mix auf 60 % statt 100 %.\n\nGemessen pro Takt (Loop mit 200 BPM, F#-Moll, Build-up Takt 3–10, Drop ab Takt 11): Mit Mix 100 % liegt der lauteste Build-up-Takt 5,8 LU über dem Drop, mit Mix 60 % nur noch 1,8 LU.\n\nSpeichern für den nächsten Track. Gratis-Demo · Link in Bio\n\n#hitech #psycore #psytrance #buildup #musicproduction",
+  "short": "Build-up lauter als der Drop? Shardstep bei 200 BPM: Repeats 1/8 → 1/64, Pitch +12, Tape Stop, Mix 60 %. Gemessen +5,8 → +1,8 LU über dem Drop. Demo gratis: https://timberwolf688.gumroad.com/l/shardstep-demo",
+  "youtube_description": "Ein Build-up für Hitech und Psycore bei 200 BPM, der dichter wird, aber nicht lauter als der Drop.\n\nSchritte:\n1. Shardstep: Repeats alle 2 Takte kürzer, 1/8 → 1/16 → 1/32\n2. Letzte 2 Takte: Repeat 1/64 mit Repeat Pitch +12\n3. Tape Stop auf Zählzeit 4, dann kommt der Drop trocken\n4. Mix 60 % statt 100 %: lautester Build-up-Takt nur +1,8 statt +5,8 LU über dem Drop (gemessen pro Takt, ffmpeg ebur128)\n\nAudio: echtes Rendering mit Shardstep, synthetischer Loop aus dem Code-Chaos-Synth, 200 BPM, F#-Moll, Build-up Takt 3–10, Drop ab Takt 11.\n\nShardstep-Demo gratis: https://timberwolf688.gumroad.com/l/shardstep-demo\nCode Chaos Audio · codechaos-official.de",
+  "youtube_tags": [
+   "Shardstep",
+   "stutter",
+   "build-up",
+   "hitech",
+   "psytrance",
+   "200 bpm",
+   "Code Chaos Audio"
+  ]
+ },
+ {
+  "id": "learn-02-hall-ohne-matsch",
+  "date": "2026-11-22",
+  "image": "https://codechaos-official.de/images/social/learn-02-hall-ohne-matsch.jpg",
+  "video": "https://codechaos-official.de/images/social/learn-02-hall-ohne-matsch.mp4",
+  "video_title": "Black-Metal-Hall ohne Matsch: Ducking + Pre-Delay (Rimehall, vorher/nachher)",
+  "caption": "Dein Hall frisst das Riff? ❄️\n\nBei Tremolo-Riffs liegt der Hall ständig auf den Anschlägen und alles verschwimmt. Weniger Hall ist nicht die einzige Lösung: Lass ihn ausweichen, solange gespielt wird.\n\n1️⃣ Rimehall auf den Gitarrenbus, Preset \"Moonlit Tremolo Bus\".\n2️⃣ Pre-Delay 40 ms: Der Anschlag kommt zuerst, der Hall danach.\n3️⃣ Ducking 45 %: Der Hall wird leiser, solange das Riff spielt.\n4️⃣ Im Stopp oder am Ende einer Phrase kommt die Fahne voll zurück.\n\nGemessen am Riff im Video (170 BPM, E phrygisch, 4 Takte + Stopp, nur der Hall): unter dem Riff −16,5 dB ohne Ducking, −24 dB mit Ducking, also 7,5 dB weniger Matsch. Etwa 1,1 s nach dem Stopp ist der Hall wieder gleich laut (1–2 s danach: −35,5 vs. −35,2 dB).\n\nSpeichern für den nächsten Mix. Gratis-Demo · Link in Bio\n\n#blackmetal #reverb #mixingtips #metalproduction #tremolopicking",
+  "short": "Hall frisst das Riff? Rimehall: Pre-Delay 40 ms + Ducking 45 % = 7,5 dB weniger Hall unter dem Riff, im Stopp ist die Fahne nach 1,1 s wieder voll da. Demo gratis: https://timberwolf688.gumroad.com/l/rimehall-demo",
+  "youtube_description": "Wie der Hall bei Tremolo-Riffs zurücktritt, solange gespielt wird, und in Pausen voll zurückkommt.\n\nSchritte:\n1. Rimehall auf den Gitarrenbus, Preset \"Moonlit Tremolo Bus\"\n2. Pre-Delay 40 ms: Der Anschlag kommt vor dem Hall\n3. Ducking 45 %: Hall 7,5 dB leiser, solange das Riff spielt (gemessen, nur Hall)\n4. Im Stopp kommt die Fahne zurück: nach etwa 1,1 s wieder gleich laut\n\nAudio: echtes Rendering mit Rimehall (VST3), Riff aus Frostfret + Gravesaw, 170 BPM, E phrygisch, 4 Takte + Stopp. Vorher = gleiche Einstellungen mit Ducking 0 % und Pre-Delay 0 ms.\n\nRimehall-Demo gratis: https://timberwolf688.gumroad.com/l/rimehall-demo\nCode Chaos Audio · codechaos-official.de",
+  "youtube_tags": [
+   "Rimehall",
+   "reverb",
+   "ducking",
+   "pre-delay",
+   "black metal",
+   "mixing",
+   "Code Chaos Audio"
+  ]
+ },
+ {
+  "id": "learn-04-kick-laenge",
+  "date": "2026-11-25",
+  "image": "https://codechaos-official.de/images/social/learn-04-kick-laenge.jpg",
+  "video": "https://codechaos-official.de/images/social/learn-04-kick-laenge.mp4",
+  "video_title": "Rolling Bass matscht? Kick-Länge bei 145 BPM prüfen (Kick/Bass Scope, gratis)",
+  "caption": "Dein Rolling Bass matscht, obwohl jede Spur solo gut klingt? 🔬\n\nOft liegt es an der Kick-Länge. Klingt die Kick länger als eine Sechzehntel, läuft ihre Fahne unter die erste Bassnote, und die zwei tiefen Signale reiben sich.\n\n1️⃣ Rolling Bass auf die 2., 3. und 4. Sechzehntel (KBBB).\n2️⃣ Kick/Bass Scope auf den Bass, die Kick in den Sidechain.\n3️⃣ Zeigt das Scope mehr als 0 ms Overlap, liegt die Kick-Fahne unter dem Bass.\n4️⃣ Kick vor der ersten Bassnote enden lassen. Bei 145 BPM ist eine Sechzehntel 103 ms lang, im Video endet die Kick bei 95 ms.\n\nGemessen mit dem Scope (145 BPM, Kick und Bass auf F#): 211 ms Overlap pro Viertel mit der langen Kick (360 ms), 0 ms mit der kurzen.\n\nSpeichern für die nächste Bassline. Kick/Bass Scope ist kostenlos · Link in Bio\n\n#psytrance #psycore #darkpsy #mixingtips #musicproduction",
+  "short": "Rolling Bass matscht? Kick-Fahne läuft unter die erste Bassnote: 211 ms Overlap pro Viertel. Kick bei 145 BPM vor 103 ms enden lassen: 0 ms. Kick/Bass Scope kostenlos: https://timberwolf688.gumroad.com/l/kick-bass-scope",
+  "youtube_description": "Warum ein Psy-Rolling-Bass matscht, wenn die Kick länger als eine Sechzehntel klingt, und wie man es sichtbar macht.\n\nSchritte:\n1. Rolling Bass auf 2., 3. und 4. Sechzehntel (KBBB)\n2. Kick/Bass Scope auf den Bass, Kick in den Sidechain\n3. Overlap über 0 ms? Die Kick-Fahne liegt unter dem Bass\n4. Kick vor der 1. Bassnote enden lassen: 1/16 = 103 ms bei 145 BPM\n\nGemessen mit Kick/Bass Scope: 211 ms Overlap pro Viertel (Kick 360 ms) → 0 ms (Kick endet bei 95 ms). Audio: Kick und Bass aus dem Code-Chaos-Synth, 145 BPM, F#, 7 + 6 Takte.\n\nKick/Bass Scope kostenlos: https://timberwolf688.gumroad.com/l/kick-bass-scope\nCode Chaos Audio · codechaos-official.de",
+  "youtube_tags": [
+   "Kick Bass Scope",
+   "rolling bass",
+   "kick",
+   "psytrance",
+   "mixing",
+   "free plugin",
+   "Code Chaos Audio"
+  ]
  }
 ]

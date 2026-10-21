@@ -72,9 +72,14 @@ def main():
         status = {"privacyStatus": "public", "selfDeclaredMadeForKids": False}
         if due > now:
             status = {"privacyStatus": "private", "publishAt": due.strftime("%Y-%m-%dT%H:%M:%S.000Z"), "selfDeclaredMadeForKids": False}
+        # Crucible posts keep their original link/tags; every other post links the plugin overview unless it brings its own
+        crucible = p["id"].startswith("crucible")
+        link = "\n\nCrucible: https://codechaos-official.de/crucible.html" if crucible else "\n\nAlle Plugins: https://codechaos-official.de/plugins/"
+        tags = p.get("youtube_tags") or (["Crucible", "saturation plugin", "psytrance", "hitech", "psycore", "darkpsy", "Code Chaos"]
+                                         if crucible else ["Code Chaos Audio", "music production", "vst plugin", "Code Chaos"])
         meta = {"snippet": {"title": (p["video_title"] + " #Shorts")[:100],
-                            "description": p["caption"] + "\n\nCrucible: https://codechaos-official.de/crucible.html",
-                            "tags": ["Crucible", "saturation plugin", "psytrance", "hitech", "psycore", "darkpsy", "Code Chaos"],
+                            "description": (p.get("youtube_description") or p["caption"]) + link,
+                            "tags": tags,
                             "categoryId": "10", "defaultLanguage": "de"},
                 "status": status}
         label = f'{p["id"]} ({"geplant für " + due.astimezone(TZ).strftime("%d.%m.%Y %H:%M") if "publishAt" in status else "sofort"})'
