@@ -2,8 +2,8 @@
 
 > Code Chaos is a Hitech Psytrance, Psycore and Darkpsy music producer from Hamburg, Germany, and the studio project of Tim Borchert, active since 2016 with 24+ releases. Today Code Chaos is a studio project only, without bookings. Earlier there were live sets, for example at Abstract Ritual Hamburg (2023) and Lost Signal Festival (2026), and a live recording from Arnsteinhöhle (Austria, 17 April 2026) is released on Bandcamp. Tim Borchert also runs **Polished Media** (genre-specific audio mastering, https://polished.media) and **Code Chaos Audio**, an audio plugin series whose first release is **Crucible**, a 3-band harmonic saturation plugin.
 
-Primary site language: German (de). Full English version: https://codechaos-official.de/en/ . The Crucible product page is in English. Domain: https://codechaos-official.de/
-Last updated: 2026-10-05
+Primary site language: German (de). Full English version: https://codechaos-official.de/en/ . The Crucible product page is in English; all other plugin pages (/plugins/) are in German. Domain: https://codechaos-official.de/
+Last updated: 2026-10-21
 
 ## New single: Uhrwerk aus Blut (30 October 2026)
 
@@ -51,6 +51,12 @@ Last updated: 2026-10-05
   - Tagline: "Shape. Saturate. Dominate." / "From subtle warmth to full-on destruction."
   - Buy / download: https://timberwolf688.gumroad.com/l/crucible
   - Product page: https://codechaos-official.de/crucible.html
+- **Plugin overview (German):** https://codechaos-official.de/plugins/ . All plugins are sold on Gumroad; every paid plugin has a free demo (full plugin, short noise burst every 45 s). macOS builds: Apple Silicon (arm64) only, not signed or notarized; no AU format, so not usable in Logic Pro.
+- **Shardstep**, tempo-synced stutter & glitch effect for hitech and psycore at 200–300 BPM: 16-step pattern (repeats 1/8 to 1/64 incl. triplets, reverse, tape stop, gate, crush), MIDI trigger, slice fades 0.5–8 ms, zero latency, 15 factory patterns. VST3 + standalone, Windows 10/11 and macOS (Apple Silicon). €15. Page: https://codechaos-official.de/plugins/shardstep/ · Buy: https://timberwolf688.gumroad.com/l/shardstep · Demo: https://timberwolf688.gumroad.com/l/shardstep-demo
+- **Chaos FM**, 3-operator FM synth for hitech, psycore and darkpsy: 3 algorithms, filter with drive, up to 4-voice unison, mono/legato with glide, GENERATE button (Lead, Bass, Acid, Stab, Pluck, FX), 12 factory presets. VST3 + standalone, Windows 10/11 only. €19. Page: https://codechaos-official.de/plugins/chaos-fm/ · Buy: https://timberwolf688.gumroad.com/l/chaos-fm · Demo: https://timberwolf688.gumroad.com/l/chaos-fm-demo
+- **Kick/Bass Scope** (free, pay what you want), beat-synced oscilloscope that shows kick and bass on top of each other: peaks in dBFS, clip line, sum curve, kick/bass correlation with phase warning, 13 presets, audio passes through bit-identical. VST3 + standalone, Windows 10/11 and macOS (Apple Silicon). Page: https://codechaos-official.de/plugins/kick-bass-scope/ · Download: https://timberwolf688.gumroad.com/l/kick-bass-scope
+- **Gravesaw** (Black Metal Suite part 1), black metal amp with built-in cab for guitar and bass DI: noise gate, tight, 4x oversampled gain (raw/thick), tone stack with Fizz and Presence, 19 synthesised cabs or cab off, 16 presets, latency 61 samples. VST3 + standalone, Windows 10/11 and macOS (Apple Silicon). €19. Page: https://codechaos-official.de/plugins/gravesaw/ · Buy: https://timberwolf688.gumroad.com/l/gravesaw · Demo: https://timberwolf688.gumroad.com/l/gravesaw-demo
+- **Rimehall** (Black Metal Suite part 2), cold reverb, octave shimmer and tape/lo-fi atmosphere bus with ducking: decay 0.3–30 s, Frost tone control, wow/flutter/saturation/hiss, 14 presets, constant 4 ms latency. VST3 + standalone, Windows 10/11 and macOS (Apple Silicon). €19. Page: https://codechaos-official.de/plugins/rimehall/ · Buy: https://timberwolf688.gumroad.com/l/rimehall · Demo: https://timberwolf688.gumroad.com/l/rimehall-demo
 
 ## Definitions (genre guide)
 
@@ -69,6 +75,7 @@ Last updated: 2026-10-05
 
 - Home (German): https://codechaos-official.de/
 - Home (English): https://codechaos-official.de/en/
+- All plugins (German): https://codechaos-official.de/plugins/
 - Crucible plugin: https://codechaos-official.de/crucible.html
 - Buy Crucible (Gumroad): https://timberwolf688.gumroad.com/l/crucible
 - Music (Bandcamp): https://codechaos.bandcamp.com

@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://codechaos-official.de/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/"/>
@@ -125,7 +125,7 @@
   </url>
   <url>
     <loc>https://codechaos-official.de/crucible.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/crucible.html"/>
@@ -154,7 +154,7 @@
   </url>
   <url>
     <loc>https://codechaos-official.de/psycore/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/psycore/"/>
@@ -180,7 +180,7 @@
   </url>
   <url>
     <loc>https://codechaos-official.de/hitech-psytrance/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/hitech-psytrance/"/>
@@ -206,7 +206,7 @@
   </url>
   <url>
     <loc>https://codechaos-official.de/darkpsy/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/darkpsy/"/>
@@ -245,7 +245,7 @@
   </url>
   <url>
     <loc>https://codechaos-official.de/mastering/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/mastering/"/>
@@ -254,6 +254,92 @@
     <image:image>
       <image:loc>https://codechaos-official.de/images/og/mastering.jpg</image:loc>
       <image:title>Psytrance Mastering für Psycore, Hitech und Darkpsy · Code Chaos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/plugins/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/shardstep/og.jpg</image:loc>
+      <image:title>Audio-Plugins von Code Chaos Audio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/plugins/shardstep/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/shardstep/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/shardstep/og.jpg</image:loc>
+      <image:title>Shardstep · Stutter- und Glitch-Effekt · Code Chaos Audio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/shardstep/gui-880.jpg</image:loc>
+      <image:title>Oberfläche von Shardstep (VST3)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/plugins/chaos-fm/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/chaos-fm/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/chaos-fm/og.jpg</image:loc>
+      <image:title>Chaos FM · FM-Synthesizer · Code Chaos Audio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/chaos-fm/gui-880.jpg</image:loc>
+      <image:title>Oberfläche von Chaos FM (VST3)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/plugins/kick-bass-scope/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/kick-bass-scope/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/kick-bass-scope/og.jpg</image:loc>
+      <image:title>Kick/Bass Scope · Oszilloskop / Analyzer für Kick und Bass · Code Chaos Audio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/kick-bass-scope/gui-880.jpg</image:loc>
+      <image:title>Oberfläche von Kick/Bass Scope (VST3)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/plugins/gravesaw/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/gravesaw/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/gravesaw/og.jpg</image:loc>
+      <image:title>Gravesaw · Amp + Cab für Gitarre und Bass · Code Chaos Audio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/gravesaw/gui-880.jpg</image:loc>
+      <image:title>Oberfläche von Gravesaw (VST3)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/plugins/rimehall/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/rimehall/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/rimehall/og.jpg</image:loc>
+      <image:title>Rimehall · Hall, Shimmer und Tape (Atmosphären-Bus) · Code Chaos Audio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/rimehall/gui-880.jpg</image:loc>
+      <image:title>Oberfläche von Rimehall (VST3)</image:title>
     </image:image>
   </url>
 </urlset>
