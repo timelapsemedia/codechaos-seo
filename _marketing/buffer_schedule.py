@@ -28,6 +28,7 @@ from zoneinfo import ZoneInfo
 HERE = os.path.dirname(os.path.abspath(__file__))
 API = "https://api.buffer.com"
 POST_TIME = datetime.time(17, 0)
+HORIZONT_TAGE = int(os.environ.get("BUFFER_HORIZONT_TAGE", "10"))  # schedule only posts due within this window
 TZ = ZoneInfo("Europe/Berlin")
 
 
@@ -129,6 +130,11 @@ def main():
         due = datetime.datetime.combine(datetime.date.fromisoformat(post["date"]), POST_TIME, TZ).astimezone(datetime.timezone.utc)
         if due <= now:
             print(f'- {post["id"]}: Termin {post["date"]} liegt in der Vergangenheit, übersprungen')
+            continue
+        if due > now + datetime.timedelta(days=HORIZONT_TAGE):
+            # rolling refill (Tim, 22.10.2026): only the next days go into Buffer, the free plan's 10 slots per
+            # channel stay free; the daily run tops up. The post's own date (e.g. release-bound) is never changed.
+            print(f'- {post["id"]}: Termin {post["date"]} kommt später (Horizont {HORIZONT_TAGE} Tage)')
             continue
         for ch in chans:
             k = f'{post["id"]}::{ch["id"]}'
