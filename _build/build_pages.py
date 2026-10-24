@@ -134,7 +134,7 @@ def footer(lang):
       <div><img src="/images/brand/codechaos-logo-bone-240.webp" width="120" height="70" loading="lazy" alt="Code Chaos Logo" style="height:70px;width:auto;margin-bottom:10px"><p>{esc(u['foot'])}</p></div>
       <div><h2>{u['genres']}</h2><ul>{genre_links}<li><a href="/crucible.html">Crucible Plugin</a></li>{'<li><a href="/plugins/">Alle Plugins</a></li>' if lang == "de" else ""}</ul></div>
       <div><h2>{u['follow']}</h2><ul>{social}</ul></div>
-      <div><h2>{u['legal']}</h2><ul><li><a href="/#impressum">{u['imprint']}</a></li><li><a href="/#datenschutz">{u['privacy']}</a></li><li><a href="{'/en/' if lang == 'de' else '/'}" hreflang="{'en' if lang == 'de' else 'de'}">{'English version' if lang == 'de' else 'Deutsche Version'}</a></li></ul></div>
+      <div><h2>{u['legal']}</h2><ul><li><a href="/#impressum">{u['imprint']}</a></li><li><a href="/#datenschutz">{u['privacy']}</a></li><li><a href="#cookies" class="cookie-settings-link">{'Cookie-Einstellungen' if lang == 'de' else 'Cookie settings'}</a></li><li><a href="{'/en/' if lang == 'de' else '/'}" hreflang="{'en' if lang == 'de' else 'de'}">{'English version' if lang == 'de' else 'Deutsche Version'}</a></li></ul></div>
     </div>
     <p class="copy">© 2016–2026 CODE CHAOS · ABSTRACT SOUND DESIGN · HAMBURG</p>
   </div>
@@ -145,6 +145,7 @@ b.addEventListener('click',function(){{var o=m.classList.toggle('open');b.setAtt
 document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('[data-pick]');if(!a)return;var s=document.querySelector('select[name=service]');if(!s)return;
 for(var i=0;i<s.options.length;i++){{if(s.options[i].text===a.getAttribute('data-pick')){{s.selectedIndex=i;break;}}}}}});
 </script>
+<script src="/js/analytics-consent.js" defer></script>
 </body>
 </html>
 """
