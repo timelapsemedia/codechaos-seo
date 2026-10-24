@@ -3346,6 +3346,11 @@ document.addEventListener('DOMContentLoaded',function(){
 <strong>Plugin-Verkauf:</strong> Der Kauf der Plugins von Code Chaos Audio (z. B. Crucible) wird über Gumroad (Gumroad, Inc., USA) abgewickelt; dafür wird ein Skript von gumroad.com geladen. Es gelten zusätzlich die Datenschutzbestimmungen von Gumroad.<br>
 <strong>Externe Links:</strong> Links zu Bandcamp, SoundCloud, DistroKid, Instagram, TikTok, YouTube, X und Threads werden erst beim Anklicken aufgerufen.
 </div></div>
+      <div class="legal-block"><div class="legal-block-title">5b. Google Analytics 4 (nur mit Einwilligung)</div><div class="legal-block-content">Mit Ihrer Einwilligung nutzen wir Google Analytics 4, einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics setzt Cookies und ähnliche Technologien ein, um die Nutzung der Website auszuwerten (z. B. aufgerufene Seiten, Verweildauer, Klickpfade, Herkunft des Besuchs, Geräte- und Browserinformationen, ungefähre Region). IP-Adressen werden von Google Analytics 4 nicht gespeichert.<br>
+Die Verarbeitung erfolgt nur, wenn Sie im Cookie-Banner auf „Akzeptieren“ klicken. Rechtsgrundlage sind Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG. Eine Übermittlung in die USA ist möglich; sie erfolgt, soweit anwendbar, auf Grundlage des EU-US Data Privacy Framework und/oder von Standardvertragsklauseln. Speicherdauer: 14 Monate, danach automatische Löschung.<br>
+<strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie im Footer auf „Cookie-Einstellungen“ klicken.<br>
+Ihre Auswahl im Cookie-Banner speichern wir im lokalen Speicher Ihres Browsers (localStorage), damit das Banner nicht bei jedem Seitenaufruf erneut erscheint. Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TDDDG.
+</div></div>
       <div class="legal-block"><div class="legal-block-title">6. Ihre Rechte (DSGVO)</div><div class="legal-block-content">Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenportabilität sowie Widerspruch. Zur Ausübung Ihrer Rechte wenden Sie sich an: <a href="mailto:booking@codechaos-official.de">booking@codechaos-official.de</a></div></div>
       <div class="legal-block"><div class="legal-block-title">7. Datensicherheit</div><div class="legal-block-content">Wir treffen technische und organisatorische Maßnahmen zum Schutz Ihrer Daten. Eine vollständige Sicherheit bei der Übertragung über das Internet kann nicht garantiert werden.</div></div>
       <div class="legal-block"><div class="legal-block-title">8. Kinder</div><div class="legal-block-content">Unsere Dienste richten sich nicht an Kinder unter 16 Jahren. Wir erfassen wissentlich keine personenbezogenen Daten von Minderjährigen.</div></div>
@@ -3832,6 +3837,7 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') closeAllModals(
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
           <li><a href="#impressum" onclick="openModal('impressum')" style="font-family:var(--font-mono);font-size:0.72rem;color:rgba(236,226,206,0.76);letter-spacing:1px;cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='var(--acid)'" onmouseout="this.style.color='rgba(236,226,206,0.76)'">Impressum</a></li>
           <li><a href="#datenschutz" onclick="openModal('datenschutz')" style="font-family:var(--font-mono);font-size:0.72rem;color:rgba(236,226,206,0.76);letter-spacing:1px;cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='var(--acid)'" onmouseout="this.style.color='rgba(236,226,206,0.76)'">Datenschutz</a></li>
+          <li><a href="#cookies" class="cookie-settings-link" style="font-family:var(--font-mono);font-size:0.72rem;color:rgba(236,226,206,0.76);letter-spacing:1px;cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='var(--acid)'" onmouseout="this.style.color='rgba(236,226,206,0.76)'">Cookie-Einstellungen</a></li>
         </ul>
       </div>
 
@@ -3851,3 +3857,4 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') closeAllModals(
 </footer>
 
 <script src="https://gumroad.com/js/gumroad.js" defer></script>
+<script src="/js/analytics-consent.js" defer></script>
