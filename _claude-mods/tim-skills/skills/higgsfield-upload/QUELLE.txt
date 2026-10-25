@@ -1,0 +1,1 @@
+eigen – Skill-Scout 2026-10-25 ; Anlass: SKILL-KANDIDAT higgsfield-upload im Selbstverbesserungs-Log 20.10. (Upload-URLs per Hand ~6k Tokens; urllib 403, curl 200); 130+ media_upload-Aufrufe in 10 Sessions vom 18.–25.10. (Projekte C--, E--davinci-resolve-mcp), URLs jeweils von Hand in curl-Befehle übertragen
