@@ -77,7 +77,11 @@ def plan_for(post, ch):
         return dict(text=post["caption"], assets=vid) if vid else None
     if s in ("twitter", "threads", "bluesky", "mastodon"):
         return dict(text=post["short"], assets=img)
-    if s in ("facebook", "linkedin"):
+    if s == "facebook":  # Buffer verlangt einen Typ (seit FB-Kanal 24.10.2026, sonst scheitert jeder Lauf)
+        if vid:
+            return dict(text=post["caption"], assets=vid, metadata={"facebook": {"type": "reel"}})
+        return dict(text=post["caption"], assets=img, metadata={"facebook": {"type": "post"}})
+    if s == "linkedin":
         return dict(text=post["caption"], assets=img)
     return None
 

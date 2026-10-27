@@ -38,6 +38,11 @@ def call(host, path, method="GET", **params):
         raise RuntimeError(f"{e.code} {e.read().decode(errors='replace')}") from None
 
 
+def norm(text):
+    """Caption-Schlüssel für den Doppelt-Abgleich: nur Buchstaben/Ziffern, die ersten 120."""
+    return "".join(ch for ch in (text or "").lower() if ch.isalnum())[:120]
+
+
 def main():
     dry = "--dry-run" in sys.argv
     posts = json.load(open(os.path.join(HERE, "crucible-posts.json"), encoding="utf-8"))
@@ -70,6 +75,17 @@ def main():
         me = call(host, "me", fields="user_id,id,username", access_token=token)
         user = me.get("user_id") or me["id"]
     errors = 0
+    # Abgleich mit dem Zielsystem (27.10.2026): Ein wiederholter Actions-Lauf checkt den alten Commit aus, posted.json
+    # kennt dann nicht alles, was schon draußen ist -> Vital-Post doppelt. Was mit gleicher Caption schon live ist,
+    # gilt als gepostet und wird nie erneut gesendet.
+    live = {norm(m.get("caption")) for m in call(host, f"{user}/media", fields="caption", limit=50,
+                                                  access_token=token).get("data", []) if m.get("caption")}
+    for p in list(due):
+        if norm(p["caption"]) in live:
+            print("Instagram: schon live (Caption-Abgleich), nicht erneut:", p["id"])
+            done.add(p["id"])
+            json.dump(sorted(done), open(done_path, "w"), indent=1)
+            due.remove(p)
     for p in due[:1]:  # höchstens ein Post pro Lauf, ältester zuerst
 
         try:
