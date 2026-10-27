@@ -1,13 +1,7 @@
 ---
 name: routine-einrichtung
 description: >-
-  Eine neue Routine (geplanter Claude-Code-Lauf, Trigger) für Tim richtig
-  anlegen oder umbauen – mit Checkliste für Repos, Branch, Freigaben,
-  Zugangsdaten, Kosten, Bericht und Testlauf, damit der erste echte Lauf nicht
-  scheitert. Nutzen bei "richte eine Routine ein", "jeden Tag/jede Woche
-  automatisch", "plane das", "Routine anlegen/ändern", "warum hat die Routine
-  nicht auf main gepusht", "wo trage ich die Repos ein", "Routine ohne
-  Rückfragen". Prüft den Prompt vor dem Anlegen auf Klartext-Zugangsdaten.
+  Neue Routine (geplanter Claude-Lauf) richtig anlegen: Checkliste für Repos, Branch, Freigaben, Zugangsdaten, Kosten, Bericht, Testlauf; prüft den Prompt auf Klartext-Tokens. Bei "richte eine Routine ein", "jeden Tag automatisch", "Routine ändern".
 ---
 
 # routine-einrichtung
