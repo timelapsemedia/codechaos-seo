@@ -1,13 +1,7 @@
 ---
 name: rohschnitt-davinci
 description: >-
-  Rohschnitt für Talking-Head-, Podcast-, Tutorial- und YouTube-Aufnahmen
-  automatisch aus dem Transkript bauen und als EDL-Timeline in DaVinci Resolve
-  (oder Premiere) importieren: Stille kürzen, Füllwörter ("äh", "ähm", "also",
-  "halt", "um") und verpatzte erste Takes entfernen. Nutzen bei "Rohschnitt",
-  "Pausen rausschneiden", "Versprecher raus", "schneid die schlechten Takes
-  raus", "Podcast schneiden", "Silence Remover", "AutoEdit", "Timeline für
-  DaVinci", "Video straffen". Fasst keine Mediendatei an.
+  Rohschnitt aus dem Transkript als EDL für DaVinci Resolve/Premiere: Stille, Füllwörter (äh, ähm, also, um) und verpatzte Takes raus. Bei "Rohschnitt", "Pausen rausschneiden", "Podcast schneiden", "Silence Remover".
 ---
 
 # rohschnitt-davinci

@@ -1,14 +1,7 @@
 ---
 name: sammler-kontakt
 description: >-
-  Seltene Tonträger (Demotapes, Vorab-CDs, Erstpressungen) von privaten
-  Sammlern bekommen und ihre Herkunft über Zeitzeugen klären: Erstanfrage,
-  Warmhalten, Preisverhandlung mit Gebotsleiter, sichere Bezahlung,
-  Rip-/Scan-Bitte als Zwischenziel, Provenienz-Recherche über Szene-Kontakte.
-  Nutzen bei "wie weiter vorgehen mit dem Sammler", "was antworte ich",
-  "nochmal schreiben/in der Mitte treffen", "Lead warmhalten", "anfrage an
-  Club/Label/Zeitzeugen", "wer weiß mehr über die Band", Demotape/Tape/
-  Vorab-CD kaufen. Entwirft nur. Gesendet wird nichts.
+  Seltene Tonträger von privaten Sammlern bekommen und Herkunft klären: Anfrage, Preisverhandlung, sichere Bezahlung, Rip-Bitte, Zeitzeugen. Bei "was antworte ich dem Sammler", "Demotape kaufen", "in der Mitte treffen". Entwirft nur.
 ---
 
 # sammler-kontakt
