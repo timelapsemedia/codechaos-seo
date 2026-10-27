@@ -450,6 +450,7 @@ This iterative process ensures each edit doesn't create new problems while respe
 
 - [Plain English Alternatives](references/plain-english-alternatives.md): Replace complex words with simpler alternatives
 - [Content Refresh](references/content-refresh.md): SERP gap analysis, full checklist, refresh vs. rewrite matrix, and cadence guide
+- [Werbetext-Klassiker](../copywriting/references/klassiker.md): Bewusstseinsstufe, Headline nach Nutzen/Neuigkeit/Neugier, Rutschbahn, Reason why, Belege statt Superlative (lokale Ergänzung; DRUWIDS-Grenzen beachten)
 - [Copy Editing Checklist](references/checklist.md): Full QA checklist across all seven sweeps plus the AI-tell check
 
 ---

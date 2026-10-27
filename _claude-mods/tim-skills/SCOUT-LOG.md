@@ -183,3 +183,24 @@ hyperframes-audio, hyperframes-core, hyperframes-keyframes, hyperframes-studio, 
 bunshin, cast (→ Plugin genjutsu), codex-cli-runtime, codex-result-handling (→ Plugin codex), brag-slim (→ Plugin brag), claude-real-video (→ Plugin claude-real-video),
 agent-development, skill-development, claude-automation-recommender, claude-md-improver, math-olympiad, playground (ungenutzt; skill-creator/plugin-authoring vorhanden),
 humanizer (ungenutzt; ig-human und humanizer-de decken das ab). Nicht erneut aufnehmen. Beleg: C:/selbstverbesserung/setup-inventur-2026-10.md
+
+## 2026-10-27 – Tims Hinweise (3 aufgenommen: hook-master, design-to-motion, hallmark; copywriting/copy-editing ergänzt)
+
+Nur die vier von Tim genannten Kandidaten geprüft, keine allgemeine Fremd-Suche. Alle Dateien gelesen, Skripte auf Netzaufrufe/Hooks/Schlüssel durchsucht, unsichtbare Zeichen geprüft.
+
+Aufgenommen:
+| Skill | Quelle | Lizenz | Prüfung / lokale Anpassung |
+|---|---|---|---|
+| hook-master | Liamrjohnston/hook-master-skill @287053a (v1.1.0) | MIT | reines Markdown, keine Netzaufrufe; neu (25.10., 6 Sterne), aber Inhalt sauber und ehrlichkeitsorientiert (keine erfundenen Zahlen/Trends/View-Versprechen). Überschneidung: tt-hook-scripter (schreibt Hooks neu), ig-hook-extractor (analysiert fremde Hooks), yt-retention (Retention-CSV), ig-viral/shorts – hook-master ist der einzige, der ein vorhandenes Video-Opening diagnostiziert und gegen das Material repariert. Die 9 Upstream-Skills zu EINEM Skill gebündelt (Router + `stages/*.md`), damit nur eine Beschreibung dauerhaft im Kontext steht; Abschnitt „Tims Regeln“ (Social Media Rules 2026, 1,5-s-Hook dreischichtig, DRUWIDS-/Mitragyna-Gate inkl. konsum_gate.py, keine Zitatfragmente, Endkontrolle, A/B über social-insights). install.sh nicht übernommen |
+| design-to-motion | elayadesign/ai-design-skills @5e57840 | MIT | reines Markdown; Figma-Token nur aus Umgebung/Schlüsselbund. Neu gegenüber hyperframes/brag/motion-design/gsap-*: pixelgenaue Rekonstruktion aus Figma/Screenshot, deterministische Bildaufnahme, PSNR-, Überlauf- und Nahtprüfung, Export MP4/GIF – passt zu Plugin-GUI-/Dashboard-Showcases. Beschreibung gekürzt (Kontextkosten), „Tims Hinweise“ (9:16, Social-Regeln, DRUWIDS) ergänzt |
+| hallmark | Nutlope/hallmark @7ec8682 (v2.0.0, Together AI, ~37 000 Sterne) | MIT | Das Posting von @rammcodes zeigt dieses Repo (v2.0.0 im plugin.json). Klar neu gegenüber frontend-design/genjutsu: `sloplint` (mechanische Prüfung auf KI-Muster, statisch + optional gerendert), 48 Themes, Seitenaufbau nach Zweck, Wikimedia-Fotobibliothek mit Nachweisen. Getestet: `sloplint.mjs` auf Beispiel `slopped.html` (24 FAIL erkannt), `theme.mjs deal` ohne Bilder ok, `refcheck.mjs` sauber. NICHT übernommen: `references/themes/*.jpg` (~5 MB, Theme-Bilder optional, würden cloud-setup.sh verdreifachen), `install.mjs` (kopiert in ~/.claude/skills usw. → Dublette), `install-hook.mjs`/`lint-hook.mjs` (schreibt PostToolUse-Hook in settings.json – Hooks nie über Skills), `agents/` (Codex). `imagegen.mjs` (Together AI) bleibt: nur mit gesetztem TOGETHER_API_KEY und ausdrücklichem Wunsch; Hinweise in `references/tim-hinweise.md` |
+
+Abgelehnt:
+| Skill/Repo | Grund |
+|---|---|
+| elayadesign/ai-design-skills: landing-page-design | Überschneidung copywriting/cro/frontend-design/hallmark; zu breite Auslöser („ANY … web UI, component … even when the user does not mention design“) würden jede Webarbeit übernehmen; starre Hausregeln passen nicht (verbietet Inter, Pflicht-Tagline-Sektion, „no hyphens in text“ – falsch für deutsche Komposita); „Content realism“ verlangt erfundene Testimonials mit vollen Namen und erfundene Kundenlogos (UWG-Risiko, widerspricht Tims Belegregel) |
+
+Ergänzt (eigene Worte, keine Zitate):
+| Skill | Was |
+|---|---|
+| copywriting | `references/klassiker.md`: Schwartz-Bewusstseinsstufen + Marktreife, Headline nach Nutzen/Neuigkeit/Neugier (Caples/Ogilvy), Rutschbahn (Sugarman), Reason why (Hopkins), Cialdini-Hebel fair/tabu, Markt vor Formulierung (Halbert), Prüfliste, Grenzen für DRUWIDS (keine Superlative/Wettbewerbsvergleiche/Konsumaussagen), Mitragyna, Gesundheits-Kundenreels. Vorher nur Bewusstseinsstufen in ad-creative abgedeckt, Rest fehlte. Je ein Verweis in copywriting/copy-editing SKILL.md |

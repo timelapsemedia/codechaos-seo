@@ -83,6 +83,8 @@ Three passes, keep it. Two, sharpen the weak one. One or none, rewrite it from t
 ### Clarity Over Cleverness
 If you have to choose between clear and creative, choose clear. Clarity also converts. Clearer positioning and copy is associated with +81% conversions, a 38% shorter sales cycle, 28% lower CAC, and 175% more referrals. When a reader has to decode your line, you've lost them.
 
+**Classic direct-response principles** (Schwartz awareness stages, Caples/Ogilvy headlines by benefit, news and curiosity, Sugarman slippery slide, Hopkins reason-why, Cialdini levers used fairly, Halbert market first), in German with Tims brand limits (DRUWIDS: no superlatives, no competitor comparisons): See [references/klassiker.md](references/klassiker.md)
+
 **For message-market fit tools** (the "Now you can" test, the Human Action Model (discomfort → vision → path), the Perception Gap, and the clarity metrics): See [references/copy-frameworks.md](references/copy-frameworks.md#clarity--message-market-fit)
 
 ### Benefits Over Features

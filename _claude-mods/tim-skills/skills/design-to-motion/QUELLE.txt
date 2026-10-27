@@ -1,0 +1,2 @@
+https://github.com/elayadesign/ai-design-skills/tree/main/skills/design-to-motion @5e57840 (2026-10-27), MIT
+Lokal angepasst (Skill-Scout 2026-10-27): Beschreibung gekürzt (Kontextkosten), Abschnitt „Tims Hinweise“ nach „Scope“ ergänzt; sonst unverändert. Bei Upstream-Updates erhalten.
