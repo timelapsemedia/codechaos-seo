@@ -3,7 +3,28 @@
 # .claude-plugin/marketplace.json ohne Netzwerk (eingebettet) installiert. Nach jeder Mod-Änderung neu erzeugen.
 set -euo pipefail
 cd "$(dirname "$0")"
-names=$(python3 -c "import json;print(' '.join(p['name'] for p in json.load(open('.claude-plugin/marketplace.json'))['plugins']))")
+# Windows: „python3“ ist dort oft nur der Store-Platzhalter, dann „python“ nehmen.
+PY=python3; "$PY" -c "" 2>/dev/null || PY=python
+# Gate: jede SKILL.md braucht gültiges YAML-Frontmatter mit name + description (lostplace-hdr hatte
+# „Tim, 2026-10-20: …“ unquotiert, Claude Code meldete „Failed to parse YAML frontmatter“).
+"$PY" - <<'PYEOF'
+import glob, sys
+try:
+    import yaml
+except ImportError:
+    print("Hinweis: PyYAML fehlt, Frontmatter-Prüfung übersprungen", file=sys.stderr); sys.exit(0)
+bad = []
+for p in sorted(glob.glob("*/skills/*/SKILL.md")):
+    t = open(p, encoding="utf-8").read()
+    try:
+        y = yaml.safe_load(t.split("---")[1]) if t.startswith("---") else None
+        assert isinstance(y, dict) and y.get("name") and y.get("description")
+    except Exception as e:
+        bad.append(f"{p}: {str(e).splitlines()[0] if str(e) else 'name/description fehlt'}")
+if bad:
+    sys.exit("Ungültiges SKILL.md-Frontmatter:\n  " + "\n  ".join(bad))
+PYEOF
+names=$("$PY" -c "import json;print(' '.join(p['name'] for p in json.load(open('.claude-plugin/marketplace.json'))['plugins']))")
 payload=$(tar --exclude='./cloud-setup.sh' --exclude='./build-cloud-setup.sh' --exclude='./tim-mods.tar.gz' --exclude='*/tests' --exclude='*/__pycache__' -czf - . | base64 -w0)
 {
   printf '%s\n' '#!/usr/bin/env bash' \
