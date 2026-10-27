@@ -133,7 +133,7 @@ PLUGINS = [
                   "Der Klang wurde bei diesen Tests nicht nach Gehör beurteilt, hör dir deshalb zuerst die Demo an. Noch nicht in jeder DAW ausprobiert: Wenn etwas in deiner nicht funktioniert, sag Bescheid.",
         "good_to_know": "Bei 250 BPM bleiben dem Kick im 1/16-Pattern nur 60 ms; im Auto-Modus kürzt die Engine dann seinen Ausklang, er bleibt ein kurzer, knackiger Schlag. "
                         "Das Plugin ist ein Instrument und bearbeitet kein Audio, das du hineinschickst. Die Standalone-App hat keinen Transport, dort spielst du es mit MIDI-Noten.",
-        "formats": MAC_FORMATS + " Kein Login und kein Lizenzserver.",
+        "formats": MAC_FORMATS + " Die Vollversion wird einmalig mit dem Lizenzschlüssel aus deiner Gumroad-Quittung aktiviert (Internet nötig, bis zu 3 Rechner, Prüfung alle 14 Tage, 60 Tage offline nutzbar). Ohne Aktivierung verhält sie sich wie die Demo.",
         "faq": [
             ("Brauche ich Sidechain für die Kick+Bass Engine?",
              "Nein. Der Bass duckt im Plugin selbst unter den Kick (Depth und Release), und der Kick endet vor der ersten Bassnote des Patterns."),
@@ -142,6 +142,8 @@ PLUGINS = [
             ("Läuft sie auch ohne DAW-Tempo?",
              "Ja, dann gilt der Fallback-BPM-Wert von 60 bis 320. Mit Host-Tempo hat das Tempo der DAW Vorrang."),
             ("Läuft die Kick+Bass Engine auf dem Mac?", MAC_FAQ),
+            ("Wie aktiviere ich die Vollversion?",
+             "Im Plugin-Kopf auf „Activate“ klicken und den Lizenzschlüssel aus der Gumroad-Quittung eintragen (einmalig, Internet nötig). Ein Schlüssel gilt für bis zu 3 Rechner, das Plugin prüft ihn alle 14 Tage im Hintergrund und läuft 60 Tage offline weiter. Ohne Aktivierung verhält es sich wie die Demo, bei Rückerstattung oder Rückbuchung endet die Lizenz. Die Demo braucht keinen Schlüssel."),
             ("Gibt es eine kostenlose Demo?",
              "Ja, die Kick+Bass Engine Demo auf Gumroad ist das vollständige Plugin mit einem kurzen Rauschen alle 45 Sekunden."),
         ],

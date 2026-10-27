@@ -24,3 +24,10 @@ Jeweils Seite unter https://codechaos-official.de/plugins/<name>/ (Crucible: /cr
 - Google Search Console: für die 7 Plugin-Seiten "Indexierung beantragen" (jede URL einzeln im URL-Prüftool), da "Gefunden – nicht indexiert".
 
 Reddit bleibt read-only (Regel), keine Einträge dort.
+
+## Nachtrag 2026-10-27: Kick+Bass Engine
+### KVR "Add product" (Instrument → Synth / Drum Machine)
+- Name: Kick+Bass Engine, Hersteller: Code Chaos Audio, Preis: 24 EUR (Demo: kostenlos), Formate: VST3 + Standalone (Windows 10/11, macOS arm64 unsigniert)
+- URL: https://codechaos-official.de/plugins/psy-kick-bass/
+- Text: Kick und Rolling Bass in einem Instrument für Psytrance, Hitech und Psycore (140-300+ BPM). Der Kick wird auf die Bassnote gestimmt und endet tempoabhängig vor der ersten Bassnote (im Test 0 ms Kick-Energie nach dem Bass-Einsatz bei 145-250 BPM). 8 Rolling-Patterns, 4 Bass-Modi (Rubber, Plock, Growl, FM), Kick-Designer, Mono unter 150 Hz, eingebautes Scope, 14 Presets. Lizenzschlüssel-Aktivierung (bis 3 Rechner); Demo ohne Schlüssel mit kurzem Rauschen alle 45 s.
+- Bedroom Producers Blog / rekkerd: als Neuvorstellung mit Link auf die Seite und dem Reel (images/social/psy-kick-bass-reel.mp4).
