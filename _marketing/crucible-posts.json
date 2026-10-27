@@ -352,5 +352,21 @@
   "image": "https://codechaos-official.de/images/social/black-metal-suite-complete.jpg",
   "caption": "Die komplette Black Metal Suite in einem Download. 🖤\n\nFrostfret spielt die Gitarren (E-Gitarre, Western, Nylon, Bass), Hoarfell die Drums, den Bass und die Atmosphäre. Gravesaw ist der Amp, Rimehall der kalte Hall. Dazu das Tone Kit mit 19 Cab-IRs und das Drum Kit mit Samples und MIDI-Grooves.\n\nDamit schreibst du einen Black-Metal-Song vom Riff bis zum Mix ohne eine einzige Sample-Library. Alles selbst gebaut und modelliert.\n\n69 € statt 105 € einzeln. Kostenlose Demos von allen vier Plugins zum Testen vorher · Link in Bio\n\n#blackmetal #metalproduction #homerecording #vstplugin #musicproducer",
   "short": "Black Metal Suite Complete: Frostfret, Hoarfell, Gravesaw, Rimehall, Tone Kit, Drum Kit – 69 € statt 105 €: https://timberwolf688.gumroad.com/l/black-metal-suite-complete"
+ },
+ {
+  "id": "store-30-kick-bass-engine-launch",
+  "date": "2026-12-14",
+  "image": "https://codechaos-official.de/images/social/psy-kick-bass.jpg",
+  "video": "https://codechaos-official.de/images/social/psy-kick-bass-reel.mp4",
+  "video_title": "Kick+Bass Engine: rolling psytrance kick and bass in one VST3 | Code Chaos Audio",
+  "caption": "KICK+BASS ENGINE ist da: Kick und Rolling Bass in einem Plugin. 🥁\n\nDer Kick wird auf die Bassnote gestimmt und endet tempoabhängig vor der ersten Bassnote, ohne Sidechain und ohne Kick-Fahne von Hand kürzen. Dazu 8 Rolling-Patterns, 4 Bass-Modi (Rubber, Plock, Growl, FM), Kick-Designer, Mono unter 150 Hz und ein Scope, das den Overlap in ms zeigt.\n\n14 Presets für Full-On, Darkpsy, Forest, Hitech und Psycore, 140 bis 300+ BPM.\n\nVST3 + Standalone für Windows und macOS (Apple Silicon, unsigniert). 24 €, kostenlose Demo · Link in Bio\n\n#psytrance #hitech #psycore #musicproduction #vstplugin",
+  "short": "Kick+Bass Engine: Kick und Rolling Bass in einem VST3, Kick auf den Bass gestimmt, 0 ms Overlap im Test. 24 €, Demo gratis: https://timberwolf688.gumroad.com/l/psy-kick-bass"
+ },
+ {
+  "id": "store-31-kick-bass-engine-overlap",
+  "date": "2026-12-19",
+  "image": "https://codechaos-official.de/images/social/psy-kick-bass-overlap.jpg",
+  "caption": "Kick und Bass überlappen sich? Das ist beim Rolling Bass fast immer die Kick-Fahne. 📏\n\nWir haben es gemessen: bei 145 BPM im KBBB-Pattern klingt ein fester 330-ms-Kick 226 ms in die erste Bassnote hinein (Kick einzeln, Schwelle -60 dBFS). Mit dem automatischen Kick-Ende der Kick+Bass Engine sind es 0 ms, bei 145, 175, 200 und 250 BPM.\n\nTipp ohne Plugin: Kick-Länge so kürzen, dass er vor der ersten Basssechzehntel endet, und Kick und Bass auf denselben Grundton stimmen.\n\n24 €, kostenlose Demo · Link in Bio\n\n#psytrance #hitech #kickandbass #mixingtips #musicproduction",
+  "short": "Kick-Rest nach der ersten Bassnote: 226 ms mit festem Kick, 0 ms mit Auto-Kick-Ende (145 BPM, gemessen). Kick+Bass Engine, 24 €, Demo gratis: https://timberwolf688.gumroad.com/l/psy-kick-bass-demo"
  }
 ]

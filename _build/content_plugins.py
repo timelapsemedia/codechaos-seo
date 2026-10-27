@@ -85,6 +85,69 @@ PLUGINS = [
         "related": ["chaos-fm", "kick-bass-scope", "crucible"],
     },
     {
+        "slug": "psy-kick-bass", "live": True, "group": "psy", "name": "Kick+Bass Engine", "price": 24,
+        "category": "Kick- und Rolling-Bass-Instrument", "sub": "Instrument (VST3)", "os": "Windows 10/11, macOS (Apple Silicon)",
+        "title": "Kick+Bass Engine: Psytrance Kick & Rolling Bass VST3 | Code Chaos",
+        "desc": "Kick+Bass Engine: Kick und Rolling Bass in einem Plugin für 140–300+ BPM. Kick auf den Bass gestimmt, 0 ms Overlap im Test, 8 Patterns. VST3 Win + Mac, 24 €, Gratis-Demo.",
+        "h1": "Kick+Bass Engine: Psytrance-Kick und Rolling Bass in einem Plugin",
+        "eyebrow": "Code Chaos Audio · Instrument",
+        "teaser": "Kick und Rolling Bass in einem Plugin: Kick auf den Bass gestimmt, endet vor der ersten Bassnote.",
+        "answer": "Die Kick+Bass Engine spielt den Kick und den Rolling Bass eines Psytrance-, Hitech- oder Psycore-Tracks aus einem Plugin, damit beide aufeinander abgestimmt sind. "
+                  "Der Kick übernimmt die Tonhöhe der Bassnote und endet tempoabhängig vor der ersten Bassnote des Patterns. "
+                  "Im Test lag die Kick-Energie nach dem Bass-Einsatz bei 145 bis 250 BPM bei 0 ms, mit festem 330-ms-Kick waren es 180 bis 244 ms.",
+        "gui_alt": "Oberfläche der Kick+Bass Engine: Pattern und Timing, Kick-Scope mit Kick und Bass übereinander, Kick Designer, Bass Engine und Mix",
+        "gui_w": 2280, "gui_h": 1324,
+        "audio_mode": "single",
+        "audio": [
+            {"src": "plugins/psy-kick-bass/demo/fullon_145bpm.wav", "file": "fullon-145.mp3", "label": "Full-On Rolling · 145 BPM"},
+            {"src": "plugins/psy-kick-bass/demo/hitech_200bpm.wav", "file": "hitech-200.mp3", "label": "Hitech Machine 180 · 200 BPM"},
+        ],
+        "audio_intro": "Zwei Ausschnitte, direkt aus dem Plugin gerendert (acht Takte, Bassline F#1 F#1 A1 F#1 F#1 F#1 B1 G#1).",
+        "audio_note": "Gerendert mit dem Plugin-Code selbst, ohne Nachbearbeitung.",
+        "specs": [
+            ("Typ", "Kick- und Rolling-Bass-Instrument, MIDI-Eingang"),
+            ("Preis", "24 € auf Gumroad"),
+            ("Formate", "VST3 + Standalone"),
+            ("Systeme", "Windows 10/11 · macOS nur Apple Silicon (unsigniert)"),
+            ("Nicht unterstützt", "AU / Logic Pro, Intel-Macs"),
+            ("Tempo", "140 bis 300+ BPM, Fallback-BPM 60 bis 320 ohne Host-Tempo"),
+            ("Presets", "14 Factory-Presets"),
+            ("Demo", "vollständiges Plugin, kurzes Rauschen alle 45 Sekunden"),
+        ],
+        "features": [
+            "<strong>Kick-Designer:</strong> Click (Rauschen + Ton, 1 bis 9 kHz), Body mit Pitch-Hüllkurve, phasenstarker Sub, vier Drive-Kurven (Soft, Tube, Hard, Fold), Länge und Tune",
+            "<strong>Auto-Tune:</strong> Der Kick folgt der Bassnote (Root Note oder gehaltene MIDI-Note), in den Bereich von 38 bis 76 Hz gefaltet, plus Tune von ±12 Halbtönen",
+            "<strong>Tempoabhängiges Kick-Ende:</strong> Die Engine findet den nächsten Bass-Einsatz und beendet den Kick dort mit einer kurzen Überblendung, optional mit Kick/Bass Gap von 0 bis 20 ms. Abschaltbar für manuelle Länge",
+            "<strong>Phasen-Ausrichtung:</strong> Der Bass-Oszillator setzt die Phase der Kick-Grundwelle an der Übergabe fort (schaltbar)",
+            "<strong>8 Rolling-Patterns:</strong> KBBB 1/16, Triplet Roll, 32nd Roll, Off-Beat, Gallop, Skip Roll, Double Kick, Kick Only. Der Bass duckt im Plugin unter den Kick (Depth, Release)",
+            "<strong>4 Bass-Modi:</strong> Rubber, Plock, Growl, FM, je mit Filter-Hüllkurve pro Note, Drive, Sub, Width und Notenlänge. 4-faches Oversampling und polyBLEP-Oszillatoren",
+            "Mono unter 150 Hz (einstellbar von 20 bis 300 Hz), der obere Bass bleibt breit",
+            "Eingebautes Scope: der letzte Beat mit Kick über Bass, Marker am ersten Basston und Overlap in ms",
+            "MIDI-Noten setzen die Bass-Tonhöhe und starten das Pattern; es läuft auch vom DAW-Transport",
+            "14 Factory-Presets für Full-On, Darkpsy, Forest, Hitech und Psycore plus ein Kick-Lab-Preset",
+        ],
+        "tested": "27 automatische Prüfungen: jedes Factory-Preset bei 145, 200 und 260 BPM ohne NaN, ohne Spitzen über −0,3 dBFS und ohne Gleichspannung. "
+                  "Der Kick wurde einzeln gemessen (Schwelle −60 dBFS): Mit automatischem Kick-Ende lag die Kick-Energie nach dem ersten Bass bei 145, 175, 200 und 250 BPM in allen Bass-Patterns bei 0,000 ms; "
+                  "mit festem 330-ms-Kick waren es im KBBB-Pattern 226, 244, 225 und 180 ms. Die Phase von Kick und Bass an der Übergabe lag mit Phasen-Ausrichtung bei höchstens 21°, ohne bei bis zu 176°. "
+                  "Aliasing des Basses lag im Bereich 10 Hz bis 20 kHz bei −73 dB oder besser (Filter-Cutoff intern auf 12 kHz begrenzt). "
+                  "Der Klang wurde bei diesen Tests nicht nach Gehör beurteilt, hör dir deshalb zuerst die Demo an. Noch nicht in jeder DAW ausprobiert: Wenn etwas in deiner nicht funktioniert, sag Bescheid.",
+        "good_to_know": "Bei 250 BPM bleiben dem Kick im 1/16-Pattern nur 60 ms; im Auto-Modus kürzt die Engine dann seinen Ausklang, er bleibt ein kurzer, knackiger Schlag. "
+                        "Das Plugin ist ein Instrument und bearbeitet kein Audio, das du hineinschickst. Die Standalone-App hat keinen Transport, dort spielst du es mit MIDI-Noten.",
+        "formats": MAC_FORMATS + " Kein Login und kein Lizenzserver.",
+        "faq": [
+            ("Brauche ich Sidechain für die Kick+Bass Engine?",
+             "Nein. Der Bass duckt im Plugin selbst unter den Kick (Depth und Release), und der Kick endet vor der ersten Bassnote des Patterns."),
+            ("Wird der Kick auf den Bass gestimmt?",
+             "Ja. Mit Auto-Tune folgt das Kick-Ende der Bassnote (Root Note oder gehaltene MIDI-Note), plus Tune von ±12 Halbtönen. Die Abweichung lag im Test unter 0,3 Cent."),
+            ("Läuft sie auch ohne DAW-Tempo?",
+             "Ja, dann gilt der Fallback-BPM-Wert von 60 bis 320. Mit Host-Tempo hat das Tempo der DAW Vorrang."),
+            ("Läuft die Kick+Bass Engine auf dem Mac?", MAC_FAQ),
+            ("Gibt es eine kostenlose Demo?",
+             "Ja, die Kick+Bass Engine Demo auf Gumroad ist das vollständige Plugin mit einem kurzen Rauschen alle 45 Sekunden."),
+        ],
+        "related": ["kick-bass-scope", "chaos-fm", "shardstep"],
+    },
+    {
         "slug": "chaos-fm", "live": True, "group": "psy", "name": "Chaos FM", "price": 19,
         "category": "FM-Synthesizer", "sub": "Instrument (VST3)", "os": "Windows 10/11",
         "title": "Chaos FM: FM-Synth VST3 für Hitech & Psycore | Code Chaos",
@@ -458,7 +521,7 @@ GROUPS = [
 
 # Genre-Seite (DE) → passende Plugins (nur live gebaute Seiten werden verlinkt)
 GENRE_PLUGINS = {
-    "psycore": ["shardstep", "chaos-fm", "kick-bass-scope", "crucible"],
-    "hitech-psytrance": ["shardstep", "chaos-fm", "kick-bass-scope", "crucible"],
-    "darkpsy": ["chaos-fm", "kick-bass-scope", "crucible", "shardstep"],
+    "psycore": ["psy-kick-bass", "shardstep", "chaos-fm", "kick-bass-scope", "crucible"],
+    "hitech-psytrance": ["psy-kick-bass", "shardstep", "chaos-fm", "kick-bass-scope", "crucible"],
+    "darkpsy": ["psy-kick-bass", "chaos-fm", "kick-bass-scope", "crucible", "shardstep"],
 }
