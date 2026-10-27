@@ -1,6 +1,6 @@
 ---
 name: copy-editing
-description: "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' 'sharpen the messaging,' 'refresh this content,' 'update this page,' 'this content is outdated,' or 'content audit,' 'this sounds like AI,' 'AI slop,' 'de-slop this,' or 'make it sound human.' Use this when the user already has copy and wants it improved or refreshed rather than rewritten from scratch. Every edit removes AI tells such as 'it's not X, it's Y' reveals, 'no X, no Y, no Z' lists, and sentences that trail into extra comma clauses. A request to fix one line gets a point edit that changes only that line. For writing new copy, see copywriting."
+description: "Edit, review, proofread, tighten or refresh existing marketing copy, or de-slop text that sounds like AI. Removes AI tells; a one-line request gets a point edit. For new copy see copywriting."
 metadata:
   version: 2.2.0
 ---
@@ -450,6 +450,7 @@ This iterative process ensures each edit doesn't create new problems while respe
 
 - [Plain English Alternatives](references/plain-english-alternatives.md): Replace complex words with simpler alternatives
 - [Content Refresh](references/content-refresh.md): SERP gap analysis, full checklist, refresh vs. rewrite matrix, and cadence guide
+- [Werbetext-Klassiker](../copywriting/references/klassiker.md): Bewusstseinsstufe, Headline nach Nutzen/Neuigkeit/Neugier, Rutschbahn, Reason why, Belege statt Superlative (lokale Ergänzung; DRUWIDS-Grenzen beachten)
 - [Copy Editing Checklist](references/checklist.md): Full QA checklist across all seven sweeps plus the AI-tell check
 
 ---
