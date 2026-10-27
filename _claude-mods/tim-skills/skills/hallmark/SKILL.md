@@ -1,6 +1,6 @@
 ---
 name: hallmark
-description: "Design skill for websites and new pages that look designed, not generated. Use when the user asks to build or design something new, or names Hallmark. Never use it on an existing design unless the user names Hallmark, as in `/hallmark redesign <path>`."
+description: "Anti-AI-slop design for NEW websites and pages, checked with sloplint. Only for new builds or when the user names Hallmark (redesign, audit)."
 argument-hint: "<prompt> | redesign <path> | audit <path>"
 version: 2.0.0
 metadata:

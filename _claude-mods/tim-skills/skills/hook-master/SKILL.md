@@ -1,6 +1,6 @@
 ---
 name: hook-master
-description: "Diagnoses and fixes the first seconds of a short-form video (Reel, TikTok, Short, short ad): finds the exact words and first shot that make people swipe, rewrites the hook in six formats, matches it to the footage, writes the next seconds so it pays off, refuses fake stats and view promises, returns one card to film from. Auch: Hook verbessern, Einstieg/erste Sekunden kritisieren, Leute wischen weg, welcher Hook ist besser. Includes Tims Regeln (Social Media Rules 2026, DRUWIDS/Mitragyna gate)."
+description: "Fix the first seconds of a Short, Reel or TikTok: diagnose why viewers swipe, rewrite the hook in six formats, match it to the footage, write the payoff. No fake stats. Auch: Hook verbessern, Einstieg kritisieren."
 ---
 
 # Hook Master

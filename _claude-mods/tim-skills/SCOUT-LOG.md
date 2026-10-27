@@ -184,9 +184,21 @@ bunshin, cast (→ Plugin genjutsu), codex-cli-runtime, codex-result-handling (�
 agent-development, skill-development, claude-automation-recommender, claude-md-improver, math-olympiad, playground (ungenutzt; skill-creator/plugin-authoring vorhanden),
 humanizer (ungenutzt; ig-human und humanizer-de decken das ab). Nicht erneut aufnehmen. Beleg: C:/selbstverbesserung/setup-inventur-2026-10.md
 
+## 2026-10-27 – Wochenlauf 4 (nachgeholt vom 26.10.) + Ausdünnung (Freigabe Tim)
+Neu aufgenommen: keine. Kandidatensuche ohne Treffer, der alle Kriterien erfüllt und Mehrwert bringt (VoltAgent-Neuzugänge themenfremd; ComposioHQ/travisvn/anthropics unverändert; keine Hersteller-Skills für Splice/iZotope/Ableton/NI/Cockos/MetaBrainz).
+Beobachten: jamcgrath/music-theory-skill (MIT, sauber, MIDI-Prüfung; 1 Stern), Akurganow/sound-to-patch (Vital/Serum-Presets, noch ohne SKILL.md), hed0rah/acidcat (weiter 8 Sterne), ZiadAbdelkarim/beat-synced-edit (14 Sterne).
+Abgelehnt: RandyHaylor/audio-and-vocal-mastering (keine LICENSE), JonoGitty/claude-composer-reaper (2 Sterne, Anfängerniveau), kajisho5/audio-production-skill (doppelt mit ffmpeg), tubone24/midi-agent-skill (ungepflegt), SJY051/music-composition (2,3 MB).
+Hinweis: iamzifei/show-me-the-money ist nicht mehr öffentlich erreichbar (404) – lokale geprüfte Kopie bleibt, keine Updates mehr.
+Updates: zurückgestellt bis nach der Ausdünnung (nächster Lauf), betroffene Quellen u. a. coreyhaines31/marketingskills, remotion-dev/skills, lottie.
+
+Nutzung 19.–26.10. (18 Cloud-/Remote-Control-Sessions, Stichprobe): 1 Aufruf aus tim-skills (etsy-seo). Ursache vermutlich das überlaufene Beschreibungs-Budget (147 Skills, 67.400 Zeichen > ~30.000).
+Ausgedünnt: 76 Skills nach _papierkorb/tim-skills-2026-10-27/ (git mv, wiederherstellbar): 19 money-* (Kern money/-diagnose/-strategy/-product/-finance bleibt), 8 doppelte ig-* (sergebulaev), alle fb-*, threads-*, tt-*, 18 seo-* (AgriciDaniel; seo-audit, seo-google bleiben), SaaS-Marketing (churn-prevention, cold-email, customer-research, events, influencer-marketing, product-marketing), paid-ads, cro, gsap-utils/-performance/-timeline/-plugins, shorts.
+Eigene Beschreibungen gekürzt: routine-waechter, routine-einrichtung, rohschnitt-davinci, sammler-kontakt. Ergebnis: 70 Skills, 29.832 Zeichen.
+
 ## 2026-10-27 – Tims Hinweise (3 aufgenommen: hook-master, design-to-motion, hallmark; copywriting/copy-editing ergänzt)
 
 Nur die vier von Tim genannten Kandidaten geprüft, keine allgemeine Fremd-Suche. Alle Dateien gelesen, Skripte auf Netzaufrufe/Hooks/Schlüssel durchsucht, unsichtbare Zeichen geprüft.
+Lief parallel zur Ausdünnung desselben Tages (PR #61, 70 Skills). Damit das Beschreibungs-Budget (~30.000 Zeichen) hält, sind die Beschreibungen der drei neuen Skills kurz gehalten und die von copywriting/copy-editing gekürzt: Summe danach ca. 28.800 Zeichen (73 Skills), also weniger als vorher. tt-hook-scripter, ig-hook-extractor und shorts sind seit #61 im Papierkorb; hook-master deckt die Hook-Arbeit für Shorts damit allein ab.
 
 Aufgenommen:
 | Skill | Quelle | Lizenz | Prüfung / lokale Anpassung |

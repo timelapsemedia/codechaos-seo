@@ -1,6 +1,6 @@
 ---
 name: design-to-motion
-description: "Turns a static design (Figma frame, screenshot, dashboard, UI cards, plugin GUI, hero image) into a pixel-exact HTML replica that loads in from an empty state, lets every visual act out its story in a seamless loop, verifies fidelity (PSNR, overflow, seam checks) and exports MP4 plus GIFs via deterministic frame capture. Use when asked to animate a design or screenshot, make a showcase loop or motion mockup, or animate bento/feature cards on a website."
+description: "Animate a static design (Figma, screenshot, plugin GUI, dashboard) as a pixel-exact showcase loop with fidelity checks; exports MP4 and GIF."
 ---
 
 # Design to Motion

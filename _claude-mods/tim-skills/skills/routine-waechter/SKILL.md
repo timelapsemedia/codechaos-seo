@@ -1,14 +1,7 @@
 ---
 name: routine-waechter
 description: >-
-  Alle geplanten Routinen (Claude-Code-Remote-Trigger) auf Ausfälle prüfen und
-  eine Sammelmeldung schreiben: fehlgeschlagene oder überfällige Läufe,
-  Wochenlimit, abgelaufene Tokens, BLOCKER im Ergebnis, teure Dauer-Sessions
-  und Zugangsdaten im Klartext im Prompt. Nutzen bei "laufen meine Routinen?",
-  "warum kam heute kein Bericht", "Routine-Check", "ist was ausgefallen",
-  "welche Routine hängt", "was kosten meine Routinen", oder wenn eine Session
-  auf den Bericht einer Routine angewiesen ist, den sie nicht sieht. Liest nur;
-  Nachholen eines Laufs nur nach ausdrücklicher Freigabe.
+  Alle Routinen (geplante Claude-Läufe) auf Ausfälle prüfen: fehlgeschlagen, überfällig, Limit, abgelaufene Tokens, Klartext-Zugangsdaten, teure Dauer-Sessions. Bei "laufen meine Routinen?", "Routine-Check", "warum kam kein Bericht". Nur lesen.
 ---
 
 # routine-waechter
