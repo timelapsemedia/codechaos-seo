@@ -194,3 +194,25 @@ Updates: zurückgestellt bis nach der Ausdünnung (nächster Lauf), betroffene Q
 Nutzung 19.–26.10. (18 Cloud-/Remote-Control-Sessions, Stichprobe): 1 Aufruf aus tim-skills (etsy-seo). Ursache vermutlich das überlaufene Beschreibungs-Budget (147 Skills, 67.400 Zeichen > ~30.000).
 Ausgedünnt: 76 Skills nach _papierkorb/tim-skills-2026-10-27/ (git mv, wiederherstellbar): 19 money-* (Kern money/-diagnose/-strategy/-product/-finance bleibt), 8 doppelte ig-* (sergebulaev), alle fb-*, threads-*, tt-*, 18 seo-* (AgriciDaniel; seo-audit, seo-google bleiben), SaaS-Marketing (churn-prevention, cold-email, customer-research, events, influencer-marketing, product-marketing), paid-ads, cro, gsap-utils/-performance/-timeline/-plugins, shorts.
 Eigene Beschreibungen gekürzt: routine-waechter, routine-einrichtung, rohschnitt-davinci, sammler-kontakt. Ergebnis: 70 Skills, 29.832 Zeichen.
+
+## 2026-10-27 – Tims Hinweise (3 aufgenommen: hook-master, design-to-motion, hallmark; copywriting/copy-editing ergänzt)
+
+Nur die vier von Tim genannten Kandidaten geprüft, keine allgemeine Fremd-Suche. Alle Dateien gelesen, Skripte auf Netzaufrufe/Hooks/Schlüssel durchsucht, unsichtbare Zeichen geprüft.
+Lief parallel zur Ausdünnung desselben Tages (PR #61, 70 Skills). Damit das Beschreibungs-Budget (~30.000 Zeichen) hält, sind die Beschreibungen der drei neuen Skills kurz gehalten und die von copywriting/copy-editing gekürzt: Summe danach ca. 28.800 Zeichen (73 Skills), also weniger als vorher. tt-hook-scripter, ig-hook-extractor und shorts sind seit #61 im Papierkorb; hook-master deckt die Hook-Arbeit für Shorts damit allein ab.
+
+Aufgenommen:
+| Skill | Quelle | Lizenz | Prüfung / lokale Anpassung |
+|---|---|---|---|
+| hook-master | Liamrjohnston/hook-master-skill @287053a (v1.1.0) | MIT | reines Markdown, keine Netzaufrufe; neu (25.10., 6 Sterne), aber Inhalt sauber und ehrlichkeitsorientiert (keine erfundenen Zahlen/Trends/View-Versprechen). Überschneidung: tt-hook-scripter (schreibt Hooks neu), ig-hook-extractor (analysiert fremde Hooks), yt-retention (Retention-CSV), ig-viral/shorts – hook-master ist der einzige, der ein vorhandenes Video-Opening diagnostiziert und gegen das Material repariert. Die 9 Upstream-Skills zu EINEM Skill gebündelt (Router + `stages/*.md`), damit nur eine Beschreibung dauerhaft im Kontext steht; Abschnitt „Tims Regeln“ (Social Media Rules 2026, 1,5-s-Hook dreischichtig, DRUWIDS-/Mitragyna-Gate inkl. konsum_gate.py, keine Zitatfragmente, Endkontrolle, A/B über social-insights). install.sh nicht übernommen |
+| design-to-motion | elayadesign/ai-design-skills @5e57840 | MIT | reines Markdown; Figma-Token nur aus Umgebung/Schlüsselbund. Neu gegenüber hyperframes/brag/motion-design/gsap-*: pixelgenaue Rekonstruktion aus Figma/Screenshot, deterministische Bildaufnahme, PSNR-, Überlauf- und Nahtprüfung, Export MP4/GIF – passt zu Plugin-GUI-/Dashboard-Showcases. Beschreibung gekürzt (Kontextkosten), „Tims Hinweise“ (9:16, Social-Regeln, DRUWIDS) ergänzt |
+| hallmark | Nutlope/hallmark @7ec8682 (v2.0.0, Together AI, ~37 000 Sterne) | MIT | Das Posting von @rammcodes zeigt dieses Repo (v2.0.0 im plugin.json). Klar neu gegenüber frontend-design/genjutsu: `sloplint` (mechanische Prüfung auf KI-Muster, statisch + optional gerendert), 48 Themes, Seitenaufbau nach Zweck, Wikimedia-Fotobibliothek mit Nachweisen. Getestet: `sloplint.mjs` auf Beispiel `slopped.html` (24 FAIL erkannt), `theme.mjs deal` ohne Bilder ok, `refcheck.mjs` sauber. NICHT übernommen: `references/themes/*.jpg` (~5 MB, Theme-Bilder optional, würden cloud-setup.sh verdreifachen), `install.mjs` (kopiert in ~/.claude/skills usw. → Dublette), `install-hook.mjs`/`lint-hook.mjs` (schreibt PostToolUse-Hook in settings.json – Hooks nie über Skills), `agents/` (Codex). `imagegen.mjs` (Together AI) bleibt: nur mit gesetztem TOGETHER_API_KEY und ausdrücklichem Wunsch; Hinweise in `references/tim-hinweise.md` |
+
+Abgelehnt:
+| Skill/Repo | Grund |
+|---|---|
+| elayadesign/ai-design-skills: landing-page-design | Überschneidung copywriting/cro/frontend-design/hallmark; zu breite Auslöser („ANY … web UI, component … even when the user does not mention design“) würden jede Webarbeit übernehmen; starre Hausregeln passen nicht (verbietet Inter, Pflicht-Tagline-Sektion, „no hyphens in text“ – falsch für deutsche Komposita); „Content realism“ verlangt erfundene Testimonials mit vollen Namen und erfundene Kundenlogos (UWG-Risiko, widerspricht Tims Belegregel) |
+
+Ergänzt (eigene Worte, keine Zitate):
+| Skill | Was |
+|---|---|
+| copywriting | `references/klassiker.md`: Schwartz-Bewusstseinsstufen + Marktreife, Headline nach Nutzen/Neuigkeit/Neugier (Caples/Ogilvy), Rutschbahn (Sugarman), Reason why (Hopkins), Cialdini-Hebel fair/tabu, Markt vor Formulierung (Halbert), Prüfliste, Grenzen für DRUWIDS (keine Superlative/Wettbewerbsvergleiche/Konsumaussagen), Mitragyna, Gesundheits-Kundenreels. Vorher nur Bewusstseinsstufen in ad-creative abgedeckt, Rest fehlte. Je ein Verweis in copywriting/copy-editing SKILL.md |

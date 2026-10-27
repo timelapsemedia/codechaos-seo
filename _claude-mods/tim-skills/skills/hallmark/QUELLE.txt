@@ -1,0 +1,2 @@
+https://github.com/Nutlope/hallmark/tree/main/skills/hallmark @7ec8682 (v2.0.0, 2026-10-22), MIT, Together AI
+Lokal angepasst (Skill-Scout 2026-10-27): ohne references/themes/*.jpg (Größe), ohne scripts/install.mjs, install-hook.mjs, lint-hook.mjs (Hook-Installer) und agents/ (Codex); Beschreibung gekürzt (Beschreibungs-Budget); Abschnitt „Tims Hinweise“ in SKILL.md und ein Hinweis in references/flow.md ergänzt. Bei Upstream-Updates diese Anpassungen erhalten.

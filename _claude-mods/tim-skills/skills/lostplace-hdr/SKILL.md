@@ -1,6 +1,13 @@
 ---
 name: lostplace-hdr
-description: Urbex-/Lost-Place-HDR-Look für Videos und Fotos (Tim, 2026-10-20: global Pflicht für Lost-Place-Videos). Kräftiger lokaler Kontrast und Mikrostruktur, Schatten mit Zeichnung, keine grauen Lichter, satte Farben – zeitlich stabil (kein Flackern, keine Halos, kein Rauschen/Banding). Nutzen bei jedem Lost-Place-, Urbex-, Ruinen- oder Verfall-Video/-Foto, bei „HDR-Look“, „knackiges HDR“, „wie die großen Lost-Place-Kanäle“, Thumbnails solcher Videos und bei Fragen zur Aufnahme (Osmo Pocket 3, D-Log M, HLG).
+description: >-
+  Urbex-/Lost-Place-HDR-Look für Videos und Fotos (Tim, 2026-10-20: global
+  Pflicht für Lost-Place-Videos). Kräftiger lokaler Kontrast und
+  Mikrostruktur, Schatten mit Zeichnung, keine grauen Lichter, satte Farben –
+  zeitlich stabil (kein Flackern, keine Halos, kein Rauschen/Banding). Nutzen
+  bei jedem Lost-Place-, Urbex-, Ruinen- oder Verfall-Video/-Foto, bei
+  „HDR-Look“, „knackiges HDR“, „wie die großen Lost-Place-Kanäle“, Thumbnails
+  solcher Videos und bei Fragen zur Aufnahme (Osmo Pocket 3, D-Log M, HLG).
 ---
 
 # Lost-Place-HDR (Urbex-Look)
