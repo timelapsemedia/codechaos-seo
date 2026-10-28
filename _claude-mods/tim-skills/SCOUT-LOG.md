@@ -216,3 +216,14 @@ Ergänzt (eigene Worte, keine Zitate):
 | Skill | Was |
 |---|---|
 | copywriting | `references/klassiker.md`: Schwartz-Bewusstseinsstufen + Marktreife, Headline nach Nutzen/Neuigkeit/Neugier (Caples/Ogilvy), Rutschbahn (Sugarman), Reason why (Hopkins), Cialdini-Hebel fair/tabu, Markt vor Formulierung (Halbert), Prüfliste, Grenzen für DRUWIDS (keine Superlative/Wettbewerbsvergleiche/Konsumaussagen), Mitragyna, Gesundheits-Kundenreels. Vorher nur Bewusstseinsstufen in ad-creative abgedeckt, Rest fehlte. Je ein Verweis in copywriting/copy-editing SKILL.md |
+
+## 2026-10-28 – Wochenlauf lokal (nur Selbstverbesserung; letzter Lauf 27.10. < 6 Tage → keine Fremd-Suche)
+
+Eigenbau:
+| Skill | Anlass (Belege) | Test |
+|---|---|---|
+| stock-sichtung | SKILL-KANDIDAT „Rauch-/Glut-Gate für DRUWIDS-Stock“ im Selbstverbesserungs-Log 27.10. (Routine motion-reels-nachschub: Rauchfäden eines Pexels-Clips erst im 100-%-Ausschnitt sichtbar, Reel verworfen); Routine druwids-shorts-nachschub 27.10. (Fremdmarke, Einblendung, Abspanntafel in B-Roll); ARTE-Reel (Texttafeln/Rauch im Fremdmaterial, Memory arte_reel_druwids) | `sichtung.py` mit zwei Testclips (3840×2160 und 1080×1920, Name mit Leerzeichen): 4K → 1920×1080 + 4 Lupen in Quellauflösung, Hochkant unskaliert; Gate: ungesichtet → Exit 1, Freigabe ohne Sichtung abgelehnt, gesperrt → Exit 1, freigegeben → Exit 0, Datei danach geändert → „GEÄNDERT“, Exit 1; Ladetest |
+
+Bewusst ohne CLIP/Bildmodell: Erkennung über Claudes Sichtung der Vollbilder (Read), damit keine Modelle/Pakete nötig sind; Beschreibung kurz gehalten (Budget ~30.000 Zeichen).
+Nicht als Skill (Vorschläge an Tim, Pipeline-Code): globale Render-Sperre in motion.py rendern() (Log 27./28.10.), Lock-Datei in bauen_r3.py, Polished-Sitemap-Strukturtest.
+
