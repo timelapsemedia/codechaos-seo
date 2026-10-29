@@ -81,6 +81,7 @@ Last updated: 2026-10-21
 - Home (German): https://codechaos-official.de/
 - Home (English): https://codechaos-official.de/en/
 - All plugins (German): https://codechaos-official.de/plugins/
+- Samples, MIDI and presets (German): https://codechaos-official.de/sounds/ . File products by Code Chaos Audio, all synthesised or built by Code Chaos, royalty-free for own releases, no login or licence server: Black Metal Drum Kit (€12, 47 drum samples + 30 MIDI grooves), Black Metal MIDI Grooves 2 (€9, 74 grooves), Black Metal Tone Kit (€9, 19 cab IRs + 16 REAPER chains), Hitech Arsenal Vol. 1 (€15, 120 samples), Hitech FM for Vital (€12, 32 presets), Hitech FM for Serum 2 (€12, 24 presets), Hitech FM Industrial (€9, 30 Vital + 26 Serum 2 presets), Psycore Production Template for Ableton Live 12 (€19, 77 tracks).
 - Crucible plugin: https://codechaos-official.de/crucible.html
 - Buy Crucible (Gumroad): https://timberwolf688.gumroad.com/l/crucible
 - Music (Bandcamp): https://codechaos.bandcamp.com

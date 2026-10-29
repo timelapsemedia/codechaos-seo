@@ -627,6 +627,7 @@ def build_plugins_index():
     <h2 id="cmp-t">Formate und Systeme im Vergleich</h2>
     <div class="table-scroll"><table class="cmp"><thead><tr><th>Plugin</th><th>Typ</th><th>Preis</th><th>Windows 10/11</th><th>macOS</th></tr></thead><tbody>{rows}</tbody></table></div>
     <p class="note" style="margin-top:14px">Alle Plugins als VST3 + Standalone. Kein AU-Format, deshalb laufen sie nicht in Logic Pro. Die macOS-Builds sind nur für Apple Silicon (arm64), nicht signiert und nicht notarisiert: macOS blockiert sie beim ersten Start, du erlaubst sie unter Systemeinstellungen → Datenschutz &amp; Sicherheit.</p>
+    <p class="prose" style="margin-top:14px">Du suchst keine Plugins, sondern Sounds? <a href="/sounds/">Samples, MIDI und Presets für Psytrance und Black Metal →</a></p>
   </div>
 </section>
 </main>

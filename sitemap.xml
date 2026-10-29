@@ -257,6 +257,15 @@
     </image:image>
   </url>
   <url>
+    <loc>https://codechaos-official.de/sounds/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/sounds/og.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://codechaos-official.de/plugins/</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
