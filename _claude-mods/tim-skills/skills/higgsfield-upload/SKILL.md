@@ -1,6 +1,6 @@
 ---
 name: higgsfield-upload
-description: Lokale Dateien nach Higgsfield media_upload hochladen, ohne signierte URLs abzutippen (hf_upload.py, curl PUT); liefert media_ids für media_confirm.
+description: ÜBERHOLT seit 28.10.2026 (Higgsfield gekündigt, Ersatz ist Skill ki-medien). Nicht mehr verwenden.
 ---
 
 # higgsfield-upload

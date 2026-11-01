@@ -227,3 +227,18 @@ Eigenbau:
 Bewusst ohne CLIP/Bildmodell: Erkennung über Claudes Sichtung der Vollbilder (Read), damit keine Modelle/Pakete nötig sind; Beschreibung kurz gehalten (Budget ~30.000 Zeichen).
 Nicht als Skill (Vorschläge an Tim, Pipeline-Code): globale Render-Sperre in motion.py rendern() (Log 27./28.10.), Lock-Datei in bauen_r3.py, Polished-Sitemap-Strukturtest.
 
+## 2026-11-01 – Wochenlauf lokal (nur Selbstverbesserung; letzter Lauf 28.10. < 6 Tage → keine Fremd-Suche)
+
+Zwei Kandidaten aus dem Selbstverbesserungs-Log (grok-dirigent 01.11.) gezielt geprüft, beide abgelehnt:
+| Repo | Grund |
+|---|---|
+| kajisho5/ffmpeg-skill (MIT, 4.224 Sterne, v3.1.1) | Kein belegter Mehrwert gegenüber ffmpeg, auto-editor, video-werkstatt und Tims Pipelines. Auslöser greift bei jeder Video-/Audiodatei und verbietet rohes ffmpeg, das konkurriert mit Tims Schnitt-Pipelines. Gelesen: SKILL.md, plugin.json, bin/install.js; die 58 Dateien unter scripts/ nicht auditiert |
+| jordanrendric/claude-video-vision (MIT, 1.444 Sterne) | Kein Skill, sondern MCP über `npx -y claude-video-vision@latest` (zieht bei jedem Start die neueste Version). Doppelt mit claude-real-video und video-werkstatt |
+
+Eigenbau:
+| Skill | Anlass (Belege) | Test |
+|---|---|---|
+| ki-medien | SKILL-KANDIDAT im Selbstverbesserungs-Log 28.10. (Higgsfield gekündigt, Routing stand nur in CLAUDE.md und MCP-Texten); Tims Korrektur 28.10. zu Gratis-Ersatz | `ki.py kosten`, `mockup.py --liste`, Bezahlaufrufe nanobanana2 und veo-lite gegen Deckel 0 $ (Budget-Gate, Exit 1, keine Datei, keine Kosten); Ladetest |
+
+Verbessert: higgsfield-upload als überholt markiert (Beschreibung gekürzt), stock-sichtung und motion-reels ohne Higgsfield-Bezug.
+Nicht als Skill (Vorschlag an Tim): higgsfield-upload nach _papierkorb verschieben.
