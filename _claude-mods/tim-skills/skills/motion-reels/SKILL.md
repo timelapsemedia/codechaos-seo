@@ -40,8 +40,8 @@ Projektordner: `D:\Videos DaVinci\Motion_Reels\` – Bibliothek `motion.py` (Bil
   Zoom, Produktbewegung, Bewegtbild-Anteil, Helligkeit (abdunkeln), Hintergrund-Blur, SFX-Dichte. Markengrenzen
   (DRUWIDS ruhig, kein Shake) in `MARKEN_GRENZEN`. Verlauf: `stil/verlauf.jsonl`, Rotation: `motion_log.jsonl`.
 - Startabstand (Reel 1): Bewegung 3–4 vs. 16,8, Helligkeit 31–48 vs. 109, Schnitte 0,7–0,85/s vs. 2,5/s.
-- Freisteller IMMER auf Spiegelung/Schatten prüfen und entfernen (Tim, 2026-10-09). Video-URL per Higgsfield
-  `media_upload` + `put_upload.py` + `media_confirm` (cloudfront).
+- Freisteller IMMER auf Spiegelung/Schatten prüfen und entfernen (Tim, 2026-10-09). Video-URL seit 28.10.2026 nicht
+  mehr über Higgsfield: Polished `tools/bank_reel.py hosten`, sonst `C:/bildwerk/videohost.py`.
 - keinduftbaum-Regeln: keine konkreten Haltbarkeitsangaben (max. „über Wochen“), kein Preis/keine URL in der Caption.
 
 ## Regie-Briefing (aus 513 viralen Opus-5.5-Code-Videos, ausgewertet 2026-10-10)

@@ -13,7 +13,7 @@ Kontaktbögen mit 150–180 px pro Bild übersehen feine Details. Belege vom 27.
 
 Dieser Skill macht die Sichtung zur Pflicht und hält sie fest: Jeder Clip wird in voller Größe angesehen, der Befund wird mit der Prüfsumme der Datei gespeichert, und vor dem Bau prüft ein Gate, ob alle verwendeten Clips freigegeben sind.
 
-**Wann:** bei jedem Stock-Clip (Pexels, Pixabay, Higgsfield-Ergebnis), jeder B-Roll aus Langvideos und jedem Fremdmaterial (Doku, TV), bevor er in einen Schnitt geht. Das gilt für alle Projekte. Für DRUWIDS und Mitragyna ist es Pflicht.
+**Wann:** bei jedem Stock-Clip (Pexels, Pixabay, KI-Clip), jeder B-Roll aus Langvideos und jedem Fremdmaterial (Doku, TV), bevor er in einen Schnitt geht. Das gilt für alle Projekte. Für DRUWIDS und Mitragyna ist es Pflicht.
 
 **Grenzen:** Das Skript arbeitet lokal mit ffmpeg/ffprobe, ohne Netz, und löscht nichts. Die Sichtung ersetzt weder das Konsum-Gate (`E:/druwids_shorts/konsum_gate.py`, gesprochener Text) noch Tims Endkontrolle (`tim_freigabe.py`) noch die Pflicht-Endkontrolle für Videos. Sie kommt davor dazu.
 
