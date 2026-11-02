@@ -242,3 +242,23 @@ Eigenbau:
 
 Verbessert: higgsfield-upload als überholt markiert (Beschreibung gekürzt), stock-sichtung und motion-reels ohne Higgsfield-Bezug.
 Nicht als Skill (Vorschlag an Tim): higgsfield-upload nach _papierkorb verschieben.
+
+## 2026-11-02 – Wochenlauf 5 (Cloud): keine neuen fremden Skills, 11 Updates, 2 Eigenbau
+
+Neu aufgenommen: keine. Kein Kandidat seit 27.10. erfüllt alle Kriterien mit echtem Mehrwert (VoltAgent-Neuzugänge themenfremd/Auto-Posting; ComposioHQ/travisvn unverändert; anthropics nur mcp-builder).
+Abgelehnt: mthines/jsfx-agent-skills (keine LICENSE-Datei, 4 Sterne, JSFX statt ReaScript), sb-dev/music-production-skills (Pflicht-Replicate-Key), crunkkid411/midi-agent-skill (Fork, 0 Sterne, eigene settings.json), m4bwav/musicwright (0 Sterne, Selbst-Refresh, Überschneidung audio-labor/earshot), hodgemann/mondo-music-video (33 MB Web-App), ClawHub-/claudskills-Registry-Kopien.
+Beobachten (Grund nicht erledigt): Akurganow/sound-to-patch (SKILL.md jetzt vorhanden, aber 0 Sterne, nur Vital, eigenes Rust-Binary), jamcgrath/music-theory-skill, hed0rah/acidcat, ZiadAbdelkarim/beat-synced-edit.
+
+Aktualisiert: ai-seo, content-strategy, copy-editing, programmatic-seo, seo-audit, social-content, video-marketing (marketingskills @88c79f6), earshot (@591fa3e), producer-pal (@8a9cfff), seo-google (claude-seo @6be93f4), remotion-best-practices (@30d4553). Gekürzte Budget-Beschreibungen bei copy-editing und earshot behalten.
+Nicht aktualisiert: ad-creative (Upstream weiter mit Affiliate-Werbung „Magister“), copywriting und hallmark (lokale Ergänzungen/Abwandlungen), show-me-the-money (Upstream 404).
+
+Nutzung 27.10.–02.11. (17 Remote-Sessions): 0 Aufrufe aus tim-skills (Vorwoche 1). Die Ausdünnung allein bringt keine messbare Nutzung.
+
+Eigenbau:
+| Skill | Anlass (Belege) | Test |
+|---|---|---|
+| zugang-einbinden | API-Schlüssel im Chat + lange Umwege beim Einbinden (Setup-Inventur 27.10., Meta Muse 29.10., Grok Bot 01.11.) | Ladetest; Ablauf gegen die drei Fälle geprüft (EU-Sperre, Abo≠API, CLI-Sperre) |
+| bewerbung-zuschnitt | Lebenslauf/Anschreiben mit bis zu 6 Korrekturrunden (Kündigungsprozess 28.10., 30.10.), Jobsuche ab 03.11. | Ladetest; Regeln aus Tims Korrekturen übernommen |
+Verbessert: routine-einrichtung (Konnektoren beim Anlegen ausdrücklich begrenzen; belegt 29.10.).
+
+Vorschläge an Tim (nicht umgesetzt): higgsfield-upload in den Papierkorb (überholt, lief 28.10. noch als Skript); DRUWIDS-Endkontrolle (Konsum-/Etikett-Gate + Telegram-Freigabe) von lokalen Skripten als Skill für Cloud-Sessions verfügbar machen (braucht Zugangsdaten/Posten → Tims Entscheidung); Windows-Bash-Wrapper-Fehler „line 85 unexpected EOF“ bei verketteten Befehlen/Temp-Pfaden (15× am 27.10.) im Mod windows-helfer abfangen.

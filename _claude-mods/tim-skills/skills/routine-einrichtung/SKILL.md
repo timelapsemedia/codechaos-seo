@@ -28,6 +28,9 @@ Zugangsdaten nie in Prompt, Dateien oder Commits schreiben und nie ausgeben.
    Tim zeigen, wo die Repos der Umgebung eingetragen werden:
    claude.ai/code → Umgebung bearbeiten → Repositories (bei Unsicherheit die Doku-Seite
    `github.access` bzw. `environment.setup_script` lesen).
+   **Konnektoren nur das Nötige:** beim Anlegen `connectors` ausdrücklich setzen (z. B. `[]` oder
+   nur `["Gmail"]`). Ohne Angabe erbt die Routine alle Konnektoren (belegt 29.10.: Einnahmen-Scout
+   bekam Revolut X und Higgsfield mit). Auch bei Routinen über das eingebaute `schedule` prüfen.
 5. **Branch:** ausdrücklich festlegen – entweder „direkt nach main pushen
    (`git push origin HEAD:main`, vorher `git pull --no-rebase origin main`)“ oder „Branch,
    PR gegen main, mergen“. Ohne Angabe landen Pushes auf Session-Branches.
