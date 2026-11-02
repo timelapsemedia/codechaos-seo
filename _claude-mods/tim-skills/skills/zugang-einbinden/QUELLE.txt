@@ -1,0 +1,1 @@
+eigen – Skill-Scout 2026-11-02 ; Anlass: API-Schlüssel im Chat und lange Umwege beim Einbinden neuer KI-Anbieter (Sessions Setup-Inventur 27.10., Meta Muse 29.10., Grok Bot 01.11.)
