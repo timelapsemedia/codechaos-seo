@@ -2,7 +2,7 @@
 name: copy-editing
 description: "Edit, review, proofread, tighten or refresh existing marketing copy, or de-slop text that sounds like AI. Removes AI tells; a one-line request gets a point edit. For new copy see copywriting."
 metadata:
-  version: 2.2.0
+  version: 2.2.1
 ---
 
 # Copy Editing
@@ -98,7 +98,7 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 
 ❌ "Our platform uses AI-powered analytics"
 *So what?*
-✅ "Our AI-powered analytics surface insights you'd miss manually—so you can make better decisions in half the time"
+✅ "Our AI-powered analytics surface insights you'd miss manually, so you can make better decisions in half the time"
 
 **Common So What failures:**
 - Feature lists without benefit connections
@@ -450,7 +450,6 @@ This iterative process ensures each edit doesn't create new problems while respe
 
 - [Plain English Alternatives](references/plain-english-alternatives.md): Replace complex words with simpler alternatives
 - [Content Refresh](references/content-refresh.md): SERP gap analysis, full checklist, refresh vs. rewrite matrix, and cadence guide
-- [Werbetext-Klassiker](../copywriting/references/klassiker.md): Bewusstseinsstufe, Headline nach Nutzen/Neuigkeit/Neugier, Rutschbahn, Reason why, Belege statt Superlative (lokale Ergänzung; DRUWIDS-Grenzen beachten)
 - [Copy Editing Checklist](references/checklist.md): Full QA checklist across all seven sweeps plus the AI-tell check
 
 ---
