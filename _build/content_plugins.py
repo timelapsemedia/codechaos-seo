@@ -24,6 +24,7 @@ PLUGINS = [
         "slug": "shardstep", "live": True, "group": "psy", "name": "Shardstep", "price": 15,
         "category": "Stutter- und Glitch-Effekt", "sub": "Effekt-Plugin (VST3)", "os": "Windows 10/11, macOS (Apple Silicon)",
         "title": "Shardstep: Stutter & Tape Stop VST3 für Hitech | Code Chaos",
+        "feat_title": "Funktionen: Stutter, Tape Stop, Gate und Crush",  # war von Hand in der HTML (Commit 001f1a5), jetzt im Generator
         "desc": "Shardstep: Stutter- und Glitch-Effekt für 200–300 BPM. 16-Step-Pattern, Repeats bis 1/64, Tape Stop, MIDI-Trigger. VST3 Win + Mac, 15 €, Gratis-Demo.",
         "h1": "Shardstep: Stutter-, Glitch- und Tape-Stop-Plugin für Hitech und Psycore",
         "eyebrow": "Code Chaos Audio · Effekt-Plugin",

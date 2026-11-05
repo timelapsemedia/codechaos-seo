@@ -14,6 +14,7 @@ mit sich bringen (Faktor = so viel öfter zitiert als eine Seite derselben Domai
 Ohne messbaren Effekt: llms.txt, Breadcrumb-, HowTo-, QAPage-Schema, Lesbarkeitswerte. Korrelation, keine Kausalität.
 
   python3 geo_merkmale.py https://polished.media [--json]
+  python3 geo_merkmale.py https://codechaos-official.de --basis http://127.0.0.1:8000   (lokal gebaute Seiten)
 """
 import html, json, re, sys, urllib.request
 
@@ -27,12 +28,16 @@ def holen(u):
 def pruefe(u):
     h = holen(u)
     ld = " ".join(re.findall(r'<script[^>]+ld\+json[^>]*>(.*?)</script>', h, re.S))
-    typen = set(re.findall(r'"@type"\s*:\s*"([^"]+)"', ld))
+    # "@type" als String oder Liste (z. B. ["Product", "SoftwareApplication"]); früher wurden Listen übersehen
+    typen = set()
+    for t in re.findall(r'"@type"\s*:\s*(\[[^\]]*\]|"[^"]+")', ld):
+        typen.update(re.findall(r'"([^"]+)"', t))
     body = re.sub(r"<script.*?</script>|<style.*?</style>", "", h, flags=re.S)
     text = html.unescape(re.sub(r"<[^>]+>", " ", body))
     produkt = bool(typen & {"Product", "SoftwareApplication"})
     return {
-        "TOC": bool(re.search(r'(inhalt|contents|toc|auf dieser seite|on this page)', body, re.I))
+        # nur echte Inhaltsverzeichnisse; „Zum Inhalt springen“ + Nav-Anker zählten früher fälschlich mit
+        "TOC": bool(re.search(r'(inhaltsverzeichnis|table of contents|auf dieser seite|on this page|class="[^"]*\btoc\b)', body, re.I))
                and len(re.findall(r'href="#[^"]+"', body)) >= 3,
         "ART": bool(typen & {"Article", "BlogPosting", "TechArticle", "NewsArticle"}) or produkt,  # Produktseiten: eigenes Schema
         "H2": len(re.findall(r"<h2[\s>]", body, re.I)) >= 5,
@@ -47,11 +52,13 @@ def pruefe(u):
 
 def main():
     site = sys.argv[1].rstrip("/")
-    urls = re.findall(r"<loc>(.*?)</loc>", holen(site + "/sitemap.xml"))
+    # --basis http://127.0.0.1:8000 : Sitemap und Seiten lokal holen (vorher python -m http.server im Repo starten)
+    basis = sys.argv[sys.argv.index("--basis") + 1].rstrip("/") if "--basis" in sys.argv else site
+    urls = re.findall(r"<loc>(.*?)</loc>", holen(basis + "/sitemap.xml"))
     erg = {}
     for u in urls:
         try:
-            erg[u] = pruefe(u)
+            erg[u] = pruefe(u.replace(site, basis, 1))
         except Exception as e:  # nie still auf „ok“ fallen
             erg[u] = {"FEHLER": str(e)[:120]}
     if "--json" in sys.argv:

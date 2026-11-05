@@ -1,0 +1,86 @@
+{
+ "/": {
+  "datum": "2026-10-24",
+  "hash": "bf0ca525e05219f9"
+ },
+ "/crucible.html": {
+  "datum": "2026-11-05",
+  "hash": "3e88e42d7deb77c5"
+ },
+ "/darkpsy/": {
+  "datum": "2026-10-27",
+  "hash": "9919a5319f0efe1e"
+ },
+ "/en/": {
+  "datum": "2026-10-24",
+  "hash": "d48b2f73d60d22a5"
+ },
+ "/en/darkpsy/": {
+  "datum": "2026-10-05",
+  "hash": "62bfec1344db6a98"
+ },
+ "/en/hitech-psytrance/": {
+  "datum": "2026-10-05",
+  "hash": "d0e33e2edf918d3f"
+ },
+ "/en/mastering/": {
+  "datum": "2026-10-24",
+  "hash": "745db8040da876d2"
+ },
+ "/en/psycore/": {
+  "datum": "2026-10-05",
+  "hash": "d4b89f131e8a9255"
+ },
+ "/hitech-psytrance/": {
+  "datum": "2026-10-27",
+  "hash": "921fdf130a0c996c"
+ },
+ "/mastering/": {
+  "datum": "2026-10-24",
+  "hash": "a1783a752d13bdea"
+ },
+ "/plugins/": {
+  "datum": "2026-11-05",
+  "hash": "351d8f18a525e465"
+ },
+ "/plugins/chaos-fm/": {
+  "datum": "2026-10-27",
+  "hash": "55616a21a6a51cf7"
+ },
+ "/plugins/frostfret/": {
+  "datum": "2026-10-21",
+  "hash": "339402f21317bddf"
+ },
+ "/plugins/gravesaw/": {
+  "datum": "2026-10-21",
+  "hash": "1f637411c9bec13c"
+ },
+ "/plugins/hoarfell/": {
+  "datum": "2026-10-21",
+  "hash": "0cc258bc28f7907b"
+ },
+ "/plugins/kick-bass-scope/": {
+  "datum": "2026-10-27",
+  "hash": "b949310dd0d25622"
+ },
+ "/plugins/psy-kick-bass/": {
+  "datum": "2026-10-27",
+  "hash": "a651b4099df7cc39"
+ },
+ "/plugins/rimehall/": {
+  "datum": "2026-10-21",
+  "hash": "7db0af3a11d375f6"
+ },
+ "/plugins/shardstep/": {
+  "datum": "2026-10-27",
+  "hash": "6805655449b46bad"
+ },
+ "/psycore/": {
+  "datum": "2026-10-27",
+  "hash": "73487e13761eaad0"
+ },
+ "/sounds/": {
+  "datum": "2026-10-29",
+  "hash": "e643447f241dec6f"
+ }
+}

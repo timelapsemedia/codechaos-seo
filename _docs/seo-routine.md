@@ -51,7 +51,7 @@ Der Faktor gibt an, wie viel öfter eine Seite mit dem Merkmal zitiert wird. Sei
 | 3 | FAQ mit echten Fragen (FAQPage) | 1,4–1,5 | Fragen aus GSC/Bing-Suchanfragen, keine erfundenen |
 | 3 | Tabelle mit Kopfzeile (`<th>`) | 1,4–1,5 | Vergleiche, Preise, technische Werte als echte Tabelle |
 | 3 | Autorenbox mit Foto | 1,4 | „Tim Borchert“ mit echtem Foto, 1–2 Sätze, Link auf die Über-mich-Seite; `author` im Schema |
-| 4 | Sichtbares Datum „Zuletzt aktualisiert“ | 1,3 | Aus dem Build-Datum der Seite, nur bei echter inhaltlicher Änderung erhöhen |
+| 4 | Sichtbares Datum „Zuletzt aktualisiert“ | 1,3 | Automatisch: `_build/seiten_datum.json` hält je Seite Datum + Prüfsumme des sichtbaren `<main>`-Textes; der Build setzt das Datum nur bei echter Inhaltsänderung auf heute (nie von Hand hochsetzen) |
 | 4 | Mindestens 1.000 Wörter | 1,5 | Nur mit echtem Inhalt für die Suchabsicht, nie Füllstoff |
 
 **Kaum Wirkung:** llms.txt, eine Ziel-Wortzahl als Selbstzweck, Lesbarkeitswerte sowie Breadcrumb-, HowTo- und QAPage-Schema. Diese nicht als GEO-Hebel verkaufen.
@@ -61,7 +61,7 @@ Der Faktor gibt an, wie viel öfter eine Seite mit dem Merkmal zitiert wird. Sei
    - codechaos-official.de: `python3 _build/geo_merkmale.py https://codechaos-official.de`
    - polished.media: `python3 _tools/geo_merkmale.py https://polished.media`
 2. Die fehlenden Merkmale kommen **zentral in den Generator**, nicht als Handarbeit pro Seite:
-   - codechaos: `_build/build_pages.py`
+   - codechaos: `_build/build_pages.py`; gemeinsame Bausteine (TOC, Autorenbox, Datum, `author`/`dateModified`) in `_build/geo.py`, Stil `css/geo.css`. Handgeschriebene Seiten (`index.html`, `crucible.html`) bekommen sie über `geo.handseiten()` am Ende von `build_pages.py`. Lokal messen: `python -m http.server 8000` im Repo, dann `python3 _build/geo_merkmale.py https://codechaos-official.de --basis http://127.0.0.1:8000`
    - polished: `_tools/gen*.py`
 3. Reihenfolge nach Prio: zuerst Inhaltsverzeichnis, dann Article-Schema mit Autor und Datum plus Autorenbox, dann Tabellen.
 4. Pro Lauf eine Merkmal-Gruppe umsetzen, bauen, live prüfen (seo-werkstatt `seite_pruefen`) und IndexNow anstoßen.
@@ -69,6 +69,7 @@ Der Faktor gibt an, wie viel öfter eine Seite mit dem Merkmal zitiert wird. Sei
 6. Messstand 05.11.2026 (Prüfwerkzeug, Anzahl Seiten ohne das Merkmal):
    - **codechaos-official.de, 21 Seiten:** AUTOR 21, DATUM 18, TOC 11, ART 7, WORTE 7, TAB 1, FAQ 1.
    - **polished.media, 36 Seiten:** AUTOR 36, DATUM 35, TOC 33, ART 28, WORTE 12, TAB 10, H2 3.
+   - **codechaos-official.de umgesetzt am 05.11.2026** (TOC, Article auf Genre-/Mastering-Seiten, author + dateModified auch im Produkt-Schema, Autorenbox mit echtem Foto, Datum, Crucible-Tabelle, FAQ auf /plugins/). Bewusst ohne Article: Startseiten und /plugins/ (Übersicht). Prüfwerkzeug korrigiert: `@type`-Listen werden erkannt, „Zum Inhalt springen“ zählt nicht mehr als TOC.
 
 ## Regeln
 

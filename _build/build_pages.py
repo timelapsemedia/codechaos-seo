@@ -5,7 +5,7 @@ Aufruf aus dem Repo-Root:  python3 _build/build_pages.py
 Inhalte stehen in _build/content_genres.py und _build/content_en_home.py.
 Der Ordner _build wird von GitHub Pages nicht veröffentlicht.
 """
-import json, os, sys
+import json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content_genres import GENRES, RELEASES          # noqa: E402
@@ -14,12 +14,14 @@ from content_en_mastering import EN_MASTERING, FORM   # noqa: E402
 from content_de_mastering import DE_MASTERING, FORM_DE  # noqa: E402
 from flags import UK as FLAG_UK, DE as FLAG_DE       # noqa: E402
 from content_plugins import PLUGINS, CRUCIBLE, GROUPS, GENRE_PLUGINS, GUMROAD  # noqa: E402
+import geo                                            # noqa: E402
+from geo import DATUM, autor_ld, publisher_ld        # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://codechaos-official.de"
-TODAY = "2026-10-05"
-PLUGIN_DATE = "2026-10-21"      # Plugin-Seiten erstellt/geändert
-GENRE_DE_MODIFIED = "2026-10-21"  # DE-Genre-Seiten: Plugin-Block ergänzt
+TODAY = "2026-10-05"            # datePublished Genre-, EN- und Mastering-Seiten
+PLUGIN_DATE = "2026-10-21"      # datePublished Plugin-Seiten
+# dateModified und „Zuletzt aktualisiert“ kommen aus _build/seiten_datum.json (geo.py, nur echte Inhaltsänderungen)
 ARTIST = BASE + "/#artist"
 PERSON = BASE + "/#tim-borchert"
 
@@ -28,14 +30,12 @@ UI = {
                skip="Zum Inhalt springen", menu="Menü öffnen", faq="Häufige Fragen", rel_title="Releases von Code Chaos",
                more="Weiterlesen", legal="Rechtliches", imprint="Impressum", privacy="Datenschutz", nav="Navigation",
                follow="Code Chaos folgen", other="Weitere Genre-Guides", foot="Hitech, Psycore & Darkpsy Producer aus Hamburg. Heute ein reines Studioprojekt.",
-               home_url="/", mastering_url="/mastering/", releases_url="/#releases",
-               author="Von Code Chaos (Tim Borchert), Producer aus Hamburg · aktualisiert am 21.10.2026"),
+               home_url="/", mastering_url="/mastering/", releases_url="/#releases"),
     "en": dict(home="Home", genres="Genres", releases="Releases", mastering="Mastering", lang_label="DE",
                skip="Skip to content", menu="Open menu", faq="FAQ", rel_title="Releases by Code Chaos",
                more="Read more", legal="Legal", imprint="Imprint (German)", privacy="Privacy policy (German)", nav="Navigation",
                follow="Follow Code Chaos", other="More genre guides", foot="Hitech, Psycore & Darkpsy producer from Hamburg, Germany. Studio project.",
-               home_url="/en/", mastering_url="/en/mastering/", releases_url="/en/#releases",
-               author="By Code Chaos (Tim Borchert), producer from Hamburg · updated 5 Oct 2026"),
+               home_url="/en/", mastering_url="/en/mastering/", releases_url="/en/#releases"),
 }
 
 SOCIAL = [("Bandcamp", "https://codechaos.bandcamp.com"), ("SoundCloud", "https://soundcloud.com/codechaos"),
@@ -88,6 +88,7 @@ def head(lang, url, alt_url, title, desc, og_image, og_alt, ld, og_type="article
 <link rel="preload" as="font" type="font/woff2" href="/fonts/eb-garamond.woff2" crossorigin>
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="stylesheet" href="/css/sub.css">
+<link rel="stylesheet" href="/css/geo.css">
 <script type="application/ld+json">
 {json.dumps(ld, ensure_ascii=False, indent=1)}
 </script>
@@ -180,8 +181,8 @@ def build_genre(g, lang):
     others = [o for o in GENRES if o is not g]
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Article", "@id": url + "#article", "headline": c["h1"], "description": c["desc"], "inLanguage": lang,
-         "url": url, "mainEntityOfPage": url, "datePublished": TODAY, "dateModified": GENRE_DE_MODIFIED if lang == "de" else TODAY,
-         "author": {"@id": PERSON}, "publisher": {"@id": ARTIST}, "image": BASE + g["og"],
+         "url": url, "mainEntityOfPage": url, "datePublished": TODAY, "dateModified": DATUM,
+         "author": autor_ld(), "publisher": publisher_ld(), "image": BASE + g["og"],
          "about": {"@type": "DefinedTerm", "name": g["term"], "description": strip(c["answer"]),
                    "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Psytrance-Subgenres" if lang == "de" else "Psytrance subgenres"}},
          "isPartOf": {"@id": BASE + ("/#website")}},
@@ -203,7 +204,6 @@ def build_genre(g, lang):
     <h1>{c['h1']}</h1>
     <div class="rule" aria-hidden="true"><i></i></div>
     <p class="answer">{c['answer']}</p>
-    <p class="note">{u['author']}</p>
   </div>
 </section>
 <section class="alt" aria-labelledby="specs-t">
@@ -246,9 +246,10 @@ def build_genre(g, lang):
 </main>
 """
     html = head(lang, url, alt, c["title"], c["desc"], BASE + g["og"], c["og_alt"], ld) + nav(lang, alt, g["slug"]) + body + footer(lang)
+    html, _ = geo.ausbauen(html, f"{pre}/{g['slug']}/", lang)
     path = os.path.join(ROOT, pre.strip("/"), g["slug"], "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    open(path, "w", encoding="utf-8").write(html)
+    open(path, "w", encoding="utf-8", newline="\n").write(html)
     return path
 
 
@@ -259,7 +260,7 @@ def build_en_home():
         {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": h["title"], "description": h["desc"], "inLanguage": "en",
          "isPartOf": {"@id": BASE + "/#website"}, "about": {"@id": ARTIST}, "mainEntity": {"@id": ARTIST},
          "primaryImageOfPage": {"@type": "ImageObject", "url": BASE + "/images/uhrwerk-aus-blut/og-uhrwerk-aus-blut.jpg"},
-         "datePublished": TODAY, "dateModified": TODAY},
+         "datePublished": TODAY, "dateModified": DATUM, "author": autor_ld()},
         {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": "en", "mainEntity": [
             {"@type": "Question", "name": strip(q), "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in h["faq"]]},
     ]}
@@ -275,9 +276,10 @@ def build_en_home():
     html = head("en", url, alt, h["title"], h["desc"], BASE + "/images/uhrwerk-aus-blut/og-uhrwerk-aus-blut.jpg",
                 "Uhrwerk aus Blut: a golden mechanical heart inside a clock face, dripping blood", ld, og_type="website") \
         + nav("en", alt, "home") + body + footer("en")
+    html, _ = geo.ausbauen(html, "/en/", "en", toc_offen=False)
     path = os.path.join(ROOT, "en", "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    open(path, "w", encoding="utf-8").write(html)
+    open(path, "w", encoding="utf-8", newline="\n").write(html)
     return path
 
 
@@ -296,7 +298,12 @@ def build_mastering(lang):
         sname, home = "Psytrance mastering for psycore, hitech and darkpsy", "Home"
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": m["title"], "description": m["desc"], "inLanguage": lang,
-         "isPartOf": {"@id": BASE + "/#website"}, "mainEntity": {"@id": url + "#service"}, "datePublished": TODAY, "dateModified": TODAY},
+         "isPartOf": {"@id": BASE + "/#website"}, "mainEntity": {"@id": url + "#service"}, "datePublished": TODAY, "dateModified": DATUM,
+         "author": autor_ld()},
+        {"@type": "Article", "@id": url + "#article", "headline": strip(re.search(r"<h1>(.*?)</h1>", m["body"], re.S).group(1)),
+         "description": m["desc"], "inLanguage": lang, "url": url, "mainEntityOfPage": url, "datePublished": TODAY, "dateModified": DATUM,
+         "author": autor_ld(), "publisher": publisher_ld(), "image": BASE + "/images/og/mastering.jpg", "about": {"@id": url + "#service"},
+         "isPartOf": {"@id": BASE + "/#website"}},
         {"@type": "Service", "@id": url + "#service", "name": sname, "serviceType": "Audio Mastering",
          "description": m["desc"], "provider": {"@id": "https://polished.media/#org"}, "areaServed": "Worldwide", "availableLanguage": ["de", "en"], "url": url,
          "offers": [{"@type": "Offer", "name": n, "price": p, "priceCurrency": "EUR", "url": url + "#request", "priceSpecification": {"@type": "PriceSpecification", "price": p, "priceCurrency": "EUR", "valueAddedTaxIncluded": True}} for n, p in offers]},
@@ -313,9 +320,10 @@ def build_mastering(lang):
     html = head(lang, url, alt, m["title"], m["desc"], BASE + "/images/og/mastering.jpg",
                 "Psytrance Mastering für Psycore, Hitech und Darkpsy von Code Chaos" if lang == "de" else "Psytrance mastering for psycore, hitech and darkpsy by Code Chaos", ld, og_type="website") \
         + nav(lang, alt, "mast") + body + footer(lang)
+    html, _ = geo.ausbauen(html, f"{pre}/mastering/", lang, art="mastering")
     path = os.path.join(ROOT, pre.strip("/"), "mastering", "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    open(path, "w", encoding="utf-8").write(html)
+    open(path, "w", encoding="utf-8", newline="\n").write(html)
     return path
 
 def build_404():
@@ -347,7 +355,7 @@ def build_404():
     html = html.replace('<meta name="robots" content="index, follow, max-image-preview:large">', '<meta name="robots" content="noindex, follow">')
     html = "\n".join(l for l in html.split("\n") if not l.startswith('<link rel="canonical"') and not l.startswith('<link rel="alternate"'))
     html += nav("de", BASE + "/en/", "") + body + footer("de")
-    open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8").write(html)
+    open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8", newline="\n").write(html)
     return os.path.join(ROOT, "404.html")
 
 
@@ -462,8 +470,9 @@ def build_plugin(p):
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": p["title"], "description": p["desc"], "inLanguage": "de",
          "isPartOf": {"@id": BASE + "/#website"}, "mainEntity": {"@id": url + "#product"}, "primaryImageOfPage": {"@type": "ImageObject", "url": og, "width": 1200, "height": 630},
-         "datePublished": PLUGIN_DATE, "dateModified": PLUGIN_DATE},
+         "datePublished": PLUGIN_DATE, "dateModified": DATUM, "author": autor_ld()},
         {"@type": ["Product", "SoftwareApplication"], "@id": url + "#product", "name": name, "description": strip(p["answer"]),
+         "author": autor_ld(), "dateModified": DATUM,
          "applicationCategory": "MultimediaApplication", "applicationSubCategory": p["sub"], "operatingSystem": p["os"],
          "brand": {"@type": "Brand", "name": "Code Chaos Audio"}, "category": "Audio Plugin",
          "image": og, "screenshot": f"{BASE}/images/plugins/{slug}/gui-880.jpg", "url": url,
@@ -531,7 +540,7 @@ def build_plugin(p):
 </section>
 <section class="alt" aria-labelledby="feat-t">
   <div class="wrap narrow prose">
-    <h2 id="feat-t">Funktionen</h2>
+    <h2 id="feat-t">{esc(p.get("feat_title", "Funktionen"))}</h2>
     <ul>{feats}</ul>
     {extra_imgs}
     {"".join(more)}
@@ -569,9 +578,10 @@ def build_plugin(p):
 """
     html = head("de", url, None, p["title"], p["desc"], og, f"{name} von Code Chaos Audio: {p['category']}", ld, og_type="product") \
         + nav("de", None, "plug") + body + footer("de")
+    html, _ = geo.ausbauen(html, f"/plugins/{slug}/", "de", art="plugin")
     path = os.path.join(ROOT, "plugins", slug, "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    open(path, "w", encoding="utf-8").write(html)
+    open(path, "w", encoding="utf-8", newline="\n").write(html)
     return path
 
 
@@ -584,13 +594,37 @@ PLUGINS_INDEX = dict(
 )
 
 
+def plugins_faq(allp, mac):
+    """FAQ der Übersicht: nur Fragen, die auf den Plugin-Seiten schon stehen (Mac, Demo, kostenlos), Antworten aus den Plugin-Daten."""
+    def liste(namen):
+        return namen[0] if len(namen) == 1 else ", ".join(namen[:-1]) + " und " + namen[-1]
+    mac_ja = [p["name"] for p in allp if mac(p) != "nein"]
+    mac_nein = [p["name"] for p in allp if mac(p) == "nein"]
+    gratis = [p for p in allp if p["price"] == 0]
+    preise = sorted(p["price"] for p in allp if p["price"] > 0)
+    return [
+        ("Laufen die Plugins auf dem Mac?",
+         f"{liste(mac_ja)} gibt es auch für macOS, aber nur für Macs mit Apple Silicon (arm64), einen Intel-Build gibt es nicht. "
+         "Die macOS-Builds sind nicht signiert und nicht notarisiert: macOS blockiert sie beim ersten Start, du erlaubst sie unter "
+         f"Systemeinstellungen → Datenschutz &amp; Sicherheit. {liste(mac_nein)} laufen nur unter Windows 10/11."),
+        ("Laufen die Plugins in Logic Pro?",
+         "Nein. Alle Plugins gibt es als VST3 und Standalone, ein AU-Format gibt es nicht, deshalb laufen sie nicht in Logic Pro."),
+        ("Gibt es kostenlose Demos?",
+         "Ja. Zu jedem Bezahl-Plugin gibt es auf Gumroad eine kostenlose Demo: das vollständige Plugin mit einem kurzen Rauschen alle 45 Sekunden."),
+        ("Welches Plugin ist kostenlos?",
+         f"{liste([p['name'] for p in gratis])}. Auf Gumroad gilt Pay what you want: Du kannst 0 € eingeben oder etwas zahlen, wenn dir das Plugin hilft."),
+        ("Wo kann ich die Plugins kaufen?",
+         f"Auf Gumroad, als Sofort-Download. Die Bezahl-Plugins kosten zwischen {preise[0]} und {preise[-1]} €, die Preise stehen in der Tabelle oben."),
+    ]
+
+
 def build_plugins_index():
     url = BASE + "/plugins/"
     order = {g: [p for p in [CRUCIBLE] + LIVE if p["group"] == g] for g, _, _ in GROUPS}
     allp = [p for g, _, _ in GROUPS for p in order[g]]
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "CollectionPage", "@id": url + "#webpage", "url": url, "name": PLUGINS_INDEX["title"], "description": PLUGINS_INDEX["desc"],
-         "inLanguage": "de", "isPartOf": {"@id": BASE + "/#website"}, "datePublished": PLUGIN_DATE, "dateModified": PLUGIN_DATE,
+         "inLanguage": "de", "isPartOf": {"@id": BASE + "/#website"}, "datePublished": PLUGIN_DATE, "dateModified": DATUM, "author": autor_ld(),
          "mainEntity": {"@type": "ItemList", "itemListElement": [
              {"@type": "ListItem", "position": i + 1, "name": p["name"], "url": BASE + plugin_url(p)} for i, p in enumerate(allp)]}},
         {"@type": "BreadcrumbList", "itemListElement": [
@@ -612,6 +646,9 @@ def build_plugins_index():
         return "nein" if p["slug"] in ("crucible", "chaos-fm") else "Apple Silicon (unsigniert)"
     rows = "".join(f'<tr><th scope="row"><a href="{plugin_url(p)}">{esc(p["name"])}</a></th><td>{esc(p.get("category", "3-Band-Sättigung"))}</td>'
                    f'<td>{euro(p["price"])}</td><td>ja</td><td>{mac(p)}</td></tr>' for p in allp)
+    faq = plugins_faq(allp, mac)
+    ld["@graph"].append({"@type": "FAQPage", "@id": url + "#faq", "inLanguage": "de", "mainEntity": [
+        {"@type": "Question", "name": strip(q), "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in faq]})
     body = f"""<main id="main">
 <div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="/">Startseite</a></li><li aria-current="page">Plugins</li></ol></nav></div>
 <section class="s-hero">
@@ -630,13 +667,20 @@ def build_plugins_index():
     <p class="prose" style="margin-top:14px">Du suchst keine Plugins, sondern Sounds? <a href="/sounds/">Samples, MIDI und Presets für Psytrance und Black Metal →</a></p>
   </div>
 </section>
+<section class="alt" aria-labelledby="faq-t">
+  <div class="wrap narrow">
+    <h2 id="faq-t">Häufige Fragen zu den Plugins</h2>
+    {faq_html(faq)}
+  </div>
+</section>
 </main>
 """
     html = head("de", url, None, PLUGINS_INDEX["title"], PLUGINS_INDEX["desc"], BASE + "/images/plugins/shardstep/og.jpg",
                 "Audio-Plugins von Code Chaos Audio", ld, og_type="website") + nav("de", None, "plug") + body + footer("de")
+    html, _ = geo.ausbauen(html, "/plugins/", "de", art="plugin")
     path = os.path.join(ROOT, "plugins", "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    open(path, "w", encoding="utf-8").write(html)
+    open(path, "w", encoding="utf-8", newline="\n").write(html)
     return path
 
 
@@ -669,3 +713,9 @@ if __name__ == "__main__":
     print(build_plugins_index())
     for p in LIVE:
         print(build_plugin(p))
+    # handgeschriebene Seiten: dieselben GEO-Bausteine (TOC, Datum, Autorenbox), danach JSON-LD der Startseite
+    for p in geo.handseiten():
+        print(p)
+    geo.REG.speichern()
+    import runpy
+    runpy.run_path(os.path.join(os.path.dirname(os.path.abspath(__file__)), "schema_home.py"), run_name="__main__")
