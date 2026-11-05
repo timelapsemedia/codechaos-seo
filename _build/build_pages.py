@@ -387,6 +387,8 @@ def gui_h(p, w=880):
 
 def picture(slug, name, w, h, alt, lazy=True, has_1600=True, sizes="(max-width: 900px) 100vw, 520px"):
     base = f"/images/plugins/{slug}/{name}"
+    # plugin_assets.py legt die 1600er nur an, wenn die Quelle so breit ist (Frostfret/Hoarfell: nein) -> nie ins Leere verlinken
+    has_1600 = has_1600 and os.path.exists(os.path.join(ROOT, "images", "plugins", slug, f"{name}-1600.webp"))
     srcset = f"{base}-880.webp 880w" + (f", {base}-1600.webp 1600w" if has_1600 else "")
     load = 'loading="lazy" decoding="async"' if lazy else 'fetchpriority="high" decoding="async"'
     return (f'<picture><source type="image/webp" srcset="{srcset}" sizes="{sizes}">'
