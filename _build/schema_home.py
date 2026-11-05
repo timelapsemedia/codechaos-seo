@@ -1,12 +1,17 @@
 # Erzeugt den JSON-LD-@graph der Startseite (index.html) neu, inkl. FAQPage aus den sichtbaren FAQ.
 # Aufruf aus dem Repo-Root: python3 _build/schema_home.py
-import re, json, html
-p='index.html'; s=open(p,encoding='utf-8').read()
+import re, json, html, os
+ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+p=os.path.join(ROOT,'index.html'); s=open(p,encoding='utf-8').read()
+# dateModified = echtes letztes Inhaltsdatum der Startseite (geo.py / seiten_datum.json, gesetzt von build_pages.py)
+DATUM=json.load(open(os.path.join(ROOT,'_build','seiten_datum.json'),encoding='utf-8'))['/']['datum']
 B='https://codechaos-official.de'
 # --- FAQ from visible HTML ---
 faq=[]
-for q,a in re.findall(r'<details[^>]*>\s*<summary[^>]*>\s*(.*?)\s*<span[^>]*>\+</span>\s*</summary>\s*<div[^>]*>\s*<p>(.*?)</p>',s,re.S):
+ohne_geo=re.sub(r'<!--geo:(\w+)-->.*?<!--/geo:\1-->','',s,flags=re.S)  # Inhaltsverzeichnis (<details>) nicht als FAQ lesen
+for q,a in re.findall(r'<details[^>]*>\s*<summary[^>]*>\s*(.*?)\s*<span[^>]*>\+</span>\s*</summary>\s*<div[^>]*>\s*<p>(.*?)</p>',ohne_geo,re.S):
     clean=lambda t: re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>','',t))).strip()
+    assert '<summary' not in q and len(q)<200,q[:120]
     faq.append({"@type":"Question","name":clean(q),"acceptedAnswer":{"@type":"Answer","text":clean(a)}})
 assert len(faq)==15,len(faq)
 same=["https://codechaos.bandcamp.com","https://soundcloud.com/codechaos","https://www.instagram.com/codechaos_official","https://www.tiktok.com/@codechaos_abstractsound","https://x.com/codechaos_music","https://www.threads.net/@codechaos_official","https://www.youtube.com/@codechaos_abstractsounddesign","https://www.discogs.com/artist/18204093-Code-Chaos","https://musicbrainz.org/artist/14d40d24-a91e-4600-a1b3-d14682d32e42","https://www.wikidata.org/wiki/Q141646843"]
@@ -19,7 +24,7 @@ graph=[
   "isPartOf":{"@id":B+"/#website"},"about":{"@id":B+"/#artist"},"mainEntity":{"@id":B+"/#artist"},
   "primaryImageOfPage":{"@type":"ImageObject","url":B+"/images/uhrwerk-aus-blut/og-uhrwerk-aus-blut.jpg","width":1200,"height":630},
   "speakable":{"@type":"SpeakableSpecification","cssSelector":["#single-info","#mastering","#was-ist-psycore","#was-ist-hitech","#was-ist-darkpsy","#bio-section"]},"significantLink":[B+"/mastering/",B+"/psycore/",B+"/hitech-psytrance/",B+"/darkpsy/",B+"/en/"],
-  "inLanguage":"de","datePublished":"2024-01-01","dateModified":"2026-10-05"},
+  "inLanguage":"de","datePublished":"2024-01-01","dateModified":DATUM,"author":{"@id":B+"/#tim-borchert"}},
  {"@type":"MusicGroup","@id":B+"/#artist","name":"Code Chaos","alternateName":["Code-Chaos","CodeChaos"],
   "description":"Code Chaos ist ein Hitech Psytrance, Psycore und Darkpsy Producer aus Hamburg und das Studioprojekt von Tim Borchert. Eigene Bezeichnung des Sounds: New Psychedelic Death Art. Seit 2016 aktiv, über 24 Releases auf Labels wie Abstract Sound Design (2021 mitgegründet), TATEWARI Records (Mexiko) und Soma Ritual Records (Indien). Heute ein reines Studioprojekt ohne Bookings, früher Live-Sets u. a. bei Abstract Ritual Hamburg (2023) und Lost Signal Festival (2026).",
   "genre":["Hitech Psytrance","Psycore","Darkpsy","Dark Psytrance","Psytrance"],
@@ -28,7 +33,7 @@ graph=[
   "sameAs":same,"member":{"@id":B+"/#tim-borchert"},
   "album":[{"@id":B+"/#runtime-terror"},{"@id":B+"/#uhrwerk-aus-blut-single"}],
   "track":{"@id":B+"/#uhrwerk-aus-blut"}},
- {"@type":"Person","@id":B+"/#tim-borchert","name":"Tim Borchert","alternateName":"Code Chaos","url":B+"/","image":B+"/images/brand/portrait-press-1200.jpg",
+ {"@type":"Person","@id":B+"/#tim-borchert","name":"Tim Borchert","alternateName":"Code Chaos","url":B+"/","image":B+"/images/brand/tim-borchert-800.jpg",
   "jobTitle":"Producer (Hitech Psytrance, Psycore, Darkpsy) und Mastering Engineer","nationality":{"@type":"Country","name":"Deutschland"},"homeLocation":{"@type":"Place","name":"Hamburg","address":{"@type":"PostalAddress","addressLocality":"Hamburg","addressCountry":"DE"}},
   "knowsAbout":["Psycore","Hitech Psytrance","Darkpsy","Dark Psytrance","Audio Mastering","Sounddesign","Audio-Plugin-Entwicklung"],
   "memberOf":{"@id":B+"/#artist"},"affiliation":{"@id":B+"/#label-asd"},"worksFor":{"@id":"https://polished.media/#org"},"sameAs":same},
@@ -63,6 +68,6 @@ print('removing',len(blocks))
 first=blocks[0].start()
 for m in reversed(blocks): s=s[:m.start()]+s[m.end():]
 s=s[:first]+block+'\n'+s[first:]
-open(p,'w',encoding='utf-8').write(s)
+open(p,'w',encoding='utf-8',newline='\n').write(s)
 json.loads(block.split('\n',1)[1].rsplit('\n',1)[0])
 print('faq',len(faq))

@@ -8,9 +8,10 @@ import json, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_pages as bp  # noqa: E402
+import geo  # noqa: E402
 
 BASE, ROOT, esc = bp.BASE, bp.ROOT, bp.esc
-DATE = "2026-10-29"
+DATE = "2026-10-29"   # datePublished; dateModified und „Zuletzt aktualisiert“ aus _build/seiten_datum.json (geo.py)
 URL = BASE + "/sounds/"
 G = "https://timberwolf688.gumroad.com/l/"
 
@@ -104,7 +105,7 @@ def card(it):
 def build():
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "CollectionPage", "@id": URL + "#webpage", "url": URL, "name": TITLE, "description": DESC, "inLanguage": "de",
-         "isPartOf": {"@id": BASE + "/#website"}, "datePublished": DATE, "dateModified": DATE,
+         "isPartOf": {"@id": BASE + "/#website"}, "datePublished": DATE, "dateModified": geo.DATUM, "author": geo.autor_ld(),
          "mainEntity": {"@type": "ItemList", "itemListElement": [
              {"@type": "ListItem", "position": i + 1, "item": {
                  "@type": "Product", "name": it[2], "description": it[4], "url": f"{G}{it[0]}",
@@ -151,9 +152,11 @@ def build():
 """
     html = (bp.head("de", URL, None, TITLE, DESC, BASE + "/images/sounds/og.jpg", "Black Metal Drum Kit von Code Chaos Audio", ld, og_type="website")
             + bp.nav("de", None, "sounds") + body + bp.footer("de"))
+    html, _ = geo.ausbauen(html, "/sounds/", "de", art="sounds")
     path = os.path.join(ROOT, "sounds", "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    open(path, "w", encoding="utf-8").write(html)
+    open(path, "w", encoding="utf-8", newline="\n").write(html)
+    geo.REG.speichern()
     return path
 
 
