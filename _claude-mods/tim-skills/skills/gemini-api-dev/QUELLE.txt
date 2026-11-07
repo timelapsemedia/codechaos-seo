@@ -1,0 +1,2 @@
+https://github.com/google-gemini/gemini-skills/tree/main/skills/gemini-api-dev @7cfc690 (2026-11-05), Apache-2.0, offiziell von Google (Liste „Official“ auf skills.sh)
+Lokal angepasst (Skill-Scout 2026-11-07): Beschreibung gekürzt und deutsch (Beschreibungs-Budget), Abschnitt „Tims Hinweise“ oben ergänzt. Bei Upstream-Updates diese Anpassungen erhalten.

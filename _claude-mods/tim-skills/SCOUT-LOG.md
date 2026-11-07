@@ -262,3 +262,34 @@ Eigenbau:
 Verbessert: routine-einrichtung (Konnektoren beim Anlegen ausdrücklich begrenzen; belegt 29.10.).
 
 Vorschläge an Tim (nicht umgesetzt): higgsfield-upload in den Papierkorb (überholt, lief 28.10. noch als Skript); DRUWIDS-Endkontrolle (Konsum-/Etikett-Gate + Telegram-Freigabe) von lokalen Skripten als Skill für Cloud-Sessions verfügbar machen (braucht Zugangsdaten/Posten → Tims Entscheidung); Windows-Bash-Wrapper-Fehler „line 85 unexpected EOF“ bei verketteten Befehlen/Temp-Pfaden (15× am 27.10.) im Mod windows-helfer abfangen.
+
+## 2026-11-07 – Sonderlauf lokal: skills.sh (Vercel, „The Agent Skills Directory“) auf Tims Hinweis
+
+Auftrag Tim (07.11.): „Installiere global für alle sessions alles was davon sinnvoll für meine projekte und arbeit ist und wende selbst vollautonom an wenn sinnvoll“. Durchsucht über die öffentliche Suche von skills.sh (rund 110 Suchbegriffe aus allen Arbeitsfeldern, Bestenliste, Liste „Official“). Ergebnis: Die meistinstallierten passenden Skills sind schon da (remotion, gsap, lottie, threejs, marketingskills, hyperframes, auto-editor, firecrawl, earshot, manim, frontend-design, pdf/docx/pptx …). Zwei echte Lücken geschlossen. DRUWIDS/keinduftbaum/Mitragyna bewusst ausgenommen (Projektende 30.11.).
+
+Aufgenommen:
+| Skill | Quelle | Lizenz | Prüfung / lokale Anpassung |
+|---|---|---|---|
+| gemini-api-dev | google-gemini/gemini-skills @7cfc690 (05.11.2026), offiziell | Apache-2.0 | reines Markdown (SKILL.md + references/migration.md), nur Links auf aistudio.google.com/github.com, keine unsichtbaren Zeichen. Mehrwert: aktuelle Modellnamen und Interactions-API für ki.py, ki-rat, hitech-listen (bisher nur Wissen aus Memory). Beschreibung deutsch gekürzt, „Tims Hinweise“: Gratisstufe (Pro/Omni/Deep Research 429, gemessen 01.11.), Schlüssel nur aus Claude-Keys, Deckel für Bezahlmodelle, `store=False` für Kunden-/unveröffentlichtes Audio, 429 laut behandeln. gemini-interactions-api und gemini-live-api-dev nicht übernommen (gemini-api-dev deckt den Bedarf, Budget) |
+| audio-plugin-review | kunitoki/sonic-skills @8b6dcfe (23 Sterne, Autor von popsicle/YUP) | Unlicense | 5 Skills (juce-review, audio-dsp-review, vst3-review, audio-numerics-review, audio-artifacts-debug) unverändert als `stufen/*.md` + references/ zu EINEM Skill gebündelt (Muster hook-master); reines Markdown ohne Netzaufrufe. Mehrwert: es gab keine Prüfung für Tims JUCE-Plugins (BM-Suite, Chaos FM, Crucible; Code Chaos Audio auf Gumroad). Deutscher Einstieg mit Tims Pfaden und Messpflicht (pedalboard/audio-labor) |
+
+Budget: 3 überlange Upstream-Beschreibungen deutsch gekürzt (ad-creative, social-content, ai-seo, je ~1.000 → ~260 Zeichen). Summe 30.237 → 28.457 Zeichen bei 81 statt 79 Skills.
+
+Abgelehnt:
+| Skill/Repo | Grund |
+|---|---|
+| shortwavlabs/agent-skills (juce-plugin, dsp, faust-dsp …) | keine LICENSE-Datei |
+| maystudios/claude-skills audio-to-midi | `transcribe.py` installiert fehlende Pakete per pip und lädt ein Modell von zenodo ohne Rückfrage; MIDI-Export hat Tim schon in korpus/dossier.py |
+| bitwize-music-studio mastering-engineer/mix-engineer | Anfängerniveau („-14 LUFS überall“) gegen Polished-Engines; hängt am eigenen MCP-System, 7 MB |
+| calesthio/generative-media-skills audio-mixing-mastering | gut belegt, aber doppelt mit audio-labor, ffmpeg-normalize und Tims Lautheitsregeln |
+| emilkowalski/skills review-animations | nur Web-UI-Animation, `disable-model-invocation` (nie autonom), Überschneidung motion-design-critique |
+| philtzjp/skills m4l-project | japanisch, Max for Live nutzt Tim nicht |
+| higgsfield-ai/skills higgsfield-youtube-thumbnail | Higgsfield gekündigt (28.10.) |
+| recoupable/release-management | keine Lizenz, 1 Stern |
+| mikecfisher/ableton-lom-skill | keine Lizenz; ableton-lom ist schon installiert |
+| glincker/ableton-skills, korben00/ableton-producer-skills | Anfänger-Rezepte, doppelt mit producer-pal und Tims Hitech-Wissen |
+| mattpocock/skills (diagnosing-bugs, tdd, research), pbakaus/impeccable, leonxlnx/taste-skill, resciencelab seo-geo, theclaymethod/unslop | doppelt mit systematic-debugging/verification-before-completion, hallmark/frontend-design, ai-seo, ig-human/humanizer-de |
+| mvanhorn/last30days-skill | 3,7 MB, gebündelter X-Scraper; Trendrecherche läuft über Grok |
+| digitalsamba/claude-code-video-toolkit | 25 MB, doppelt mit ffmpeg/remotion/ki-medien |
+
+Hinweis: Die API `skills.sh/api/v1/*` braucht ein Vercel-OIDC-Token; die öffentliche Suche `skills.sh/api/search?q=` geht ohne, drosselt aber (429 nach ~25 Anfragen, Abstand ≥ 4 s). Künftige Scout-Läufe können skills.sh als Quelle in Schritt 2 nutzen.
