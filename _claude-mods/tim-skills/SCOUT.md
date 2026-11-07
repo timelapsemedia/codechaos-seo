@@ -11,6 +11,11 @@ Freigabe (2026-10-07, Hauptsession): „Ja, pushen, PR gegen main öffnen und me
 1. Lies `SCOUT-LOG.md` (bereits geprüft/abgelehnt) und `README.md` (installiert). Nichts doppelt bewerten.
 2. Suche per WebSearch/WebFetch: neue Einträge in VoltAgent/awesome-agent-skills, ComposioHQ/awesome-claude-skills, travisvn/awesome-claude-skills,
    anthropics/skills, offizielle Hersteller-Skills (Remotion, GreenSock, Adobe, Blackmagic, Ableton, Google, Meta …) und Themensuchen („SKILL.md“ + Bereich).
+   Außerdem das Verzeichnis skills.sh (Tim, 2026-11-07: „Ja, aufnehmen“): Suche ohne Schlüssel über
+   `https://skills.sh/api/search?q=<begriff>&limit=25` (JSON: id, name, source = GitHub-OWNER/REPO, installs), je Arbeitsfeld einige Begriffe
+   (z. B. ableton, mastering, ffmpeg, remotion, instagram, etsy, juce, gemini). Mindestens 4 s Abstand zwischen Anfragen, bei HTTP 429 mit
+   wachsender Pause wiederholen (nach ca. 25 schnellen Anfragen sperrt die Seite kurz). `/api/v1/…` braucht einen Vercel-Token (401) – nicht nutzen.
+   Installzahlen sind nur ein Hinweis, keine Prüfung: jeder Treffer durchläuft Schritt 3–4 an seinem GitHub-Repo.
 3. Für jeden Kandidaten die echte `SKILL.md` lesen (raw.githubusercontent.com; Dateilisten über data.jsdelivr.com/v1/package/gh/OWNER/REPO@main/flat –
    kann veraltet sein; Archive über codeload und api.github.com sind aus der Cloud für fremde Repos gesperrt).
 4. Nur aufnehmen, wenn ALLES zutrifft:

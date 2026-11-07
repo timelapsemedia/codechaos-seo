@@ -292,4 +292,4 @@ Abgelehnt:
 | mvanhorn/last30days-skill | 3,7 MB, gebündelter X-Scraper; Trendrecherche läuft über Grok |
 | digitalsamba/claude-code-video-toolkit | 25 MB, doppelt mit ffmpeg/remotion/ki-medien |
 
-Hinweis: Die API `skills.sh/api/v1/*` braucht ein Vercel-OIDC-Token; die öffentliche Suche `skills.sh/api/search?q=` geht ohne, drosselt aber (429 nach ~25 Anfragen, Abstand ≥ 4 s). Künftige Scout-Läufe können skills.sh als Quelle in Schritt 2 nutzen.
+Hinweis: Die API `skills.sh/api/v1/*` braucht ein Vercel-OIDC-Token; die öffentliche Suche `skills.sh/api/search?q=` geht ohne, drosselt aber (429 nach ~25 Anfragen, Abstand ≥ 4 s). Künftige Scout-Läufe können skills.sh als Quelle in Schritt 2 nutzen. Tim hat das am 07.11. freigegeben („Ja, aufnehmen“): skills.sh steht jetzt fest in SCOUT.md Schritt 2.
