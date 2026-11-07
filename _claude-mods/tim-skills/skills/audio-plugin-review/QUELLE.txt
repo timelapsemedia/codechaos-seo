@@ -1,0 +1,2 @@
+https://github.com/kunitoki/sonic-skills @8b6dcfe (2026-05-21), Unlicense (gemeinfrei), Autor kunitoki (popsicle/YUP)
+Gebündelt (Skill-Scout 2026-11-07): juce-review, audio-dsp-review, vst3-review, audio-numerics-review, audio-artifacts-debug als stufen/*.md (unverändert) mit ihren references/; eigener deutscher Einstieg SKILL.md mit „Tims Hinweise“, damit nur eine Beschreibung im Kontext steht. Nicht übernommen: au-review, clap-review, game-audio-*, webaudio-*, yup-*, *-explainer, *-guide (themenfremd bzw. Lehrtexte).
