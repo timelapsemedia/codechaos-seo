@@ -293,3 +293,15 @@ Abgelehnt:
 | digitalsamba/claude-code-video-toolkit | 25 MB, doppelt mit ffmpeg/remotion/ki-medien |
 
 Hinweis: Die API `skills.sh/api/v1/*` braucht ein Vercel-OIDC-Token; die öffentliche Suche `skills.sh/api/search?q=` geht ohne, drosselt aber (429 nach ~25 Anfragen, Abstand ≥ 4 s). Künftige Scout-Läufe können skills.sh als Quelle in Schritt 2 nutzen. Tim hat das am 07.11. freigegeben („Ja, aufnehmen“): skills.sh steht jetzt fest in SCOUT.md Schritt 2.
+
+## 2026-11-08 – Wochenlauf lokal (nur Selbstverbesserung; letzter Lauf 07.11. < 6 Tage → keine Fremd-Suche)
+
+Neu aufgenommen (fremd): keine (Suche übersprungen, Sonderlauf skills.sh am 07.11.).
+
+Eigenbau:
+| Skill | Anlass (Belege) | Test |
+|---|---|---|
+| hitech-produktionsstandard | SKILL-KANDIDAT „hitech-produktionsstandard“ (Selbstverbesserungs-Log 04.11., Tim: „alle Learnings von Kyrie global“) und „palette-bauen“ (Log 03.11.); Katalog-Nachzug Wiedergänger/Grown in Rain mit den neuen Learnings (Session 08.11.). Beide Kandidaten zu einem Ablauf-Skill gebündelt. Weil das Repo öffentlich ist, stehen nur Ablauf und Pfade drin; Zahlen und Rezepte bleiben in C:/hitech-lab/knowledge/ | alle genannten Dateien/Werkzeuge lokal vorhanden (ls), keine Steuerzeichen, Ladetest 82 Skills |
+
+Verbessert: code-chaos-toolkit verweist für Ablauf und Gates auf hitech-produktionsstandard.
+Offen gelassen: SKILL-KANDIDAT „Ohr-Fallback lokal (CLAP/MERT)“ (04.11.) – braucht Modell-Download und ist ein Werkzeug, kein Skill → Vorschlag an Tim.

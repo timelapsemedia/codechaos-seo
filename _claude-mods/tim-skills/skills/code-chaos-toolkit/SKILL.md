@@ -11,6 +11,7 @@ Tims Wunsch vom 20.10.2026: Alles, was im Store gebaut wird, soll auch in seinen
 Gemeint sind Tims lokale Claude-Code-Sessions auf dem PC (Desktop-App, Ableton): „Ableton Hitech Psytrance Production“ und „Ableton Hitech Psytrance Remix-Session“. Dort entstanden „Uhrwerk aus Blut“ sowie „Wiedergänger“ Vol. 1 und Vol. 2.
 - **Erst ab dem 20.10.2026 und nur für neue Tracks und Remixe.** „Uhrwerk aus Blut“ und „Wiedergänger“ Vol. 1/2 sind fertig und liegen beim Vertrieb. Diese Tracks nicht anfassen und ihnen keine Parts nachträglich vorschlagen, außer Tim fragt ausdrücklich danach.
 - Bei neuen Tracks Black-Metal-Parts anbieten. Tempo und Tonart aus dem Ableton-Set lesen, nicht raten.
+- Ablauf, Messungen und Gates jeder Produktion regelt der Skill `hitech-produktionsstandard` (Kyrie v41). Dieser Skill hier sagt nur, welche eigenen Werkzeuge hineingehören.
 
 ## Welche Werkzeuge es gibt (vor dem Einsatz prüfen)
 Was live ist, steht in `timelapsemedia/codechaos-store` → `research/state.json` (`history`). Produktseiten liegen in `products/<slug>/`, Plugin-Quellen in `plugins/<slug>/`. Stand Oktober 2026:
