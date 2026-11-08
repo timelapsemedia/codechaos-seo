@@ -70,6 +70,7 @@ SEO → `seo-audit`/`web-seo`, Outreach → `ig-dm`/`druwids-outreach`. Zurückh
 | `motion-reels` | 9:16-Motion-Reels im Leverage-Stil mit EffectCraft (Blur-Captions, Freisteller, Beat-Raster) | eigen | – |
 | `producer-pal` | Control Ableton Live for music production via Producer Pal's local REST API — | https://github.com/adamjmurray/producer-pal/tree/main/examples/skills/producer-pal | mitgeliefert (LICENSE.upstream) |
 | `programmatic-seo` | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO," "templ | https://github.com/coreyhaines31/marketingskills/tree/main/skills/programmatic-seo | mitgeliefert (LICENSE.upstream) |
+| `prompt-master` | Prompts für bestimmte KI-Werkzeuge schreiben, reparieren oder anpassen (LLMs, Coding-Agenten, Bild- und Video-KI) | https://github.com/nidhinjs/prompt-master | mitgeliefert (LICENSE.upstream, MIT) |
 | `remotion-best-practices` | Router for all Remotion skills | https://github.com/remotion-dev/skills/tree/main/skills/remotion-best-practices | siehe Quelle |
 | `rohschnitt-davinci` | Rohschnitt aus Transkript (Pausen, deutsche/englische Füllwörter, verpatzte erste Takes) als EDL-Timeline für DaVinci Resolve/Premiere | eigen | eigen |
 | `routine-einrichtung` | Checkliste für neue Routinen: Repos, Branch, Freigaben, Zugangsdaten, Kosten, Bericht, Testlauf; Prompt-Prüfung auf Klartext-Tokens | eigen (Skill-Scout) | eigen |
