@@ -67,7 +67,7 @@ def gsc_token(key_file):
 
 
 def http(method, url, body=None, headers=None):
-    req = urllib.request.Request(url, method=method, data=json.dumps(body).encode() if body is not None else None,
+    req = urllib.request.Request(url, method=method, data=json.dumps(body).encode() if body is not None else (b"" if method in ("PUT", "POST") else None),
                                  headers={"Content-Type": "application/json", **(headers or {})})
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
