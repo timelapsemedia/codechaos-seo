@@ -74,7 +74,11 @@ def plan_for(post, ch):
         return dict(text=post["caption"], assets=vid,
                     metadata={"youtube": {"title": post["video_title"][:100], "categoryId": "10", "privacy": "public", "madeForKids": False}})
     if s == "tiktok":
-        return dict(text=post["caption"], assets=vid) if vid else None
+        if not vid:
+            return None
+        if post.get("ki"):  # KI-Bilder (Story-Serien): TikTok-Kennzeichnung „AI-generated content“
+            return dict(text=post["caption"], assets=vid, metadata={"tiktok": {"title": post.get("video_title", "")[:90], "isAiGenerated": True}})
+        return dict(text=post["caption"], assets=vid)
     if s in ("twitter", "threads", "bluesky", "mastodon"):
         return dict(text=post["short"], assets=img)
     if s == "facebook":  # Buffer verlangt einen Typ (seit FB-Kanal 24.10.2026, sonst scheitert jeder Lauf)
@@ -125,7 +129,14 @@ def main():
     posts = json.load(open(os.path.join(HERE, "crucible-posts.json"), encoding="utf-8"))
     state_path = os.path.join(HERE, "buffer_scheduled.json")
     state = json.load(open(state_path)) if os.path.exists(state_path) else {}
-    chans = [c for c in channels() if c["service"].lower() not in skip]
+    alle = channels()
+    # Gate (08.11.2026): lokal zeigt BUFFER_API_KEY auf das DRUWIDS-Konto – Code-Chaos-Posts dürfen nie auf
+    # Kanäle fremder Marken (DRUWIDS, keinduftbaum, Mitragyna, Heart Warrior).
+    fremd = [c for c in alle if any(m in c["name"].lower() for m in ("druwid", "keinduftbaum", "mitragyna", "heartwarrior", "heart warrior"))]
+    if fremd:
+        print("Buffer: Schlüssel gehört zu einem fremden Markenkonto (" + ", ".join(c["name"] for c in fremd) + ") – nichts eingeplant.")
+        return 0
+    chans = [c for c in alle if c["service"].lower() not in skip]
     have = existing([o["id"] for o in gql("query { account { organizations { id } } }")["account"]["organizations"]])
     print("Buffer-Kanäle:", ", ".join(f'{c["service"]} ({c["name"]})' for c in chans) or "keine")
     now = datetime.datetime.now(datetime.timezone.utc)

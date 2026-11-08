@@ -81,7 +81,7 @@ def main():
                             "description": (p.get("youtube_description") or p["caption"]) + link,
                             "tags": tags,
                             "categoryId": "10", "defaultLanguage": "de"},
-                "status": status}
+                "status": dict(status, containsSyntheticMedia=bool(p.get("ki")))}  # KI-Bilder (z. B. Story-Serien) kennzeichnen
         label = f'{p["id"]} ({"geplant für " + due.astimezone(TZ).strftime("%d.%m.%Y %H:%M") if "publishAt" in status else "sofort"})'
         if dry:
             print("YouTube WÜRDE HOCHLADEN:", label, local_file(p.get("video_youtube", p["video"])))
