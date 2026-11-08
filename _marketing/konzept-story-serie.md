@@ -67,6 +67,23 @@ Caption: first line a question from the story; then 2–3 sentences; then "The s
 - **Cliffhanger:** "When she looked up, her breath was no longer visible. Part 2 tomorrow."
 - **On-screen:** "Sound from part 1 → link in bio"
 
+## Production pipeline without Higgsfield (as of 08.11.2026)
+
+Viral "animated stories" are mostly **stills with camera movement**, not continuous AI video. They work through image changes every 2–3 s, parallax/zoom, captions and sound. Real AI video clips are only needed for 2–3 key moments per part.
+
+| Step | Tool | Cost |
+|---|---|---|
+| Character sheets (Liv/Eirik/raven, Kai/Mira/patrol) | `ki-medien`: `qwen`, if quality isn't enough → `nanobanana2` | free / small, within the cap |
+| 20–25 stills per part, consistent | `qwen-edit` with the character sheet as reference (same seed/style block in every prompt) | free (Modal credit) |
+| Movement on every still | **2.5D parallax**: depth map (Depth Anything V2, open source) → layered camera movement in Remotion (`code-chaos-motion` / `motion-reels`); otherwise Ken Burns zoom/pan | free |
+| 2–3 key moments per part (tape starts, sticks lift, windows flash) | `ki-medien` video: `wan` (5 s, 9:16, start image = still) | free (Modal credit, approx. 21 min first run) |
+| Frost freeze, strobe, glitch, part counter, captions | coded in Remotion (`code-chaos-motion`) | free |
+| Narrator voice | ElevenLabs (as Oskar does) or another TTS from `ki-medien`, always the same voice | small |
+| Sound of the episode | real render from the product | free |
+| Review | contact sheet (`code-chaos-motion` review), skill `stock-sichtung` for every clip, 64/150 px test for the thumbnail | — |
+
+`ki-medien` runs on Tim's PC (`C:/bildwerk`, Modal, cap). The cloud can't reach it, so **production of the parts runs in the PC session**. Cloud routines handle scripts, scheduling and posting.
+
 ## Production (tools available)
 - **Story/scripts:** written by Tim himself (his voice, his world). Claude helps only with structure and hook variants.
 - **Images/clips:** skill `ki-medien` (cost cap per episode). One consistent visual style (cold blue/black, film grain, copper-coloured accents as the Code Chaos signature), plus character sheets for Liv so she stays recognisable.
