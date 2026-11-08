@@ -1,4 +1,6 @@
-# Concept: Animated story series "FROSTFALL" (faceless, voice-over only)
+# Concept: Animated story series FROSTFALL + LAST RAVE (faceless, voice-over only)
+
+> **Decision 08.11.2026 (Tim):** FROSTFALL runs on the **existing Polished accounts** (mastering + Black Metal Suite); **LAST RAVE** (psy/hitech, Chaos FM + Crucible and more) runs on the **existing Code Chaos accounts**. No new accounts. Scripts: `serie-frostfall.md`, `serie-last-rave.md`. The account recommendation below ("new story account") is therefore obsolete.
 
 As of 08.11.2026. Based on the format analysis `format-analyse-oskar-schnee.md`. The animated-story principle has been carried over; the story, world, characters and plot are entirely our own.
 
