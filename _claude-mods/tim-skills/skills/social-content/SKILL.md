@@ -2,7 +2,7 @@
 name: social
 description: "Social-Media-Inhalte erstellen, planen und optimieren (Instagram, TikTok, Reels, Shorts, X, LinkedIn, Facebook): Posts, Threads, Karussells, Videoskripte und Hooks, Content-Kalender, Wiederverwertung, Social Listening. Strategie: content-strategy; Anzeigen: ad-creative."
 metadata:
-  version: 2.4.1
+  version: 2.4.2
 ---
 
 # Social Content
@@ -47,7 +47,7 @@ Gather this context (ask if not provided):
 | LinkedIn | B2B, thought leadership | 3-5x/week | Carousels, stories |
 | Twitter/X | Tech, real-time, community | 3-10x/day | Threads, hot takes |
 | Instagram | Visual brands, lifestyle | 1-2 posts + Stories daily | Reels, carousels |
-| TikTok | Brand awareness, younger audiences | 1-4x/day | Short-form video |
+| TikTok | Brand awareness, younger audiences | 1x/day, up to 3x once posts clear a view floor | Short-form video |
 | Facebook | Communities, local businesses | 1-2x/day | Groups, native video |
 
 **For detailed platform strategies** (LinkedIn, X, Instagram, TikTok, Facebook, Telegram): See [references/platforms.md](references/platforms.md)
@@ -433,7 +433,7 @@ Tools: CapCut (free), Descript, Captions.ai, Premiere Pro
 5. **No CTA** — tell viewers what to do
 6. **Ignoring comments** — engagement in first hour matters
 
-**For video hook formulas and scripting templates**: See [references/short-form-video.md](references/short-form-video.md)
+**For video hook formulas, scripting templates, warming up a new account, staged posting cadence, and finding a winning format**: See [references/short-form-video.md](references/short-form-video.md)
 
 ---
 
