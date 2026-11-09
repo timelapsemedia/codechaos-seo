@@ -81,7 +81,7 @@ FAQ = [
      "Von Code Chaos selbst erzeugt, synthetisiert oder gebaut. Es sind keine fremden Samples, Impulsantworten oder Presets enthalten."),
     ("In welcher DAW funktioniert das?",
      "Samples und MIDI laufen in jeder DAW oder jedem Sampler. Die Presets brauchen Vital (die kostenlose Version genügt) bzw. Serum 2. "
-     "Das Template ist für Ableton Live 12 (Suite). Die REAPER-Chains im Tone Kit nutzen nur REAPERs eigene Effekte."),
+     "Das Template ist für Ableton Live 12 (Suite). Die REAPER-Chains im Tone Kit nutzen nur REAPERs eigene Effekte. IRs in Ableton laden: siehe den Ratgeber zum Gitarrensound in Ableton."),
     ("Gibt es etwas zum Ausprobieren?",
      "Zu allen Plugins gibt es kostenlose Demos, siehe die Plugin-Übersicht. Die Datei-Produkte kosten zwischen 9 und 19 €."),
 ]
