@@ -30,6 +30,13 @@ ausgeben, auch nicht gekürzt.
    mit `kinds ["result"]` (bei Session-Routinen zusätzlich `["assistant"]`, letzte Seite).
    Achten auf: „limit“, „rate limit“, „Wochenlimit“, „401“, „403“, „token“, „expired“,
    „abgelaufen“, „BLOCKER“, „fehlgeschlagen“, „konnte nicht“, leere Berichte.
+   **Mehrere Läufe ansehen, nicht nur den letzten** (belegt 09.11.: Etsy-Routine 6/6 Läufe
+   „SUCCEEDED“, aber jedes Mal Token ungültig und 0 Listings; Wikipedia stündlich 28× „nichts
+   Neues“). Je Routine die letzten 3–6 Berichte in einem Satz zusammenfassen, als
+   `laeufe.json` (`{"<trig_-ID>": ["neuester Bericht", …]}`) speichern – nur Kurzfassungen,
+   keine Rohverläufe – und `python3 routinen_check.py routinen-*.json --verlauf laeufe.json`.
+   Das meldet ROT bei ≥ 3× gleichem Fehler in Folge (→ pausieren oder Ursache beheben
+   vorschlagen) und GELB bei ≥ 5× „nichts Neues“ im Stundentakt (→ seltener vorschlagen).
 4. **Meldung schreiben** (Deutsch, kurz):
    ```
    Routinen-Check <Datum>: <n> ok, <n> mit Problem

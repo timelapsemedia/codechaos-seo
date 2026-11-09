@@ -4,6 +4,9 @@
     python3 routinen_check.py liste.json            # gespeicherte Ausgabe von list_triggers (eine oder mehrere Seiten)
     python3 routinen_check.py liste.json --json     # maschinenlesbar
     python3 routinen_check.py --prompt prompt.txt   # einen Routine-Prompt vor dem Anlegen prüfen
+    python3 routinen_check.py liste.json --verlauf laeufe.json
+        laeufe.json: {"<Name oder trig_-ID>": ["Ergebnis Lauf 1 (neuester)", "Lauf 2", …]}
+        – je Lauf eine Kurzfassung des Berichts (z. B. "FEHLER: Token ungültig", "nichts Neues").
 
 Liest nur lokale Dateien, kein Netz. Gibt gefundene Geheimnisse NIE aus, nur Art und Position.
 Exit 0 = alles ok, 1 = Hinweise, 2 = Probleme (Ausfall, Geheimnis im Prompt).
@@ -71,7 +74,33 @@ def lade(pfade):
     return routinen
 
 
-def pruefe(r, jetzt):
+FEHLER_WORT = re.compile(r"(?i)fehler|failed|401|403|token|abgelaufen|expired|limit|blocker|konnte nicht|0 listings")
+NICHTS_WORT = re.compile(r"(?i)nichts neues|keine änderung|unverändert|no change|nothing new|keine neuen")
+
+
+def kern(text):
+    """Bericht auf einen vergleichbaren Kern kürzen (Zahlen raus, klein)."""
+    return re.sub(r"\d+", "#", (text or "").lower().strip())[:60]
+
+
+def verlauf_pruefen(laeufe, cron):
+    hinweise, probleme = [], []
+    if len(laeufe) >= 3:
+        letzte = laeufe[:3]
+        if all(FEHLER_WORT.search(x or "") for x in letzte) and len({kern(x) for x in letzte}) == 1:
+            probleme.append(f"{sum(1 for x in laeufe if kern(x) == kern(letzte[0]))}× derselbe Fehler in Folge – Ursache beheben oder Routine pausieren (Tim fragen)")
+    nichts = 0
+    for x in laeufe:
+        if NICHTS_WORT.search(x or ""):
+            nichts += 1
+        else:
+            break
+    if nichts >= 5 and stuendlich(cron):
+        hinweise.append(f"{nichts}× in Folge „nichts Neues“ bei stündlichem Takt – täglich oder seltener vorschlagen")
+    return hinweise, probleme
+
+
+def pruefe(r, jetzt, verlauf=None):
     hinweise, probleme = [], []
     name = r.get("name", "?")
     prompt = (r.get("derived_state") or {}).get("prompt") or r.get("prompt") or ""
@@ -95,6 +124,11 @@ def pruefe(r, jetzt):
         hinweise.append("stündlich in derselben Session – jede Ausführung liest den ganzen Verlauf (teuer); frische Session pro Lauf erwägen")
     if aktiv and persist and status == "SUCCEEDED":
         hinweise.append("Session-Routine: SUCCEEDED heißt nur „zugestellt“ – Ergebnis im Verlauf der Session prüfen")
+    laeufe = (verlauf or {}).get(r.get("id")) or (verlauf or {}).get(name)
+    if laeufe:
+        h, p = verlauf_pruefen(laeufe, cron)
+        hinweise += h
+        probleme += p
     for g in geheimnisse(prompt):
         probleme.append(f"Klartext-Geheimnis im Prompt: {g['art']} (Zeile {g['zeile']}, {g['laenge']} Zeichen) – Wert in Secret/Umgebung verschieben und Zugang erneuern")
     return {
@@ -137,9 +171,14 @@ def main():
             print("  ok – keine Auffälligkeiten")
         sys.exit(2 if probleme else 1 if hinweise else 0)
     als_json = "--json" in a
+    verlauf = {}
+    if "--verlauf" in a:
+        i = a.index("--verlauf")
+        verlauf = json.load(open(a[i + 1], encoding="utf-8"))
+        a = a[:i] + a[i + 2:]
     dateien = [x for x in a if not x.startswith("--")]
     jetzt = datetime.now(timezone.utc)
-    ergebnisse = [pruefe(r, jetzt) for r in lade(dateien)]
+    ergebnisse = [pruefe(r, jetzt, verlauf) for r in lade(dateien)]
     ergebnisse.sort(key=lambda e: (not e["probleme"], not e["hinweise"], e["name"]))
     if als_json:
         print(json.dumps(ergebnisse, ensure_ascii=False, indent=2))
