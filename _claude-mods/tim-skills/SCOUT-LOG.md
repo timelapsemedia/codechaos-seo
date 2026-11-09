@@ -305,3 +305,27 @@ Eigenbau:
 
 Verbessert: code-chaos-toolkit verweist für Ablauf und Gates auf hitech-produktionsstandard.
 Offen gelassen: SKILL-KANDIDAT „Ohr-Fallback lokal (CLAP/MERT)“ (04.11.) – braucht Modell-Download und ist ein Werkzeug, kein Skill → Vorschlag an Tim.
+
+## 2026-11-09 – Wochenlauf 6 (Cloud-Routine)
+
+Fremd-Suche: übersprungen – Sonderlauf skills.sh am 07.11. (< 6 Tage).
+
+Upstream-Updates: earshot, remotion-best-practices, social-content (lokal gekürzte Beschreibungen behalten).
+Nicht aktualisiert: ad-creative (Upstream enthält Magister-Affiliate-Werbung), copywriting, hallmark, gemini-api-dev (lokale Änderungen), design-to-motion (Upstream-Ordner fehlt), show-me-the-money (404).
+
+Nutzung tim-skills 02.–09.11. (Cloud-Sessions): 2 Aufrufe, beide ki-medien.
+
+Eigenbau:
+| Skill | Anlass (Belege) | Test |
+|---|---|---|
+| fremdvideo-analyse | Video-Links zur Analyse: Sessions „Automatisierte Geldverdienung“ 03.11. und 08.11., „YouTube-Videoanalyse“ 08.11.; Abruf in der Cloud scheiterte, Vorgehen jedes Mal neu | verweist nur auf vorhandene Werkzeuge (video-werkstatt analysieren/standbilder/transkribieren, hook-master, ig-reel, yt-script) |
+| session-suche | 06.11.: Fragen nach Inhalten anderer Sessions in „Automatisierte Geldverdienung“ und „Kündigungsprozess“ | list_sessions/list_events in dieser Session benutzt; Grep-Befehle lokal geprüft |
+
+Verbessert: routine-waechter – `routinen_check.py --verlauf laeufe.json` meldet ROT bei ≥ 3× gleichem Fehler in Folge, GELB bei ≥ 5× „nichts Neues“ im Stundentakt (Anlass: Etsy-Routine 6/6 Läufe Token ungültig/0 Listings trotz SUCCEEDED; Wikipedia 28× „nichts Neues“). Getestet mit Beispieldaten (ROT/GELB/OK, Exit 2).
+
+Vorschläge an Tim (nicht umgesetzt, SCOUT.md D):
+- higgsfield-upload (überholt seit 28.10.) in `_papierkorb/` verschieben – liegt noch in skills/.
+- Etsy-Routine: Token erneuern oder Routine pausieren (6/6 Läufe ohne Daten).
+- Wikipedia-Beobachtung: täglich statt stündlich.
+- Skill „Gründungs-/Behörden-Korrespondenz“ – erst bei zweitem Beleg bauen.
+- Autonomie-Regel als Hook/CLAUDE.md-Eintrag; Render-Warteschlange für lange Videojobs.
