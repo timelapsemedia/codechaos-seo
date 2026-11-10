@@ -4,9 +4,9 @@ _PRESAVE = "https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut-2"
 
 EN_HOME = {
  "title": "Code Chaos · Psycore & Hitech Producer · Mastering from €79",
- "desc": "New single \"Uhrwerk aus Blut\" out 30 Oct 2026, pre-save now. Psycore, hitech & darkpsy mastering from Hamburg: single €79, EP €349, album €629.",
+ "desc": "Single \"Uhrwerk aus Blut\" out now, Wiedergänger Vol. I out 4 Dec 2026. Plugins on Gumroad and psycore, hitech & darkpsy mastering from €79.",
  "faq": [
-   ("When is \"Uhrwerk aus Blut\" released?", "The single \"Uhrwerk aus Blut\" (Clockwork of Blood) is out on 30 October 2026 on Abstract Sound Design and all major streaming platforms. You can <a href=\"" + _PRESAVE + "\">pre-save it now</a>."),
+   ("Is \"Uhrwerk aus Blut\" out yet?", "Yes. The single \"Uhrwerk aus Blut\" (Clockwork of Blood) was released on 30 October 2026 on Abstract Sound Design: <a href=\"" + _PRESAVE + "\">listen now</a>. The next release is Wiedergänger Vol. I · Was nicht ruhen will on 4 December 2026."),
    ("Who is behind Code Chaos?", "Code Chaos is the studio project of Tim Borchert, a producer from Hamburg, Germany, active since 2016. He co-founded the label Abstract Sound Design in 2021, runs the mastering service Polished Media and develops audio plugins as Code Chaos Audio, starting with <a href=\"/crucible.html\">Crucible</a>."),
    ("Can I book Code Chaos for a live show or DJ set?", "No. Today Code Chaos is a studio-only project without bookings. Earlier there were live sets, for example at Abstract Ritual Hamburg (2023) and Lost Signal Festival (2026). You can work with Code Chaos through mastering, cover art and video services."),
    ("What is \"New Psychedelic Death Art\"?", "New Psychedelic Death Art is Code Chaos' own name for the project's sound: hitech, psycore and darkpsy at 180–300 BPM, combined with gothic atmosphere, liquid FM lines, a bassline that never stops rolling and voices that tell stories. Music not made for the daylight, somewhere between a psytrance floor at 4 a.m. and a crypt that smells of candle wax. The first release of this era is the single <a href=\"/en/#single\">Uhrwerk aus Blut</a>."),
@@ -19,12 +19,12 @@ EN_HOME = {
 <section class="s-hero" id="single" aria-labelledby="single-t">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">New single · Code Chaos</span>
+      <span class="eyebrow">Single · Code Chaos · out now</span>
       <h1 id="single-t">Uhrwerk aus Blut</h1>
       <p class="lead">A heart that beats too fast. A clockwork that bleeds.<br><span lang="de">„Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet.“</span></p>
-      <p>The new single opens a darker, narrative era for Code Chaos: darkpsy and hitech energy meet gothic atmosphere and five spoken German scenes. Out <strong>30 October 2026</strong> on Abstract Sound Design.</p>
-      <div class="btns"><a class="btn btn-blood" href=\"""" + _PRESAVE + """\" target="_blank" rel="noopener noreferrer">Pre-save now</a><a class="btn btn-ghost" href="#mastering">Mastering from €79</a></div>
-      <p class="note" style="margin-top:14px">Artwork and voices created with AI.</p>
+      <p>The new single opens a darker, narrative era for Code Chaos: darkpsy and hitech energy meet gothic atmosphere and five spoken German scenes. Out now on Abstract Sound Design (released <strong>30 October 2026</strong>). Next release: <strong>Wiedergänger Vol. I · Was nicht ruhen will</strong>, out 4 December 2026.</p>
+      <div class="btns"><a class="btn btn-blood" href=\"""" + _PRESAVE + """\" target="_blank" rel="noopener noreferrer">Listen now</a><a class="btn btn-ghost" href="/plugins/">Plugins on Gumroad</a><a class="btn btn-ghost" href="#mastering">Mastering from €79</a></div>
+      <p class="note" style="margin-top:14px">Artwork created with AI.</p>
     </div>
     <img class="framed" src="/images/uhrwerk-aus-blut/cover-800.webp" width="800" height="800" fetchpriority="high" alt="Cover of the single Uhrwerk aus Blut by Code Chaos: a golden mechanical heart inside a clock face, dripping blood">
   </div>
