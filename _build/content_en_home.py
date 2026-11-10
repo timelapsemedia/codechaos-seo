@@ -90,7 +90,7 @@ EN_HOME = {
 
 <section id="about" aria-labelledby="about-t">
   <div class="wrap hero-grid">
-    <img class="framed" src="/images/brand/portrait-press-600.webp" width="600" height="750" loading="lazy" alt="Code Chaos press photo: portrait by candlelight holding a fly agaric mushroom (created with AI)">
+    <img class="framed" src="/images/brand/portrait-press-600.webp" width="600" height="750" loading="lazy" alt="Code Chaos press photo: portrait by candlelight holding a fly agaric mushroom (artwork created with AI)">
     <div class="prose">
       <span class="eyebrow">About Code Chaos</span>
       <h2 id="about-t">Ten years at the extreme edge of psytrance</h2>
