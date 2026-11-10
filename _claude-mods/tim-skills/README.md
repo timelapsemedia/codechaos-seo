@@ -15,6 +15,7 @@ SEO → `seo-audit`/`web-seo`, Outreach → `ig-dm`/`druwids-outreach`. Zurückh
 | Skill | Wofür | Quelle | Lizenz |
 |---|---|---|---|
 | `accessibility` | Barrierefreiheit nach WCAG 2.2 prüfen und beheben (Kontraste, Tastatur, Formulare, ARIA, Screenreader; relevant fürs BFSG) | https://github.com/addyosmani/web-quality-skills/tree/main/skills/accessibility | mitgeliefert (LICENSE.upstream, MIT) |
+| `ads-maschine` | Gewinner der Nische finden (Meta-Langläufer-Anzeigen über Apify, Ausreißer-Shorts über yt-dlp), Muster ableiten, daraus organische Shorts, Captions und später Anzeigen bauen | eigen (Skill-Scout) | – |
 | `ad-creative` | When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid | https://github.com/coreyhaines31/marketingskills/tree/main/skills/ad-creative | mitgeliefert (LICENSE.upstream) |
 | `after-effects` | >- | https://github.com/TerminalSkills/skills/tree/main/skills/after-effects | mitgeliefert (LICENSE.upstream) |
 | `agenten-schwarm` | Multi-Agenten-Vorlagen (Track-QA, Video-QA, Recherche) mit Agentenzahl vorab und unabhängiger Gegenprüfung; nur Belegtes übernehmen | eigen (Skill-Scout) | – |
