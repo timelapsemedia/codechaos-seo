@@ -14,7 +14,7 @@ for q,a in re.findall(r'<details[^>]*>\s*<summary[^>]*>\s*(.*?)\s*<span[^>]*>\+<
     assert '<summary' not in q and len(q)<200,q[:120]
     faq.append({"@type":"Question","name":clean(q),"acceptedAnswer":{"@type":"Answer","text":clean(a)}})
 assert len(faq)==15,len(faq)
-same=["https://codechaos.bandcamp.com","https://soundcloud.com/codechaos","https://www.instagram.com/codechaos_official","https://www.tiktok.com/@codechaos_abstractsound","https://x.com/codechaos_music","https://www.threads.net/@codechaos_official","https://www.youtube.com/@codechaos_abstractsounddesign","https://www.discogs.com/artist/18204093-Code-Chaos","https://musicbrainz.org/artist/14d40d24-a91e-4600-a1b3-d14682d32e42","https://www.wikidata.org/wiki/Q141646843"]
+same=["https://codechaos.bandcamp.com","https://soundcloud.com/codechaos","https://www.instagram.com/codechaos_official","https://www.tiktok.com/@codechaos_abstractsound","https://x.com/codechaos_music","https://www.threads.net/@codechaos_official","https://www.youtube.com/@codechaos_abstractsounddesign","https://www.discogs.com/artist/18204093-Code-Chaos","https://musicbrainz.org/artist/14d40d24-a91e-4600-a1b3-d14682d32e42","https://www.wikidata.org/wiki/Q141646843","https://de.wikipedia.org/wiki/Code_Chaos"]
 asd={"@type":"Organization","@id":B+"/#label-asd","name":"Abstract Sound Design","url":"https://www.abstract-sound-design.de/","sameAs":["https://abstract-sound-design.bandcamp.com/","https://www.discogs.com/label/4052777-Abstract-Sound-Design","https://www.wikidata.org/wiki/Q141646831"],"foundingDate":"2021","founder":{"@id":B+"/#tim-borchert"}}
 rt_tracks=["Cold Boot","Bitrot","Runtime Terror","Overdrive","Fork Bomb","Hyperthread","Ego Death","Core Dump","Night"]
 graph=[
