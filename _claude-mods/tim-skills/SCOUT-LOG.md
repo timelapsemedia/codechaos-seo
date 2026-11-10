@@ -357,3 +357,9 @@ Abgelehnt:
 | Matt Pocock Skills, Taste Skill, Impeccable | schon am 07.11. abgelehnt; HyperFrames, Hallmark installiert |
 
 Aus dem Content-Pipeline-Post selbst gebaut (lokal, kein Skill): Gewinner-Radar `C:/social-insights/si/gewinner.py` – findet Ausreißer-Shorts (Aufrufe ≥ 3× Kanal-Median) in den Nischen von Code Chaos, Polished und ZeitSprung, misst sie mit derselben Machart-Messung wie die eigenen Posts und transkribiert den Hook (yt-dlp + Whisper, 0 €). „Ads-Maschine“: nicht umgesetzt – Tim schaltet keine bezahlten Anzeigen; ad-creative ist vorhanden.
+
+## 2026-11-10 – Eigenbau ads-maschine (Nachtrag zum Trend-Lauf)
+
+| Skill | Anlass (Belege) | Test |
+|---|---|---|
+| ads-maschine | Tim 10.11.: „Ads-maschine super für organische videos“ (Grafik „Make Claude an ads machine“: /ads → Ad Library → Creator → Bilder). Gebaut mit Tims vorhandenen Werkzeugen statt fremdem Skill: Werbe-Radar `C:/social-insights/si/werbung.py` (Apify jmlp/meta-ad-library-scraper, 0,00015 $/Anzeige; offizielle Ad-Library-API braucht Tims Ausweisbestätigung bei Meta, kein passender Token vorhanden), Gewinner-Radar `si/gewinner.py`, Creator über ad-creative/hook-master/copywriting, Bilder über ki-medien | Werbe-Radar-Testlauf 10.11.: Polished/Code Chaos liefern echte Langläufer (z. B. Mastering.com 248 Tage × 5 Varianten, Hook „How to use a compressor in 60 seconds?“); ZeitSprung nur Fachfremdes → dort abgeschaltet, lernt über den YouTube-Gewinner-Radar. Filter: mind. 2 Fachbegriffe, Dubletten raus. Ladetest 87 Skills |

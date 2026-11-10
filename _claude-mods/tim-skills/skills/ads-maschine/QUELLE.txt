@@ -1,0 +1,1 @@
+eigen – Skill-Scout ; Anlass: Tim 10.11.2026 „Ads-maschine super für organische videos“ (Grafik „Make Claude an ads machine“, Luca Vitale) ; Werkzeuge lokal: C:/social-insights/si/werbung.py, si/gewinner.py
