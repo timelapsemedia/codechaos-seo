@@ -186,3 +186,25 @@ footer .footer-logo{height:70px;width:auto;display:block;margin-bottom:10px}
 }
 html,body{overflow-x:clip}
 .sound-layout>*,.network-layout>*,.mastering-layout>*,.about-grid>*{min-width:0}
+/* Hero ab 10.11.2026: Plugins + Mastering zuerst, Releases als Ankündigung darunter (grok-bruecke #65) */
+#single .h1-sub{display:block;font-family:var(--serif-lyric);font-style:italic;font-weight:400;letter-spacing:.01em;color:var(--gold-hi);font-size:clamp(1.2rem,4.6vw,1.75rem);line-height:1.3;margin-top:10px}
+#single .offer-grid{display:grid;gap:14px;margin:22px 0 0;text-align:left}
+#single .offer{border:1px solid var(--gold-lo);background:rgba(17,12,9,.82);padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+#single .offer .btn-blood,#single .offer .btn-ghost{margin-top:auto;align-self:stretch;justify-content:center;text-align:center;white-space:nowrap;min-height:46px;padding:11px 16px}
+#single .offer-k{font-family:var(--serif-cap);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0}
+#single .offer-t{font-family:var(--serif-cap);font-weight:700;font-size:1.35rem;letter-spacing:.06em;color:var(--bone);margin:0}
+#single .offer-d{font-size:.95rem;line-height:1.45;color:var(--parch);margin:0 0 8px}
+#single .offer-p{list-style:none;padding:0;margin:0 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:2px 14px;font-size:.98rem;color:var(--bone)}
+#single .offer-p b{color:var(--gold-hi);font-family:var(--serif-cap)}
+#single .hero-rel{margin:20px 0 0;padding:14px 0 0;border-top:1px solid var(--gold-lo);text-align:left}
+#single .hero-rel p{margin:0}
+#single .hero-rel-k{font-family:var(--serif-cap);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+#single .hero-rel-k2{margin-top:12px!important}
+#single .hero-rel-t{font-family:var(--serif-cap);font-weight:700;font-size:1.05rem;letter-spacing:.04em;margin:2px 0!important}
+#single .hero-rel-t a{color:var(--bone);text-decoration:none;border-bottom:1px solid var(--gold-lo)}
+#single .hero-rel-t a:hover{color:var(--gold-hi);border-color:var(--gold)}
+#single .hero-rel-d{font-size:.9rem;color:var(--parch)}
+#single .hero-rel-d a{color:var(--gold-hi);text-decoration:underline;text-underline-offset:3px}
+@media (min-width:560px){#single .offer-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:960px){#single .hero-copy{max-width:640px}#single h1{font-size:clamp(2.4rem,4.2vw,3.9rem)}}
+@media (max-width:959px){#single .hero-copy{max-width:640px}#single{padding-top:max(88px,40svh)}}

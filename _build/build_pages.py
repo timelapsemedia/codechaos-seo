@@ -156,8 +156,9 @@ def release_grid(keys, lang):
     out = []
     for k in keys:
         r = RELEASES[k]
-        ext = ' target="_blank" rel="noopener noreferrer"' if r["url"].startswith("http") else ""
-        out.append(f'<a href="{r["url"]}"{ext}>'
+        href = r.get("url_" + lang, r["url"])
+        ext = ' target="_blank" rel="noopener noreferrer"' if href.startswith("http") else ""
+        out.append(f'<a href="{href}"{ext}>'
                    f'<img src="{r["img"]}" width="300" height="300" loading="lazy" decoding="async" alt="{esc("Code Chaos " + r["title"] + " Cover")}">'
                    f'<span>{esc(r["title"])}<small>{esc(r[lang])}</small></span></a>')
     return '<div class="rel">' + "".join(out) + "</div>"
@@ -326,6 +327,74 @@ def build_mastering(lang):
     open(path, "w", encoding="utf-8", newline="\n").write(html)
     return path
 
+RELEASE_DATE = "2026-11-10"     # datePublished der Release-Seiten
+
+
+def release_ld(slug, lang, url):
+    """Schema der Release-Seiten. @ids der Uhrwerk-Knoten = dieselben wie im Startseiten-Graph (schema_home.py)."""
+    asd = {"@type": "Organization", "@id": BASE + "/#label-asd", "name": "Abstract Sound Design", "url": "https://www.abstract-sound-design.de/"}
+    artist = {"@type": "MusicGroup", "@id": ARTIST, "name": "Code Chaos", "url": BASE + "/"}
+    if slug == "uhrwerk-aus-blut":
+        desc = ("Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet. Single von Code Chaos in fünf Szenen (Prolog, Die Uhr, Der Spiegel, Das Blut, Rückkehr), erschienen am 30.10.2026 auf Abstract Sound Design. Bild mit KI erstellt."
+                if lang == "de" else
+                "A heart that beats too fast. A clockwork that bleeds. Single by Code Chaos in five scenes (Prologue, The Clock, The Mirror, The Blood, Return), released 30 October 2026 on Abstract Sound Design. Artwork created with AI.")
+        rec = {"@type": "MusicRecording", "@id": BASE + "/#uhrwerk-aus-blut", "name": "Uhrwerk aus Blut", "byArtist": artist,
+               "datePublished": "2026-10-30", "genre": ["Darkpsy", "Hitech Psytrance", "Gothic"], "inLanguage": "de",
+               "image": BASE + "/images/uhrwerk-aus-blut/cover-1600.jpg", "url": url, "description": desc,
+               "recordingOf": {"@type": "MusicComposition", "name": "Uhrwerk aus Blut", "composer": {"@id": PERSON}},
+               "inAlbum": {"@id": BASE + "/#uhrwerk-aus-blut-single"},
+               "potentialAction": {"@type": "ListenAction", "name": "Jetzt streamen" if lang == "de" else "Listen now",
+                                   "target": "https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut-2"}}
+        alb = {"@type": "MusicAlbum", "@id": BASE + "/#uhrwerk-aus-blut-single", "name": "Uhrwerk aus Blut",
+               "albumReleaseType": "https://schema.org/SingleRelease", "albumProductionType": "https://schema.org/StudioAlbum",
+               "datePublished": "2026-10-30", "byArtist": artist, "recordLabel": asd, "url": url,
+               "image": BASE + "/images/uhrwerk-aus-blut/cover-1600.jpg", "numTracks": 1, "track": {"@id": BASE + "/#uhrwerk-aus-blut"}}
+        return [rec, alb], BASE + "/#uhrwerk-aus-blut"
+    from content_releases import WG_TRACKS
+    alb = {"@type": "MusicAlbum", "@id": BASE + "/wiedergaenger-vol-1/#album", "name": "Wiedergänger Vol. I · Was nicht ruhen will",
+           "alternateName": "Wiedergänger Vol. I", "albumProductionType": "https://schema.org/RemixAlbum",
+           "datePublished": "2026-12-04", "byArtist": artist, "url": url, "numTracks": len(WG_TRACKS),
+           "description": ("Remix-Release von Code Chaos mit fünf Tracks, erscheint am 04.12.2026." if lang == "de"
+                           else "Remix release by Code Chaos with five tracks, out 4 December 2026."),
+           "track": {"@type": "ItemList", "numberOfItems": len(WG_TRACKS), "itemListElement": [
+               {"@type": "ListItem", "position": i + 1, "item": {"@type": "MusicRecording", "name": t, "byArtist": {"@id": ARTIST}}}
+               for i, t in enumerate(WG_TRACKS)]}}
+    return [alb], alb["@id"]
+
+
+def build_release(slug, lang):
+    from content_releases import RELEASE_PAGES
+    r = RELEASE_PAGES[slug]
+    c = r[lang]
+    u = UI[lang]
+    pre = "" if lang == "de" else "/en"
+    url = f"{BASE}{pre}/{slug}/"
+    alt = f"{BASE}{'/en' if lang == 'de' else ''}/{slug}/"
+    nodes, main_id = release_ld(slug, lang, url)
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": c["title"], "description": c["desc"], "inLanguage": lang,
+         "isPartOf": {"@id": BASE + "/#website"}, "about": {"@id": main_id}, "mainEntity": {"@id": main_id},
+         "primaryImageOfPage": {"@type": "ImageObject", "url": BASE + r["og"], "width": 1200, "height": 630},
+         "datePublished": RELEASE_DATE, "dateModified": DATUM, "author": autor_ld(), "publisher": publisher_ld()},
+        *nodes,
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": u["home"], "item": BASE + u["home_url"]},
+            {"@type": "ListItem", "position": 2, "name": u["releases"], "item": BASE + u["releases_url"]},
+            {"@type": "ListItem", "position": 3, "name": c["nav"], "item": url}]},
+        {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": lang, "mainEntity": [
+            {"@type": "Question", "name": strip(q), "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in c["faq"]]},
+    ]}
+    body = c["body"].replace("{faq}", faq_html(c["faq"]))
+    og_type = "music.song" if slug == "uhrwerk-aus-blut" else "music.album"
+    html = head(lang, url, alt, c["title"], c["desc"], BASE + r["og"], c["og_alt"], ld, og_type=og_type) \
+        + nav(lang, alt, "rel") + body + footer(lang)
+    html, _ = geo.ausbauen(html, f"{pre}/{slug}/", lang)
+    path = os.path.join(ROOT, pre.strip("/"), slug, "index.html")
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    open(path, "w", encoding="utf-8", newline="\n").write(html)
+    return path
+
+
 def build_404():
     body = """<main id="main">
 <section class="s-hero">
@@ -341,7 +410,7 @@ def build_404():
   <div class="wrap">
     <h2>Beliebte Seiten</h2>
     <div class="cards">
-      <div class="card"><h3>Uhrwerk aus Blut</h3><p>Die neue Single, erscheint am 30.10.2026.</p><a class="more" href="/#single">Zur Single →</a></div>
+      <div class="card"><h3>Uhrwerk aus Blut</h3><p>Die Single, erschienen am 30.10.2026.</p><a class="more" href="/uhrwerk-aus-blut/">Zur Single →</a></div>
       <div class="card"><h3>Mastering</h3><p>Psycore, Hitech &amp; Darkpsy: Single 79 €, EP 349 €, Album 629 €.</p><a class="more" href="/mastering/">Preise &amp; Ablauf →</a></div>
       <div class="card"><h3>Genre Guides</h3><p><a href="/psycore/">Psycore</a> · <a href="/hitech-psytrance/">Hitech</a> · <a href="/darkpsy/">Darkpsy</a></p></div>
       <div class="card"><h3>Crucible</h3><p>3-Band Harmonic Saturation Plugin von Code Chaos Audio.</p><a class="more" href="/crucible.html">Zum Plugin →</a></div>
@@ -711,6 +780,9 @@ if __name__ == "__main__":
     print(build_en_home())
     print(build_mastering("de"))
     print(build_mastering("en"))
+    for slug in ("uhrwerk-aus-blut", "wiedergaenger-vol-1"):
+        for lang in ("de", "en"):
+            print(build_release(slug, lang))
     print(build_404())
     print(build_plugins_index())
     for p in LIVE:

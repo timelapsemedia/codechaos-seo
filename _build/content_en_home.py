@@ -3,13 +3,13 @@
 _PRESAVE = "https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut-2"
 
 EN_HOME = {
- "title": "Code Chaos · Psycore & Hitech Producer · Mastering from €79",
- "desc": "Single \"Uhrwerk aus Blut\" out now, Wiedergänger Vol. I out 4 Dec 2026. Plugins on Gumroad and psycore, hitech & darkpsy mastering from €79.",
+ "title": "Code Chaos · Plugins · Psycore & Hitech Mastering from €79",
+ "desc": "Plugins by Code Chaos Audio on Gumroad and mastering for psytrance, hitech & psycore from €79. New: Wiedergänger Vol. I (4 Dec 2026) and Uhrwerk aus Blut.",
  "faq": [
    ("Is \"Uhrwerk aus Blut\" out yet?", "Yes. The single \"Uhrwerk aus Blut\" (Clockwork of Blood) was released on 30 October 2026 on Abstract Sound Design: <a href=\"" + _PRESAVE + "\">listen now</a>. The next release is Wiedergänger Vol. I · Was nicht ruhen will on 4 December 2026."),
    ("Who is behind Code Chaos?", "Code Chaos is the studio project of Tim Borchert, a producer from Hamburg, Germany, active since 2016. He co-founded the label Abstract Sound Design in 2021, runs the mastering service Polished Media and develops audio plugins as Code Chaos Audio, starting with <a href=\"/crucible.html\">Crucible</a>."),
    ("Can I book Code Chaos for a live show or DJ set?", "No. Today Code Chaos is a studio-only project without bookings. Earlier there were live sets, for example at Abstract Ritual Hamburg (2023) and Lost Signal Festival (2026). You can work with Code Chaos through mastering, cover art and video services."),
-   ("What is \"New Psychedelic Death Art\"?", "New Psychedelic Death Art is Code Chaos' own name for the project's sound: hitech, psycore and darkpsy at 180–300 BPM, combined with gothic atmosphere, liquid FM lines, a bassline that never stops rolling and voices that tell stories. Music not made for the daylight, somewhere between a psytrance floor at 4 a.m. and a crypt that smells of candle wax. The first release of this era is the single <a href=\"/en/#single\">Uhrwerk aus Blut</a>."),
+   ("What is \"New Psychedelic Death Art\"?", "New Psychedelic Death Art is Code Chaos' own name for the project's sound: hitech, psycore and darkpsy at 180–300 BPM, combined with gothic atmosphere, liquid FM lines, a bassline that never stops rolling and voices that tell stories. Music not made for the daylight, somewhere between a psytrance floor at 4 a.m. and a crypt that smells of candle wax. The first release of this era is the single <a href=\"/en/uhrwerk-aus-blut/\">Uhrwerk aus Blut</a>."),
    ("What genres does Code Chaos produce?", "Hitech psytrance, psycore and darkpsy, mostly between 180 and 300 BPM, plus experimental releases. Read the guides to <a href=\"/en/psycore/\">psycore</a>, <a href=\"/en/hitech-psytrance/\">hitech psytrance</a> and <a href=\"/en/darkpsy/\">darkpsy</a>."),
    ("How much does mastering cost?", "Single (stereo) €79, Stem Pro €129 per track (up to 6 stems), EP up to 5 tracks €349 (€69.80 per track), album up to 10 tracks €629 (€62.90 per track). All prices incl. 19% VAT, with audio audit and unlimited revisions."),
    ("What is Crucible?", "Crucible is a 3-band harmonic saturation plugin (VST3 + standalone for Windows, €19) by Code Chaos Audio. Low, mid and high are saturated separately with hard clip, wavefolder, tube, diode or tape, with per-band drive, mix and gain and up to 8x oversampling."),
@@ -19,14 +19,32 @@ EN_HOME = {
 <section class="s-hero" id="single" aria-labelledby="single-t">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Single · Code Chaos · out now</span>
-      <h1 id="single-t">Uhrwerk aus Blut</h1>
-      <p class="lead">A heart that beats too fast. A clockwork that bleeds.<br><span lang="de">„Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet.“</span></p>
-      <p>The new single opens a darker, narrative era for Code Chaos: darkpsy and hitech energy meet gothic atmosphere and five spoken German scenes. Out now on Abstract Sound Design (released <strong>30 October 2026</strong>). Next release: <strong>Wiedergänger Vol. I · Was nicht ruhen will</strong>, out 4 December 2026.</p>
-      <div class="btns"><a class="btn btn-blood" href=\"""" + _PRESAVE + """\" target="_blank" rel="noopener noreferrer">Listen now</a><a class="btn btn-ghost" href="/plugins/">Plugins on Gumroad</a><a class="btn btn-ghost" href="#mastering">Mastering from €79</a></div>
-      <p class="note" style="margin-top:14px">Artwork created with AI.</p>
+      <span class="eyebrow">Code Chaos · New Psychedelic Death Art · Hamburg</span>
+      <h1 id="single-t">Plugins &amp; mastering <span class="h1-sub">for psytrance, hitech &amp; psycore</span></h1>
+      <div class="offer-grid">
+        <div class="offer">
+          <p class="offer-k">Code Chaos Audio · Gumroad</p>
+          <p class="offer-t">Plugins</p>
+          <p class="offer-d">Crucible, Kick+Bass Engine, Shardstep, Chaos FM and more. Every paid plugin has a free demo.</p>
+          <a class="btn btn-blood" href="/plugins/">See the plugins</a>
+        </div>
+        <div class="offer">
+          <p class="offer-k">Polished Media · mastering</p>
+          <p class="offer-t">Mastering</p>
+          <ul class="offer-p"><li>Stereo <b>€79</b></li><li>Stem <b>€129</b></li><li>EP <b>€349</b></li><li>Album <b>€629</b></li></ul>
+          <a class="btn btn-ghost" href="#mastering">Request mastering ↓</a>
+        </div>
+      </div>
+      <div class="hero-rel" id="new">
+        <p class="hero-rel-k">Announcement · <time datetime="2026-12-04">4 Dec 2026</time></p>
+        <p class="hero-rel-t"><a href="/en/wiedergaenger-vol-1/">Wiedergänger Vol. I · Was nicht ruhen will</a></p>
+        <p class="hero-rel-d">Remix release, five tracks: Error 666, Antichrist, The Human Paradox, Abstrakte Musik, Rotten Soil · <a href="/#newsletter">link first via newsletter</a></p>
+        <p class="hero-rel-k hero-rel-k2">Out now · <time datetime="2026-10-30">30 Oct 2026</time> · Abstract Sound Design</p>
+        <p class="hero-rel-t"><a href="/en/uhrwerk-aus-blut/">Uhrwerk aus Blut</a></p>
+        <p class="hero-rel-d"><a href=\"""" + _PRESAVE + """\" target="_blank" rel="noopener noreferrer">Listen now ↗</a> · Artwork created with AI.</p>
+      </div>
     </div>
-    <img class="framed" src="/images/uhrwerk-aus-blut/cover-800.webp" width="800" height="800" fetchpriority="high" alt="Cover of the single Uhrwerk aus Blut by Code Chaos: a golden mechanical heart inside a clock face, dripping blood">
+    <a href="/en/uhrwerk-aus-blut/"><img class="framed" src="/images/uhrwerk-aus-blut/cover-800.webp" width="800" height="800" fetchpriority="high" alt="Cover of the single Uhrwerk aus Blut by Code Chaos: a golden mechanical heart inside a clock face, dripping blood"></a>
   </div>
 </section>
 
@@ -58,6 +76,7 @@ EN_HOME = {
   <div class="wrap narrow">
     <span class="eyebrow">Single facts</span>
     <h2 id="facts-t">Uhrwerk aus Blut (Clockwork of Blood)</h2>
+    <p><a href="/en/uhrwerk-aus-blut/">Everything about the single: story, scenes, FAQ →</a></p>
     <table class="specs"><tbody>
       <tr><th scope="row">Artist</th><td>Code Chaos</td></tr>
       <tr><th scope="row">Release date</th><td><time datetime="2026-10-30">30 October 2026</time></td></tr>

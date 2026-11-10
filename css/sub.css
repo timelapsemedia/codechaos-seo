@@ -180,3 +180,29 @@ h3{font-size:1.15rem;margin:28px 0 10px}
 .ab button[aria-pressed="true"]{border-color:var(--gold);background:rgba(201,168,106,.18);color:var(--gold-hi)}
 .ab .ab-play{background:var(--blood);border-color:var(--gold)}
 .pbul{margin:0 0 12px;padding-left:18px;font-size:.92rem;color:var(--parch)}.pbul li{margin:0 0 5px}
+/* Release-Seiten (/uhrwerk-aus-blut/, /wiedergaenger-vol-1/) */
+.h1-sub{display:block;font-family:var(--lyric);font-style:italic;font-weight:400;letter-spacing:.01em;text-transform:none;color:var(--gold-hi);font-size:clamp(1.25rem,3.6vw,1.9rem);margin-top:10px}
+.rule-left{justify-content:flex-start}.rule-left::before{display:none}
+.rel-cover{margin:0}.rel-cover img{width:100%;height:auto;display:block}.rel-cover figcaption{margin-top:10px;text-align:center}
+.scenes{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:14px}
+.scenes li{border-left:2px solid var(--blood);background:var(--panel);padding:16px 20px}
+.scenes h3{margin:4px 0 8px}.scenes h3 small{font-family:var(--lyric);font-style:italic;font-weight:400;color:var(--parch);letter-spacing:0}
+.scene-num{font-family:var(--cap);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.scenes blockquote{margin:0;font-family:var(--lyric);font-style:italic;font-size:1.15rem;line-height:1.5;color:var(--bone)}
+.scenes blockquote p{margin:0}.scenes .note{margin:6px 0 0}
+.tracklist{margin:8px 0 24px 1.4em;font-size:1.1rem}.tracklist li{padding:6px 0;border-bottom:1px solid var(--line);color:var(--bone)}
+/* EN-Startseite: Plugins + Mastering zuerst (wie DE-Hero, gothic.css) */
+.offer-grid{display:grid;gap:14px;margin:22px 0 0}
+@media (min-width:560px){.offer-grid{grid-template-columns:1fr 1fr}}
+.offer{border:1px solid var(--gold-lo);background:var(--panel);padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.offer .btn{margin-top:auto;align-self:stretch;white-space:nowrap;min-height:46px;padding:11px 16px}
+.offer-k,.hero-rel-k{font-family:var(--cap);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0}
+.offer-t{font-family:var(--cap);font-weight:700;font-size:1.35rem;letter-spacing:.06em;color:var(--bone);margin:0}
+.offer-d{font-size:.95rem;line-height:1.45;color:var(--parch);margin:0 0 8px}
+.offer-p{list-style:none;padding:0;margin:0 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:2px 14px;color:var(--bone)}
+.offer-p b{color:var(--gold-hi);font-family:var(--cap)}
+.hero-rel{margin:20px 0 0;padding:14px 0 0;border-top:1px solid var(--gold-lo)}
+.hero-rel p{margin:0}.hero-rel .hero-rel-k2{margin-top:12px}
+.hero-rel-t{font-family:var(--cap);font-weight:700;font-size:1.05rem;letter-spacing:.04em;margin:2px 0}
+.hero-rel-t a{color:var(--bone);text-decoration:none;border-bottom:1px solid var(--gold-lo)}.hero-rel-t a:hover{color:var(--gold-hi)}
+.hero-rel-d{font-size:.9rem;color:var(--parch)}

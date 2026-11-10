@@ -1,7 +1,7 @@
 # Inhalte der Genre-Unterseiten (DE + EN). HTML ist erlaubt.
 
 RELEASES = {
-    "uhrwerk": dict(title="Uhrwerk aus Blut", url="/#single", img="/images/uhrwerk-aus-blut/cover-800.webp",
+    "uhrwerk": dict(title="Uhrwerk aus Blut", url="/uhrwerk-aus-blut/", url_en="/en/uhrwerk-aus-blut/", img="/images/uhrwerk-aus-blut/cover-800.webp",
                     de="Single · 30.10.2026 · Darkpsy / Hitech / Gothic", en="Single · 30 Oct 2026 · Darkpsy / Hitech / Gothic"),
     "runtime": dict(title="Runtime Terror", url="https://codechaos.bandcamp.com/album/runtime-terror-lp", img="/images/releases/code-chaos-runtime-terror.webp",
                     de="Album · 2026 · Hitech / Psycore / Darkpsy", en="Album · 2026 · Hitech / Psycore / Darkpsy"),
@@ -368,7 +368,7 @@ GENRES = [
 </ul>
 <blockquote class="quote">„Darkpsy hat mir als Erstes gezeigt, dass Musik nicht angenehm sein muss, um unvergesslich zu sein.“<cite>Code Chaos</cite></blockquote>
 <h2>Darkpsy, Forest und Gothic</h2>
-<p>Darkpsy überschneidet sich stark mit Forest Psytrance, der organischer und naturverbundener klingt. Mit der Single <a href="/#single">„Uhrwerk aus Blut“</a> (30.10.2026) verbindet Code Chaos Darkpsy- und Hitech-Energie mit Gothic-Atmosphäre und gesprochenen deutschen Szenen: ein Herz, das zu schnell schlägt, ein Uhrwerk, das blutet.</p>
+<p>Darkpsy überschneidet sich stark mit Forest Psytrance, der organischer und naturverbundener klingt. Mit der Single <a href="/uhrwerk-aus-blut/">„Uhrwerk aus Blut“</a> (30.10.2026) verbindet Code Chaos Darkpsy- und Hitech-Energie mit Gothic-Atmosphäre und gesprochenen deutschen Szenen: ein Herz, das zu schnell schlägt, ein Uhrwerk, das blutet.</p>
 <h2>Bekannte Darkpsy-DJs und Artists</h2>
 <p>Einige Namen, die den Darkpsy-Sound geprägt haben und bis heute auf Dark-Floors laufen (Auswahl, ohne Anspruch auf Vollständigkeit):</p>
 <ul>
@@ -432,7 +432,7 @@ GENRES = [
 </ul>
 <blockquote class="quote">"Darkpsy was the first thing that showed me music doesn't have to be pleasant to be unforgettable."<cite>Code Chaos</cite></blockquote>
 <h2>Darkpsy, forest and gothic</h2>
-<p>Darkpsy overlaps strongly with forest psytrance, which sounds more organic and nature-bound. With the single <a href="/en/#single">"Uhrwerk aus Blut"</a> (Clockwork of Blood, 30 Oct 2026), Code Chaos combines darkpsy and hitech energy with gothic atmosphere and spoken German scenes: a heart that beats too fast, a clockwork that bleeds.</p>
+<p>Darkpsy overlaps strongly with forest psytrance, which sounds more organic and nature-bound. With the single <a href="/en/uhrwerk-aus-blut/">"Uhrwerk aus Blut"</a> (Clockwork of Blood, 30 Oct 2026), Code Chaos combines darkpsy and hitech energy with gothic atmosphere and spoken German scenes: a heart that beats too fast, a clockwork that bleeds.</p>
 <h2>Darkpsy DJs and artists to know</h2>
 <p>A few names that shaped the darkpsy sound and are still played on dark floors today (a selection, not a complete list):</p>
 <ul>

@@ -1,7 +1,7 @@
 {
  "/": {
   "datum": "2026-11-10",
-  "hash": "b3bdeea1fd852853"
+  "hash": "d90b9c4dbcabf740"
  },
  "/crucible.html": {
   "datum": "2026-11-05",
@@ -13,7 +13,7 @@
  },
  "/en/": {
   "datum": "2026-11-10",
-  "hash": "490ace95a885e95c"
+  "hash": "a4203ef1e042ec72"
  },
  "/en/darkpsy/": {
   "datum": "2026-10-05",
@@ -30,6 +30,14 @@
  "/en/psycore/": {
   "datum": "2026-10-05",
   "hash": "d4b89f131e8a9255"
+ },
+ "/en/uhrwerk-aus-blut/": {
+  "datum": "2026-11-10",
+  "hash": "2f7d5670e8575d14"
+ },
+ "/en/wiedergaenger-vol-1/": {
+  "datum": "2026-11-10",
+  "hash": "97f7fe7e721004f8"
  },
  "/hitech-psytrance/": {
   "datum": "2026-10-27",
@@ -86,5 +94,13 @@
  "/sounds/": {
   "datum": "2026-11-09",
   "hash": "46ffd6a1f33b788c"
+ },
+ "/uhrwerk-aus-blut/": {
+  "datum": "2026-11-10",
+  "hash": "da3b1e87f4f52bd7"
+ },
+ "/wiedergaenger-vol-1/": {
+  "datum": "2026-11-10",
+  "hash": "4fe199f006699554"
  }
 }

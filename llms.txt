@@ -8,6 +8,8 @@ Last updated: 2026-11-10
 ## Next release: Wiedergänger Vol. I · Was nicht ruhen will (4 December 2026)
 
 - Remix release by Code Chaos, five tracks: Error 666, Antichrist, The Human Paradox, Abstrakte Musik, Rotten Soil. Release date: 4 December 2026 (2026-12-04).
+- The release link goes out first via the newsletter: https://codechaos-official.de/#newsletter
+- Release page (German): https://codechaos-official.de/wiedergaenger-vol-1/ · English: https://codechaos-official.de/en/wiedergaenger-vol-1/
 
 ## Single out now: Uhrwerk aus Blut (30 October 2026)
 
@@ -17,6 +19,7 @@ Last updated: 2026-11-10
 - **Tagline:** "Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet." (A heart that beats too fast. A clockwork that bleeds.)
 - **Story in five scenes:** Prolog, I Die Uhr, II Der Spiegel, III Das Blut, Rückkehr.
 - **Listen:** https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut-2
+- **Release page** (German): https://codechaos-official.de/uhrwerk-aus-blut/ · English: https://codechaos-official.de/en/uhrwerk-aus-blut/
 - Artwork created with AI. It opens a new era for the project: darker, narrative, gothic.
 
 ## Latest album: Runtime Terror (21 August 2026)
@@ -85,6 +88,8 @@ Last updated: 2026-11-10
 - Home (German): https://codechaos-official.de/
 - Home (English): https://codechaos-official.de/en/
 - All plugins (German): https://codechaos-official.de/plugins/
+- Next release, Wiedergänger Vol. I · Was nicht ruhen will (4 December 2026): https://codechaos-official.de/wiedergaenger-vol-1/ · https://codechaos-official.de/en/wiedergaenger-vol-1/
+- Single Uhrwerk aus Blut (30 October 2026): https://codechaos-official.de/uhrwerk-aus-blut/ · https://codechaos-official.de/en/uhrwerk-aus-blut/
 - Samples, MIDI and presets (German): https://codechaos-official.de/sounds/ . File products by Code Chaos Audio, all synthesised or built by Code Chaos, royalty-free for own releases, no login or licence server: Black Metal Drum Kit (€12, 47 drum samples + 30 MIDI grooves), Black Metal MIDI Grooves 2 (€9, 74 grooves), Black Metal Tone Kit (€9, 19 cab IRs + 16 REAPER chains), Hitech Arsenal Vol. 1 (€15, 120 samples), Hitech FM for Vital (€12, 32 presets), Hitech FM for Serum 2 (€12, 24 presets), Hitech FM Industrial (€9, 30 Vital + 26 Serum 2 presets), Psycore Production Template for Ableton Live 12 (€19, 77 tracks).
 - Guide (German): https://codechaos-official.de/ratgeber/gitarrensound-ableton/ . Five steps for heavy guitar tone in Ableton Live: input level into the amp sim, filtering before distortion, loading a cab impulse response (Hybrid Reverb in Live Suite or any IR loader), taming fizz in the cab, and mono-safe double tracking.
 - Crucible plugin: https://codechaos-official.de/crucible.html
