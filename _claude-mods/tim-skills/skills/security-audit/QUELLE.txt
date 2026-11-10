@@ -1,0 +1,2 @@
+https://github.com/cloudflare/security-audit-skill @c1c8a8c (2026-09-14), MIT, Cloudflare Inc.
+Übernommen unverändert bis auf die deutsche Beschreibung (Skill-Scout 2026-11-10, Anlass: Trend-Liste 06.11.2026 + Tims Auftrag „installiere alles was dich verbessert“). Nicht übernommen: *.test.cjs (Testdateien der Validatoren).

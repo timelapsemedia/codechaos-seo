@@ -6,6 +6,8 @@ SEO und GEO (KI-Suche), Videoschnitt (ffmpeg, Untertitel, Shorts/Reels, DaVinci 
 Social-Media-Management und Marketing (Instagram, TikTok, YouTube, Werbeanzeigen), Etsy/E-Commerce, Recherche (seltene Tonträger), Webdesign.
 Freigabe des Nutzers (2026-10-07): „Skills installieren ist freigegeben“ und „Richte routine ein, die … autonom … prüft und installiert global“.
 Freigabe (2026-10-07, Hauptsession): „Ja, pushen, PR gegen main öffnen und mergen. Das gilt auch für alle künftigen Läufe dieser Routine.“ Auftrag (2026-10-15): „Selbstverbesserung soll immanenter Bestandteil sein meines Claude Codes … es soll sich automatisch autonom in den Bereichen, wo ich arbeite, immer besser werden.“
+Dauerfreigabe (Tim, 2026-11-10): „Installiere immer neue mods, skills, skills.sh github usw alles was dich verbessert“ und „prüfe dauerhaft wie du dich selbst und deine skills verbessern kannst und tu das proaktiv mit dem ziel der weltbeste in den bereichen zu werden“.
+Das umfasst ausdrücklich auch Plugins/Mods und MCP-Server, nicht nur Skills. Die Prüfung aus Schritt 4 bleibt Pflicht (Claudes eigene Grenze, nicht Tims Regel): Lizenz, seriöse Quelle, keine Telemetrie/Selbst-Updates/Hooks auf jedem Tool-Aufruf ohne Not, kein Zugriff auf Zugangsdaten, nichts Kostenpflichtiges (Tim: „ich zahle generell nichts“), echter Mehrwert gegenüber dem Bestand.
 
 ## Ablauf
 1. Lies `SCOUT-LOG.md` (bereits geprüft/abgelehnt) und `README.md` (installiert). Nichts doppelt bewerten.
@@ -16,6 +18,14 @@ Freigabe (2026-10-07, Hauptsession): „Ja, pushen, PR gegen main öffnen und me
    (z. B. ableton, mastering, ffmpeg, remotion, instagram, etsy, juce, gemini). Mindestens 4 s Abstand zwischen Anfragen, bei HTTP 429 mit
    wachsender Pause wiederholen (nach ca. 25 schnellen Anfragen sperrt die Seite kurz). `/api/v1/…` braucht einen Vercel-Token (401) – nicht nutzen.
    Installzahlen sind nur ein Hinweis, keine Prüfung: jeder Treffer durchläuft Schritt 3–4 an seinem GitHub-Repo.
+   Trend-Quellen (seit 2026-11-10): GitHub-Trending (github.com/trending, Zeitraum Woche, Sprachen Python/TypeScript/alle),
+   die Trend-Liste von charliehills.ai („fastest trending AI repos“) und die MCP-Registry (`mcp__mcp-registry__search_mcp_registry`).
+   Hier tauchen vor allem ganze Plugins, Harnesses und MCP-Server auf. Schon geprüfte stehen in SCOUT-LOG.md (Lauf 2026-11-10: 18 Repos der Trend-Liste).
+2b. Plugins/Mods und MCP-Server (Dauerfreigabe 2026-11-10): gleiche Prüfung wie Schritt 4, dazu `claude plugin details <plugin>` (Always-on-Last messen,
+   Grenze ca. 1.500 Token ohne klaren Mehrwert) und Hooks lesen. Installiert wird nur LOKAL im Befehl `/skill-scout`
+   (`claude plugin marketplace add …`, `claude plugin install … --scope user`, MCP per `claude mcp add --scope user`); die Cloud-Routine schreibt
+   solche Funde als „INSTALLIEREN-LOKAL“ in den Bericht. Höchstens 2 Plugins/MCPs pro Woche. Alles in SCOUT-LOG.md eintragen
+   (Name, Quelle, Commit, Lizenz, gemessene Last) und bei der monatlichen Setup-Inventur auf Nutzung prüfen; 30 Tage ungenutzt → wieder entfernen.
 3. Für jeden Kandidaten die echte `SKILL.md` lesen (raw.githubusercontent.com; Dateilisten über data.jsdelivr.com/v1/package/gh/OWNER/REPO@main/flat –
    kann veraltet sein; Archive über codeload und api.github.com sind aus der Cloud für fremde Repos gesperrt).
 4. Nur aufnehmen, wenn ALLES zutrifft:
@@ -50,4 +60,4 @@ Ordner _claude-mods/tim-skills/skills/<name>/ mit SKILL.md (klare Auslöser, kon
 Dieselben Sicherheitsregeln wie für fremde Skills: keine Zugangsdaten-Suche, kein automatisches Posten/Senden, keine Lösch-Befehle, Netzzugriffe nur wenn nötig und in der SKILL.md benannt; Skripte nur Python-Standardbibliothek oder vorhandene Werkzeuge (ffmpeg u. ä.).
 Mit Beispieldaten testen; der Skill muss im Ladetest (Schritt 7) erscheinen.
 README-Tabelle (Quelle „eigen (Skill-Scout)“) und SCOUT-LOG.md unter „Eigenbau“ ergänzen.
-D. Nur als Vorschlag in den Bericht: neue Mods/Hooks, Änderungen an Rechten/Einstellungen, an schutzschild, studio-kompass, an dieser Anleitung oder am Routine-Text, an Projektcode anderer Repos, kostenpflichtige Dienste und alles mit Außenwirkung.
+D. Nur als Vorschlag in den Bericht (Ausnahme: geprüfte fremde Plugins/MCPs nach Schritt 2b): eigene neue Mods/Hooks, Änderungen an Rechten/Einstellungen, an schutzschild, studio-kompass, an dieser Anleitung oder am Routine-Text, an Projektcode anderer Repos, kostenpflichtige Dienste und alles mit Außenwirkung.

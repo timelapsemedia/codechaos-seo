@@ -329,3 +329,31 @@ Vorschläge an Tim (nicht umgesetzt, SCOUT.md D):
 - Wikipedia-Beobachtung: täglich statt stündlich.
 - Skill „Gründungs-/Behörden-Korrespondenz“ – erst bei zweitem Beleg bauen.
 - Autonomie-Regel als Hook/CLAUDE.md-Eintrag; Render-Warteschlange für lange Videojobs.
+
+## 2026-11-10 – Sonderlauf Trend-Liste (lokal, Setup-Inventur-Session)
+
+Anlass: Tim schickte die Grafik „Fastest Trending GitHub Repos“ (Charlie Hills, 06.11.2026, 23 KI-Repos) und zwei Social-Posts (Content-Pipeline mit Apify/vidIQ/Whisper/ffmpeg/Remotion; „Claude als Ads-Maschine“ mit Meta Ad Library). Auftrag: „Implementiere was sinnvoll ist“ und Dauerfreigabe „Installiere immer neue mods, skills, skills.sh github usw alles was dich verbessert“ (steht jetzt in SCOUT.md). Sternzahlen per GitHub-API geprüft, alle echt.
+
+Aufgenommen:
+| Skill | Quelle | Lizenz | Prüfung |
+|---|---|---|---|
+| security-audit | cloudflare/security-audit-skill @c1c8a8c (14.09.2026), 68 k Sterne | MIT | 15 Markdown-Dateien + report-schema.json + 2 Validatoren (.cjs, nur `fs`/`path`/`util`, kein Netz, kein `child_process`); keine unsichtbaren Zeichen; 260 KB. Mehrwert: gründlicher als `/security-review` (Gegenprüfung je Fund), passend für Tims Python-Routinen mit Tokens und die Webseiten. Beschreibung deutsch, Testdateien weggelassen. Viele Subagenten → nur auf Zuruf voll laufen lassen. |
+
+Abgelehnt:
+| Repo | Grund |
+|---|---|
+| morluto/rea | Reverse Engineering von Binaries, kein Arbeitsfeld |
+| obra/superpowers | 14 Skills überwiegend doppelt (systematic-debugging, verification-before-completion, writing-plans ≈ planning-and-task-breakdown); SessionStart-Hook lädt bei jedem Start Text nach |
+| affaan-m/ECC (everything-claude-code) | 71 Agents, 314 Skills, Hook-Katalog – Gegenteil von „Setup schlank“; nützlicher Teil ist mit ecc-security-checklist schon da |
+| deepseek-ai/deepseek-harness, anomalyco/opencode, stablyai/orca, pingdotgg/t3code | eigene Agenten/Oberflächen, keine Skills |
+| multica-ai/andrej-karpathy-skills | keine Lizenz; die vier Regeln (Annahmen nennen, einfach, chirurgisch, zielgetrieben) stehen inhaltlich schon in CLAUDE.md/incremental-implementation |
+| DietrichGebert/ponytail | doppelt mit Karpathy-Regeln/simplify |
+| Graphify-Labs/graphify | 50-KB-Skill, Dokument-Durchlauf über LLM, Nutzen nur für große Code-Repos |
+| thedotmack/claude-mem | Hooks auf jedem Tool-Aufruf, Telemetrie standardmäßig an, Bun-Worker + Chroma; eigenes Memory-System vorhanden |
+| Panniantong/Agent-Reach | liest Social-Plattformen über die eingeloggte Chrome-Sitzung (Kopie der Login-Daten), Autor rät selbst zum Zweitkonto → Sperrgefahr; Apify/Firecrawl vorhanden |
+| debpalash/VoiceStudio | App (AGPL), große Modell-Downloads; ElevenLabs/Kokoro vorhanden – bei Bedarf separat prüfen |
+| tt-a1i/archify, cathrynlavery/diagram-design | Diagramme: Wunsch statt Lücke, artifact-diagramming/Figma-Diagramme vorhanden; 19–31 KB Skill |
+| bilawalsidhu/gods-eye-view, HKUDS/DeepTutor | Apps ohne Bezug |
+| Matt Pocock Skills, Taste Skill, Impeccable | schon am 07.11. abgelehnt; HyperFrames, Hallmark installiert |
+
+Aus dem Content-Pipeline-Post selbst gebaut (lokal, kein Skill): Gewinner-Radar `C:/social-insights/si/gewinner.py` – findet Ausreißer-Shorts (Aufrufe ≥ 3× Kanal-Median) in den Nischen von Code Chaos, Polished und ZeitSprung, misst sie mit derselben Machart-Messung wie die eigenen Posts und transkribiert den Hook (yt-dlp + Whisper, 0 €). „Ads-Maschine“: nicht umgesetzt – Tim schaltet keine bezahlten Anzeigen; ad-creative ist vorhanden.
