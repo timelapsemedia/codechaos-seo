@@ -30,7 +30,7 @@ UI = {
                skip="Zum Inhalt springen", menu="Menü öffnen", faq="Häufige Fragen", rel_title="Releases von Code Chaos",
                more="Weiterlesen", legal="Rechtliches", imprint="Impressum", privacy="Datenschutz", nav="Navigation",
                follow="Code Chaos folgen", other="Weitere Genre-Guides", foot="Hitech, Psycore & Darkpsy Producer aus Hamburg. Heute ein reines Studioprojekt.",
-               home_url="/", mastering_url="/mastering/", releases_url="/#releases"),
+               home_url="/", mastering_url="/mastering/", releases_url="/releases/"),
     "en": dict(home="Home", genres="Genres", releases="Releases", mastering="Mastering", lang_label="DE",
                skip="Skip to content", menu="Open menu", faq="FAQ", rel_title="Releases by Code Chaos",
                more="Read more", legal="Legal", imprint="Imprint (German)", privacy="Privacy policy (German)", nav="Navigation",
@@ -110,7 +110,7 @@ def nav(lang, alt_url, current):
     for g in GENRES:
         items.append((g[lang]["nav"], f"{pre}/{g['slug']}/", g["slug"]))
     items += [(u["releases"], u["releases_url"], "rel"), (u["mastering"], u["mastering_url"], "mast"),
-              ("Plugins", "/plugins/", "plug") if lang == "de" else ("Crucible", "/en/plugins/crucible/", "cru")]
+              ("Plugins", "/plugins/" if lang == "de" else "/en/plugins/", "plug")]
     cur = ' aria-current="page"'
     lis = "".join(
         f'<li><a href="{h}"{cur if k == current else ""}>{esc(t)}</a></li>' for t, h, k in items)
@@ -122,7 +122,7 @@ def nav(lang, alt_url, current):
 <a class="skip" href="#main">{u['skip']}</a>
 <header>
 <nav class="s-nav" aria-label="{u['nav']}">
-  <a class="logo" href="{u['home_url']}"><img src="/images/brand/codechaos-logo-bone-240.webp" srcset="/images/brand/codechaos-logo-bone-240.webp 1x, /images/brand/codechaos-logo-bone-480.webp 2x" width="68" height="40" alt="Code Chaos Logo"></a>
+  <a class="logo" href="{u['home_url']}"><img src="/images/brand/codechaos-logo-bone-136.webp" srcset="/images/brand/codechaos-logo-bone-68.webp 1x, /images/brand/codechaos-logo-bone-136.webp 2x, /images/brand/codechaos-logo-bone-204.webp 3x" width="68" height="40" alt="Code Chaos Logo"></a>
   <button class="s-toggle" aria-label="{u['menu']}" aria-expanded="false" aria-controls="s-menu"><span></span><span></span><span></span></button>
   <ul id="s-menu">{lis}</ul>
   {switch}
@@ -142,7 +142,7 @@ def footer(lang):
       <div><img src="/images/brand/codechaos-logo-bone-240.webp" width="120" height="70" loading="lazy" alt="Code Chaos Logo" style="height:70px;width:auto;margin-bottom:10px"><p>{esc(u['foot'])}</p></div>
       <div><h2>{u['genres']}</h2><ul>{genre_links}<li><a href="{'/plugins/crucible/' if lang == 'de' else '/en/plugins/crucible/'}">Crucible Plugin</a></li>{'<li><a href="/plugins/">Alle Plugins</a></li>' if lang == "de" else ""}</ul></div>
       <div><h2>{u['follow']}</h2><ul>{social}</ul></div>
-      <div><h2>{u['legal']}</h2><ul><li><a href="/#impressum">{u['imprint']}</a></li><li><a href="/#datenschutz">{u['privacy']}</a></li><li><a href="#cookies" class="cookie-settings-link">{'Cookie-Einstellungen' if lang == 'de' else 'Cookie settings'}</a></li><li><a href="{'/en/' if lang == 'de' else '/'}" hreflang="{'en' if lang == 'de' else 'de'}">{'English version' if lang == 'de' else 'Deutsche Version'}</a></li></ul></div>
+      <div><h2>{u['legal']}</h2><ul><li><a href="/impressum/">{u['imprint']}</a></li><li><a href="/datenschutz/">{u['privacy']}</a></li><li><a href="#cookies" class="cookie-settings-link">{'Cookie-Einstellungen' if lang == 'de' else 'Cookie settings'}</a></li><li><a href="{'/en/' if lang == 'de' else '/'}" hreflang="{'en' if lang == 'de' else 'de'}">{'English version' if lang == 'de' else 'Deutsche Version'}</a></li></ul></div>
     </div>
     <p class="copy">© 2016–2026 CODE CHAOS · ABSTRACT SOUND DESIGN · HAMBURG</p>
   </div>
@@ -732,7 +732,7 @@ def build_plugin(p, lang="de"):
 <a class="sticky-cta" href="{utm(slug, slug)}">{esc(sticky)}</a>
 """
     html = head(lang, url, alt_url, t["title"], t["desc"], og, f"{name} {L['by']}: {t['category']}", ld, og_type="product") \
-        + nav(lang, alt_url, "plug" if lang == "de" else "cru") + body + footer(lang)
+        + nav(lang, alt_url, "plug") + body + footer(lang)
     html, _ = geo.ausbauen(html, f"{pre}/plugins/{slug}/", lang, art="plugin")
     path = os.path.join(ROOT, pre.strip("/"), "plugins", slug, "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -854,10 +854,108 @@ def build_plugins_index():
 </section>
 </main>
 """
-    html = head("de", url, None, PLUGINS_INDEX["title"], PLUGINS_INDEX["desc"], BASE + "/images/plugins/shardstep/og.jpg",
-                "Audio-Plugins von Code Chaos Audio", ld, og_type="website") + nav("de", None, "plug") + body + footer("de")
+    html = head("de", url, BASE + "/en/plugins/", PLUGINS_INDEX["title"], PLUGINS_INDEX["desc"], BASE + "/images/plugins/shardstep/og.jpg",
+                "Audio-Plugins von Code Chaos Audio", ld, og_type="website") + nav("de", BASE + "/en/plugins/", "plug") + body + footer("de")
     html, _ = geo.ausbauen(html, "/plugins/", "de", art="plugin")
     path = os.path.join(ROOT, "plugins", "index.html")
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    open(path, "w", encoding="utf-8", newline="\n").write(html)
+    return path
+
+
+EN_PLUG = {   # Übersetzung der DE-Teaser/Kategorien aus content_plugins.py (Grok #67, 11.11.2026)
+    "crucible": ("3-band saturation", "3-band saturation: hard clip, wavefolder, tube, diode or tape per band, up to 8x oversampling."),
+    "shardstep": ("Stutter and glitch effect", "Stutter, repeats, tape stop and reverse synced to your DAW, built for 200 to 300 BPM."),
+    "psy-kick-bass": ("Kick and rolling bass instrument", "Kick and rolling bass in one plugin: the kick is tuned to the bass and ends before the first bass note."),
+    "chaos-fm": ("FM synthesizer", "3-operator FM synth with a GENERATE button for leads, basses, acid, stabs, plucks and FX."),
+    "kick-bass-scope": ("Oscilloscope / analyzer for kick and bass", "Free: kick and bass overlaid in time with your DAW, with phase warning and clip line."),
+    "gravesaw": ("Amp + cab for guitar and bass", "Black metal amp with built-in cab for guitar and bass DI, from raw and sawing to thick."),
+    "rimehall": ("Reverb, shimmer and tape (atmosphere bus)", "Cold reverb up to 30 s, octave shimmer and tape lo-fi with ducking, so the riff stays in front."),
+    "frostfret": ("Physically modelled guitar and bass", "Electric guitar, steel and nylon acoustic and electric bass via MIDI, physically modelled, no samples."),
+    "hoarfell": ("Modelled drums, bass and atmosphere", "Modelled drum kit for blast beats, electric bass and choir/organ/strings, no samples."),
+}
+EN_GROUPS = {
+    "psy": ("For hitech, psycore and darkpsy", "Built for fast, dense psytrance productions: saturation, glitch, FM sounds and control over kick and bass."),
+    "metal": ("For black metal: the Code Chaos Black Metal Suite", "Amp, reverb and atmosphere for a cold, raw black metal sound from the home studio."),
+}
+
+
+def build_plugins_index_en():
+    url = BASE + "/en/plugins/"
+    order = {g: [p for p in LIVE if p["group"] == g] for g, _, _ in GROUPS}
+    allp = [p for g, _, _ in GROUPS for p in order[g]]
+    title = "Audio Plugins for Psytrance & Black Metal (VST3) | Code Chaos"
+    desc = ("VST3 plugins by Code Chaos Audio for hitech, psycore, darkpsy and black metal: saturation, glitch, FM synth, "
+            "kick and bass, amp and reverb. Free demo for every paid plugin.")
+
+    def en_url(p):
+        return f"/en/plugins/{p['slug']}/" if p.get("en") else plugin_url(p)
+
+    def euro_en(price):
+        return "Free" if price == 0 else f"€{price}"
+
+    def card(p):
+        cat, teaser = EN_PLUG[p["slug"]]
+        alt = p["en"]["gui_alt"] if p.get("en") else f"{p['name']} plugin interface"
+        img = picture(p["slug"], "gui", p["gui_w"], p["gui_h"], alt, sizes="(max-width: 700px) 100vw, 340px")
+        de_note = "" if p.get("en") else ' <span class="note">(page in German)</span>'
+        hl = "" if p.get("en") else ' hreflang="de"'
+        links = (f'<a href="{utm(p["slug"], "plugins-en")}">Free download</a>' if p["price"] == 0 else
+                 f'<a href="{utm(p["slug"] + "-demo", "plugins-en")}">Free demo</a><a href="{utm(p["slug"], "plugins-en")}">Buy</a>')
+        return (f'<article class="pcard"><a class="pcard-img" href="{en_url(p)}"{hl} tabindex="-1" aria-hidden="true">{img}</a>'
+                f'<div class="pcard-body"><h3><a href="{en_url(p)}"{hl}>{esc(p["name"])}</a></h3><p>{esc(teaser)}</p>'
+                f'<p class="pcard-meta"><span class="price-tag">{euro_en(p["price"])}</span> {esc(cat)}</p>'
+                f'<p class="pcard-links"><a href="{en_url(p)}"{hl}>Details &amp; audio{de_note}</a>{links}</p></div></article>')
+
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "CollectionPage", "@id": url + "#webpage", "url": url, "name": title, "description": desc,
+         "inLanguage": "en", "isPartOf": {"@id": BASE + "/#website"}, "datePublished": "2026-11-11", "dateModified": DATUM, "author": autor_ld(),
+         "mainEntity": {"@type": "ItemList", "itemListElement": [
+             {"@type": "ListItem", "position": i + 1, "name": p["name"], "url": BASE + en_url(p)} for i, p in enumerate(allp)]}},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/en/"},
+            {"@type": "ListItem", "position": 2, "name": "Plugins", "item": url}]},
+    ]}
+    groups = ""
+    for i, (g, _, _) in enumerate(GROUPS):
+        h, intro = EN_GROUPS[g]
+        cards = "".join(card(p) for p in order[g])
+        groups += f"""<section{' class="alt"' if i % 2 == 0 else ''} aria-labelledby="g-{g}">
+  <div class="wrap">
+    <h2 id="g-{g}">{esc(h)}</h2>
+    <p class="prose">{esc(intro)}</p>
+    <div class="pcards">{cards}</div>
+  </div>
+</section>
+"""
+
+    def mac(p):
+        return "no" if p["slug"] in ("crucible", "chaos-fm") else "Apple Silicon (unsigned)"
+    rows = "".join(f'<tr><th scope="row"><a href="{en_url(p)}">{esc(p["name"])}</a></th><td>{esc(EN_PLUG[p["slug"]][0])}</td>'
+                   f'<td>{euro_en(p["price"])}</td><td>yes</td><td>{mac(p)}</td></tr>' for p in allp)
+    body = f"""<main id="main">
+<div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li aria-current="page">Plugins</li></ol></nav></div>
+<section class="s-hero">
+  <div class="wrap narrow">
+    <span class="eyebrow">Code Chaos Audio</span>
+    <h1>Audio plugins for psytrance and black metal</h1>
+    <div class="rule" aria-hidden="true"><i></i></div>
+    <p class="answer">VST3 + standalone plugins by Code Chaos Audio for hitech, psycore, darkpsy and black metal, sold on Gumroad. Every paid plugin comes with a free demo, Kick/Bass Scope is free.</p>
+  </div>
+</section>
+{groups}<section aria-labelledby="cmp-t">
+  <div class="wrap narrow">
+    <h2 id="cmp-t">Formats and systems compared</h2>
+    <div class="table-scroll"><table class="cmp"><thead><tr><th>Plugin</th><th>Type</th><th>Price</th><th>Windows 10/11</th><th>macOS</th></tr></thead><tbody>{rows}</tbody></table></div>
+    <p class="note" style="margin-top:14px">All plugins as VST3 + standalone. No AU format, so they do not run in Logic Pro. The macOS builds are Apple Silicon (arm64) only, unsigned and not notarized: macOS blocks them on first launch, allow them under System Settings → Privacy &amp; Security.</p>
+  </div>
+</section>
+</main>
+"""
+    html = head("en", url, BASE + "/plugins/", title, desc, BASE + "/images/plugins/shardstep/og.jpg",
+                "Audio plugins by Code Chaos Audio", ld, og_type="website") + nav("en", BASE + "/plugins/", "plug") + body + footer("en")
+    html, _ = geo.ausbauen(html, "/en/plugins/", "en", art="plugin")
+    path = os.path.join(ROOT, "en", "plugins", "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     open(path, "w", encoding="utf-8", newline="\n").write(html)
     return path
@@ -893,6 +991,7 @@ if __name__ == "__main__":
             print(build_release(slug, lang))
     print(build_404())
     print(build_plugins_index())
+    print(build_plugins_index_en())
     for p in LIVE:
         print(build_plugin(p))
         if p.get("en"):
@@ -904,3 +1003,6 @@ if __name__ == "__main__":
     geo.REG.speichern()
     import runpy
     runpy.run_path(os.path.join(os.path.dirname(os.path.abspath(__file__)), "schema_home.py"), run_name="__main__")
+    # Startseite: CSS inline aus den Dateien (Grok #67)
+    import inline_css
+    inline_css.lauf()

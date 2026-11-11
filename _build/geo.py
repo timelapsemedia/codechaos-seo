@@ -191,8 +191,11 @@ def h1_container_ende(h, tags="div|section|header|article", nach=False):
 def kopf_html(liste, iso, lang, offen):
     t = TEXT[lang]
     lis = "".join(f'<li><a href="#{i}">{H.escape(x, quote=False)}</a></li>' for i, x in liste)
-    return (f'<!--geo:kopf--><p class="geo-meta">{t["von"]} <a href="#autor">Tim Borchert</a> (Code Chaos) · '
-            f'{t["upd"]}: <time datetime="{iso}">{anzeige(iso, lang)}</time></p>'
+    meta = (f'<!--geo:kopf--><p class="geo-meta">{t["von"]} <a href="#autor">Tim Borchert</a> (Code Chaos) · '
+            f'{t["upd"]}: <time datetime="{iso}">{anzeige(iso, lang)}</time></p>')
+    if len(liste) < 2:   # kurze Seiten (z. B. /releases/, /bio/): nur Kopfzeile, kein Inhaltsverzeichnis
+        return meta + '<!--/geo:kopf-->'
+    return (meta +
             f'<div class="geo-toc" role="navigation" aria-label="{t["toc"]}"><details{" open" if offen else ""}><summary>{t["toc"]}</summary>'
             f'<ol>{lis}</ol></details></div><!--/geo:kopf-->')   # div statt <nav>: Startseite/Crucible stylen nav global
 
@@ -208,14 +211,14 @@ def autor_html(lang, art):
             f'<p><a href="{t["more_url"]}">{t["more"]} →</a></p></div></aside></div><!--/geo:autor-->')
 
 
-def ausbauen(h, key, lang, art="ratgeber", toc_offen=True, nach_hero=False):
+def ausbauen(h, key, lang, art="ratgeber", toc_offen=True, nach_hero=False, toc_pflicht=True):
     """Fügt Kopfzeile + Inhaltsverzeichnis, Autorenbox und CSS ein und ersetzt den Datums-Platzhalter. Idempotent.
     nach_hero=True (Startseiten mit Vollbild-Hero): Kopfzeile + eingeklapptes Inhaltsverzeichnis als schmales Band
     direkt hinter der Hero-Section der H1, damit das Hero-Layout unberührt bleibt."""
     h = re.sub(r"<!--geo:(\w+)-->.*?<!--/geo:\1-->\n?", "", h, flags=re.S)   # alte Bausteine entfernen (handgeschriebene Seiten)
     iso = REG.datum(key, h)
     h, liste = h2_ids(h)
-    if len(liste) < 2:
+    if len(liste) < 2 and toc_pflicht:
         raise SystemExit(f"GEO: {key} hat nur {len(liste)} H2 – Inhaltsverzeichnis lohnt nicht, bitte prüfen")
     def zeilenanfang(k):   # vor die Einrückung des schließenden Tags einfügen, damit das Entfernen die Datei exakt wiederherstellt
         z = h.rfind("\n", 0, k) + 1
@@ -235,7 +238,7 @@ def ausbauen(h, key, lang, art="ratgeber", toc_offen=True, nach_hero=False):
         j = h.rfind("<footer")
     j = zeilenanfang(j)
     h = h[:j] + autor_html(lang, art) + "\n" + h[j:]
-    if 'href="/css/geo.css"' not in h:
+    if 'href="/css/geo.css"' not in h and 'data-src="/css/geo.css"' not in h:
         h = h.replace("</head>", '<link rel="stylesheet" href="/css/geo.css">\n</head>', 1)
     return h.replace(DATUM, iso), iso
 
@@ -257,10 +260,15 @@ def handseiten():
     """index.html (DE-Startseite). Das JSON-LD der Startseite schreibt danach schema_home.py."""
     out = []
     # crucible.html ist seit 11.11.2026 nur noch eine Weiterleitung auf /plugins/crucible/ (generiert, Grok #66)
-    for datei, key, lang, art, offen in (("index.html", "/", "de", "ratgeber", False),):
+    # seit 11.11.2026 (Grok #67) aus der Startseite verlagerte Blöcke als eigene Handseiten
+    for datei, key, lang, art, offen in (("index.html", "/", "de", "ratgeber", False),
+                                         ("releases/index.html", "/releases/", "de", "ratgeber", False),
+                                         ("genre-lexikon/index.html", "/genre-lexikon/", "de", "ratgeber", False),
+                                         ("faq/index.html", "/faq/", "de", "ratgeber", False),
+                                         ("bio/index.html", "/bio/", "de", "ratgeber", False)):
         p = os.path.join(ROOT, datei)
         h = open(p, encoding="utf-8").read()
-        h, iso = ausbauen(h, key, lang, art, toc_offen=offen, nach_hero=(datei == "index.html"))
+        h, iso = ausbauen(h, key, lang, art, toc_offen=offen, nach_hero=(datei == "index.html"), toc_pflicht=(datei == "index.html"))
         if datei == "crucible.html":
             h = _crucible_ld(h, iso)
         open(p, "w", encoding="utf-8", newline="\n").write(h)

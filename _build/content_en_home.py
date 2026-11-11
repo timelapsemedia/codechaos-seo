@@ -45,7 +45,7 @@ EN_HOME = {
         <p class="hero-rel-d"><a href=\"""" + _PRESAVE + """\" target="_blank" rel="noopener noreferrer">Listen now ↗</a> · Artwork created with AI.</p>
       </div>
     </div>
-    <a href="/en/uhrwerk-aus-blut/"><img class="framed" src="/images/uhrwerk-aus-blut/cover-800.webp" width="800" height="800" fetchpriority="high" alt="Cover of the single Uhrwerk aus Blut by Code Chaos: a golden mechanical heart inside a clock face, dripping blood"></a>
+    <a href="/en/uhrwerk-aus-blut/"><img class="framed" src="/images/uhrwerk-aus-blut/cover-800.webp" srcset="/images/uhrwerk-aus-blut/cover-480.webp 480w, /images/uhrwerk-aus-blut/cover-800.webp 800w" sizes="(min-width:900px) 440px, calc(100vw - 40px)" width="800" height="800" fetchpriority="high" alt="Cover of the single Uhrwerk aus Blut by Code Chaos: a golden mechanical heart inside a clock face, dripping blood"></a>
   </div>
 </section>
 

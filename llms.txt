@@ -8,6 +8,7 @@ Last updated: 2026-11-11
 ## Plugins (Code Chaos Audio)
 
 - [All plugins (German)](https://codechaos-official.de/plugins/): overview of all plugins with price, formats and systems, free demos
+- [All plugins (English)](https://codechaos-official.de/en/plugins/): the same overview in English
 - [Crucible](https://codechaos-official.de/plugins/crucible/): 3-band harmonic saturation, 5 saturation types per band (Hard Clip, Wavefolder, Tube, Diode, Tape), per-band Drive, Mix, Gain, Mute, Solo, oversampling up to 8x; version 1.1.0; €19, free demo; VST3 + standalone, Windows 10+ only. English page: [Crucible (English)](https://codechaos-official.de/en/plugins/crucible/). License key from the Gumroad receipt activates up to 3 computers, works offline for up to 60 days.
 - [Kick+Bass Engine](https://codechaos-official.de/plugins/psy-kick-bass/): kick and rolling bass in one instrument for psytrance, hitech and psycore at 140–300+ BPM; kick tuned to the bass note and ended before the first bass note (0 ms kick energy after the bass start in our measurements at 145–250 BPM), 8 rolling patterns, 4 bass modes, kick designer, built-in scope, mono below 150 Hz, 14 factory presets; €24, free demo; VST3 + standalone, Windows 10/11 and macOS (Apple Silicon)
 - [Shardstep](https://codechaos-official.de/plugins/shardstep/): tempo-synced stutter, glitch and tape stop effect for hitech and psycore at 200–300 BPM; 16-step pattern (repeats 1/8 to 1/64 incl. triplets, reverse, tape stop, gate, crush), MIDI trigger, slice fades 0.5–8 ms, zero latency, 15 factory patterns; €15, free demo; VST3 + standalone, Windows 10/11 and macOS (Apple Silicon)
@@ -38,6 +39,7 @@ Genre-specific mastering for Psytrance, Hitech Psytrance, Psycore and Darkpsy by
 - [Wiedergänger Vol. I · Was nicht ruhen will (German)](https://codechaos-official.de/wiedergaenger-vol-1/): next release, remix release by Code Chaos with five tracks (Error 666, Antichrist, The Human Paradox, Abstrakte Musik, Rotten Soil), out 4 December 2026 (2026-12-04); the release link goes out first via the [newsletter](https://codechaos-official.de/#newsletter). English: [Wiedergänger Vol. I (English)](https://codechaos-official.de/en/wiedergaenger-vol-1/)
 - [Uhrwerk aus Blut (German)](https://codechaos-official.de/uhrwerk-aus-blut/): single out now, 30 October 2026 (2026-10-30), Abstract Sound Design; Darkpsy, Hitech Psytrance, Gothic; German title means "Clockwork of Blood"; tagline "Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet." (A heart that beats too fast. A clockwork that bleeds.); story in five scenes: Prolog, I Die Uhr, II Der Spiegel, III Das Blut, Rückkehr; artwork created with AI. English: [Uhrwerk aus Blut (English)](https://codechaos-official.de/en/uhrwerk-aus-blut/) · [Listen](https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut-2)
 - [Runtime Terror (Bandcamp)](https://codechaos.bandcamp.com/album/runtime-terror-lp): latest album, 21 August 2026, 11th studio album, Abstract Sound Design; Hitech Psytrance, Psycore, Darkpsy; tracklist: Cold Boot (145 BPM), Bitrot (146), Runtime Terror (233, E Phrygian), Overdrive (220), Fork Bomb (228), Hyperthread (245), Ego Death (210), Core Dump (199), Night (180)
+- [Release archive (German)](https://codechaos-official.de/releases/): full discography with labels and links
 - [All music (Bandcamp)](https://codechaos.bandcamp.com): 24+ releases since 2016
 
 ## Guides
@@ -46,7 +48,8 @@ Genre-specific mastering for Psytrance, Hitech Psytrance, Psycore and Darkpsy by
 - [Was ist Hitech Psytrance? (German)](https://codechaos-official.de/hitech-psytrance/) · [What is hitech psytrance? (English)](https://codechaos-official.de/en/hitech-psytrance/): genre guide, ≈170–230 BPM, typically 180–200
 - [Was ist Darkpsy? (German)](https://codechaos-official.de/darkpsy/) · [What is darkpsy? (English)](https://codechaos-official.de/en/darkpsy/): genre guide, ≈150–200 BPM, typically 155–175
 - [Gitarrensound in Ableton (German)](https://codechaos-official.de/ratgeber/gitarrensound-ableton/): five steps for heavy guitar tone in Ableton Live: input level into the amp sim, filtering before distortion, loading a cab impulse response (Hybrid Reverb in Live Suite or any IR loader), taming fizz in the cab, and mono-safe double tracking
-- [BPM guide](https://codechaos-official.de/#bpm-guide) · [FAQ](https://codechaos-official.de/#faq): tempo ranges and common questions on the German home page
+- [Genre lexicon (German)](https://codechaos-official.de/genre-lexikon/): psycore vs. hitech vs. darkpsy, BPM guide, glossary
+- [FAQ (German)](https://codechaos-official.de/faq/): common questions on psycore, hitech, darkpsy and Code Chaos
 
 ## Samples, MIDI and presets
 

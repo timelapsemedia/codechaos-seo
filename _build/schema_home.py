@@ -1,4 +1,4 @@
-# Erzeugt den JSON-LD-@graph der Startseite (index.html) neu, inkl. FAQPage aus den sichtbaren FAQ.
+# Erzeugt den JSON-LD-@graph der Startseite (index.html) neu; die FAQPage (aus den sichtbaren FAQ) seit 11.11.2026 auf /faq/.
 # Aufruf aus dem Repo-Root: python3 _build/schema_home.py
 import re, json, html, os
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -6,9 +6,10 @@ p=os.path.join(ROOT,'index.html'); s=open(p,encoding='utf-8').read()
 # dateModified = echtes letztes Inhaltsdatum der Startseite (geo.py / seiten_datum.json, gesetzt von build_pages.py)
 DATUM=json.load(open(os.path.join(ROOT,'_build','seiten_datum.json'),encoding='utf-8'))['/']['datum']
 B='https://codechaos-official.de'
-# --- FAQ from visible HTML ---
+# --- FAQ from visible HTML: seit 11.11.2026 (Grok #67) auf /faq/, FAQPage wird dort geschrieben ---
 faq=[]
-ohne_geo=re.sub(r'<!--geo:(\w+)-->.*?<!--/geo:\1-->','',s,flags=re.S)  # Inhaltsverzeichnis (<details>) nicht als FAQ lesen
+pf=os.path.join(ROOT,'faq','index.html'); sf=open(pf,encoding='utf-8').read()
+ohne_geo=re.sub(r'<!--geo:(\w+)-->.*?<!--/geo:\1-->','',sf,flags=re.S)  # Inhaltsverzeichnis (<details>) nicht als FAQ lesen
 for q,a in re.findall(r'<details[^>]*>\s*<summary[^>]*>\s*(.*?)\s*<span[^>]*>\+</span>\s*</summary>\s*<div[^>]*>\s*<p>(.*?)</p>',ohne_geo,re.S):
     clean=lambda t: re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>','',t))).strip()
     assert '<summary' not in q and len(q)<200,q[:120]
@@ -18,12 +19,12 @@ same=["https://codechaos.bandcamp.com","https://soundcloud.com/codechaos","https
 asd={"@type":"Organization","@id":B+"/#label-asd","name":"Abstract Sound Design","url":"https://www.abstract-sound-design.de/","sameAs":["https://abstract-sound-design.bandcamp.com/","https://www.discogs.com/label/4052777-Abstract-Sound-Design","https://www.wikidata.org/wiki/Q141646831"],"foundingDate":"2021","founder":{"@id":B+"/#tim-borchert"}}
 rt_tracks=["Cold Boot","Bitrot","Runtime Terror","Overdrive","Fork Bomb","Hyperthread","Ego Death","Core Dump","Night"]
 graph=[
- {"@type":"WebSite","@id":B+"/#website","name":"Code Chaos","url":B+"/","inLanguage":["de","en"],"publisher":{"@id":B+"/#artist"},"hasPart":[{"@type":"WebPage","url":B+u,"name":n} for u,n in [("/psycore/","Was ist Psycore?"),("/hitech-psytrance/","Was ist Hitech Psytrance?"),("/darkpsy/","Was ist Darkpsy?"),("/plugins/crucible/","Crucible: 3-Band-Sättigung (VST3)"),("/plugins/","Audio-Plugins von Code Chaos Audio"),("/mastering/","Psytrance Mastering"),("/en/mastering/","Psytrance Mastering (English)"),("/en/","Code Chaos (English)"),("/uhrwerk-aus-blut/","Uhrwerk aus Blut · Single"),("/wiedergaenger-vol-1/","Wiedergänger Vol. I · Was nicht ruhen will")]]},
+ {"@type":"WebSite","@id":B+"/#website","name":"Code Chaos","url":B+"/","inLanguage":["de","en"],"publisher":{"@id":B+"/#artist"},"hasPart":[{"@type":"WebPage","url":B+u,"name":n} for u,n in [("/psycore/","Was ist Psycore?"),("/hitech-psytrance/","Was ist Hitech Psytrance?"),("/darkpsy/","Was ist Darkpsy?"),("/plugins/crucible/","Crucible: 3-Band-Sättigung (VST3)"),("/plugins/","Audio-Plugins von Code Chaos Audio"),("/mastering/","Psytrance Mastering"),("/en/mastering/","Psytrance Mastering (English)"),("/en/","Code Chaos (English)"),("/uhrwerk-aus-blut/","Uhrwerk aus Blut · Single"),("/wiedergaenger-vol-1/","Wiedergänger Vol. I · Was nicht ruhen will"),("/releases/","Release-Archiv"),("/genre-lexikon/","Genre-Lexikon: Psycore, Hitech, Darkpsy"),("/faq/","Häufige Fragen"),("/bio/","Biografie")]]},
  {"@type":"WebPage","@id":B+"/#webpage","url":B+"/","name":"Code Chaos · Plugins · Psycore & Hitech Mastering ab 79 €",
   "description":"Offizielle Website von Code Chaos aus Hamburg: Plugins von Code Chaos Audio auf Gumroad und Mastering für Psytrance, Hitech und Psycore (Stereo 79 €, Stem 129 €, EP 349 €, Album 629 €). Neu: Wiedergänger Vol. I am 04.12.2026 und die Single „Uhrwerk aus Blut“ (30.10.2026), dazu Diskografie und Genre Guide.",
   "isPartOf":{"@id":B+"/#website"},"about":{"@id":B+"/#artist"},"mainEntity":{"@id":B+"/#artist"},
   "primaryImageOfPage":{"@type":"ImageObject","url":B+"/images/uhrwerk-aus-blut/og-uhrwerk-aus-blut.jpg","width":1200,"height":630},
-  "speakable":{"@type":"SpeakableSpecification","cssSelector":["#single-info","#mastering","#was-ist-psycore","#was-ist-hitech","#was-ist-darkpsy","#bio-section"]},"significantLink":[B+"/plugins/",B+"/mastering/",B+"/wiedergaenger-vol-1/",B+"/uhrwerk-aus-blut/",B+"/psycore/",B+"/hitech-psytrance/",B+"/darkpsy/",B+"/en/"],
+  "speakable":{"@type":"SpeakableSpecification","cssSelector":["#single-info","#mastering","#ueber"]},"significantLink":[B+"/plugins/",B+"/mastering/",B+"/wiedergaenger-vol-1/",B+"/uhrwerk-aus-blut/",B+"/psycore/",B+"/hitech-psytrance/",B+"/darkpsy/",B+"/releases/",B+"/genre-lexikon/",B+"/faq/",B+"/en/"],
   "inLanguage":"de","datePublished":"2024-01-01","dateModified":DATUM,"author":{"@id":B+"/#tim-borchert"}},
  {"@type":"MusicGroup","@id":B+"/#artist","name":"Code Chaos","alternateName":["Code-Chaos","CodeChaos"],
   "description":"Code Chaos ist ein Hitech Psytrance, Psycore und Darkpsy Producer aus Hamburg und das Studioprojekt von Tim Borchert. Eigene Bezeichnung des Sounds: New Psychedelic Death Art. Seit 2016 aktiv, über 24 Releases auf Labels wie Abstract Sound Design (2021 mitgegründet), TATEWARI Records (Mexiko) und Soma Ritual Records (Indien). Heute ein reines Studioprojekt ohne Bookings, früher Live-Sets u. a. bei Abstract Ritual Hamburg (2023) und Lost Signal Festival (2026).",
@@ -63,7 +64,6 @@ graph=[
   "description":"3-Band Harmonic Saturation Plugin (VST3 + Standalone, Windows) von Code Chaos Audio: Low, Mid und High getrennt sättigen (Hard Clip, Wavefolder, Tube, Diode, Tape), Drive, Mix und Gain pro Band, bis zu 8x Oversampling.",
   "image":B+"/images/crucible-og.jpg",
   "offers":{"@type":"Offer","url":"https://timberwolf688.gumroad.com/l/crucible","price":"19.00","priceCurrency":"EUR","availability":"https://schema.org/InStock"}},
- {"@type":"FAQPage","@id":B+"/#faq","isPartOf":{"@id":B+"/#webpage"},"mainEntity":faq},
 ]
 block='<script type="application/ld+json">\n'+json.dumps({"@context":"https://schema.org","@graph":graph},ensure_ascii=False,indent=1)+'\n</script>'
 blocks=list(re.finditer(r'<script type="application/ld\+json">.*?</script>\n?',s,re.S))
@@ -73,4 +73,10 @@ for m in reversed(blocks): s=s[:m.start()]+s[m.end():]
 s=s[:first]+block+'\n'+s[first:]
 open(p,'w',encoding='utf-8',newline='\n').write(s)
 json.loads(block.split('\n',1)[1].rsplit('\n',1)[0])
+# FAQPage auf /faq/ (WebPage + Breadcrumb stehen dort; FAQPage wird ersetzt bzw. angehängt)
+m=re.search(r'(<script type="application/ld\+json">\s*)(.*?)(\s*</script>)',sf,re.S)
+ldf=json.loads(m.group(2))
+ldf['@graph']=[n for n in ldf['@graph'] if n.get('@type')!='FAQPage']+[{"@type":"FAQPage","@id":B+"/faq/#faq","inLanguage":"de","isPartOf":{"@id":B+"/faq/#webpage"},"mainEntity":faq}]
+sf=sf[:m.start(2)]+json.dumps(ldf,ensure_ascii=False,indent=1)+sf[m.end(2):]
+open(pf,'w',encoding='utf-8',newline='\n').write(sf)
 print('faq',len(faq))

@@ -36,6 +36,17 @@ EN_MASTERING = {
   </div>
 </section>
 
+<section id="before-after" aria-labelledby="vn-t">
+  <div class="wrap narrow prose">
+    <h2 id="vn-t">Before/after: Uhrwerk aus Blut</h2>
+    <p>Two excerpts of 16 bars each (18 seconds) from the Code Chaos single “Uhrwerk aus Blut” (210 BPM). <strong>Before</strong> is the approved pre-master, the mixdown before mastering. <strong>After</strong> is the released master. Both versions are level-matched to −13 LUFS so you compare the sound, not the loudness. The released master itself sits at around −9 LUFS.</p>
+    <figure class="track"><figcaption>First drop from 2:17 · before (pre-master)</figcaption><audio controls preload="none"><source src="/audio/mastering/uhrwerk-drop1-vorher.opus" type="audio/ogg; codecs=opus"><source src="/audio/mastering/uhrwerk-drop1-vorher.m4a" type="audio/mp4"></audio></figure>
+    <figure class="track"><figcaption>First drop from 2:17 · after (master)</figcaption><audio controls preload="none"><source src="/audio/mastering/uhrwerk-drop1-nachher.opus" type="audio/ogg; codecs=opus"><source src="/audio/mastering/uhrwerk-drop1-nachher.m4a" type="audio/mp4"></audio></figure>
+    <figure class="track"><figcaption>Second drop from 4:07 · before (pre-master)</figcaption><audio controls preload="none"><source src="/audio/mastering/uhrwerk-drop2-vorher.opus" type="audio/ogg; codecs=opus"><source src="/audio/mastering/uhrwerk-drop2-vorher.m4a" type="audio/mp4"></audio></figure>
+    <figure class="track"><figcaption>Second drop from 4:07 · after (master)</figcaption><audio controls preload="none"><source src="/audio/mastering/uhrwerk-drop2-nachher.opus" type="audio/ogg; codecs=opus"><source src="/audio/mastering/uhrwerk-drop2-nachher.m4a" type="audio/mp4"></audio></figure>
+  </div>
+</section>
+
 <section id="prices" aria-labelledby="prices-t">
   <div class="wrap">
     <h2 id="prices-t">Prices</h2>
@@ -113,5 +124,5 @@ FORM = """<form class="form" action="https://formspree.io/f/mojkqopj" method="PO
       <input type="hidden" name="_subject" value="New mastering request (EN) · Code Chaos">
       <p class="assure">No obligation: you usually get a reply with all details within 24–48 hours. You only pay once you say yes, upfront or by invoice after delivery.</p>
       <div><button class="btn btn-blood" type="submit">Send request</button></div>
-      <p class="note">Your data is sent via Formspree and only used to answer your request. Privacy policy (German): <a href="/#datenschutz">Datenschutz</a>. Prefer email? <a href="mailto:polished.media@gmx.de" style="text-decoration:underline">polished.media@gmx.de</a></p>
+      <p class="note">Your data is sent via Formspree and only used to answer your request. Privacy policy (German): <a href="/datenschutz/">Datenschutz</a>. Prefer email? <a href="mailto:polished.media@gmx.de" style="text-decoration:underline">polished.media@gmx.de</a></p>
     </form>"""

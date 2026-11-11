@@ -36,6 +36,17 @@ DE_MASTERING = {
   </div>
 </section>
 
+<section id="vorher-nachher" aria-labelledby="vn-t">
+  <div class="wrap narrow prose">
+    <h2 id="vn-t">Vorher/Nachher: Uhrwerk aus Blut</h2>
+    <p>Zwei Ausschnitte von je 16 Takten (18 Sekunden) aus der Code-Chaos-Single „Uhrwerk aus Blut“ (210 BPM). <strong>Vorher</strong> ist der freigegebene Pre-Master, also der Mixdown vor dem Mastering. <strong>Nachher</strong> ist das veröffentlichte Master. Beide Fassungen sind pegelgleich auf −13 LUFS gebracht, damit du den Klang vergleichst und nicht die Lautstärke. Das veröffentlichte Master selbst liegt bei rund −9 LUFS.</p>
+    <figure class="track"><figcaption>Erster Drop ab 2:17 · vorher (Pre-Master)</figcaption><audio controls preload="none"><source src="/audio/mastering/uhrwerk-drop1-vorher.opus" type="audio/ogg; codecs=opus"><source src="/audio/mastering/uhrwerk-drop1-vorher.m4a" type="audio/mp4"></audio></figure>
+    <figure class="track"><figcaption>Erster Drop ab 2:17 · nachher (Master)</figcaption><audio controls preload="none"><source src="/audio/mastering/uhrwerk-drop1-nachher.opus" type="audio/ogg; codecs=opus"><source src="/audio/mastering/uhrwerk-drop1-nachher.m4a" type="audio/mp4"></audio></figure>
+    <figure class="track"><figcaption>Zweiter Drop ab 4:07 · vorher (Pre-Master)</figcaption><audio controls preload="none"><source src="/audio/mastering/uhrwerk-drop2-vorher.opus" type="audio/ogg; codecs=opus"><source src="/audio/mastering/uhrwerk-drop2-vorher.m4a" type="audio/mp4"></audio></figure>
+    <figure class="track"><figcaption>Zweiter Drop ab 4:07 · nachher (Master)</figcaption><audio controls preload="none"><source src="/audio/mastering/uhrwerk-drop2-nachher.opus" type="audio/ogg; codecs=opus"><source src="/audio/mastering/uhrwerk-drop2-nachher.m4a" type="audio/mp4"></audio></figure>
+  </div>
+</section>
+
 <section id="prices" aria-labelledby="prices-t">
   <div class="wrap">
     <h2 id="prices-t">Preise</h2>
@@ -113,5 +124,5 @@ FORM_DE = """<form class="form" action="https://formspree.io/f/mojkqopj" method=
       <input type="hidden" name="_subject" value="Neue Mastering-Anfrage (DE /mastering/) · Code Chaos">
       <p class="assure">Unverbindlich anfragen: Du bekommst meist innerhalb von 24–48 Stunden eine Antwort mit allen Details. Bezahlt wird erst nach deiner Zusage, per Vorkasse oder auf Rechnung nach Fertigstellung.</p>
       <div><button class="btn btn-blood" type="submit">Anfrage senden</button></div>
-      <p class="note">Deine Angaben werden über Formspree übermittelt und nur zur Beantwortung deiner Anfrage genutzt. Mehr in der <a href="/#datenschutz">Datenschutzerklärung</a>. Lieber per Mail? <a href="mailto:polished.media@gmx.de" style="text-decoration:underline">polished.media@gmx.de</a></p>
+      <p class="note">Deine Angaben werden über Formspree übermittelt und nur zur Beantwortung deiner Anfrage genutzt. Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>. Lieber per Mail? <a href="mailto:polished.media@gmx.de" style="text-decoration:underline">polished.media@gmx.de</a></p>
     </form>"""

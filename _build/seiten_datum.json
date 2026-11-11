@@ -1,7 +1,11 @@
 {
  "/": {
   "datum": "2026-11-11",
-  "hash": "ccd685e079f35890"
+  "hash": "b002a0667143d05f"
+ },
+ "/bio/": {
+  "datum": "2026-11-11",
+  "hash": "8446c0e74173f158"
  },
  "/darkpsy/": {
   "datum": "2026-10-27",
@@ -21,11 +25,15 @@
  },
  "/en/mastering/": {
   "datum": "2026-11-11",
-  "hash": "9f8d0dda56fac476"
+  "hash": "0bda5d69d691a764"
+ },
+ "/en/plugins/": {
+  "datum": "2026-11-11",
+  "hash": "6b4a815b692e7581"
  },
  "/en/plugins/crucible/": {
   "datum": "2026-11-11",
-  "hash": "804d35282dcdf035"
+  "hash": "4e5f0fdd9cf092ba"
  },
  "/en/psycore/": {
   "datum": "2026-10-05",
@@ -39,13 +47,21 @@
   "datum": "2026-11-11",
   "hash": "d1e212de0b15c093"
  },
+ "/faq/": {
+  "datum": "2026-11-11",
+  "hash": "81712ea9a84f14b4"
+ },
+ "/genre-lexikon/": {
+  "datum": "2026-11-11",
+  "hash": "53046550e8b0eade"
+ },
  "/hitech-psytrance/": {
   "datum": "2026-10-27",
   "hash": "921fdf130a0c996c"
  },
  "/mastering/": {
   "datum": "2026-11-11",
-  "hash": "3dd3ecad8c33f109"
+  "hash": "0f3833fa6c5ad337"
  },
  "/plugins/": {
   "datum": "2026-11-11",
@@ -57,7 +73,7 @@
  },
  "/plugins/crucible/": {
   "datum": "2026-11-11",
-  "hash": "06aa0b4b65d6b694"
+  "hash": "9efff18cdf499a7d"
  },
  "/plugins/frostfret/": {
   "datum": "2026-10-21",
@@ -94,6 +110,10 @@
  "/ratgeber/gitarrensound-ableton/": {
   "datum": "2026-11-09",
   "hash": "299217385f77b93b"
+ },
+ "/releases/": {
+  "datum": "2026-11-11",
+  "hash": "a945194ba263a588"
  },
  "/sounds/": {
   "datum": "2026-11-09",

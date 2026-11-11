@@ -62,7 +62,7 @@ RELEASE_PAGES = {
      ("Was kommt nach „Uhrwerk aus Blut“?", "Das nächste Release ist <a href=\"/wiedergaenger-vol-1/\">Wiedergänger Vol. I · Was nicht ruhen will</a>, ein Remix-Release mit fünf Tracks, am 4. Dezember 2026."),
    ],
    "body": """<main id="main">
-<div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="/">Startseite</a></li><li><a href="/#releases">Releases</a></li><li aria-current="page">Uhrwerk aus Blut</li></ol></nav></div>
+<div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="/">Startseite</a></li><li><a href="/releases/">Releases</a></li><li aria-current="page">Uhrwerk aus Blut</li></ol></nav></div>
 <section class="s-hero">
   <div class="wrap hero-grid">
     <div>
@@ -194,7 +194,7 @@ RELEASE_PAGES = {
      ("Wie bekomme ich den Link zum Release als Erstes?", "Über den Newsletter von Code Chaos: Der Link kommt dort zuerst. <a href=\"/#newsletter\">Zum Newsletter</a>."),
    ],
    "body": """<main id="main">
-<div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="/">Startseite</a></li><li><a href="/#releases">Releases</a></li><li aria-current="page">Wiedergänger Vol. I</li></ol></nav></div>
+<div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="/">Startseite</a></li><li><a href="/releases/">Releases</a></li><li aria-current="page">Wiedergänger Vol. I</li></ol></nav></div>
 <section class="s-hero">
   <div class="wrap narrow">
     <span class="eyebrow">Ankündigung · Remix-Release · <time datetime="2026-12-04">04.12.2026</time></span>

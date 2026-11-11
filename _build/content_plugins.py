@@ -29,7 +29,7 @@ PLUGINS = [
         "feat_title": "Funktionen der 3-Band-Sättigung",
         "desc": "Crucible: 3-Band-Sättigung (VST3 + Standalone, Windows) für Hitech & Psycore. Hard Clip, Wavefolder, Tube, Diode, Tape pro Band. 19 €, Gratis-Demo.",
         "h1": "Crucible: 3-Band-Sättigung (VST3) für Hitech & Psycore",
-        "eyebrow": "Code Chaos Audio · Effekt-Plugin",
+        "eyebrow": "Code Chaos Audio · Sättigung VST3 · Gratis-Demo",
         "teaser": "3-Band-Sättigung: Hard Clip, Wavefolder, Tube, Diode oder Tape pro Band, bis 8x Oversampling.",
         "answer": "Crucible ist ein Sättigungs-Plugin mit drei Bändern: Es teilt dein Signal in Low, Mid und High und sättigt jedes Band für sich, "
                   "mit fünf Sättigungsarten (Hard Clip, Wavefolder, Tube, Diode, Tape), Drive, Mix und Gain pro Band und bis zu 8x Oversampling. "
@@ -106,7 +106,7 @@ PLUGINS = [
             "title": "Crucible: 3-Band Saturation VST3 Plugin | Code Chaos",
             "desc": "Crucible: 3-band harmonic saturation VST3 + standalone for Windows. Hard clip, wavefolder, tube, diode, tape per band, up to 8x oversampling. €19, free demo.",
             "h1": "Crucible: 3-band saturation VST3",
-            "eyebrow": "Code Chaos Audio · effect plugin",
+            "eyebrow": "Code Chaos Audio · free saturation VST demo",
             "category": "3-band saturation",
             "os": "Windows 10+",
             "answer": "Crucible is a 3-band harmonic saturation plugin: it splits your signal into low, mid and high and saturates each band independently, "

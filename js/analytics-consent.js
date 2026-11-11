@@ -37,8 +37,8 @@
 
   var css = '#cc-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:720px;margin:0 auto;' +
     'background:#0b0806;color:#ece2ce;border:1px solid rgba(201,168,106,.35);border-radius:6px;padding:16px 18px;' +
-    'font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.6);display:none}' +
-    '#cc-consent.show{display:block}#cc-consent p{margin:0 0 12px}#cc-consent a{color:#c9a86a;text-decoration:underline}' +
+    'font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.6);display:none}' +
+    '#cc-consent.show{display:block}#cc-consent p{margin:0 0 8px}#cc-consent p+p{margin-bottom:12px}#cc-consent a{color:#c9a86a;text-decoration:underline}' +
     '#cc-consent .cc-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}' +
     '#cc-consent button{font:600 13px/1 system-ui,sans-serif;letter-spacing:.5px;padding:11px 18px;border-radius:4px;cursor:pointer;' +
     'border:1px solid #c9a86a;background:transparent;color:#ece2ce;min-width:150px}' +
@@ -54,7 +54,9 @@
     b.id = 'cc-consent';
     b.setAttribute('role', 'dialog');
     b.setAttribute('aria-label', en ? 'Cookie settings' : 'Cookie-Einstellungen');
-    b.innerHTML = '<p>' + T.text + '<a href="/#datenschutz">' + T.policy + '</a>.</p>' +
+    /* Text in zwei Absätze (gleicher Wortlaut): kleinere Textblöcke, damit der Banner nicht das LCP-Element der Seite stellt (Grok #67) */
+    var i = T.text.indexOf('. ') + 1;
+    b.innerHTML = '<p>' + T.text.slice(0, i) + '</p><p>' + T.text.slice(i + 1) + '<a href="/datenschutz/">' + T.policy + '</a>.</p>' +
       '<div class="cc-row"><button type="button" id="cc-no">' + T.no + '</button>' +
       '<button type="button" id="cc-yes">' + T.yes + '</button></div>';
     document.body.appendChild(b);

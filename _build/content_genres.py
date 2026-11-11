@@ -1,7 +1,7 @@
 # Inhalte der Genre-Unterseiten (DE + EN). HTML ist erlaubt.
 
 RELEASES = {
-    "uhrwerk": dict(title="Uhrwerk aus Blut", url="/uhrwerk-aus-blut/", url_en="/en/uhrwerk-aus-blut/", img="/images/uhrwerk-aus-blut/cover-800.webp",
+    "uhrwerk": dict(title="Uhrwerk aus Blut", url="/uhrwerk-aus-blut/", url_en="/en/uhrwerk-aus-blut/", img="/images/uhrwerk-aus-blut/cover-480.webp",
                     de="Single · 30.10.2026 · Darkpsy / Hitech / Gothic", en="Single · 30 Oct 2026 · Darkpsy / Hitech / Gothic"),
     "runtime": dict(title="Runtime Terror", url="https://codechaos.bandcamp.com/album/runtime-terror-lp", img="/images/releases/code-chaos-runtime-terror.webp",
                     de="Album · 2026 · Hitech / Psycore / Darkpsy", en="Album · 2026 · Hitech / Psycore / Darkpsy"),
@@ -270,7 +270,7 @@ GENRES = [
   },
   "en": {
    "nav": "Hitech Psytrance", "bpm": "170–230+ BPM",
-   "title": "Hitech Psytrance (Hitech Psy, Hi-Tech): Guide & BPM | Code Chaos",
+   "title": "Hi-Tech Psytrance Explained: BPM, Sound & Guide | Code Chaos",
    "desc": "Hitech psytrance (hi-tech) explained: 170–230+ BPM, glitchy synths, complex percussion and a futuristic sound. History, hitech vs psycore, production tips.",
    "og_alt": "Hitech psytrance genre guide by Code Chaos",
    "eyebrow": "Genre guide · Hitech psytrance",
