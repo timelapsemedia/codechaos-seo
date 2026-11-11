@@ -43,7 +43,7 @@
 
 <link rel="preload" as="image" href="/images/uhrwerk-aus-blut/loop-poster-720.webp" type="image/webp" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cinzel.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="/fonts/eb-garamond.woff2" crossorigin>
+<!-- eb-garamond (46 KB) bewusst ohne preload: konkurriert sonst mit dem LCP-Poster um Bandbreite (Grok #67) -->
 <style data-src="/css/fonts.css">
 @font-face {
 font-family: 'Cinzel';
