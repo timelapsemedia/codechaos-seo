@@ -1,0 +1,64 @@
+# Lighthouse-Messung auf einem sauberen GitHub-Runner (Grok #67, 11.11.2026).
+# Grund: Auf Tims PC laufen parallel Ableton/Renders, dort schwanken die Laborwerte stark (EN-Startseite lokal 60, live sonst 99).
+# Nur manuell (workflow_dispatch), keine Geheimnisse, schreibt nichts ins Repo. Ergebnis: Job-Zusammenfassung + Artefakt mit den JSON-Berichten.
+name: lighthouse
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "URLs, durch Leerzeichen getrennt"
+        required: true
+        default: "https://codechaos-official.de/ https://codechaos-official.de/en/"
+      laeufe:
+        description: "Läufe pro URL und Form (Median wird berichtet)"
+        required: false
+        default: "1"
+jobs:
+  messen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Lighthouse 13.6.0
+        run: |
+          npm i -g lighthouse@13.6.0 >/dev/null
+          mkdir -p out
+          i=0
+          for u in ${{ github.event.inputs.urls }}; do
+            for form in mobil desktop; do
+              for n in $(seq 1 ${{ github.event.inputs.laeufe }}); do
+                i=$((i+1))
+                P=""; [ "$form" = desktop ] && P="--preset=desktop"
+                lighthouse "$u" $P --quiet --chrome-flags="--headless=new --no-sandbox" \
+                  --only-categories=performance,accessibility,best-practices,seo \
+                  --output=json --output-path="out/$i-$form.json" || true
+              done
+            done
+          done
+      - name: Zusammenfassung
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          import json, glob
+          print("| URL | Form | Perf | A11y | BP | SEO | FCP | LCP | TBT | CLS | SI | Benchmark |")
+          print("|---|---|--:|--:|--:|--:|---|---|---|---|---|--:|")
+          for f in sorted(glob.glob("out/*.json"), key=lambda x: int(x.split("/")[-1].split("-")[0])):
+              d = json.load(open(f))
+              if d.get("runtimeError"):
+                  print(f"| {d.get('requestedUrl')} | Fehler {d['runtimeError'].get('code')} |"); continue
+              a = d["audits"]; c = d["categories"]
+              s = lambda k: round((c[k]["score"] or 0) * 100)
+              v = lambda k: a[k].get("displayValue", "")
+              form = "Desktop" if "desktop" in f else "mobil"
+              print(f"| {d['finalDisplayedUrl']} | {form} | {s('performance')} | {s('accessibility')} | {s('best-practices')} | {s('seo')} | "
+                    f"{v('first-contentful-paint')} | {v('largest-contentful-paint')} | {v('total-blocking-time')} | {v('cumulative-layout-shift')} | {v('speed-index')} | {round(d['environment']['benchmarkIndex'])} |")
+              for k, x in a.items():
+                  if x.get("score") is not None and x["score"] < 0.9 and x.get("scoreDisplayMode") in ("binary", "numeric", "metricSavings"):
+                      print(f"|  | ↳ {k} | {x['score']} | {x.get('displayValue','')} |")
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-json
+          path: out/
+          retention-days: 14
