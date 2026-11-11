@@ -9,13 +9,13 @@ DE_MASTERING = {
    ("Wie bereite ich meine Dateien vor?", "Exportiere WAV oder AIFF in der Samplerate des Projekts, 24 oder 32 Bit, ohne Limiter oder Clipper auf dem Master-Bus und mit Peaks um -6 bis -3 dBFS. Stems sollten an derselben Position beginnen und mit allen Effekten exportiert sein. Leg gern einen Referenztrack bei."),
    ("Masterst du auch andere Genres als Psytrance?", "Ja. Schwerpunkt sind Psycore, Hitech und Darkpsy, aber elektronische Musik allgemein (Techno, Drum and Bass, Industrial, Experimental) ist willkommen. Nenn einfach Genre und Referenz in deiner Anfrage."),
    ("Wie läuft Bezahlung und Lieferung?", "Bezahlt wird per Banküberweisung. Du entscheidest: Vorkasse oder Rechnung nach Fertigstellung. Nach deiner Anfrage bekommst du in der Regel innerhalb von 24–48 Stunden eine Antwort mit allen Details. Singles werden in 48–72 Stunden geliefert, EPs in 5–7 Tagen, Alben in 7–14 Tagen, als 24-bit WAV, 16-bit AIFF und 320 kbps MP3. Korrekturen sind unbegrenzt."),
-   ("Wer mastert die Tracks?", "Das Mastering macht Code Chaos (Tim Borchert), Hitech-, Psycore- und Darkpsy-Producer aus Hamburg mit über 24 Releases seit 2016 und Mitgründer des Labels Abstract Sound Design. Der Service läuft unter dem Namen Polished Media."),
+   ("Wer mastert die Tracks?", "Das Mastering macht Code Chaos (Tim Borchert), Hitech-, Psycore- und Darkpsy-Producer aus Hamburg mit über 24 Releases seit 2016 und Mitgründer des Labels Abstract Sound Design. Der Service heißt Code Chaos Mastering. Metal und Gothic mastert Tim Borchert unter dem Namen Polished Media (polished.media)."),
  ],
  "body": """<main id="main">
 <div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="/">Startseite</a></li><li aria-current="page">Mastering</li></ol></nav></div>
 <section class="s-hero">
   <div class="wrap narrow">
-    <span class="eyebrow">Polished Media · Mastering von Code Chaos</span>
+    <span class="eyebrow">Code Chaos Mastering</span>
     <h1>Psytrance Mastering für Psycore, Hitech &amp; Darkpsy</h1>
     <div class="rule" aria-hidden="true"><i></i></div>
     <p class="answer">Genre-spezifisches Mastering von einem aktiven Producer aus Hamburg: <strong>Single 79 €</strong>, <strong>Stem Mastering 129 €</strong>, <strong>EP bis 5 Tracks 349 €</strong>, <strong>Album bis 10 Tracks 629 €</strong>, inkl. MwSt., Audio-Audit und unbegrenzter Korrekturen. Gemacht für schnellen, dichten Psytrance zwischen 150 und 300 BPM, wo generisches Mastering die Kick plattdrückt und den Mix zu Brei macht.</p>
@@ -93,7 +93,7 @@ DE_MASTERING = {
 <section aria-labelledby="cru-t">
   <div class="wrap narrow prose">
     <h2 id="cru-t">Du mischst selbst?</h2>
-    <p>Der Multiband-Ansatz aus diesen Masterings steckt auch in einem Plugin: <a href="/crucible.html">Crucible</a>, ein 3-Band Harmonic Saturation Plugin (VST3 + Standalone für Windows, 19 €) von Code Chaos Audio.</p>
+    <p>Der Multiband-Ansatz aus diesen Masterings steckt auch in einem Plugin: <a href="/plugins/crucible/">Crucible</a>, ein 3-Band Harmonic Saturation Plugin (VST3 + Standalone für Windows, 19 €) von Code Chaos Audio.</p>
   </div>
 </section>
 </main>
@@ -113,5 +113,5 @@ FORM_DE = """<form class="form" action="https://formspree.io/f/mojkqopj" method=
       <input type="hidden" name="_subject" value="Neue Mastering-Anfrage (DE /mastering/) · Code Chaos">
       <p class="assure">Unverbindlich anfragen: Du bekommst meist innerhalb von 24–48 Stunden eine Antwort mit allen Details. Bezahlt wird erst nach deiner Zusage, per Vorkasse oder auf Rechnung nach Fertigstellung.</p>
       <div><button class="btn btn-blood" type="submit">Anfrage senden</button></div>
-      <p class="note">Deine Angaben werden über Formspree übermittelt und nur zur Beantwortung deiner Anfrage genutzt. Mehr in der <a href="/#datenschutz">Datenschutzerklärung</a>. Lieber per Mail? <a href="mailto:polished.media@gmx.de">polished.media@gmx.de</a></p>
+      <p class="note">Deine Angaben werden über Formspree übermittelt und nur zur Beantwortung deiner Anfrage genutzt. Mehr in der <a href="/#datenschutz">Datenschutzerklärung</a>. Lieber per Mail? <a href="mailto:polished.media@gmx.de" style="text-decoration:underline">polished.media@gmx.de</a></p>
     </form>"""

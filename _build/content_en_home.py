@@ -7,7 +7,7 @@ EN_HOME = {
  "desc": "Plugins by Code Chaos Audio on Gumroad and mastering for psytrance, hitech & psycore from €79. New: Wiedergänger Vol. I (4 Dec 2026) and Uhrwerk aus Blut.",
  "faq": [
    ("Is \"Uhrwerk aus Blut\" out yet?", "Yes. The single \"Uhrwerk aus Blut\" (Clockwork of Blood) was released on 30 October 2026 on Abstract Sound Design: <a href=\"" + _PRESAVE + "\">listen now</a>. The next release is Wiedergänger Vol. I · Was nicht ruhen will on 4 December 2026."),
-   ("Who is behind Code Chaos?", "Code Chaos is the studio project of Tim Borchert, a producer from Hamburg, Germany, active since 2016. He co-founded the label Abstract Sound Design in 2021, runs the mastering service Polished Media and develops audio plugins as Code Chaos Audio, starting with <a href=\"/crucible.html\">Crucible</a>."),
+   ("Who is behind Code Chaos?", "Code Chaos is the studio project of Tim Borchert, a producer from Hamburg, Germany, active since 2016. He co-founded the label Abstract Sound Design in 2021, offers mastering for psytrance, hitech and psycore as Code Chaos Mastering and develops audio plugins as Code Chaos Audio, starting with <a href=\"/en/plugins/crucible/\">Crucible</a>."),
    ("Can I book Code Chaos for a live show or DJ set?", "No. Today Code Chaos is a studio-only project without bookings. Earlier there were live sets, for example at Abstract Ritual Hamburg (2023) and Lost Signal Festival (2026). You can work with Code Chaos through mastering, cover art and video services."),
    ("What is \"New Psychedelic Death Art\"?", "New Psychedelic Death Art is Code Chaos' own name for the project's sound: hitech, psycore and darkpsy at 180–300 BPM, combined with gothic atmosphere, liquid FM lines, a bassline that never stops rolling and voices that tell stories. Music not made for the daylight, somewhere between a psytrance floor at 4 a.m. and a crypt that smells of candle wax. The first release of this era is the single <a href=\"/en/uhrwerk-aus-blut/\">Uhrwerk aus Blut</a>."),
    ("What genres does Code Chaos produce?", "Hitech psytrance, psycore and darkpsy, mostly between 180 and 300 BPM, plus experimental releases. Read the guides to <a href=\"/en/psycore/\">psycore</a>, <a href=\"/en/hitech-psytrance/\">hitech psytrance</a> and <a href=\"/en/darkpsy/\">darkpsy</a>."),
@@ -29,9 +29,10 @@ EN_HOME = {
           <a class="btn btn-blood" href="/plugins/">See the plugins</a>
         </div>
         <div class="offer">
-          <p class="offer-k">Polished Media · mastering</p>
+          <p class="offer-k">Code Chaos Mastering</p>
           <p class="offer-t">Mastering</p>
           <ul class="offer-p"><li>Stereo <b>€79</b></li><li>Stem <b>€129</b></li><li>EP <b>€349</b></li><li>Album <b>€629</b></li></ul>
+          <ul class="offer-chips"><li>Unlimited revisions</li><li>Invoice after completion</li></ul>
           <a class="btn btn-ghost" href="#mastering">Request mastering ↓</a>
         </div>
       </div>
@@ -51,7 +52,7 @@ EN_HOME = {
 <section class="alt" id="mastering" aria-labelledby="mast-t">
   <div class="wrap hero-grid">
     <div class="prose">
-      <span class="eyebrow">Polished Media · mastering</span>
+      <span class="eyebrow">Code Chaos Mastering</span>
       <h2 id="mast-t">Mastering for psycore, hitech &amp; darkpsy</h2>
       <p>Genre-specific mastering by an active producer who knows these genres from the inside: kick behaviour at 150–300 BPM, neurotrance basslines, dense soundscapes. No generic presets, no flat compression.</p>
       <ul><li>Audio audit before every master</li><li>Unlimited revisions</li><li>24-bit WAV, 16-bit AIFF and 320 kbps MP3, streaming-ready</li><li>Reply usually within 24–48 hours</li><li>Pay by bank transfer, in advance or by invoice after completion</li></ul>
@@ -97,7 +98,7 @@ EN_HOME = {
       <p><strong>Code Chaos</strong> is a hitech psytrance, psycore and darkpsy producer from <strong>Hamburg, Germany</strong>, and the studio project of Tim Borchert. Active since 2016, Code Chaos has released <strong>24+ records</strong> between 180 and 300 BPM on labels including <strong>Abstract Sound Design</strong> (co-founded in 2021), <strong>TATEWARI Records</strong> (Mexico) and <strong>Soma Ritual Records</strong> (India).</p>
       <p class="lead">Code Chaos does not make music for the daylight. Somewhere between a psytrance floor at 4 a.m. and a crypt that smells of candle wax, these tracks tick like a heart about to break. Liquid FM lines crawl through the skull, the bass never stops rolling, and voices tell stories you should not hear alone.</p>
       <p>Code Chaos calls it <strong>New Psychedelic Death Art</strong>. With "Uhrwerk aus Blut" the project opens up to story, voice and image. Today Code Chaos is a studio-only project without bookings. Earlier there were live sets, for example at Abstract Ritual Hamburg (2023) and Lost Signal Festival (2026).</p>
-      <p>Alongside the music, Code Chaos runs the mastering service <a href="https://polished.media">Polished Media</a> and builds plugins as Code Chaos Audio, starting with <a href="/crucible.html">Crucible</a>.</p>
+      <p>Alongside the music, Code Chaos offers mastering for psytrance, hitech and psycore as <a href="/en/mastering/">Code Chaos Mastering</a> and builds plugins as Code Chaos Audio, starting with <a href="/en/plugins/crucible/">Crucible</a>.</p>
     </div>
   </div>
 </section>
@@ -143,9 +144,9 @@ EN_HOME = {
       <h2 id="cru-t">Crucible: 3-band harmonic saturation</h2>
       <p>Split your signal into low, mid and high and saturate each band on its own: hard clip, tube or tape per band, per-band drive, mix and gain, adjustable crossovers and up to 8x oversampling. VST3 + standalone for Windows 10+. Five saturation types: hard clip, wavefolder, tube, diode, tape.</p>
       <p><strong>Shape. Saturate. Dominate.</strong> Built by an active hitech and psycore producer, for any source.</p>
-      <div class="btns"><a class="btn btn-blood" href="https://timberwolf688.gumroad.com/l/crucible">Get Crucible · €19</a><a class="btn btn-ghost" href="/crucible.html">All features</a></div>
+      <div class="btns"><a class="btn btn-blood" href="https://timberwolf688.gumroad.com/l/crucible">Get Crucible · €19</a><a class="btn btn-ghost" href="/en/plugins/crucible/">All features</a></div>
     </div>
-    <a href="/crucible.html#listen"><img class="framed" src="/images/crucible-ui-880.webp" srcset="/images/crucible-ui-880.webp 880w, /images/crucible-ui.webp 1760w" sizes="(max-width: 900px) 100vw, 560px" width="880" height="560" loading="lazy" alt="Crucible plugin interface: Low Hard Clip, Mid Tube, High Tape, 4x oversampling"></a><p class="note"><a href="/crucible.html#listen">▶ Listen: the same psy loop without and with Crucible</a></p>
+    <a href="/en/plugins/crucible/#listen"><img class="framed" src="/images/crucible-ui-880.webp" srcset="/images/crucible-ui-880.webp 880w, /images/crucible-ui.webp 1760w" sizes="(max-width: 900px) 100vw, 560px" width="880" height="560" loading="lazy" alt="Crucible plugin interface: Low Hard Clip, Mid Tube, High Tape, 4x oversampling"></a><p class="note"><a href="/en/plugins/crucible/#listen">▶ Listen: the same psy loop without and with Crucible</a></p>
   </div>
 </section>
 

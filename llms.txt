@@ -1,76 +1,73 @@
 # Code Chaos
 
-> Code Chaos is a Hitech Psytrance, Psycore and Darkpsy music producer from Hamburg, Germany, and the studio project of Tim Borchert, active since 2016 with 24+ releases. Today Code Chaos is a studio project only, without bookings. Earlier there were live sets, for example at Abstract Ritual Hamburg (2023) and Lost Signal Festival (2026), and a live recording from Arnsteinhöhle (Austria, 17 April 2026) is released on Bandcamp. Tim Borchert also runs **Polished Media** (genre-specific audio mastering, https://polished.media) and **Code Chaos Audio**, an audio plugin series whose first release is **Crucible**, a 3-band harmonic saturation plugin.
+> Code Chaos is a Hitech Psytrance, Psycore and Darkpsy producer from Hamburg, Germany, and the studio project of Tim Borchert, active since 2016 with 24+ releases. The site offers three things: audio plugins by **Code Chaos Audio** (sold on Gumroad, free demos), genre-specific mastering for psytrance, hitech and psycore as **Code Chaos Mastering**, and Code Chaos' own music (releases and genre guides). Today Code Chaos is a studio project only, without bookings.
 
-Primary site language: German (de). Full English version: https://codechaos-official.de/en/ . The Crucible product page is in English; all other plugin pages (/plugins/) are in German. Domain: https://codechaos-official.de/
-Last updated: 2026-11-10
+Primary site language: German (de). English versions: home, mastering, genre guides, release pages and the Crucible plugin page (all other plugin pages are German). Plugins are sold and downloaded on Gumroad (timberwolf688.gumroad.com); every paid plugin has a free demo (full plugin, short noise burst every 45 s). No AU format (Logic Pro not supported); macOS builds are Apple Silicon (arm64) only and not signed or notarized. Metal and gothic mastering is a separate studio by Tim Borchert: Polished Media, https://polished.media
+Last updated: 2026-11-11
 
-## Next release: Wiedergänger Vol. I · Was nicht ruhen will (4 December 2026)
+## Plugins (Code Chaos Audio)
 
-- Remix release by Code Chaos, five tracks: Error 666, Antichrist, The Human Paradox, Abstrakte Musik, Rotten Soil. Release date: 4 December 2026 (2026-12-04).
-- The release link goes out first via the newsletter: https://codechaos-official.de/#newsletter
-- Release page (German): https://codechaos-official.de/wiedergaenger-vol-1/ · English: https://codechaos-official.de/en/wiedergaenger-vol-1/
+- [All plugins (German)](https://codechaos-official.de/plugins/): overview of all plugins with price, formats and systems, free demos
+- [Crucible](https://codechaos-official.de/plugins/crucible/): 3-band harmonic saturation, 5 saturation types per band (Hard Clip, Wavefolder, Tube, Diode, Tape), per-band Drive, Mix, Gain, Mute, Solo, oversampling up to 8x; version 1.1.0; €19, free demo; VST3 + standalone, Windows 10+ only. English page: [Crucible (English)](https://codechaos-official.de/en/plugins/crucible/). License key from the Gumroad receipt activates up to 3 computers, works offline for up to 60 days.
+- [Kick+Bass Engine](https://codechaos-official.de/plugins/psy-kick-bass/): kick and rolling bass in one instrument for psytrance, hitech and psycore at 140–300+ BPM; kick tuned to the bass note and ended before the first bass note (0 ms kick energy after the bass start in our measurements at 145–250 BPM), 8 rolling patterns, 4 bass modes, kick designer, built-in scope, mono below 150 Hz, 14 factory presets; €24, free demo; VST3 + standalone, Windows 10/11 and macOS (Apple Silicon)
+- [Shardstep](https://codechaos-official.de/plugins/shardstep/): tempo-synced stutter, glitch and tape stop effect for hitech and psycore at 200–300 BPM; 16-step pattern (repeats 1/8 to 1/64 incl. triplets, reverse, tape stop, gate, crush), MIDI trigger, slice fades 0.5–8 ms, zero latency, 15 factory patterns; €15, free demo; VST3 + standalone, Windows 10/11 and macOS (Apple Silicon)
+- [Chaos FM](https://codechaos-official.de/plugins/chaos-fm/): 3-operator FM synth (VST3) for hitech, psycore and darkpsy; 3 algorithms, filter with drive, up to 4-voice unison, mono/legato with glide, GENERATE button (Lead, Bass, Acid, Stab, Pluck, FX), 12 factory presets; €19, free demo; VST3 + standalone, Windows 10/11 only
+- [Kick/Bass Scope](https://codechaos-official.de/plugins/kick-bass-scope/): free (pay what you want) beat-synced oscilloscope that shows kick and bass on top of each other to check kick/bass phase: peaks in dBFS, clip line, sum curve, kick/bass correlation with a warning when they are out of phase, overlap time in ms, 13 presets; analyzer only, it does not shift or align anything, audio passes through bit-identical; VST3 + standalone, Windows 10/11 and macOS (Apple Silicon)
+- [Gravesaw](https://codechaos-official.de/plugins/gravesaw/): black metal amp sim with built-in cab for guitar and bass DI (Black Metal Suite); noise gate, tight, 4x oversampled gain (raw/thick), tone stack with Fizz and Presence, 19 synthesised cabs or cab off, 16 presets, latency 61 samples; €19, free demo; VST3 + standalone, Windows 10/11 and macOS (Apple Silicon)
+- [Rimehall](https://codechaos-official.de/plugins/rimehall/): cold reverb, octave shimmer and tape/lo-fi atmosphere bus with ducking (Black Metal Suite); decay 0.3–30 s, Frost tone control, wow/flutter/saturation/hiss, 14 presets, constant 4 ms latency; €19, free demo; VST3 + standalone, Windows 10/11 and macOS (Apple Silicon)
+- [Frostfret](https://codechaos-official.de/plugins/frostfret/): physically modelled guitar instrument played from MIDI, no samples (Black Metal Suite); electric (pickup models), steel-string and nylon acoustic, electric bass; tremolo picking synced to the host, palm mute, legato, slides, strumming, double tracking; built-in Gravesaw amp DSP or DI out; 30 presets; €29, free demo; VST3 instrument + standalone, Windows 10/11 and macOS (Apple Silicon)
+- [Hoarfell](https://codechaos-official.de/plugins/hoarfell/): modelled drums (General MIDI map, blast-ready), electric bass and atmos (vowel choir pad, organ, strings pad, bell, celesta, lo-fi keys), no samples (Black Metal Suite); 20 presets; €17, free demo; VST3 instrument + standalone, Windows 10/11 and macOS (Apple Silicon)
+- [Black Metal Suite Essentials](https://timberwolf688.gumroad.com/l/black-metal-suite): bundle of Gravesaw, Rimehall, Black Metal Tone Kit and Black Metal Drum Kit; €39 instead of €59
+- [Black Metal Suite Complete](https://timberwolf688.gumroad.com/l/black-metal-suite-complete): bundle of Frostfret, Hoarfell, Gravesaw, Rimehall, Black Metal Tone Kit and Black Metal Drum Kit; €69 instead of €105
 
-## Single out now: Uhrwerk aus Blut (30 October 2026)
+## Mastering (Code Chaos Mastering)
 
-- **Title:** Uhrwerk aus Blut (German: "Clockwork of Blood"). Single by Code Chaos.
-- **Release date:** 30 October 2026 (2026-10-30). **Label:** Abstract Sound Design. Available on all major streaming platforms.
-- **Genre:** Darkpsy, Hitech Psytrance, Gothic.
-- **Tagline:** "Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet." (A heart that beats too fast. A clockwork that bleeds.)
-- **Story in five scenes:** Prolog, I Die Uhr, II Der Spiegel, III Das Blut, Rückkehr.
-- **Listen:** https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut-2
-- **Release page** (German): https://codechaos-official.de/uhrwerk-aus-blut/ · English: https://codechaos-official.de/en/uhrwerk-aus-blut/
-- Artwork created with AI. It opens a new era for the project: darker, narrative, gothic.
+Genre-specific mastering for Psytrance, Hitech Psytrance, Psycore and Darkpsy by an active producer (Tim Borchert, Code Chaos). All prices incl. 19% German VAT; audio audit and unlimited revisions in every package; delivery as 24-bit WAV, 16-bit AIFF and 320 kbps MP3. Payment by bank transfer only (no PayPal), in advance or by invoice after completion, as the client prefers.
 
-## Latest album: Runtime Terror (21 August 2026)
+- [Mastering for psytrance, hitech & psycore (German)](https://codechaos-official.de/mastering/): prices, process, file preparation, FAQ
+- [Mastering for psytrance, hitech & psycore (English)](https://codechaos-official.de/en/mastering/): the same in English
+- [Request form](https://codechaos-official.de/mastering/#request): send a mastering request (English form: [request](https://codechaos-official.de/en/mastering/#request)); email: polished.media@gmx.de
+- Single (stereo mastering, 1 track): €79, delivery 48–72 h
+- Stem Pro (stem mastering, 1 track, up to 6 stems): €129, delivery 48–72 h
+- EP (up to 5 tracks): €349 instead of €395 (save €46, ~12%), €69.80 per track, 5–7 days
+- Album (up to 10 tracks): €629 instead of €790 (save €161, ~20%), €62.90 per track, 7–14 days, vinyl-ready master on request
+- Extras: cover art €99, lyric video €179, promo video (60 s) €299
 
-- 11th studio album, Abstract Sound Design. Genres: Hitech Psytrance, Psycore, Darkpsy.
-- Tracklist: Cold Boot (145 BPM), Bitrot (146), Runtime Terror (233, E Phrygian), Overdrive (220), Fork Bomb (228), Hyperthread (245), Ego Death (210), Core Dump (199), Night (180).
-- Bandcamp: https://codechaos.bandcamp.com/album/runtime-terror-lp
+## Releases
+
+- [Wiedergänger Vol. I · Was nicht ruhen will (German)](https://codechaos-official.de/wiedergaenger-vol-1/): next release, remix release by Code Chaos with five tracks (Error 666, Antichrist, The Human Paradox, Abstrakte Musik, Rotten Soil), out 4 December 2026 (2026-12-04); the release link goes out first via the [newsletter](https://codechaos-official.de/#newsletter). English: [Wiedergänger Vol. I (English)](https://codechaos-official.de/en/wiedergaenger-vol-1/)
+- [Uhrwerk aus Blut (German)](https://codechaos-official.de/uhrwerk-aus-blut/): single out now, 30 October 2026 (2026-10-30), Abstract Sound Design; Darkpsy, Hitech Psytrance, Gothic; German title means "Clockwork of Blood"; tagline "Ein Herz, das zu schnell schlägt. Ein Uhrwerk, das blutet." (A heart that beats too fast. A clockwork that bleeds.); story in five scenes: Prolog, I Die Uhr, II Der Spiegel, III Das Blut, Rückkehr; artwork created with AI. English: [Uhrwerk aus Blut (English)](https://codechaos-official.de/en/uhrwerk-aus-blut/) · [Listen](https://distrokid.com/hyperfollow/codechaos/uhrwerk-aus-blut-2)
+- [Runtime Terror (Bandcamp)](https://codechaos.bandcamp.com/album/runtime-terror-lp): latest album, 21 August 2026, 11th studio album, Abstract Sound Design; Hitech Psytrance, Psycore, Darkpsy; tracklist: Cold Boot (145 BPM), Bitrot (146), Runtime Terror (233, E Phrygian), Overdrive (220), Fork Bomb (228), Hyperthread (245), Ego Death (210), Core Dump (199), Night (180)
+- [All music (Bandcamp)](https://codechaos.bandcamp.com): 24+ releases since 2016
+
+## Guides
+
+- [Was ist Psycore? (German)](https://codechaos-official.de/psycore/) · [What is psycore? (English)](https://codechaos-official.de/en/psycore/): genre guide, 180–300+ BPM, typical 190–240 BPM
+- [Was ist Hitech Psytrance? (German)](https://codechaos-official.de/hitech-psytrance/) · [What is hitech psytrance? (English)](https://codechaos-official.de/en/hitech-psytrance/): genre guide, ≈170–230 BPM, typically 180–200
+- [Was ist Darkpsy? (German)](https://codechaos-official.de/darkpsy/) · [What is darkpsy? (English)](https://codechaos-official.de/en/darkpsy/): genre guide, ≈150–200 BPM, typically 155–175
+- [Gitarrensound in Ableton (German)](https://codechaos-official.de/ratgeber/gitarrensound-ableton/): five steps for heavy guitar tone in Ableton Live: input level into the amp sim, filtering before distortion, loading a cab impulse response (Hybrid Reverb in Live Suite or any IR loader), taming fizz in the cab, and mono-safe double tracking
+- [BPM guide](https://codechaos-official.de/#bpm-guide) · [FAQ](https://codechaos-official.de/#faq): tempo ranges and common questions on the German home page
+
+## Samples, MIDI and presets
+
+- [Samples, MIDI and presets (German)](https://codechaos-official.de/sounds/): file products by Code Chaos Audio, all synthesised or built by Code Chaos, royalty-free for own releases, no login or licence server
+- [Black Metal Drum Kit](https://timberwolf688.gumroad.com/l/black-metal-drum-kit): €12, 47 drum samples + 30 MIDI grooves
+- [Black Metal MIDI Grooves 2](https://timberwolf688.gumroad.com/l/black-metal-midi-grooves-2): €9, 74 grooves
+- [Black Metal Tone Kit](https://timberwolf688.gumroad.com/l/black-metal-tone-kit): €9, 19 cab IRs + 16 REAPER chains
+- [Hitech Arsenal Vol. 1](https://timberwolf688.gumroad.com/l/hitech-arsenal-1): €15, 120 samples
+- [Hitech FM for Vital](https://timberwolf688.gumroad.com/l/hitech-fm-vital): €12, 32 presets
+- [Hitech FM for Serum 2](https://timberwolf688.gumroad.com/l/hitech-fm-serum2): €12, 24 presets
+- [Hitech FM Industrial](https://timberwolf688.gumroad.com/l/hitech-fm-industrial): €9, 30 Vital + 26 Serum 2 presets
+- [Psycore Production Template for Ableton Live 12](https://timberwolf688.gumroad.com/l/psycore-ableton-template): €19, 77 tracks
 
 ## Key facts
 
-- **Artist:** Code Chaos (real name Tim Borchert), Hitech Psytrance, Psycore, Darkpsy producer from Hamburg, Germany. Studio project today (no bookings); earlier live sets.
+- **Artist:** Code Chaos (real name Tim Borchert), Hitech Psytrance, Psycore, Darkpsy producer from Hamburg, Germany. Studio project today (no bookings); earlier live sets, for example at Abstract Ritual Vol. 2 Hamburg (July 2023) and Lost Signal Festival (Gut Steimke, Uslar, August 2026); a live recording from Arnsteinhöhle (Austria, 17 April 2026) is released on Bandcamp.
 - **Self-described style:** "New Psychedelic Death Art". Bio line: "Code Chaos does not make music for the daylight."
 - **Active since:** 2016. **Releases:** 24+ on labels incl. Abstract Sound Design (Germany, co-founded by Code Chaos in 2021), TATEWARI Records (Mexico), Soma Ritual Records (India).
 - **Tempo range:** 180–300 BPM. Genres: Hitech Psytrance (170–230 BPM), Psycore (180–300+ BPM), Darkpsy / Dark Psytrance (150–200 BPM).
-- **Booking:** not available today. Past live sets: Abstract Ritual Vol. 2 Hamburg (July 2023), Lost Signal Festival (Gut Steimke, Uslar, August 2026).
 
-## Mastering (Polished Media)
-
-- Genre-specific mastering for Psycore, Hitech Psytrance and Darkpsy by an active producer.
-- Single (stereo mastering, 1 track): €79 · Stem Pro (stem mastering, up to 6 stems): €129 · delivery 48–72 h.
-- EP (up to 5 tracks): €349 instead of €395 (save €46, ~12%), €69.80 per track, 5–7 days.
-- Album (up to 10 tracks): €629 instead of €790 (save €161, ~20%), €62.90 per track, 7–14 days, vinyl-ready master on request.
-- All prices incl. 19% German VAT; audio audit and unlimited revisions in every package; delivery as 24-bit WAV, 16-bit AIFF and 320 kbps MP3. Same prices as https://polished.media
-- Payment: by bank transfer only (no PayPal), in advance or by invoice after completion, as the client prefers.
-- Extras: Cover Art €99, Lyric Video €179, Promo Video (60 s) €299.
-- Mastering page (German): https://codechaos-official.de/mastering/ · English: https://codechaos-official.de/en/mastering/ (prices, process, file prep, FAQ)
-- Request form: https://codechaos-official.de/#mastering-form · Email: polished.media@gmx.de · Website: https://polished.media
-
-## Code Chaos Audio, Plugins
-
-- **Crucible** 1.1.0, a 3-band harmonic saturation plugin: VST3 + standalone for Windows 10+. Price: €19 on Gumroad (single-user, perpetual license). Activation with the license key from the Gumroad receipt, up to 3 computers, works offline for up to 60 days after activation. Free demo (noise burst every 45 s): https://timberwolf688.gumroad.com/l/crucible-demo
-  - Splits the signal into Low, Mid and High bands, each saturated independently.
-  - Five saturation types, selectable per band: Hard Clip, Wavefolder, Tube, Diode, Tape.
-  - Per-band Drive, Mix and Gain; adjustable crossovers; per-band Mute/Solo; oversampling up to 8x.
-  - Built for Psytrance, Hitech, Psycore and Darkpsy producers, but works on any source (mixing & mastering).
-  - Tagline: "Shape. Saturate. Dominate." / "From subtle warmth to full-on destruction."
-  - Buy / download: https://timberwolf688.gumroad.com/l/crucible
-  - Product page: https://codechaos-official.de/crucible.html
-- **Plugin overview (German):** https://codechaos-official.de/plugins/ . All plugins are sold on Gumroad; every paid plugin has a free demo (full plugin, short noise burst every 45 s). macOS builds: Apple Silicon (arm64) only, not signed or notarized; no AU format, so not usable in Logic Pro.
-- **Kick+Bass Engine**, kick and rolling bass in one instrument for psytrance, hitech and psycore at 140–300+ BPM: kick tuned to the bass note and ended before the first bass note (0 ms kick energy after the bass start in our measurements at 145–250 BPM), 8 rolling patterns, 4 bass modes, kick designer, built-in scope, mono below 150 Hz, 14 factory presets. VST3 + standalone, Windows 10/11 and macOS (Apple Silicon, unsigned). €24. Page: https://codechaos-official.de/plugins/psy-kick-bass/ · Buy: https://timberwolf688.gumroad.com/l/psy-kick-bass · Demo: https://timberwolf688.gumroad.com/l/psy-kick-bass-demo
-- **Shardstep**, tempo-synced stutter & glitch effect for hitech and psycore at 200–300 BPM: 16-step pattern (repeats 1/8 to 1/64 incl. triplets, reverse, tape stop, gate, crush), MIDI trigger, slice fades 0.5–8 ms, zero latency, 15 factory patterns. VST3 + standalone, Windows 10/11 and macOS (Apple Silicon). €15. Page: https://codechaos-official.de/plugins/shardstep/ · Buy: https://timberwolf688.gumroad.com/l/shardstep · Demo: https://timberwolf688.gumroad.com/l/shardstep-demo
-- **Chaos FM**, 3-operator FM synth for hitech, psycore and darkpsy: 3 algorithms, filter with drive, up to 4-voice unison, mono/legato with glide, GENERATE button (Lead, Bass, Acid, Stab, Pluck, FX), 12 factory presets. VST3 + standalone, Windows 10/11 only. €19. Page: https://codechaos-official.de/plugins/chaos-fm/ · Buy: https://timberwolf688.gumroad.com/l/chaos-fm · Demo: https://timberwolf688.gumroad.com/l/chaos-fm-demo
-- **Kick/Bass Scope** (free, pay what you want), beat-synced oscilloscope that shows kick and bass on top of each other: peaks in dBFS, clip line, sum curve, kick/bass correlation with phase warning, 13 presets, audio passes through bit-identical. VST3 + standalone, Windows 10/11 and macOS (Apple Silicon). Page: https://codechaos-official.de/plugins/kick-bass-scope/ · Download: https://timberwolf688.gumroad.com/l/kick-bass-scope
-- **Frostfret** (Black Metal Suite), physically modelled guitar instrument played from MIDI, no samples: electric (pickup models), steel-string and nylon acoustic, electric bass; tremolo picking synced to the host, palm mute, legato, slides, strumming, double tracking; built-in Gravesaw amp DSP (clean to high gain) or DI out; 30 presets. VST3 instrument + standalone, Windows 10/11 and macOS (Apple Silicon). €29. Page: https://codechaos-official.de/plugins/frostfret/ · Buy: https://timberwolf688.gumroad.com/l/frostfret · Demo: https://timberwolf688.gumroad.com/l/frostfret-demo
-- **Hoarfell** (Black Metal Suite), modelled drums (General MIDI map, blast-ready), electric bass and atmos (vowel choir pad, organ, strings pad, bell, celesta, lo-fi keys), no samples; 20 presets. VST3 instrument + standalone, Windows 10/11 and macOS (Apple Silicon). €17. Page: https://codechaos-official.de/plugins/hoarfell/ · Buy: https://timberwolf688.gumroad.com/l/hoarfell · Demo: https://timberwolf688.gumroad.com/l/hoarfell-demo
-- **Black Metal Suite Essentials** bundle: Gravesaw, Rimehall, Black Metal Tone Kit and Black Metal Drum Kit for €39 instead of €59. Buy: https://timberwolf688.gumroad.com/l/black-metal-suite
-- **Black Metal Suite Complete** bundle: Frostfret, Hoarfell, Gravesaw, Rimehall, Black Metal Tone Kit and Black Metal Drum Kit for €69 instead of €105. Buy: https://timberwolf688.gumroad.com/l/black-metal-suite-complete
-- **Gravesaw** (the amp of the Black Metal Suite), black metal amp with built-in cab for guitar and bass DI: noise gate, tight, 4x oversampled gain (raw/thick), tone stack with Fizz and Presence, 19 synthesised cabs or cab off, 16 presets, latency 61 samples. VST3 + standalone, Windows 10/11 and macOS (Apple Silicon). €19. Page: https://codechaos-official.de/plugins/gravesaw/ · Buy: https://timberwolf688.gumroad.com/l/gravesaw · Demo: https://timberwolf688.gumroad.com/l/gravesaw-demo
-- **Rimehall** (Black Metal Suite part 2), cold reverb, octave shimmer and tape/lo-fi atmosphere bus with ducking: decay 0.3–30 s, Frost tone control, wow/flutter/saturation/hiss, 14 presets, constant 4 ms latency. VST3 + standalone, Windows 10/11 and macOS (Apple Silicon). €19. Page: https://codechaos-official.de/plugins/rimehall/ · Buy: https://timberwolf688.gumroad.com/l/rimehall · Demo: https://timberwolf688.gumroad.com/l/rimehall-demo
-
-## Definitions (genre guide)
+## Definitions
 
 - **Psycore:** A Psytrance subgenre at 180–300+ BPM combining dark psychedelic soundscapes with hardcore energy; dense atmospheric pads, experimental sound design, minimal sine-wave percussion. Typical range 190–240 BPM.
 - **Hitech / Hi-Tech Psytrance:** Fast (≈170–230 BPM, typically 180–200), complex, glitchy, hyper-detailed psychedelic trance; can be dark or euphoric.
@@ -79,31 +76,20 @@ Last updated: 2026-11-10
 - Psycore artists (selection): Phreneticus (Salzburg), Apollyon, Tzu-Jan, Fele, Xenrox, Code Chaos.
 - Hitech artists/DJs (selection): Highko (German pioneer, with Cosmo), Psykovsky, Alien Chaos, Will O Wisp, Inner Coma, Killa TK, Gotalien, Audiopathik, BionicForm, Xenrox, Mad Scientist, Code Chaos.
 - Darkpsy artists/DJs (selection): Xenomorph (Mark Petrick, Berlin), Kindzadza (Moscow), Fungus Funk (Moscow, since 2001), Psykovsky, Para Halu (Hungary), Baphomet Engine (Brazil), Cosmo, Code Chaos.
-- Full genre guides (German): https://codechaos-official.de/psycore/ · https://codechaos-official.de/hitech-psytrance/ · https://codechaos-official.de/darkpsy/
-- Full genre guides (English): https://codechaos-official.de/en/psycore/ · https://codechaos-official.de/en/hitech-psytrance/ · https://codechaos-official.de/en/darkpsy/
-- BPM guide: https://codechaos-official.de/#bpm-guide · FAQ: https://codechaos-official.de/#faq
 
 ## Important links
 
-- Home (German): https://codechaos-official.de/
-- Home (English): https://codechaos-official.de/en/
-- All plugins (German): https://codechaos-official.de/plugins/
-- Next release, Wiedergänger Vol. I · Was nicht ruhen will (4 December 2026): https://codechaos-official.de/wiedergaenger-vol-1/ · https://codechaos-official.de/en/wiedergaenger-vol-1/
-- Single Uhrwerk aus Blut (30 October 2026): https://codechaos-official.de/uhrwerk-aus-blut/ · https://codechaos-official.de/en/uhrwerk-aus-blut/
-- Samples, MIDI and presets (German): https://codechaos-official.de/sounds/ . File products by Code Chaos Audio, all synthesised or built by Code Chaos, royalty-free for own releases, no login or licence server: Black Metal Drum Kit (€12, 47 drum samples + 30 MIDI grooves), Black Metal MIDI Grooves 2 (€9, 74 grooves), Black Metal Tone Kit (€9, 19 cab IRs + 16 REAPER chains), Hitech Arsenal Vol. 1 (€15, 120 samples), Hitech FM for Vital (€12, 32 presets), Hitech FM for Serum 2 (€12, 24 presets), Hitech FM Industrial (€9, 30 Vital + 26 Serum 2 presets), Psycore Production Template for Ableton Live 12 (€19, 77 tracks).
-- Guide (German): https://codechaos-official.de/ratgeber/gitarrensound-ableton/ . Five steps for heavy guitar tone in Ableton Live: input level into the amp sim, filtering before distortion, loading a cab impulse response (Hybrid Reverb in Live Suite or any IR loader), taming fizz in the cab, and mono-safe double tracking.
-- Crucible plugin: https://codechaos-official.de/crucible.html
-- Buy Crucible (Gumroad): https://timberwolf688.gumroad.com/l/crucible
-- Music (Bandcamp): https://codechaos.bandcamp.com
-- SoundCloud: https://soundcloud.com/codechaos
-- Instagram: https://www.instagram.com/codechaos_official
-- TikTok: https://www.tiktok.com/@codechaos_abstractsound
-- X: https://x.com/codechaos_music
-- Threads: https://www.threads.net/@codechaos_official
-- YouTube: https://www.youtube.com/@codechaos_abstractsounddesign
-- Discogs: https://www.discogs.com/artist/18204093-Code-Chaos
-- MusicBrainz: https://musicbrainz.org/artist/14d40d24-a91e-4600-a1b3-d14682d32e42
-- Wikipedia (German): https://de.wikipedia.org/wiki/Code_Chaos
-- Wikidata: https://www.wikidata.org/wiki/Q141646843 (Label Abstract Sound Design: https://www.wikidata.org/wiki/Q141646831)
-- Label (Abstract Sound Design): https://www.abstract-sound-design.de/
-- Mastering (Polished Media): https://polished.media
+- [Home (German)](https://codechaos-official.de/): plugins, mastering, releases, genre guide
+- [Home (English)](https://codechaos-official.de/en/): the same in English
+- [SoundCloud](https://soundcloud.com/codechaos)
+- [Instagram](https://www.instagram.com/codechaos_official)
+- [TikTok](https://www.tiktok.com/@codechaos_abstractsound)
+- [X](https://x.com/codechaos_music)
+- [Threads](https://www.threads.net/@codechaos_official)
+- [YouTube](https://www.youtube.com/@codechaos_abstractsounddesign)
+- [Discogs](https://www.discogs.com/artist/18204093-Code-Chaos)
+- [MusicBrainz](https://musicbrainz.org/artist/14d40d24-a91e-4600-a1b3-d14682d32e42)
+- [Wikipedia (German)](https://de.wikipedia.org/wiki/Code_Chaos)
+- [Wikidata](https://www.wikidata.org/wiki/Q141646843): Code Chaos; label: [Abstract Sound Design on Wikidata](https://www.wikidata.org/wiki/Q141646831)
+- [Label Abstract Sound Design](https://www.abstract-sound-design.de/)
+- [Polished Media](https://polished.media): separate mastering studio by Tim Borchert for metal and gothic only

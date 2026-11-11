@@ -13,7 +13,7 @@ from content_en_home import EN_HOME                   # noqa: E402
 from content_en_mastering import EN_MASTERING, FORM   # noqa: E402
 from content_de_mastering import DE_MASTERING, FORM_DE  # noqa: E402
 from flags import UK as FLAG_UK, DE as FLAG_DE       # noqa: E402
-from content_plugins import PLUGINS, CRUCIBLE, GROUPS, GENRE_PLUGINS, GUMROAD  # noqa: E402
+from content_plugins import PLUGINS, GROUPS, GENRE_PLUGINS, GUMROAD  # noqa: E402
 import geo                                            # noqa: E402
 from geo import DATUM, autor_ld, publisher_ld        # noqa: E402
 
@@ -37,6 +37,13 @@ UI = {
                follow="Follow Code Chaos", other="More genre guides", foot="Hitech, Psycore & Darkpsy producer from Hamburg, Germany. Studio project.",
                home_url="/en/", mastering_url="/en/mastering/", releases_url="/en/#releases"),
 }
+
+# sameAs der Künstler-Entität (wie schema_home.py)
+SAME_AS = ["https://codechaos.bandcamp.com", "https://soundcloud.com/codechaos", "https://www.instagram.com/codechaos_official",
+           "https://www.tiktok.com/@codechaos_abstractsound", "https://x.com/codechaos_music", "https://www.threads.net/@codechaos_official",
+           "https://www.youtube.com/@codechaos_abstractsounddesign", "https://www.discogs.com/artist/18204093-Code-Chaos",
+           "https://musicbrainz.org/artist/14d40d24-a91e-4600-a1b3-d14682d32e42", "https://www.wikidata.org/wiki/Q141646843",
+           "https://de.wikipedia.org/wiki/Code_Chaos"]
 
 SOCIAL = [("Bandcamp", "https://codechaos.bandcamp.com"), ("SoundCloud", "https://soundcloud.com/codechaos"),
           ("Instagram", "https://www.instagram.com/codechaos_official"), ("TikTok", "https://www.tiktok.com/@codechaos_abstractsound"),
@@ -103,13 +110,13 @@ def nav(lang, alt_url, current):
     for g in GENRES:
         items.append((g[lang]["nav"], f"{pre}/{g['slug']}/", g["slug"]))
     items += [(u["releases"], u["releases_url"], "rel"), (u["mastering"], u["mastering_url"], "mast"),
-              ("Plugins", "/plugins/", "plug") if lang == "de" else ("Crucible", "/crucible.html", "cru")]
+              ("Plugins", "/plugins/", "plug") if lang == "de" else ("Crucible", "/en/plugins/crucible/", "cru")]
     cur = ' aria-current="page"'
     lis = "".join(
         f'<li><a href="{h}"{cur if k == current else ""}>{esc(t)}</a></li>' for t, h, k in items)
     alt_href = (alt_url or BASE + ("/en/" if lang == "de" else "/")).replace(BASE, "")
     other = "en" if lang == "de" else "de"
-    switch = (f'<a class="lang-switch" href="{alt_href}" hreflang="{other}" lang="{other}" aria-label="{"English version" if lang == "de" else "Deutsche Version"}">'
+    switch = (f'<a class="lang-switch" href="{alt_href}" hreflang="{other}" lang="{other}" aria-label="{"EN – English version" if lang == "de" else "DE – Deutsche Version"}">'
               f'{FLAG_UK if lang == "de" else FLAG_DE}<span>{other.upper()}</span></a>')
     return f"""<body>
 <a class="skip" href="#main">{u['skip']}</a>
@@ -133,7 +140,7 @@ def footer(lang):
   <div class="wrap">
     <div class="cols">
       <div><img src="/images/brand/codechaos-logo-bone-240.webp" width="120" height="70" loading="lazy" alt="Code Chaos Logo" style="height:70px;width:auto;margin-bottom:10px"><p>{esc(u['foot'])}</p></div>
-      <div><h2>{u['genres']}</h2><ul>{genre_links}<li><a href="/crucible.html">Crucible Plugin</a></li>{'<li><a href="/plugins/">Alle Plugins</a></li>' if lang == "de" else ""}</ul></div>
+      <div><h2>{u['genres']}</h2><ul>{genre_links}<li><a href="{'/plugins/crucible/' if lang == 'de' else '/en/plugins/crucible/'}">Crucible Plugin</a></li>{'<li><a href="/plugins/">Alle Plugins</a></li>' if lang == "de" else ""}</ul></div>
       <div><h2>{u['follow']}</h2><ul>{social}</ul></div>
       <div><h2>{u['legal']}</h2><ul><li><a href="/#impressum">{u['imprint']}</a></li><li><a href="/#datenschutz">{u['privacy']}</a></li><li><a href="#cookies" class="cookie-settings-link">{'Cookie-Einstellungen' if lang == 'de' else 'Cookie settings'}</a></li><li><a href="{'/en/' if lang == 'de' else '/'}" hreflang="{'en' if lang == 'de' else 'de'}">{'English version' if lang == 'de' else 'Deutsche Version'}</a></li></ul></div>
     </div>
@@ -235,7 +242,7 @@ def build_genre(g, lang):
   <div class="wrap narrow prose">
     <h2 id="cta-t">{c['cta_title']}</h2>
     <p>{c['cta']}</p>
-    <div class="btns"><a class="btn btn-blood" href="{u['mastering_url']}">{c['cta_btn1']}</a><a class="btn btn-ghost" href="/crucible.html">Crucible Plugin</a></div>
+    <div class="btns"><a class="btn btn-blood" href="{u['mastering_url']}">{c['cta_btn1']}</a><a class="btn btn-ghost" href="{pre}/plugins/crucible/">Crucible Plugin</a></div>
   </div>
 </section>
 {genre_plugins_html(g, lang)}<section aria-labelledby="other-t">
@@ -264,6 +271,30 @@ def build_en_home():
          "datePublished": TODAY, "dateModified": DATUM, "author": autor_ld()},
         {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": "en", "mainEntity": [
             {"@type": "Question", "name": strip(q), "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in h["faq"]]},
+        {"@type": "MusicGroup", "@id": ARTIST, "name": "Code Chaos", "alternateName": ["Code-Chaos", "CodeChaos"],
+         "description": "Code Chaos is a hitech psytrance, psycore and darkpsy producer from Hamburg, Germany, and the studio project of Tim Borchert. "
+                        "Self-described style: New Psychedelic Death Art. Active since 2016 with 24+ releases on labels including Abstract Sound Design "
+                        "(co-founded in 2021), TATEWARI Records (Mexico) and Soma Ritual Records (India). Today a studio-only project without bookings.",
+         "genre": ["Hitech Psytrance", "Psycore", "Darkpsy", "Dark Psytrance", "Psytrance"], "foundingDate": "2016",
+         "foundingLocation": {"@type": "Place", "name": "Hamburg", "address": {"@type": "PostalAddress", "addressLocality": "Hamburg", "addressCountry": "DE"}},
+         "slogan": "New Psychedelic Death Art", "url": BASE + "/", "logo": BASE + "/images/brand/codechaos-logo-bone-480.webp",
+         "image": BASE + "/images/brand/portrait-press-1200.jpg", "sameAs": SAME_AS, "member": {"@id": PERSON}},
+        {"@type": "Service", "@id": url + "#mastering", "name": "Code Chaos Mastering: mastering for psycore, hitech psytrance and darkpsy",
+         "serviceType": "Audio Mastering", "brand": {"@type": "Brand", "name": "Code Chaos Mastering"},
+         "description": "Genre-specific audio mastering for psycore, hitech psytrance and darkpsy by an active producer. Single (stereo) €79, Stem Pro €129, "
+                        "EP up to 5 tracks €349, album up to 10 tracks €629, incl. 19% German VAT, audio audit and unlimited revisions.",
+         "provider": {"@id": PERSON}, "areaServed": "Worldwide", "availableLanguage": ["de", "en"], "url": BASE + "/en/mastering/",
+         "offers": [{"@type": "Offer", "name": n, "price": pr, "priceCurrency": "EUR", "url": BASE + "/en/mastering/#request",
+                     "priceSpecification": {"@type": "PriceSpecification", "price": pr, "priceCurrency": "EUR", "valueAddedTaxIncluded": True}}
+                    for n, pr in [("Single: stereo mastering (1 track)", "79"), ("Stem Pro: stem mastering (1 track, up to 6 stems)", "129"),
+                                  ("EP mastering (up to 5 tracks)", "349"), ("Album mastering (up to 10 tracks)", "629"),
+                                  ("Cover art", "99"), ("Lyric video", "179"), ("Promo video (60 s)", "299")]]},
+        {"@type": "ItemList", "@id": url + "#plugins", "name": "Plugins by Code Chaos Audio", "numberOfItems": len(LIVE),
+         "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": {
+             "@type": "SoftwareApplication", "name": p["name"], "url": BASE + (f"/en/plugins/{p['slug']}/" if p.get("en") else plugin_url(p)),
+             "applicationCategory": "MultimediaApplication", "operatingSystem": p["os"], "brand": {"@type": "Brand", "name": "Code Chaos Audio"},
+             "offers": {"@type": "Offer", "price": f"{p['price']:.2f}", "priceCurrency": "EUR", "url": GUMROAD + p["slug"],
+                        "availability": "https://schema.org/InStock"}}} for i, p in enumerate(LIVE)]},
     ]}
     genre_cards = "".join(
         f'<div class="card"><div class="bpm">{g["en"]["bpm"]}</div><h3>{esc(g["en"]["nav"])}</h3><p>{g["en"]["teaser"]}</p>'
@@ -292,11 +323,11 @@ def build_mastering(lang):
     if lang == "de":
         offers = [("Single: Stereo Mastering (1 Track)", "79"), ("Stem Pro: Stem Mastering (1 Track, bis 6 Stems)", "129"), ("EP Mastering (bis 5 Tracks)", "349"),
                   ("Album Mastering (bis 10 Tracks)", "629"), ("Cover Art", "99"), ("Lyric Video", "179"), ("Promo Video (60 Sekunden)", "299")]
-        sname, home = "Psytrance Mastering für Psycore, Hitech und Darkpsy", "Startseite"
+        sname, home = "Code Chaos Mastering: Psytrance Mastering für Psycore, Hitech und Darkpsy", "Startseite"
     else:
         offers = [("Single: stereo mastering (1 track)", "79"), ("Stem Pro: stem mastering (1 track, up to 6 stems)", "129"), ("EP mastering (up to 5 tracks)", "349"),
                   ("Album mastering (up to 10 tracks)", "629"), ("Cover art", "99"), ("Lyric video", "179"), ("Promo video (60 s)", "299")]
-        sname, home = "Psytrance mastering for psycore, hitech and darkpsy", "Home"
+        sname, home = "Code Chaos Mastering: psytrance mastering for psycore, hitech and darkpsy", "Home"
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": m["title"], "description": m["desc"], "inLanguage": lang,
          "isPartOf": {"@id": BASE + "/#website"}, "mainEntity": {"@id": url + "#service"}, "datePublished": TODAY, "dateModified": DATUM,
@@ -306,9 +337,8 @@ def build_mastering(lang):
          "author": autor_ld(), "publisher": publisher_ld(), "image": BASE + "/images/og/mastering.jpg", "about": {"@id": url + "#service"},
          "isPartOf": {"@id": BASE + "/#website"}},
         {"@type": "Service", "@id": url + "#service", "name": sname, "serviceType": "Audio Mastering",
-         "description": m["desc"], "provider": {"@id": "https://polished.media/#org"}, "areaServed": "Worldwide", "availableLanguage": ["de", "en"], "url": url,
+         "description": m["desc"], "brand": {"@type": "Brand", "name": "Code Chaos Mastering"}, "provider": {"@id": PERSON}, "areaServed": "Worldwide", "availableLanguage": ["de", "en"], "url": url,
          "offers": [{"@type": "Offer", "name": n, "price": p, "priceCurrency": "EUR", "url": url + "#request", "priceSpecification": {"@type": "PriceSpecification", "price": p, "priceCurrency": "EUR", "valueAddedTaxIncluded": True}} for n, p in offers]},
-        {"@type": "Organization", "@id": "https://polished.media/#org", "name": "Polished Media", "url": "https://polished.media", "email": "polished.media@gmx.de", "founder": {"@id": PERSON}},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": home, "item": BASE + UI[lang]["home_url"]},
             {"@type": "ListItem", "position": 2, "name": "Mastering", "item": url}]},
@@ -413,7 +443,7 @@ def build_404():
       <div class="card"><h3>Uhrwerk aus Blut</h3><p>Die Single, erschienen am 30.10.2026.</p><a class="more" href="/uhrwerk-aus-blut/">Zur Single →</a></div>
       <div class="card"><h3>Mastering</h3><p>Psycore, Hitech &amp; Darkpsy: Single 79 €, EP 349 €, Album 629 €.</p><a class="more" href="/mastering/">Preise &amp; Ablauf →</a></div>
       <div class="card"><h3>Genre Guides</h3><p><a href="/psycore/">Psycore</a> · <a href="/hitech-psytrance/">Hitech</a> · <a href="/darkpsy/">Darkpsy</a></p></div>
-      <div class="card"><h3>Crucible</h3><p>3-Band Harmonic Saturation Plugin von Code Chaos Audio.</p><a class="more" href="/crucible.html">Zum Plugin →</a></div>
+      <div class="card"><h3>Crucible</h3><p>3-Band Harmonic Saturation Plugin von Code Chaos Audio.</p><a class="more" href="/plugins/crucible/">Zum Plugin →</a></div>
     </div>
   </div>
 </section>
@@ -435,7 +465,6 @@ def build_404():
 
 LIVE = [p for p in PLUGINS if p["live"]]
 BY_SLUG = {p["slug"]: p for p in LIVE}
-BY_SLUG["crucible"] = CRUCIBLE
 
 
 def utm(slug, campaign):
@@ -464,23 +493,39 @@ def picture(slug, name, w, h, alt, lazy=True, has_1600=True, sizes="(max-width: 
             f'<img src="{base}-880.jpg" width="880" height="{round(h * 880 / w)}" {load} alt="{esc(alt)}"></picture>')
 
 
-def cta_buttons(p, campaign, big=True):
+PL = {
+    "de": dict(free_dl="Kostenlos herunterladen", buy="Kaufen", demo="Kostenlose Demo", home="Startseite", home_url="/",
+               play="▶ Abspielen", pause="❚❚ Pause", listen_t="{name} anhören", listen_id="hoeren", listen_link="▶ Hörprobe anhören",
+               real_gui="Die echte Oberfläche von {name}.", glance="{name} auf einen Blick", features="Funktionen",
+               tested="Was getestet wurde", good="Gut zu wissen", formats="Formate und Systeme", det_tested="Tests, Formate und Systeme",
+               faq="Häufige Fragen zu {name}", get="{name} holen", sticky_buy="{name} kaufen · {price}", by="von Code Chaos Audio"),
+    "en": dict(free_dl="Free download", buy="Buy", demo="Free demo", home="Home", home_url="/en/",
+               play="▶ Play", pause="❚❚ Pause", listen_t="Listen to {name}", listen_id="listen", listen_link="▶ Listen to the A/B demo",
+               real_gui="The real {name} interface.", glance="{name} at a glance", features="Features",
+               tested="What was tested", good="Good to know", formats="Formats and systems", det_tested="Tests, formats and systems",
+               faq="{name} FAQ", get="Get {name}", sticky_buy="Get {name} · {price}", by="by Code Chaos Audio"),
+}
+
+
+def price_l(price, lang):
+    if lang == "de":
+        return euro(price)
+    return "free" if price == 0 else f"€{price}"
+
+
+def cta_buttons(p, campaign, big=True, lang="de"):
     """Kauf- und Demo-Buttons. Gratis-Plugin: nur ein Download-Button."""
+    L = PL[lang]
     if p["price"] == 0:
-        return f'<a class="btn btn-blood" href="{utm(p["slug"], campaign)}">Kostenlos herunterladen</a>'
-    return (f'<a class="btn btn-blood" href="{utm(p["slug"], campaign)}">Kaufen · {euro(p["price"])}</a>'
-            f'<a class="btn btn-ghost" href="{utm(p["slug"] + "-demo", campaign)}">Kostenlose Demo</a>')
+        return f'<a class="btn btn-blood" href="{utm(p["slug"], campaign)}">{L["free_dl"]}</a>'
+    return (f'<a class="btn btn-blood" href="{utm(p["slug"], campaign)}">{L["buy"]} · {price_l(p["price"], lang)}</a>'
+            f'<a class="btn btn-ghost" href="{utm(p["slug"] + "-demo", campaign)}">{L["demo"]}</a>')
 
 
 def plugin_card(p, campaign):
-    """Karte für Übersicht und Querverweise: Bild, 1 Satz, Preis, Links."""
-    if p["slug"] == "crucible":
-        img = (f'<picture><source type="image/webp" srcset="{p["img_webp"]}"><img src="{p["img_jpg"]}" width="{p["w"]}" height="{p["h"]}" '
-               f'loading="lazy" decoding="async" alt="{esc(p["alt"])}"></picture>')
-        os_line = p["os"]
-    else:
-        img = picture(p["slug"], "gui", p["gui_w"], p["gui_h"], p["gui_alt"], sizes="(max-width: 700px) 100vw, 340px")
-        os_line = p["os"]
+    """Karte für Übersicht und Querverweise (DE): Bild, 1 Satz, Preis, Links."""
+    img = picture(p["slug"], "gui", p["gui_w"], p["gui_h"], p["gui_alt"], sizes="(max-width: 700px) 100vw, 340px")
+    os_line = p["os"]
     links = (f'<a href="{utm(p["slug"], campaign)}">Kostenlos laden</a>' if p["price"] == 0 else
              f'<a href="{utm(p["slug"] + "-demo", campaign)}">Kostenlose Demo</a><a href="{utm(p["slug"], campaign)}">Kaufen</a>')
     return (f'<article class="pcard"><a class="pcard-img" href="{plugin_url(p)}" tabindex="-1" aria-hidden="true">{img}</a>'
@@ -489,42 +534,46 @@ def plugin_card(p, campaign):
             f'<p class="pcard-links"><a href="{plugin_url(p)}">Details &amp; Hörprobe</a>{links}</p></div></article>')
 
 
-def audio_html(p):
+def audio_html(p, lang="de", t=None):
+    """t = sprachspezifische Texte (bei EN aus p['en']); Dateien immer aus p."""
+    t = t or p
+    L = PL[lang]
     if not p.get("audio"):
         return ""
     base = f"/audio/plugins/{p['slug']}/"
+    labels = t["audio"] if lang != "de" else [a["label"] for a in p["audio"]]
     if p["audio_mode"] == "ab":
         a, b = p["audio"]
         player = f"""<div class="ab">
       <audio id="ab-a" src="{base}{a['file']}" preload="metadata" loop></audio>
       <audio id="ab-b" src="{base}{b['file']}" preload="metadata" loop></audio>
       <div class="ab-row">
-        <button type="button" class="ab-play" id="ab-play">▶ Abspielen</button>
-        <button type="button" id="ab-dry" aria-pressed="true">{esc(a['label'])}</button>
-        <button type="button" id="ab-wet" aria-pressed="false">{esc(b['label'])}</button>
+        <button type="button" class="ab-play" id="ab-play">{L['play']}</button>
+        <button type="button" id="ab-dry" aria-pressed="true">{esc(labels[0])}</button>
+        <button type="button" id="ab-wet" aria-pressed="false">{esc(labels[1])}</button>
       </div>
     </div>
 <script>
 (function(){{var a=document.getElementById('ab-a'),b=document.getElementById('ab-b'),p=document.getElementById('ab-play'),d=document.getElementById('ab-dry'),w=document.getElementById('ab-wet');if(!a||!b)return;
 var wet=false,playing=false;function mix(){{a.muted=wet;b.muted=!wet;d.setAttribute('aria-pressed',wet?'false':'true');w.setAttribute('aria-pressed',wet?'true':'false');}}
-p.addEventListener('click',function(){{if(playing){{a.pause();b.pause();playing=false;p.textContent='▶ Abspielen';return;}}
-b.currentTime=a.currentTime;mix();Promise.all([a.play(),b.play()]).then(function(){{playing=true;p.textContent='❚❚ Pause';}}).catch(function(){{}});}});
+p.addEventListener('click',function(){{if(playing){{a.pause();b.pause();playing=false;p.textContent='{L['play']}';return;}}
+b.currentTime=a.currentTime;mix();Promise.all([a.play(),b.play()]).then(function(){{playing=true;p.textContent='{L['pause']}';}}).catch(function(){{}});}});
 d.addEventListener('click',function(){{wet=false;mix();}});w.addEventListener('click',function(){{wet=true;if(playing&&Math.abs(a.currentTime-b.currentTime)>0.05)b.currentTime=a.currentTime;mix();}});mix();}})();
 </script>"""
     else:
         parts = []
-        for a in p["audio"]:
+        for a, lab in zip(p["audio"], labels):
             ch = ""
             if a.get("chapters"):
-                ch = '<ol class="chapters">' + "".join(f"<li><span>{t}</span> {esc(l)}</li>" for t, l in a["chapters"]) + "</ol>"
-            parts.append(f'<figure class="track"><figcaption>{esc(a["label"])}</figcaption>'
+                ch = '<ol class="chapters">' + "".join(f"<li><span>{tt}</span> {esc(l)}</li>" for tt, l in a["chapters"]) + "</ol>"
+            parts.append(f'<figure class="track"><figcaption>{esc(lab)}</figcaption>'
                          f'<audio controls preload="metadata" src="{base}{a["file"]}"></audio>{ch}</figure>')
         player = "".join(parts)
-    note = f'<p class="note">{esc(p["audio_note"])}</p>' if p.get("audio_note") else ""
-    return f"""<section class="alt" id="hoeren" aria-labelledby="hoeren-t">
+    note = f'<p class="note">{esc(t["audio_note"])}</p>' if t.get("audio_note") else ""
+    return f"""<section class="alt" id="{L['listen_id']}" aria-labelledby="hoeren-t">
   <div class="wrap narrow">
-    <h2 id="hoeren-t">{esc(p['name'])} anhören</h2>
-    <p class="prose">{esc(p['audio_intro'])}</p>
+    <h2 id="hoeren-t">{esc(L['listen_t'].format(name=p['name']))}</h2>
+    <p class="prose">{esc(t['audio_intro'])}</p>
     {player}
     {note}
   </div>
@@ -532,92 +581,133 @@ d.addEventListener('click',function(){{wet=false;mix();}});w.addEventListener('c
 """
 
 
-def build_plugin(p):
+def build_plugin(p, lang="de"):
+    """Plugin-Landingpage. lang="en" nur für Plugins mit p["en"] (Texte dort, Fakten/Dateien aus p)."""
+    L = PL[lang]
+    t = p if lang == "de" else {**p, **p["en"]}
     slug, name = p["slug"], p["name"]
-    url = f"{BASE}/plugins/{slug}/"
+    pre = "" if lang == "de" else "/en"
+    url = f"{BASE}{pre}/plugins/{slug}/"
+    alt_url = (f"{BASE}/en/plugins/{slug}/" if lang == "de" else f"{BASE}/plugins/{slug}/") if p.get("en") else None
     og = f"{BASE}/images/plugins/{slug}/og.jpg"
     buy, demo = GUMROAD + slug, GUMROAD + slug + "-demo"
     price = f"{p['price']:.2f}"
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": p["title"], "description": p["desc"], "inLanguage": "de",
+        {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": t["title"], "description": t["desc"], "inLanguage": lang,
          "isPartOf": {"@id": BASE + "/#website"}, "mainEntity": {"@id": url + "#product"}, "primaryImageOfPage": {"@type": "ImageObject", "url": og, "width": 1200, "height": 630},
          "datePublished": PLUGIN_DATE, "dateModified": DATUM, "author": autor_ld()},
-        {"@type": ["Product", "SoftwareApplication"], "@id": url + "#product", "name": name, "description": strip(p["answer"]),
+        {"@type": ["Product", "SoftwareApplication"], "@id": url + "#product", "name": name, "description": strip(t["answer"]),
          "author": autor_ld(), "dateModified": DATUM,
-         "applicationCategory": "MultimediaApplication", "applicationSubCategory": p["sub"], "operatingSystem": p["os"],
+         "applicationCategory": "MultimediaApplication", "applicationSubCategory": p["sub"] if lang == "de" else "Audio plugin (VST3)", "operatingSystem": t["os"],
          "brand": {"@type": "Brand", "name": "Code Chaos Audio"}, "category": "Audio Plugin",
          "image": og, "screenshot": f"{BASE}/images/plugins/{slug}/gui-880.jpg", "url": url,
-         "downloadUrl": buy, "featureList": [strip(f) for f in p["features"]],
+         "downloadUrl": buy, "featureList": [strip(f) for f in t["features"]],
          "offers": {"@type": "Offer", "url": buy, "price": price, "priceCurrency": "EUR", "availability": "https://schema.org/InStock",
                     "seller": {"@type": "Organization", "name": "Code Chaos Audio", "url": BASE + "/plugins/"}}},
         {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Startseite", "item": BASE + "/"},
+            {"@type": "ListItem", "position": 1, "name": L["home"], "item": BASE + L["home_url"]},
             {"@type": "ListItem", "position": 2, "name": "Plugins", "item": BASE + "/plugins/"},
             {"@type": "ListItem", "position": 3, "name": name, "item": url}]},
-        {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": "de", "mainEntity": [
-            {"@type": "Question", "name": strip(q), "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in p["faq"]]},
+        {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": lang, "mainEntity": [
+            {"@type": "Question", "name": strip(q), "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in t["faq"]]},
     ]}
+    if p.get("version"):
+        ld["@graph"][1]["softwareVersion"] = p["version"]
     if p["price"] > 0:
         ld["@graph"][1]["isRelatedTo"] = {"@type": "SoftwareApplication", "name": f"{name} Demo", "url": demo,
-                                          "applicationCategory": "MultimediaApplication", "operatingSystem": p["os"],
+                                          "applicationCategory": "MultimediaApplication", "operatingSystem": t["os"],
                                           "offers": {"@type": "Offer", "price": "0.00", "priceCurrency": "EUR", "url": demo}}
-    specs = "".join(f'<tr><th scope="row">{k}</th><td>{v}</td></tr>' for k, v in p["specs"])
-    feats = "".join(f"<li>{f}</li>" for f in p["features"])
-    fmt_line = "VST3 + Standalone · " + p["os"]
+    specs = "".join(f'<tr><th scope="row">{k}</th><td>{v}</td></tr>' for k, v in t["specs"])
+    feats = "".join(f"<li>{f}</li>" for f in t["features"])
+    fmt_line = "VST3 + Standalone · " + t["os"]
     extra_imgs = "".join(
         f'<figure class="shot">{picture(slug, i["name"], i["w"], i["h"], i["alt"], sizes="(max-width: 800px) 100vw, 740px")}<figcaption>{esc(i["caption"])}</figcaption></figure>'
         for i in p.get("extra_images", []))
     more = []
-    if p.get("extra_prose"):
-        more.append(p["extra_prose"])
-    if p.get("routing"):
-        more.append(f"<h3>Routing</h3><p>{p['routing']}</p>")
-    if p.get("pairs"):
-        more.append(f"<p>{p['pairs']}</p>")
+    if t.get("extra_prose"):
+        more.append(t["extra_prose"])
+    if t.get("routing"):
+        more.append(f"<h3>Routing</h3><p>{t['routing']}</p>")
+    if t.get("pairs"):
+        more.append(f"<p>{t['pairs']}</p>")
+    extra_secs = "".join(f"""<section aria-labelledby="x{i}-t">
+  <div class="wrap narrow prose">
+    <h2 id="x{i}-t">{esc(h)}</h2>
+    {inhalt}
+  </div>
+</section>
+""" for i, (h, inhalt) in enumerate(t.get("extra_sections", []), 1))
     details = []
-    if p.get("tested"):
-        details.append(f"<h3>Was getestet wurde</h3><p>{p['tested']}</p>")
-    if p.get("good_to_know"):
-        details.append(f"<h3>Gut zu wissen</h3><p>{p['good_to_know']}</p>")
-    details.append((f"<h3>Formate und Systeme</h3>" if details else "") + f"<p>{p['formats']}</p>")
-    det_title = "Tests, Formate und Systeme" if p.get("tested") else "Formate und Systeme"
-    demo_hint = ("" if p["price"] == 0 else
-                 f'<p>Nicht sicher? Die <a href="{utm(slug + "-demo", slug)}">kostenlose Demo</a> ist das vollständige Plugin mit einem kurzen Rauschen alle 45 Sekunden.</p>')
-    rel = [BY_SLUG[s] for s in p["related"] if s in BY_SLUG]
-    rel += [o for o in LIVE if o is not p and o not in rel and o["group"] == p["group"]]
-    rel_cards = "".join(plugin_card(o, slug) for o in rel)
-    sticky = "Kostenlos herunterladen" if p["price"] == 0 else f"{name} kaufen · {euro(p['price'])}"
+    if t.get("tested"):
+        details.append(f"<h3>{L['tested']}</h3><p>{t['tested']}</p>")
+    if t.get("good_to_know"):
+        details.append(f"<h3>{L['good']}</h3><p>{t['good_to_know']}</p>")
+    details.append((f"<h3>{L['formats']}</h3>" if details else "") + f"<p>{t['formats']}</p>")
+    det_title = L["det_tested"] if t.get("tested") else L["formats"]
+    if lang == "de":
+        demo_hint = ("" if p["price"] == 0 else
+                     f'<p>Nicht sicher? Die <a href="{utm(slug + "-demo", slug)}">kostenlose Demo</a> ist das vollständige Plugin mit einem kurzen Rauschen alle 45 Sekunden.</p>')
+        preis_text = "kostenlos (Pay what you want)" if p["price"] == 0 else "für " + euro(p["price"])
+        get_line = f"{esc(name)} gibt es auf Gumroad, {preis_text}, als Sofort-Download."
+        rel = [BY_SLUG[s] for s in p["related"] if s in BY_SLUG]
+        rel += [o for o in LIVE if o is not p and o not in rel and o["group"] == p["group"]]
+        more_sec = f"""<section class="alt" aria-labelledby="more-t">
+  <div class="wrap">
+    <h2 id="more-t">Weitere Plugins von Code Chaos Audio</h2>
+    <div class="pcards">{"".join(plugin_card(o, slug) for o in rel)}</div>
+    <p class="prose" style="margin-top:22px"><a href="/plugins/">Alle Plugins im Überblick →</a></p>
+  </div>
+</section>"""
+        crumbs = '<li><a href="/">Startseite</a></li><li><a href="/plugins/">Plugins</a></li>'
+    else:
+        demo_hint = ("" if p["price"] == 0 else
+                     f'<p>Not sure yet? The <a href="{utm(slug + "-demo", slug)}">free demo</a> is the full plugin with a short noise burst every 45 seconds.</p>')
+        get_line = (f'{esc(name)} is available on Gumroad for {price_l(p["price"], "en")} as an instant download. '
+                    'Gumroad may show your local currency.')
+        others = "".join(f'<li><a href="{plugin_url(o)}" hreflang="de">{esc(o["name"])}</a> · {price_l(o["price"], "en")}</li>'
+                         for o in LIVE if o is not p and o["group"] == p["group"])
+        more_sec = f"""<section class="alt" aria-labelledby="more-t">
+  <div class="wrap narrow prose">
+    <h2 id="more-t">More plugins by Code Chaos Audio</h2>
+    <p>The other plugin pages are in German for now; specs, prices and audio demos are easy to follow.</p>
+    <ul>{others}</ul>
+    <p><a href="/plugins/" hreflang="de">All plugins (German) →</a> · <a href="/en/mastering/">Mastering for psytrance, hitech &amp; psycore →</a></p>
+  </div>
+</section>"""
+        crumbs = '<li><a href="/en/">Home</a></li><li><a href="/plugins/" hreflang="de">Plugins</a></li>'
+    sticky = L["free_dl"] if p["price"] == 0 else L["sticky_buy"].format(name=name, price=price_l(p["price"], lang))
+    listen_note = f'<p class="note"><a href="#{L["listen_id"]}">{L["listen_link"]}</a></p>' if p.get("audio") else ""
     body = f"""<main id="main">
-<div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="/">Startseite</a></li><li><a href="/plugins/">Plugins</a></li><li aria-current="page">{esc(name)}</li></ol></nav></div>
+<div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol>{crumbs}<li aria-current="page">{esc(name)}</li></ol></nav></div>
 <section class="s-hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">{esc(p['eyebrow'])}</span>
-      <h1>{esc(p['h1'])}</h1>
+      <span class="eyebrow">{esc(t['eyebrow'])}</span>
+      <h1>{esc(t['h1'])}</h1>
       <div class="rule" aria-hidden="true"><i></i></div>
-      <p class="answer">{p['answer']}</p>
-      <p class="price-line"><span class="price-tag">{euro(p['price'])}</span> {esc(fmt_line)}</p>
-      <div class="btns">{cta_buttons(p, slug)}</div>
-      {'<p class="note"><a href="#hoeren">▶ Hörprobe anhören</a></p>' if p.get('audio') else ''}
+      <p class="answer">{t['answer']}</p>
+      <p class="price-line"><span class="price-tag">{price_l(p['price'], lang)}</span> {esc(fmt_line)}</p>
+      <div class="btns">{cta_buttons(p, slug, lang=lang)}</div>
+      {listen_note}
     </div>
-    <figure class="shot">{picture(slug, "gui", p["gui_w"], p["gui_h"], p["gui_alt"], lazy=False)}<figcaption>Die echte Oberfläche von {esc(name)}.</figcaption></figure>
+    <figure class="shot">{picture(slug, "gui", p["gui_w"], p["gui_h"], t["gui_alt"], lazy=False)}<figcaption>{esc(L['real_gui'].format(name=name))}</figcaption></figure>
   </div>
 </section>
-{audio_html(p)}<section aria-labelledby="specs-t">
+{audio_html(p, lang, t)}<section aria-labelledby="specs-t">
   <div class="wrap narrow">
-    <h2 id="specs-t">{esc(name)} auf einen Blick</h2>
+    <h2 id="specs-t">{esc(L['glance'].format(name=name))}</h2>
     <div class="table-scroll"><table class="specs"><tbody>{specs}</tbody></table></div>
   </div>
 </section>
 <section class="alt" aria-labelledby="feat-t">
   <div class="wrap narrow prose">
-    <h2 id="feat-t">{esc(p.get("feat_title", "Funktionen"))}</h2>
+    <h2 id="feat-t">{esc(t.get("feat_title", L["features"]))}</h2>
     <ul>{feats}</ul>
     {extra_imgs}
     {"".join(more)}
   </div>
 </section>
-<section aria-labelledby="det-t">
+{extra_secs}<section aria-labelledby="det-t">
   <div class="wrap narrow prose">
     <h2 id="det-t">{det_title}</h2>
     {"".join(details)}
@@ -625,33 +715,51 @@ def build_plugin(p):
 </section>
 <section class="alt" aria-labelledby="faq-t">
   <div class="wrap narrow">
-    <h2 id="faq-t">Häufige Fragen zu {esc(name)}</h2>
-    {faq_html(p['faq'])}
+    <h2 id="faq-t">{esc(L['faq'].format(name=name))}</h2>
+    {faq_html(t['faq'])}
   </div>
 </section>
 <section aria-labelledby="cta-t">
   <div class="wrap narrow prose">
-    <h2 id="cta-t">{esc(name)} holen</h2>
-    <p>{esc(name)} gibt es auf Gumroad, {"kostenlos (Pay what you want)" if p['price'] == 0 else f"für {euro(p['price'])}"}, als Sofort-Download.</p>
+    <h2 id="cta-t">{esc(L['get'].format(name=name))}</h2>
+    <p>{get_line}</p>
     {demo_hint}
-    <div class="btns">{cta_buttons(p, slug)}</div>
+    <div class="btns">{cta_buttons(p, slug, lang=lang)}</div>
   </div>
 </section>
-<section class="alt" aria-labelledby="more-t">
-  <div class="wrap">
-    <h2 id="more-t">Weitere Plugins von Code Chaos Audio</h2>
-    <div class="pcards">{rel_cards}</div>
-    <p class="prose" style="margin-top:22px"><a href="/plugins/">Alle Plugins im Überblick →</a></p>
-  </div>
-</section>
+{more_sec}
 </main>
 <a class="sticky-cta" href="{utm(slug, slug)}">{esc(sticky)}</a>
 """
-    html = head("de", url, None, p["title"], p["desc"], og, f"{name} von Code Chaos Audio: {p['category']}", ld, og_type="product") \
-        + nav("de", None, "plug") + body + footer("de")
-    html, _ = geo.ausbauen(html, f"/plugins/{slug}/", "de", art="plugin")
-    path = os.path.join(ROOT, "plugins", slug, "index.html")
+    html = head(lang, url, alt_url, t["title"], t["desc"], og, f"{name} {L['by']}: {t['category']}", ld, og_type="product") \
+        + nav(lang, alt_url, "plug" if lang == "de" else "cru") + body + footer(lang)
+    html, _ = geo.ausbauen(html, f"{pre}/plugins/{slug}/", lang, art="plugin")
+    path = os.path.join(ROOT, pre.strip("/"), "plugins", slug, "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
+    open(path, "w", encoding="utf-8", newline="\n").write(html)
+    return path
+
+
+def build_crucible_redirect():
+    """/crucible.html → /plugins/crucible/ (GitHub Pages kann kein 301: meta refresh + canonical + JS, Grok #66).
+    Alte Sprunganker (#listen, #faq …) werden auf die neue Seite übertragen."""
+    ziel = "/plugins/crucible/"
+    html = f"""<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Crucible: 3-Band-Sättigung VST3 | Code Chaos Audio</title>
+<link rel="canonical" href="{BASE}{ziel}">
+<meta http-equiv="refresh" content="0; url={ziel}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){{var m={{"#listen":"#hoeren","#faq":"#faq-t","#crucible-faq":"#faq-t"}},h=location.hash;location.replace("{ziel}"+(m[h]||""));}})();</script>
+</head>
+<body>
+<p>Crucible ist umgezogen: <a href="{ziel}">codechaos-official.de/plugins/crucible/</a> · English: <a href="/en/plugins/crucible/" hreflang="en">codechaos-official.de/en/plugins/crucible/</a></p>
+</body>
+</html>
+"""
+    path = os.path.join(ROOT, "crucible.html")
     open(path, "w", encoding="utf-8", newline="\n").write(html)
     return path
 
@@ -691,7 +799,7 @@ def plugins_faq(allp, mac):
 
 def build_plugins_index():
     url = BASE + "/plugins/"
-    order = {g: [p for p in [CRUCIBLE] + LIVE if p["group"] == g] for g, _, _ in GROUPS}
+    order = {g: [p for p in LIVE if p["group"] == g] for g, _, _ in GROUPS}
     allp = [p for g, _, _ in GROUPS for p in order[g]]
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "CollectionPage", "@id": url + "#webpage", "url": url, "name": PLUGINS_INDEX["title"], "description": PLUGINS_INDEX["desc"],
@@ -787,6 +895,9 @@ if __name__ == "__main__":
     print(build_plugins_index())
     for p in LIVE:
         print(build_plugin(p))
+        if p.get("en"):
+            print(build_plugin(p, "en"))
+    print(build_crucible_redirect())
     # handgeschriebene Seiten: dieselben GEO-Bausteine (TOC, Datum, Autorenbox), danach JSON-LD der Startseite
     for p in geo.handseiten():
         print(p)

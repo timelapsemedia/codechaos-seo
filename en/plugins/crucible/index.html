@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Crucible: 3-Band Saturation VST3 Plugin | Code Chaos</title>
+<meta name="description" content="Crucible: 3-band harmonic saturation VST3 + standalone for Windows. Hard clip, wavefolder, tube, diode, tape per band, up to 8x oversampling. €19, free demo.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Code Chaos">
+<meta name="theme-color" content="#0b0806">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://codechaos-official.de/en/plugins/crucible/">
+<link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/crucible/">
+<link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/plugins/crucible/">
+<link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/plugins/crucible/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="product">
+<meta property="og:title" content="Crucible: 3-Band Saturation VST3 Plugin | Code Chaos">
+<meta property="og:description" content="Crucible: 3-band harmonic saturation VST3 + standalone for Windows. Hard clip, wavefolder, tube, diode, tape per band, up to 8x oversampling. €19, free demo.">
+<meta property="og:url" content="https://codechaos-official.de/en/plugins/crucible/">
+<meta property="og:site_name" content="Code Chaos">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://codechaos-official.de/images/plugins/crucible/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Crucible by Code Chaos Audio: 3-band saturation">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@codechaos_music">
+<meta name="twitter:image" content="https://codechaos-official.de/images/plugins/crucible/og.jpg">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cinzel.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/eb-garamond.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/sub.css">
+<link rel="stylesheet" href="/css/geo.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://codechaos-official.de/en/plugins/crucible/#webpage",
+   "url": "https://codechaos-official.de/en/plugins/crucible/",
+   "name": "Crucible: 3-Band Saturation VST3 Plugin | Code Chaos",
+   "description": "Crucible: 3-band harmonic saturation VST3 + standalone for Windows. Hard clip, wavefolder, tube, diode, tape per band, up to 8x oversampling. €19, free demo.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://codechaos-official.de/#website"
+   },
+   "mainEntity": {
+    "@id": "https://codechaos-official.de/en/plugins/crucible/#product"
+   },
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://codechaos-official.de/images/plugins/crucible/og.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "datePublished": "2026-10-21",
+   "dateModified": "2026-11-11",
+   "author": {
+    "@type": "Person",
+    "@id": "https://codechaos-official.de/#tim-borchert",
+    "name": "Tim Borchert",
+    "alternateName": "Code Chaos",
+    "url": "https://codechaos-official.de/",
+    "image": "https://codechaos-official.de/images/brand/tim-borchert-800.jpg",
+    "jobTitle": "Producer (Hitech Psytrance, Psycore, Darkpsy) und Mastering Engineer",
+    "homeLocation": {
+     "@type": "Place",
+     "name": "Hamburg"
+    }
+   }
+  },
+  {
+   "@type": [
+    "Product",
+    "SoftwareApplication"
+   ],
+   "@id": "https://codechaos-official.de/en/plugins/crucible/#product",
+   "name": "Crucible",
+   "description": "Crucible is a 3-band harmonic saturation plugin: it splits your signal into low, mid and high and saturates each band independently, with five saturation types (hard clip, wavefolder, tube, diode, tape), per-band drive, mix and gain and up to 8x oversampling. VST3 + standalone for Windows 10+, with a free demo. Shape. Saturate. Dominate.",
+   "author": {
+    "@type": "Person",
+    "@id": "https://codechaos-official.de/#tim-borchert",
+    "name": "Tim Borchert",
+    "alternateName": "Code Chaos",
+    "url": "https://codechaos-official.de/",
+    "image": "https://codechaos-official.de/images/brand/tim-borchert-800.jpg",
+    "jobTitle": "Producer (Hitech Psytrance, Psycore, Darkpsy) und Mastering Engineer",
+    "homeLocation": {
+     "@type": "Place",
+     "name": "Hamburg"
+    }
+   },
+   "dateModified": "2026-11-11",
+   "applicationCategory": "MultimediaApplication",
+   "applicationSubCategory": "Audio plugin (VST3)",
+   "operatingSystem": "Windows 10+",
+   "brand": {
+    "@type": "Brand",
+    "name": "Code Chaos Audio"
+   },
+   "category": "Audio Plugin",
+   "image": "https://codechaos-official.de/images/plugins/crucible/og.jpg",
+   "screenshot": "https://codechaos-official.de/images/plugins/crucible/gui-880.jpg",
+   "url": "https://codechaos-official.de/en/plugins/crucible/",
+   "downloadUrl": "https://timberwolf688.gumroad.com/l/crucible",
+   "featureList": [
+    "3-band processing: independent low, mid and high control with two adjustable crossovers. Drive your bass hard while keeping highs clean",
+    "Five saturation types, chosen per band: Hard Clip (aggressive, loud, surgical), Wavefolder (metallic, synthetic, alien), Tube (warm, rounded, musical), Diode (asymmetric, gritty bite), Tape (glue, smear, vintage drive)",
+    "Per band Drive, Mix, Gain, Mute and Solo, plus output gain and bypass",
+    "Oversampling up to 8x for clean, alias-free saturation even when you push hard",
+    "Designed by an active hitech and psycore producer for real sessions: mix, master, destroy"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "url": "https://timberwolf688.gumroad.com/l/crucible",
+    "price": "19.00",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+     "@type": "Organization",
+     "name": "Code Chaos Audio",
+     "url": "https://codechaos-official.de/plugins/"
+    }
+   },
+   "softwareVersion": "1.1.0",
+   "isRelatedTo": {
+    "@type": "SoftwareApplication",
+    "name": "Crucible Demo",
+    "url": "https://timberwolf688.gumroad.com/l/crucible-demo",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Windows 10+",
+    "offers": {
+     "@type": "Offer",
+     "price": "0.00",
+     "priceCurrency": "EUR",
+     "url": "https://timberwolf688.gumroad.com/l/crucible-demo"
+    }
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://codechaos-official.de/en/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Plugins",
+     "item": "https://codechaos-official.de/plugins/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Crucible",
+     "item": "https://codechaos-official.de/en/plugins/crucible/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://codechaos-official.de/en/plugins/crucible/#faq",
+   "inLanguage": "en",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is Crucible?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Crucible is a 3-band harmonic saturation plugin by Code Chaos Audio. It splits your signal into low, mid and high bands and lets you saturate each band independently with five selectable types (Hard Clip, Wavefolder, Tube, Diode, Tape), per-band Drive, Mix, Gain, Mute and Solo, and oversampling up to 8x."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is it good for psytrance, hitech and psycore?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, it was built by an active hitech, psycore and darkpsy producer. Add warmth and weight to kicks and basslines in the low band while adding bite and presence to leads and percussion up top, without muddying the mix."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What's the difference between the saturation types?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hard Clip is aggressive, loud and surgical, great for pushing low-end punch. Wavefolder folds the waveform back on itself for metallic, synthetic overtones. Tube is warm, rounded and musical for mids. Diode adds asymmetric, gritty bite. Tape adds glue, vintage smear and air. You can assign a different type to each band."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Crucible run on a Mac?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Crucible is a VST3 plugin and standalone app for Windows 10 or newer; there is no macOS build."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does license activation work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Your Gumroad receipt contains a personal license key. Paste it into Crucible once (Activate button, internet needed); one key activates up to 3 computers. Crucible re-checks the license every two weeks and keeps working offline for up to 60 days."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is there a free demo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. The Crucible demo on Gumroad is the full plugin with a short noise burst every 45 seconds."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<nav class="s-nav" aria-label="Navigation">
+  <a class="logo" href="/en/"><img src="/images/brand/codechaos-logo-bone-240.webp" srcset="/images/brand/codechaos-logo-bone-240.webp 1x, /images/brand/codechaos-logo-bone-480.webp 2x" width="68" height="40" alt="Code Chaos Logo"></a>
+  <button class="s-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="s-menu"><span></span><span></span><span></span></button>
+  <ul id="s-menu"><li><a href="/en/">Home</a></li><li><a href="/en/psycore/">Psycore</a></li><li><a href="/en/hitech-psytrance/">Hitech Psytrance</a></li><li><a href="/en/darkpsy/">Darkpsy</a></li><li><a href="/en/#releases">Releases</a></li><li><a href="/en/mastering/">Mastering</a></li><li><a href="/en/plugins/crucible/" aria-current="page">Crucible</a></li></ul>
+  <a class="lang-switch" href="/plugins/crucible/" hreflang="de" lang="de" aria-label="DE – Deutsche Version"><svg class="flag" viewBox="0 0 5 3" width="20" height="12" aria-hidden="true" focusable="false"><rect width="5" height="3" fill="#000"/><rect width="5" height="2" y="1" fill="#D00"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg><span>DE</span></a>
+</nav>
+</header>
+<main id="main">
+<div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/plugins/" hreflang="de">Plugins</a></li><li aria-current="page">Crucible</li></ol></nav></div>
+<section class="s-hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Code Chaos Audio · effect plugin</span>
+      <h1>Crucible: 3-band saturation VST3</h1>
+      <div class="rule" aria-hidden="true"><i></i></div>
+      <p class="answer">Crucible is a 3-band harmonic saturation plugin: it splits your signal into low, mid and high and saturates each band independently, with five saturation types (hard clip, wavefolder, tube, diode, tape), per-band drive, mix and gain and up to 8x oversampling. VST3 + standalone for Windows 10+, with a free demo. <strong>Shape. Saturate. Dominate.</strong></p>
+      <p class="price-line"><span class="price-tag">€19</span> VST3 + Standalone · Windows 10+</p>
+      <div class="btns"><a class="btn btn-blood" href="https://timberwolf688.gumroad.com/l/crucible?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=crucible">Buy · €19</a><a class="btn btn-ghost" href="https://timberwolf688.gumroad.com/l/crucible-demo?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=crucible">Free demo</a></div>
+      <p class="note"><a href="#listen">▶ Listen to the A/B demo</a></p>
+<!--geo:kopf--><p class="geo-meta">By <a href="#autor">Tim Borchert</a> (Code Chaos) · Last updated: <time datetime="2026-11-11">11 November 2026</time></p><div class="geo-toc" role="navigation" aria-label="On this page"><details open><summary>On this page</summary><ol><li><a href="#hoeren-t">Listen to Crucible</a></li><li><a href="#specs-t">Crucible at a glance</a></li><li><a href="#feat-t">3-band saturation features</a></li><li><a href="#det-t">Formats and systems</a></li><li><a href="#faq-t">Crucible FAQ</a></li><li><a href="#cta-t">Get Crucible</a></li><li><a href="#more-t">More plugins by Code Chaos Audio</a></li></ol></details></div><!--/geo:kopf-->
+    </div>
+    <figure class="shot"><picture><source type="image/webp" srcset="/images/plugins/crucible/gui-880.webp 880w, /images/plugins/crucible/gui-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 520px"><img src="/images/plugins/crucible/gui-880.jpg" width="880" height="560" fetchpriority="high" decoding="async" alt="Crucible plugin interface: Low Hard Clip, Mid Tube, High Tape, 4x oversampling"></picture><figcaption>The real Crucible interface.</figcaption></figure>
+  </div>
+</section>
+<section class="alt" id="listen" aria-labelledby="hoeren-t">
+  <div class="wrap narrow">
+    <h2 id="hoeren-t">Listen to Crucible</h2>
+    <p class="prose">The same 190 BPM psy loop, without and with Crucible. Loudness-matched (both −16 LUFS), so you hear tone and density, not just volume. Switch between A and B while it plays.</p>
+    <div class="ab">
+      <audio id="ab-a" src="/audio/plugins/crucible/demo-dry.mp3" preload="metadata" loop></audio>
+      <audio id="ab-b" src="/audio/plugins/crucible/demo-wet.mp3" preload="metadata" loop></audio>
+      <div class="ab-row">
+        <button type="button" class="ab-play" id="ab-play">▶ Play</button>
+        <button type="button" id="ab-dry" aria-pressed="true">A · Dry</button>
+        <button type="button" id="ab-wet" aria-pressed="false">B · Crucible</button>
+      </div>
+    </div>
+<script>
+(function(){var a=document.getElementById('ab-a'),b=document.getElementById('ab-b'),p=document.getElementById('ab-play'),d=document.getElementById('ab-dry'),w=document.getElementById('ab-wet');if(!a||!b)return;
+var wet=false,playing=false;function mix(){a.muted=wet;b.muted=!wet;d.setAttribute('aria-pressed',wet?'false':'true');w.setAttribute('aria-pressed',wet?'true':'false');}
+p.addEventListener('click',function(){if(playing){a.pause();b.pause();playing=false;p.textContent='▶ Play';return;}
+b.currentTime=a.currentTime;mix();Promise.all([a.play(),b.play()]).then(function(){playing=true;p.textContent='❚❚ Pause';}).catch(function(){});});
+d.addEventListener('click',function(){wet=false;mix();});w.addEventListener('click',function(){wet=true;if(playing&&Math.abs(a.currentTime-b.currentTime)>0.05)b.currentTime=a.currentTime;mix();});mix();})();
+</script>
+    <p class="note">Settings: Low Hard Clip 12 dB, Mid Tube 9 dB, High Tape 6 dB at 70 % mix, crossovers 120 Hz / 4 kHz, 4x oversampling, output −0.8 dB. Rendered offline with Crucible 1.0.0; source loop synthesized for this demo.</p>
+  </div>
+</section>
+<section aria-labelledby="specs-t">
+  <div class="wrap narrow">
+    <h2 id="specs-t">Crucible at a glance</h2>
+    <div class="table-scroll"><table class="specs"><tbody><tr><th scope="row">Type</th><td>3-band harmonic saturation plugin</td></tr><tr><th scope="row">Price</th><td>€19 on Gumroad</td></tr><tr><th scope="row">Formats</th><td>VST3 + Standalone</td></tr><tr><th scope="row">System</th><td>Windows 10 or newer (no macOS build)</td></tr><tr><th scope="row">Bands</th><td>Low, Mid, High with two adjustable crossovers</td></tr><tr><th scope="row">Saturation types</th><td>Hard Clip, Wavefolder, Tube, Diode, Tape (chosen per band)</td></tr><tr><th scope="row">Per-band controls</th><td>Drive, Mix, Gain, Mute, Solo</td></tr><tr><th scope="row">Oversampling</th><td>Up to 8x</td></tr><tr><th scope="row">License</th><td>Single-user perpetual license, one key activates up to 3 computers</td></tr><tr><th scope="row">Demo</th><td>Full plugin, short noise burst every 45 seconds</td></tr></tbody></table></div>
+  </div>
+</section>
+<section class="alt" aria-labelledby="feat-t">
+  <div class="wrap narrow prose">
+    <h2 id="feat-t">3-band saturation features</h2>
+    <ul><li><strong>3-band processing:</strong> independent low, mid and high control with two adjustable crossovers. Drive your bass hard while keeping highs clean</li><li><strong>Five saturation types</strong>, chosen per band: Hard Clip (aggressive, loud, surgical), Wavefolder (metallic, synthetic, alien), Tube (warm, rounded, musical), Diode (asymmetric, gritty bite), Tape (glue, smear, vintage drive)</li><li><strong>Per band</strong> Drive, Mix, Gain, Mute and Solo, plus output gain and bypass</li><li><strong>Oversampling up to 8x</strong> for clean, alias-free saturation even when you push hard</li><li>Designed by an active hitech and psycore producer for real sessions: mix, master, destroy</li></ul>
+    
+    <h3>How it works</h3><ol><li><strong>Split:</strong> set the low/mid and mid/high crossover points to carve your signal into three independent bands.</li><li><strong>Saturate:</strong> choose a saturation type per band and push drive. Add weight to lows, bite to mids, air and edge to highs.</li><li><strong>Balance:</strong> blend with per-band mix, trim gain, solo to audition, and use oversampling to keep it all clean.</li></ol><h3>Why 3-band saturation?</h3><p>Harmonic saturation adds musical overtones to a sound, so it feels louder, warmer and more present. Instead of saturating the whole signal at once, Crucible gives every band its own character: a hard clip into sub and kick for low-end punch, a gentle tube on the leads in the mids, tape on the highs, all in a single instance. Crucible was forged for the fast and the dark, but works anywhere you would reach for a saturator: drum &amp; bass, techno, dubstep, hip-hop, rock and mastering.</p>
+  </div>
+</section>
+<section aria-labelledby="det-t">
+  <div class="wrap narrow prose">
+    <h2 id="det-t">Formats and systems</h2>
+    <h3>Good to know</h3><p>After purchase your Gumroad receipt contains a personal license key. Paste it into Crucible once (Activate button, internet needed for this step); one key activates up to 3 of your computers. Crucible re-checks the license in the background every two weeks and keeps working offline for up to 60 days. Until activated it behaves like the free demo.</p><h3>Formats and systems</h3><p><strong>Windows 10 or newer:</strong> VST3 + standalone, in any VST3 host such as REAPER, Ableton Live 12+, Cubase 12+, Studio One 6+, FL Studio and Bitwig. There is no macOS build of Crucible. See the Gumroad page for the latest system requirements.</p>
+  </div>
+</section>
+<section class="alt" aria-labelledby="faq-t">
+  <div class="wrap narrow">
+    <h2 id="faq-t">Crucible FAQ</h2>
+    <div class="faq"><details><summary>What is Crucible?</summary><p>Crucible is a 3-band harmonic saturation plugin by Code Chaos Audio. It splits your signal into low, mid and high bands and lets you saturate each band independently with five selectable types (Hard Clip, Wavefolder, Tube, Diode, Tape), per-band Drive, Mix, Gain, Mute and Solo, and oversampling up to 8x.</p></details><details><summary>Is it good for psytrance, hitech and psycore?</summary><p>Yes, it was built by an active hitech, psycore and darkpsy producer. Add warmth and weight to kicks and basslines in the low band while adding bite and presence to leads and percussion up top, without muddying the mix.</p></details><details><summary>What's the difference between the saturation types?</summary><p>Hard Clip is aggressive, loud and surgical, great for pushing low-end punch. Wavefolder folds the waveform back on itself for metallic, synthetic overtones. Tube is warm, rounded and musical for mids. Diode adds asymmetric, gritty bite. Tape adds glue, vintage smear and air. You can assign a different type to each band.</p></details><details><summary>Does Crucible run on a Mac?</summary><p>No. Crucible is a VST3 plugin and standalone app for Windows 10 or newer; there is no macOS build.</p></details><details><summary>How does license activation work?</summary><p>Your Gumroad receipt contains a personal license key. Paste it into Crucible once (Activate button, internet needed); one key activates up to 3 computers. Crucible re-checks the license every two weeks and keeps working offline for up to 60 days.</p></details><details><summary>Is there a free demo?</summary><p>Yes. The Crucible demo on Gumroad is the full plugin with a short noise burst every 45 seconds.</p></details></div>
+  </div>
+</section>
+<section aria-labelledby="cta-t">
+  <div class="wrap narrow prose">
+    <h2 id="cta-t">Get Crucible</h2>
+    <p>Crucible is available on Gumroad for €19 as an instant download. Gumroad may show your local currency.</p>
+    <p>Not sure yet? The <a href="https://timberwolf688.gumroad.com/l/crucible-demo?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=crucible">free demo</a> is the full plugin with a short noise burst every 45 seconds.</p>
+    <div class="btns"><a class="btn btn-blood" href="https://timberwolf688.gumroad.com/l/crucible?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=crucible">Buy · €19</a><a class="btn btn-ghost" href="https://timberwolf688.gumroad.com/l/crucible-demo?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=crucible">Free demo</a></div>
+  </div>
+</section>
+<section class="alt" aria-labelledby="more-t">
+  <div class="wrap narrow prose">
+    <h2 id="more-t">More plugins by Code Chaos Audio</h2>
+    <p>The other plugin pages are in German for now; specs, prices and audio demos are easy to follow.</p>
+    <ul><li><a href="/plugins/shardstep/" hreflang="de">Shardstep</a> · €15</li><li><a href="/plugins/psy-kick-bass/" hreflang="de">Kick+Bass Engine</a> · €24</li><li><a href="/plugins/chaos-fm/" hreflang="de">Chaos FM</a> · €19</li><li><a href="/plugins/kick-bass-scope/" hreflang="de">Kick/Bass Scope</a> · free</li></ul>
+    <p><a href="/plugins/" hreflang="de">All plugins (German) →</a> · <a href="/en/mastering/">Mastering for psytrance, hitech &amp; psycore →</a></p>
+  </div>
+</section>
+<!--geo:autor--><div class="geo-autor-wrap"><aside class="geo-autor" id="autor" aria-label="About the author"><picture><source type="image/webp" srcset="/images/brand/tim-borchert-192.webp 1x, /images/brand/tim-borchert-384.webp 2x"><img src="/images/brand/tim-borchert-192.jpg" width="96" height="96" loading="lazy" decoding="async" alt="Tim Borchert (Code Chaos) in the studio, portrait photo"></picture><div><p class="geo-autor-kicker">About the author</p><p class="geo-autor-name">Tim Borchert</p><p>Tim Borchert has been producing psycore, hitech and darkpsy as Code Chaos in Hamburg since 2016 and masters his own tracks. In 2021 he co-founded the label Abstract Sound Design. Code Chaos Audio is his plugin series for hitech, psycore, darkpsy and black metal.</p><p><a href="/en/#about">More about Code Chaos →</a></p></div></aside></div><!--/geo:autor-->
+</main>
+<a class="sticky-cta" href="https://timberwolf688.gumroad.com/l/crucible?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=crucible">Get Crucible · €19</a>
+<footer class="s-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div><img src="/images/brand/codechaos-logo-bone-240.webp" width="120" height="70" loading="lazy" alt="Code Chaos Logo" style="height:70px;width:auto;margin-bottom:10px"><p>Hitech, Psycore &amp; Darkpsy producer from Hamburg, Germany. Studio project.</p></div>
+      <div><h2>Genres</h2><ul><li><a href="/en/psycore/">Psycore</a></li><li><a href="/en/hitech-psytrance/">Hitech Psytrance</a></li><li><a href="/en/darkpsy/">Darkpsy</a></li><li><a href="/en/plugins/crucible/">Crucible Plugin</a></li></ul></div>
+      <div><h2>Follow Code Chaos</h2><ul><li><a href="https://codechaos.bandcamp.com" target="_blank" rel="noopener noreferrer me">Bandcamp</a></li><li><a href="https://soundcloud.com/codechaos" target="_blank" rel="noopener noreferrer me">SoundCloud</a></li><li><a href="https://www.instagram.com/codechaos_official" target="_blank" rel="noopener noreferrer me">Instagram</a></li><li><a href="https://www.tiktok.com/@codechaos_abstractsound" target="_blank" rel="noopener noreferrer me">TikTok</a></li><li><a href="https://www.youtube.com/@codechaos_abstractsounddesign" target="_blank" rel="noopener noreferrer me">YouTube</a></li><li><a href="https://x.com/codechaos_music" target="_blank" rel="noopener noreferrer me">X</a></li><li><a href="https://www.threads.net/@codechaos_official" target="_blank" rel="noopener noreferrer me">Threads</a></li></ul></div>
+      <div><h2>Legal</h2><ul><li><a href="/#impressum">Imprint (German)</a></li><li><a href="/#datenschutz">Privacy policy (German)</a></li><li><a href="#cookies" class="cookie-settings-link">Cookie settings</a></li><li><a href="/" hreflang="de">Deutsche Version</a></li></ul></div>
+    </div>
+    <p class="copy">© 2016–2026 CODE CHAOS · ABSTRACT SOUND DESIGN · HAMBURG</p>
+  </div>
+</footer>
+<script>
+(function(){var b=document.querySelector('.s-toggle'),m=document.getElementById('s-menu');if(!b||!m)return;
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-pick]');if(!a)return;var s=document.querySelector('select[name=service]');if(!s)return;
+for(var i=0;i<s.options.length;i++){if(s.options[i].text===a.getAttribute('data-pick')){s.selectedIndex=i;break;}}});
+</script>
+<script src="/js/analytics-consent.js" defer></script>
+</body>
+</html>

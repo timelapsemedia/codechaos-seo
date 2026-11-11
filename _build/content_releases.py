@@ -108,7 +108,7 @@ RELEASE_PAGES = {
     <div class="cards">
       <div class="card"><div class="bpm">Ankündigung · 04.12.2026</div><h3>Wiedergänger Vol. I</h3><p>Was nicht ruhen will: Remix-Release mit fünf Tracks.</p><a class="more" href="/wiedergaenger-vol-1/">Zum Release →</a></div>
       <div class="card"><div class="bpm">Code Chaos Audio · Gumroad</div><h3>Plugins</h3><p>Crucible, Kick+Bass Engine, Shardstep, Chaos FM und mehr. Zu jedem Bezahl-Plugin gibt es eine kostenlose Demo.</p><a class="more" href="/plugins/">Alle Plugins →</a></div>
-      <div class="card"><div class="bpm">Polished Media · ab 79 €</div><h3>Mastering</h3><p>Für Psytrance, Hitech und Psycore: Stereo 79 €, Stem 129 €, EP 349 €, Album 629 €.</p><a class="more" href="/mastering/">Zum Mastering →</a></div>
+      <div class="card"><div class="bpm">Code Chaos Mastering · ab 79 €</div><h3>Mastering</h3><p>Für Psytrance, Hitech und Psycore: Stereo 79 €, Stem 129 €, EP 349 €, Album 629 €.</p><a class="more" href="/mastering/">Zum Mastering →</a></div>
     </div>
   </div>
 </section>
@@ -173,7 +173,7 @@ RELEASE_PAGES = {
     <div class="cards">
       <div class="card"><div class="bpm">Announcement · 4 Dec 2026</div><h3>Wiedergänger Vol. I</h3><p>Was nicht ruhen will: a remix release with five tracks.</p><a class="more" href="/en/wiedergaenger-vol-1/">See the release →</a></div>
       <div class="card"><div class="bpm">Code Chaos Audio · Gumroad</div><h3>Plugins</h3><p>Crucible, Kick+Bass Engine, Shardstep, Chaos FM and more. Every paid plugin has a free demo.</p><a class="more" href="/plugins/">All plugins (German) →</a></div>
-      <div class="card"><div class="bpm">Polished Media · from €79</div><h3>Mastering</h3><p>For psytrance, hitech and psycore: stereo €79, stem €129, EP €349, album €629.</p><a class="more" href="/en/mastering/">Mastering →</a></div>
+      <div class="card"><div class="bpm">Code Chaos Mastering · from €79</div><h3>Mastering</h3><p>For psytrance, hitech and psycore: stereo €79, stem €129, EP €349, album €629.</p><a class="more" href="/en/mastering/">Mastering →</a></div>
     </div>
   </div>
 </section>
@@ -227,7 +227,7 @@ RELEASE_PAGES = {
     <div class="cards">
       <div class="card"><div class="bpm">Erschienen · 30.10.2026</div><h3>Uhrwerk aus Blut</h3><p>Die aktuelle Single von Code Chaos auf Abstract Sound Design, erzählt in fünf Szenen.</p><a class="more" href="/uhrwerk-aus-blut/">Zur Single →</a></div>
       <div class="card"><div class="bpm">Code Chaos Audio · Gumroad</div><h3>Plugins</h3><p>Crucible, Kick+Bass Engine, Shardstep, Chaos FM und mehr. Zu jedem Bezahl-Plugin gibt es eine kostenlose Demo.</p><a class="more" href="/plugins/">Alle Plugins →</a></div>
-      <div class="card"><div class="bpm">Polished Media · ab 79 €</div><h3>Mastering</h3><p>Für Psytrance, Hitech und Psycore: Stereo 79 €, Stem 129 €, EP 349 €, Album 629 €.</p><a class="more" href="/mastering/">Zum Mastering →</a></div>
+      <div class="card"><div class="bpm">Code Chaos Mastering · ab 79 €</div><h3>Mastering</h3><p>Für Psytrance, Hitech und Psycore: Stereo 79 €, Stem 129 €, EP 349 €, Album 629 €.</p><a class="more" href="/mastering/">Zum Mastering →</a></div>
     </div>
   </div>
 </section>
@@ -278,7 +278,7 @@ RELEASE_PAGES = {
     <div class="cards">
       <div class="card"><div class="bpm">Out now · 30 Oct 2026</div><h3>Uhrwerk aus Blut</h3><p>The current single by Code Chaos on Abstract Sound Design, told in five scenes.</p><a class="more" href="/en/uhrwerk-aus-blut/">See the single →</a></div>
       <div class="card"><div class="bpm">Code Chaos Audio · Gumroad</div><h3>Plugins</h3><p>Crucible, Kick+Bass Engine, Shardstep, Chaos FM and more. Every paid plugin has a free demo.</p><a class="more" href="/plugins/">All plugins (German) →</a></div>
-      <div class="card"><div class="bpm">Polished Media · from €79</div><h3>Mastering</h3><p>For psytrance, hitech and psycore: stereo €79, stem €129, EP €349, album €629.</p><a class="more" href="/en/mastering/">Mastering →</a></div>
+      <div class="card"><div class="bpm">Code Chaos Mastering · from €79</div><h3>Mastering</h3><p>For psytrance, hitech and psycore: stereo €79, stem €129, EP €349, album €629.</p><a class="more" href="/en/mastering/">Mastering →</a></div>
     </div>
   </div>
 </section>

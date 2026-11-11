@@ -1,19 +1,15 @@
 {
  "/": {
-  "datum": "2026-11-10",
-  "hash": "ea77383ff5c15e5a"
- },
- "/crucible.html": {
-  "datum": "2026-11-05",
-  "hash": "3e88e42d7deb77c5"
+  "datum": "2026-11-11",
+  "hash": "ccd685e079f35890"
  },
  "/darkpsy/": {
   "datum": "2026-10-27",
   "hash": "9919a5319f0efe1e"
  },
  "/en/": {
-  "datum": "2026-11-10",
-  "hash": "a4203ef1e042ec72"
+  "datum": "2026-11-11",
+  "hash": "f4761e1ed1bb2295"
  },
  "/en/darkpsy/": {
   "datum": "2026-10-05",
@@ -24,64 +20,72 @@
   "hash": "d0e33e2edf918d3f"
  },
  "/en/mastering/": {
-  "datum": "2026-10-24",
-  "hash": "745db8040da876d2"
+  "datum": "2026-11-11",
+  "hash": "9f8d0dda56fac476"
+ },
+ "/en/plugins/crucible/": {
+  "datum": "2026-11-11",
+  "hash": "804d35282dcdf035"
  },
  "/en/psycore/": {
   "datum": "2026-10-05",
   "hash": "d4b89f131e8a9255"
  },
  "/en/uhrwerk-aus-blut/": {
-  "datum": "2026-11-10",
-  "hash": "2f7d5670e8575d14"
+  "datum": "2026-11-11",
+  "hash": "6a91ab061ef88736"
  },
  "/en/wiedergaenger-vol-1/": {
-  "datum": "2026-11-10",
-  "hash": "97f7fe7e721004f8"
+  "datum": "2026-11-11",
+  "hash": "d1e212de0b15c093"
  },
  "/hitech-psytrance/": {
   "datum": "2026-10-27",
   "hash": "921fdf130a0c996c"
  },
  "/mastering/": {
-  "datum": "2026-10-24",
-  "hash": "a1783a752d13bdea"
+  "datum": "2026-11-11",
+  "hash": "3dd3ecad8c33f109"
  },
  "/plugins/": {
-  "datum": "2026-11-05",
-  "hash": "351d8f18a525e465"
+  "datum": "2026-11-11",
+  "hash": "efb70a191a16120b"
  },
  "/plugins/chaos-fm/": {
-  "datum": "2026-10-27",
-  "hash": "55616a21a6a51cf7"
+  "datum": "2026-11-11",
+  "hash": "2da771cdd180d884"
+ },
+ "/plugins/crucible/": {
+  "datum": "2026-11-11",
+  "hash": "06aa0b4b65d6b694"
  },
  "/plugins/frostfret/": {
   "datum": "2026-10-21",
   "hash": "339402f21317bddf"
  },
  "/plugins/gravesaw/": {
-  "datum": "2026-10-21",
-  "hash": "1f637411c9bec13c"
+  "datum": "2026-11-11",
+  "hash": "5a3ab442e6c0ff5f"
  },
  "/plugins/hoarfell/": {
   "datum": "2026-10-21",
   "hash": "0cc258bc28f7907b"
  },
  "/plugins/kick-bass-scope/": {
-  "datum": "2026-10-27",
-  "hash": "b949310dd0d25622"
+  "datum": "2026-11-11",
+  "hash": "ebdc5df0aa158e7d"
  },
  "/plugins/psy-kick-bass/": {
-  "datum": "2026-10-27",
-  "hash": "a651b4099df7cc39"
+  "datum": "2026-11-11",
+  "hash": "4f6b82dde7a88f56"
  },
  "/plugins/rimehall/": {
-  "datum": "2026-10-21",
-  "hash": "7db0af3a11d375f6"
+  "datum": "2026-11-11",
+  "hash": "ee98db86c6cd4232"
  },
  "/plugins/shardstep/": {
-  "datum": "2026-10-27",
-  "hash": "6805655449b46bad"
+  "datum": "2026-11-11",
+  "hash": "f3f9c4c95a08fa0c"
  },
  "/psycore/": {
   "datum": "2026-10-27",
@@ -96,11 +100,11 @@
   "hash": "46ffd6a1f33b788c"
  },
  "/uhrwerk-aus-blut/": {
-  "datum": "2026-11-10",
-  "hash": "da3b1e87f4f52bd7"
+  "datum": "2026-11-11",
+  "hash": "76237704b659082c"
  },
  "/wiedergaenger-vol-1/": {
-  "datum": "2026-11-10",
-  "hash": "4fe199f006699554"
+  "datum": "2026-11-11",
+  "hash": "3de5f9013f0c02d0"
  }
 }

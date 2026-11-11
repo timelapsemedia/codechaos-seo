@@ -20,6 +20,159 @@ NOT_EVERY_DAW = ("Das VST3 wurde mit automatischen Tests geprüft, aber noch nic
 
 PLUGINS = [
     # ─────────────────────────────── PSY ───────────────────────────────
+    # Crucible: Fakten aus der früheren Produktseite /crucible.html (Stand 05.11.2026, jetzt Weiterleitung) und
+    # _docs/gumroad-crucible-text.md. Bilder/Audio liegen schon in der Site (assets_manual: plugin_assets.py überspringt).
+    {
+        "slug": "crucible", "live": True, "assets_manual": True, "group": "psy", "name": "Crucible", "price": 19, "version": "1.1.0",
+        "category": "3-Band-Sättigung", "sub": "Effekt-Plugin (VST3)", "os": "Windows 10+",
+        "title": "Crucible: 3-Band-Sättigung VST3 für Hitech | Code Chaos",
+        "feat_title": "Funktionen der 3-Band-Sättigung",
+        "desc": "Crucible: 3-Band-Sättigung (VST3 + Standalone, Windows) für Hitech & Psycore. Hard Clip, Wavefolder, Tube, Diode, Tape pro Band. 19 €, Gratis-Demo.",
+        "h1": "Crucible: 3-Band-Sättigung (VST3) für Hitech & Psycore",
+        "eyebrow": "Code Chaos Audio · Effekt-Plugin",
+        "teaser": "3-Band-Sättigung: Hard Clip, Wavefolder, Tube, Diode oder Tape pro Band, bis 8x Oversampling.",
+        "answer": "Crucible ist ein Sättigungs-Plugin mit drei Bändern: Es teilt dein Signal in Low, Mid und High und sättigt jedes Band für sich, "
+                  "mit fünf Sättigungsarten (Hard Clip, Wavefolder, Tube, Diode, Tape), Drive, Mix und Gain pro Band und bis zu 8x Oversampling. "
+                  "VST3 + Standalone für Windows 10+, mit kostenloser Demo. <strong>Shape. Saturate. Dominate.</strong>",
+        "gui_alt": "Oberfläche von Crucible: Low Hard Clip, Mid Tube, High Tape, 4x Oversampling",
+        "gui_w": 1760, "gui_h": 1120,
+        "audio_mode": "ab",
+        "audio": [
+            {"src": "SITE:audio/crucible-demo-dry.mp3", "file": "demo-dry.mp3", "label": "A · Ohne Crucible"},
+            {"src": "SITE:audio/crucible-demo-wet.mp3", "file": "demo-wet.mp3", "label": "B · Mit Crucible"},
+        ],
+        "audio_intro": "Derselbe Psy-Loop mit 190 BPM ohne (A) und mit Crucible (B), lautheitsangeglichen (beide −16 LUFS): Du hörst Klang und Dichte, nicht nur Lautstärke. "
+                       "Während der Wiedergabe zwischen A und B umschalten.",
+        "audio_note": "Einstellungen: Low Hard Clip 12 dB, Mid Tube 9 dB, High Tape 6 dB bei 70 % Mix, Crossover 120 Hz / 4 kHz, 4x Oversampling, Output −0,8 dB. "
+                      "Offline gerendert mit Crucible 1.0.0; der Quell-Loop ist für diese Demo synthetisiert.",
+        "specs": [
+            ("Typ", "3-Band-Sättigung (Harmonic Saturation)"),
+            ("Preis", "19 € auf Gumroad"),
+            ("Formate", "VST3 + Standalone"),
+            ("System", "Windows 10 oder neuer (kein macOS-Build)"),
+            ("Bänder", "Low, Mid, High mit zwei einstellbaren Crossovern"),
+            ("Sättigungsarten", "Hard Clip, Wavefolder, Tube, Diode, Tape (pro Band wählbar)"),
+            ("Pro Band", "Drive, Mix, Gain, Mute, Solo"),
+            ("Oversampling", "bis 8x"),
+            ("Lizenz", "Einzelplatz, unbefristet; ein Key aktiviert bis zu 3 Rechner"),
+            ("Demo", "vollständiges Plugin, kurzes Rauschen alle 45 Sekunden"),
+        ],
+        "features": [
+            "<strong>3 Bänder:</strong> Low, Mid und High getrennt bearbeiten, zwei einstellbare Crossover. Den Bass hart fahren und die Höhen sauber lassen",
+            "<strong>5 Sättigungsarten</strong>, pro Band wählbar: Hard Clip (aggressiv, laut, chirurgisch), Wavefolder (metallisch, synthetisch), "
+            "Tube (warm, rund, musikalisch), Diode (asymmetrisch, rau), Tape (Glue, Verschmieren, Vintage-Drive)",
+            "<strong>Pro Band</strong> Drive, Mix, Gain, Mute und Solo, dazu Output-Gain und Bypass",
+            "<strong>Oversampling bis 8x</strong> für saubere Sättigung ohne Aliasing, auch wenn du hart reinfährst",
+            "Gebaut von einem aktiven Hitech- und Psycore-Producer für echte Sessions: Mix, Master, Destroy",
+        ],
+        "extra_prose": "<h3>So arbeitest du mit Crucible</h3><ol>"
+                       "<li><strong>Split:</strong> Die Übergänge Low/Mid und Mid/High setzen und das Signal in drei unabhängige Bänder teilen.</li>"
+                       "<li><strong>Saturate:</strong> Pro Band eine Sättigungsart wählen und Drive aufdrehen: Gewicht für die Tiefen, Biss für die Mitten, Luft und Kante für die Höhen.</li>"
+                       "<li><strong>Balance:</strong> Mit Mix pro Band mischen, mit Gain angleichen, mit Solo abhören und mit Oversampling sauber halten.</li></ol>"
+                       "<h3>Warum Sättigung in drei Bändern?</h3>"
+                       "<p>Harmonische Sättigung fügt einem Signal musikalische Obertöne hinzu. Es wirkt dadurch lauter, wärmer und präsenter. "
+                       "Statt das ganze Signal auf einmal zu sättigen, bekommt bei Crucible jedes Band seinen eigenen Charakter: Hard Clip auf Sub und Kick für Druck, "
+                       "eine sanfte Tube in den Mitten für die Leads, Tape in den Höhen, alles in einer Instanz. "
+                       "Crucible ist für schnelle, dunkle Psytrance-Produktionen gebaut, funktioniert aber überall, wo du einen Saturator einsetzt: "
+                       "Drum &amp; Bass, Techno, Dubstep, Hip-Hop, Rock und Mastering.</p>",
+        "tested": "",
+        "good_to_know": "Nach dem Kauf steht in deiner Gumroad-Quittung ein persönlicher Lizenz-Key. Du fügst ihn einmal in Crucible ein (Activate, dafür braucht es Internet); "
+                        "ein Key aktiviert bis zu 3 deiner Rechner. Crucible prüft die Lizenz alle zwei Wochen im Hintergrund und läuft bis zu 60 Tage offline. "
+                        "Bis zur Aktivierung verhält es sich wie die kostenlose Demo.",
+        "formats": "<strong>Windows 10 oder neuer:</strong> VST3 + Standalone, in jedem VST3-Host, z. B. REAPER, Ableton Live 12+, Cubase 12+, Studio One 6+, FL Studio und Bitwig. "
+                   "Einen macOS-Build von Crucible gibt es nicht. Die aktuellen Systemanforderungen stehen auf der Gumroad-Seite.",
+        "faq": [
+            ("Was ist Crucible?",
+             "Crucible ist ein 3-Band-Sättigungs-Plugin von Code Chaos Audio. Es teilt dein Signal in Low, Mid und High und sättigt jedes Band für sich, "
+             "mit fünf Sättigungsarten (Hard Clip, Wavefolder, Tube, Diode, Tape), Drive, Mix, Gain, Mute und Solo pro Band und Oversampling bis 8x."),
+            ("Eignet sich Crucible für Psytrance, Hitech und Psycore?",
+             "Ja, gebaut hat es ein aktiver Hitech-, Psycore- und Darkpsy-Producer. Im Low-Band gibst du Kick und Bassline Wärme und Gewicht, "
+             "oben Leads und Percussion Biss und Präsenz, ohne dass der Mix matschig wird."),
+            ("Was ist der Unterschied zwischen den Sättigungsarten?",
+             "Hard Clip ist aggressiv, laut und chirurgisch, gut für Druck im Bass. Wavefolder faltet die Wellenform zurück und erzeugt metallische, synthetische Obertöne. "
+             "Tube ist warm, rund und musikalisch für die Mitten. Diode bringt asymmetrischen, rauen Biss. Tape klebt zusammen, verschmiert leicht und gibt Luft. "
+             "Jedes Band bekommt seine eigene Art."),
+            ("Läuft Crucible auf dem Mac?",
+             "Nein. Crucible gibt es als VST3 und Standalone für Windows 10 oder neuer, einen macOS-Build gibt es nicht."),
+            ("Wie funktioniert die Lizenz-Aktivierung?",
+             "In deiner Gumroad-Quittung steht ein persönlicher Lizenz-Key. Du fügst ihn einmal in Crucible ein (Activate, Internet nötig); ein Key aktiviert bis zu 3 Rechner. "
+             "Crucible prüft die Lizenz alle zwei Wochen im Hintergrund und läuft bis zu 60 Tage offline."),
+            ("Gibt es eine kostenlose Demo?",
+             "Ja, die Crucible Demo auf Gumroad ist das vollständige Plugin mit einem kurzen Rauschen alle 45 Sekunden."),
+        ],
+        "related": ["kick-bass-scope", "shardstep", "chaos-fm"],
+        # Englische Fassung /en/plugins/crucible/ (Texte aus der früheren crucible.html)
+        "en": {
+            "title": "Crucible: 3-Band Saturation VST3 Plugin | Code Chaos",
+            "desc": "Crucible: 3-band harmonic saturation VST3 + standalone for Windows. Hard clip, wavefolder, tube, diode, tape per band, up to 8x oversampling. €19, free demo.",
+            "h1": "Crucible: 3-band saturation VST3",
+            "eyebrow": "Code Chaos Audio · effect plugin",
+            "category": "3-band saturation",
+            "os": "Windows 10+",
+            "answer": "Crucible is a 3-band harmonic saturation plugin: it splits your signal into low, mid and high and saturates each band independently, "
+                      "with five saturation types (hard clip, wavefolder, tube, diode, tape), per-band drive, mix and gain and up to 8x oversampling. "
+                      "VST3 + standalone for Windows 10+, with a free demo. <strong>Shape. Saturate. Dominate.</strong>",
+            "gui_alt": "Crucible plugin interface: Low Hard Clip, Mid Tube, High Tape, 4x oversampling",
+            "audio": ["A · Dry", "B · Crucible"],
+            "audio_intro": "The same 190 BPM psy loop, without and with Crucible. Loudness-matched (both −16 LUFS), so you hear tone and density, not just volume. "
+                           "Switch between A and B while it plays.",
+            "audio_note": "Settings: Low Hard Clip 12 dB, Mid Tube 9 dB, High Tape 6 dB at 70 % mix, crossovers 120 Hz / 4 kHz, 4x oversampling, output −0.8 dB. "
+                          "Rendered offline with Crucible 1.0.0; source loop synthesized for this demo.",
+            "specs": [
+                ("Type", "3-band harmonic saturation plugin"),
+                ("Price", "€19 on Gumroad"),
+                ("Formats", "VST3 + Standalone"),
+                ("System", "Windows 10 or newer (no macOS build)"),
+                ("Bands", "Low, Mid, High with two adjustable crossovers"),
+                ("Saturation types", "Hard Clip, Wavefolder, Tube, Diode, Tape (chosen per band)"),
+                ("Per-band controls", "Drive, Mix, Gain, Mute, Solo"),
+                ("Oversampling", "Up to 8x"),
+                ("License", "Single-user perpetual license, one key activates up to 3 computers"),
+                ("Demo", "Full plugin, short noise burst every 45 seconds"),
+            ],
+            "feat_title": "3-band saturation features",
+            "features": [
+                "<strong>3-band processing:</strong> independent low, mid and high control with two adjustable crossovers. Drive your bass hard while keeping highs clean",
+                "<strong>Five saturation types</strong>, chosen per band: Hard Clip (aggressive, loud, surgical), Wavefolder (metallic, synthetic, alien), "
+                "Tube (warm, rounded, musical), Diode (asymmetric, gritty bite), Tape (glue, smear, vintage drive)",
+                "<strong>Per band</strong> Drive, Mix, Gain, Mute and Solo, plus output gain and bypass",
+                "<strong>Oversampling up to 8x</strong> for clean, alias-free saturation even when you push hard",
+                "Designed by an active hitech and psycore producer for real sessions: mix, master, destroy",
+            ],
+            "extra_prose": "<h3>How it works</h3><ol>"
+                           "<li><strong>Split:</strong> set the low/mid and mid/high crossover points to carve your signal into three independent bands.</li>"
+                           "<li><strong>Saturate:</strong> choose a saturation type per band and push drive. Add weight to lows, bite to mids, air and edge to highs.</li>"
+                           "<li><strong>Balance:</strong> blend with per-band mix, trim gain, solo to audition, and use oversampling to keep it all clean.</li></ol>"
+                           "<h3>Why 3-band saturation?</h3>"
+                           "<p>Harmonic saturation adds musical overtones to a sound, so it feels louder, warmer and more present. Instead of saturating the whole signal at once, "
+                           "Crucible gives every band its own character: a hard clip into sub and kick for low-end punch, a gentle tube on the leads in the mids, tape on the highs, "
+                           "all in a single instance. Crucible was forged for the fast and the dark, but works anywhere you would reach for a saturator: "
+                           "drum &amp; bass, techno, dubstep, hip-hop, rock and mastering.</p>",
+            "good_to_know": "After purchase your Gumroad receipt contains a personal license key. Paste it into Crucible once (Activate button, internet needed for this step); "
+                            "one key activates up to 3 of your computers. Crucible re-checks the license in the background every two weeks and keeps working offline for up to 60 days. "
+                            "Until activated it behaves like the free demo.",
+            "formats": "<strong>Windows 10 or newer:</strong> VST3 + standalone, in any VST3 host such as REAPER, Ableton Live 12+, Cubase 12+, Studio One 6+, FL Studio and Bitwig. "
+                       "There is no macOS build of Crucible. See the Gumroad page for the latest system requirements.",
+            "faq": [
+                ("What is Crucible?",
+                 "Crucible is a 3-band harmonic saturation plugin by Code Chaos Audio. It splits your signal into low, mid and high bands and lets you saturate each band independently "
+                 "with five selectable types (Hard Clip, Wavefolder, Tube, Diode, Tape), per-band Drive, Mix, Gain, Mute and Solo, and oversampling up to 8x."),
+                ("Is it good for psytrance, hitech and psycore?",
+                 "Yes, it was built by an active hitech, psycore and darkpsy producer. Add warmth and weight to kicks and basslines in the low band while adding bite and presence "
+                 "to leads and percussion up top, without muddying the mix."),
+                ("What's the difference between the saturation types?",
+                 "Hard Clip is aggressive, loud and surgical, great for pushing low-end punch. Wavefolder folds the waveform back on itself for metallic, synthetic overtones. "
+                 "Tube is warm, rounded and musical for mids. Diode adds asymmetric, gritty bite. Tape adds glue, vintage smear and air. You can assign a different type to each band."),
+                ("Does Crucible run on a Mac?",
+                 "No. Crucible is a VST3 plugin and standalone app for Windows 10 or newer; there is no macOS build."),
+                ("How does license activation work?",
+                 "Your Gumroad receipt contains a personal license key. Paste it into Crucible once (Activate button, internet needed); one key activates up to 3 computers. "
+                 "Crucible re-checks the license every two weeks and keeps working offline for up to 60 days."),
+                ("Is there a free demo?",
+                 "Yes. The Crucible demo on Gumroad is the full plugin with a short noise burst every 45 seconds."),
+            ],
+        },
+    },
     {
         "slug": "shardstep", "live": True, "group": "psy", "name": "Shardstep", "price": 15,
         "category": "Stutter- und Glitch-Effekt", "sub": "Effekt-Plugin (VST3)", "os": "Windows 10/11, macOS (Apple Silicon)",
@@ -158,7 +311,7 @@ PLUGINS = [
         "h1": "Chaos FM: FM-Synth für Hitech, Psycore und Darkpsy",
         "eyebrow": "Code Chaos Audio · Instrument",
         "teaser": "3-Operator-FM-Synth mit GENERATE-Knopf für Leads, Bässe, Acid, Stabs, Plucks und FX.",
-        "answer": "Chaos FM ist der FM-Synth hinter dem Code-Chaos-Sound: drei Operatoren, drei Algorithmen und ein großer <strong>GENERATE</strong>-Knopf, "
+        "answer": "Chaos FM ist der FM-Synth-VST hinter dem Code-Chaos-Sound (VST3 + Standalone für Windows, mit kostenloser Demo): drei Operatoren, drei Algorithmen und ein großer <strong>GENERATE</strong>-Knopf, "
                   "der für die gewählte Kategorie einen neuen, musikalisch brauchbaren Patch würfelt: Lead, Bass, Acid, Stab, Pluck oder FX.",
         "gui_alt": "Oberfläche von Chaos FM: drei Operatoren A, B und C mit Ratio, Fine, Level und ADSR, darunter Algorithmus, Filter, Unison und Glide, oben Preset Hitech Scream Lead und der GENERATE-Knopf",
         "gui_w": 1880, "gui_h": 1240,
@@ -202,8 +355,8 @@ PLUGINS = [
     {
         "slug": "kick-bass-scope", "live": True, "group": "psy", "name": "Kick/Bass Scope", "price": 0,
         "category": "Oszilloskop / Analyzer für Kick und Bass", "sub": "Analyzer-Plugin (VST3)", "os": "Windows 10/11, macOS (Apple Silicon)",
-        "title": "Kick/Bass Scope: Gratis Kick-Bass-Oszilloskop | Code Chaos",
-        "desc": "Kostenloses VST3: Kick/Bass Scope zeigt Kick und Bass übereinander im Takt deiner DAW, mit Peaks in dBFS, Clip-Linie und Phasen-Warnung. Win + Mac.",
+        "title": "Kick/Bass Scope: Kick & Bass Phase prüfen – gratis VST3",
+        "desc": "Kostenloses VST3: Kick/Bass Scope zeigt Kick und Bass übereinander im Takt deiner DAW und warnt bei Gegenphasigkeit. Peaks in dBFS, Clip-Linie. Win + Mac.",
         "h1": "Kick/Bass Scope: kostenloses Oszilloskop für Kick und Bass",
         "eyebrow": "Code Chaos Audio · Gratis-Plugin",
         "teaser": "Gratis: Kick und Bass übereinander im Takt der DAW, mit Phasen-Warnung und Clip-Linie.",
@@ -238,6 +391,15 @@ PLUGINS = [
             "13 Factory-Presets: Psy Rolling 1/4, Hitech 1 Bar, Psycore 2 Bars, Darkpsy Tail Check 1/4, Club Headroom −6 dBFS und mehr",
             "Das Audio geht unberührt durch: Der Ausgang ist bitgenau identisch mit dem Eingang (in den automatischen Tests geprüft)",
         ],
+        "extra_sections": [
+            ("Phase Alignment: erkennen statt raten",
+             "<p>Ob Kick und Bass phasenrichtig zusammenspielen, hörst du auf Kopfhörern oft nicht, auf einer großen Anlage dafür umso deutlicher: Der Druck fehlt genau dort, wo beide gleichzeitig klingen. "
+             "Kick/Bass Scope macht das sichtbar. Die <strong>Kick/Bass-Korrelation</strong> (−1 bis +1) wird nur dort gemessen, wo beide tatsächlich spielen, "
+             "bei Gegenphasigkeit erscheint eine klare Warnung, und die Überlappungszeit pro Fenster steht in Millisekunden daneben.</p>"
+             "<p><strong>Wichtig:</strong> Das Scope ist ein Analyzer. Es verschiebt nichts, dreht keine Phase und verändert dein Audio nicht (der Ausgang ist bitgenau gleich dem Eingang). "
+             "Ausrichten tust du beim Mischen in deiner DAW, das Scope zeigt dir sofort, ob die Änderung geholfen hat. "
+             "Was nach dem Mix noch an Druck und Lautheit fehlt, ist Sache des Masterings: <a href=\"/mastering/\">Mastering für Psytrance, Hitech und Psycore →</a></p>"),
+        ],
         "routing": "Setz das Scope auf die Bass-Spur und schick die Kick in den Sidechain-Eingang. Sidechain-Routing für VST3 funktioniert in jeder DAW anders. "
                    "Wenn deine DAW keinen Sidechain in einen Effekt führen kann, stell Input auf <em>Single input</em>: Kick hart links und Bass hart rechts "
                    "auf einen gemeinsamen Bus routen und das Scope dort einsetzen.",
@@ -261,12 +423,13 @@ PLUGINS = [
     {
         "slug": "gravesaw", "live": True, "group": "metal", "name": "Gravesaw", "price": 19,
         "category": "Amp + Cab für Gitarre und Bass", "sub": "Effekt-Plugin (VST3)", "os": "Windows 10/11, macOS (Apple Silicon)",
-        "title": "Gravesaw: Black-Metal-Amp-Plugin (VST3) | Code Chaos",
-        "desc": "Gravesaw: Black-Metal-Amp mit eingebauter Box für Gitarre und Bass-DI. 19 Cabs, 16 Presets, VST3 + Standalone für Windows und macOS. 19 €, Gratis-Demo.",
+        "title": "Gravesaw: Black-Metal-Amp-Sim (VST3) | Code Chaos",
+        "feat_title": "Funktionen der Black-Metal-Amp-Sim",
+        "desc": "Gravesaw: Black-Metal-Amp-Sim mit eingebauter Box für Gitarre und Bass-DI. 19 Cabs, 16 Presets, VST3 + Standalone für Windows und macOS. 19 €, Gratis-Demo.",
         "h1": "Gravesaw: Black-Metal-Amp mit eingebauter Box",
         "eyebrow": "Code Chaos Audio · Black Metal Suite",
         "teaser": "Black-Metal-Amp mit eingebauter Box für Gitarre und Bass-DI, von rau und sägend bis dick.",
-        "answer": "Gravesaw ist ein Black-Metal-Amp mit eingebauter Box (Cab). Du steckst ein Gitarren- oder Bass-DI ein und bekommst den kalten, sägenden, "
+        "answer": "Gravesaw ist eine Black-Metal-Amp-Sim: ein Amp mit eingebauter Box (Cab). Du steckst ein Gitarren- oder Bass-DI ein und bekommst den kalten, sägenden, "
                   "gesättigten Ton der Second-Wave-Platten: Tremolo-Picking, das auch bei 170+ BPM klar bleibt, Höhen, die schneiden statt zu zischen, "
                   "und keinerlei Clean-Headroom. Gravesaw ist der Amp der Code Chaos Black Metal Suite.",
         "gui_alt": "Oberfläche von Gravesaw: Gate, Tight, Gain und Raw/Thick, Tone Stack mit Bass, Mid, Treble, Fizz und Presence, Cab-Auswahl 4x12 Cold Bright und Pegelanzeigen, Preset Carpathian Buzz",
@@ -505,15 +668,6 @@ PLUGINS = [
         "related": ["frostfret", "gravesaw", "rimehall"],
     },
 ]
-
-# Crucible hat eine eigene (englische) Seite /crucible.html; hier nur die Karte für /plugins/ und die Querverweise.
-CRUCIBLE = {
-    "slug": "crucible", "live": True, "group": "psy", "name": "Crucible", "price": 19, "url": "/crucible.html",
-    "teaser": "3-Band-Sättigung: Hard Clip, Wavefolder, Tube, Diode oder Tape pro Band, bis 8x Oversampling.",
-    "img_webp": "/images/crucible-ui-880.webp", "img_jpg": "/images/crucible-ui.jpg", "w": 880, "h": 560,
-    "alt": "Oberfläche von Crucible: Low Hard Clip, Mid Tube, High Tape, 4x Oversampling",
-    "os": "Windows 10+ · VST3 + Standalone",
-}
 
 GROUPS = [
     ("psy", "Für Hitech, Psycore und Darkpsy",

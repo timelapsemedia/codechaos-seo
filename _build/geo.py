@@ -32,14 +32,14 @@ TEXT = {
                alt="Tim Borchert (Code Chaos) im Studio, Porträtfoto",
                bio="Tim Borchert produziert seit 2016 als Code Chaos Psycore, Hitech und Darkpsy in Hamburg und mastert seine Tracks selbst. "
                    "2021 hat er das Label Abstract Sound Design mitgegründet.",
-               extra={"mastering": "Unter dem Namen Polished Media mastert er auch Releases anderer Artists.",
+               extra={"mastering": "Als Code Chaos Mastering mastert er auch Psytrance-, Hitech- und Psycore-Releases anderer Artists.",
                       "plugin": "Code Chaos Audio ist seine Plugin-Reihe für Hitech, Psycore, Darkpsy und Black Metal."}),
     "en": dict(von="By", upd="Last updated", toc="On this page", about="About the author", more="More about Code Chaos",
                more_url="/en/#about",
                alt="Tim Borchert (Code Chaos) in the studio, portrait photo",
                bio="Tim Borchert has been producing psycore, hitech and darkpsy as Code Chaos in Hamburg since 2016 and masters his own tracks. "
                    "In 2021 he co-founded the label Abstract Sound Design.",
-               extra={"mastering": "Under the name Polished Media he also masters releases by other artists.",
+               extra={"mastering": "As Code Chaos Mastering he also masters psytrance, hitech and psycore releases by other artists.",
                       "plugin": "Code Chaos Audio is his plugin series for hitech, psycore, darkpsy and black metal."}),
 }
 
@@ -254,10 +254,10 @@ def _crucible_ld(h, iso):
 
 
 def handseiten():
-    """index.html (DE-Startseite) und crucible.html. Das JSON-LD der Startseite schreibt danach schema_home.py."""
+    """index.html (DE-Startseite). Das JSON-LD der Startseite schreibt danach schema_home.py."""
     out = []
-    for datei, key, lang, art, offen in (("index.html", "/", "de", "ratgeber", False),
-                                          ("crucible.html", "/crucible.html", "en", "plugin", True)):
+    # crucible.html ist seit 11.11.2026 nur noch eine Weiterleitung auf /plugins/crucible/ (generiert, Grok #66)
+    for datei, key, lang, art, offen in (("index.html", "/", "de", "ratgeber", False),):
         p = os.path.join(ROOT, datei)
         h = open(p, encoding="utf-8").read()
         h, iso = ausbauen(h, key, lang, art, toc_offen=offen, nach_hero=(datei == "index.html"))

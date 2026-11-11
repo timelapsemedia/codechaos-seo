@@ -9,13 +9,13 @@ EN_MASTERING = {
    ("How should I prepare my files?", "Export WAV or AIFF at the project's sample rate, 24 or 32-bit, without a limiter or clipper on the master bus and with peaks around -6 to -3 dBFS. Stems should start at the same position and be exported with all their effects. Add a reference track if you have a sound in mind."),
    ("Do you master genres other than psytrance?", "Yes. The focus is psycore, hitech and darkpsy, but electronic music in general (techno, drum and bass, industrial, experimental) is welcome. Just mention the genre and a reference in your request."),
    ("How do I pay and receive my master?", "Payment is by bank transfer. Your choice: in advance or by invoice after completion. After your request you get a reply with the details, usually within 24–48 hours. Singles are delivered in 48–72 hours, EPs in 5–7 days, albums in 7–14 days, as 24-bit WAV, 16-bit AIFF and 320 kbps MP3. Revisions are unlimited."),
-   ("Who does the mastering?", "Mastering is done by Code Chaos (Tim Borchert), a hitech, psycore and darkpsy producer from Hamburg with 24+ releases since 2016 and co-founder of the label Abstract Sound Design, running the service as Polished Media."),
+   ("Who does the mastering?", "Mastering is done by Code Chaos (Tim Borchert), a hitech, psycore and darkpsy producer from Hamburg with 24+ releases since 2016 and co-founder of the label Abstract Sound Design, The service is called Code Chaos Mastering. Metal and gothic are mastered by Tim Borchert under the name Polished Media (polished.media)."),
  ],
  "body": """<main id="main">
 <div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li aria-current="page">Mastering</li></ol></nav></div>
 <section class="s-hero">
   <div class="wrap narrow">
-    <span class="eyebrow">Polished Media · mastering by Code Chaos</span>
+    <span class="eyebrow">Code Chaos Mastering</span>
     <h1>Psytrance mastering for psycore, hitech &amp; darkpsy</h1>
     <div class="rule" aria-hidden="true"><i></i></div>
     <p class="answer">Genre-specific mastering by an active producer: <strong>single €79</strong>, <strong>stem mastering €129</strong>, <strong>EP up to 5 tracks €349</strong>, <strong>album up to 10 tracks €629</strong>, incl. VAT, audio audit and unlimited revisions. Made for fast, dense psytrance between 150 and 300 BPM, where generic mastering crushes the kick and turns the mix to mud.</p>
@@ -93,7 +93,7 @@ EN_MASTERING = {
 <section aria-labelledby="cru-t">
   <div class="wrap narrow prose">
     <h2 id="cru-t">Mixing your own tracks?</h2>
-    <p>The same multiband approach used in these masters is available as a plugin: <a href="/crucible.html">Crucible</a>, a 3-band harmonic saturation plugin (VST3 + standalone for Windows, €19) by Code Chaos Audio.</p>
+    <p>The same multiband approach used in these masters is available as a plugin: <a href="/en/plugins/crucible/">Crucible</a>, a 3-band harmonic saturation plugin (VST3 + standalone for Windows, €19) by Code Chaos Audio.</p>
   </div>
 </section>
 </main>
@@ -113,5 +113,5 @@ FORM = """<form class="form" action="https://formspree.io/f/mojkqopj" method="PO
       <input type="hidden" name="_subject" value="New mastering request (EN) · Code Chaos">
       <p class="assure">No obligation: you usually get a reply with all details within 24–48 hours. You only pay once you say yes, upfront or by invoice after delivery.</p>
       <div><button class="btn btn-blood" type="submit">Send request</button></div>
-      <p class="note">Your data is sent via Formspree and only used to answer your request. Privacy policy (German): <a href="/#datenschutz">Datenschutz</a>. Prefer email? <a href="mailto:polished.media@gmx.de">polished.media@gmx.de</a></p>
+      <p class="note">Your data is sent via Formspree and only used to answer your request. Privacy policy (German): <a href="/#datenschutz">Datenschutz</a>. Prefer email? <a href="mailto:polished.media@gmx.de" style="text-decoration:underline">polished.media@gmx.de</a></p>
     </form>"""

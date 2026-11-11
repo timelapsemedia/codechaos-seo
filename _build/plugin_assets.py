@@ -52,6 +52,9 @@ def audio(p):
 
 if __name__ == "__main__":
     for p in PLUGINS:
+        if p.get("assets_manual"):
+            print("übersprungen (Assets von Hand):", p["slug"])
+            continue
         if not p["live"]:
             print("übersprungen (nicht live):", p["slug"])
             continue

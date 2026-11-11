@@ -107,7 +107,7 @@ GENRES = [
 <ol>
 <li><strong>Kick zuerst und kurz halten.</strong> Eine Sinus-Kick mit schnellem Pitch-Abfall und sehr kurzem Release. Bei 240 BPM liegen nur 250 ms zwischen zwei Schlägen.</li>
 <li><strong>Bass im Seitenkettenraum.</strong> Die Neurotrance-Bassline sitzt zwischen den Kicks. Statt klassischem Sidechain hilft oft präzises Volume-Shaping pro Note.</li>
-<li><strong>Tiefen sauber, Mitten dreckig.</strong> Sub und Kick bleiben mono und clean, Charakter entsteht in den Mitten. Multiband-Sättigung wie <a href="/crucible.html">Crucible</a> ist dafür ideal: Low mit Hard Clip, Mid mit Tube.</li>
+<li><strong>Tiefen sauber, Mitten dreckig.</strong> Sub und Kick bleiben mono und clean, Charakter entsteht in den Mitten. Multiband-Sättigung wie <a href="/plugins/crucible/">Crucible</a> ist dafür ideal: Low mit Hard Clip, Mid mit Tube.</li>
 <li><strong>Atmosphäre in Schichten.</strong> Drei bis fünf Pad- und Drone-Ebenen mit unterschiedlicher Bewegung, statt einer großen Fläche.</li>
 <li><strong>Mastering mit Gefühl für Transienten.</strong> Bei hohem Tempo zerstört zu viel Limiting die Kick. Ein genre-erfahrenes <a href="/mastering/">Psycore-Mastering</a> hält Lautheit und Punch in Balance.</li>
 </ol>""",
@@ -176,7 +176,7 @@ GENRES = [
 <ol>
 <li><strong>Kick first, and keep it short.</strong> A sine kick with a fast pitch drop and a very short release. At 240 BPM there are only 250 ms between two hits.</li>
 <li><strong>Give the bass its own slot.</strong> The neurotrance bassline lives between the kicks. Precise per-note volume shaping often works better than classic sidechain compression.</li>
-<li><strong>Clean lows, dirty mids.</strong> Keep sub and kick mono and clean and build character in the mids. Multiband saturation such as <a href="/crucible.html">Crucible</a> is made for this: hard clip on the low band, tube on the mids.</li>
+<li><strong>Clean lows, dirty mids.</strong> Keep sub and kick mono and clean and build character in the mids. Multiband saturation such as <a href="/en/plugins/crucible/">Crucible</a> is made for this: hard clip on the low band, tube on the mids.</li>
 <li><strong>Layer the atmosphere.</strong> Three to five pad and drone layers with different movement work better than one big pad.</li>
 <li><strong>Master with respect for transients.</strong> At high tempo, too much limiting destroys the kick. Genre-aware <a href="/en/mastering/">psycore mastering</a> keeps loudness and punch in balance.</li>
 </ol>""",
@@ -252,7 +252,7 @@ GENRES = [
 <li><strong>Sounddesign vor Arrangement.</strong> Baue dir eine Bibliothek aus kurzen, charaktervollen Glitch-Sounds und Resamples, bevor du arrangierst.</li>
 <li><strong>Kick mit Punch, nicht mit Länge.</strong> Bei 190 BPM braucht die Kick einen klaren Transienten und einen kurzen Körper, damit der Bass Platz hat.</li>
 <li><strong>Automation ist alles.</strong> Filter, Pitch, Formant, Drive: Hitech-Leads leben davon, dass sich ständig etwas bewegt.</li>
-<li><strong>Sättigung pro Frequenzband.</strong> Damit die dichten Leads nicht kratzen, hilft getrennte Sättigung: Tape in den Höhen, Tube in den Mitten. Genau dafür ist <a href="/crucible.html">Crucible</a> gebaut.</li>
+<li><strong>Sättigung pro Frequenzband.</strong> Damit die dichten Leads nicht kratzen, hilft getrennte Sättigung: Tape in den Höhen, Tube in den Mitten. Genau dafür ist <a href="/plugins/crucible/">Crucible</a> gebaut.</li>
 <li><strong>Raum lassen.</strong> Weniger Elemente gleichzeitig, dafür schnellere Wechsel. So bleibt der Mix trotz Komplexität transparent.</li>
 </ol>""",
    "rel_title": "Hitech Psytrance von Code Chaos",
@@ -322,7 +322,7 @@ GENRES = [
 <li><strong>Sound design before arrangement.</strong> Build a library of short, characterful glitch sounds and resamples before you start arranging.</li>
 <li><strong>Punch, not length.</strong> At 190 BPM the kick needs a clear transient and a short body so the bass has room.</li>
 <li><strong>Automation is everything.</strong> Filter, pitch, formant, drive: hitech leads live on constant movement.</li>
-<li><strong>Saturate per frequency band.</strong> To keep dense leads from getting harsh, saturate bands separately: tape on the highs, tube on the mids. That is exactly what <a href="/crucible.html">Crucible</a> was built for.</li>
+<li><strong>Saturate per frequency band.</strong> To keep dense leads from getting harsh, saturate bands separately: tape on the highs, tube on the mids. That is exactly what <a href="/en/plugins/crucible/">Crucible</a> was built for.</li>
 <li><strong>Leave space.</strong> Fewer elements at once, faster changes. That keeps the mix transparent despite the complexity.</li>
 </ol>""",
    "rel_title": "Hitech psytrance by Code Chaos",
@@ -389,7 +389,7 @@ GENRES = [
 <li><strong>Die Bassline trägt den Track.</strong> Arbeite an Hüllkurven und Filterbewegung, bis der Bass allein schon bedrohlich klingt.</li>
 <li><strong>Samples sparsam, aber gezielt.</strong> Ein starkes Sample an der richtigen Stelle wirkt mehr als zehn im Hintergrund.</li>
 <li><strong>Tiefe statt Lautstärke.</strong> Arbeite mit Raum, Delay und Vordergrund/Hintergrund, damit die Atmosphäre atmen kann.</li>
-<li><strong>Wärme im Low-End.</strong> Leichte Röhren- oder Tape-Sättigung macht den Bass dicker, ohne ihn zu verzerren, getrennt pro Band zum Beispiel mit <a href="/crucible.html">Crucible</a>.</li>
+<li><strong>Wärme im Low-End.</strong> Leichte Röhren- oder Tape-Sättigung macht den Bass dicker, ohne ihn zu verzerren, getrennt pro Band zum Beispiel mit <a href="/plugins/crucible/">Crucible</a>.</li>
 <li><strong>Mastering für Dynamik.</strong> Darkpsy lebt von Kontrasten. Ein <a href="/mastering/">Darkpsy-Mastering</a> sollte Lautheit erreichen, ohne die Atmosphäre plattzudrücken.</li>
 </ol>""",
    "rel_title": "Darkpsy von Code Chaos",
@@ -453,7 +453,7 @@ GENRES = [
 <li><strong>The bassline carries the track.</strong> Work on envelopes and filter movement until the bass sounds menacing on its own.</li>
 <li><strong>Use samples sparingly but deliberately.</strong> One strong sample in the right spot does more than ten in the background.</li>
 <li><strong>Depth over loudness.</strong> Use space, delay and foreground/background so the atmosphere can breathe.</li>
-<li><strong>Warmth in the low end.</strong> Gentle tube or tape saturation thickens the bass without distorting it, separately per band, for example with <a href="/crucible.html">Crucible</a>.</li>
+<li><strong>Warmth in the low end.</strong> Gentle tube or tape saturation thickens the bass without distorting it, separately per band, for example with <a href="/en/plugins/crucible/">Crucible</a>.</li>
 <li><strong>Master for dynamics.</strong> Darkpsy lives on contrast. <a href="/en/mastering/">Darkpsy mastering</a> should reach loudness without flattening the atmosphere.</li>
 </ol>""",
    "rel_title": "Darkpsy by Code Chaos",
