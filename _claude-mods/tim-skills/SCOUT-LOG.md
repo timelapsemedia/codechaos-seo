@@ -369,3 +369,6 @@ Aus dem Content-Pipeline-Post selbst gebaut (lokal, kein Skill): Gewinner-Radar 
 | Skill | Anlass (Belege) | Test |
 |---|---|---|
 | evidenz-basiert | Tim 10.11.: „Alles global marketing, audio, video, webdesign, mastering, verkaufspsych usw alles an wissensch ausrichten in allen sessions global“. Dazu neu: MCP literatur (KatalogPlus/SUB, SpringerLink via OpenAlex, PubMed, Scholar-Ersatz), MCP wissen (lokale Vektorsuche), Startbibliothek C:/wissenschaft (6 Bereiche, 89 meistzitierte Einstiegstitel, ungeprüft markiert), bereichs-kompass 0.1.5 spielt die Evidenz-Regel in jeden Bereich ein | Werkzeuge einzeln getestet (PubMed 63 Treffer mit Abstracts, Semantic Scholar 1.213, KatalogPlus Relevanz-Treffer mit PPN, DAIA-Signatur), kompass 7/7 grün, Ladetest |
+
+## 2026-11-11 papier (eigen)
+- Anlass: Tim-Post „paper skill“. Fremde Vorbilder (maxrosenbaum44/claude-ocr u. a.) ohne Lizenz → eigener Bau mit Tesseract 5.4 (Apache-2.0) + tessdata_best. Werkzeug C:/papier, MCP-Werkzeug papier_lesen. Gemessen: CER 0–0,9 % Druck/Foto/Fraktur, Handschrift 5,5 % → Prüfbild.
