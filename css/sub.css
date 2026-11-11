@@ -136,6 +136,7 @@ h3{font-size:1.15rem;margin:28px 0 10px}
 .s-foot a{color:var(--bone-dim);text-decoration:none}.s-foot a:hover{color:var(--gold-hi)}
 .s-foot .copy{margin-top:32px;font-family:var(--cap);font-size:.68rem;letter-spacing:.14em;color:var(--parch)}
 .note{font-size:.85rem;color:var(--parch)}
+.s-hero .note a{display:inline-block;padding:4px 0;min-height:24px;line-height:16px}
 .prose h2{margin-top:48px}.prose h2:first-child{margin-top:0}
 .prose .table-scroll{margin:8px 0 20px}
 .hero-grid>*{min-width:0}
