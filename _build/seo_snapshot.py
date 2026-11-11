@@ -18,7 +18,7 @@ SITE_BING = "https://codechaos-official.de/"
 TARGET_GROUPS = {
     "Genre": ["psycore", "psy core", "psycore genre", "psycore bpm", "psycore artists", "was ist psycore", "psycore vs darkpsy",
               "darkpsy", "dark psy", "darkpsy bpm", "darkpsy djs", "hitech psy", "hitech psytrance", "hi-tech psytrance",
-              "hitech psytrance bpm"],
+              "hitech psytrance bpm", "hitech bpm", "hitech genre"],
     "Mastering": ["psytrance mastering", "psycore mastering", "mastering für psytrance", "mastering hamburg", "online mastering",
                   "audio mastering online", "track mastering", "ep mastering", "album mastering", "mastering preise"],
     "Crucible": ["crucible plugin", "crucible vst", "code chaos crucible", "saturation plugin vst3", "sättigung plugin",
