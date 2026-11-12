@@ -420,6 +420,67 @@ PLUGINS = [
         ],
         "related": ["shardstep", "chaos-fm", "crucible"],
     },
+    # Shardgate: Fakten aus codechaos-store/products/shardgate/description.html + plugins/shardgate (Render --check, 12.11.2026)
+    {
+        "slug": "shardgate", "live": True, "group": "psy", "name": "Shardgate", "price": 0,
+        "category": "Trance-Gate und Kick-Duck", "sub": "Effekt-Plugin (VST3)", "os": "Windows 10/11, macOS (Apple Silicon)",
+        "title": "Shardgate: Trance-Gate & Sidechain-Ducking gratis (VST3)",
+        "feat_title": "Funktionen: Trance-Gate, Kick-Duck und Auto Gain",
+        "desc": "Kostenloses Trance-Gate-VST3 für Psytrance, Hitech und Psycore: 16 Steps im Takt der DAW, Kick-Duck ohne Sidechain, Auto Gain. 12 Presets, Win + Mac.",
+        "h1": "Shardgate: kostenloses Trance-Gate und Kick-Duck für Psytrance",
+        "eyebrow": "Code Chaos Audio · Gratis-Plugin",
+        "teaser": "Gratis: 16-Step-Trance-Gate und Kick-Duck im Takt der DAW, mit Auto Gain.",
+        "answer": "Shardgate ist ein kostenloses Trance-Gate mit Kick-Duck für Psytrance, Hitech und Psycore, synchron zu Tempo und Position deiner DAW. "
+                  "Du zerhackst Pads und Leads in 1/16-Patterns, schneidest die erste Sechzehntel jedes Beats aus einer rollenden Bassline "
+                  "oder lässt ein Pad gegen die Kick pumpen, ohne einen Sidechain zu routen. Auf Gumroad gilt Pay what you want.",
+        "gui_alt": "Oberfläche von Shardgate: 16 Gate-Steps (On, Half, Off) im Preset Psy Bass Gap, darunter die Gain-Kurve über einen Takt, Regler für Gate, Kick Duck und Output mit Auto Gain",
+        "gui_w": 2000, "gui_h": 1200,
+        "audio_mode": "ab",
+        "audio": [
+            {"src": "build/shardgate/demo-dry.wav", "file": "demo-dry.mp3", "label": "A · Ohne Shardgate"},
+            {"src": "build/shardgate/demo.wav", "file": "demo-wet.mp3", "label": "B · Mit Shardgate"},
+        ],
+        "audio_intro": "Derselbe synthetische Psy-Loop bei 145 BPM ohne (A) und mit Shardgate (B), alle 4 Takte ein anderes Preset: Psy Bass Gap, Classic Trance Gate, Kick Duck – Hard, Hitech Chop 1/32.",
+        "audio_note": "Gerendert mit dem Plugin-Code selbst. Mit Auto Gain lagen A und B bei −17,5 und −17,4 LUFS, also gleich laut.",
+        "specs": [
+            ("Typ", "Trance-Gate + Kick-Duck, tempo-synchron"),
+            ("Preis", "kostenlos (Pay what you want)"),
+            ("Formate", "VST3 + Standalone"),
+            ("Systeme", "Windows 10/11 · macOS nur Apple Silicon (unsigniert)"),
+            ("Nicht unterstützt", "AU / Logic Pro, Intel-Macs"),
+            ("Pattern", "16 Steps (On, Half, Off) in 1/8, 1/16, 1/32 oder 1/16T"),
+            ("Presets", "12 Factory-Presets"),
+            ("Latenz", "keine (Zero Latency)"),
+        ],
+        "features": [
+            "<strong>16-Step-Gate</strong>, jeder Step On, Half oder Off, in 1/8, 1/16, 1/32 oder 1/16T, synchron zur Position des Hosts",
+            "Gate Depth 0–100 %, Gate Length 10–100 % jedes Steps, <strong>Smooth</strong> 0,5–30 ms für harte oder weiche Kanten",
+            "<strong>Kick Duck</strong> auf jede Viertel: Depth, Length (10–100 % eines Beats) und Curve, ohne Sidechain-Routing",
+            "<strong>Auto Gain</strong> (Standard an) holt das gegatete Signal auf den Durchschnittspegel des trockenen Signals, bis +6 dB. Die Spitzen steigen dabei mit, lass also etwas Headroom. Abschaltbar",
+            "Gain-Kurve über einen Pattern-Durchlauf mit Playhead, Mix und Output",
+            "12 Presets: Psy Bass Gap (KBBB), Classic Trance Gate 1/16, Kick Duck – Hard, Pad Pump – Soft, Hitech Chop 1/32, Triplet Stagger 1/16T, Gallop Gate, Darkpsy Offbeat Stab und mehr",
+            "Null Latenz. Bei gestopptem Transport geht das Audio unverändert durch (bitgenau geprüft, Output auf 0 dB)",
+        ],
+        "tested": "69 automatische Prüfungen: alle 12 Presets bei 145, 200 und 260 BPM auf einem synthetischen Psy-Loop ohne NaN und ohne Spitzen über −0,3 dBFS (bei −9 dBFS Eingang). "
+                  "Auf einem Sinuston blieb die größte zweite Differenz (Maß für Sprünge an den Gate-Kanten) bei 0,0026, der trockene Sinus hat 0,0011, die Prüfschwelle liegt bei 0,01. "
+                  "Auto Gain traf den Pegel des Bypass-Signals auf ±0,16 dB, wenn die +6-dB-Grenze nicht erreicht wird. Ein geschlossener Step lag bei −191 dB, ein offener bei 0,00 dB. "
+                  "Bei Mix 0 % und gestopptem Transport ist der Ausgang bitgenau gleich dem Eingang. Der Klang wurde bei diesen Tests nicht nach Gehör beurteilt. " + NOT_EVERY_DAW,
+        "good_to_know": "Das Gate folgt dem Transport der DAW. Die Standalone-App hat keinen Transport, dort bleibt das Gate offen. "
+                        "Bei 1/32 dauert das 16-Step-Pattern einen halben Takt und läuft zweimal pro Takt, bei 1/8 zwei Takte.",
+        "formats": MAC_FORMATS + " Kein Login und kein Lizenzserver.",
+        "faq": [
+            ("Ist Shardgate wirklich kostenlos?",
+             "Ja. Auf Gumroad gilt Pay what you want: Du kannst 0 € eingeben oder etwas zahlen, wenn dir das Plugin hilft."),
+            ("Brauche ich einen Sidechain für den Kick-Duck?",
+             "Nein. Shardgate duckt auf jede Viertel im Takt der DAW, ohne dass du die Kick in einen Sidechain schickst. Das passt zu 4/4-Kicks; bei anderen Kick-Mustern nimmst du das Gate-Pattern."),
+            ("Wie schneide ich die Kick-Lücke aus einer rollenden Bassline?",
+             "Mit dem Preset Psy Bass Gap (KBBB): Der erste Sechzehntel-Step jedes Beats ist aus, die drei Bass-Steps sind an. Mit Smooth stellst du ein, wie hart die Kanten sind."),
+            ("Warum wird es mit Auto Gain lauter?",
+             "Auto Gain gleicht den Pegelverlust durch das Gate aus (bis +6 dB), damit du das Pattern nicht nach Lautstärke beurteilst. Die Spitzen steigen dabei mit; schalte Auto Gain aus, wenn du keinen Headroom hast."),
+            ("Läuft Shardgate auf dem Mac?", MAC_FAQ),
+        ],
+        "related": ["shardstep", "kick-bass-scope", "psy-kick-bass"],
+    },
     # ─────────────────────────── BLACK METAL ───────────────────────────
     {
         "slug": "gravesaw", "live": True, "group": "metal", "name": "Gravesaw", "price": 19,
@@ -679,7 +740,7 @@ GROUPS = [
 
 # Genre-Seite (DE) → passende Plugins (nur live gebaute Seiten werden verlinkt)
 GENRE_PLUGINS = {
-    "psycore": ["psy-kick-bass", "shardstep", "chaos-fm", "kick-bass-scope", "crucible"],
-    "hitech-psytrance": ["psy-kick-bass", "shardstep", "chaos-fm", "kick-bass-scope", "crucible"],
+    "psycore": ["psy-kick-bass", "shardstep", "shardgate", "chaos-fm", "kick-bass-scope", "crucible"],
+    "hitech-psytrance": ["psy-kick-bass", "shardstep", "shardgate", "chaos-fm", "kick-bass-scope", "crucible"],
     "darkpsy": ["psy-kick-bass", "chaos-fm", "kick-bass-scope", "crucible", "shardstep"],
 }

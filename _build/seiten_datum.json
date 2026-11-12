@@ -28,12 +28,12 @@
   "hash": "cfea3eb2c9628644"
  },
  "/en/plugins/": {
-  "datum": "2026-11-11",
-  "hash": "6b4a815b692e7581"
+  "datum": "2026-11-12",
+  "hash": "93a5bb1f640f3034"
  },
  "/en/plugins/crucible/": {
-  "datum": "2026-11-11",
-  "hash": "4e5f0fdd9cf092ba"
+  "datum": "2026-11-12",
+  "hash": "a4d04f4f5fa7808f"
  },
  "/en/psy-loudness-data/": {
   "datum": "2026-11-12",
@@ -61,23 +61,23 @@
  },
  "/hitech-psytrance/": {
   "datum": "2026-11-12",
-  "hash": "7cbaa5946bb4fb00"
+  "hash": "1e0466421af79f34"
  },
  "/mastering/": {
   "datum": "2026-11-12",
   "hash": "359bbe6e51e1193a"
  },
  "/plugins/": {
-  "datum": "2026-11-11",
-  "hash": "efb70a191a16120b"
+  "datum": "2026-11-12",
+  "hash": "246027cc24a27d41"
  },
  "/plugins/chaos-fm/": {
-  "datum": "2026-11-11",
-  "hash": "2da771cdd180d884"
+  "datum": "2026-11-12",
+  "hash": "470f030faa3c692e"
  },
  "/plugins/crucible/": {
-  "datum": "2026-11-11",
-  "hash": "9efff18cdf499a7d"
+  "datum": "2026-11-12",
+  "hash": "17e9b6589b991adb"
  },
  "/plugins/frostfret/": {
   "datum": "2026-10-21",
@@ -93,19 +93,23 @@
  },
  "/plugins/kick-bass-scope/": {
   "datum": "2026-11-12",
-  "hash": "8480a6ced0cac5b4"
+  "hash": "40cd280f09a04904"
  },
  "/plugins/psy-kick-bass/": {
-  "datum": "2026-11-11",
-  "hash": "4f6b82dde7a88f56"
+  "datum": "2026-11-12",
+  "hash": "5813259db7f1126e"
  },
  "/plugins/rimehall/": {
   "datum": "2026-11-11",
   "hash": "ee98db86c6cd4232"
  },
+ "/plugins/shardgate/": {
+  "datum": "2026-11-12",
+  "hash": "18e519d6edda7852"
+ },
  "/plugins/shardstep/": {
-  "datum": "2026-11-11",
-  "hash": "f3f9c4c95a08fa0c"
+  "datum": "2026-11-12",
+  "hash": "d456c64e6523637d"
  },
  "/psy-lautheit-daten/": {
   "datum": "2026-11-12",
@@ -113,7 +117,7 @@
  },
  "/psycore/": {
   "datum": "2026-11-12",
-  "hash": "09b3a37ffaa3ceab"
+  "hash": "8081384315b4fbd9"
  },
  "/ratgeber/gitarrensound-ableton/": {
   "datum": "2026-11-09",

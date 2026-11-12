@@ -868,6 +868,7 @@ EN_PLUG = {   # Übersetzung der DE-Teaser/Kategorien aus content_plugins.py (Gr
     "shardstep": ("Stutter and glitch effect", "Stutter, repeats, tape stop and reverse synced to your DAW, built for 200 to 300 BPM."),
     "psy-kick-bass": ("Kick and rolling bass instrument", "Kick and rolling bass in one plugin: the kick is tuned to the bass and ends before the first bass note."),
     "chaos-fm": ("FM synthesizer", "3-operator FM synth with a GENERATE button for leads, basses, acid, stabs, plucks and FX."),
+    "shardgate": ("Trance gate and kick duck", "Free: 16-step trance gate and kick duck synced to your DAW, with Auto Gain."),
     "kick-bass-scope": ("Oscilloscope / analyzer for kick and bass", "Free: kick and bass overlaid in time with your DAW, with phase warning and clip line."),
     "gravesaw": ("Amp + cab for guitar and bass", "Black metal amp with built-in cab for guitar and bass DI, from raw and sawing to thick."),
     "rimehall": ("Reverb, shimmer and tape (atmosphere bus)", "Cold reverb up to 30 s, octave shimmer and tape lo-fi with ducking, so the riff stays in front."),

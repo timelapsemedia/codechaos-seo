@@ -381,6 +381,21 @@
     </image:image>
   </url>
   <url>
+    <loc>https://codechaos-official.de/plugins/shardgate/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/shardgate/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/shardgate/og.jpg</image:loc>
+      <image:title>Shardgate · Trance-Gate und Kick-Duck · Code Chaos Audio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/shardgate/gui-880.jpg</image:loc>
+      <image:title>Oberfläche von Shardgate (VST3)</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://codechaos-official.de/plugins/gravesaw/</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>

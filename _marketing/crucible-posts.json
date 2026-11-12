@@ -389,5 +389,30 @@
    "Psytrance",
    "Hamburg"
   ]
+ },
+ {
+  "id": "store-32-shardgate-launch",
+  "date": "2026-11-24",
+  "image": "https://codechaos-official.de/images/social/shardgate.jpg",
+  "video": "https://codechaos-official.de/images/social/shardgate-reel.mp4",
+  "video_title": "Shardgate: kostenloses Trance-Gate + Kick-Duck für Psytrance (VST3, Win + Mac)",
+  "caption": "SHARDGATE ist da, und es ist kostenlos. 🎛️\n\nEin Trance-Gate mit Kick-Duck, synchron zum Takt deiner DAW. 16 Steps, jeder On, Half oder Off, in 1/8, 1/16, 1/32 oder 1/16T. Dazu ein Duck auf jede Viertel mit Depth, Length und Curve, ganz ohne Sidechain-Routing.\n\nAuto Gain gleicht den Pegelverlust durch das Gate aus, damit du das Pattern nicht nach Lautstärke beurteilst. Im Reel: Takt 1 trocken, dann Psy Bass Gap, Classic Trance Gate und Kick Duck, echter Plugin-Output.\n\n12 Presets, VST3 + Standalone für Windows und macOS (Apple Silicon, unsigniert). Kostenlos, zahl was du willst · Link in Bio\n\n#psytrance #hitech #psycore #freevst #musicproduction",
+  "short": "Shardgate: kostenloses VST3-Trance-Gate mit Kick-Duck ohne Sidechain, 16 Steps, Auto Gain, 12 Presets. Gratis: https://timberwolf688.gumroad.com/l/shardgate?utm_source=social",
+  "youtube_description": "Shardgate ist ein kostenloses Trance-Gate mit Kick-Duck für Psytrance, Hitech und Psycore (VST3 + Standalone, Windows und macOS Apple Silicon).\n\nIm Video: synthetischer Psy-Loop bei 145 BPM, Takt 1 trocken, dann die Presets Psy Bass Gap (KBBB), Classic Trance Gate 1/16 und Kick Duck – Hard. Ton direkt aus dem Plugin gerendert.\n\n- 16 Steps On/Half/Off in 1/8, 1/16, 1/32, 1/16T\n- Kick Duck auf jede Viertel ohne Sidechain\n- Auto Gain bis +6 dB, 12 Presets, null Latenz\n\nGratis: https://timberwolf688.gumroad.com/l/shardgate\nCode Chaos Audio · codechaos-official.de",
+  "youtube_tags": [
+   "Shardgate",
+   "trance gate",
+   "free vst",
+   "psytrance",
+   "sidechain",
+   "Code Chaos Audio"
+  ]
+ },
+ {
+  "id": "learn-05-kick-luecke-gate",
+  "date": "2026-11-29",
+  "image": "https://codechaos-official.de/images/social/shardgate-kbbb.jpg",
+  "caption": "Kick-Lücke im Rolling Bass, ohne Sidechain. 🔪\n\nIm KBBB-Pattern gehört die erste Sechzehntel jedes Beats der Kick. Liegt dort noch Bass, reiben sich zwei tiefe Signale.\n\n1️⃣ Shardgate auf die Bass-Spur.\n2️⃣ Preset „Psy Bass Gap (KBBB)“ laden.\n3️⃣ Die 1., 5., 9. und 13. Sechzehntel stehen auf OFF, der Rest auf ON.\n4️⃣ Smooth auf 1 ms: harte Kante ohne Knacken.\n5️⃣ Auto Gain an: der Bass bleibt so laut wie vorher, du vergleichst fair.\n\nGemessen bei 200 BPM (Length 100 %): geschlossener Step −191 dB, offener Step 0,00 dB. Loop mit und ohne Gate: −17,5 vs. −17,4 LUFS.\n\nSpeichern für die nächste Bassline. Shardgate ist kostenlos · Link in Bio\n\n#psytrance #psycore #hitech #mixingtips #freevst",
+  "short": "Kick-Lücke im Rolling Bass ohne Sidechain: erste Sechzehntel jedes Beats aus, Smooth 1 ms, Auto Gain an. Shardgate gratis: https://timberwolf688.gumroad.com/l/shardgate?utm_source=social"
  }
 ]
