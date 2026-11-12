@@ -20,12 +20,12 @@
   "hash": "62bfec1344db6a98"
  },
  "/en/hitech-psytrance/": {
-  "datum": "2026-10-05",
-  "hash": "d0e33e2edf918d3f"
+  "datum": "2026-11-12",
+  "hash": "e8f83b3818376b6a"
  },
  "/en/mastering/": {
-  "datum": "2026-11-11",
-  "hash": "0bda5d69d691a764"
+  "datum": "2026-11-12",
+  "hash": "cfea3eb2c9628644"
  },
  "/en/plugins/": {
   "datum": "2026-11-11",
@@ -35,9 +35,13 @@
   "datum": "2026-11-11",
   "hash": "4e5f0fdd9cf092ba"
  },
+ "/en/psy-loudness-data/": {
+  "datum": "2026-11-12",
+  "hash": "4df6884bfb40e93a"
+ },
  "/en/psycore/": {
-  "datum": "2026-10-05",
-  "hash": "d4b89f131e8a9255"
+  "datum": "2026-11-12",
+  "hash": "ce82161f056e2e3d"
  },
  "/en/uhrwerk-aus-blut/": {
   "datum": "2026-11-11",
@@ -56,12 +60,12 @@
   "hash": "53046550e8b0eade"
  },
  "/hitech-psytrance/": {
-  "datum": "2026-10-27",
-  "hash": "921fdf130a0c996c"
+  "datum": "2026-11-12",
+  "hash": "7cbaa5946bb4fb00"
  },
  "/mastering/": {
-  "datum": "2026-11-11",
-  "hash": "0f3833fa6c5ad337"
+  "datum": "2026-11-12",
+  "hash": "359bbe6e51e1193a"
  },
  "/plugins/": {
   "datum": "2026-11-11",
@@ -88,8 +92,8 @@
   "hash": "0cc258bc28f7907b"
  },
  "/plugins/kick-bass-scope/": {
-  "datum": "2026-11-11",
-  "hash": "ebdc5df0aa158e7d"
+  "datum": "2026-11-12",
+  "hash": "8480a6ced0cac5b4"
  },
  "/plugins/psy-kick-bass/": {
   "datum": "2026-11-11",
@@ -103,9 +107,13 @@
   "datum": "2026-11-11",
   "hash": "f3f9c4c95a08fa0c"
  },
+ "/psy-lautheit-daten/": {
+  "datum": "2026-11-12",
+  "hash": "f72fc6d73a1e7dea"
+ },
  "/psycore/": {
-  "datum": "2026-10-27",
-  "hash": "73487e13761eaad0"
+  "datum": "2026-11-12",
+  "hash": "09b3a37ffaa3ceab"
  },
  "/ratgeber/gitarrensound-ableton/": {
   "datum": "2026-11-09",

@@ -979,7 +979,101 @@ def genre_plugins_html(g, lang):
 </section>
 """
 
+# ───────────── Lautheits-Datenseite (Grok #72, 12.11.2026; Texte/Tabellen aus _build/daten/, siehe md_daten.py) ─────────────
+DATEN_PFAD = {"de": "/psy-lautheit-daten/", "en": "/en/psy-loudness-data/"}
+# Titel auf <= 60 Zeichen gekürzt (Tims SEO-Regel), das Frontmatter der Quellen hatte 76-81 Zeichen
+DATEN_TITEL = {"de": "Psytrance & Hitech Lautheit: LUFS von 553 Releases",
+               "en": "Psytrance & Hitech Loudness Data: LUFS of 553 Releases"}
+# Descriptions auf <= 160 Zeichen gekürzt (Quelle 161/172), Zahlen unverändert aus genre_index.json
+DATEN_DESC = {"de": "Gemessen: Hitech und Psycore liegen im Median bei etwa −8,3 LUFS (553 Tracks), Full-on und Dark Psy bei −7,9, Hardcore bei −6. Mediane, Spannen, Methode.",
+              "en": "Measured: hitech and psycore releases sit at about -8.3 LUFS (553 tracks), full-on and dark psytrance near -7.9, hardcore at -6. Medians, ranges, method."}
+DATEN_TECHNIK = "ITU-R BS.1770 integrated loudness, DR database method, third-octave spectrum"
+DATEN_VARIABLEN = {
+    "de": [("Integrierte Lautheit", "LUFS", "integrierte Lautheit nach ITU-R BS.1770 je Track; Median und 25. bis 75. Perzentil je Genre"),
+           ("Dynamikwert (DR)", "dB", "Methode der DR-Datenbank: zweithöchster Spitzenwert gegen die lautesten 20 % der RMS-Blöcke"),
+           ("Lautheitsumfang (LRA)", "LU", "Loudness Range nach EBU R 128"),
+           ("Peak-to-Loudness-Ratio (PLR)", "dB", "True Peak minus integrierte Lautheit"),
+           ("Side/Mid-Verhältnis", "dB", "Energie des Seitensignals gegen das Mittensignal"),
+           ("Korrelation unter 150 Hz", None, "Phasenkorrelation im Low End, 1,00 = mono"),
+           ("Tonale Balance relativ zu 1 kHz", "dB", "Terzspektrum, in fünf Bänder gruppiert, relativ zum 1-kHz-Band")],
+    "en": [("Integrated loudness", "LUFS", "ITU-R BS.1770 integrated loudness per track; median and 25th to 75th percentile per genre"),
+           ("Dynamic range (DR)", "dB", "DR database method: second-highest peak against the loudest 20 % of RMS blocks"),
+           ("Loudness range (LRA)", "LU", "EBU R 128 loudness range"),
+           ("Peak-to-loudness ratio (PLR)", "dB", "true peak minus integrated loudness"),
+           ("Side/mid ratio", "dB", "energy of the side signal against the mid signal"),
+           ("Correlation below 150 Hz", None, "phase correlation of the low end, 1.00 = mono"),
+           ("Tonal balance relative to 1 kHz", "dB", "third-octave spectrum, grouped into five bands, relative to the 1 kHz band")],
+}
+
+
+def build_daten(lang):
+    import md_daten
+    meta, intro, sections = md_daten.lesen(lang)
+    pfad = DATEN_PFAD[lang]
+    assert meta["url"] == pfad, meta["url"]
+    url = BASE + pfad
+    alt = BASE + DATEN_PFAD["en" if lang == "de" else "de"]
+    u = UI[lang]
+    assert len(intro) == 2 and intro[1][1].startswith("**"), "Intro = Einleitung + Kurzantwort erwartet"
+    kurz = re.sub(r"^<strong>[^<]*</strong>\s*", "", md_daten.inline(intro[1][1]))
+    crumb = "Lautheit: Messdaten" if lang == "de" else "Loudness data"
+    secs, faqs = [], []
+    for i, (titel, bl) in enumerate(sections):
+        cls = ' class="alt"' if i % 2 == 0 else ""
+        if "FAQ" in titel or "Häufige Fragen" in titel:
+            faqs, rest = md_daten.faq(bl)
+            assert len(faqs) >= 4, "FAQ nicht gefunden"
+            weiter = "".join(md_daten.block_html(b) for b in rest)
+            secs.append(f'<section{cls}>\n  <div class="wrap narrow">\n    <h2>{md_daten.inline(titel)}</h2>\n    {faq_html(faqs)}{weiter}\n  </div>\n</section>')
+        else:
+            inner = "\n".join(md_daten.block_html(b) for b in bl)
+            secs.append(f'<section{cls}>\n  <div class="wrap narrow prose">\n    <h2>{md_daten.inline(titel)}</h2>\n{inner}\n  </div>\n</section>')
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "Article", "@id": url + "#article", "headline": meta["h1"], "description": meta["description"], "inLanguage": lang,
+         "url": url, "mainEntityOfPage": url, "datePublished": "2026-11-12", "dateModified": DATUM,
+         "author": autor_ld(), "publisher": publisher_ld(), "image": BASE + "/images/og/mastering.jpg",
+         "about": {"@id": url + "#dataset"}, "isPartOf": {"@id": BASE + "/#website"}},
+        {"@type": "Dataset", "@id": url + "#dataset", "name": meta["h1"], "description": meta["description"], "url": url,
+         "inLanguage": lang, "creator": {"@type": "Person", "@id": PERSON, "name": "Tim Borchert"}, "publisher": publisher_ld(),
+         "isAccessibleForFree": True, "measurementTechnique": DATEN_TECHNIK, "temporalCoverage": "2026", "dateModified": DATUM,
+         "keywords": ["hitech", "psycore", "psytrance", "LUFS", "loudness", "mastering", "dynamic range", "hardcore", "dubstep", "drum and bass"],
+         "variableMeasured": [dict({"@type": "PropertyValue", "name": n, "description": d}, **({"unitText": e} if e else {}))
+                              for n, e, d in DATEN_VARIABLEN[lang]]},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": u["home"], "item": BASE + u["home_url"]},
+            {"@type": "ListItem", "position": 2, "name": "Mastering", "item": BASE + u["mastering_url"]},
+            {"@type": "ListItem", "position": 3, "name": crumb, "item": url}]},
+        {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": lang, "mainEntity": [
+            {"@type": "Question", "name": strip(q), "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in faqs]},
+    ]}
+    body = f"""<main id="main">
+<div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="{u['home_url']}">{u['home']}</a></li><li><a href="{u['mastering_url']}">Mastering</a></li><li aria-current="page">{crumb}</li></ol></nav></div>
+<section class="s-hero">
+  <div class="wrap narrow">
+    <span class="eyebrow">{"Daten · Lautheit" if lang == "de" else "Data · Loudness"}</span>
+    <h1>{esc(meta['h1'])}</h1>
+    <div class="rule" aria-hidden="true"><i></i></div>
+    <p>{md_daten.inline(intro[0][1])}</p>
+    <p class="answer">{kurz[:1].upper() + kurz[1:]}</p>
+  </div>
+</section>
+{chr(10).join(secs)}
+</main>
+"""
+    h = head(lang, url, alt, DATEN_TITEL[lang], DATEN_DESC[lang], BASE + "/images/og/mastering.jpg",
+             "Lautheit von Hitech-, Psytrance- und Hardcore-Releases, gemessen von Code Chaos" if lang == "de"
+             else "Loudness of hitech, psytrance and hardcore releases, measured by Code Chaos", ld) \
+        + nav(lang, alt, "mast") + body + footer(lang)
+    h, _ = geo.ausbauen(h, pfad, lang, art="mastering")
+    path = os.path.join(ROOT, pfad.strip("/"), "index.html")
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    open(path, "w", encoding="utf-8", newline="\n").write(h)
+    return path
+
+
 if __name__ == "__main__":
+    for lang in ("de", "en"):
+        print(build_daten(lang))
     for g in GENRES:
         for lang in ("de", "en"):
             print(build_genre(g, lang))

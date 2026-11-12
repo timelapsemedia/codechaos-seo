@@ -27,6 +27,7 @@ Genre-specific mastering for Psytrance, Hitech Psytrance, Psycore and Darkpsy by
 
 - [Mastering for psytrance, hitech & psycore (German)](https://codechaos-official.de/mastering/): prices, process, file preparation, FAQ
 - [Mastering for psytrance, hitech & psycore (English)](https://codechaos-official.de/en/mastering/): the same in English
+- [Psytrance, hitech & psycore loudness data (English)](https://codechaos-official.de/en/psy-loudness-data/): measured LUFS, DR, LRA, PLR, stereo width, low-end correlation and tonal balance of released hitech/psycore (loudness from 553 tracks), full-on/dark psytrance, hardcore/uptempo and bass music; medians and middle half, method documented ([German](https://codechaos-official.de/psy-lautheit-daten/))
 - [Request form](https://codechaos-official.de/mastering/#request): send a mastering request (English form: [request](https://codechaos-official.de/en/mastering/#request)); email: polished.media@gmx.de
 - Single (stereo mastering, 1 track): €79, delivery 48–72 h
 - Stem Pro (stem mastering, 1 track, up to 6 stems): €129, delivery 48–72 h

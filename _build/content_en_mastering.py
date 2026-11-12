@@ -32,7 +32,7 @@ EN_MASTERING = {
       <li><strong>The bassline:</strong> rolling neurotrance or darkpsy basses that stay defined on club systems and earbuds.</li>
       <li><strong>The atmosphere:</strong> pads, drones and FX with depth instead of a flat wall of sound.</li>
     </ul>
-    <p>Code Chaos has produced these genres since 2016 and masters other artists' releases with the same precision as the own catalogue. No presets, no one-click AI mastering: every track is checked against references from its genre.</p>
+    <p>Code Chaos has produced these genres since 2016 and masters other artists' releases with the same precision as the own catalogue. No presets, no one-click AI mastering: every track is checked against references from its genre. How loud released hitech, psycore and psytrance tracks really are: our <a href="/en/psy-loudness-data/">loudness data from 553 releases</a>.</p>
   </div>
 </section>
 

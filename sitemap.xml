@@ -275,6 +275,24 @@
     </image:image>
   </url>
   <url>
+    <loc>https://codechaos-official.de/psy-lautheit-daten/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/psy-lautheit-daten/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/psy-loudness-data/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/psy-lautheit-daten/"/>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/en/psy-loudness-data/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/psy-lautheit-daten/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/psy-loudness-data/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/psy-lautheit-daten/"/>
+  </url>
+  <url>
     <loc>https://codechaos-official.de/sounds/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>

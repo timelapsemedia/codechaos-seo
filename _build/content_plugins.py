@@ -398,6 +398,7 @@ PLUGINS = [
              "bei Gegenphasigkeit erscheint eine klare Warnung, und die Überlappungszeit pro Fenster steht in Millisekunden daneben.</p>"
              "<p><strong>Wichtig:</strong> Das Scope ist ein Analyzer. Es verschiebt nichts, dreht keine Phase und verändert dein Audio nicht (der Ausgang ist bitgenau gleich dem Eingang). "
              "Ausrichten tust du beim Mischen in deiner DAW, das Scope zeigt dir sofort, ob die Änderung geholfen hat. "
+             "Zum Vergleich: In unseren <a href=\"/psy-lautheit-daten/\">Lautheitsdaten veröffentlichter Psy-Tracks</a> liegt die Korrelation unter 150 Hz im Hitech- und Psytrance-Median bei 1,00, das Low End ist also mono. "
              "Was nach dem Mix noch an Druck und Lautheit fehlt, ist Sache des Masterings: <a href=\"/mastering/\">Mastering für Psytrance, Hitech und Psycore →</a></p>"),
         ],
         "routing": "Setz das Scope auf die Bass-Spur und schick die Kick in den Sidechain-Eingang. Sidechain-Routing für VST3 funktioniert in jeder DAW anders. "

@@ -109,7 +109,7 @@ GENRES = [
 <li><strong>Bass im Seitenkettenraum.</strong> Die Neurotrance-Bassline sitzt zwischen den Kicks. Statt klassischem Sidechain hilft oft präzises Volume-Shaping pro Note.</li>
 <li><strong>Tiefen sauber, Mitten dreckig.</strong> Sub und Kick bleiben mono und clean, Charakter entsteht in den Mitten. Multiband-Sättigung wie <a href="/plugins/crucible/">Crucible</a> ist dafür ideal: Low mit Hard Clip, Mid mit Tube.</li>
 <li><strong>Atmosphäre in Schichten.</strong> Drei bis fünf Pad- und Drone-Ebenen mit unterschiedlicher Bewegung, statt einer großen Fläche.</li>
-<li><strong>Mastering mit Gefühl für Transienten.</strong> Bei hohem Tempo zerstört zu viel Limiting die Kick. Ein genre-erfahrenes <a href="/mastering/">Psycore-Mastering</a> hält Lautheit und Punch in Balance.</li>
+<li><strong>Mastering mit Gefühl für Transienten.</strong> Bei hohem Tempo zerstört zu viel Limiting die Kick. Ein genre-erfahrenes <a href="/mastering/">Psycore-Mastering</a> hält Lautheit und Punch in Balance. Gemessene Werte: <a href="/psy-lautheit-daten/">Lautheit von Hitech- und Psycore-Releases</a>.</li>
 </ol>""",
    "rel_title": "Psycore von Code Chaos",
    "rel_intro": "Eine Auswahl an Psycore-Releases von Code Chaos, von Roadside Butchery (2021) bis zum 260-BPM-Remix von Code Pandorum (2026). Alle Releases gibt es auf Bandcamp.",
@@ -178,7 +178,7 @@ GENRES = [
 <li><strong>Give the bass its own slot.</strong> The neurotrance bassline lives between the kicks. Precise per-note volume shaping often works better than classic sidechain compression.</li>
 <li><strong>Clean lows, dirty mids.</strong> Keep sub and kick mono and clean and build character in the mids. Multiband saturation such as <a href="/en/plugins/crucible/">Crucible</a> is made for this: hard clip on the low band, tube on the mids.</li>
 <li><strong>Layer the atmosphere.</strong> Three to five pad and drone layers with different movement work better than one big pad.</li>
-<li><strong>Master with respect for transients.</strong> At high tempo, too much limiting destroys the kick. Genre-aware <a href="/en/mastering/">psycore mastering</a> keeps loudness and punch in balance.</li>
+<li><strong>Master with respect for transients.</strong> At high tempo, too much limiting destroys the kick. Genre-aware <a href="/en/mastering/">psycore mastering</a> keeps loudness and punch in balance. Measured values: <a href="/en/psy-loudness-data/">loudness of hitech and psycore releases</a>.</li>
 </ol>""",
    "rel_title": "Psycore by Code Chaos",
    "rel_intro": "A selection of psycore releases by Code Chaos, from Roadside Butchery (2021) to the 260 BPM remix for Code Pandorum (2026). Everything is available on Bandcamp.",
@@ -265,7 +265,7 @@ GENRES = [
      ("Welche bekannten Hitech-DJs und Produzenten gibt es?", "Zum Beispiel Highko, Psykovsky, Alien Chaos, Will O Wisp, Inner Coma, Killa TK, Gotalien, Audiopathik, BionicForm, Xenrox und Mad Scientist, dazu Code Chaos aus Hamburg."),
    ],
    "cta_title": "Mastering für deinen Hitech-Track",
-   "cta": "Code Chaos mastert Hitech, Psycore und Darkpsy genre-spezifisch, damit dichte Arrangements laut und trotzdem transparent bleiben, ab 79 € pro Track. " + _STUDIO_DE,
+   "cta": "Code Chaos mastert Hitech, Psycore und Darkpsy genre-spezifisch, damit dichte Arrangements laut und trotzdem transparent bleiben, ab 79 € pro Track. Wie laut aktuelle Hitech-Releases gemastert sind, zeigen unsere <a href=\"/psy-lautheit-daten/\">Lautheitsdaten aus 553 Tracks</a>. " + _STUDIO_DE,
    "cta_btn1": "Mastering anfragen",
   },
   "en": {
@@ -335,7 +335,7 @@ GENRES = [
      ("Which hitech DJs and producers should I know?", "For example Highko, Psykovsky, Alien Chaos, Will O Wisp, Inner Coma, Killa TK, Gotalien, Audiopathik, BionicForm, Xenrox and Mad Scientist, plus Code Chaos from Hamburg."),
    ],
    "cta_title": "Mastering for your hitech track",
-   "cta": "Code Chaos offers genre-specific mastering for hitech, psycore and darkpsy that keeps dense arrangements loud and transparent, from €79 per track. " + _STUDIO_EN,
+   "cta": "Code Chaos offers genre-specific mastering for hitech, psycore and darkpsy that keeps dense arrangements loud and transparent, from €79 per track. How loud current hitech releases are mastered: our <a href=\"/en/psy-loudness-data/\">loudness data from 553 tracks</a>. " + _STUDIO_EN,
    "cta_btn1": "Request mastering",
   },
  },

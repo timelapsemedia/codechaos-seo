@@ -32,7 +32,7 @@ DE_MASTERING = {
       <li><strong>Die Bassline:</strong> rollende Neurotrance- oder Darkpsy-Bässe, die auf der Anlage und im Kopfhörer definiert bleiben.</li>
       <li><strong>Die Atmosphäre:</strong> Pads, Drones und FX mit Tiefe statt einer flachen Klangwand.</li>
     </ul>
-    <p>Code Chaos produziert diese Genres seit 2016 und mastert Releases anderer Artists mit derselben Präzision wie den eigenen Katalog. Keine Presets, kein Ein-Klick-KI-Mastering: Jeder Track wird mit Referenzen aus seinem Genre abgeglichen.</p>
+    <p>Code Chaos produziert diese Genres seit 2016 und mastert Releases anderer Artists mit derselben Präzision wie den eigenen Katalog. Keine Presets, kein Ein-Klick-KI-Mastering: Jeder Track wird mit Referenzen aus seinem Genre abgeglichen. Wie laut veröffentlichte Hitech-, Psycore- und Psytrance-Tracks tatsächlich sind, zeigen unsere <a href="/psy-lautheit-daten/">Lautheitsdaten aus 553 Releases</a>.</p>
   </div>
 </section>
 
