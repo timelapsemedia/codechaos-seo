@@ -25,6 +25,7 @@ Was live ist, steht in `timelapsemedia/codechaos-store` → `research/state.json
 | **Chaos FM** (Repo chaos-fm) | 3-OP-FM für Hitech-Leads, Zaps, Bässe |
 | **Crucible** (Repo crucible) | 3-Band-Sättigung für Bass- und Leadbus |
 | **Kick/Bass Scope** | Phasenlage von Kick und Bass prüfen |
+| **Shardgate** (gratis, seit 12.11.2026) | 16-Step-Trance-Gate + Kick-Duck ohne Sidechain, Auto Gain: Kick-Lücke im Rolling Bass (Preset „Psy Bass Gap (KBBB)“), Pads/Leads zerhacken, Pump |
 | Hitech FM (Vital/Serum), Hitech Arsenal Vol. 1, Psycore-Ableton-Template | Presets, Samples, Template mit „Dissect Me" |
 | Black Metal Tone Kit (IRs, REAPER-Ketten inkl. Heavy Bus), Drum Kit, MIDI Grooves 2 | Box-IRs, Gitarren im lauten Psy-Mix, Blast-MIDI |
 
@@ -35,6 +36,26 @@ Was live ist, steht in `timelapsemedia/codechaos-store` → `research/state.json
   3. `cmake --build ... --target <Target>_All`
   4. MIDI per `pedalboard` rendern (`p.load_plugin(...VST3/<Name>.vst3)`, Instrument mit MIDI-Nachrichten). Effekte in Reihe schalten, z. B. Gitarre → Gravesaw → Rimehall.
 - **Für Ableton:** über producer-pal bzw. die Ableton-Bridge Spuren anlegen und die Plugins laden (Windows: `PYTHONIOENCODING=utf-8`).
+
+## Loop-Baukasten (Methode der Shardgate-Demo, Tim 12.11.2026: „Sound und Track an sich super“)
+Eigene Synthese, keine Samples. Werkzeug: `codechaos-store/tools/psy_loop.py` (Python, numpy + soundfile, kein JUCE nötig; identisch mit `plugins/*/tools/TestSignal.cpp` bis auf das Hat-Rauschen, Korrelation < 1 kHz 0,9999).
+- Bausteine: Kick als Sinus mit Pitch-Sweep 190 → 48 Hz (τ 18 ms) + tanh-Drive; Rolling Bass KBBB als Saw durch Tiefpass mit Cutoff-Hüllkurve pro Note (180 + 1600 Hz, τ 20 ms, „Plock“); Offbeat-Open-Hat + 1/16-Ticks; 2-OP-FM-Stab (Ratio 2, Index 3,5 → 0, τ 30 ms) als Motiv in der Skala; 20-Hz-DC-Blocker je Stem.
+- Aufruf: `python3 tools/psy_loop.py --bpm 145 --bars 8 --root E --mode phrygian --out build/loops/psy145` → `_mix.wav` + Stems `_kick/_bass/_hats/_stab.wav` (24 bit) + JSON mit Kick-Länge und 1/16-Dauer. `--short-kick` bzw. ab 200 BPM endet die Kick vor dem ersten Bass.
+- Einsatz in der Ableton-Session: als Skizzen-/Testbett (Stems in Ableton, Warp aus, Tempo = BPM), als Referenz für Kick/Bass-Abstimmung, als Material für Lernvideos. **Nicht** als fertiger Track-Kern ohne den Standard (`hitech-produktionsstandard`): Motive und Sounds je Track neu.
+- Plugins drüber (offline, mit Host-Transport): `<Plugin>Render --process <in.wav> <out.wav> <bpm> "<presets>" <takte je preset>`; `-1` = trockener Takt (Shardgate). So entsteht ein A/B mit Preset-Wechsel je N Takte. Vorher Eingang auf ca. −9 dBFS Peak bringen (Auto Gain hebt bis +6 dB).
+- A/B immer pegelgleich nachweisen (LUFS mit `ffmpeg -af ebur128` oder `mcp__audio-labor__messen`), z. B. Demo 12.11.: trocken −17,5 / Shardgate −17,4 LUFS.
+
+## Forschung als Leitplanken (12.11.2026)
+Volltext mit Quellen: `codechaos-store/research/wissen/psytrance-forschung-uebertragung-2026-11-12.md`. Kurz (belegt → für 200+ BPM abgeleitet, nicht getestet):
+- 1/16 = 15000/BPM ms (75 ms @200, 60 @250, 50 @300). Ab ~150 BPM sind 1/16 Textur; ab ~220 BPM vermutlich Half-time-Puls → Akzente auf Viertel/Halbe.
+- Kick-Körper vor dem ersten Bass enden lassen (< 75/60/50 ms @200/250/300), Vorwärtsmaskierung.
+- Bass-Tonhöhe kommt bei kurzen Noten aus 80–300 Hz-Obertönen, nicht aus dem Sub → Filterhüllkurve/Drive pro Note; Sub-Energie in der Kick lassen (Groove ↔ Flux < 100 Hz).
+- Kurze Noten nach LUFS beurteilen, nicht nach Peak (Lautheitsintegration 100–200 ms).
+- Arrangement in Sekunden planen: 25-s-Build-up = ~32 Takte bei 250 BPM; Variation darf dichter kommen.
+- FM-Leads: Wirkung über Helligkeit und Index-Hüllkurve pro Note; Ratio nicht-ganzzahlig = unharmonisch/metallisch (Chowning).
+
+## Suno und andere KI-Musik (12.11.2026)
+Volltext: `codechaos-store/research/wissen/suno-2026-11-12.md`. Regel: nur Ideen, Referenzen und Vorlagen für Fremdgenre-Parts (Gothic-Chöre, Black-Metal-Arrangements, Vocal-Hooks), danach mit eigenen Werkzeugen nachbauen. Kein Suno-Audio im Hitech-Kern, in Store-Produkten, Demos oder Samplepacks; nichts aus dem Free-Plan kommerziell. Suno hält > 180 BPM laut Berichten kein sauberes Tempo.
 
 ## Black-Metal-Parts in Hitech-Tracks
 - **Tempo und Tonart:** Tempo und Tonart des Tracks übernehmen. Hitech läuft meist mit 180–220+ BPM und ist oft phrygisch oder moll mit b2. BPM, Skala und Takte immer nennen.

@@ -37,6 +37,10 @@ Gilt für jede neue Lead-, Sequenz- oder Themenstimme. Ziel: kein Standardpreset
 6. **Im Kontext entscheiden:** alt gegen neu per `ab_stimme.py`, je 2 Aufnahmen, pegelgleich. Die Streuung von aes ist ±0,2. Der Profi-Abstand allein entscheidet nicht.
 7. **Mono-fest:** Breite je Band mit `C:/hitech-lab/album12/ms_fix.py` begrenzen, kein Haas.
 
+## 3a. Skizzen-Bett und Forschung (seit 12.11.2026)
+- Für Kick/Bass-Abstimmung, schnelle Skizzen und Plugin-A/B gibt es den synthetischen Loop-Baukasten `codechaos-store/tools/psy_loop.py` (Stems, eigene Synthese, Methode der Shardgate-Demo). Details im Skill `code-chaos-toolkit`, Abschnitt „Loop-Baukasten“. Er ersetzt keine Stimmen-Palette.
+- Leitplanken aus der Wahrnehmungsforschung (Tempo-Tabelle, Kick-Länge, Bass-Tonhöhe, Arrangement in Sekunden, FM-Wirkung): `codechaos-store/research/wissen/psytrance-forschung-uebertragung-2026-11-12.md`. Was dort „abgeleitet“ heißt, ist für 200+ BPM nicht getestet: messen, nicht übernehmen. Bei Widerspruch gilt der lokale Standard.
+
 ## 4. Messen statt glauben
 - Kick/Bass immer K-gewichtet (LU) und **im Vollmix je Abschnitt** (`t03/fenster.py <block> <takt>`), nicht nur solo.
 - Jedes Geräte-A/B (Roar, Sättigung, Master-EQ) erst auf gleiche LUFS normieren.
