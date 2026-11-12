@@ -31,3 +31,10 @@ Reddit bleibt read-only (Regel), keine Einträge dort.
 - URL: https://codechaos-official.de/plugins/psy-kick-bass/
 - Text: Kick und Rolling Bass in einem Instrument für Psytrance, Hitech und Psycore (140-300+ BPM). Der Kick wird auf die Bassnote gestimmt und endet tempoabhängig vor der ersten Bassnote (im Test 0 ms Kick-Energie nach dem Bass-Einsatz bei 145-250 BPM). 8 Rolling-Patterns, 4 Bass-Modi (Rubber, Plock, Growl, FM), Kick-Designer, Mono unter 150 Hz, eingebautes Scope, 14 Presets. Lizenzschlüssel-Aktivierung (bis 3 Rechner); Demo ohne Schlüssel mit kurzem Rauschen alle 45 s.
 - Bedroom Producers Blog / rekkerd: als Neuvorstellung mit Link auf die Seite und dem Reel (images/social/psy-kick-bass-reel.mp4).
+
+## Shardgate (gratis, live seit 12.11.2026) – Entwurf für KVR „Add product“ (nur Tim, Login nötig)
+- Name: Shardgate · Hersteller: Code Chaos Audio · Typ: Effect / Gate / Volume shaper · Preis: Free
+- Formate: VST3 + Standalone · Windows 10/11, macOS Apple Silicon (unsigned)
+- Kurztext (EN): Free tempo-synced trance gate and kick duck for psytrance, hitech and psycore. 16 steps (on/half/off) at 1/8, 1/16, 1/32 or 1/16T, quarter-note duck without sidechain routing, Auto Gain level match up to +6 dB, 12 presets, zero latency.
+- Link: https://timberwolf688.gumroad.com/l/shardgate?utm_source=kvr · Seite: https://codechaos-official.de/plugins/shardgate/
+- Bild: https://codechaos-official.de/images/plugins/shardgate/gui-880.jpg
