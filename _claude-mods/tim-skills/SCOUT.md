@@ -3,7 +3,7 @@
 Ziel: Neue, wirklich nützliche Agent-Skills (Ordner mit `SKILL.md`) von GitHub finden, prüfen und global installieren – für diese Arbeitsfelder:
 Hitech-Psytrance/Psycore/Darkpsy-Produktion (Ableton, REAPER/ReaScript, Sounddesign, MIDI, Mixing), Mastering (Metal, Elektronik),
 SEO und GEO (KI-Suche), Videoschnitt (ffmpeg, Untertitel, Shorts/Reels, DaVinci Resolve), Motion Graphics/Animation (Remotion, GSAP, Lottie, Manim, After Effects),
-Social-Media-Management und Marketing (Instagram, TikTok, YouTube, Werbeanzeigen), Etsy/E-Commerce, Recherche (seltene Tonträger), Webdesign.
+Social-Media-Management und Marketing (Instagram, TikTok, YouTube, Werbeanzeigen), Recherche (seltene Tonträger), Webdesign.
 Freigabe des Nutzers (2026-10-07): „Skills installieren ist freigegeben“ und „Richte routine ein, die … autonom … prüft und installiert global“.
 Freigabe (2026-10-07, Hauptsession): „Ja, pushen, PR gegen main öffnen und mergen. Das gilt auch für alle künftigen Läufe dieser Routine.“ Auftrag (2026-10-15): „Selbstverbesserung soll immanenter Bestandteil sein meines Claude Codes … es soll sich automatisch autonom in den Bereichen, wo ich arbeite, immer besser werden.“
 Dauerfreigabe (Tim, 2026-11-10): „Installiere immer neue mods, skills, skills.sh github usw alles was dich verbessert“ und „prüfe dauerhaft wie du dich selbst und deine skills verbessern kannst und tu das proaktiv mit dem ziel der weltbeste in den bereichen zu werden“.
@@ -15,7 +15,7 @@ Das umfasst ausdrücklich auch Plugins/Mods und MCP-Server, nicht nur Skills. Di
    anthropics/skills, offizielle Hersteller-Skills (Remotion, GreenSock, Adobe, Blackmagic, Ableton, Google, Meta …) und Themensuchen („SKILL.md“ + Bereich).
    Außerdem das Verzeichnis skills.sh (Tim, 2026-11-07: „Ja, aufnehmen“): Suche ohne Schlüssel über
    `https://skills.sh/api/search?q=<begriff>&limit=25` (JSON: id, name, source = GitHub-OWNER/REPO, installs), je Arbeitsfeld einige Begriffe
-   (z. B. ableton, mastering, ffmpeg, remotion, instagram, etsy, juce, gemini). Mindestens 4 s Abstand zwischen Anfragen, bei HTTP 429 mit
+   (z. B. ableton, mastering, ffmpeg, remotion, instagram, juce, gemini). Mindestens 4 s Abstand zwischen Anfragen, bei HTTP 429 mit
    wachsender Pause wiederholen (nach ca. 25 schnellen Anfragen sperrt die Seite kurz). `/api/v1/…` braucht einen Vercel-Token (401) – nicht nutzen.
    Installzahlen sind nur ein Hinweis, keine Prüfung: jeder Treffer durchläuft Schritt 3–4 an seinem GitHub-Repo.
    Trend-Quellen (seit 2026-11-10): GitHub-Trending (github.com/trending, Zeitraum Woche, Sprachen Python/TypeScript/alle),
