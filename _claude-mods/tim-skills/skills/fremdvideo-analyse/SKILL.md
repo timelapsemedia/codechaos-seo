@@ -31,7 +31,7 @@ Zahlen/Versprechen aus dem Video (Umsatz, „passives Einkommen“) als Behauptu
    - Aufbau: Abschnitte mit Zeiten, wo die Auflösung kommt, Call-to-Action.
    - Tempo: Schnitte/Minute, Sprechtempo (Wörter/Minute), Musik/Lautheit.
    - Behauptungen und Zahlen: belegt / unbelegt / Werbung (Affiliate, Kurs).
-   - Was davon passt zu Tims Marken (Code Chaos, Polished Metal Mastering, keinduftbaum) –
+   - Was davon passt zu Tims Marken (Code Chaos, Code Chaos Audio, Polished Metal Mastering) –
      konkret, max. 3 Punkte, und was nicht (Clickbait, unbelegte Geldversprechen).
 4. **Übergabe:** Für eigenes Video gleich weiter an `hook-master`, `ig-reel`/`yt-script`
    oder `code-chaos-motion`; bei Geld-Ideen an `money-diagnose`.

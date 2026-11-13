@@ -379,3 +379,10 @@ Tim (13.11.): „etsy nicht weiter bespielen und nicht als projekt verfolgen, da
 - `higgsfield-upload` und `etsy-seo` nach `_papierkorb/tim-skills-2026-11-13/` (mit `git mv` zurückholbar).
 - SCOUT.md: Etsy aus Arbeitsbereichen und Suchbeispielen entfernt – künftig keine Etsy-Skills mehr suchen.
 - Routinen: „Etsy-Recherche täglich“ abgeschaltet (nicht gelöscht); „Wikipedia-Artikel beobachten“ auf täglich 09:41 umgestellt (Prompt-Anpassung nur aus ihrer eigenen Session möglich).
+
+## 2026-11-13 – Arbeitsbereiche eingegrenzt
+
+Tim (13.11.): „druwids, etsy, keinduftbaum, mytragina eh ab ende november nicht mehr meine aufgabe … weil ich bei heart warrior ug raus bin“.
+- SCOUT.md: diese Projekte als „keine Arbeitsfelder mehr“ vermerkt; Selbstverbesserung baut dafür nichts.
+- fremdvideo-analyse: keinduftbaum aus den Marken entfernt.
+- Erinnerung für 30.11.2026, 21:07 (Berlin): die beiden Mitragyna-Routinen abschalten.

@@ -4,6 +4,7 @@ Ziel: Neue, wirklich nützliche Agent-Skills (Ordner mit `SKILL.md`) von GitHub 
 Hitech-Psytrance/Psycore/Darkpsy-Produktion (Ableton, REAPER/ReaScript, Sounddesign, MIDI, Mixing), Mastering (Metal, Elektronik),
 SEO und GEO (KI-Suche), Videoschnitt (ffmpeg, Untertitel, Shorts/Reels, DaVinci Resolve), Motion Graphics/Animation (Remotion, GSAP, Lottie, Manim, After Effects),
 Social-Media-Management und Marketing (Instagram, TikTok, YouTube, Werbeanzeigen), Recherche (seltene Tonträger), Webdesign.
+Keine Arbeitsfelder mehr (Tim, 13.11.2026: ab Ende November raus bei Heart Warrior UG): DRUWIDS, keinduftbaum, Mitragyna, Etsy/ThePrintNova. Dafür keine Skills suchen, bauen oder verbessern; bestehende Hinweise auf diese Projekte bei Gelegenheit entfernen.
 Freigabe des Nutzers (2026-10-07): „Skills installieren ist freigegeben“ und „Richte routine ein, die … autonom … prüft und installiert global“.
 Freigabe (2026-10-07, Hauptsession): „Ja, pushen, PR gegen main öffnen und mergen. Das gilt auch für alle künftigen Läufe dieser Routine.“ Auftrag (2026-10-15): „Selbstverbesserung soll immanenter Bestandteil sein meines Claude Codes … es soll sich automatisch autonom in den Bereichen, wo ich arbeite, immer besser werden.“
 Dauerfreigabe (Tim, 2026-11-10): „Installiere immer neue mods, skills, skills.sh github usw alles was dich verbessert“ und „prüfe dauerhaft wie du dich selbst und deine skills verbessern kannst und tu das proaktiv mit dem ziel der weltbeste in den bereichen zu werden“.
