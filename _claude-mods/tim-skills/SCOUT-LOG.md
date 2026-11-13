@@ -372,3 +372,10 @@ Aus dem Content-Pipeline-Post selbst gebaut (lokal, kein Skill): Gewinner-Radar 
 
 ## 2026-11-11 papier (eigen)
 - Anlass: Tim-Post „paper skill“. Fremde Vorbilder (maxrosenbaum44/claude-ocr u. a.) ohne Lizenz → eigener Bau mit Tesseract 5.4 (Apache-2.0) + tessdata_best. Werkzeug C:/papier, MCP-Werkzeug papier_lesen. Gemessen: CER 0–0,9 % Druck/Foto/Fraktur, Handschrift 5,5 % → Prüfbild.
+
+## 2026-11-13 – Aufräumen nach Tims Entscheidungen
+
+Tim (13.11.): „etsy nicht weiter bespielen und nicht als projekt verfolgen, das habe ich abgegeben“, „wiki täglich statt stündlich ja“, „higgsfield upload ja“.
+- `higgsfield-upload` und `etsy-seo` nach `_papierkorb/tim-skills-2026-11-13/` (mit `git mv` zurückholbar).
+- SCOUT.md: Etsy aus Arbeitsbereichen und Suchbeispielen entfernt – künftig keine Etsy-Skills mehr suchen.
+- Routinen: „Etsy-Recherche täglich“ abgeschaltet (nicht gelöscht); „Wikipedia-Artikel beobachten“ auf täglich 09:41 umgestellt (Prompt-Anpassung nur aus ihrer eigenen Session möglich).
