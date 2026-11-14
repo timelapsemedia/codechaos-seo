@@ -13,6 +13,8 @@ Liegt bewusst in `_docs/` (wird von GitHub Pages nicht veröffentlicht; im Repo-
 - [ ] Gravesaw: H2 „Black-Metal-Amp-Sim: Einstellungen für kalte Gitarren“ mit echten Preset-Werten – Werte nur aus dem Plugin (Presets auslesen), nicht erfinden.
 - [x] /en/plugins/ angelegt (11.11.2026, Grok #67), hreflang DE↔EN, Sitemap.
 - [ ] EN-Pendants der übrigen Plugin-Seiten (bisher nur Crucible); die EN-Übersicht verlinkt die anderen auf die DE-Seiten („page in German“).
+  - Priorität laut Grok T18 (14.11., GEO-Test): zuerst Gravesaw und Frostfret auf Englisch, mit hreflang-Paar. Bei „best black metal guitar VST plugin 2026“ wird Code Chaos nicht genannt; zitiert werden SVARTRUNA, FATHOM II und Gjalla, alle mit englischen Seiten. `/en/plugins/gravesaw/` liefert 404 (Claude hat das am 14.11. geprüft).
+- [ ] EN-Sammelseite „Free psytrance plugins (VST3)“: Shardgate und die Demos bündeln, mit Link auf die Kick+Bass Engine. Bei „free psytrance kick bass plugin VST3“ steht /plugins/psy-kick-bass/ nur auf Platz 4 der Linkliste, „free“ fehlt im Title (Grok T18, 14.11.).
 - [x] Doppelter Title DE/EN bei /hitech-psytrance/ behoben (EN: „Hi-Tech Psytrance Explained: BPM, Sound & Guide“).
 - [x] polished.media 9a: Rechtstexte auf /impressum/ /datenschutz/ /agb/ verlagert (Wortlaut 1:1), DE-Formular verlinkt /datenschutz/ (Grok #67).
 - [ ] Rechtstexte beider Seiten zum 01.12.2026 auf Tims Kleingewerbe umstellen (Heart Warrior UG darf dann nicht mehr vorkommen) – braucht Tim: Name und Anschrift des Kleingewerbes.
