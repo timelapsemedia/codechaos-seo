@@ -1,7 +1,7 @@
 ---
 name: fremdvideo-analyse
 description: >-
-  Fremdes Video/Reel/Short per Link oder Datei analysieren (Hook, Tempo, Aufbau, Zahlen, Machart gefilmt/KI/Code, Untertitel, Musik/BPM, Stimme) und Lehren für Tims Inhalte ableiten, ohne Inhalte zu kopieren; tiefe Zerlegung mit rea-video, Blick-Review der Machart-Rezepte. Bei "schau dir das Video an", "analysiere diesen Reel", "wie wurde das gemacht", Video-Link, offene Rezept-Reviews.
+  Fremdes Video/Reel/Short per Link oder Datei analysieren (Hook, Tempo, Aufbau, Zahlen, Machart gefilmt/KI/Code, Untertitel, Musik/BPM, Stimme) und Lehren für Tims Inhalte ableiten, so nah wie rechtlich möglich (Format ja, Material/Wortlaut/Marke nie); tiefe Zerlegung mit rea-video, Blick-Review der Machart-Rezepte. Bei "schau dir das Video an", "analysiere diesen Reel", "wie wurde das gemacht", Video-Link, offene Rezept-Reviews.
 ---
 
 # fremdvideo-analyse
@@ -13,10 +13,18 @@ Rechenzentren, Login nötig). Dieser Ablauf kommt trotzdem zu einer belastbaren 
 Seit 14.11.2026 gibt es dazu die Schuss-für-Schuss-Zerlegung mit **rea-video** (lokal) und
 die wöchentlichen **Machart-Rezepte** aus dem Gewinner-Radar.
 
-**Grenzen (Tims Regel: „nur Machart lernen, nie Inhalte übernehmen“):** Nur analysieren.
-Fremden Text, Bild, Ton, Musik oder Figuren nicht übernehmen, nie ein Video 1:1 nachbauen;
-„nachbauen“ heißt Struktur, Tempo, Hook-Mechanik und Format auf eigenes Material übertragen.
-Ergebnis in eigenen Worten. Keine Behauptung über Inhalte, die nicht gesehen/gehört wurden.
+**Regel (Tim 14.11., ersetzt die enge Lesart „nur Machart lernen“): so nah am Vorbild wie rechtlich möglich,
+„quasi 1:1, aber auf seine Marken zugeschnitten“** (passt zu „legal, aber voll ausreizen“). Format und Idee sind nicht geschützt:
+- **Übernehmen (voll nutzen):** Aufbau Schuss für Schuss mit gleicher Länge je Einstellung, gleichem Schnittrhythmus und gleichen
+  Beats/Timecodes; Hook-Mechanik und Satzbau des Hooks mit eigenen Worten; Kameraperspektiven, Bewegungen, Übergänge, Effekte;
+  Untertitel-Stil (Position, Größe, Animation, Wortzahl je Einblendung); Dramaturgie, Länge, CTA-Muster; Musik-Rolle (Tempo,
+  Drop-Position) mit eigener Musik.
+- **Nie übernehmen (Werk/Marke, UWG-Herkunftstäuschung):** fremdes Bild- und Tonmaterial, Musik, Samples; wörtliche Texte,
+  Skripte, Captions über kurze übliche Wendungen hinaus; erkennbare Figuren, Gesichter, Logos, Namen, Markenzeichen;
+  unverwechselbare Grafiken/Illustrationen; alles, was wie vom Original-Kanal wirkt.
+- **Prüfschritt je Rezept:** Spalten „übernommen (Format)“ und „ersetzt durch Tim-eigen (Inhalt)“; Grauzonen markieren und
+  nicht ausliefern, bevor sie geklärt sind (nie selbst freigeben, an Tim/Leitstelle melden).
+Analysen in eigenen Worten. Keine Behauptung über Inhalte, die nicht gesehen/gehört wurden.
 Zahlen/Versprechen aus dem Video (Umsatz, „passives Einkommen“) als Behauptung kennzeichnen.
 DRUWIDS, keinduftbaum und Mitragyna: keine Rezepte, keine Experimente (Projektende 30.11.2026).
 rea-video-Befehle `remake-run`, `capsule-draft`, `assemble` nicht benutzen (bezahlte Erzeugung bzw. Nachbau).
@@ -61,8 +69,9 @@ rea-video-Befehle `remake-run`, `capsule-draft`, `assemble` nicht benutzen (beza
    - Tempo: Schnitte/Minute, mittlere Einstellung, Übergänge, Schnitte auf dem Beat, Sprechtempo.
    - Untertitel: Wörter je Zeile, Position, Farbe/Akzent, Einblendart.
    - Behauptungen und Zahlen: belegt / unbelegt / Werbung (Affiliate, Kurs).
-   - Was davon passt zu Tims Marken (Code Chaos, Polished Mastering, ZeitSprung) –
-     konkret, max. 3 Punkte, und was nicht (Clickbait, unbelegte Geldversprechen).
+   - Bauplan für Tims Marke (Code Chaos, Polished Mastering, ZeitSprung): Tabelle je Einstellung
+     „übernommen (Format)“ | „ersetzt durch Tim-eigen (Inhalt)“, so konkret, dass man das Vorbild Schuss für Schuss
+     nachbauen kann; Grauzonen getrennt auflisten. Nicht übernehmen: Clickbait, unbelegte Geldversprechen.
    - Evidenzstufe nennen (Skill `evidenz-basiert`): ein fremder Ausreißer ist Stufe D (Beobachtung);
      Beleg für Tims Publikum liefert erst ein A/B (`si.experimente`).
 6. **Übergabe:** Für eigenes Video gleich weiter an `hook-master`, `ig-reel`/`yt-script`
@@ -78,11 +87,16 @@ Stimme, Machart-Mix) plus den Abschnitt „Machart-Rezepte“ im Gewinner-Berich
 
 Claude arbeitet nur, wenn die Python-Vorgate etwas meldet (Verbrauch schonen):
 ```bash
-python -m si.rezepte --vorgate        # im Ordner C:/social-insights; JSON {neu: [...], offen_review: [...]}
+python -m si.rezepte --vorgate        # im Ordner C:/social-insights; JSON {neu, offen_review, grauzonen_offen}
 ```
 - `offen_review` leer → nichts tun.
 - Sonst je Eintrag Schritt 4 (Blick-Review) im angegebenen `ordner`, höchstens 9 Videos je Lauf, nur `storyboard.jpg`
   und die Kontaktbögen der Einstellungen mit `priority: high`. Danach einmal `python -m si.rezepte --nach-review`
   (leitet Rezepte, Experimente und Bericht neu ab).
+- Jedes Rezept (`rezepte/<marke>/<id>.md`) hat den Bauplan Schuss für Schuss und ein Feld **Freigabe**. Automatisch
+  erkannte Grauzonen (markante Grafik ≥ 25 %, Kanalname/Logo im Bild, Song-Verdacht, Liedtext-Hook) sperren es. Was der
+  Blick zusätzlich findet (z. B. Figuren wie bekannte Filmfiguren), mit `python -m si.rezepte --grauzone <id> "<text>"`
+  eintragen. Klären nur Tim bzw. die Leitstelle: `python -m si.rezepte --klaeren <id> <nr> "<Begründung>"`. Die Vorgate
+  meldet `grauzonen_offen` – unter **Brauche dich** melden, gesperrte Rezepte nie an die Produktion geben.
 - Ein `rz-<marke>`-Experiment nie selbst auf „aktiv“ setzen: erst, wenn die Pipeline der Marke die Variable liest
   und kein anderer Test der Marke läuft (laufend z. B. `pm-hook-w1`, `cc-hook-w1`); das ist ein Vorschlag an Tim.
