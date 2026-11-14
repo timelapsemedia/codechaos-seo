@@ -32,21 +32,22 @@ rea-video-Befehle `remake-run`, `capsule-draft`, `assemble` nicht benutzen (beza
       für eine Aussage über Hook und Verpackung, nicht über den Inhalt – dann so sagen.
 2. **Messen** – schnell mit `video-werkstatt`: `analysieren` (Dauer, Format, Lautheit, Schnitte →
    Schnitte pro Minute), `standbilder` (Kontaktbogen), `transkribieren` (falls kein Untertitel).
-   **Tief (lokal, 5–16 min CPU je Kurzvideo) mit rea-video**, wenn es um „wie wurde das gemacht“
+   **Tief (lokal, ~10–25 min CPU je Kurzvideo, OCR ist der Engpass) mit rea-video**, wenn es um „wie wurde das gemacht“
    geht (gefilmt/KI/Code je Einstellung, Untertitel-Stil, Übergänge, Musik/Stimme):
    ```bash
-   C:/rea-video/.venv/Scripts/rea-video.exe decompose <video> -o E:/rea-video-cache/<name> --lang en
+   C:/rea-video/.venv/Scripts/rea-video.exe decompose <video> -o E:/rea-video-cache/<name> --lang en --no-stems --no-asr --no-speakers
    C:/rea-video/.venv/Scripts/rea-video.exe summary E:/rea-video-cache/<name>/breakdown.json
    ```
    Umgebung: `PYTHONUTF8=1 REA_VIDEO_MODELS=E:/rea-video-models REA_VIDEO_HOME=C:/rea-video/.home
-   OPENBLAS_NUM_THREADS=1`; vorher `python C:/sperren/sperre.py status` (Stem-Trenner = Sperre `render`).
+   OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=6`; ohne Stem-Trenner keine render-Sperre nötig, vorher freien Commit prüfen (≥ 4 GB).
+   Nie mit niedriger Prozesspriorität (BELOW_NORMAL) starten: auf dem ausgelasteten PC bekam rea-video damit 0 s CPU (14.11.).
    Lesen: zuerst `VIDEO.md` (≈2k Token), Details nur über die Karte darin; nie `breakdown.json` oder `report.md` ganz einlesen.
-   Danach Video und `stems/` löschen (fremde Tonspuren nicht aufbewahren).
+   Danach Video und jeden fremden Ton (`stems/`, `sfx/`, *.wav) löschen.
 3. **Messwerte prüfen, bevor sie zählen** (Testlauf 14.11., eigenes Reel mit bekannter Wahrheit):
    - Schnitte: gut (5 von 5 echten Kanten, +1 Zusatzkante in einem Spin-Übergang); gegen `scenedetect` oder `si.messen` gegenprüfen.
    - Texte/Untertitel (OCR, Farbe, Position, Einblendart): gut.
    - Stimme ja/nein: gut.
-   - **BPM: unzuverlässig** (79,5 statt 100; librosa auf dem Mix 136, auf der Musikspur 49,7 = Oktave). Nur „bestätigt“ nennen, wenn zwei Verfahren bis auf Oktave übereinstimmen.
+   - **BPM: unzuverlässig** (79,5 statt 100; librosa auf dem Mix 136, auf der Musikspur 49,7 = Oktave). Nur „bestätigt“ nennen, wenn zwei Verfahren (rea-video + librosa auf dem Ton) bis auf Oktave übereinstimmen.
    - **Machart gefilmt/KI/3D/Code ohne Blick: unzuverlässig** (Stock-Realfilm als 3D/KI erkannt, Konfidenz 0,41). Immer den Blick-Review machen (Schritt 4) oder als „ungeprüft“ kennzeichnen.
 4. **Blick-Review** (du bist das Bildmodell; kein externes VLM nötig, kostet nichts außer Token):
    `rea-video review <ordner>` → `review_tasks.json` lesen (nur `instructions` und je Einstellung `images.sheet`),
