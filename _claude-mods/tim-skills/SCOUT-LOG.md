@@ -386,3 +386,21 @@ Tim (13.11.): „druwids, etsy, keinduftbaum, mytragina eh ab ende november nich
 - SCOUT.md: diese Projekte als „keine Arbeitsfelder mehr“ vermerkt; Selbstverbesserung baut dafür nichts.
 - fremdvideo-analyse: keinduftbaum aus den Marken entfernt.
 - Erinnerung für 30.11.2026, 21:07 (Berlin): die beiden Mitragyna-Routinen abschalten.
+
+## 2026-11-14 – rea-video (Werkzeug, lokal installiert) + fremdvideo-analyse erweitert
+
+Auftrag Tim (über die Leitstelle): virale Videos der Nischen Code Chaos / Polished / ZeitSprung systematisch zerlegen, Machart übertragen.
+
+| Prüfpunkt | Ergebnis |
+|---|---|
+| Quelle | github.com/JuneYaooo/rea-video, Commit 4089199 (13.11.2026), Repo seit 29.10.2026, 8.164 Sterne, Autor seit 2020 (93 Repos) |
+| Lizenz | Apache-2.0 (LICENSE + NOTICE); Abhängigkeit videomd 1.2.0 Apache-2.0 (PyPI) |
+| Code gelesen | 15.500 Zeilen Python: keine Telemetrie, kein Selbst-Update, keine Hooks. Netz nur (a) Modell-Downloads von GitHub-Releases/ModelScope mit SHA-256-Prüfung (UVR-MDX 67 MB, BandIt v2 149 MB, SenseVoice 160 MB, Sprecher 35 MB, YuNet 0,2 MB), (b) optionales VLM über OpenAI-kompatible Adresse NUR wenn REA_VLM_* gesetzt (bei uns nicht gesetzt). .env nur aus dem Paketordner bzw. --env-file, nicht aus dem Arbeitsordner (Test test_security). Bezahlte Erzeugung (capsule-cinema `remake-run`) nur auf ausdrücklichen Befehl – in der Skill gesperrt. |
+| Installation | C:/rea-video (sparse checkout ohne docs/), eigenes venv Python 3.12 `.venv` (onnxruntime 1.32, opencv-headless, rapidocr, sherpa-onnx; kein torch, kein transformers → globales transformers 4.57 unberührt). Modelle auf E:/rea-video-models (≈ 410 MB), Arbeitsordner E:/rea-video-cache. |
+| Tests | Upstream `pytest`: 288/288 grün (39 min, CPU). |
+| Startlast | Kein Plugin, keine fremde Skill installiert (deren SKILL.md wäre ~600 Zeichen chinesische Beschreibung Always-on): 0 Token Always-on zusätzlich; nur die bestehende Skill fremdvideo-analyse wurde erweitert (Beschreibung +174 Zeichen, ~45 Token). CLI-Kaltstart `--help` 7,6 s. |
+| Mehrwert | Bestand (video-werkstatt, si.messen) misst Länge/Schnitte/Hook-Text; rea-video ergänzt je Einstellung Machart, Übergänge, Untertitel-Stil (OCR, Farbe, Position, Einblendart), Stimme/Musik/SFX, Erzählrollen und das VIDEO.md-Format. |
+| Testlauf (Abgleich) | Eigenes Reel mit bekannter Wahrheit (Polished bank-genre-craft): Schnitte 5/5 + 1 Zusatzkante, Texte/Untertitel korrekt, Stimme korrekt; BPM falsch (79,5 statt 100), Machart ohne Blick falsch (3D/KI statt Stock-Realfilm). Fremder ZeitSprung-Gewinner (Bb-US4Wa9xA): 18 Einstellungen, 17/17 Kanten = scenedetect (±0,04 s), si.messen zählt zu wenig (25,1 statt 30,4/min); Machart ohne Blick 45 % „3D“, nach Claudes Blick-Review 86 % Realfilm + 8 % Bildschirm (plausibel). Folge: BPM nur mit Gegenmessung, Machart nur mit Blick-Review. |
+
+Ergebnis: AUFGENOMMEN als lokales Werkzeug (nicht als Skill). Eingebunden in C:/social-insights/si/rezepte.py (Machart-Rezepte aus dem Gewinner-Radar) und in die Skill fremdvideo-analyse (dieser PR).
+
