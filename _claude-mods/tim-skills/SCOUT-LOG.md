@@ -404,3 +404,18 @@ Auftrag Tim (über die Leitstelle): virale Videos der Nischen Code Chaos / Polis
 
 Ergebnis: AUFGENOMMEN als lokales Werkzeug (nicht als Skill). Eingebunden in C:/social-insights/si/rezepte.py (Machart-Rezepte aus dem Gewinner-Radar) und in die Skill fremdvideo-analyse (dieser PR).
 
+
+## 2026-11-15 – Wochenlauf lokal (nur Selbstverbesserung; letzter Lauf 10.11. < 6 Tage → keine Fremd-Suche)
+
+Neu aufgenommen: keine. Aktualisiert: keine. Plugins/MCPs installiert: keine.
+
+Offene Kandidaten aus dem Selbstverbesserungs-Log bewertet (GitHub-API, nur gelesen):
+| Kandidat | Ergebnis | Grund |
+|---|---|---|
+| legionsound/open-fusion-mcp (MIT, 15 Sterne, letzter Push 02.10.2026, 23 MB) | abgelehnt | laut README nur auf macOS getestet (AppleScript-Helfer für den Render-Dialog), Windows ungetestet; Fusion-Comps gehen schon über den davinci-resolve-MCP (`fusion_comp`) |
+| isaacrowntree/color-grade-ai (MIT, 38 Sterne, letzter Push 03.08.2026) | abgelehnt | Kernskripte in Ruby (analyze_frame.rb, bake_lut.rb), Ruby ist lokal nicht installiert; Shot-Matching mit Messwerten gibt es schon. Ein LUT-Export aus den eigenen Messwerten wäre ein kleiner Eigenbau → Vorschlag |
+| kajisho5/ffmpeg-skill v3.8.22 (MIT, 5.697 Sterne, Release 15.11.2026) | weiter abgelehnt | gleicher Grund wie am 01.11.: Auslöser greift bei jeder Erwähnung einer Video-/Audiodatei und verbietet rohes ffmpeg/ffprobe („never run raw ffmpeg“) → kollidiert mit Tims Pipelines (Endkontrolle, Kanten-Gate, aac_mf-Regel). Täglich mehrere Releases, also auch keine stabile Grundlage. Neu bewerten nur, wenn ein konkreter Bedarf belegt ist, den auto-editor/video-werkstatt nicht decken |
+
+Selbstverbesserung (lokale Belege: 751 Session-Dateien der letzten 7 Tage, Selbstverbesserungs-Log bis 15.11.):
+- Wiederkehrend: „bist du wirklich so fertig?“ (Uni-Referat 13./14.11., Album 12 03.11.), Überschriften „KI-generisch“ (14.11.), Zwischenfassungen statt einer Endfassung (14.11.). Alle drei sind schon als Gate oder Regel umgesetzt (OFFEN.md-Gate, zeit_gate.js, Gegenlesung, WISSEN-GLOBAL „Endfassung einmal“). Die Skill verification-before-completion liegt lokal unter ~/.claude/skills → kein neuer Skill, sonst doppelt.
+- Kein neuer Eigenbau (keine Lücke mit zwei Belegen, die nicht schon abgedeckt ist).
