@@ -678,6 +678,15 @@ def build_plugin(p, lang="de"):
 </section>"""
         crumbs = '<li><a href="/en/">Home</a></li><li><a href="/plugins/" hreflang="de">Plugins</a></li>'
     sticky = L["free_dl"] if p["price"] == 0 else L["sticky_buy"].format(name=name, price=price_l(p["price"], lang))
+    # Sticky-Leiste (Handy): bei Bezahl-Plugins Kauf + Gratis-Demo nebeneinander; ausgeblendet, solange die Hero-Buttons sichtbar sind (Tim 15.11.2026: Demo darf nie verdeckt sein)
+    if p["price"] == 0:
+        sticky_inner = f'<a href="{utm(slug, slug)}">{esc(sticky)}</a>'
+    else:
+        sticky_inner = (f'<a href="{utm(slug, slug)}">{esc(L["buy"])} · {price_l(p["price"], lang)}</a>'
+                        f'<a class="sticky-demo" href="{utm(slug + "-demo", slug)}">{esc(L["demo"])}</a>')
+    sticky_html = (f'<div class="sticky-cta sticky-duo">{sticky_inner}</div>\n'
+                   "<script>(function(){var s=document.querySelector('.sticky-duo'),h=document.querySelector('.s-hero .btns');"
+                   "if(!s||!h||!('IntersectionObserver' in window))return;new IntersectionObserver(function(e){s.classList.toggle('is-hidden',e[0].isIntersecting);}).observe(h);})();</script>")
     listen_note = f'<p class="note"><a href="#{L["listen_id"]}">{L["listen_link"]}</a></p>' if p.get("audio") else ""
     body = f"""<main id="main">
 <div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol>{crumbs}<li aria-current="page">{esc(name)}</li></ol></nav></div>
@@ -731,7 +740,7 @@ def build_plugin(p, lang="de"):
 </section>
 {more_sec}
 </main>
-<a class="sticky-cta" href="{utm(slug, slug)}">{esc(sticky)}</a>
+{sticky_html}
 """
     html = head(lang, url, alt_url, t["title"], t["desc"], og, f"{name} {L['by']}: {t['category']}", ld, og_type="product") \
         + nav(lang, alt_url, "plug") + body + footer(lang)

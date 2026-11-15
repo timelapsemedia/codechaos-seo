@@ -37,7 +37,7 @@
  },
  "/en/plugins/gravesaw/": {
   "datum": "2026-11-15",
-  "hash": "3e0e3bce5ecfbf08"
+  "hash": "e2b04e7e57a4aaf9"
  },
  "/en/psy-loudness-data/": {
   "datum": "2026-11-12",
@@ -84,36 +84,36 @@
   "hash": "17e9b6589b991adb"
  },
  "/plugins/frostfret/": {
-  "datum": "2026-10-21",
-  "hash": "339402f21317bddf"
+  "datum": "2026-11-15",
+  "hash": "a85159e73b9ef84d"
  },
  "/plugins/gravesaw/": {
-  "datum": "2026-11-11",
-  "hash": "5a3ab442e6c0ff5f"
+  "datum": "2026-11-15",
+  "hash": "e22e69564e03d61d"
  },
  "/plugins/hoarfell/": {
-  "datum": "2026-10-21",
-  "hash": "0cc258bc28f7907b"
+  "datum": "2026-11-15",
+  "hash": "852056e6876f03bc"
  },
  "/plugins/kick-bass-scope/": {
-  "datum": "2026-11-12",
-  "hash": "40cd280f09a04904"
+  "datum": "2026-11-15",
+  "hash": "8f56d2b122ca0563"
  },
  "/plugins/psy-kick-bass/": {
-  "datum": "2026-11-12",
-  "hash": "5813259db7f1126e"
+  "datum": "2026-11-15",
+  "hash": "a35939fb6791b250"
  },
  "/plugins/rimehall/": {
-  "datum": "2026-11-11",
-  "hash": "ee98db86c6cd4232"
+  "datum": "2026-11-15",
+  "hash": "2fc8ffd8cc2edf31"
  },
  "/plugins/shardgate/": {
-  "datum": "2026-11-12",
-  "hash": "18e519d6edda7852"
+  "datum": "2026-11-15",
+  "hash": "48c719d099a5dea9"
  },
  "/plugins/shardstep/": {
-  "datum": "2026-11-12",
-  "hash": "d456c64e6523637d"
+  "datum": "2026-11-15",
+  "hash": "884f4a1aac74fc94"
  },
  "/psy-lautheit-daten/": {
   "datum": "2026-11-12",

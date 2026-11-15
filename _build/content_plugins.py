@@ -15,8 +15,8 @@ MAC_FORMATS = ("<strong>Windows 10/11:</strong> VST3 + Standalone. <strong>macOS
 MAC_FAQ = ("Ja, aber nur auf Macs mit Apple Silicon (arm64), einen Intel-Build gibt es nicht. Das Plugin ist nicht signiert und nicht notarisiert: "
            "macOS blockiert es beim ersten Start, du erlaubst es unter Systemeinstellungen → Datenschutz &amp; Sicherheit. "
            "Es gibt kein AU-Format, deshalb läuft es nicht in Logic Pro.")
-NOT_EVERY_DAW = ("Das VST3 wurde mit automatischen Tests geprüft, aber noch nicht in jeder DAW ausprobiert. "
-                 "Wenn etwas in deiner DAW nicht funktioniert, sag Bescheid.")
+# Tim 15.11.2026: kein Hinweis mehr auf "nicht in jeder DAW getestet" (verkaufsschädigend), stattdessen Support-Satz
+NOT_EVERY_DAW = "Support direkt vom Entwickler: Wenn in deiner DAW etwas hakt, schreib mir, ich helfe dir weiter."
 
 PLUGINS = [
     # ─────────────────────────────── PSY ───────────────────────────────
@@ -217,8 +217,7 @@ PLUGINS = [
         ],
         "tested": "Die automatischen Prüfungen spielen jedes Factory-Pattern bei 150, 200 und 260 BPM auf einem synthetischen Psy-Loop und auf einem Sinuston. "
                   "Geprüft wird auf NaN, auf Spitzen über −0,3 dBFS, auf Gleichspannung (DC) und auf Sprünge an jeder Slice-Kante. Dazu kommen eine Tempo-Rampe "
-                  "von 200 auf 300 BPM, ein Loop-Sprung und ein Transport-Stopp mitten im Effekt, und die bitgenaue Durchleitung wird bestätigt. "
-                  "Noch nicht in jeder DAW ausprobiert: Wenn etwas in deiner nicht funktioniert, sag Bescheid.",
+                  "von 200 auf 300 BPM, ein Loop-Sprung und ein Transport-Stopp mitten im Effekt, und die bitgenaue Durchleitung wird bestätigt.",
         "good_to_know": "Das Pattern folgt dem Transport der DAW. Die Standalone-App hat keinen Transport, dort spielst du die Effekte mit MIDI-Noten. "
                         "Sehr kurze Repeats (1/64) einer Kick sind kürzer als eine Schwingung der Kick und können während des Effekts leicht aus der Mitte rutschen. "
                         "So funktioniert Beat Repeat; sobald der Effekt endet, ist wieder dein unverändertes Audio da.",
@@ -284,7 +283,7 @@ PLUGINS = [
                   "Der Kick wurde einzeln gemessen (Schwelle −60 dBFS): Mit automatischem Kick-Ende lag die Kick-Energie nach dem ersten Bass bei 145, 175, 200 und 250 BPM in allen Bass-Patterns bei 0,000 ms; "
                   "mit festem 330-ms-Kick waren es im KBBB-Pattern 226, 244, 225 und 180 ms. Die Phase von Kick und Bass an der Übergabe lag mit Phasen-Ausrichtung bei höchstens 21°, ohne bei bis zu 176°. "
                   "Aliasing des Basses lag im Bereich 10 Hz bis 20 kHz bei −73 dB oder besser (Filter-Cutoff intern auf 12 kHz begrenzt). "
-                  "Der Klang wurde bei diesen Tests nicht nach Gehör beurteilt, hör dir deshalb zuerst die Demo an. Noch nicht in jeder DAW ausprobiert: Wenn etwas in deiner nicht funktioniert, sag Bescheid.",
+                  "Wie es klingt, hörst du oben in der Hörprobe und in der kostenlosen Demo.",
         "good_to_know": "Bei 250 BPM bleiben dem Kick im 1/16-Pattern nur 60 ms; im Auto-Modus kürzt die Engine dann seinen Ausklang, er bleibt ein kurzer, knackiger Schlag. "
                         "Das Plugin ist ein Instrument und bearbeitet kein Audio, das du hineinschickst. Die Standalone-App hat keinen Transport, dort spielst du es mit MIDI-Noten.",
         "formats": MAC_FORMATS + " Die Vollversion wird einmalig mit dem Lizenzschlüssel aus deiner Gumroad-Quittung aktiviert (Internet nötig, bis zu 3 Rechner, Prüfung alle 14 Tage, 60 Tage offline nutzbar). Ohne Aktivierung verhält sie sich wie die Demo.",
@@ -464,7 +463,7 @@ PLUGINS = [
         "tested": "69 automatische Prüfungen: alle 12 Presets bei 145, 200 und 260 BPM auf einem synthetischen Psy-Loop ohne NaN und ohne Spitzen über −0,3 dBFS (bei −9 dBFS Eingang). "
                   "Auf einem Sinuston blieb die größte zweite Differenz (Maß für Sprünge an den Gate-Kanten) bei 0,0026, der trockene Sinus hat 0,0011, die Prüfschwelle liegt bei 0,01. "
                   "Auto Gain traf den Pegel des Bypass-Signals auf ±0,16 dB, wenn die +6-dB-Grenze nicht erreicht wird. Ein geschlossener Step lag bei −191 dB, ein offener bei 0,00 dB. "
-                  "Bei Mix 0 % und gestopptem Transport ist der Ausgang bitgenau gleich dem Eingang. Der Klang wurde bei diesen Tests nicht nach Gehör beurteilt. " + NOT_EVERY_DAW,
+                  "Bei Mix 0 % und gestopptem Transport ist der Ausgang bitgenau gleich dem Eingang. " + NOT_EVERY_DAW,
         "good_to_know": "Das Gate folgt dem Transport der DAW. Die Standalone-App hat keinen Transport, dort bleibt das Gate offen. "
                         "Bei 1/32 dauert das 16-Step-Pattern einen halben Takt und läuft zweimal pro Takt, bei 1/8 zwei Takte.",
         "formats": MAC_FORMATS + " Kein Login und kein Lizenzserver.",
@@ -601,7 +600,7 @@ PLUGINS = [
             "formats": "<strong>Windows 10/11:</strong> VST3 + standalone. <strong>macOS Apple Silicon only</strong> (arm64, no Intel build): "
                        "VST3 + standalone, <strong>unsigned and not notarized</strong>. macOS blocks the plugin on first launch; "
                        "allow it under System Settings → Privacy &amp; Security. <strong>No AU</strong>, so it does not run in Logic Pro. "
-                       "The VST3 was checked with automated tests but has not been tried in every DAW yet. If something does not work in your DAW, let me know. "
+                       "Direct support from the developer: if anything acts up in your DAW, message me and I will help. "
                        "No license server, no login, no online check.",
             "pairs": "Pairs with the <a href=\"" + GUMROAD + "black-metal-drum-kit?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=gravesaw-en\">Black Metal Drum Kit</a> "
                      "and the atmosphere bus <a href=\"/plugins/rimehall/\" hreflang=\"de\">Rimehall</a> (page in German).",
