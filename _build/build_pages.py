@@ -562,10 +562,12 @@ d.addEventListener('click',function(){{wet=false;mix();}});w.addEventListener('c
 </script>"""
     else:
         parts = []
-        for a, lab in zip(p["audio"], labels):
+        # EN: Kapitel-Übersetzung aus t["chapters"] (Liste je Audiodatei), sonst die DE-Kapitel aus p
+        chaps = t.get("chapters") if lang != "de" and t.get("chapters") else [a.get("chapters") for a in p["audio"]]
+        for a, lab, chs in zip(p["audio"], labels, chaps):
             ch = ""
-            if a.get("chapters"):
-                ch = '<ol class="chapters">' + "".join(f"<li><span>{tt}</span> {esc(l)}</li>" for tt, l in a["chapters"]) + "</ol>"
+            if chs:
+                ch = '<ol class="chapters">' + "".join(f"<li><span>{tt}</span> {esc(l)}</li>" for tt, l in chs) + "</ol>"
             parts.append(f'<figure class="track"><figcaption>{esc(lab)}</figcaption>'
                          f'<audio controls preload="metadata" src="{base}{a["file"]}"></audio>{ch}</figure>')
         player = "".join(parts)

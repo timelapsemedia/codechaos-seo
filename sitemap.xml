@@ -397,10 +397,12 @@
   </url>
   <url>
     <loc>https://codechaos-official.de/plugins/gravesaw/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/gravesaw/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/plugins/gravesaw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/plugins/gravesaw/"/>
     <image:image>
       <image:loc>https://codechaos-official.de/images/plugins/gravesaw/og.jpg</image:loc>
       <image:title>Gravesaw · Amp + Cab für Gitarre und Bass · Code Chaos Audio</image:title>
@@ -509,12 +511,29 @@
   </url>
   <url>
     <loc>https://codechaos-official.de/en/plugins/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/plugins/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/plugins/"/>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/en/plugins/gravesaw/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/plugins/gravesaw/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/plugins/gravesaw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/plugins/gravesaw/"/>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/gravesaw/og.jpg</image:loc>
+      <image:title>Gravesaw · Amp + cab for guitar and bass · Code Chaos Audio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codechaos-official.de/images/plugins/gravesaw/gui-880.jpg</image:loc>
+      <image:title>Gravesaw interface (VST3)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://codechaos-official.de/releases/</loc>
