@@ -551,6 +551,76 @@ PLUGINS = [
              "Ja, die Gravesaw Demo auf Gumroad ist das vollständige Plugin mit einem kurzen Rauschen alle 45 Sekunden."),
         ],
         "related": ["rimehall", "crucible", "shardstep"],
+        # Englische Fassung /en/plugins/gravesaw/ (15.11.2026, OFFEN.md / Grok T18 14.11.): reine Übersetzung der DE-Fakten oben, nichts ergänzt
+        "en": {
+            "title": "Gravesaw: Black Metal Guitar Amp Sim VST3 | Code Chaos",
+            "desc": "Gravesaw: black metal amp sim with built-in cab for guitar and bass DI. 19 cabs, 16 presets, VST3 + standalone for Windows and macOS. €19, free demo.",
+            "h1": "Gravesaw: black metal amp sim with built-in cab",
+            "eyebrow": "Code Chaos Audio · Black Metal Suite",
+            "category": "Amp + cab for guitar and bass",
+            "os": "Windows 10/11, macOS (Apple Silicon)",
+            "answer": "Gravesaw is a black metal amp sim: an amp with a built-in cabinet. Plug in a guitar or bass DI and get the cold, sawing, "
+                      "saturated tone of the second-wave records: tremolo picking that stays clear even at 170+ BPM, highs that cut instead of hiss, "
+                      "and no clean headroom at all. Gravesaw is the amp of the Code Chaos Black Metal Suite.",
+            "gui_alt": "Gravesaw interface: Gate, Tight, Gain and Raw/Thick, tone stack with Bass, Mid, Treble, Fizz and Presence, cab selector 4x12 Cold Bright and level meters, preset Carpathian Buzz",
+            "audio": ["Gravesaw · Demo"],
+            "chapters": [[("0:00", "DI guitar (dry, as recorded)"), ("0:03", "Gravesaw: Cold Tremolo Lead"), ("0:06", "Gravesaw: Carpathian Buzz"),
+                          ("0:08", "Gravesaw: Frozen Wall Thick"), ("0:11", "Gravesaw: Raw Rehearsal Room"), ("0:14", "Gravesaw: Tamed Fizz"),
+                          ("0:17", "Gravesaw: Four-Track Demo"), ("0:20", "Full mix: Wall Rhythm L/R doubled + Cold Tremolo Lead + Bass Grind + Black Metal Drum Kit")]],
+            "audio_intro": "First the dry DI riff, then the same riff through six presets, and a full mix at the end (170 BPM, 26 seconds).",
+            "audio_note": "",
+            "specs": [
+                ("Type", "Amp simulation with built-in cabinet for guitar and bass"),
+                ("Price", "€19 on Gumroad"),
+                ("Formats", "VST3 + Standalone"),
+                ("Systems", "Windows 10/11 · macOS Apple Silicon only (unsigned)"),
+                ("Not supported", "AU / Logic Pro, Intel Macs"),
+                ("Cabs", "19 built in (10 guitar, 6 tamed, 3 bass) or cab off for your own IRs"),
+                ("Presets", "16 factory presets"),
+                ("Latency", "61 samples (1.4 ms at 44.1 kHz), reported to the DAW"),
+                ("Demo", "Full plugin, short noise burst every 45 seconds"),
+            ],
+            "feat_title": "Black metal amp sim features",
+            "features": [
+                "<strong>Noise gate</strong> before the amp (threshold from −90 dBFS = off to −30 dBFS, with hold and hysteresis), so the gaps between tremolo bursts stay silent",
+                "<strong>Tight:</strong> high-pass before the distortion, 20 to 400 Hz, for a tight low end or a full doom foundation",
+                "<strong>Gain stages with 4x oversampling</strong> and anti-aliased clipping. <strong>Raw / Thick</strong> moves the voicing from raw and sawing (harder clipping, more highs into the distortion) to thick (softer clipping, push in the low mids)",
+                "<strong>Tone stack</strong> after the distortion: Bass, Mid, Treble (±12 dB each), <strong>Fizz</strong> (the range above about 4 kHz, from tamed to full fizz) and <strong>Presence</strong>",
+                "<strong>19 built-in cabs:</strong> 10 guitar cabs (4x12, 2x12 open back, 1x12 lo-fi combo, a wide L/R pair for doubled rhythm guitars), 6 tamed versions and 3 bass cabs. Switching crossfades without clicks. With <strong>cab off</strong> you load your own IR after Gravesaw",
+                "<strong>Low Blend</strong> mixes the clean low end of the DI under the distortion, for bass",
+                "<strong>16 factory presets:</strong> Cold Tremolo Lead, Carpathian Buzz, Wall Rhythm L / R (+ Tamed), Tamed Fizz, Four-Track Demo, Frozen Wall Thick, Depressive Haze, Low Gain Crunch, Bass Grind, Bass Clank, Doom Bass Deep and Amp Only (own IR)",
+                "Input and output meters in dBFS, gate indicator. Mono or stereo input",
+            ],
+            "extra_prose": "<p><strong>The cabs are synthesised, not miked.</strong> They are the impulse responses from the "
+                           "<a href=\"" + GUMROAD + "black-metal-tone-kit?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=gravesaw-en\">Black Metal Tone Kit</a>, "
+                           "designed in code from a model of speaker, cone breakup, mic position and enclosure. They are not copies of commercial cabinets or IR libraries. "
+                           "Every cab is level-matched, so switching changes the tone, not the volume.</p>",
+            "tested": "Every preset is rendered with a synthetic DI riff in the automated tests: no clipping (all peaks around −4.5 dBFS; a safety stage at the output "
+                      "keeps peaks below −0.3 dBFS even with a DI 12 dB hotter), no DC, no silence. Latency is 61 samples (1.4 ms at 44.1 kHz) and is reported to the DAW; "
+                      "the cab convolution adds none. In the worst tested case (2.8 kHz sine at full gain, rawest setting, cab off) aliasing sits 54 dB below the harmonics.",
+            "formats": "<strong>Windows 10/11:</strong> VST3 + standalone. <strong>macOS Apple Silicon only</strong> (arm64, no Intel build): "
+                       "VST3 + standalone, <strong>unsigned and not notarized</strong>. macOS blocks the plugin on first launch; "
+                       "allow it under System Settings → Privacy &amp; Security. <strong>No AU</strong>, so it does not run in Logic Pro. "
+                       "The VST3 was checked with automated tests but has not been tried in every DAW yet. If something does not work in your DAW, let me know. "
+                       "No license server, no login, no online check.",
+            "pairs": "Pairs with the <a href=\"" + GUMROAD + "black-metal-drum-kit?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=gravesaw-en\">Black Metal Drum Kit</a> "
+                     "and the atmosphere bus <a href=\"/plugins/rimehall/\" hreflang=\"de\">Rimehall</a> (page in German).",
+            "faq": [
+                ("Does Gravesaw work for bass?",
+                 "Yes. Low Blend mixes the clean low end of the DI under the distortion, there are 3 bass cabs and the presets Bass Grind, Bass Clank and Doom Bass Deep."),
+                ("Can I use my own impulse responses?",
+                 "Yes. With cab off (preset Amp Only) only the amp runs, and you load your own IR after Gravesaw."),
+                ("Are the cabs copies of famous cabinets?",
+                 "No. The cabs are synthesised: impulse responses from the Black Metal Tone Kit, designed in code from a model of speaker, cone, mic position and enclosure. They are not copies of commercial cabinets or IR libraries."),
+                ("Does Gravesaw run on a Mac?",
+                 "Yes, but only on Macs with Apple Silicon (arm64); there is no Intel build. The plugin is unsigned and not notarized: macOS blocks it on first launch, "
+                 "allow it under System Settings → Privacy &amp; Security. There is no AU format, so it does not run in Logic Pro."),
+                ("Do I need an account or online activation?",
+                 "No. There is no license server, no login and no online check."),
+                ("Is there a free demo?",
+                 "Yes. The Gravesaw demo on Gumroad is the full plugin with a short noise burst every 45 seconds."),
+            ],
+        },
     },
     {
         "slug": "rimehall", "live": True, "group": "metal", "name": "Rimehall", "price": 19,

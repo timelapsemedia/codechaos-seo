@@ -28,12 +28,16 @@
   "hash": "cfea3eb2c9628644"
  },
  "/en/plugins/": {
-  "datum": "2026-11-12",
-  "hash": "93a5bb1f640f3034"
+  "datum": "2026-11-15",
+  "hash": "55981c62c6bf4b5d"
  },
  "/en/plugins/crucible/": {
   "datum": "2026-11-12",
   "hash": "a4d04f4f5fa7808f"
+ },
+ "/en/plugins/gravesaw/": {
+  "datum": "2026-11-15",
+  "hash": "3e0e3bce5ecfbf08"
  },
  "/en/psy-loudness-data/": {
   "datum": "2026-11-12",
