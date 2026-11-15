@@ -71,6 +71,16 @@ Der Faktor gibt an, wie viel öfter eine Seite mit dem Merkmal zitiert wird. Sei
    - **polished.media, 36 Seiten:** AUTOR 36, DATUM 35, TOC 33, ART 28, WORTE 12, TAB 10, H2 3.
    - **codechaos-official.de umgesetzt am 05.11.2026** (TOC, Article auf Genre-/Mastering-Seiten, author + dateModified auch im Produkt-Schema, Autorenbox mit echtem Foto, Datum, Crucible-Tabelle, FAQ auf /plugins/). Bewusst ohne Article: Startseiten und /plugins/ (Übersicht). Prüfwerkzeug korrigiert: `@type`-Listen werden erkannt, „Zum Inhalt springen“ zählt nicht mehr als TOC.
 
+## Kundenblick-Prüfung (Pflicht in jedem Lauf, Tim 15.11.2026)
+
+Jeder Lauf prüft beide Sprachfassungen (DE und EN) der Verkaufsseiten (Mastering, Plugins, Sounds/Produkte) aus der Rolle eines **skeptischen Kunden** am Handy (390 px, Screenshot des ersten Bildschirms und nach dem Scrollen):
+- Sehe ich sofort, was es ist, was es kostet und wie ich es teste (Hörprobe, Gratis-Demo)?
+- Verdeckt etwas die Kauf- oder Demo-Buttons (Sticky-Leiste, Cookie-Banner, Overlays)?
+- Gibt es Sätze, die Zweifel säen, ohne dem Kunden zu nützen? Verboten: „noch nicht in jeder DAW getestet“, „nur automatisch getestet“, „Klang nicht nach Gehör beurteilt“. Erlaubt und nötig bleiben echte Fakten, die Fehlkäufe verhindern (z. B. kein AU/Logic, macOS unsigniert, kein macOS-Build bei Crucible).
+- Fehlen Antworten auf typische Einwände (Lizenz, Systeme, Demo, Support, Zahlung)?
+- Wirkt etwas kaputt oder unseriös (Layoutfehler, leere Stellen, falsche Sprache)?
+Gefundene Kaufhemmnisse beheben (zentral im Generator) und im Bericht nennen. Diese Prüfung gilt zusätzlich zu den 1–2 SEO-Änderungen pro Tag; Fehler und Kaufhemmnisse sind von der 7-Tage-Sperre ausgenommen.
+
 ## Regeln
 
 - **Keine erfundenen Fakten.** Artists, Festivals, Daten, Zitate oder Kundenstimmen nur, wenn belegt oder vom Nutzer geliefert. Unsichere Aussagen weglassen.

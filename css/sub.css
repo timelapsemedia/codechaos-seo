@@ -40,7 +40,7 @@ img{max-width:100%;height:auto;display:block}
 .narrow{max-width:780px}
 section{padding:72px 0;border-top:1px solid rgba(201,168,106,.08)}
 section.alt{background:var(--deep)}
-.crumbs{font-size:.85rem;padding:18px 0 0;color:var(--parch)}
+.crumbs{font-size:.85rem;padding-top:18px;color:var(--parch)}
 .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
 .crumbs li+li::before{content:"›";margin-right:6px;color:var(--gold-lo)}
 .crumbs a{color:var(--parch);text-decoration:none}.crumbs a:hover{color:var(--gold-hi)}
@@ -152,6 +152,12 @@ h3{font-size:1.15rem;margin:28px 0 10px}
 .sticky-cta{display:none}
 @media (max-width:700px){.sticky-cta{display:flex;align-items:center;justify-content:center;position:fixed;left:12px;right:12px;bottom:12px;z-index:90;min-height:52px;background:var(--blood);color:var(--bone);border:1px solid var(--gold);font-family:var(--cap);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,.6)}body:has(.sticky-cta){padding-bottom:76px}}
 @media (max-width:600px){.cmp.prices th:nth-child(3),.cmp.prices td:nth-child(3),.cmp.prices th:nth-child(5),.cmp.prices td:nth-child(5){display:none}.cmp.prices th,.cmp.prices td{padding:10px 8px}}
+
+/* Plugin-Seiten: Sticky-Leiste mit Kauf + Demo */
+@media (max-width:700px){.sticky-duo{padding:0;gap:0;transition:opacity .2s,transform .2s}.sticky-duo a{flex:1;display:flex;align-items:center;justify-content:center;min-height:52px;color:var(--bone);text-decoration:none;padding:0 8px;text-align:center}.sticky-duo .sticky-demo{background:var(--void);border-left:1px solid var(--gold)}.sticky-duo.is-hidden{opacity:0;transform:translateY(120%);pointer-events:none}}
+
+/* Cookie-Banner nicht über die Kaufleiste legen (Tim 15.11.2026) */
+@media (max-width:700px){body:has(.sticky-cta) #cc-consent{bottom:76px!important}}
 
 /* Plugin-Seiten (/plugins/) */
 .shot{margin:0}.shot picture,.pcard-img picture{display:block}.shot img{width:100%;height:auto;border:1px solid var(--gold-lo);box-shadow:0 24px 60px rgba(0,0,0,.55)}
