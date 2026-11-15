@@ -29,7 +29,7 @@
  },
  "/en/plugins/": {
   "datum": "2026-11-15",
-  "hash": "55981c62c6bf4b5d"
+  "hash": "39e2930deced11df"
  },
  "/en/plugins/crucible/": {
   "datum": "2026-11-12",
@@ -72,8 +72,8 @@
   "hash": "359bbe6e51e1193a"
  },
  "/plugins/": {
-  "datum": "2026-11-12",
-  "hash": "246027cc24a27d41"
+  "datum": "2026-11-15",
+  "hash": "02238b0a359db482"
  },
  "/plugins/chaos-fm/": {
   "datum": "2026-11-12",
@@ -132,8 +132,8 @@
   "hash": "a945194ba263a588"
  },
  "/sounds/": {
-  "datum": "2026-11-09",
-  "hash": "46ffd6a1f33b788c"
+  "datum": "2026-11-15",
+  "hash": "a1d6c552beadc0e8"
  },
  "/uhrwerk-aus-blut/": {
   "datum": "2026-11-11",
