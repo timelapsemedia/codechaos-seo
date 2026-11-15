@@ -847,6 +847,7 @@ def build_plugins_index():
     <h1>{PLUGINS_INDEX['h1']}</h1>
     <div class="rule" aria-hidden="true"><i></i></div>
     <p class="answer">{PLUGINS_INDEX['answer']}</p>
+    <div class="btns"><a class="btn btn-blood" href="#g-psy">Psytrance-Plugins &amp; Preise ↓</a><a class="btn btn-ghost" href="#g-metal">Black Metal Suite ↓</a></div>
   </div>
 </section>
 {groups}<section aria-labelledby="cmp-t">
@@ -953,6 +954,7 @@ def build_plugins_index_en():
     <h1>Audio plugins for psytrance and black metal</h1>
     <div class="rule" aria-hidden="true"><i></i></div>
     <p class="answer">VST3 + standalone plugins by Code Chaos Audio for hitech, psycore, darkpsy and black metal, sold on Gumroad. Every paid plugin comes with a free demo, Kick/Bass Scope is free.</p>
+    <div class="btns"><a class="btn btn-blood" href="#g-psy">Psy plugins &amp; prices ↓</a><a class="btn btn-ghost" href="#g-metal">Black Metal Suite ↓</a></div>
   </div>
 </section>
 {groups}<section aria-labelledby="cmp-t">

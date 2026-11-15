@@ -133,6 +133,7 @@ def build():
     <h1>Samples, MIDI und Presets für Psytrance und Black Metal</h1>
     <div class="rule" aria-hidden="true"><i></i></div>
     <p class="answer">Code Chaos Audio verkauft neben den Plugins auch einfache Datei-Produkte für Hitech, Psycore und Black Metal: Drum-Samples, MIDI-Grooves, Cab-Impulsantworten, Vital- und Serum-2-Presets und ein Ableton-Template. Alles von Code Chaos (Tim Borchert, Hamburg) selbst erzeugt, lizenzfrei für deine eigenen Releases, ab 9 € als Sofort-Download auf Gumroad, ohne Login und ohne Lizenzserver.</p>
+    <div class="btns"><a class="btn btn-blood" href="#g-psy">Psytrance-Sounds &amp; Preise ↓</a><a class="btn btn-ghost" href="#g-metal">Black-Metal-Sounds ↓</a></div>
   </div>
 </section>
 {sections}<section aria-labelledby="p-t">
