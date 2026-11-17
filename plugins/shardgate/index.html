@@ -312,6 +312,13 @@ d.addEventListener('click',function(){wet=false;mix();});w.addEventListener('cli
 b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-pick]');if(!a)return;var s=document.querySelector('select[name=service]');if(!s)return;
 for(var i=0;i<s.options.length;i++){if(s.options[i].text===a.getAttribute('data-pick')){s.selectedIndex=i;break;}}});
+(function(){var f=document.querySelector('form.form[action*="formspree.io"]');if(!f||!window.fetch)return;
+var en=(document.documentElement.lang||'').indexOf('en')===0;
+f.addEventListener('submit',function(e){if(!f.checkValidity())return;e.preventDefault();var b=f.querySelector('[type=submit]');if(b)b.disabled=true;
+fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(!r.ok)throw 0;
+var d=document.createElement('div');d.className='form-ok';d.setAttribute('role','status');d.tabIndex=-1;
+d.innerHTML=en?'<p class="form-ok-t">✓ Request received</p><p>Thanks! You usually get a reply with all details within 24–48 hours. Nothing to pay until you say yes.</p>':'<p class="form-ok-t">✓ Anfrage erhalten</p><p>Danke! Du bekommst meist innerhalb von 24–48 Stunden eine Antwort mit allen Details. Bezahlt wird erst nach deiner Zusage.</p>';
+f.parentNode.replaceChild(d,f);d.focus();}).catch(function(){if(b)b.disabled=false;f.submit();});});})();
 </script>
 <script src="/js/analytics-consent.js" defer></script>
 </body>
