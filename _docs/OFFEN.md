@@ -20,6 +20,12 @@ Liegt bewusst in `_docs/` (wird von GitHub Pages nicht veröffentlicht; im Repo-
 - [x] polished.media 9a: Rechtstexte auf /impressum/ /datenschutz/ /agb/ verlagert (Wortlaut 1:1), DE-Formular verlinkt /datenschutz/ (Grok #67).
 - [ ] Rechtstexte beider Seiten zum 01.12.2026 auf Tims Kleingewerbe umstellen (Heart Warrior UG darf dann nicht mehr vorkommen) – braucht Tim: Name und Anschrift des Kleingewerbes.
 
+## Aus Grok #88 (Website-Agentur, 18.11.2026)
+- [x] GA4-Conversion-Events (cta_click Gumroad/Mail, form_submit, generate_lead) in js/analytics-consent.js, nur nach Einwilligung (1bf9080, im DOM der Live-Seite getestet). Auswertung BF 26.–30.11. damit möglich.
+- [ ] Angebot gegen Interzone (Hamburg, 39 €/69 €, Gratis-Testmaster; selbst abgerufen 18.11.): Testmaster gratis/bezahlt oder Begründungsblock „Warum 79 €“ – Entscheidung Tim (Preis/Angebot).
+- [ ] Abschnitt „Psytrance mastering service / chain“ (Autocomplete) – nur mit Tims echten Kettenangaben (#66).
+- [ ] CTR-Test Meta-Description /en/hitech-psytrance/ + /en/psycore/ (267 Impr., Pos. 6,8–7,7, 0 Klicks): BPM-Spanne zuerst, Title unverändert, Vergleich nach 14 Tagen. Mengen klein = Hypothese.
+
 ## Plattformgrenzen GitHub Pages (Grok #67)
 
 - Cache-Control ist fest `max-age=600`, eigene Header gehen nicht; Lighthouse „cache-insight“ bleibt deshalb gelb. Abhilfe nur per Cloudflare-Proxy vor der Domain (gratis, braucht Tims DNS-Login).
