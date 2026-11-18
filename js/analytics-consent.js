@@ -90,4 +90,32 @@
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
   else start();
+
+  /* Conversion-Events (Grok #88, 18.11.2026, Muster polished.media site.js): nur wenn GA nach Einwilligung geladen ist.
+     cta_click = Klick auf Gumroad-/Mail-Link oder [data-track]; form_submit = Absenden des Mastering-Formulars;
+     generate_lead = Erfolgsmeldung (.form-ok) nach dem Formspree-Versand. */
+  function track(name, params) {
+    if (window.gtag && window['ga-disable-' + GA_ID] !== true) window.gtag('event', name, params || {});
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href],[data-track]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    var id = a.getAttribute('data-track') ||
+      (h.indexOf('gumroad.com') > -1 ? 'gumroad:' + (h.split('/l/')[1] || '').split('?')[0] : h.indexOf('mailto:') === 0 ? 'mail' : '');
+    if (id) track('cta_click', { cta_id: id, page: location.pathname });
+  }, true);
+  document.addEventListener('submit', function (e) {
+    var f = e.target;
+    if (f && f.action && f.action.indexOf('formspree.io') > -1 && f.checkValidity()) {
+      var s = f.querySelector('select[name=service]');
+      track('form_submit', { service: s ? s.value : '', page: location.pathname });
+      if (window.MutationObserver) {
+        var mo = new MutationObserver(function () {
+          if (document.querySelector('.form-ok')) { track('generate_lead', { service: s ? s.value : '', page: location.pathname }); mo.disconnect(); }
+        });
+        mo.observe(document.body, { childList: true, subtree: true });
+      }
+    }
+  }, true);
 })();
