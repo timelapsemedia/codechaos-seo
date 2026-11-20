@@ -75,6 +75,8 @@ def http(method, url, body=None, headers=None):
             t = r.read().decode(); return r.status, (json.loads(t) if t.strip() else {})
     except urllib.error.HTTPError as e:
         return e.code, e.read().decode()[:300]
+    except (TimeoutError, OSError) as e:
+        return 0, str(e)[:100]
 
 
 def google(snap, urls):
