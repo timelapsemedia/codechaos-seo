@@ -20,7 +20,7 @@ Ziel: Entscheidungen auf Forschung und Messung stützen, nicht auf Guru-Regeln. 
    - **D** Fachpraxis, Lehrbuch, Experten (z. B. AES-Praxis, Mastering-Standards wie ITU-R BS.1770)
    - **E** Plattform-, Anbieter- oder Guru-Angabe (Algorithmus-Tipps, Blogposts) – nur als Hypothese
 6. **Übertragbarkeit prüfen:** Gilt der Befund für Tims Nische (Hitech/Psycore, Metal-Mastering, Urbex, deutsch/englisch, Shorts)? Laborbefunde sind Richtung, keine Garantie.
-7. **Mit eigenen Daten abgleichen:** `C:/social-insights` (Register, A/B-Experimente, `berichte/wachstum_*.md`, `gewinner_*.md`, `werbung_*.md`). **Belastbare eigene A/B-Daten schlagen Fremdstudien** für Tims Publikum. Widerspricht beides: als A/B-Experiment anlegen (`si.experimente`).
+7. **Mit eigenen Daten abgleichen:** `C:/social-insights` (Register, A/B-Experimente, `berichte/wachstum_*.md`, `gewinner_*.md`, `werbung_*.md`). **Fremdstudien gehen vor eigenen Daten** (Tim 20.11.2026: „immer Fremdstudien vor eigenen Daten“, „weiterentwicklung ist wichtig“). Eigene A/B-Daten ergänzen nur. Eigene Werke oder Releases sind nie der Maßstab für Gates. Widerspricht beides: Die Studie entscheidet, und die Abweichung wird als A/B-Experiment angelegt (`si.experimente`).
 8. **Ablegen:** Geprüften Befund in `C:/wissenschaft/<bereich>.md` unter „Geprüfte Befunde“ eintragen:
    `- Aussage · Stufe X · Quelle (Autor Jahr, DOI) · Grenzen · Anwendung bei Tim · eigener Beleg (falls vorhanden)`.
    Bereiche: mastering-audio, musik-produktion, video, social-marketing, verkaufspsychologie, webdesign (neue Datei anlegen, wenn nötig).
