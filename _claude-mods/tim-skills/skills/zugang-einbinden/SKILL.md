@@ -1,7 +1,7 @@
 ---
 name: zugang-einbinden
 description: >-
-  Neuen API-Schlüssel/KI-Anbieter sicher einbinden: Region und Abo-vs-API vorab prüfen, Schlüssel nie über den Chat, Ausgabengrenze, Testaufruf. Bei "hier ist mein Key", "binde X ein".
+  API-Schlüssel/KI-Anbieter sicher einbinden oder ablaufende Tokens erneuern (Meta/Instagram, YouTube): Region und Abo-vs-API prüfen, nie über den Chat, Ausgabengrenze, Testaufruf. Bei "hier ist mein Key", "binde X ein", "Token läuft ab".
 ---
 
 # zugang-einbinden
@@ -32,6 +32,26 @@ Nichts kaufen, keine Abos abschließen.
    Prüfen mit `test -n "$NAME"` (Bash) bzw. ohne Ausgabe des Werts.
 5. **Festhalten:** Memory/CLAUDE.md-Eintrag „<Dienst>: Variable NAME, Ort, Grenzen (Region, Modelle, Preis)“ –
    ohne Wert. Bei Routinen: `routine-einrichtung` (Konnektoren nur das Nötige).
+
+## Token läuft ab / erneuern
+
+Belegt (22./23.11.2026): ein langlebiger Meta-Token wurde in den Chat eingefügt, davor ein Umweg über den
+Token-Debugger im Browser; gleichzeitig war die Erinnerung „Instagram-Token Code Chaos erneuern“ fällig.
+
+1. **Erst das vorhandene Werkzeug:** Instagram `@codechaos_official` → `insta-publisher` (`ig_status` zeigt
+   das Ablaufdatum, `ig_token_verlaengern` verlängert ohne neuen Login). Erst wenn das scheitert, neu anmelden.
+2. **Meta allgemein:** Instagram-Login-Tokens (IGAA…) laufen nach 60 Tagen ab und lassen sich nur verlängern,
+   solange sie gültig und mindestens 24 h alt sind (`refresh_access_token`). Facebook-Login-Tokens (EAA…):
+   der langlebige Nutzer-Token gilt 60 Tage; ein daraus geholter **Page-Token läuft nicht ab** – für Seiten
+   den Page-Token speichern. Den Tausch macht ein Skript, das die Werte aus der Umgebung liest und das Ergebnis
+   direkt in die Schlüsseldatei bzw. das Secret schreibt – nie ausgeben.
+3. **YouTube:** Refresh-Token läuft nicht ab, solange die OAuth-App „In Produktion“ ist; im Status „Testing“
+   nach 7 Tagen. Bei `invalid_grant` App-Status prüfen, dann einmal neu anmelden.
+4. **Neuen Wert annehmen** wie oben (Schlüsselordner, Secret, Zwischenablage-Skript) – nie aus dem Chat.
+   Steht er doch im Chat: einbinden, Tim sagen, dass er im Verlauf liegt, und ihn beim nächsten Verlängern
+   ersetzen.
+5. **Nächsten Ablauf festhalten:** Ablaufdatum (aus `ig_status`/Debug-Antwort) als Erinnerung eine Woche
+   vorher einplanen (`send_later` bzw. Routine-Erinnerung), Datum ohne Wert in Memory/CLAUDE.md.
 
 ## Typische Fallen
 

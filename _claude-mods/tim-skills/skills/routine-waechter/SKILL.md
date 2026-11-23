@@ -37,6 +37,11 @@ ausgeben, auch nicht gekürzt.
    keine Rohverläufe – und `python3 routinen_check.py routinen-*.json --verlauf laeufe.json`.
    Das meldet ROT bei ≥ 3× gleichem Fehler in Folge (→ pausieren oder Ursache beheben
    vorschlagen) und GELB bei ≥ 5× „nichts Neues“ im Stundentakt (→ seltener vorschlagen).
+   **Kosten mitnehmen** (belegt 18.–22.11.: Wochenlimit nach einem Tag bei 55 %; Rarity-Hunter-
+   Tiefen-Scan täglich auf Opus 2,28 $ pro Lauf gegen 0,34–0,70 $ bei den anderen): aus denselben
+   result-Events `total_cost_usd` je Lauf in `kosten.json` (`{"<trig_-ID>": [2.28, 2.1, …]}`) und
+   `--kosten kosten.json` anhängen. GELB ab Ø 1,50 $ pro Lauf oder ≈ 10 $ pro Woche, mit Vorschlag
+   (Opus → Sonnet, seltener, Prompt kürzen). Modell nie selbst umstellen – nur Tim fragen.
 4. **Meldung schreiben** (Deutsch, kurz):
    ```
    Routinen-Check <Datum>: <n> ok, <n> mit Problem
