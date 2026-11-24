@@ -399,12 +399,6 @@ PLUGINS = [
              "Ausrichten tust du beim Mischen in deiner DAW, das Scope zeigt dir sofort, ob die Änderung geholfen hat. "
              "Zum Vergleich: In unseren <a href=\"/psy-lautheit-daten/\">Lautheitsdaten veröffentlichter Psy-Tracks</a> liegt die Korrelation unter 150 Hz im Hitech- und Psytrance-Median bei 1,00, das Low End ist also mono. "
              "Was nach dem Mix noch an Druck und Lautheit fehlt, ist Sache des Masterings: <a href=\"/mastering/\">Mastering für Psytrance, Hitech und Psycore →</a></p>"),
-            ("Bewertung auf Gumroad",
-             "<blockquote lang=\"en\"><p>Generally, since I mostly work with electronic arrangements, I haven't had many phase issues. "
-             "However, after recording some organic instruments in the low-frequency range, I wasn't entirely sure about the phase alignment, "
-             "so I decided to use this plugin. It turned out to be really helpful. I'd like to thank everyone involved in creating it!</p>"
-             "<footer>Anonymous, 5 Sterne (bisher 1 Bewertung), <a href=\"https://timberwolf688.gumroad.com/l/kick-bass-scope\" target=\"_blank\" rel=\"noopener\">Bewertung auf Gumroad</a></footer></blockquote>"
-             "<p>Original auf Englisch, unverändert übernommen. Es ist bisher die einzige Bewertung zu diesem Plugin; sie steht öffentlich auf der Gumroad-Produktseite.</p>"),
         ],
         "routing": "Setz das Scope auf die Bass-Spur und schick die Kick in den Sidechain-Eingang. Sidechain-Routing für VST3 funktioniert in jeder DAW anders. "
                    "Wenn deine DAW keinen Sidechain in einen Effekt führen kann, stell Input auf <em>Single input</em>: Kick hart links und Bass hart rechts "

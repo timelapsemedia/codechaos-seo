@@ -56,6 +56,9 @@ h3{font-size:1.15rem;margin:28px 0 10px}
 .prose blockquote{margin:0 0 16px;padding:14px 18px;border-left:3px solid var(--blood-hi);background:var(--panel)}
 .prose blockquote p{margin:0 0 10px}
 .prose blockquote footer{font-size:.92rem;opacity:.85}
+.prose .rev-stars{color:var(--gold);letter-spacing:.08em}
+.prose .rev-reply{margin:10px 0 0;font-size:.92rem;opacity:.85}
+.prose .rev-more summary{cursor:pointer;margin:0 0 14px}
 .rule{display:flex;align-items:center;gap:14px;color:var(--gold);margin:6px 0 26px}
 .rule::before,.rule::after{content:"";height:1px;width:min(120px,22vw);background:linear-gradient(90deg,transparent,var(--gold))}
 .rule::after{transform:scaleX(-1)}
