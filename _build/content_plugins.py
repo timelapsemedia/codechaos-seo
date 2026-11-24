@@ -3,10 +3,10 @@
 # (Stand 21.10.2026). Nichts ergänzen, was dort nicht steht.
 #
 # live=False: Seite wird NICHT gebaut und steht nicht in Sitemap/llms.txt.
-# Erst auf True setzen, wenn https://timberwolf688.gumroad.com/l/<slug> (und /l/<slug>-demo) HTTP 200 liefern,
+# Erst auf True setzen, wenn https://shop.codechaos-official.de/l/<slug> (und /l/<slug>-demo) HTTP 200 liefern,
 # dann python3 _build/plugin_assets.py && python3 _build/build_pages.py, Sitemap + llms.txt ergänzen.
 
-GUMROAD = "https://timberwolf688.gumroad.com/l/"
+GUMROAD = "https://shop.codechaos-official.de/l/"
 
 # Formate-Text für die Plugins mit Mac-Build (wortgleich zur Gumroad-Beschreibung, übersetzt)
 MAC_FORMATS = ("<strong>Windows 10/11:</strong> VST3 + Standalone. <strong>macOS nur Apple Silicon</strong> (arm64, kein Intel-Build): "

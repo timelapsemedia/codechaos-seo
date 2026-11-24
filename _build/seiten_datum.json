@@ -1,7 +1,7 @@
 {
  "/": {
-  "datum": "2026-11-11",
-  "hash": "b002a0667143d05f"
+  "datum": "2026-11-24",
+  "hash": "1bdf1f16636f951e"
  },
  "/bio/": {
   "datum": "2026-11-11",
@@ -24,8 +24,12 @@
   "hash": "e8f83b3818376b6a"
  },
  "/en/mastering/": {
-  "datum": "2026-11-12",
-  "hash": "cfea3eb2c9628644"
+  "datum": "2026-11-24",
+  "hash": "3aa3290cbed6f307"
+ },
+ "/en/partner/": {
+  "datum": "2026-11-24",
+  "hash": "bd698e0fda52b961"
  },
  "/en/plugins/": {
   "datum": "2026-11-15",
@@ -68,8 +72,12 @@
   "hash": "1e0466421af79f34"
  },
  "/mastering/": {
-  "datum": "2026-11-12",
-  "hash": "359bbe6e51e1193a"
+  "datum": "2026-11-24",
+  "hash": "c8e818ea2a98cfa6"
+ },
+ "/partner/": {
+  "datum": "2026-11-24",
+  "hash": "c0ab38f6fe830ac1"
  },
  "/plugins/": {
   "datum": "2026-11-15",

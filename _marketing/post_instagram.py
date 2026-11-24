@@ -17,6 +17,8 @@ import datetime, json, os, sys, time, urllib.error, urllib.parse, urllib.request
 from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import crucible_gate  # noqa: E402
 VERSION = "v21.0"
 
 
@@ -45,7 +47,7 @@ def norm(text):
 
 def main():
     dry = "--dry-run" in sys.argv
-    posts = json.load(open(os.path.join(HERE, "crucible-posts.json"), encoding="utf-8"))
+    posts = crucible_gate.lade_posts()  # Sprach-/Marken-Gate, fail-closed (Tim 21.11.2026)
     done_path = os.path.join(HERE, "posted.json")
     done = set(json.load(open(done_path))) if os.path.exists(done_path) else set()
     today = datetime.datetime.now(ZoneInfo("Europe/Berlin")).date().isoformat()

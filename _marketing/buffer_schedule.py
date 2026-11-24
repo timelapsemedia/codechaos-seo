@@ -26,6 +26,8 @@ import datetime, json, os, sys, urllib.request
 from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import crucible_gate  # noqa: E402
 API = "https://api.buffer.com"
 POST_TIME = datetime.time(17, 0)
 HORIZONT_TAGE = int(os.environ.get("BUFFER_HORIZONT_TAGE", "10"))  # schedule only posts due within this window
@@ -126,7 +128,7 @@ def main():
         print("Buffer: kein API-Key gesetzt, übersprungen.")
         return 0
     skip = set() if "--all-channels" in sys.argv else {"instagram", "youtube"}
-    posts = json.load(open(os.path.join(HERE, "crucible-posts.json"), encoding="utf-8"))
+    posts = crucible_gate.lade_posts()  # Sprach-/Marken-Gate, fail-closed (Tim 21.11.2026)
     state_path = os.path.join(HERE, "buffer_scheduled.json")
     state = json.load(open(state_path)) if os.path.exists(state_path) else {}
     alle = channels()

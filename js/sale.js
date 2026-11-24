@@ -17,9 +17,10 @@
   function run() {
     var en = (document.documentElement.lang || '').indexOf('en') === 0;
     // 1) paid product links: /l/<slug>?... -> /l/<slug>/BLACKFRIDAY?...
-    var links = document.querySelectorAll('a[href*="timberwolf688.gumroad.com/l/"]');
+    // eigene Shop-Domain seit 24.11.2026, alte Gumroad-Adresse bleibt gültig: beide erkennen
+    var links = document.querySelectorAll('a[href*="shop.codechaos-official.de/l/"], a[href*="timberwolf688.gumroad.com/l/"]');
     for (var i = 0; i < links.length; i++) {
-      var a = links[i], m = a.href.match(/^(https:\/\/timberwolf688\.gumroad\.com\/l\/)([a-z0-9-]+)(\/[^?#]*)?([?#].*)?$/);
+      var a = links[i], m = a.href.match(/^(https:\/\/(?:shop\.codechaos-official\.de|timberwolf688\.gumroad\.com)\/l\/)([a-z0-9-]+)(\/[^?#]*)?([?#].*)?$/);
       if (!m || m[3] || PAID.indexOf(m[2]) < 0) continue;
       a.href = m[1] + m[2] + '/' + CODE + (m[4] || '');
     }

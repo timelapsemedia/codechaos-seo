@@ -16,6 +16,8 @@ import datetime, json, os, sys, urllib.error, urllib.parse, urllib.request, uuid
 from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import crucible_gate  # noqa: E402
 ROOT = os.path.dirname(HERE)
 TZ = ZoneInfo("Europe/Berlin")
 BASE = "https://codechaos-official.de/"
@@ -54,7 +56,7 @@ def upload(token, path, meta):
 
 def main():
     dry = "--dry-run" in sys.argv
-    posts = [p for p in json.load(open(os.path.join(HERE, "crucible-posts.json"), encoding="utf-8")) if p.get("video")]
+    posts = [p for p in crucible_gate.lade_posts() if p.get("video")]  # Sprach-/Marken-Gate, fail-closed
     state_path = os.path.join(HERE, "youtube_uploaded.json")
     state = json.load(open(state_path)) if os.path.exists(state_path) else {}
     todo = [p for p in posts if p["id"] not in state]
@@ -74,13 +76,13 @@ def main():
             status = {"privacyStatus": "private", "publishAt": due.strftime("%Y-%m-%dT%H:%M:%S.000Z"), "selfDeclaredMadeForKids": False}
         # Crucible posts keep their original link/tags; every other post links the plugin overview unless it brings its own
         crucible = p["id"].startswith("crucible")
-        link = "\n\nCrucible: https://codechaos-official.de/crucible.html" if crucible else "\n\nAlle Plugins: https://codechaos-official.de/plugins/"
+        link = "\n\nCrucible: https://codechaos-official.de/crucible.html" if crucible else "\n\nAll plugins / Alle Plugins: https://codechaos-official.de/plugins/"
         tags = p.get("youtube_tags") or (["Crucible", "saturation plugin", "psytrance", "hitech", "psycore", "darkpsy", "Code Chaos"]
                                          if crucible else ["Code Chaos Audio", "music production", "vst plugin", "Code Chaos"])
         meta = {"snippet": {"title": (p["video_title"] + " #Shorts")[:100],
                             "description": (p.get("youtube_description") or p["caption"]) + link,
                             "tags": tags,
-                            "categoryId": "10", "defaultLanguage": "de"},
+                            "categoryId": "10", "defaultLanguage": "en"},  # Englisch zuerst (Tim 17.11.2026)
                 "status": dict(status, containsSyntheticMedia=bool(p.get("ki")))}  # KI-Bilder (z. B. Story-Serien) kennzeichnen
         label = f'{p["id"]} ({"geplant für " + due.astimezone(TZ).strftime("%d.%m.%Y %H:%M") if "publishAt" in status else "sofort"})'
         if dry:

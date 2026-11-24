@@ -140,7 +140,7 @@ def footer(lang):
   <div class="wrap">
     <div class="cols">
       <div><img src="/images/brand/codechaos-logo-bone-240.webp" width="120" height="70" loading="lazy" alt="Code Chaos Logo" style="height:70px;width:auto;margin-bottom:10px"><p>{esc(u['foot'])}</p></div>
-      <div><h2>{u['genres']}</h2><ul>{genre_links}<li><a href="{'/plugins/crucible/' if lang == 'de' else '/en/plugins/crucible/'}">Crucible Plugin</a></li>{'<li><a href="/plugins/">Alle Plugins</a></li>' if lang == "de" else ""}</ul></div>
+      <div><h2>{u['genres']}</h2><ul>{genre_links}<li><a href="{'/plugins/crucible/' if lang == 'de' else '/en/plugins/crucible/'}">Crucible Plugin</a></li>{'<li><a href="/plugins/">Alle Plugins</a></li>' if lang == "de" else ""}<li><a href="{pre}/partner/">{'Partnerprogramm (30 %)' if lang == 'de' else 'Partner program (30 %)'}</a></li></ul></div>
       <div><h2>{u['follow']}</h2><ul>{social}</ul></div>
       <div><h2>{u['legal']}</h2><ul><li><a href="/impressum/">{u['imprint']}</a></li><li><a href="/datenschutz/">{u['privacy']}</a></li><li><a href="#cookies" class="cookie-settings-link">{'Cookie-Einstellungen' if lang == 'de' else 'Cookie settings'}</a></li><li><a href="{'/en/' if lang == 'de' else '/'}" hreflang="{'en' if lang == 'de' else 'de'}">{'English version' if lang == 'de' else 'Deutsche Version'}</a></li></ul></div>
     </div>
@@ -428,6 +428,111 @@ def build_release(slug, lang):
         + nav(lang, alt, "rel") + body + footer(lang)
     html, _ = geo.ausbauen(html, f"{pre}/{slug}/", lang)
     path = os.path.join(ROOT, pre.strip("/"), slug, "index.html")
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    open(path, "w", encoding="utf-8", newline="\n").write(html)
+    return path
+
+
+PARTNER_DATE = "2026-11-24"     # datePublished Partnerseite
+AFFILIATE_URL = "https://shop.codechaos-official.de/affiliates"
+# Tim 24.11.2026: „Ja, bauen + live“ (Partnerprogramm, C:/geschaeftsmodelle/partnerprogramm/LIESMICH.md).
+# Inbound statt Kaltakquise: § 7 Abs. 2 Nr. 2 UWG verbietet unverlangte Werbe-Mails auch an Firmen.
+PARTNER = {
+    "de": dict(
+        title="Partnerprogramm: 30 % auf Code-Chaos-Plugins",
+        desc="Empfiehl Plugins und Preset-Bänke von Code Chaos Audio und erhalte 30 % je Verkauf über deinen Link, 30 Tage lang. Wöchentliche Auszahlung über Gumroad.",
+        crumb="Partnerprogramm", eyebrow="Code Chaos Audio · Partnerprogramm",
+        h1="30 % für jedes Plugin, das du empfiehlst",
+        answer="Du unterrichtest Produktion, hast eine Community oder einen Kanal zu Psytrance, Hitech oder Sounddesign? Empfiehl Plugins und Preset-Bänke von Code Chaos Audio und bekomme <strong>30 % jedes Verkaufs</strong>, der über deinen Link kommt, 30 Tage lang nach dem Klick.",
+        btn="Jetzt Partner werden", btn2="Alle Plugins ansehen", plugins_url="/plugins/",
+        how_h="So funktioniert es",
+        how=["Auf Gumroad bewerben: ein kurzes Formular, in dem du sagst, wo und wie du empfehlen willst.",
+             "Nach der Freigabe bekommst du deinen persönlichen Link für jedes Bezahlprodukt.",
+             "Teile ihn in Videos, Kursen, Posts oder im Discord. Jeder Kauf innerhalb von 30 Tagen nach dem Klick zählt."],
+        who_h="Für wen es passt",
+        who="Für alle, die anderen beim Produzieren helfen: YouTube- und Twitch-Kanäle, Lehrende und Kurse, Discord- und Forums-Communities, Labels und Blogs rund um Psytrance, Hitech, Psycore, Darkpsy und Sounddesign. Am besten wirkt eine Empfehlung, wenn du ein Plugin selbst im Track zeigst.",
+        terms_h="Bedingungen",
+        terms=["30 % Provision auf alle Bezahlprodukte (Plugins, Preset-Bänke, Sample-Packs, Templates). Gratis-Demos sind ausgenommen.",
+               "30 Tage Cookie-Laufzeit ab dem Klick auf deinen Link.",
+               "Abrechnung, Steuer und wöchentliche Auszahlung laufen über Gumroad. Du brauchst ein Gumroad-Konto.",
+               "Jede Bewerbung wird einzeln freigegeben. Keine Mindestlaufzeit, du kannst jederzeit aufhören."],
+        og_alt="Partnerprogramm von Code Chaos Audio"),
+    "en": dict(
+        title="Partner Program: Earn 30 % on Code Chaos Plugins",
+        desc="Recommend Code Chaos Audio plugins and preset banks and earn 30 % of every sale from your link for 30 days. Weekly payouts through Gumroad.",
+        crumb="Partner program", eyebrow="Code Chaos Audio · Partner program",
+        h1="Earn 30 % on every plugin you recommend",
+        answer="Teach production, run a community or a channel about psytrance, hitech or sound design? Recommend Code Chaos Audio plugins and preset banks and earn <strong>30 % of every sale</strong> your link brings in, for 30 days after the click.",
+        btn="Apply as a partner", btn2="See all plugins", plugins_url="/en/plugins/",
+        how_h="How it works",
+        how=["Apply on Gumroad: one short form where you say where and how you plan to recommend.",
+             "Once approved, you get your personal link for every paid product.",
+             "Share it in videos, courses, posts or your Discord. Every purchase within 30 days of the click counts."],
+        who_h="Who it is for",
+        who="Anyone who helps others produce: YouTube and Twitch channels, teachers and courses, Discord and forum communities, labels and blogs around psytrance, hitech, psycore, darkpsy and sound design. A recommendation works best when you show the plugin in a real track.",
+        terms_h="Terms",
+        terms=["30 % commission on all paid products (plugins, preset banks, sample packs, templates). Free demos are excluded.",
+               "30-day cookie from the click on your link.",
+               "Billing, tax and weekly payouts are handled by Gumroad. You need a Gumroad account.",
+               "Every application is approved individually. No minimum term, stop any time."],
+        og_alt="Code Chaos Audio partner program"),
+}
+
+
+def build_partner(lang):
+    p = PARTNER[lang]
+    u = UI[lang]
+    pre = "" if lang == "de" else "/en"
+    url = f"{BASE}{pre}/partner/"
+    alt = f"{BASE}{'/en' if lang == 'de' else ''}/partner/"
+    how = "".join(f"<li>{esc(x)}</li>" for x in p["how"])
+    terms = "".join(f"<li>{esc(x)}</li>" for x in p["terms"])
+    body = f"""<main id="main">
+<div class="wrap crumbs"><nav aria-label="Breadcrumb"><ol><li><a href="{u['home_url']}">{u['home']}</a></li><li aria-current="page">{esc(p['crumb'])}</li></ol></nav></div>
+<section class="s-hero">
+  <div class="wrap narrow">
+    <span class="eyebrow">{esc(p['eyebrow'])}</span>
+    <h1>{esc(p['h1'])}</h1>
+    <div class="rule" aria-hidden="true"><i></i></div>
+    <p class="answer">{p['answer']}</p>
+    <div class="btns"><a class="btn btn-blood" href="{AFFILIATE_URL}" target="_blank" rel="noopener" data-track="partner-apply">{esc(p['btn'])} →</a><a class="btn btn-ghost" href="{p['plugins_url']}">{esc(p['btn2'])}</a></div>
+  </div>
+</section>
+
+<section class="alt" aria-labelledby="partner-how">
+  <div class="wrap narrow prose">
+    <h2 id="partner-how">{esc(p['how_h'])}</h2>
+    <ol>{how}</ol>
+  </div>
+</section>
+
+<section aria-labelledby="partner-who">
+  <div class="wrap narrow prose">
+    <h2 id="partner-who">{esc(p['who_h'])}</h2>
+    <p>{esc(p['who'])}</p>
+  </div>
+</section>
+
+<section class="alt" aria-labelledby="partner-terms">
+  <div class="wrap narrow prose">
+    <h2 id="partner-terms">{esc(p['terms_h'])}</h2>
+    <ul>{terms}</ul>
+    <p><a class="btn btn-blood" href="{AFFILIATE_URL}" target="_blank" rel="noopener" data-track="partner-apply-2">{esc(p['btn'])} →</a></p>
+  </div>
+</section>
+</main>
+"""
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": p["title"], "description": p["desc"], "inLanguage": lang,
+         "isPartOf": {"@id": BASE + "/#website"}, "datePublished": PARTNER_DATE, "dateModified": DATUM, "author": autor_ld()},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": u["home"], "item": BASE + u["home_url"]},
+            {"@type": "ListItem", "position": 2, "name": p["crumb"], "item": url}]},
+    ]}
+    html = head(lang, url, alt, p["title"], p["desc"], BASE + "/images/og/hitech-psytrance.jpg", p["og_alt"], ld, og_type="website") \
+        + nav(lang, alt, "") + body + footer(lang)
+    html, _ = geo.ausbauen(html, f"{pre}/partner/", lang)
+    path = os.path.join(ROOT, pre.strip("/"), "partner", "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     open(path, "w", encoding="utf-8", newline="\n").write(html)
     return path
@@ -1106,6 +1211,8 @@ if __name__ == "__main__":
         for lang in ("de", "en"):
             print(build_release(slug, lang))
     print(build_404())
+    for lang in ("de", "en"):
+        print(build_partner(lang))
     print(build_plugins_index())
     print(build_plugins_index_en())
     for p in LIVE:

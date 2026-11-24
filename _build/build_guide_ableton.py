@@ -14,7 +14,7 @@ import geo  # noqa: E402
 BASE, ROOT, esc = bp.BASE, bp.ROOT, bp.esc
 DATE = "2026-11-09"
 URL = BASE + "/ratgeber/gitarrensound-ableton/"
-G = "https://timberwolf688.gumroad.com/l/black-metal-tone-kit?utm_source=site&amp;utm_medium=guide&amp;utm_campaign=ableton-guitar"
+G = "https://shop.codechaos-official.de/l/black-metal-tone-kit?utm_source=site&amp;utm_medium=guide&amp;utm_campaign=ableton-guitar"
 
 TITLE = "Heavy-Gitarrensound in Ableton Live: Amp-Sim, IR und Doubles | Code Chaos"
 DESC = ("Warum Amp-Sims zu Hause klein klingen und wie du das in Ableton Live löst: Pegel vor der Sim, Cab-IR in Hybrid Reverb, "
