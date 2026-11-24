@@ -2,7 +2,7 @@
 
 > Code Chaos is a Hitech Psytrance, Psycore and Darkpsy producer from Hamburg, Germany, and the studio project of Tim Borchert, active since 2016 with 24+ releases. The site offers three things: audio plugins by **Code Chaos Audio** (sold on Gumroad, free demos), genre-specific mastering for psytrance, hitech and psycore as **Code Chaos Mastering**, and Code Chaos' own music (releases and genre guides). Today Code Chaos is a studio project only, without bookings.
 
-Primary site language: German (de). English versions: home, mastering, genre guides, release pages and the Crucible plugin page (all other plugin pages are German). Plugins are sold and downloaded on Gumroad (timberwolf688.gumroad.com); every paid plugin has a free demo (full plugin, short noise burst every 45 s). No AU format (Logic Pro not supported); macOS builds are Apple Silicon (arm64) only and not signed or notarized. Metal and gothic mastering is a separate studio by Tim Borchert: Polished Media, https://polished.media
+Primary site language: German (de). English versions: home, mastering, genre guides, release pages and the Crucible plugin page (all other plugin pages are German). Plugins are sold and downloaded on Gumroad (shop.codechaos-official.de); every paid plugin has a free demo (full plugin, short noise burst every 45 s). No AU format (Logic Pro not supported); macOS builds are Apple Silicon (arm64) only and not signed or notarized. Metal and gothic mastering is a separate studio by Tim Borchert: Polished Media, https://polished.media
 Last updated: 2026-11-11
 
 ## Plugins (Code Chaos Audio)
@@ -19,8 +19,8 @@ Last updated: 2026-11-11
 - [Rimehall](https://codechaos-official.de/plugins/rimehall/): cold reverb, octave shimmer and tape/lo-fi atmosphere bus with ducking (Black Metal Suite); decay 0.3–30 s, Frost tone control, wow/flutter/saturation/hiss, 14 presets, constant 4 ms latency; €19, free demo; VST3 + standalone, Windows 10/11 and macOS (Apple Silicon)
 - [Frostfret](https://codechaos-official.de/plugins/frostfret/): physically modelled guitar instrument played from MIDI, no samples (Black Metal Suite); electric (pickup models), steel-string and nylon acoustic, electric bass; tremolo picking synced to the host, palm mute, legato, slides, strumming, double tracking; built-in Gravesaw amp DSP or DI out; 30 presets; €29, free demo; VST3 instrument + standalone, Windows 10/11 and macOS (Apple Silicon)
 - [Hoarfell](https://codechaos-official.de/plugins/hoarfell/): modelled drums (General MIDI map, blast-ready), electric bass and atmos (vowel choir pad, organ, strings pad, bell, celesta, lo-fi keys), no samples (Black Metal Suite); 20 presets; €17, free demo; VST3 instrument + standalone, Windows 10/11 and macOS (Apple Silicon)
-- [Black Metal Suite Essentials](https://timberwolf688.gumroad.com/l/black-metal-suite): bundle of Gravesaw, Rimehall, Black Metal Tone Kit and Black Metal Drum Kit; €39 instead of €59
-- [Black Metal Suite Complete](https://timberwolf688.gumroad.com/l/black-metal-suite-complete): bundle of Frostfret, Hoarfell, Gravesaw, Rimehall, Black Metal Tone Kit and Black Metal Drum Kit; €69 instead of €105
+- [Black Metal Suite Essentials](https://shop.codechaos-official.de/l/black-metal-suite): bundle of Gravesaw, Rimehall, Black Metal Tone Kit and Black Metal Drum Kit; €39 instead of €59
+- [Black Metal Suite Complete](https://shop.codechaos-official.de/l/black-metal-suite-complete): bundle of Frostfret, Hoarfell, Gravesaw, Rimehall, Black Metal Tone Kit and Black Metal Drum Kit; €69 instead of €105
 
 ## Mastering (Code Chaos Mastering)
 
@@ -56,14 +56,14 @@ Genre-specific mastering for Psytrance, Hitech Psytrance, Psycore and Darkpsy by
 ## Samples, MIDI and presets
 
 - [Samples, MIDI and presets (German)](https://codechaos-official.de/sounds/): file products by Code Chaos Audio, all synthesised or built by Code Chaos, royalty-free for own releases, no login or licence server
-- [Black Metal Drum Kit](https://timberwolf688.gumroad.com/l/black-metal-drum-kit): €12, 47 drum samples + 30 MIDI grooves
-- [Black Metal MIDI Grooves 2](https://timberwolf688.gumroad.com/l/black-metal-midi-grooves-2): €9, 74 grooves
-- [Black Metal Tone Kit](https://timberwolf688.gumroad.com/l/black-metal-tone-kit): €9, 19 cab IRs + 16 REAPER chains
-- [Hitech Arsenal Vol. 1](https://timberwolf688.gumroad.com/l/hitech-arsenal-1): €15, 120 samples
-- [Hitech FM for Vital](https://timberwolf688.gumroad.com/l/hitech-fm-vital): €12, 32 presets
-- [Hitech FM for Serum 2](https://timberwolf688.gumroad.com/l/hitech-fm-serum2): €12, 24 presets
-- [Hitech FM Industrial](https://timberwolf688.gumroad.com/l/hitech-fm-industrial): €9, 30 Vital + 26 Serum 2 presets
-- [Psycore Production Template for Ableton Live 12](https://timberwolf688.gumroad.com/l/psycore-ableton-template): €19, 77 tracks
+- [Black Metal Drum Kit](https://shop.codechaos-official.de/l/black-metal-drum-kit): €12, 47 drum samples + 30 MIDI grooves
+- [Black Metal MIDI Grooves 2](https://shop.codechaos-official.de/l/black-metal-midi-grooves-2): €9, 74 grooves
+- [Black Metal Tone Kit](https://shop.codechaos-official.de/l/black-metal-tone-kit): €9, 19 cab IRs + 16 REAPER chains
+- [Hitech Arsenal Vol. 1](https://shop.codechaos-official.de/l/hitech-arsenal-1): €15, 120 samples
+- [Hitech FM for Vital](https://shop.codechaos-official.de/l/hitech-fm-vital): €12, 32 presets
+- [Hitech FM for Serum 2](https://shop.codechaos-official.de/l/hitech-fm-serum2): €12, 24 presets
+- [Hitech FM Industrial](https://shop.codechaos-official.de/l/hitech-fm-industrial): €9, 30 Vital + 26 Serum 2 presets
+- [Psycore Production Template for Ableton Live 12](https://shop.codechaos-official.de/l/psycore-ableton-template): €19, 77 tracks
 
 ## Key facts
 

@@ -17,13 +17,13 @@ you downloaded one of our free plugins or demos, thanks for trying it.
 From today until Monday 30 November, the code **BLACKFRIDAY** takes 40% off every paid Code Chaos Audio product. A few examples:
 
 - Kick+Bass Engine (kick + rolling bass in one plugin): 14.40 € instead of 24 €
-  https://timberwolf688.gumroad.com/l/psy-kick-bass/BLACKFRIDAY
+  https://shop.codechaos-official.de/l/psy-kick-bass/BLACKFRIDAY
 - Shardstep (stutter/glitch for 200+ BPM): 9 € instead of 15 €
-  https://timberwolf688.gumroad.com/l/shardstep/BLACKFRIDAY
+  https://shop.codechaos-official.de/l/shardstep/BLACKFRIDAY
 - Chaos FM (3-operator FM synth): 11.40 € instead of 19 €
-  https://timberwolf688.gumroad.com/l/chaos-fm/BLACKFRIDAY
+  https://shop.codechaos-official.de/l/chaos-fm/BLACKFRIDAY
 - Black Metal Suite Complete (Frostfret, Hoarfell, Gravesaw, Rimehall + kits): 41.40 € instead of 69 €
-  https://timberwolf688.gumroad.com/l/black-metal-suite-complete/BLACKFRIDAY
+  https://shop.codechaos-official.de/l/black-metal-suite-complete/BLACKFRIDAY
 
 The code is already in those links. Everything else is listed at https://codechaos-official.de/plugins/
 

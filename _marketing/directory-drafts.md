@@ -36,5 +36,5 @@ Reddit bleibt read-only (Regel), keine Einträge dort.
 - Name: Shardgate · Hersteller: Code Chaos Audio · Typ: Effect / Gate / Volume shaper · Preis: Free
 - Formate: VST3 + Standalone · Windows 10/11, macOS Apple Silicon (unsigned)
 - Kurztext (EN): Free tempo-synced trance gate and kick duck for psytrance, hitech and psycore. 16 steps (on/half/off) at 1/8, 1/16, 1/32 or 1/16T, quarter-note duck without sidechain routing, Auto Gain level match up to +6 dB, 12 presets, zero latency.
-- Link: https://timberwolf688.gumroad.com/l/shardgate?utm_source=kvr · Seite: https://codechaos-official.de/plugins/shardgate/
+- Link: https://shop.codechaos-official.de/l/shardgate?utm_source=kvr · Seite: https://codechaos-official.de/plugins/shardgate/
 - Bild: https://codechaos-official.de/images/plugins/shardgate/gui-880.jpg

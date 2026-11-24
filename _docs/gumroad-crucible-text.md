@@ -1,6 +1,6 @@
 # Crucible: Prüfung des Plugins und Vorschlag für die Gumroad-Seite
 
-Stand: 05.10.2026. Geprüft wurde `Crucible.vst3` (6,3 MB) und die Gumroad-Seite https://timberwolf688.gumroad.com/l/crucible.
+Stand: 05.10.2026. Geprüft wurde `Crucible.vst3` (6,3 MB) und die Gumroad-Seite https://shop.codechaos-official.de/l/crucible.
 
 ## Was die Datei enthält
 
