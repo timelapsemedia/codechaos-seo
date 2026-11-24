@@ -105,6 +105,44 @@ KI_HINWEIS = "Image created with AI / Bild mit KI erstellt"
 STIMME = re.compile(r"\b(ai|ki)[\s-]?(voice|stimme|vocals?|gesang)\b|\bstimme mit ki\b|\bvoice (made|created) with ai\b", re.I)
 
 
+# ---------------------------------------------------------------- Angebots-Sperre Dezember 2026
+# Roadmap-Schritt 12 (24.11.2026): Tims Gewerbe beginnt erst am 01.01.2027, im Dezember keine Aufträge. Im Fenster
+# geht kein Post mit Preis, Rabatt, Code, Kauf-/Buchungsaufruf oder Shop-Link raus (Black Friday bis 30.11. bleibt).
+# Logik = C:/kunden-kreislauf/angebots_sperre.py (hier als Kopie, weil die Pipeline auch in GitHub Actions läuft).
+SPERRE_VON = os.environ.get("ANGEBOTS_SPERRE_VON", "2026-12-01")
+SPERRE_BIS = os.environ.get("ANGEBOTS_SPERRE_BIS", "2026-12-31")
+SHOP = ("gumroad", "shop.codechaos-official.de", "etsy",   # shop.codechaos-official.de = Gumroad-Domain seit 24.11. "payhip", "ko-fi.com/s", "polished.media", "codechaos-official.de/store",
+        "codechaos-official.de/shop", "codechaos-official.de/plugins", "buymeacoffee", "patreon.com",
+        "codechaos-official.de/en/mastering", "codechaos-official.de/mastering", "codechaos-official.de/#mastering",
+        "codechaos-official.de/de/mastering")
+ANGEBOT = [
+    ("Preis", re.compile(r"[€$£]\s?\d+(?:[.,]\d{1,2})?|\d+(?:[.,]\d{1,2})?\s?(?:€|EUR\b|euro\b|USD\b|\$)|"
+                         r"\b(?:price[sd]?|pricing|preis|preise|kostet|costs? (?:just |only )?\d|pay what you want|"
+                         r"name your price|zahl,? was du willst)\b", re.I)),
+    ("Rabatt", re.compile(r"\b\d{1,2}\s?%\s?(?:off|rabatt|discount|günstiger|reduziert|sparen)\b|[−–-]\s?\d{1,2}\s?%|"
+                          r"\b(?:rabatt\w*|discount\w*|sale|on sale|sonderangebot\w*|angebot|angebote|special offer|"
+                          r"limited offer|launch offer|intro(?:ductory)? (?:offer|price)|early[- ]?bird|frühbucher\w*|"
+                          r"black ?friday|cyber ?monday|gutschein\w*|coupon\w*|voucher\w*|save \d+|spar(?:e|st) \d+)\b",
+                          re.I)),
+    ("Code", re.compile(r"(?i:\b(?:promo|rabatt|discount|coupon|gutschein|voucher)[- ]?codes?\b)|"
+                        r"\b(?:code|Code|CODE)\s*[:=]?\s*[\"'“„]?(?!CHAOS\b)[A-Z0-9]{4,}\b")),
+    ("Kauf/Buchung", re.compile(
+        r"\b(?:buy|buying|kaufen|kauf|kaufe|jetzt kaufen|pre-?order|order\s+(?:now|here|today|yours|it|via|at|on|from|"
+        r"through|your)|bestell\w*|book\s+(?:now|here|today|your|a|an|it|via|at|in)|booking|bookings|booked|"
+        r"buchen|buchung\w*|buchbar|gebucht|checkout|purchase|add to cart|warenkorb|shop now|get yours|grab yours|"
+        r"send (?:me )?your (?:mix|track|song|stems)|schick (?:mir )?deinen (?:mix|track|song)|"
+        r"request a (?:quote|master)|mastering-?anfrage|anfrage|slots?|free (?:mix )?audit|"
+        r"kostenlose[nrs]? (?:mix-?)?audit|mastering[^.\n]{0,25}(?:link in (?:bio|profile)|link im profil|dm me))\b",
+        re.I)),
+]
+
+
+def angebot_treffer(text):
+    out = [f"{n}: {m.group(0).strip()}" for n, rx in ANGEBOT for m in rx.finditer(text or "")]
+    out += [f"Shop-Link: {d}" for d in SHOP if d in (text or "").lower()]
+    return list(dict.fromkeys(out))
+
+
 def texte(p):
     """(feld, text, kurz) aller Texte, die eine Plattform sieht."""
     out = [("caption", p.get("caption", ""), None), ("short", p.get("short", ""), None)]
@@ -139,6 +177,10 @@ def pruefe(p):
         befunde.append(f'ki: Caption ohne "{KI_HINWEIS}"')
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(p.get("date", ""))):
         befunde.append("date: fehlt/ungültig")
+    elif SPERRE_VON <= str(p["date"]) <= SPERRE_BIS:
+        t = angebot_treffer(alles)
+        if t:
+            befunde.append(f"angebots-sperre {SPERRE_VON}–{SPERRE_BIS} (Gewerbe ab 01.01.2027): " + "; ".join(t[:5]))
     return befunde
 
 
@@ -209,6 +251,19 @@ def _test():
               " ".join(f"#extra{i}" for i in range(6 - len(re.findall(r"#\w+", posts["store-32-shardgate-launch"]["caption"]))))),
          False),
         ("KI-Post ohne Hinweis", dict(posts["store-32-shardgate-launch"], ki=True), False),
+        # Angebots-Sperre Dezember 2026 (Roadmap-Schritt 12): echte Fälle aus crucible-posts.json
+        ("Shardstep-Launch 01.12. (echter Fall, €15 + Gumroad)", dict(posts["store-19-shardstep-launch"], date="2026-12-01"), False),
+        ("Shardstep-Launch auf 05.01.2027 verschoben", dict(posts["store-19-shardstep-launch"], date="2027-01-05"), True),
+        ("Kick+Bass-Engine-Overlap 19.12. (echter Fall)", dict(posts["store-31-kick-bass-engine-overlap"], date="2026-12-19"), False),
+        ("Lernpost im Dezember mit Shop-Link (Gratis-Tool, trotzdem Shop)",
+         dict(posts["learn-04-kick-laenge"], date="2026-12-10"), False),
+        ("derselbe Lernpost ohne Shop-Link",
+         {k: (re.sub(r"\S*(?:gumroad|shop\.codechaos-official\.de)\S*", "", v, flags=re.I) if isinstance(v, str) else v)
+          for k, v in dict(posts["learn-04-kick-laenge"], date="2026-12-10").items()}, True),
+        ("Black Friday EN 30.11. (letzter Aktionstag, vor der Sperre)",
+         {"id": "t-bf30", "date": "2026-11-30", "store_weit": True,
+          "caption": "Last day of Black Friday at Code Chaos Audio: code BLACKFRIDAY takes 40 % off.\n\n#blackfriday",
+          "short": "Black Friday: last day, 40 % off with code BLACKFRIDAY"}, True),
     ]
     fehler = 0
     for name, post, soll in faelle:
