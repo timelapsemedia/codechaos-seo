@@ -16,6 +16,9 @@ Whatever the platform, storytelling and connecting with your audience come first
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
+**Check for a brand file too:**
+If `.agents/brand.md` or `.agents/design.md` exists, read whichever is there before asking about brand assets. Take colors, type, logo files, and imagery style from them for carousels and graphics. Voice still comes from the product marketing context.
+
 Gather this context (ask if not provided):
 
 ### 1. Goals
@@ -55,6 +58,8 @@ Gather this context (ask if not provided):
 **For hashtag limits and character counts**: See [references/platform-limits.md](references/platform-limits.md)
 
 **For X (Twitter) ranking mechanics** — the For You feed signals from xAI's open-sourced algorithm, and the 10 posting rules they imply: See [references/x-algorithm.md](references/x-algorithm.md). Use it whenever the task involves posting on X.
+
+**For Chinese platforms** (Xiaohongshu, Douyin, Weibo, Bilibili, WeChat) — how search works, what the engagement numbers mean, the platforms' own creator and ad marketplaces, ad-disclosure rules, and data limits: See [references/chinese-platforms.md](references/chinese-platforms.md). Use it whenever the audience, competitors, or creators are in China.
 
 ---
 
@@ -128,6 +133,8 @@ Social-specific tells:
 - **Emoji as bullets**: 🚀 ✅ 💡 leading every line.
 
 Keep fragments and lists of three to one per post. For the full blacklist, use the **copywriting** skill's AI-tells reference.
+
+**For build-in-public posts from the commit log** (after a release, a merged PR or a deploy): See [references/ship-post.md](references/ship-post.md). It reads the git log and diff, asks the developer what changed for users, and drafts one X post and one subreddit post with hard rules: no number that isn't in the commits or the developer's answer, no claims about user behaviour nobody reported, drafts only.
 
 **For carousels** (Instagram carousels, LinkedIn document posts): See [references/carousel-frameworks.md](references/carousel-frameworks.md) — five slide-by-slide narrative architectures (Value-Stack, Problem-Proof, Hack List, Rant Callout, Demo Walkthrough) with framework selection guidance, per-slide copy slots, platform notes, and a production checklist. Pick the framework before writing slides.
 
@@ -328,9 +335,10 @@ or API, you can execute the plan directly instead of handing them copy-paste
 work:
 
 1. **Check what's connected.** Ask the user what they schedule with. Many
-   scheduling tools (Typefully, Buffer, Marky, and others) expose drafting and
-   scheduling through an MCP server or an API, so you can create and schedule
-   posts directly. Check the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md) for guides.
+   scheduling tools (Typefully, Buffer, Post Bridge, Marky, Magister, and others)
+   expose drafting and scheduling through an MCP server or an API, so you can
+   create and schedule posts directly. Magister is built by this repository's
+   maintainer; say so if you name it. Check the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md) for guides.
 2. **Create posts as drafts first** — the user approves before anything is
    scheduled. Never auto-publish without an explicit go-ahead.
 3. **Schedule per the calendar you built** (spacing and platform rules from
@@ -455,3 +463,7 @@ Tools: CapCut (free), Descript, Captions.ai, Premiere Pro
 - **reverse-engineer-marketing**: For reading a company's content patterns, house style, and formulas across every channel
 - **emails**: For nurturing social audience via email
 - **marketing-psychology**: For understanding what drives engagement
+
+**If the [designskills](https://github.com/zstvns/design-skills) library is installed**, hand off the visual work:
+
+- **collateral-design**: For designing carousel slides and social graphics from the finished copy

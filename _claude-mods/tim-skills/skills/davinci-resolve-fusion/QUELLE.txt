@@ -1,0 +1,1 @@
+eigen angepasst: https://github.com/tmoroney/auto-subs/tree/main/.agents/skills/davinci-resolve-fusion (Commit 5a9cd11, 11.07.2026) – ohne resolve-api.txt, references/fusion-manual/ (Blackmagic-Dokumente, nicht MIT) und scripts/start-server.* (leere Platzhalter); Beschreibung gekürzt, Hinweis zur lokalen API-Referenz ergänzt

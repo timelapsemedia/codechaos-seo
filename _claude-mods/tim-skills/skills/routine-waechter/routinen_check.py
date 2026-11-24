@@ -7,6 +7,8 @@
     python3 routinen_check.py liste.json --verlauf laeufe.json
         laeufe.json: {"<Name oder trig_-ID>": ["Ergebnis Lauf 1 (neuester)", "Lauf 2", …]}
         – je Lauf eine Kurzfassung des Berichts (z. B. "FEHLER: Token ungültig", "nichts Neues").
+    python3 routinen_check.py liste.json --kosten kosten.json
+        kosten.json: {"<Name oder trig_-ID>": [total_cost_usd Lauf 1, Lauf 2, …]} aus den result-Events.
 
 Liest nur lokale Dateien, kein Netz. Gibt gefundene Geheimnisse NIE aus, nur Art und Position.
 Exit 0 = alles ok, 1 = Hinweise, 2 = Probleme (Ausfall, Geheimnis im Prompt).
@@ -100,7 +102,34 @@ def verlauf_pruefen(laeufe, cron):
     return hinweise, probleme
 
 
-def pruefe(r, jetzt, verlauf=None):
+def laeufe_pro_woche(cron):
+    felder = re.sub(r"^CRON_TZ=\S+\s+", "", cron or "").split()
+    if len(felder) != 5:
+        return 0
+    def anzahl(f, n):
+        if f == "*":
+            return n
+        if f.startswith("*/"):
+            return max(1, n // int(f[2:]))
+        return len(f.split(","))
+    tage = 7 if felder[4] == "*" and felder[2] == "*" else (anzahl(felder[4], 7) if felder[4] != "*" else 1)
+    return anzahl(felder[1], 24) * tage
+
+
+def kosten_pruefen(werte, cron, modell):
+    hinweise = []
+    werte = [float(x) for x in werte if x is not None]
+    if not werte:
+        return hinweise
+    schnitt = sum(werte) / len(werte)
+    woche = schnitt * laeufe_pro_woche(cron)
+    if schnitt >= 1.5 or woche >= 10:
+        tipp = "auf Sonnet umstellen oder seltener laufen lassen" if "opus" in (modell or "").lower() or not modell else "seltener laufen lassen oder Prompt kürzen"
+        hinweise.append(f"teuer: Ø {schnitt:.2f} $ pro Lauf, ca. {woche:.0f} $ pro Woche – {tipp}")
+    return hinweise
+
+
+def pruefe(r, jetzt, verlauf=None, kosten=None):
     hinweise, probleme = [], []
     name = r.get("name", "?")
     prompt = (r.get("derived_state") or {}).get("prompt") or r.get("prompt") or ""
@@ -129,6 +158,10 @@ def pruefe(r, jetzt, verlauf=None):
         h, p = verlauf_pruefen(laeufe, cron)
         hinweise += h
         probleme += p
+    werte = (kosten or {}).get(r.get("id")) or (kosten or {}).get(name)
+    if werte:
+        modell = (r.get("derived_state") or {}).get("model") or r.get("model") or ""
+        hinweise += kosten_pruefen(werte, cron, modell)
     for g in geheimnisse(prompt):
         probleme.append(f"Klartext-Geheimnis im Prompt: {g['art']} (Zeile {g['zeile']}, {g['laenge']} Zeichen) – Wert in Secret/Umgebung verschieben und Zugang erneuern")
     return {
@@ -176,9 +209,14 @@ def main():
         i = a.index("--verlauf")
         verlauf = json.load(open(a[i + 1], encoding="utf-8"))
         a = a[:i] + a[i + 2:]
+    kosten = {}
+    if "--kosten" in a:
+        i = a.index("--kosten")
+        kosten = json.load(open(a[i + 1], encoding="utf-8"))
+        a = a[:i] + a[i + 2:]
     dateien = [x for x in a if not x.startswith("--")]
     jetzt = datetime.now(timezone.utc)
-    ergebnisse = [pruefe(r, jetzt, verlauf) for r in lade(dateien)]
+    ergebnisse = [pruefe(r, jetzt, verlauf, kosten) for r in lade(dateien)]
     ergebnisse.sort(key=lambda e: (not e["probleme"], not e["hinweise"], e["name"]))
     if als_json:
         print(json.dumps(ergebnisse, ensure_ascii=False, indent=2))
