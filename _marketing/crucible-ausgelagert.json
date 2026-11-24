@@ -1,0 +1,163 @@
+{
+ "hinweis": "Aus crucible-posts.json entfernt (Umbau 24.11.2026, Tim 21.11.: Metal → Polished, Captions EN zuerst). Buffer-Entwürfe bleiben Entwürfe, nichts gelöscht. Wird nicht gepostet.",
+ "posts": [
+  {
+   "id": "store-14-black-metal-midi-grooves-2",
+   "date": "2026-11-21",
+   "image": "https://codechaos-official.de/images/social/black-metal-midi-grooves-2.jpg",
+   "video": "https://codechaos-official.de/images/social/black-metal-midi-grooves-2-reel.mp4",
+   "video_title": "Black Metal MIDI Grooves 2: 74 humanised drum grooves | Code Chaos Audio",
+   "caption": "Kein Drummer in der Band? Dann muss der Blast eben aus dem Rechner kommen. 🥁\n\nBlack Metal MIDI Grooves 2 ist da: 74 neue Drum-Grooves als MIDI, von Blasts und Gallops über D-Beat und Doom bis zu Fills, Übergängen, Intros und Outros, 60 bis 240 BPM. Alles ist schon humanisiert, Velocity und Timing schwanken leicht, damit es nicht nach Stepsequencer klingt.\n\nJeder Groove liegt in vier Mappings bei: General MIDI, unser Black Metal Drum Kit (mit SFZ), MT Power Drum Kit 2 und DrumGizmo DRSKit. Einfach reinziehen. Kein Login, kein Lizenzserver, nur MIDI-Dateien.\n\n9 € · Link in Bio\n\n#blackmetal #drummidi #blastbeat #metalproduction #homestudio",
+   "short": "Black Metal MIDI Grooves 2: 74 humanisierte Drum-Grooves (Blasts, Gallops, D-Beat, Doom, Fills), 60–240 BPM, GM + 3 Kit-Mappings. 9 €: https://timberwolf688.gumroad.com/l/black-metal-midi-grooves-2",
+   "entfernt_am": "2026-11-24",
+   "grund": "Marke: Metal-Produkt gehört zu Polished (Tim 21.11.2026), übernommen in C:/PolishedMetalMastering/social/bank (Status held)",
+   "buffer_entwuerfe": {
+    "6abe1228ea19ca0bde4080ea": "6ad7bb6ca2b5cb9c49fca987",
+    "6adcc592778b240e2faf5408": "6af4e2f8bc9f3773a1a10804",
+    "6abe125bea19ca0bde4081ce": "6af4e2f83d8c751bfdf7e364"
+   },
+   "youtube_id": "IZfIHckYvBc"
+  },
+  {
+   "id": "store-15-black-metal-tone-kit-heavy-bus",
+   "date": "2026-11-23",
+   "image": "https://codechaos-official.de/images/social/black-metal-tone-kit-heavy-bus.jpg",
+   "caption": "Metal-Gitarren im lauten Psy-Mix klingen nach Rasierapparat, sobald der Elektronik-Bus geclippt wird? 🎛️\n\nDas Black Metal Tone Kit bekommt ein kostenloses Update (v1.1): 6 \"Heavy Bus\"-Chains für REAPER, nur mit REAPERs eigenen Effekten. Gitarren vor dem Clipper zähmen, Elektronik-Bus getrennt clippen, Low-Mids vor dem Bus-Clipper absenken, harte Becken bei 3 bis 8 kHz dynamisch bremsen, dazu ein 3-Band-Clipper und eine Glue-Chain.\n\nIn REAPER 7.82 an unserem Testmix gemessen: True Peak von -0,2 auf -1,5 dBTP, Lautheit trotzdem von -10,7 auf -9,4 LUFS. Dein Mix wird andere Zahlen liefern.\n\nWer das Kit hat, lädt v1.1 einfach neu aus der Gumroad-Bibliothek. Neu: 9 € · Link in Bio\n\n#metalproduction #psytrance #mixingtips #reaper #blackmetal",
+   "short": "Black Metal Tone Kit v1.1, kostenloses Update: 6 Heavy-Bus-Chains für REAPER (Gitarren-Pre-Clip, Bus-Clipper, Becken-Zähmung, 3-Band-Clip, Glue). 9 €: https://timberwolf688.gumroad.com/l/black-metal-tone-kit",
+   "entfernt_am": "2026-11-24",
+   "grund": "Marke: Metal-Produkt gehört zu Polished (Tim 21.11.2026), übernommen in C:/PolishedMetalMastering/social/bank (Status held)",
+   "buffer_entwuerfe": {
+    "6adcc592778b240e2faf5408": "6af77f0f4b28296eb1173868",
+    "6abe125bea19ca0bde4081ce": "6af77f0f4b28296eb11738aa"
+   }
+  },
+  {
+   "id": "store-16-black-metal-midi-grooves-2-feature",
+   "date": "2026-11-26",
+   "image": "https://codechaos-official.de/images/social/black-metal-midi-grooves-2.jpg",
+   "video": "https://codechaos-official.de/images/social/black-metal-midi-grooves-2-reel.mp4",
+   "video_title": "Black metal drum MIDI: fills, gallops and d-beat | Code Chaos Audio",
+   "caption": "Ein Song braucht mehr als einen Blastbeat. 🎼\n\nBau dir das Arrangement aus Bausteinen: Intro mit Count-in, Bomb Blast, ein 1-Schlag-Fill, Gallop auf der China, Übergang von Blast auf Halftime, Doom-Teil mit Ride Bell und ein Outro, das ausklingt. Tempo, Taktart und Länge stehen im Dateinamen, also findest du schnell, was passt. Für Übe-Sessions gibt es den gleichen Skank-Beat in sechs Tempostufen von 90 bis 240 BPM.\n\nPasst zum Black Metal Drum Kit, dessen Sounds auch im Demo laufen.\n\n9 € · Link in Bio\n\n#blackmetal #drumprogramming #midigrooves #metaldrums #reaper",
+   "short": "Songs aus Bausteinen: Intros, Blasts, Fills, Übergänge, Doom-Teile und Outros als MIDI, Tempo + Takt im Dateinamen. Black Metal MIDI Grooves 2, 9 €: https://timberwolf688.gumroad.com/l/black-metal-midi-grooves-2",
+   "entfernt_am": "2026-11-24",
+   "grund": "Marke: Metal-Produkt gehört zu Polished (Tim 21.11.2026), übernommen in C:/PolishedMetalMastering/social/bank (Status held)",
+   "buffer_entwuerfe": {
+    "6abe1228ea19ca0bde4080ea": "6ad7bb6ebdfe25c556ee7baf",
+    "6adcc592778b240e2faf5408": "6afb9c8785dca6b14a0c1c2c",
+    "6abe125bea19ca0bde4081ce": "6afb9c884b26315855ace409"
+   },
+   "youtube_id": "IZfIHckYvBc"
+  },
+  {
+   "id": "store-18-rimehall-launch",
+   "date": "2026-11-30",
+   "image": "https://codechaos-official.de/images/social/rimehall.jpg",
+   "video": "https://codechaos-official.de/images/social/rimehall-reel.mp4",
+   "video_title": "Rimehall: cold black metal reverb, shimmer and tape VST3 | Code Chaos Audio",
+   "caption": "RIMEHALL ist da: Teil 2 der Code Chaos Black Metal Suite. ❄️\n\nEin Atmosphere-Bus für Tremolo-Gitarren, Keys und Vocals: kalter, dunkler Hall bis 30 Sekunden, Oktav-Shimmer in der Feedback-Schleife und eine Tape-Stufe mit Wow, Flutter, Sättigung und Rauschen. Frost macht den Hall dünner und kälter, Ducking lässt ihn zurücktreten, solange das Riff spielt.\n\n14 Presets, darunter Frozen Forest, Cassette Cathedral und Northern Void. Im Video: dasselbe Riff erst trocken, dann durch Frozen Forest, gerendert mit dem Plugin selbst.\n\nVST3 + Standalone für Windows und macOS (Apple Silicon, unsigniert). 19 €, kostenlose Demo · Link in Bio\n\nCyber Monday: Nur heute noch mit Code BLACKFRIDAY für 11,40 € statt 19 €.\n\n#blackmetal #reverb #musicproduction #metalproduction #vstplugin",
+   "short": "Rimehall: kalter Hall, Oktav-Shimmer und Tape-Lo-Fi als VST3 für Black Metal. Heute mit Code BLACKFRIDAY 11,40 € statt 19 €: https://timberwolf688.gumroad.com/l/rimehall/BLACKFRIDAY",
+   "entfernt_am": "2026-11-24",
+   "grund": "Marke: Metal-Produkt gehört zu Polished (Tim 21.11.2026), übernommen in C:/PolishedMetalMastering/social/bank (Status held)",
+   "buffer_entwuerfe": {
+    "6abe1228ea19ca0bde4080ea": "6ad7bb706572b508fa327467",
+    "6adcc592778b240e2faf5408": "6b00c5a120a2d09a0ab44038",
+    "6abe125bea19ca0bde4081ce": "6b00c5a2dd205ed7799d6148"
+   },
+   "youtube_id": "RjwSUoBEjsg"
+  },
+  {
+   "id": "store-20-rimehall-tape",
+   "date": "2026-12-04",
+   "image": "https://codechaos-official.de/images/social/rimehall.jpg",
+   "caption": "Warum der Hall auf alten Black-Metal-Platten so kalt klingt. 🌲\n\nViel davon ist nicht der Raum, sondern was mit ihm passiert: wenig Tiefen im Hall, früh abgedämpfte Höhen und ein billiges Tape, das alles leicht leiern lässt und anraut.\n\nGenau das sind die Regler in Rimehall: Frost nimmt dem Hall die Tiefen, Damping die Höhen, Wow und Flutter lassen ihn schwimmen, Saturation und Hiss machen ihn schmutzig. Mit \"Tape On: Whole bus\" geht auch das trockene Signal durchs Band.\n\nTeste es mit der kostenlosen Demo · Link in Bio\n\n#blackmetal #lofi #tapesaturation #homerecording #dungeonsynth",
+   "short": "Kalter Black-Metal-Hall: wenig Tiefen, gedämpfte Höhen, leierndes Tape. Rimehall hat genau diese Regler. Kostenlose Demo: https://timberwolf688.gumroad.com/l/rimehall-demo",
+   "entfernt_am": "2026-11-24",
+   "grund": "Marke: Metal-Produkt gehört zu Polished (Tim 21.11.2026), übernommen in C:/PolishedMetalMastering/social/bank (Status held)",
+   "buffer_entwuerfe": {}
+  },
+  {
+   "id": "store-22-gravesaw-launch",
+   "date": "2026-12-08",
+   "image": "https://codechaos-official.de/images/social/gravesaw.jpg",
+   "video": "https://codechaos-official.de/images/social/gravesaw-reel.mp4",
+   "video_title": "Gravesaw: black metal amp + cab VST3 for guitar and bass | Code Chaos Audio",
+   "caption": "GRAVESAW ist da: der Amp der Code Chaos Black Metal Suite. 🪚\n\nEin Black-Metal-Amp mit eingebauter Box für Gitarre und Bass DI. Noise Gate, Tight-Regler vor der Verzerrung, 4x oversampelte Gain-Stufen von roh und sägend bis dick, Tonestack mit Fizz und Presence.\n\n19 eingebaute Cabs aus unserem Black Metal Tone Kit, davon 6 entschärfte Versionen gegen harsche Höhen und 3 Bass-Boxen. Oder Cab aus und deine eigene IR dahinter. 16 Presets, von Carpathian Buzz bis Doom Bass Deep.\n\nVST3 + Standalone für Windows und macOS (Apple Silicon, unsigniert). 19 €, kostenlose Demo · Link in Bio\n\n#blackmetal #ampsim #guitartone #metalproduction #homerecording",
+   "short": "Gravesaw: Black-Metal-Amp mit eingebauter Box für Gitarre und Bass, 19 Cabs, 16 Presets, VST3 + Standalone. 19 €, Demo gratis: https://timberwolf688.gumroad.com/l/gravesaw",
+   "entfernt_am": "2026-11-24",
+   "grund": "Marke: Metal-Produkt gehört zu Polished (Tim 21.11.2026), übernommen in C:/PolishedMetalMastering/social/bank (Status held)",
+   "buffer_entwuerfe": {
+    "6abe1228ea19ca0bde4080ea": "6ad7bb740ddd02d3bd130068"
+   },
+   "youtube_id": "Bn-1ieeNHP8"
+  },
+  {
+   "id": "store-23-gravesaw-fizz",
+   "date": "2026-12-12",
+   "image": "https://codechaos-official.de/images/social/gravesaw.jpg",
+   "caption": "Tremolo-Riffs klingen zuhause oft wie ein Zischen statt wie eine Säge. ❄️\n\nMeist liegt es nicht am Gain, sondern an den Höhen nach der Verzerrung. In Gravesaw sitzt dafür ein eigener Fizz-Regler hinter dem Amp: Er nimmt das Kratzen über etwa 4 kHz raus oder lässt es bewusst stehen. Reicht das nicht, schalte auf eine der 6 Tamed-Boxen um, die in den oberen Höhen deutlich zahmer sind.\n\nUnd für Doppelspuren gibt es Wall Rhythm L und R mit zwei verschiedenen 4x12-Boxen, damit links und rechts nicht gleich klingen.\n\nKostenlose Demo zum Ausprobieren · Link in Bio\n\n#blackmetal #tremolopicking #guitarplugin #mixingtips #metalguitar",
+   "short": "Zu viel Fizz im Black-Metal-Sound? Gravesaw hat einen eigenen Fizz-Regler nach der Verzerrung und 6 entschärfte Boxen. Demo gratis: https://timberwolf688.gumroad.com/l/gravesaw-demo",
+   "entfernt_am": "2026-11-24",
+   "grund": "Marke: Metal-Produkt gehört zu Polished (Tim 21.11.2026), übernommen in C:/PolishedMetalMastering/social/bank (Status held)",
+   "buffer_entwuerfe": {}
+  },
+  {
+   "id": "learn-02-hall-ohne-matsch",
+   "date": "2026-11-22",
+   "image": "https://codechaos-official.de/images/social/learn-02-hall-ohne-matsch.jpg",
+   "video": "https://codechaos-official.de/images/social/learn-02-hall-ohne-matsch.mp4",
+   "video_title": "Black-Metal-Hall ohne Matsch: Ducking + Pre-Delay (Rimehall, vorher/nachher)",
+   "caption": "Dein Hall frisst das Riff? ❄️\n\nBei Tremolo-Riffs liegt der Hall ständig auf den Anschlägen und alles verschwimmt. Weniger Hall ist nicht die einzige Lösung: Lass ihn ausweichen, solange gespielt wird.\n\n1️⃣ Rimehall auf den Gitarrenbus, Preset \"Moonlit Tremolo Bus\".\n2️⃣ Pre-Delay 40 ms: Der Anschlag kommt zuerst, der Hall danach.\n3️⃣ Ducking 45 %: Der Hall wird leiser, solange das Riff spielt.\n4️⃣ Im Stopp oder am Ende einer Phrase kommt die Fahne voll zurück.\n\nGemessen am Riff im Video (170 BPM, E phrygisch, 4 Takte + Stopp, nur der Hall): unter dem Riff −16,5 dB ohne Ducking, −24 dB mit Ducking, also 7,5 dB weniger Matsch. Etwa 1,1 s nach dem Stopp ist der Hall wieder gleich laut (1–2 s danach: −35,5 vs. −35,2 dB).\n\nSpeichern für den nächsten Mix. Gratis-Demo · Link in Bio\n\n#blackmetal #reverb #mixingtips #metalproduction #tremolopicking",
+   "short": "Hall frisst das Riff? Rimehall: Pre-Delay 40 ms + Ducking 45 % = 7,5 dB weniger Hall unter dem Riff, im Stopp ist die Fahne nach 1,1 s wieder voll da. Demo gratis: https://timberwolf688.gumroad.com/l/rimehall-demo",
+   "youtube_description": "Wie der Hall bei Tremolo-Riffs zurücktritt, solange gespielt wird, und in Pausen voll zurückkommt.\n\nSchritte:\n1. Rimehall auf den Gitarrenbus, Preset \"Moonlit Tremolo Bus\"\n2. Pre-Delay 40 ms: Der Anschlag kommt vor dem Hall\n3. Ducking 45 %: Hall 7,5 dB leiser, solange das Riff spielt (gemessen, nur Hall)\n4. Im Stopp kommt die Fahne zurück: nach etwa 1,1 s wieder gleich laut\n\nAudio: echtes Rendering mit Rimehall (VST3), Riff aus Frostfret + Gravesaw, 170 BPM, E phrygisch, 4 Takte + Stopp. Vorher = gleiche Einstellungen mit Ducking 0 % und Pre-Delay 0 ms.\n\nRimehall-Demo gratis: https://timberwolf688.gumroad.com/l/rimehall-demo\nCode Chaos Audio · codechaos-official.de",
+   "youtube_tags": [
+    "Rimehall",
+    "reverb",
+    "ducking",
+    "pre-delay",
+    "black metal",
+    "mixing",
+    "Code Chaos Audio"
+   ],
+   "entfernt_am": "2026-11-24",
+   "grund": "Marke: Metal-Produkt gehört zu Polished (Tim 21.11.2026), übernommen in C:/PolishedMetalMastering/social/bank (Status held)",
+   "buffer_entwuerfe": {
+    "6adcc592778b240e2faf5408": "6af633fd446d978be7ec5a2d",
+    "6abe125bea19ca0bde4081ce": "6af633fd04c2edb92094c8a8",
+    "6abe1228ea19ca0bde4080ea": "6af633fea01fb6efee4e5706"
+   },
+   "youtube_id": "eZvtjFepH2s"
+  },
+  {
+   "id": "store-32-shardgate-launch__de_alt",
+   "date": "2026-11-24",
+   "image": "https://codechaos-official.de/images/social/shardgate.jpg",
+   "video": "https://codechaos-official.de/images/social/shardgate-reel.mp4",
+   "video_title": "Shardgate: kostenloses Trance-Gate + Kick-Duck für Psytrance (VST3, Win + Mac)",
+   "caption": "SHARDGATE ist da, und es ist kostenlos. 🎛️\n\nEin Trance-Gate mit Kick-Duck, synchron zum Takt deiner DAW. 16 Steps, jeder On, Half oder Off, in 1/8, 1/16, 1/32 oder 1/16T. Dazu ein Duck auf jede Viertel mit Depth, Length und Curve, ganz ohne Sidechain-Routing.\n\nAuto Gain gleicht den Pegelverlust durch das Gate aus, damit du das Pattern nicht nach Lautstärke beurteilst. Im Reel: Takt 1 trocken, dann Psy Bass Gap, Classic Trance Gate und Kick Duck, echter Plugin-Output.\n\n12 Presets, VST3 + Standalone für Windows und macOS (Apple Silicon, unsigniert). Kostenlos, zahl was du willst · Link in Bio\n\n#psytrance #hitech #psycore #freevst #musicproduction",
+   "short": "Shardgate: kostenloses VST3-Trance-Gate mit Kick-Duck ohne Sidechain, 16 Steps, Auto Gain, 12 Presets. Gratis: https://timberwolf688.gumroad.com/l/shardgate?utm_source=social",
+   "youtube_description": "Shardgate ist ein kostenloses Trance-Gate mit Kick-Duck für Psytrance, Hitech und Psycore (VST3 + Standalone, Windows und macOS Apple Silicon).\n\nIm Video: synthetischer Psy-Loop bei 145 BPM, Takt 1 trocken, dann die Presets Psy Bass Gap (KBBB), Classic Trance Gate 1/16 und Kick Duck – Hard. Ton direkt aus dem Plugin gerendert.\n\n- 16 Steps On/Half/Off in 1/8, 1/16, 1/32, 1/16T\n- Kick Duck auf jede Viertel ohne Sidechain\n- Auto Gain bis +6 dB, 12 Presets, null Latenz\n\nGratis: https://timberwolf688.gumroad.com/l/shardgate\nCode Chaos Audio · codechaos-official.de",
+   "youtube_tags": [
+    "Shardgate",
+    "trance gate",
+    "free vst",
+    "psytrance",
+    "sidechain",
+    "Code Chaos Audio"
+   ],
+   "grund": "nur Testfall für crucible_gate.py (alte DE-Fassung)"
+  },
+  {
+   "id": "bf-01-black-friday-2026",
+   "date": "2026-11-27",
+   "image": "https://codechaos-official.de/images/social/black-friday-2026.jpg",
+   "caption": "Black Friday bei Code Chaos Audio: −40 % auf alles, was etwas kostet. 🖤\n\nVon Freitag, 27.11., bis Montag, 30.11., gilt der Code BLACKFRIDAY auf alle 18 Bezahl-Produkte: Plugins, Instrumente, Sample-Packs, Preset-Bänke und das Ableton-Template.\n\nEin paar Beispiele:\n• Black Metal Suite Complete: 41,40 € statt 69 €\n• Frostfret: 17,40 € statt 29 €\n• Kick+Bass Engine: 14,40 € statt 24 €\n• Chaos FM und Crucible: je 11,40 € statt 19 €\n• Hitech FM Vital-Bank: 7,20 € statt 12 €\n\nUnsicher, ob ein Plugin passt? Zu jedem gibt es eine kostenlose Demo. Erst testen, dann am Wochenende günstig kaufen.\n\nÜber die Links auf codechaos-official.de ist der Code schon drin · Link in Bio\n\n#blackfriday #psytrance #blackmetal #musicproduction #vstplugin",
+   "short": "Black Friday: −40 % auf alle Code-Chaos-Audio-Produkte bis 30.11., Code BLACKFRIDAY. Plugins, Kits, Presets: https://codechaos-official.de/plugins/?utm_source=social&utm_campaign=blackfriday",
+   "entfernt_am": "2026-11-24",
+   "grund": "Doppelpost: 27.11. deckt queue.json 2026-11-27_bf_start (EN, alle CC-Kanäle, gleicher Code BLACKFRIDAY −40 % 27.–30.11.); Preise nur im angepinnten Kommentar (short_gate Regel 12)",
+   "buffer_entwuerfe": {
+    "6adcc592778b240e2faf5408": "6afcd9f1536cf08383cdd435",
+    "6abe125bea19ca0bde4081ce": "6afcd9f1c68ceea50aac442f"
+   }
+  }
+ ]
+}

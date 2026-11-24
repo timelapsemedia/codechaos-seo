@@ -2,6 +2,8 @@ name: "Social: Crucible-Posts"
 
 # Läuft täglich um 15:05 UTC (17:05 Uhr Berlin im Sommer) und postet fällige Instagram-Posts.
 # YouTube und Buffer werden beim ersten Lauf komplett vorgeplant, danach passiert dort nichts doppelt.
+# Vor allen Zielen läuft _marketing/crucible_gate.py (Sprache EN zuerst + Marke: Metal gehört zu Polished), fail-closed;
+# rot im Selbsttest = in diesem Lauf wird nichts gepostet (Tim 21.11.2026).
 # Manuell: GitHub > Actions > "Social: Crucible-Posts" > Run workflow (mit oder ohne Probelauf).
 #
 # Repository-Secrets (Settings > Secrets and variables > Actions), fehlende werden übersprungen:
