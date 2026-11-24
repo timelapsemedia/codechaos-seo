@@ -1,0 +1,1 @@
+eigen – Lern-Session agentische KI 2026-11-24 ; Anlass: 57 % der Kosten sind Cache-Lesen (token_wache 18.11. und 24.11.), Startkontext 148k je Session ohne Messwerkzeug, CLAUDE.md 293 Zeilen (Doku-Grenze 200); Quellen und Messwerte in C:/wissenschaft/agentische_ki.md

@@ -61,6 +61,7 @@ SEO → `seo-audit`/`web-seo`, Outreach → `ig-dm`/`druwids-outreach`. Zurückh
 | `ig-story` | Tages-Stories: Frame-Folge, Sticker, Weg in die DMs | https://github.com/Jakeschincariol/instagram-agent-skill/tree/main/skills/ig-story | mitgeliefert (LICENSE.upstream, MIT) |
 | `ig-viral` | Reels der Nische nach Abstand zum Kontoschnitt ranken, Hook-Formel benennen (nur Handrecherche, kein Scraping) | https://github.com/Jakeschincariol/instagram-agent-skill/tree/main/skills/ig-viral | mitgeliefert (LICENSE.upstream, MIT) |
 | `ki-medien` | KI-Bilder und -Videos über MCP `ki-medien`: Modellwahl gratis vor bezahlt, Monatsdeckel, Prompt-Regeln, Prüfung, Video-Host | eigen (Skill-Scout) | – |
+| `kontext-haushalt` | Kontext und Tokenverbrauch messen (Startkontext, Kontext je Anfrage, MCP-Nutzung, CLAUDE.md, Routine-Prompts) und senken; Entscheidung, wohin eine Regel gehört; Auftragsvorlage für Sessions und Subagenten | eigen (Skill-Scout) | eigen |
 | `leonardo-colors` | WCAG-konforme Farbpaletten und Hell/Dunkel-Themes nach Ziel-Kontrast (Adobe Leonardo) | https://github.com/adobe/leonardo/tree/main/skills/leonardo-colors | mitgeliefert (LICENSE.upstream, Apache-2.0) |
 | `lostplace-hdr` | Urbex-/Lost-Place-HDR-Look für Video und Foto: lokaler Kontrast, zeitlich stabil, mit Messkriterien | eigen | – |
 | `lottie` | >- | https://github.com/TerminalSkills/skills/tree/main/skills/lottie | mitgeliefert (LICENSE.upstream) |
