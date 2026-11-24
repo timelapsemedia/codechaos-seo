@@ -33,7 +33,7 @@ HIER = os.path.dirname(os.path.abspath(__file__))
 DATEI = os.path.join(HIER, "daten", "gumroad_bewertungen.json")
 SHOP = "https://timberwolf688.gumroad.com"
 UA = "CodeChaosBewertungsSync/1.0 (+https://codechaos-official.de)"
-PAUSE = 1.5            # Sekunden zwischen Abrufen (Rate-Limit schonen)
+PAUSE = 2.5            # Sekunden zwischen Abrufen (Rate-Limit schonen)
 MAX_SEITEN = 20        # Sicherung gegen Endlosschleife (10 Bewertungen/Seite)
 MAX_TEXT = 1500        # Zeichen je Bewertung auf der Seite
 MAX_NAME = 40
@@ -43,9 +43,17 @@ SICHTBAR = 8           # so viele Bewertungen direkt, der Rest in <details> (all
 # ---------------------------------------------------------------- Abruf
 
 def _get(url, json_antwort=False):
+    """GET mit Wiederholung bei 429/5xx (Wartezeit nach Retry-After, sonst 20/60/120 s)."""
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json" if json_antwort else "text/html"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read().decode("utf-8", "replace")
+    for versuch in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 500, 502, 503, 504) or versuch == 3:
+                raise
+            ra = e.headers.get("Retry-After", "")
+            time.sleep(min(int(ra), 180) if ra.isdigit() else (20, 60, 120)[versuch])
 
 
 def produkt_info(permalink):
@@ -95,41 +103,51 @@ def plugin_slugs():
 def laden():
     if os.path.exists(DATEI):
         return json.load(open(DATEI, encoding="utf-8"))
-    return {"stand": "", "seiten": {}}
+    return {"stand": "", "ids": {}, "seiten": {}}
 
 
 def sync(trocken=False):
-    """-> (Ergebnisdict, Meldungen, Probleme)."""
+    """-> (neu, alt, Meldungen, Probleme). Produkt-IDs sind stabil und stehen im Cache (ids): pro Produkt und Lauf genügt ein
+    Abruf der Bewertungsliste. Die Produktseite wird nur für unbekannte Produkte und zum Gegenprüfen der Anzahl geholt,
+    sobald es Bewertungen gibt."""
     alt = laden()
-    neu = {"stand": alt.get("stand", ""), "seiten": {}}
+    ids = dict(alt.get("ids", {}))
+    neu = {"stand": alt.get("stand", ""), "ids": ids, "seiten": {}}
     meldungen, probleme = [], []
     for slug, mit_demo in plugin_slugs():
         produkte, bew = [], []
         alte = alt["seiten"].get(slug, {"produkte": [], "bewertungen": []})
         for permalink in [slug] + ([slug + "-demo"] if mit_demo else []):
             try:
-                info = produkt_info(permalink)
-                time.sleep(PAUSE)
-                if info is None:
-                    meldungen.append(f"{permalink}: Produkt nicht gefunden (übersprungen)")
+                info = None
+                if permalink not in ids:
+                    info = produkt_info(permalink)
+                    time.sleep(PAUSE)
+                    if info is None:
+                        meldungen.append(f"{permalink}: Produkt nicht gefunden (übersprungen)")
+                        continue
+                    ids[permalink] = info["id"]
+                geholt = [normal(permalink, r) for r in bewertungen_holen(ids[permalink])]
+                if not geholt:
                     continue
-                if info["anzahl"] == 0:
-                    continue
-                geholt = [normal(permalink, r) for r in bewertungen_holen(info["id"])]
-                if len(geholt) != info["anzahl"]:
+                if info is None:      # Gegenprobe: Anzahl laut Produktseite
+                    info = produkt_info(permalink)
+                    time.sleep(PAUSE)
+                if info is not None and len(geholt) != info["anzahl"]:
                     raise RuntimeError(f"{len(geholt)} Bewertungen geholt, Produktseite meldet {info['anzahl']}")
-                produkte.append({"permalink": permalink, "anzahl": info["anzahl"], "schnitt": info["schnitt"]})
+                produkte.append({"permalink": permalink, "anzahl": len(geholt),
+                                 "schnitt": round(sum(b["sterne"] for b in geholt) / len(geholt), 2)})
                 bew += geholt
             except Exception as e:  # noqa: BLE001 - Abruffehler: alten Stand dieses Produkts behalten
                 probleme.append(f"{permalink}: {e} (alter Stand bleibt)")
                 produkte += [x for x in alte["produkte"] if x["permalink"] == permalink]
                 bew += [x for x in alte["bewertungen"] if x["produkt"] == permalink]
         if bew:
-            ids = set()
+            ids_gesehen = set()
             eindeutig = []
             for b in sorted(bew, key=lambda x: (x["datum"], x["id"]), reverse=True):
-                if b["id"] not in ids:
-                    ids.add(b["id"])
+                if b["id"] not in ids_gesehen:
+                    ids_gesehen.add(b["id"])
                     eindeutig.append(b)
             neu["seiten"][slug] = {"produkte": produkte, "bewertungen": eindeutig}
     if json.dumps(neu["seiten"], sort_keys=True) != json.dumps(alt["seiten"], sort_keys=True):
