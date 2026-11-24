@@ -15,6 +15,7 @@ from content_de_mastering import DE_MASTERING, FORM_DE  # noqa: E402
 from flags import UK as FLAG_UK, DE as FLAG_DE       # noqa: E402
 from content_plugins import PLUGINS, GROUPS, GENRE_PLUGINS, GUMROAD  # noqa: E402
 import geo                                            # noqa: E402
+import genre_belege                                   # noqa: E402
 from geo import DATUM, autor_ld, publisher_ld        # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -199,6 +200,7 @@ def build_genre(g, lang):
         {"@type": "Article", "@id": url + "#article", "headline": c["h1"], "description": c["desc"], "inLanguage": lang,
          "url": url, "mainEntityOfPage": url, "datePublished": TODAY, "dateModified": DATUM,
          "author": autor_ld(), "publisher": publisher_ld(), "image": BASE + g["og"],
+         "citation": genre_belege.quellen_ld(g["slug"]),
          "about": {"@type": "DefinedTerm", "name": g["term"], "description": strip(c["answer"]),
                    "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Psytrance-Subgenres" if lang == "de" else "Psytrance subgenres"}},
          "isPartOf": {"@id": BASE + ("/#website")}},
@@ -228,9 +230,10 @@ def build_genre(g, lang):
     <div class="table-scroll"><table class="specs"><tbody>{specs}</tbody></table></div>
   </div>
 </section>
-<section>
+{genre_belege.zahlen_html(g['slug'], lang)}<section>
   <div class="wrap narrow prose">
 {c['body']}
+{genre_belege.quellen_html(g['slug'], lang)}
   </div>
 </section>
 <section class="alt" aria-labelledby="rel-t">

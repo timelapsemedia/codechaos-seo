@@ -58,8 +58,8 @@ GENRES = [
   "releases": ["runtime", "rotten", "abstrakte", "filaments", "insomnia", "kidz", "paradigma", "slaughter", "roadside"],
   "de": {
    "nav": "Psycore", "bpm": "180–300+ BPM",
-   "title": "Psycore: Was ist Psycore? Genre, BPM & Produktion | Code Chaos",
-   "desc": "Psycore (Psy Core) erklärt: Psytrance-Subgenre mit 180–300+ BPM, Sinus-Kicks, Neurotrance-Bässen und hypnotischen Soundscapes. Geschichte, Unterschiede, Produktionstipps.",
+   "title": "Psycore: Bedeutung, BPM & Genre-Guide | Code Chaos",
+   "desc": "Psycore (Psy Core) läuft mit 180–300+ BPM: schnellstes Psytrance-Subgenre mit Sinus-Kicks, Neurotrance-Bässen und hypnotischen Soundscapes. Bedeutung, Artists.",
    "og_alt": "Psycore Genre Guide von Code Chaos",
    "eyebrow": "Genre Guide · Psycore",
    "h1": "Was ist Psycore?",
@@ -127,8 +127,8 @@ GENRES = [
   },
   "en": {
    "nav": "Psycore", "bpm": "180–300+ BPM",
-   "title": "Psycore: What is Psycore? Genre, BPM & Production | Code Chaos",
-   "desc": "Psycore explained: the fastest psytrance subgenre at 180–300+ BPM with sine kicks, neurotrance basslines and hypnotic soundscapes. History, comparison, production tips.",
+   "title": "Psycore: Meaning, BPM & Genre Guide | Code Chaos",
+   "desc": "Psycore runs at 180–300+ BPM: the fastest psytrance subgenre, with sine kicks, neurotrance basslines and hypnotic soundscapes. Meaning, history, artists.",
    "og_alt": "Psycore genre guide by Code Chaos",
    "eyebrow": "Genre guide · Psycore",
    "h1": "What is Psycore?",
@@ -200,8 +200,8 @@ GENRES = [
   "releases": ["runtime", "insomnia", "heart", "parallax", "kidz", "tanzalarm", "tiny", "ruins", "paradigma", "grudge", "interstellar", "alternate"],
   "de": {
    "nav": "Hitech Psytrance", "bpm": "170–230+ BPM",
-   "title": "Hitech Psytrance (Hitech Psy, Hi-Tech): Guide & BPM | Code Chaos",
-   "desc": "Hitech Psytrance (Hi-Tech) erklärt: 170–230+ BPM, glitchige Synths, komplexe Percussion, futuristischer Sound. Geschichte, Unterschiede zu Psycore, Produktionstipps.",
+   "title": "Hitech Psytrance (Hitech Psy): Guide & BPM | Code Chaos",
+   "desc": "Hitech Psytrance (Hi-Tech) läuft mit 170–230+ BPM: glitchige Synths, komplexe Percussion, futuristischer Sound. Geschichte, Hitech vs. Psycore, Tipps.",
    "og_alt": "Hitech Psytrance Genre Guide von Code Chaos",
    "eyebrow": "Genre Guide · Hitech Psytrance",
    "h1": "Was ist Hitech Psytrance (Hitech Psy)?",
@@ -271,7 +271,7 @@ GENRES = [
   "en": {
    "nav": "Hitech Psytrance", "bpm": "170–230+ BPM",
    "title": "Hi-Tech Psytrance Explained: BPM, Sound & Guide | Code Chaos",
-   "desc": "Hitech psytrance (hi-tech) explained: 170–230+ BPM, glitchy synths, complex percussion and a futuristic sound. History, hitech vs psycore, production tips.",
+   "desc": "Hitech psytrance (hi-tech) runs at 170–230+ BPM: glitchy synths, complex percussion, futuristic sound. History, hitech vs psycore, production tips.",
    "og_alt": "Hitech psytrance genre guide by Code Chaos",
    "eyebrow": "Genre guide · Hitech psytrance",
    "h1": "What is Hitech Psytrance (Hitech Psy)?",
@@ -344,8 +344,8 @@ GENRES = [
   "releases": ["uhrwerk", "runtime", "amanita", "oblivion", "twilight"],
   "de": {
    "nav": "Darkpsy", "bpm": "150–200 BPM",
-   "title": "Darkpsy (Dark Psy): Was ist Darkpsy? BPM, DJs & Artists | Code Chaos",
-   "desc": "Darkpsy (Dark Psy, Dark Psytrance) erklärt: 150–200 BPM, okkulte Atmosphäre, schwere Basslines, Horror-Samples. Bekannte Darkpsy-DJs und Artists, Geschichte, Produktionstipps.",
+   "title": "Darkpsy (Dark Psy): BPM, DJs & Künstler | Code Chaos",
+   "desc": "Darkpsy (Dark Psy, Dark Psytrance) läuft mit 150–200 BPM: okkulte Atmosphäre, schwere Basslines, Horror-Samples. Bekannte DJs und Artists, Geschichte, Tipps.",
    "og_alt": "Darkpsy Genre Guide von Code Chaos",
    "eyebrow": "Genre Guide · Darkpsy",
    "h1": "Was ist Darkpsy?",
@@ -408,8 +408,8 @@ GENRES = [
   },
   "en": {
    "nav": "Darkpsy", "bpm": "150–200 BPM",
-   "title": "Darkpsy (Dark Psy): What is Darkpsy? BPM, DJs & Artists | Code Chaos",
-   "desc": "Darkpsy (dark psy, dark psytrance) explained: 150–200 BPM, occult atmosphere, heavy basslines and horror samples. Darkpsy DJs and artists to know, history and production tips.",
+   "title": "Darkpsy (Dark Psy): BPM, DJs & Artists | Code Chaos",
+   "desc": "Darkpsy (dark psytrance) runs at 150–200 BPM: occult atmosphere, heavy basslines and horror samples. DJs and artists to know, history, production tips.",
    "og_alt": "Darkpsy genre guide by Code Chaos",
    "eyebrow": "Genre guide · Darkpsy",
    "h1": "What is Darkpsy?",

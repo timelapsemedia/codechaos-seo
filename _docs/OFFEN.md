@@ -24,7 +24,12 @@ Liegt bewusst in `_docs/` (wird von GitHub Pages nicht veröffentlicht; im Repo-
 - [x] GA4-Conversion-Events (cta_click Gumroad/Mail, form_submit, generate_lead) in js/analytics-consent.js, nur nach Einwilligung (1bf9080, im DOM der Live-Seite getestet). Auswertung BF 26.–30.11. damit möglich.
 - [ ] Angebot gegen Interzone (Hamburg, 39 €/69 €, Gratis-Testmaster; selbst abgerufen 18.11.): Testmaster gratis/bezahlt oder Begründungsblock „Warum 79 €“ – Entscheidung Tim (Preis/Angebot).
 - [ ] Abschnitt „Psytrance mastering service / chain“ (Autocomplete) – nur mit Tims echten Kettenangaben (#66).
-- [ ] CTR-Test Meta-Description /en/hitech-psytrance/ + /en/psycore/ (267 Impr., Pos. 6,8–7,7, 0 Klicks): BPM-Spanne zuerst, Title unverändert, Vergleich nach 14 Tagen. Mengen klein = Hypothese.
+- [x] Meta-Descriptions aller 6 Genre-Seiten: BPM-Spanne zuerst, ≤ 160 Zeichen (24.11.2026, Aufgabe `seo-cc-titel`). Titel auf 48–60 Zeichen gekürzt (Psycore, Darkpsy DE/EN, Hitech DE); Titel /en/hitech-psytrance/ unverändert. Ausgangswert 23.10.–20.11.: 562 Impr., 2 Klicks, Pos. ~7. Prüftag 22.12.2026. Mengen klein = Hypothese.
+
+## Zitierbar für KI-Antworten (24.11.2026, Aufgabe `seo-geo-zitierbar`)
+- [x] Genre-Seiten DE/EN: Abschnitt „BPM in Zahlen“ (Antwortsatz, Millisekunden je Schlag, Tempo-Spektrum mit Quelle, wörtliches Zitat, eigene Lautheitswerte) und Quellenliste; `citation` im Article-Schema. Quelle der Texte: `_build/genre_belege.py`. Grundlage: Aggarwal et al. 2024 (DOI 10.1145/3637528.3671900, Stufe B). Zitate am 24.11. im Volltext nachgelesen (Charles 2020, Vitos 2009, Dancecult).
+- [ ] Deutsche Genre-Seiten /psycore/, /hitech-psytrance/, /darkpsy/ sind bei Google „nicht bekannt“ bzw. „gefunden, nicht indexiert“ (24.11., Sitemap ohne Fehler, 28 interne Links). Braucht Tim: in der Search Console je URL „Indexierung beantragen“. Prüftag 22.12.2026.
+- [ ] AES TD1008 (Streaming-Lautheit) als weitere Quelle: Primärdokument war am 24.11. nicht abrufbar (403), deshalb nicht zitiert.
 
 ## Plattformgrenzen GitHub Pages (Grok #67)
 
