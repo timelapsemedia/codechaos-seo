@@ -461,3 +461,12 @@ Vorschläge an Tim (SCOUT.md D):
 - Stop-Hook „unpushed commits“ in Routine-Sessions entschärfen (polished.media 19.11., SEO-Routine 22.11. → Push auf Zufallsbranch).
 - Code-Chaos-Audio-Routine: Repo crucible hat nur `master`, Prompt verlangt `main`.
 - Rarity Hunter: Brave-Suche HTTP 402, DuckDuckGo gedrosselt, eBay/medimops/ricardo 403.
+
+## 2026-11-24 – Lern-Session agentische KI (1 Eigenbau: kontext-haushalt)
+
+Eigenbau:
+| Skill | Anlass (Belege) | Test |
+|---|---|---|
+| kontext-haushalt | token_wache 18.11. und 24.11.: 57–59 % der Kosten sind Cache-Lesen; kein Werkzeug maß den Startkontext; CLAUDE.md 293 Zeilen bei Doku-Grenze 200 (code.claude.com/docs/en/memory) | `kontext_messen.py --stunden 24` und `--stunden 168` auf Tims Rechner (51 bzw. 188 Sessions, 4 s Laufzeit), `--gate` liefert Exit 1 mit 10 Befunden; A/B des Startkontexts per `claude -p` auf Haiku (112.984 / 87.621 / 81.181 Tokens) |
+
+Geprüft und nicht gebaut: „agenten-architektur“ (deckt `agenten-schwarm` plus `C:/leitstelle/VERTRAG.md` ab), „agenten-eval“ (baut die Session Unternehmens-OS).
