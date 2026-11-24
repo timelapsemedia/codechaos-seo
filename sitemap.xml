@@ -583,4 +583,22 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/datenschutz/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/datenschutz/"/>
   </url>
+  <url>
+    <loc>https://codechaos-official.de/partner/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/partner/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/partner/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/partner/"/>
+  </url>
+  <url>
+    <loc>https://codechaos-official.de/en/partner/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://codechaos-official.de/partner/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codechaos-official.de/en/partner/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codechaos-official.de/partner/"/>
+  </url>
 </urlset>
