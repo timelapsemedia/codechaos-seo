@@ -419,3 +419,45 @@ Offene Kandidaten aus dem Selbstverbesserungs-Log bewertet (GitHub-API, nur gele
 Selbstverbesserung (lokale Belege: 751 Session-Dateien der letzten 7 Tage, Selbstverbesserungs-Log bis 15.11.):
 - Wiederkehrend: „bist du wirklich so fertig?“ (Uni-Referat 13./14.11., Album 12 03.11.), Überschriften „KI-generisch“ (14.11.), Zwischenfassungen statt einer Endfassung (14.11.). Alle drei sind schon als Gate oder Regel umgesetzt (OFFEN.md-Gate, zeit_gate.js, Gegenlesung, WISSEN-GLOBAL „Endfassung einmal“). Die Skill verification-before-completion liegt lokal unter ~/.claude/skills → kein neuer Skill, sonst doppelt.
 - Kein neuer Eigenbau (keine Lücke mit zwei Belegen, die nicht schon abgedeckt ist).
+
+## 2026-11-23 – Wochenlauf (Cloud-Routine; Lauf vom 16.11. kam erst heute an, zusammengelegt)
+
+Quellen: skills.sh (16 Begriffe), GitHub-Trending (Woche), VoltAgent/awesome-agent-skills, anthropics/skills, Remotion, GoogleChrome.
+
+Neu aufgenommen:
+| Skill | Wofür | Quelle | Lizenz | Prüfung |
+|---|---|---|---|---|
+| davinci-resolve-fusion | Resolve-Skripte, Fusion-Makros (.setting, UserControls/InstanceInputs), Keyframes (BezierSpline, StyledTextFollower), Titel-/Übergangs-Vorlagen | tmoroney/auto-subs `.agents/skills/davinci-resolve-fusion`, Commit 5a9cd11 (4,6k Sterne) | MIT | kein Netz/Telemetrie/Selbst-Update; `run-script.bat` ruft nur fuscript.exe (Studio); Dateien gegen GitHub abgeglichen. **Nicht übernommen:** `references/resolve-api.txt` und `references/fusion-manual/` (Blackmagic-Dokumente, nicht MIT), `scripts/start-server.*` (leere Platzhalter). Lokal angepasst → bei Upstream-Prüfung wie copywriting/hallmark behandeln (nicht blind überschreiben). |
+
+Aktualisiert (Upstream, lokale Beschreibungen behalten): ai-seo, earshot, remotion-best-practices (31 Dateien), seo-audit, seo-google, social-content (+ references/ship-post.md, chinese-platforms.md), video-marketing. Neu in marketingskills: offen gekennzeichnete Nennung des eigenen Tools „Magister“ als eine Option unter mehreren (kein Affiliate-Link) – akzeptiert; ad-creative bleibt ausgeschlossen. Hinweis: jsdelivr-Dateilisten waren veraltet → Dateien jetzt über raw.githubusercontent.com und die Links der SKILL.md geholt.
+Nicht aktualisiert: copywriting, hallmark, gemini-api-dev (lokal geändert), ad-creative (Affiliate-Werbung), design-to-motion (Upstream-Ordner fehlt), money-* (Upstream 404).
+
+Abgelehnt:
+| Kandidat | Grund |
+|---|---|
+| GoogleChrome/modern-web-guidance | Telemetrie inkl. Suchanfragen standardmäßig an, `npx …@latest`/AutoUpdate |
+| aedev-tools/adobe-agent-skills after-effects | nur macOS (osascript/JXA) |
+| danielraffel/juce-agent-toolkit | an Vorlage gebunden, Skripte außerhalb des Skill-Ordners, liest .env |
+| metaldsp/agents juce-dsp, juce-scaffolder | neu/klein, doppelt mit audio-plugin-review |
+| melvynx/video-agent-skills | doppelt (fremdvideo-analyse, ig-*, code-chaos-motion); Veröffentlichen über bezahlten Dienst |
+| iart-ai/motion-design-skills | allgemeines Handwerk, doppelt mit code-chaos-motion/motion-reels |
+| everyinfra/seo-skills seo-suite | 2,36 MB, install.sh, doppelt |
+| josiahsiegel ffmpeg-core | 10+ Skills, doppelt mit ffmpeg/video-werkstatt, Budget |
+| chaiwithjai/davinci-resolve-claude-skills | DevRel/Webcam, Computer-Use, doppelt |
+| Illyism/seo-skills, fabriqaai/ffmpeg-analyse-video-skill, reelary/skills, ecliptic-ai/skills | keine LICENSE |
+| remotion-dev/skills Teil-Skills | über Router remotion-best-practices abgedeckt (Update-Fall) |
+
+Plugins/MCP (nur Vorschlag, INSTALLIEREN-LOKAL?): iannuttall/seo (eher nein: doppelt, ungepinntes `npx -y seo`); GoogleChrome/modern-web-guidance nur mit `DISABLE_TELEMETRY=1` und ohne AutoUpdate (optional).
+
+Selbstverbesserung (Belege 16.–23.11., 15 Sessions + 8 Routinen, nur result/user-Events):
+- Nutzung: 0 tim-skills-Aufrufe in den gelesenen Abschnitten (Untergrenze).
+- Verbessert: routine-waechter – `--kosten kosten.json` meldet GELB ab Ø 1,50 $/Lauf oder ≈ 10 $/Woche mit Vorschlag Opus→Sonnet/seltener (Anlass: Wochenlimit 55 % nach einem Tag, Leitstelle 18.11.; Session „WISSEN-GLOBAL.md verschlanken“ 18.11.; Rarity-Hunter-Tiefen-Scan 2,28 $/Lauf auf Opus, 22.11.). Getestet: Beispieldaten ROT/GELB/OK, alte Modi unverändert.
+- Verbessert: zugang-einbinden – Abschnitt „Token läuft ab / erneuern“ (insta-publisher zuerst, Meta-IG-Login 60 Tage + refresh ab 24 h, Page-Token ohne Ablauf, YouTube „Testing“ 7 Tage) und Auslöser „Token läuft ab“ (Anlass: Meta-Token im Chat, „Grok-Aufträge“ 22.11.; Erinnerung „Instagram-Token Code Chaos erneuern“ fällig 23.11.).
+- Nicht gebaut: „marken-weiche“ (Metal-Posts → Polished/Englisch?) – Beleg vorhanden (Leitstelle 21.11., crucible-posts.json), aber Tims Regel ist nicht eindeutig („Ja, Store-weit ok“ ohne sichtbare Frage) → Frage an Tim.
+
+Vorschläge an Tim (SCOUT.md D):
+- Metal-Posts in `_marketing/crucible-posts.json` (u. a. store-15 heute 23.11., store-16 26.11.) laufen über Code Chaos mit deutscher Caption – so gewollt?
+- Rarity-Hunter-Tiefen-Scan von Opus auf Sonnet oder seltener (≈ 16 $/Woche).
+- Stop-Hook „unpushed commits“ in Routine-Sessions entschärfen (polished.media 19.11., SEO-Routine 22.11. → Push auf Zufallsbranch).
+- Code-Chaos-Audio-Routine: Repo crucible hat nur `master`, Prompt verlangt `main`.
+- Rarity Hunter: Brave-Suche HTTP 402, DuckDuckGo gedrosselt, eBay/medimops/ricardo 403.
