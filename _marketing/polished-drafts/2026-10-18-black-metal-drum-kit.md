@@ -1,4 +1,4 @@
-# DRAFT – nicht posten, bevor das Gumroad-Produkt live ist (https://timberwolf688.gumroad.com/l/black-metal-drum-kit)
+# DRAFT – nicht posten, bevor das Gumroad-Produkt live ist (https://shop.codechaos-official.de/l/black-metal-drum-kit)
 
 Bild: codechaos-store/products/black-metal-drums/cover.png
 

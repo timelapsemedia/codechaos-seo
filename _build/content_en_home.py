@@ -144,7 +144,7 @@ EN_HOME = {
       <h2 id="cru-t">Crucible: 3-band harmonic saturation</h2>
       <p>Split your signal into low, mid and high and saturate each band on its own: hard clip, tube or tape per band, per-band drive, mix and gain, adjustable crossovers and up to 8x oversampling. VST3 + standalone for Windows 10+. Five saturation types: hard clip, wavefolder, tube, diode, tape.</p>
       <p><strong>Shape. Saturate. Dominate.</strong> Built by an active hitech and psycore producer, for any source.</p>
-      <div class="btns"><a class="btn btn-blood" href="https://timberwolf688.gumroad.com/l/crucible">Get Crucible · €19</a><a class="btn btn-ghost" href="/en/plugins/crucible/">All features</a></div>
+      <div class="btns"><a class="btn btn-blood" href="https://shop.codechaos-official.de/l/crucible">Get Crucible · €19</a><a class="btn btn-ghost" href="/en/plugins/crucible/">All features</a></div>
     </div>
     <a href="/en/plugins/crucible/#listen"><img class="framed" src="/images/crucible-ui-880.webp" srcset="/images/crucible-ui-880.webp 880w, /images/crucible-ui.webp 1760w" sizes="(max-width: 900px) 100vw, 560px" width="880" height="560" loading="lazy" alt="Crucible plugin interface: Low Hard Clip, Mid Tube, High Tape, 4x oversampling"></a><p class="note"><a href="/en/plugins/crucible/#listen">▶ Listen: the same psy loop without and with Crucible</a></p>
   </div>

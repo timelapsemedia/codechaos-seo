@@ -13,7 +13,7 @@ import geo  # noqa: E402
 BASE, ROOT, esc = bp.BASE, bp.ROOT, bp.esc
 DATE = "2026-10-29"   # datePublished; dateModified und „Zuletzt aktualisiert“ aus _build/seiten_datum.json (geo.py)
 URL = BASE + "/sounds/"
-G = "https://timberwolf688.gumroad.com/l/"
+G = "https://shop.codechaos-official.de/l/"
 
 TITLE = "Samples, MIDI & Presets für Psytrance und Black Metal | Code Chaos"
 DESC = ("Code Chaos Audio: Black Metal Drum Kit, MIDI Grooves, Cab-IRs, Hitech FM Presets für Vital und Serum 2, "

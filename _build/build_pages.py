@@ -434,7 +434,7 @@ def build_release(slug, lang):
 
 
 PARTNER_DATE = "2026-11-24"     # datePublished Partnerseite
-AFFILIATE_URL = "https://timberwolf688.gumroad.com/affiliates"
+AFFILIATE_URL = "https://shop.codechaos-official.de/affiliates"
 # Tim 24.11.2026: „Ja, bauen + live“ (Partnerprogramm, C:/geschaeftsmodelle/partnerprogramm/LIESMICH.md).
 # Inbound statt Kaltakquise: § 7 Abs. 2 Nr. 2 UWG verbietet unverlangte Werbe-Mails auch an Firmen.
 PARTNER = {
