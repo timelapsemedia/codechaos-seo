@@ -1,0 +1,45 @@
+{
+ "ids": {
+  "chaos-fm": "y23RVQ-clNnYzvJCtTBLsg==",
+  "chaos-fm-demo": "r1OoyL9yudiAoEBj5dUzlw==",
+  "crucible": "Jb_K3rR1NzjeIZMurjPW2w==",
+  "crucible-demo": "mes5wHsXWtSihAwrSUQZgQ==",
+  "frostfret": "DPqsFoSX2oz6Xune11971g==",
+  "frostfret-demo": "akEUduve1ChsY-97GgESQw==",
+  "gravesaw": "a6WPuHAcsRIKT9O-w2MfEA==",
+  "gravesaw-demo": "3AAXISX6Cfu5UMg9o6XTPw==",
+  "hoarfell": "51COKOD3BHWKRG6yr6Ywgw==",
+  "hoarfell-demo": "MACJ1yoqUmRrFvmmwPrJrA==",
+  "kick-bass-scope": "4dMTF7K9-HDNZc7C23_eBA==",
+  "psy-kick-bass": "YTeMzFlegKrhRMiHDVuRHg==",
+  "psy-kick-bass-demo": "i_gLtab4hvJtc7S8zmefhg==",
+  "rimehall": "P3EreG6uRzaxr-HmNuPjmA==",
+  "rimehall-demo": "lRyUULyRU4TC_2_4_1JbPw==",
+  "shardgate": "GFPwsFIgvmTR6ZkztQZ6nw==",
+  "shardstep": "CC_wDh4HHUC_USVqYOm-aw==",
+  "shardstep-demo": "f-61kSpR2p2ANXpGerD-NQ=="
+ },
+ "seiten": {
+  "kick-bass-scope": {
+   "bewertungen": [
+    {
+     "antwort": "Thank you so much for your 5-star review!\n\nI'm really glad that Kick/Bass Scope has been useful in your workflow!\n\nI developed the entire plugin myself as an independent developer under Code Chaos Audio. \nAlongside audio software development, I also offer professional online mastering services through two specialized platforms:\n\nCode Chaos Audio – Specialized in Psytrance (all subgenres) and other electronic music.\nhttps://codechaos-official.de\n\nPolished Media – Specialized in Metal, Hardcore, Djent, Gothic and other heavy and dark music genres.\nhttps://polished.media\n\nI'm also introducing a free, no-obligation mix audit as an entry point for artists who want professional feedback on their mixes before booking a mastering service.\n\nThanks again for supporting independent audio development!\n\nBest regards,  \nTim  \nCode Chaos Audio / Polished Media",
+     "datum": "2026-11-22",
+     "id": "vq2hhIREVD_nCF8b0c8Djw==",
+     "name": "Anonymous",
+     "produkt": "kick-bass-scope",
+     "sterne": 5,
+     "text": "Generally, since I mostly work with electronic arrangements, I haven't had many phase issues. However, after recording some organic instruments in the low-frequency range, I wasn't entirely sure about the phase alignment, so I decided to use this plugin. It turned out to be really helpful. I'd like to thank everyone involved in creating it!"
+    }
+   ],
+   "produkte": [
+    {
+     "anzahl": 1,
+     "permalink": "kick-bass-scope",
+     "schnitt": 5.0
+    }
+   ]
+  }
+ },
+ "stand": "2026-11-24"
+}

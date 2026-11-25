@@ -16,6 +16,7 @@ from flags import UK as FLAG_UK, DE as FLAG_DE       # noqa: E402
 from content_plugins import PLUGINS, GROUPS, GENRE_PLUGINS, GUMROAD  # noqa: E402
 import geo                                            # noqa: E402
 import genre_belege                                   # noqa: E402
+import gumroad_reviews                                # noqa: E402
 from geo import DATUM, autor_ld, publisher_ld        # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -834,7 +835,7 @@ def build_plugin(p, lang="de"):
     {"".join(more)}
   </div>
 </section>
-{extra_secs}<section aria-labelledby="det-t">
+{extra_secs}{gumroad_reviews.render(slug, lang)}<section aria-labelledby="det-t">
   <div class="wrap narrow prose">
     <h2 id="det-t">{det_title}</h2>
     {"".join(details)}
