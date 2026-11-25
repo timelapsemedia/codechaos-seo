@@ -27,3 +27,4 @@
 - tools/folge_build.py: Cache (hoch, _m, tiefe, Parallax-Clip) prüft jetzt Zeitstempel statt nur Existenz – sonst wäre das neue a04 still durch das alte ersetzt worden.
 - Sound: Frostfret -> Gravesaw -> Rimehall (Renderer frostfret_tremolo, 08.11.), Sound-Moment a17, −2,4 LUFS gemessen, auf −16,6 LUFS gesetzt.
 - Render: 62,1 s, 1080×1920, −13,9 LUFS, True Peak −1,5 dBTP. Endkontrolle Exit 1, alle Befunde begründet freigegeben (E:/story-serien/frostfall/final/frostfall_teil-02_A.freigabe.md). Keine Bilder im --voll-Modus, keine Modal-Kosten.
+- Nachtrag 25.11. mittags: Ton neu gemischt mit Ausklang am Ende (vorher kein Fade-out); finaler Encode neu, 62,1 s, −13,9 LUFS, True Peak −1,5 dBTP; Endkontrolle + Gegenprobe erneut, Freigabe ergänzt.

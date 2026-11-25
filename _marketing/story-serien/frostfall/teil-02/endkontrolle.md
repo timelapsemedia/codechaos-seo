@@ -12,4 +12,6 @@ videokontrolle.py (über tools/kontrolle.py), 54 Kanten (Shot-Grenzen + Anfang/E
 | 0,86 s „Leaves“ statt „Livs“ | Einzelzeile vo/a01.wav mit faster-whisper medium: „Das Wasser in Lief's Glas gefriert, von innen.“ – Eigenname, Whisper-Schreibung, alle Wörter vollständig (wie Teil 1). | frei |
 | 59,40 s „Er hat“ nicht im Soll | Einzelzeile vo/a19.wav: „Etwas hat gelernt zu spielen.“ vollständig (0,00–1,56 s); im Mix Fehlhörer über dem Musikbett. | frei |
 
+Neu-Mix 25.11. 12:2x mit Ausklang am Ende (letzte 100 ms −60,9 dB, letzte Probe ≈ 0); Endkontrolle und Gegenprobe danach erneut gelaufen, gleiche Befunde, Gegenprobe Exit 0.
+
 Lautheit −13,9 LUFS, LRA 6,7 LU, True Peak −1,5 dBTP, 1080×1920, 30 fps, 62,1 s. Kontaktbogen angesehen (Kontinuität Schal, Rabe mit einem Kupferauge, Bandmaschine mit Kupferspulen; keine Schrift/Signaturen).
