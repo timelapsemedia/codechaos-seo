@@ -470,3 +470,20 @@ Eigenbau:
 | kontext-haushalt | token_wache 18.11. und 24.11.: 57–59 % der Kosten sind Cache-Lesen; kein Werkzeug maß den Startkontext; CLAUDE.md 293 Zeilen bei Doku-Grenze 200 (code.claude.com/docs/en/memory) | `kontext_messen.py --stunden 24` und `--stunden 168` auf Tims Rechner (51 bzw. 188 Sessions, 4 s Laufzeit), `--gate` liefert Exit 1 mit 10 Befunden; A/B des Startkontexts per `claude -p` auf Haiku (112.984 / 87.621 / 81.181 Tokens) |
 
 Geprüft und nicht gebaut: „agenten-architektur“ (deckt `agenten-schwarm` plus `C:/leitstelle/VERTRAG.md` ab), „agenten-eval“ (baut die Session Unternehmens-OS).
+
+## 2026-11-25 – Second-Brain-Repos (Auftrag Tim, Facebook-Post „7 second brains“), 0 installiert, 3 Ideen übernommen
+
+Geprüft per GitHub-API und README am 25.11.2026. Die Sternzahlen aus dem Post waren grob richtig, der Post selbst ist Werbung („Subscribe…“).
+Abgleich mit dem Bestand: Memory mit MEMORY.md-Index, MCP `wissen` (Vektorsuche), Routine `selbstverbesserung` (Korrekturen → Regeln), Archiv `C:/selbstverbesserung/wissen/`, `telefon.py`, Board.
+
+| Repo | Sterne | Lizenz / letzter Push | Urteil | Grund |
+|---|---|---|---|---|
+| garrytan/gbrain | 33.575 | MIT / 25.11.2026 | verworfen | schreibt in `~/.claude/CLAUDE.md`, Hook in jedem Turn, `curl \| bash` bzw. `releases/latest` ohne Pin, Embeddings über Voyage/OpenAI kostenpflichtig, zweite Gedächtnisschicht neben Memory + `wissen` |
+| karpathy Gist 442a6bf… (LLM-Wiki) | – | Idee-Datei | Idee übernommen | Lint-Lauf (Widersprüche, verwaiste Seiten, veraltete Aussagen) → `C:/selbstverbesserung/memory_lint.py`, sonntags in der Routine `selbstverbesserung` |
+| akitaonrails/ai-memory | 16.381 | MIT / 24.11.2026 | Idee übernommen | Herkunft je Fakt: Lint warnt bei feedback/project ohne **Why:**/Quelle. Werkzeug selbst nicht: Hooks auf Tool-Aufrufen, Installer `latest`, Doppelung mit Memory + `wissen` + Board |
+| huytieu/COG-second-brain | 1.521 | MIT / 23.10.2026 | verworfen (Idee schon da) | 33–43 Skills = hohe Startlast; Verifier-Trennung haben wir schon (Codex-Gegenprüfung, Gates) |
+| smixs/agent-second-brain | 510 | MIT / 05.08.2026 | verworfen | VPS + tmux-Bot, `curl \| bash`, Sprachnotizen an Deepgram; Telegram-Eingang und Nachtroutine vorhanden |
+| itechmeat/open-second-brain | 621 | MIT / 24.11.2026 | Idee als VORSCHLAG | Regel-Lebenszyklus (Regel läuft aus ohne Anwendungsnachweis) – entspricht unserer Routine `selbstverbesserung`; Werkzeug doppelt, `bun add -g` ohne Pin. Vorschlag in `C:/selbstverbesserung/log.md` |
+| jessepinkman9900/claude-second-brain | 183 | MIT / 20.04.2026 | verworfen | reines Karpathy-Scaffold, `npx` ohne Version, lädt ~2 GB Modelle (qmd), Skills global |
+
+Test `memory_lint.py` am echten Memory (187 Dateien): 0 Fehler, 19 Warnungen (10 Dateien ohne Index-Eintrag, 9 tote Pfade). Leerzeichen-Pfade zunächst falsch als tot gemeldet (45 → 19 nach Korrektur), Laufzeit 3 s, ohne Tokens.
