@@ -1,0 +1,4 @@
+https://github.com/anthropics/skills/tree/main/skills/mcp-builder
+Commit e4bb5d9 (anthropics/skills, Stand 2026-11-25), Apache-2.0 (LICENSE.upstream).
+Aufgenommen 2026-11-25 nach SCOUT.md Schritt 4 (Prüfauftrag Tim über Leitstelle).
+Hinweis: scripts/evaluation.py ruft die Anthropic-API auf (kostet, braucht ANTHROPIC_API_KEY). Nicht automatisch ausführen; Tim zahlt nichts.
