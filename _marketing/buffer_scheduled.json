@@ -104,5 +104,8 @@
  "learn-05-kick-luecke-gate::6adcc592778b240e2faf5408": "6b00c5a25102766245d83493",
  "learn-05-kick-luecke-gate::6abe125bea19ca0bde4081ce": "6b00c5a39ffbc8503cdc4517",
  "store-19-shardstep-launch::6adcc592778b240e2faf5408": "6b053fe4ca4899309e6a9139",
- "store-19-shardstep-launch::6abe125bea19ca0bde4081ce": "6b053fe4ca4899309e6a9182"
+ "store-19-shardstep-launch::6abe125bea19ca0bde4081ce": "6b053fe4ca4899309e6a9182",
+ "rot-01-chaos-fm-generate::6adcc592778b240e2faf5408": "6b08c4ff548b6e180d41ed15",
+ "rot-01-chaos-fm-generate::6abe125bea19ca0bde4081ce": "6b08c5007c3f43554e3ce3db",
+ "rot-01-chaos-fm-generate::6abe1228ea19ca0bde4080ea": "6b08c5017c3f43554e3ce426"
 }
