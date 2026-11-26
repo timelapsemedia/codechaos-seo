@@ -338,5 +338,37 @@
   "image": "https://codechaos-official.de/images/social/shardgate-kbbb.jpg",
   "caption": "A kick gap in your rolling bass, without sidechain. 🔪\n\nIn a KBBB pattern the first 16th of every beat belongs to the kick. If there's still bass on it, you get two low signals rubbing against each other and you'll hear mud.\n\nHere's how.\n\n1. Shardgate on the bass track.\n2. Load the preset \"Psy Bass Gap (KBBB)\".\n3. Steps 1, 5, 9 and 13 are OFF, the rest ON.\n4. Smooth at 1 ms: a hard edge without clicks.\n5. Auto Gain on: the bass stays as loud as before, so you compare fairly.\n\nDoes it work? We measured it at 200 BPM (Length 100 %): closed step −191 dB, open step 0.00 dB. Loop with and without the gate: −17.5 vs. −17.4 LUFS.\n\nSave this. You'll want it for your next bassline. Shardgate is free, link in bio\n\nKick-Lücke im Rolling Bass ohne Sidechain: Shardgate auf die Bass-Spur, Preset \"Psy Bass Gap (KBBB)\", 1., 5., 9. und 13. Sechzehntel aus, Smooth 1 ms, Auto Gain an. Gemessen bei 200 BPM: geschlossener Step −191 dB, offener 0,00 dB, Loop −17,5 vs. −17,4 LUFS. Shardgate ist kostenlos, Link in Bio\n\n#psytrance #psycore #hitech #mixingtips",
   "short": "Kick gap in your rolling bass without sidechain: first 16th of every beat off, Smooth 1 ms, Auto Gain on. Shardgate is free: https://shop.codechaos-official.de/l/shardgate?utm_source=social"
+ },
+ {
+  "id": "rot-01-chaos-fm-generate",
+  "date": "2026-12-03",
+  "image": "https://codechaos-official.de/images/social/rot-chaos-fm-generate.jpg",
+  "video": "https://codechaos-official.de/images/social/rot-chaos-fm-generate.mp4",
+  "video_title": "No patch idea? Roll one: Chaos FM GENERATE button | Code Chaos Audio",
+  "caption": "No idea for the next lead? Roll one.\n\nChaos FM has one big GENERATE button. Pick a category first: Lead, Bass, Acid, Stab, Pluck or FX. Then hit it, and you get a new patch built for that role. Keep it, tweak the three operators, or roll again.\n\nUnder the hood: 3 operators with ratio, fine, level and full ADSR each, 3 algorithms, feedback on operator C, a lowpass with drive, up to 4-voice unison. 12 factory presets on top.\n\nSave this for the next time you're stuck on a lead.\n\nKeine Idee für den nächsten Lead? Kategorie wählen (Lead, Bass, Acid, Stab, Pluck, FX), GENERATE drücken, neuen Patch bekommen. 3 Operatoren, 3 Algorithmen, 12 Presets. Speichern fürs nächste Mal.\n\n#hitech #psycore #fmsynthesis #sounddesign #vst",
+  "short": "No patch idea? Pick Lead, Bass, Acid, Stab, Pluck or FX and hit GENERATE. That's how the GENERATE button in our Chaos FM synth works."
+ },
+ {
+  "id": "rot-02-crucible-bands",
+  "date": "2026-12-09",
+  "image": "https://codechaos-official.de/images/social/rot-crucible-bands.jpg",
+  "video": "https://codechaos-official.de/images/social/rot-crucible-bands.mp4",
+  "video_title": "One saturator is not enough: split it into 3 bands | Crucible | Code Chaos Audio",
+  "caption": "One saturator on the whole sound? Split it into three bands instead.\n\n1. Set the two crossovers. In the screenshot: 120 Hz and 4 kHz.\n2. Pick a type per band: Hard Clip, Wavefolder, Tube, Diode or Tape.\n3. Set Drive and Mix per band. Solo a band to hear what it really does.\n4. Turn oversampling up (2x, 4x or 8x) when the top end starts to sound harsh.\n\nIn the video: first the dry loop, then the same loop through Crucible.\n\nSave this for your next mix. Plugin in the video: Crucible by Code Chaos Audio.\n\nEin Sättiger auf allem? Lieber in drei Bänder teilen: Crossover setzen (hier 120 Hz / 4 kHz), pro Band einen Typ wählen, Drive und Mix pro Band, mit Solo prüfen, Oversampling bis 8x gegen Aliasing. Plugin im Video: Crucible.\n\n#psytrance #hitech #mixingtips #saturation #vst",
+  "short": "Saturate in 3 bands: set the crossovers, a type per band, Drive + Mix, Solo to check, oversampling up to 8x. Shown with our plugin Crucible."
+ },
+ {
+  "id": "rot-03-hitech-arsenal-loops",
+  "date": "2026-12-11",
+  "image": "https://codechaos-official.de/images/social/rot-hitech-arsenal-loops.jpg",
+  "caption": "Drag, drop, roll. 20 loops at 190 and 200 BPM.\n\nHitech Arsenal Vol. 1 has 12 kick+bass and bass-only loops (triplet and 16th grooves) and 8 FM and acid loops in Phrygian. Every loop is cut to whole bars and labelled with key and BPM, so it locks to the grid the moment you drop it in.\n\nPlus 100 one-shots: kicks tuned to E, F, F# and G, basses, FM leads, stabs, glitch perc, hats and FX. 24-bit WAV, royalty-free, no login.\n\nTip: drop a kick+bass loop under your lead first and write over it. It keeps the groove honest from bar one.\n\n20 Loops mit 190 und 200 BPM, auf ganze Takte geschnitten, mit Tonart und BPM im Namen, dazu 100 One-Shots. 24-bit WAV, lizenzfrei. Tipp: Kick+Bass-Loop zuerst unter den Lead legen und darüber schreiben.\n\n#hitech #psycore #samplepack #darkpsy #producer",
+  "short": "20 hitech loops at 190/200 BPM, cut to whole bars, key + BPM in every file name, plus 100 one-shots: Hitech Arsenal Vol. 1 by Code Chaos Audio."
+ },
+ {
+  "id": "rot-04-hitech-fm-vital",
+  "date": "2026-12-16",
+  "image": "https://codechaos-official.de/images/social/rot-hitech-fm-vital.jpg",
+  "caption": "No Serum? You don't need it for hitech FM.\n\nHitech FM for Vital is 32 presets for the free synth: 12 leads (mono/legato with glide, velocity opens the FM), 8 rolling basses for KBBB grooves, 6 plucks and 6 FX like pitch-dive lasers and zaps. Built on the same 3-operator FM patches we use in our own hitech and psycore tracks.\n\nVital 1.5.5 or newer, Windows, macOS and Linux. Plain preset files, no login.\n\nTip: on the leads, play softer to keep the FM tame and dig in for the scream.\n\nKein Serum? Für Hitech-FM brauchst du es nicht: 32 Presets für den kostenlosen Vital (12 Leads, 8 Bässe, 6 Plucks, 6 FX). Tipp: Leads leiser anspielen = weniger FM, hart anschlagen = Schrei.\n\n#hitech #psycore #vital #presets #fmsynthesis",
+  "short": "Hitech FM in the free synth Vital: 12 leads, 8 rolling basses, 6 plucks, 6 FX. Velocity opens the FM on the leads."
  }
 ]
