@@ -19,12 +19,13 @@ TARGET_GROUPS = {
     "Genre": ["psycore", "psy core", "psycore genre", "psycore bpm", "psycore artists", "was ist psycore", "psycore vs darkpsy",
               "darkpsy", "dark psy", "darkpsy bpm", "darkpsy djs", "hitech psy", "hitech psytrance", "hi-tech psytrance",
               "hitech psytrance bpm", "hitech bpm", "hitech genre", "hi tech genre", "hi tech bpm", "hi tech psy",
-              "psycore meaning"],
+              "psycore meaning", "hitech music genre", "psytrance hitech"],
     "Mastering": ["psytrance mastering", "psycore mastering", "mastering für psytrance", "mastering hamburg", "online mastering",
                   "audio mastering online", "track mastering", "ep mastering", "album mastering", "mastering preise"],
     "Crucible": ["crucible plugin", "crucible vst", "code chaos crucible", "saturation plugin vst3", "sättigung plugin",
                  "psytrance plugin", "kick saturation", "distortion vst"],
-    "Marke": ["code chaos", "codechaos", "code chaos psytrance", "code chaos hamburg", "abstract sound design", "uhrwerk aus blut"],
+    "Marke": ["code chaos", "codechaos", "code chaos psytrance", "code chaos hamburg", "abstract sound design", "uhrwerk aus blut", "tim borchert"],
+    "Plugins": ["shardgate", "kick bass phase alignment plugin"],
 }
 TARGETS = [t for g in TARGET_GROUPS.values() for t in g]
 
