@@ -99,6 +99,7 @@ EN_HOME = {
       <p class="lead">Code Chaos does not make music for the daylight. Somewhere between a psytrance floor at 4 a.m. and a crypt that smells of candle wax, these tracks tick like a heart about to break. Liquid FM lines crawl through the skull, the bass never stops rolling, and voices tell stories you should not hear alone.</p>
       <p>Code Chaos calls it <strong>New Psychedelic Death Art</strong>. With "Uhrwerk aus Blut" the project opens up to story, voice and image. Today Code Chaos is a studio-only project without bookings. Earlier there were live sets, for example at Abstract Ritual Hamburg (2023) and Lost Signal Festival (2026).</p>
       <p>Alongside the music, Code Chaos offers mastering for psytrance, hitech and psycore as <a href="/en/mastering/">Code Chaos Mastering</a> and builds plugins as Code Chaos Audio, starting with <a href="/en/plugins/crucible/">Crucible</a>.</p>
+      <p>Latest training: AI fundamentals at KI-Campus / Heinrich Heine University Düsseldorf (statement of achievement, 45 h, November 2026). <a href="/bio/#weiterbildung">Details</a></p>
     </div>
   </div>
 </section>
