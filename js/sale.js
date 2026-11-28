@@ -28,15 +28,44 @@
     var css = '.cc-sale{position:relative;z-index:150;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 14px;' +
       'padding:10px 16px;background:#8e1016;color:#ece2ce;font:600 15px/1.4 Georgia,serif;text-align:center}' +
       '.cc-sale b{color:#fff;letter-spacing:.04em}.cc-sale code{font:700 14px/1 ui-monospace,Menlo,monospace;background:#0b0806;color:#dcc08a;padding:4px 8px;border:1px solid #c9a86a}' +
-      '.cc-sale a{color:#fff;text-decoration:underline;text-underline-offset:3px}';
+      '.cc-sale a{color:#fff;text-decoration:underline;text-underline-offset:3px}' +
+      '.cc-sale{padding-right:58px}.cc-sale-x{position:absolute;top:50%;right:8px;transform:translateY(-50%);width:44px;height:44px;' +
+      'display:flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(236,226,206,.45);color:#fff;' +
+      'font:400 24px/1 Georgia,serif;cursor:pointer;padding:0}.cc-sale-x:hover,.cc-sale-x:focus-visible{background:rgba(0,0,0,.25);outline:2px solid #dcc08a;outline-offset:1px}';
+    // Tim 28.11.2026: Leiste muss sich ausblenden lassen; Wahl gilt für die ganze Aktion (localStorage, fällt still weg, wenn gesperrt)
+    var KEY = 'cc-sale-zu-blackfriday-2026';
+    try { if (!preview && localStorage.getItem(KEY) === '1') return; } catch (e) {}
     var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
     var bar = document.createElement('div'); bar.className = 'cc-sale'; bar.setAttribute('role', 'region');
     bar.setAttribute('aria-label', en ? 'Black Friday sale' : 'Black-Friday-Angebot');
-    bar.innerHTML = en
+    bar.innerHTML = (en
       ? '<span><b>Black Friday:</b> 40% off every paid Code Chaos Audio product until 30 Nov.</span><span>Code <code>' + CODE + '</code> · applied automatically via the links on this site</span><a href="/en/plugins/">See the plugins</a>'
-      : '<span><b>Black Friday:</b> 40 % auf alle bezahlten Code-Chaos-Audio-Produkte bis 30.11.</span><span>Code <code>' + CODE + '</code> · über die Links auf dieser Seite automatisch drin</span><a href="/plugins/">Zu den Plugins</a>';
+      : '<span><b>Black Friday:</b> 40 % auf alle bezahlten Code-Chaos-Audio-Produkte bis 30.11.</span><span>Code <code>' + CODE + '</code> · über die Links auf dieser Seite automatisch drin</span><a href="/plugins/">Zu den Plugins</a>') +
+      '<button type="button" class="cc-sale-x" aria-label="' + (en ? 'Hide sale bar' : 'Angebotsleiste ausblenden') + '">&times;</button>';
     var skip = document.querySelector('body > .skip');
     if (skip) skip.parentNode.insertBefore(bar, skip.nextSibling); else document.body.insertBefore(bar, document.body.firstChild);
+
+    // Fest oben fixierte Kopfzeilen (Startseiten: nav position:fixed;top:0) unter die Leiste schieben, solange sie sichtbar ist,
+    // statt sie zu verdecken. Sticky-Kopfzeilen der Unterseiten stehen ohnehin unter der Leiste.
+    var fixed = [];
+    var all = document.querySelectorAll('header, nav, body > div');
+    for (var j = 0; j < all.length; j++) {
+      var cs = getComputedStyle(all[j]);
+      if (cs.position === 'fixed' && parseFloat(cs.top) === 0 && all[j].offsetWidth >= window.innerWidth * 0.9 && all[j].offsetHeight < 200) fixed.push(all[j]);
+    }
+    function place() {
+      var off = bar.isConnected ? Math.max(0, bar.getBoundingClientRect().bottom) : 0;
+      for (var k = 0; k < fixed.length; k++) fixed[k].style.top = off ? off + 'px' : '';
+    }
+    place();
+    window.addEventListener('scroll', place, { passive: true });
+    window.addEventListener('resize', place);
+    bar.querySelector('.cc-sale-x').addEventListener('click', function () {
+      try { localStorage.setItem(KEY, '1'); } catch (e) {}
+      bar.parentNode.removeChild(bar);
+      place();
+      window.removeEventListener('scroll', place); window.removeEventListener('resize', place);
+    });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
 })();
