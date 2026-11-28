@@ -1,6 +1,6 @@
 # Vorschlag: KI-Campus-Zertifikat auf der Website (Stand 28.11.2026, nicht umgesetzt)
 
-Status: **nur Vorschlag**. Nichts gebaut, nichts committet, nichts gepusht. Umsetzung erst nach Tims OK, dann im Branch und per PR. Der Seitentext kommt aus dem Generator und wird nicht direkt ins HTML geschrieben.
+Status: **Tim hat Code Chaos am 28.11.2026 freigegeben**, umgesetzt im Branch `feature/weiterbildung-ki-campus` (PR, Merge durch Tim). Polished folgt eventuell mit Polished Auto (Januar 2027). /bio/ ist eine handgeschriebene Seite (geo.py setzt nur Kopfzeile und Autorenkasten), /en/ entsteht aus `_build/content_en_home.py`.
 
 ## 1. Was vorliegt
 
@@ -65,7 +65,7 @@ Bewusst **nicht** im Text: „certified“, „zertifiziert“, „KI-Experte“
 
 ## 5. Abzeichen (Badge)
 
-- **Eigenes Text-Abzeichen im Seitenstil**, ohne die Logos von KI-Campus und HHU und ohne das Siegel „KI-Campus Original“. Den Anbieter im Text zu nennen ist beschreibend. Fremde Logos und Siegel nur mit Erlaubnis des Rechteinhabers. Rechtlich nicht weiter geprüft: **Stufe E, unbelegt.**
+- **Eigenes Text-Abzeichen im Seitenstil** (darunter das Zertifikat als Bild, siehe 7), ohne die Logos von KI-Campus und HHU und ohne das Siegel „KI-Campus Original“. Den Anbieter im Text zu nennen ist beschreibend. Fremde Logos und Siegel nur mit Erlaubnis des Rechteinhabers. Rechtlich nicht weiter geprüft: **Stufe E, unbelegt.**
 - Gestaltung: schmale Karte, so breit wie der `geo-autor`-Kasten, Hintergrund `var(--deep)`, 1 px Rahmen im vorhandenen Gold `rgba(201,168,106,0.35)`, Kicker in Versalien „TRAINING · WEITERBILDUNG“ wie `.section-eyebrow`, Titel in Fließtextgröße und kein großes „KI“-Icon (Punkt 3). Meta-Zeile klein und gedämpft. Kein Bild, also kein zusätzliches Laden.
 
 ```html
@@ -109,17 +109,18 @@ Bewusst **nicht** im Text: „certified“, „zertifiziert“, „KI-Experte“
 
 Dazu `knowsAbout` um `"Maschinelles Lernen (Grundlagen)"` ergänzen.
 
-## 7. PDF verlinken? Nein.
+## 7. Zertifikat selbst zeigen: ja, als Bild (Tim, 28.11.2026)
 
-Datenschutzprüfung beider PDFs (gerendert und gelesen): **keine Privatanschrift, kein Geburtsdatum.** Es stehen darin: Name, Ausstellungsort Berlin (Sitz des Anbieters), Punktzahl 61,73 %, Verifizierungscode, QR-Code und die Unterschrift eines Dritten (Florian Rampelt).
+Tim: „zertifikat selbst nicht hochladen? Das sieht doch gut aus...“ Deshalb wird der Leistungsnachweis als Bild gezeigt.
 
-Es wird trotzdem nichts verlinkt:
-- Die Punktzahl 61,73 % knapp über der 60-%-Schwelle würde zum Vergleichsanker. **Stufe E**, unbelegt. Für die Wirkung zählt nach Rivas 2020, *dass* ein Nachweis da ist.
-- Die Unterschrift eines Dritten gehört nicht als Datei ins Netz.
-- Der Verifizierungscode öffnet über moodle.ki-campus.org den vollen Nachweis samt Punktzahl. Darum wird er nicht veröffentlicht.
-- 14 MB pro PDF wären der mit Abstand größte Download der Seite (Startseite heute 149–204 KB, siehe webdesign.md).
+Datenschutz: **keine Privatanschrift, kein Geburtsdatum.** Sichtbar sind Name, Ausstellungsort Berlin (Sitz des Anbieters), Punktzahl, Verifizierungscode/QR und die Unterschrift des KI-Campus. Diese Angaben sind dafür gemacht, vorgezeigt und überprüft zu werden. Mein früherer Einwand wegen der Punktzahl war unbelegt (Stufe E) und entfällt.
 
-Stattdessen nur das Text-Abzeichen. Wer fragt, bekommt den Nachweis einzeln.
+Umsetzung ohne das 14-MB-PDF:
+- Vorschau 240 px breit im Block: `images/weiterbildung/ki-campus-kfa1-480.webp` (38 KB) bzw. `-960.webp` für Retina (102 KB), JPG-Fallback 50 KB, `loading="lazy"`. Dadurch bleibt der erste Seitenaufbau unberührt.
+- Klick öffnet `ki-campus-kfa1-1600.webp` (200 KB), voll lesbar. Gerendert mit 300 dpi aus dem PDF.
+- Bildunterschrift „View certificate / Zertifikat ansehen · verifiable via KI-Campus / über KI-Campus überprüfbar“.
+- Schema: `image` am Credential.
+- Die Teilnahmebestätigung bleibt im Archiv. Der Leistungsnachweis ist der stärkere Beleg.
 
 ## 8. Regeln geprüft
 

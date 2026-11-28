@@ -42,7 +42,7 @@ graph=[
    "alternateName":"AI for Everyone 1: Introduction to Artificial Intelligence (statement of achievement)",
    "credentialCategory":"Leistungsnachweis Onlinekurs / statement of achievement (online course)",
    "educationalLevel":"Einstieg / beginner","inLanguage":"de","dateCreated":"2026-11-28","timeRequired":"PT45H",
-   "url":"https://ki-campus.org/lernangebote/kurse/ki-fuer-alle-1",
+   "url":"https://ki-campus.org/lernangebote/kurse/ki-fuer-alle-1","image":B+"/images/weiterbildung/ki-campus-kfa1-1600.webp",
    "recognizedBy":[{"@type":"Organization","name":"KI-Campus (Stifterverband)","url":"https://ki-campus.org/"},
                    {"@type":"CollegeOrUniversity","name":"Heinrich-Heine-Universität Düsseldorf","url":"https://www.hhu.de/"}],
    "competencyRequired":["Grundlagen der Künstlichen Intelligenz und des maschinellen Lernens","Datenaufbereitung, -analyse und -visualisierung",
