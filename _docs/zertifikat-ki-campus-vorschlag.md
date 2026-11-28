@@ -113,7 +113,7 @@ Dazu `knowsAbout` um `"Maschinelles Lernen (Grundlagen)"` ergänzen.
 
 Tim: „zertifikat selbst nicht hochladen? Das sieht doch gut aus...“ Deshalb wird der Leistungsnachweis als Bild gezeigt.
 
-Datenschutz: **keine Privatanschrift, kein Geburtsdatum.** Sichtbar sind Name, Ausstellungsort Berlin (Sitz des Anbieters), Punktzahl, Verifizierungscode/QR und die Unterschrift des KI-Campus. Diese Angaben sind dafür gemacht, vorgezeigt und überprüft zu werden. Mein früherer Einwand wegen der Punktzahl war unbelegt (Stufe E) und entfällt.
+Datenschutz: **keine Privatanschrift, kein Geburtsdatum.** Sichtbar sind Name, Ausstellungsort Berlin (Sitz des Anbieters), Verifizierungscode/QR und die Unterschrift des KI-Campus. Diese Angaben sind dafür gemacht, vorgezeigt und überprüft zu werden. Tim, 28.11.2026: „kannst du so machen dass man die 61 prozent nicht sieht aber den rest des dokuments?“ Die Zeile „Gesamtergebnis: 61,73 % aller möglichen Punkte“ ist im Bild entfernt: Position per PDF-Textsuche ermittelt und die Fläche mit dem Hintergrundton gefüllt (#EFF5F5, Streuung des Umfelds 0, danach dunkelstes Pixel im Zeilenband = 243, also nichts übrig). Das PDF selbst wird nicht veröffentlicht. Der Satz „mindestens 60 %“ (Bestehensbedingung) bleibt sichtbar. Hinweis: Wer den Verifizierungscode auf moodle.ki-campus.org eingibt, sieht dort das Original mit Punktzahl.
 
 Umsetzung ohne das 14-MB-PDF:
 - Vorschau 240 px breit im Block: `images/weiterbildung/ki-campus-kfa1-480.webp` (38 KB) bzw. `-960.webp` für Retina (102 KB), JPG-Fallback 50 KB, `loading="lazy"`. Dadurch bleibt der erste Seitenaufbau unberührt.
